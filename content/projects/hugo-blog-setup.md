@@ -96,4 +96,3 @@ The final setup works smoothly:
 The biggest pain point was dealing with **submodules**—GitHub didn’t always handle them correctly, and Cloudflare’s default Hugo version was outdated. Once those were sorted, everything fell into place.
 
 Going forward, I might explore additional integrations like **webhooks** to automatically push from Gitea to GitHub, removing the need for manual mirroring.
-

@@ -1,12 +1,10 @@
 ---
-
 title: "Google's GenCast: AI Weather Forecasting and the Future of Grid Resiliency"
 date: 2025-03-15 
 description: "Google’s GenCast AI model is changing weather forecasting—but how reliable is it for utilities and grid resiliency? A deep dive into its promise and limitations." 
 tags: [AI, Weather Forecasting, Utilities, Google, Grid Resiliency] 
 categories: [Technology, Energy, AI Trends] 
 draft: false
-
 ---
 
 ## Google's GenCast: AI Weather Forecasting and the Future of Grid Resiliency

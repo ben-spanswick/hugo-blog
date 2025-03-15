@@ -1,4 +1,3 @@
-
 ---
 title: "Self-Hosted Series: Tandoor"  
 date: 2025-03-15  
@@ -136,4 +135,3 @@ Now, Tandoor should be available at `http://your-server-ip:8080`.
 Tandoor is a fantastic tool if you want full control over your recipes and meal planning. It takes a little effort to set up, but once it’s running, you get **complete data freedom**—no subscriptions, no forced updates, just a solid, reliable system for organizing your kitchen. If you’re into self-hosting and home automation, it fits right in with the whole ethos of controlling your own data.
 
 If you set it up, let me know how it works for you. I’d love to hear about any customizations or integrations you come up with. Also, if you have a killer recipe collection, I’m always open to swapping ideas.
-

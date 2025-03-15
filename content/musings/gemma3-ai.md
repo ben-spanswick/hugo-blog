@@ -1,12 +1,10 @@
 ---
-
 title: "Gemma 3: Google's Lean, Mean AI Machine Takes on DeepSeek V3"  
 date: 2025-03-15  
 description: "Google's Gemma 3 claims top performance using minimal hardware. Is this the future of AI efficiency?"  
 tags: [AI, Gemma 3, DeepSeek V3, Machine Learning, GPU Efficiency]  
 categories: [Technology, AI Developments]  
 draft: false
-
 ---
 
 

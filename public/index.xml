@@ -7,39 +7,52 @@
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy</title>
-        <link>http://192.168.100.63:1313/musings/seu-risk-analysis/</link>
+        <title>Untitled</title>
+        <link>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/musings/seu-risk-analysis/</guid>
-        <description>&lt;h2 id=&#34;ann-arbors-big-grid-experiment-a-glimpse-into-the-future-of-energy&#34;&gt;&lt;a href=&#34;#ann-arbors-big-grid-experiment-a-glimpse-into-the-future-of-energy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy
-&lt;/h2&gt;&lt;p&gt;If you work in energy like I do, the news coming out of Ann Arbor is &lt;strong&gt;pretty fascinating&lt;/strong&gt;—they&amp;rsquo;re building their own &lt;strong&gt;Sustainable Energy Utility (SEU)&lt;/strong&gt;. Instead of relying entirely on the traditional grid, they&amp;rsquo;re developing a localized system that uses &lt;strong&gt;solar, battery storage, and even geothermal&lt;/strong&gt; to power the city. The idea? More independence, more reliability, and more resilience against blackouts. (&lt;a class=&#34;link&#34; href=&#34;https://techxplore.com/news/2025-03-ann-arbor-sustainable-energy-aims.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Read the full story&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;For those of us knee-deep in grid infrastructure, this is &lt;strong&gt;huge&lt;/strong&gt;. The grid we have today was never built for decentralized, community-driven power solutions. In fact, it actively resists them. Which brings me to &lt;em&gt;The Grid&lt;/em&gt; by Gretchen Bakke—if you haven’t read it, it’s worth your time. Bakke makes the case that our electrical grid is old, overburdened, and &lt;strong&gt;fundamentally not designed for a world where renewables dominate&lt;/strong&gt;. She lays out why incorporating &lt;strong&gt;localized energy solutions&lt;/strong&gt; like what Ann Arbor is attempting is easier said than done.&lt;/p&gt;
-&lt;h3 id=&#34;why-this-matters&#34;&gt;&lt;a href=&#34;#why-this-matters&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This Matters
-&lt;/h3&gt;&lt;p&gt;The way we generate and distribute electricity is shifting—&lt;strong&gt;fast&lt;/strong&gt;. What Ann Arbor is doing is more than just a cool local project; it’s a preview of what other cities &lt;strong&gt;might&lt;/strong&gt; (and probably should) start doing.&lt;/p&gt;
-&lt;p&gt;Right now, utilities work on a top-down model: power plants generate electricity, send it through transmission lines, and eventually, it trickles down to homes and businesses. It’s centralized, efficient in some ways, but &lt;strong&gt;insanely vulnerable&lt;/strong&gt; to disruptions. One bad storm, one cyberattack, one aging transformer failure, and entire regions go dark. Ann Arbor’s plan flips that on its head. &lt;strong&gt;Instead of one big system, they’re thinking in microgrids.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This means:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Power stays local&lt;/strong&gt; – Generated and used within the community, cutting down on transmission losses.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;More resilience&lt;/strong&gt; – If the main grid goes down, parts of the city could still function.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Community control&lt;/strong&gt; – Instead of being at the mercy of investor-owned utilities, residents have a say in their power source.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;but-lets-be-realthis-wont-be-easy&#34;&gt;&lt;a href=&#34;#but-lets-be-realthis-wont-be-easy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;But Let’s Be Real—This Won’t Be Easy
-&lt;/h3&gt;&lt;p&gt;I love the idea of localized power, but I also know the massive headaches that come with integrating it. A city can’t just unplug from the existing grid and go full renewable overnight. There are regulatory hurdles, &lt;strong&gt;legacy infrastructure issues&lt;/strong&gt;, and the ever-persistent problem of intermittency (aka, what happens when the sun isn’t shining, and the wind isn’t blowing?).&lt;/p&gt;
-&lt;p&gt;Ann Arbor’s SEU is aiming to tackle these issues with &lt;strong&gt;battery storage and smart grid tech&lt;/strong&gt;, but that requires serious investment and long-term planning. And let’s be honest—utilities don’t always play nice when local governments try to carve out their own energy systems. We’ve seen plenty of legal battles over cities trying to establish public power utilities, and you can bet some big players aren’t thrilled about Ann Arbor’s plan.&lt;/p&gt;
-&lt;h3 id=&#34;the-future-more-cities-following-suit&#34;&gt;&lt;a href=&#34;#the-future-more-cities-following-suit&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Future: More Cities Following Suit?
-&lt;/h3&gt;&lt;p&gt;So, could this work elsewhere? Maybe. Maybe not. But Ann Arbor’s project is a &lt;strong&gt;bold experiment in how we rethink energy infrastructure&lt;/strong&gt;. If it succeeds, it could be a blueprint for cities looking to break free from aging, vulnerable grids. If it struggles? Well, that’s valuable too—because every failure teaches us something about what needs to change.&lt;/p&gt;
-&lt;p&gt;The big takeaway? We’re moving toward a more localized, resilient, and renewable-powered energy future. Ann Arbor is just ahead of the curve. The rest of us? We’d better start paying attention.&lt;/p&gt;
+        <guid>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</guid>
+        <description>&lt;h2 id=&#34;draft-false&#34;&gt;&lt;a href=&#34;#draft-false&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;title: &amp;ldquo;The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move&amp;rdquo;&lt;br&gt;
+date: 2025-03-15&lt;br&gt;
+description: &amp;ldquo;The U.S. deprioritizing Russia as a cyber threat might seem like a strategic shift, but is it a smart one? Let’s break it down.&amp;rdquo;&lt;br&gt;
+tags: [Cybersecurity, Geopolitics, Russia, United States, National Security]&lt;br&gt;
+categories: [Technology, Politics, Security]&lt;br&gt;
+draft: false
+&lt;/h2&gt;&lt;h2 id=&#34;the-cybersecurity-misdirection-why-ignoring-russia-is-a-risky-move&#34;&gt;&lt;a href=&#34;#the-cybersecurity-misdirection-why-ignoring-russia-is-a-risky-move&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move
+&lt;/h2&gt;&lt;p&gt;The U.S. has made a pretty surprising decision: shifting focus away from Russian cyber threats. The idea seems to be that China is the bigger concern now, so Russia is taking a backseat. But here’s the thing—just because you stop watching someone doesn’t mean they stop watching you. (&lt;a class=&#34;link&#34; href=&#34;https://www.theguardian.com/us-news/2025/feb/28/trump-russia-hacking-cyber-security?utm_source=chatgpt.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read full article&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&#34;out-of-sight-out-of-mind-not-exactly&#34;&gt;&lt;a href=&#34;#out-of-sight-out-of-mind-not-exactly&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Out of Sight, Out of Mind? Not Exactly.
+&lt;/h3&gt;&lt;p&gt;If you’ve been paying attention to cybersecurity over the past decade, you know Russia has been &lt;strong&gt;consistently&lt;/strong&gt; behind some of the most sophisticated and damaging cyber operations. &lt;strong&gt;SolarWinds, NotPetya, election meddling—you name it.&lt;/strong&gt; These weren’t just little experiments; they were calculated attacks that had major consequences. So why would we suddenly decide they’re not a top-tier concern anymore?&lt;/p&gt;
+&lt;p&gt;The logic, apparently, is that we need to focus on China’s growing cyber capabilities. And yes, China is a big player when it comes to espionage and intellectual property theft. But cybersecurity isn’t a zero-sum game. You don’t just swap out threats like an old phone upgrade. Ignoring Russia in favor of China assumes that one cancels out the other, which isn’t how cyber threats work.&lt;/p&gt;
+&lt;h3 id=&#34;the-risk-of-complacency&#34;&gt;&lt;a href=&#34;#the-risk-of-complacency&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Risk of Complacency
+&lt;/h3&gt;&lt;p&gt;Let’s put this in simple terms: if you know a burglar has been casing your house for years, would you stop locking your doors just because you heard about another break-in across town?&lt;/p&gt;
+&lt;p&gt;That’s the kind of flawed thinking at play here. Russia’s cyber activities haven’t stopped just because our focus has shifted. If anything, downplaying the threat could embolden them. Hackers—especially state-sponsored ones—aren’t waiting for permission to strike. They exploit &lt;strong&gt;gaps in attention, weak defenses, and lapses in policy.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;what-this-means-for-the-future&#34;&gt;&lt;a href=&#34;#what-this-means-for-the-future&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What This Means for the Future
+&lt;/h3&gt;&lt;p&gt;If the U.S. truly goes all-in on prioritizing China over Russia in cyber defense, a few things could happen:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;More unchecked Russian cyber activity&lt;/strong&gt; – With less scrutiny, Russian actors could ramp up operations, knowing they’re not the top priority.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Increased risk of coordinated threats&lt;/strong&gt; – What if China and Russia &lt;strong&gt;collaborate&lt;/strong&gt; on cyberattacks? They don’t need to be best friends to find common interests in weakening U.S. infrastructure.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reaction instead of prevention&lt;/strong&gt; – Instead of proactively strengthening defenses, we may find ourselves in a position where we’re reacting to Russian cyberattacks &lt;em&gt;after&lt;/em&gt; they’ve already done damage.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;the-bottom-line&#34;&gt;&lt;a href=&#34;#the-bottom-line&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bottom Line
+&lt;/h3&gt;&lt;p&gt;The internet doesn’t have borders, and cyber warfare doesn’t operate on a neat ranking system where one country gets priority over another. Both Russia and China (and others) pose serious threats, and treating cybersecurity like a geopolitical popularity contest is &lt;strong&gt;a recipe for disaster.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The U.S. should absolutely focus on China’s cyber strategy—but not at the cost of ignoring a very real, very active, and very capable Russian threat. If history has taught us anything, it’s that underestimating an adversary tends to backfire. And in cybersecurity, the cost of getting it wrong isn’t just lost data—it’s national security.&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Gemma 3: Google&#39;s Lean, Mean AI Machine Takes on DeepSeek V3</title>
+        <title>Untitled</title>
         <link>http://192.168.100.63:1313/musings/gemma3-ai/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/musings/gemma3-ai/</guid>
-        <description>&lt;h2 id=&#34;gemma-3-googles-lean-mean-ai-machine-takes-on-deepseek-v3&#34;&gt;&lt;a href=&#34;#gemma-3-googles-lean-mean-ai-machine-takes-on-deepseek-v3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Gemma 3: Google&amp;rsquo;s Lean, Mean AI Machine Takes on DeepSeek V3
+        <description>&lt;p&gt;title: &amp;ldquo;Gemma 3: Google&amp;rsquo;s Lean, Mean AI Machine Takes on DeepSeek V3&amp;rdquo;&lt;br&gt;
+date: 2025-03-15&lt;br&gt;
+description: &amp;ldquo;Google&amp;rsquo;s Gemma 3 claims top performance using minimal hardware. Is this the future of AI efficiency?&amp;rdquo;&lt;br&gt;
+tags: [AI, Gemma 3, DeepSeek V3, Machine Learning, GPU Efficiency]&lt;br&gt;
+categories: [Technology, AI Developments]&lt;br&gt;
+draft: false&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;gemma-3-googles-lean-mean-ai-machine-takes-on-deepseek-v3&#34;&gt;&lt;a href=&#34;#gemma-3-googles-lean-mean-ai-machine-takes-on-deepseek-v3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Gemma 3: Google&amp;rsquo;s Lean, Mean AI Machine Takes on DeepSeek V3
 &lt;/h2&gt;&lt;p&gt;Google just dropped a bombshell in the AI community with the release of &lt;strong&gt;Gemma 3&lt;/strong&gt;, touting it as the most powerful AI model you can run on a single GPU. This isn&amp;rsquo;t just another incremental update; it&amp;rsquo;s a potential game-changer in how we think about AI efficiency and accessibility.&lt;/p&gt;
 &lt;h3 id=&#34;why-this-matters&#34;&gt;&lt;a href=&#34;#why-this-matters&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This Matters
 &lt;/h3&gt;&lt;p&gt;Traditionally, achieving top-tier AI performance has required massive computational resources—think server farms packed with high-end GPUs. This not only limits who can develop and deploy advanced models but also raises concerns about energy consumption and environmental impact. Gemma 3 flips the script by delivering comparable performance using significantly fewer resources.&lt;/p&gt;
@@ -79,12 +92,19 @@
 </description>
         </item>
         <item>
-        <title>Google&#39;s GenCast: AI Weather Forecasting and the Future of Grid Resiliency</title>
+        <title>Untitled</title>
         <link>http://192.168.100.63:1313/musings/gencast/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/musings/gencast/</guid>
-        <description>&lt;h2 id=&#34;googles-gencast-ai-weather-forecasting-and-the-future-of-grid-resiliency&#34;&gt;&lt;a href=&#34;#googles-gencast-ai-weather-forecasting-and-the-future-of-grid-resiliency&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Google&amp;rsquo;s GenCast: AI Weather Forecasting and the Future of Grid Resiliency
+        <description>&lt;p&gt;title: &amp;ldquo;Google&amp;rsquo;s GenCast: AI Weather Forecasting and the Future of Grid Resiliency&amp;rdquo;
+date: 2025-03-15
+description: &amp;ldquo;Google’s GenCast AI model is changing weather forecasting—but how reliable is it for utilities and grid resiliency? A deep dive into its promise and limitations.&amp;rdquo;
+tags: [AI, Weather Forecasting, Utilities, Google, Grid Resiliency]
+categories: [Technology, Energy, AI Trends]
+draft: false&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;googles-gencast-ai-weather-forecasting-and-the-future-of-grid-resiliency&#34;&gt;&lt;a href=&#34;#googles-gencast-ai-weather-forecasting-and-the-future-of-grid-resiliency&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Google&amp;rsquo;s GenCast: AI Weather Forecasting and the Future of Grid Resiliency
 &lt;/h2&gt;&lt;p&gt;Google’s DeepMind has unveiled &lt;strong&gt;GenCast&lt;/strong&gt;, a state-of-the-art AI model designed to enhance weather forecasting, providing accurate predictions up to 15 days in advance. Built on advanced diffusion models and trained on vast amounts of historical meteorological data, GenCast integrates satellite imagery, climate records, and physics-based simulations to create high-resolution forecasts. (&lt;a class=&#34;link&#34; href=&#34;https://nypost.com/2024/12/09/science/googles-ai-can-accurately-predict-weather-forecasts-15-days-out/?utm_source=chatgpt.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
     &gt;Read full article&lt;/a&gt;)&lt;/p&gt;
 &lt;p&gt;For those of us working in &lt;strong&gt;utilities and grid management&lt;/strong&gt;, this kind of advancement is a game changer. Weather is the single most significant external factor in grid stability—affecting everything from peak demand to storm-related outages. If AI models like GenCast can provide more accurate, longer-term forecasts, the potential for &lt;strong&gt;proactive grid management&lt;/strong&gt; and &lt;strong&gt;storm response planning&lt;/strong&gt; becomes enormous.&lt;/p&gt;
@@ -117,111 +137,87 @@
 </description>
         </item>
         <item>
-        <title>Self-Hosted Series: Tandoor</title>
-        <link>http://192.168.100.63:1313/projects/tandoor-recipe-management/</link>
+        <title>Untitled</title>
+        <link>http://192.168.100.63:1313/musings/gpt5-future-ai/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/projects/tandoor-recipe-management/</guid>
-        <description>&lt;h1 id=&#34;self-hosting-tandoor-recipes-taking-control-of-your-recipe-collection&#34;&gt;&lt;a href=&#34;#self-hosting-tandoor-recipes-taking-control-of-your-recipe-collection&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Self-Hosting Tandoor Recipes: Taking Control of Your Recipe Collection
-&lt;/h1&gt;&lt;p&gt;If you&amp;rsquo;re like me, you&amp;rsquo;ve probably got recipes scattered everywhere—saved in browser bookmarks, tucked away in old notes, maybe even written down on random scraps of paper. It&amp;rsquo;s a mess. I wanted a better way to organize everything, but I didn&amp;rsquo;t want to rely on a third-party service. I wanted something &lt;strong&gt;self-hosted&lt;/strong&gt;, something I controlled. That&amp;rsquo;s where &lt;strong&gt;Tandoor Recipes&lt;/strong&gt; comes in.&lt;/p&gt;
-&lt;p&gt;Tandoor is an open-source recipe manager that lets you store, categorize, and search your recipes while giving you full control over your data. It’s basically a &lt;strong&gt;self-hosted, privacy-first alternative to something like Paprika or AnyList&lt;/strong&gt;, but with even more customization. Since it runs in Docker, it’s easy to set up on any home server or VPS.&lt;/p&gt;
-&lt;h2 id=&#34;why-self-host-your-recipes&#34;&gt;&lt;a href=&#34;#why-self-host-your-recipes&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why Self-Host Your Recipes?
-&lt;/h2&gt;&lt;p&gt;The idea of self-hosting recipes might sound a bit excessive at first. I mean, it’s just recipes, right? But once you start using a dedicated system, you realize how much of an upgrade it is. Here’s why I think Tandoor is worth the effort:&lt;/p&gt;
+        <guid>http://192.168.100.63:1313/musings/gpt5-future-ai/</guid>
+        <description>&lt;h2 id=&#34;draft-false&#34;&gt;&lt;a href=&#34;#draft-false&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;title: &amp;ldquo;The Reality Check of GPT-5: When AI Ambitions Meet Practical Constraints&amp;rdquo;
+date: 2025-03-15
+description: &amp;ldquo;The struggles of GPT-5 highlight a shift in AI development—from scaling up to optimizing efficiency and usability. What does this mean for the future of AI?&amp;rdquo;
+tags: [AI, OpenAI, GPT-5, Machine Learning, AI Strategy]
+categories: [Technology, AI Trends]
+draft: false
+&lt;/h2&gt;&lt;h2 id=&#34;the-reality-check-of-gpt-5-when-ai-ambitions-meet-practical-constraints&#34;&gt;&lt;a href=&#34;#the-reality-check-of-gpt-5-when-ai-ambitions-meet-practical-constraints&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Reality Check of GPT-5: When AI Ambitions Meet Practical Constraints
+&lt;/h2&gt;&lt;p&gt;OpenAI&amp;rsquo;s much-anticipated GPT-5 project, codenamed &amp;ldquo;Orion,&amp;rdquo; has faced unexpected hurdles. Despite high expectations for a radical leap in AI capabilities, the project has encountered delays due to data limitations, escalating costs, and operational challenges. This serves as a crucial reminder that AI progress is neither linear nor guaranteed. (&lt;a class=&#34;link&#34; href=&#34;https://www.wsj.com/tech/ai/openai-gpt5-orion-delays-639e7693?utm_source=chatgpt.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read full article&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&#34;why-gpt-5-is-struggling&#34;&gt;&lt;a href=&#34;#why-gpt-5-is-struggling&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why GPT-5 Is Struggling
+&lt;/h3&gt;&lt;p&gt;At its core, the challenges surrounding GPT-5 highlight a fundamental truth about AI: at a certain scale, improvement is no longer just a function of adding more compute and data. OpenAI is grappling with issues such as:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;No data lock-in.&lt;/strong&gt; Your recipes are yours. No cloud service decides to shut down and take your collection with it.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Privacy.&lt;/strong&gt; No tracking, no ads, no creepy AI trying to &amp;ldquo;enhance&amp;rdquo; your cooking habits.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Full customization.&lt;/strong&gt; You control the categories, tags, and even the UI themes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Automatic ingredient scaling and meal planning.&lt;/strong&gt; Helps with grocery shopping and weekly planning.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Built-in OCR for scanned recipes.&lt;/strong&gt; Perfect for digitizing old family cookbooks.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Diminishing Returns on Training Data&lt;/strong&gt;: Sourcing high-quality, novel data is becoming increasingly difficult, leading to a plateau in performance gains.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Compute and Cost Limitations&lt;/strong&gt;: Running state-of-the-art models requires enormous computational resources, making large-scale deployments cost-prohibitive.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Regulatory and Ethical Constraints&lt;/strong&gt;: Governments and organizations are applying greater scrutiny to AI development, slowing the pace of progress with necessary but cumbersome compliance requirements.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;So yeah, it&amp;rsquo;s a niche tool, but once you get it set up, it&amp;rsquo;s pretty great.&lt;/p&gt;
-&lt;h2 id=&#34;setting-up-tandoor-recipes-with-docker&#34;&gt;&lt;a href=&#34;#setting-up-tandoor-recipes-with-docker&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Setting Up Tandoor Recipes with Docker
-&lt;/h2&gt;&lt;p&gt;I run Tandoor in Docker on my home server. Here’s how I set it up, along with my redacted configuration files so you can replicate it if you want.&lt;/p&gt;
-&lt;h3 id=&#34;folder-structure&#34;&gt;&lt;a href=&#34;#folder-structure&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Folder Structure
-&lt;/h3&gt;&lt;p&gt;I keep all my self-hosted apps organized under &lt;code&gt;/opt/docker/&lt;/code&gt;, with persistent data stored on my NAS. Here’s the structure for Tandoor:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/opt/docker/tandoor/          # Tandoor install location
-/mnt/r430/tandoor/recipes/    # Recipe data storage
-/mnt/r430/tandoor/mediafiles/ # Uploaded images
-/mnt/r430/tandoor/staticfiles/ # Static assets
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;docker-composeyml&#34;&gt;&lt;a href=&#34;#docker-composeyml&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;code&gt;docker-compose.yml&lt;/code&gt;
-&lt;/h3&gt;&lt;p&gt;This is the main Docker Compose file for Tandoor. I’m using an &lt;strong&gt;external PostgreSQL database&lt;/strong&gt; running on an LXC container, but you could run it in Docker if you prefer.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;web&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;vabene1111/recipes:latest&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;container_name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;tandoor_web&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;restart&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;unless-stopped&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;depends_on&lt;/span&gt;: []
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;volumes&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/recipes:/opt/recipes&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/mediafiles:/opt/recipes/mediafiles&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/staticfiles:/opt/recipes/staticfiles&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;env_file&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;.env&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;8080:8000&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# Expose Tandoor on port 8080&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;networks&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;tandoor-net&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;networks&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;tandoor-net&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;driver&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;bridge&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;env&#34;&gt;&lt;a href=&#34;#env&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;code&gt;.env&lt;/code&gt;
-&lt;/h3&gt;&lt;p&gt;This contains the database credentials and general app settings. Make sure to set a strong &lt;code&gt;SECRET_KEY&lt;/code&gt;.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Database settings&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_HOST&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;192.168.100.52&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_PORT&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;5432&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_USER&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tandoor&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;your-secure-password&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_DB&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tandoor&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Django settings&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SECRET_KEY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;your-random-secret-key&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;DEBUG&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ALLOWED_HOSTS&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;*&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;TZ&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;America/New_York&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;setting-up-postgresql-if-external&#34;&gt;&lt;a href=&#34;#setting-up-postgresql-if-external&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Setting Up PostgreSQL (If External)
-&lt;/h3&gt;&lt;p&gt;If you&amp;rsquo;re running PostgreSQL in an LXC like I am, you need to set it up manually.&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;SSH into the LXC container running PostgreSQL.&lt;/li&gt;
-&lt;li&gt;Open the PostgreSQL shell:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo -u postgres psql
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;Create the database and user:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; tandoor;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;USER&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;WITH&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ENCRYPTED&lt;/span&gt; PASSWORD &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;your-secure-password&amp;#39;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ALL&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIVILEGES&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; tandoor;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;OWNER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; tandoor;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;Allow remote connections by editing &lt;code&gt;postgresql.conf&lt;/code&gt;:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;listen_addresses&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;li&gt;Update &lt;code&gt;pg_hba.conf&lt;/code&gt; to allow connections from your Docker host:
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;host    tandoor    tandoor    192.168.100.0/24    md5
-&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
-&lt;li&gt;Restart PostgreSQL:
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl restart postgresql
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;starting-tandoor&#34;&gt;&lt;a href=&#34;#starting-tandoor&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Starting Tandoor
-&lt;/h3&gt;&lt;p&gt;Once everything is configured, start the container:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker-compose up -d
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you need to check logs:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker logs -f tandoor_web
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, Tandoor should be available at &lt;code&gt;http://your-server-ip:8080&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;wrapping-up&#34;&gt;&lt;a href=&#34;#wrapping-up&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Wrapping Up
-&lt;/h2&gt;&lt;p&gt;Tandoor is a fantastic tool if you want full control over your recipes and meal planning. It takes a little effort to set up, but once it’s running, you get &lt;strong&gt;complete data freedom&lt;/strong&gt;—no subscriptions, no forced updates, just a solid, reliable system for organizing your kitchen. If you’re into self-hosting and home automation, it fits right in with the whole ethos of controlling your own data.&lt;/p&gt;
-&lt;p&gt;If you set it up, let me know how it works for you. I’d love to hear about any customizations or integrations you come up with. Also, if you have a killer recipe collection, I’m always open to swapping ideas.&lt;/p&gt;
+&lt;h3 id=&#34;gpt-45-a-building-block-not-a-leap&#34;&gt;&lt;a href=&#34;#gpt-45-a-building-block-not-a-leap&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;GPT-4.5: A Building Block, Not a Leap
+&lt;/h3&gt;&lt;p&gt;The release of GPT-4.5 in early 2025 should have been a signal that OpenAI was taking a different approach—one less about drastic model leaps and more about iterative refinement. GPT-4.5 was not a significant upgrade by hard metrics; rather, it served as a polished, repackaged version of GPT-4, offering better latency, smoother conversation flow, and a more intuitive user experience.&lt;/p&gt;
+&lt;p&gt;This indicates that OpenAI is shifting focus toward a more modular, incremental model development strategy. Instead of waiting for a paradigm-shifting GPT-5, we may see a continued evolution of intermediary versions that optimize efficiency, usability, and accessibility.&lt;/p&gt;
+&lt;h3 id=&#34;the-strategic-takeaway-ais-future-is-about-optimization-not-just-scale&#34;&gt;&lt;a href=&#34;#the-strategic-takeaway-ais-future-is-about-optimization-not-just-scale&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Strategic Takeaway: AI’s Future Is About Optimization, Not Just Scale
+&lt;/h3&gt;&lt;p&gt;The struggles of GPT-5 indicate that AI’s next phase may not be about making models bigger, but rather making them more efficient, interpretable, and specialized. Companies in the AI space need to shift focus toward:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Smaller, More Efficient Models&lt;/strong&gt;: Innovations like retrieval-augmented generation (RAG) and hybrid architectures may be more sustainable than endlessly scaling models.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Domain-Specific AI&lt;/strong&gt;: Instead of one-size-fits-all mega-models, industry-specific AI solutions could yield more immediate, tangible value.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Regulatory Readiness&lt;/strong&gt;: Organizations need to align AI development with emerging legal frameworks to ensure long-term viability.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;the-bigger-picture-ais-evolution-is-a-marathon-not-a-sprint&#34;&gt;&lt;a href=&#34;#the-bigger-picture-ais-evolution-is-a-marathon-not-a-sprint&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bigger Picture: AI’s Evolution Is a Marathon, Not a Sprint
+&lt;/h3&gt;&lt;p&gt;The delay of GPT-5 is not a sign of AI stagnation, but rather a recalibration of expectations. The AI industry is moving from a phase of rapid, speculative hype to one of more measured, sustainable progress. This presents an opportunity for businesses and researchers to focus on pragmatic AI solutions that drive real value rather than chasing the next big headline.&lt;/p&gt;
+&lt;p&gt;OpenAI&amp;rsquo;s hurdles should be a wake-up call: The future of AI isn&amp;rsquo;t just about bigger models, but about smarter, more purposeful innovation. The companies that recognize this shift will be the ones that lead in the coming decade.&lt;/p&gt;
 </description>
         </item>
         <item>
-        <title>Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages</title>
+        <title>Untitled</title>
+        <link>http://192.168.100.63:1313/musings/seu-risk-analysis/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/musings/seu-risk-analysis/</guid>
+        <description>&lt;h2 id=&#34;draft-false&#34;&gt;&lt;a href=&#34;#draft-false&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;title: &amp;ldquo;Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy&amp;rdquo;&lt;br&gt;
+date: 2025-03-15&lt;br&gt;
+description: &amp;ldquo;Ann Arbor is building its own sustainable energy utility, and as someone in the grid space, I can’t help but wonder—could this be the future of how we power our cities?&amp;rdquo;&lt;br&gt;
+tags: [Sustainable Energy, Microgrids, Ann Arbor, The Grid, Gretchen Bakke]&lt;br&gt;
+categories: [Energy, Sustainability, Technology]&lt;br&gt;
+draft: false
+&lt;/h2&gt;&lt;h2 id=&#34;ann-arbors-big-grid-experiment-a-glimpse-into-the-future-of-energy&#34;&gt;&lt;a href=&#34;#ann-arbors-big-grid-experiment-a-glimpse-into-the-future-of-energy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy
+&lt;/h2&gt;&lt;p&gt;If you work in energy like I do, the news coming out of Ann Arbor is &lt;strong&gt;pretty fascinating&lt;/strong&gt;—they&amp;rsquo;re building their own &lt;strong&gt;Sustainable Energy Utility (SEU)&lt;/strong&gt;. Instead of relying entirely on the traditional grid, they&amp;rsquo;re developing a localized system that uses &lt;strong&gt;solar, battery storage, and even geothermal&lt;/strong&gt; to power the city. The idea? More independence, more reliability, and more resilience against blackouts. (&lt;a class=&#34;link&#34; href=&#34;https://techxplore.com/news/2025-03-ann-arbor-sustainable-energy-aims.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read the full story&lt;/a&gt;)&lt;/p&gt;
+&lt;p&gt;For those of us knee-deep in grid infrastructure, this is &lt;strong&gt;huge&lt;/strong&gt;. The grid we have today was never built for decentralized, community-driven power solutions. In fact, it actively resists them. Which brings me to &lt;em&gt;The Grid&lt;/em&gt; by Gretchen Bakke—if you haven’t read it, it’s worth your time. Bakke makes the case that our electrical grid is old, overburdened, and &lt;strong&gt;fundamentally not designed for a world where renewables dominate&lt;/strong&gt;. She lays out why incorporating &lt;strong&gt;localized energy solutions&lt;/strong&gt; like what Ann Arbor is attempting is easier said than done.&lt;/p&gt;
+&lt;h3 id=&#34;why-this-matters&#34;&gt;&lt;a href=&#34;#why-this-matters&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This Matters
+&lt;/h3&gt;&lt;p&gt;The way we generate and distribute electricity is shifting—&lt;strong&gt;fast&lt;/strong&gt;. What Ann Arbor is doing is more than just a cool local project; it’s a preview of what other cities &lt;strong&gt;might&lt;/strong&gt; (and probably should) start doing.&lt;/p&gt;
+&lt;p&gt;Right now, utilities work on a top-down model: power plants generate electricity, send it through transmission lines, and eventually, it trickles down to homes and businesses. It’s centralized, efficient in some ways, but &lt;strong&gt;insanely vulnerable&lt;/strong&gt; to disruptions. One bad storm, one cyberattack, one aging transformer failure, and entire regions go dark. Ann Arbor’s plan flips that on its head. &lt;strong&gt;Instead of one big system, they’re thinking in microgrids.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This means:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Power stays local&lt;/strong&gt; – Generated and used within the community, cutting down on transmission losses.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;More resilience&lt;/strong&gt; – If the main grid goes down, parts of the city could still function.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Community control&lt;/strong&gt; – Instead of being at the mercy of investor-owned utilities, residents have a say in their power source.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;but-lets-be-realthis-wont-be-easy&#34;&gt;&lt;a href=&#34;#but-lets-be-realthis-wont-be-easy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;But Let’s Be Real—This Won’t Be Easy
+&lt;/h3&gt;&lt;p&gt;I love the idea of localized power, but I also know the massive headaches that come with integrating it. A city can’t just unplug from the existing grid and go full renewable overnight. There are regulatory hurdles, &lt;strong&gt;legacy infrastructure issues&lt;/strong&gt;, and the ever-persistent problem of intermittency (aka, what happens when the sun isn’t shining, and the wind isn’t blowing?).&lt;/p&gt;
+&lt;p&gt;Ann Arbor’s SEU is aiming to tackle these issues with &lt;strong&gt;battery storage and smart grid tech&lt;/strong&gt;, but that requires serious investment and long-term planning. And let’s be honest—utilities don’t always play nice when local governments try to carve out their own energy systems. We’ve seen plenty of legal battles over cities trying to establish public power utilities, and you can bet some big players aren’t thrilled about Ann Arbor’s plan.&lt;/p&gt;
+&lt;h3 id=&#34;the-future-more-cities-following-suit&#34;&gt;&lt;a href=&#34;#the-future-more-cities-following-suit&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Future: More Cities Following Suit?
+&lt;/h3&gt;&lt;p&gt;So, could this work elsewhere? Maybe. Maybe not. But Ann Arbor’s project is a &lt;strong&gt;bold experiment in how we rethink energy infrastructure&lt;/strong&gt;. If it succeeds, it could be a blueprint for cities looking to break free from aging, vulnerable grids. If it struggles? Well, that’s valuable too—because every failure teaches us something about what needs to change.&lt;/p&gt;
+&lt;p&gt;The big takeaway? We’re moving toward a more localized, resilient, and renewable-powered energy future. Ann Arbor is just ahead of the curve. The rest of us? We’d better start paying attention.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Untitled</title>
         <link>http://192.168.100.63:1313/projects/hugo-blog-setup/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/projects/hugo-blog-setup/</guid>
-        <description>&lt;h1 id=&#34;setting-up-hugo-with-gitea-github-and-cloudflare-pages&#34;&gt;&lt;a href=&#34;#setting-up-hugo-with-gitea-github-and-cloudflare-pages&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages
+        <description>&lt;h2 id=&#34;draft-false&#34;&gt;&lt;a href=&#34;#draft-false&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;title: &amp;ldquo;Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages&amp;rdquo;
+date: 2025-03-15
+tags: [&amp;ldquo;Hugo&amp;rdquo;, &amp;ldquo;Cloudflare Pages&amp;rdquo;, &amp;ldquo;Gitea&amp;rdquo;, &amp;ldquo;GitHub&amp;rdquo;, &amp;ldquo;Self-Hosting&amp;rdquo;]
+categories: [&amp;ldquo;Tech&amp;rdquo;, &amp;ldquo;Self-Hosting&amp;rdquo;]
+draft: false
+&lt;/h2&gt;&lt;h1 id=&#34;setting-up-hugo-with-gitea-github-and-cloudflare-pages&#34;&gt;&lt;a href=&#34;#setting-up-hugo-with-gitea-github-and-cloudflare-pages&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages
 &lt;/h1&gt;&lt;h2 id=&#34;why-hugo&#34;&gt;&lt;a href=&#34;#why-hugo&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why Hugo?
 &lt;/h2&gt;&lt;p&gt;Hugo is one of the fastest static site generators available, making it ideal for self-hosted and low-maintenance deployments. I wanted a simple, efficient way to publish content without dealing with databases or complex CMS setups. The goal was to maintain full control over the blog while using a streamlined deployment process.&lt;/p&gt;
 &lt;h2 id=&#34;the-setup&#34;&gt;&lt;a href=&#34;#the-setup&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Setup
@@ -295,70 +291,17 @@
 </description>
         </item>
         <item>
-        <title>The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move</title>
-        <link>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</guid>
-        <description>&lt;h2 id=&#34;the-cybersecurity-misdirection-why-ignoring-russia-is-a-risky-move&#34;&gt;&lt;a href=&#34;#the-cybersecurity-misdirection-why-ignoring-russia-is-a-risky-move&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move
-&lt;/h2&gt;&lt;p&gt;The U.S. has made a pretty surprising decision: shifting focus away from Russian cyber threats. The idea seems to be that China is the bigger concern now, so Russia is taking a backseat. But here’s the thing—just because you stop watching someone doesn’t mean they stop watching you. (&lt;a class=&#34;link&#34; href=&#34;https://www.theguardian.com/us-news/2025/feb/28/trump-russia-hacking-cyber-security?utm_source=chatgpt.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Read full article&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id=&#34;out-of-sight-out-of-mind-not-exactly&#34;&gt;&lt;a href=&#34;#out-of-sight-out-of-mind-not-exactly&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Out of Sight, Out of Mind? Not Exactly.
-&lt;/h3&gt;&lt;p&gt;If you’ve been paying attention to cybersecurity over the past decade, you know Russia has been &lt;strong&gt;consistently&lt;/strong&gt; behind some of the most sophisticated and damaging cyber operations. &lt;strong&gt;SolarWinds, NotPetya, election meddling—you name it.&lt;/strong&gt; These weren’t just little experiments; they were calculated attacks that had major consequences. So why would we suddenly decide they’re not a top-tier concern anymore?&lt;/p&gt;
-&lt;p&gt;The logic, apparently, is that we need to focus on China’s growing cyber capabilities. And yes, China is a big player when it comes to espionage and intellectual property theft. But cybersecurity isn’t a zero-sum game. You don’t just swap out threats like an old phone upgrade. Ignoring Russia in favor of China assumes that one cancels out the other, which isn’t how cyber threats work.&lt;/p&gt;
-&lt;h3 id=&#34;the-risk-of-complacency&#34;&gt;&lt;a href=&#34;#the-risk-of-complacency&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Risk of Complacency
-&lt;/h3&gt;&lt;p&gt;Let’s put this in simple terms: if you know a burglar has been casing your house for years, would you stop locking your doors just because you heard about another break-in across town?&lt;/p&gt;
-&lt;p&gt;That’s the kind of flawed thinking at play here. Russia’s cyber activities haven’t stopped just because our focus has shifted. If anything, downplaying the threat could embolden them. Hackers—especially state-sponsored ones—aren’t waiting for permission to strike. They exploit &lt;strong&gt;gaps in attention, weak defenses, and lapses in policy.&lt;/strong&gt;&lt;/p&gt;
-&lt;h3 id=&#34;what-this-means-for-the-future&#34;&gt;&lt;a href=&#34;#what-this-means-for-the-future&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What This Means for the Future
-&lt;/h3&gt;&lt;p&gt;If the U.S. truly goes all-in on prioritizing China over Russia in cyber defense, a few things could happen:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;More unchecked Russian cyber activity&lt;/strong&gt; – With less scrutiny, Russian actors could ramp up operations, knowing they’re not the top priority.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Increased risk of coordinated threats&lt;/strong&gt; – What if China and Russia &lt;strong&gt;collaborate&lt;/strong&gt; on cyberattacks? They don’t need to be best friends to find common interests in weakening U.S. infrastructure.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Reaction instead of prevention&lt;/strong&gt; – Instead of proactively strengthening defenses, we may find ourselves in a position where we’re reacting to Russian cyberattacks &lt;em&gt;after&lt;/em&gt; they’ve already done damage.&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;the-bottom-line&#34;&gt;&lt;a href=&#34;#the-bottom-line&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bottom Line
-&lt;/h3&gt;&lt;p&gt;The internet doesn’t have borders, and cyber warfare doesn’t operate on a neat ranking system where one country gets priority over another. Both Russia and China (and others) pose serious threats, and treating cybersecurity like a geopolitical popularity contest is &lt;strong&gt;a recipe for disaster.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;The U.S. should absolutely focus on China’s cyber strategy—but not at the cost of ignoring a very real, very active, and very capable Russian threat. If history has taught us anything, it’s that underestimating an adversary tends to backfire. And in cybersecurity, the cost of getting it wrong isn’t just lost data—it’s national security.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>The Reality Check of GPT-5: When AI Ambitions Meet Practical Constraints</title>
-        <link>http://192.168.100.63:1313/musings/gpt5-future-ai/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/musings/gpt5-future-ai/</guid>
-        <description>&lt;h2 id=&#34;the-reality-check-of-gpt-5-when-ai-ambitions-meet-practical-constraints&#34;&gt;&lt;a href=&#34;#the-reality-check-of-gpt-5-when-ai-ambitions-meet-practical-constraints&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Reality Check of GPT-5: When AI Ambitions Meet Practical Constraints
-&lt;/h2&gt;&lt;p&gt;OpenAI&amp;rsquo;s much-anticipated GPT-5 project, codenamed &amp;ldquo;Orion,&amp;rdquo; has faced unexpected hurdles. Despite high expectations for a radical leap in AI capabilities, the project has encountered delays due to data limitations, escalating costs, and operational challenges. This serves as a crucial reminder that AI progress is neither linear nor guaranteed. (&lt;a class=&#34;link&#34; href=&#34;https://www.wsj.com/tech/ai/openai-gpt5-orion-delays-639e7693?utm_source=chatgpt.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Read full article&lt;/a&gt;)&lt;/p&gt;
-&lt;h3 id=&#34;why-gpt-5-is-struggling&#34;&gt;&lt;a href=&#34;#why-gpt-5-is-struggling&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why GPT-5 Is Struggling
-&lt;/h3&gt;&lt;p&gt;At its core, the challenges surrounding GPT-5 highlight a fundamental truth about AI: at a certain scale, improvement is no longer just a function of adding more compute and data. OpenAI is grappling with issues such as:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Diminishing Returns on Training Data&lt;/strong&gt;: Sourcing high-quality, novel data is becoming increasingly difficult, leading to a plateau in performance gains.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Compute and Cost Limitations&lt;/strong&gt;: Running state-of-the-art models requires enormous computational resources, making large-scale deployments cost-prohibitive.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Regulatory and Ethical Constraints&lt;/strong&gt;: Governments and organizations are applying greater scrutiny to AI development, slowing the pace of progress with necessary but cumbersome compliance requirements.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;gpt-45-a-building-block-not-a-leap&#34;&gt;&lt;a href=&#34;#gpt-45-a-building-block-not-a-leap&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;GPT-4.5: A Building Block, Not a Leap
-&lt;/h3&gt;&lt;p&gt;The release of GPT-4.5 in early 2025 should have been a signal that OpenAI was taking a different approach—one less about drastic model leaps and more about iterative refinement. GPT-4.5 was not a significant upgrade by hard metrics; rather, it served as a polished, repackaged version of GPT-4, offering better latency, smoother conversation flow, and a more intuitive user experience.&lt;/p&gt;
-&lt;p&gt;This indicates that OpenAI is shifting focus toward a more modular, incremental model development strategy. Instead of waiting for a paradigm-shifting GPT-5, we may see a continued evolution of intermediary versions that optimize efficiency, usability, and accessibility.&lt;/p&gt;
-&lt;h3 id=&#34;the-strategic-takeaway-ais-future-is-about-optimization-not-just-scale&#34;&gt;&lt;a href=&#34;#the-strategic-takeaway-ais-future-is-about-optimization-not-just-scale&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Strategic Takeaway: AI’s Future Is About Optimization, Not Just Scale
-&lt;/h3&gt;&lt;p&gt;The struggles of GPT-5 indicate that AI’s next phase may not be about making models bigger, but rather making them more efficient, interpretable, and specialized. Companies in the AI space need to shift focus toward:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Smaller, More Efficient Models&lt;/strong&gt;: Innovations like retrieval-augmented generation (RAG) and hybrid architectures may be more sustainable than endlessly scaling models.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Domain-Specific AI&lt;/strong&gt;: Instead of one-size-fits-all mega-models, industry-specific AI solutions could yield more immediate, tangible value.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Regulatory Readiness&lt;/strong&gt;: Organizations need to align AI development with emerging legal frameworks to ensure long-term viability.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;the-bigger-picture-ais-evolution-is-a-marathon-not-a-sprint&#34;&gt;&lt;a href=&#34;#the-bigger-picture-ais-evolution-is-a-marathon-not-a-sprint&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bigger Picture: AI’s Evolution Is a Marathon, Not a Sprint
-&lt;/h3&gt;&lt;p&gt;The delay of GPT-5 is not a sign of AI stagnation, but rather a recalibration of expectations. The AI industry is moving from a phase of rapid, speculative hype to one of more measured, sustainable progress. This presents an opportunity for businesses and researchers to focus on pragmatic AI solutions that drive real value rather than chasing the next big headline.&lt;/p&gt;
-&lt;p&gt;OpenAI&amp;rsquo;s hurdles should be a wake-up call: The future of AI isn&amp;rsquo;t just about bigger models, but about smarter, more purposeful innovation. The companies that recognize this shift will be the ones that lead in the coming decade.&lt;/p&gt;
-</description>
-        </item>
-        <item>
-        <title>Building a Self-Hosted Nextcloud: Detailed Setup</title>
+        <title>Untitled</title>
         <link>http://192.168.100.63:1313/projects/nextcloud-setup/</link>
-        <pubDate>Thu, 13 Mar 2025 12:00:00 -0500</pubDate>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/projects/nextcloud-setup/</guid>
-        <description>&lt;h1 id=&#34;nextcloud-lxc-setup-guide-step-by-step&#34;&gt;&lt;a href=&#34;#nextcloud-lxc-setup-guide-step-by-step&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Nextcloud LXC Setup Guide (Step-by-Step)
+        <description>&lt;h2 id=&#34;draft-false&#34;&gt;&lt;a href=&#34;#draft-false&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;title: &amp;ldquo;Building a Self-Hosted Nextcloud: Detailed Setup&amp;rdquo;
+date: 2025-03-13T12:00:00-05:00
+description: &amp;ldquo;A deep dive into building a self-hosted Nextcloud for scalability, speed, and reliability.&amp;rdquo;
+tags: [&amp;ldquo;nextcloud&amp;rdquo;, &amp;ldquo;self-hosting&amp;rdquo;, &amp;ldquo;homelab&amp;rdquo;, &amp;ldquo;storage&amp;rdquo;]
+draft: false
+&lt;/h2&gt;&lt;h1 id=&#34;nextcloud-lxc-setup-guide-step-by-step&#34;&gt;&lt;a href=&#34;#nextcloud-lxc-setup-guide-step-by-step&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Nextcloud LXC Setup Guide (Step-by-Step)
 &lt;/h1&gt;&lt;h2 id=&#34;1-install-the-turnkey-nextcloud-lxc&#34;&gt;&lt;a href=&#34;#1-install-the-turnkey-nextcloud-lxc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1. Install the TurnKey Nextcloud LXC
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pct create &lt;span style=&#34;color:#ae81ff&#34;&gt;101&lt;/span&gt; local:vztmpl/turnkey-nextcloud-18.0-buster-amd64.tar.gz --storage local-zfs --hostname NextCloud --memory &lt;span style=&#34;color:#ae81ff&#34;&gt;8000&lt;/span&gt; --cores &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pct start &lt;span style=&#34;color:#ae81ff&#34;&gt;101&lt;/span&gt;
@@ -455,12 +398,17 @@ unprivileged: 1
 </description>
         </item>
         <item>
-        <title>Nextcloud Setup</title>
+        <title>Untitled</title>
         <link>http://192.168.100.63:1313/projects/self-hosting-nextcloud/</link>
-        <pubDate>Thu, 13 Mar 2025 12:00:00 -0500</pubDate>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/projects/self-hosting-nextcloud/</guid>
-        <description>&lt;h1 id=&#34;building-a-self-hosted-nextcloud-architecture-setup-and-lessons-learned&#34;&gt;&lt;a href=&#34;#building-a-self-hosted-nextcloud-architecture-setup-and-lessons-learned&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Building a Self-Hosted Nextcloud: Architecture, Setup, and Lessons Learned
+        <description>&lt;h2 id=&#34;draft-false&#34;&gt;&lt;a href=&#34;#draft-false&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;title: &amp;ldquo;Nextcloud Setup&amp;rdquo;
+date: 2025-03-13T12:00:00-05:00
+description: &amp;ldquo;This is my first blog post using Hugo and the Poison theme!&amp;rdquo;
+tags: [&amp;ldquo;nextcloud&amp;rdquo;, &amp;ldquo;services&amp;rdquo;, &amp;ldquo;self-hosted&amp;rdquo;]
+draft: false
+&lt;/h2&gt;&lt;h1 id=&#34;building-a-self-hosted-nextcloud-architecture-setup-and-lessons-learned&#34;&gt;&lt;a href=&#34;#building-a-self-hosted-nextcloud-architecture-setup-and-lessons-learned&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Building a Self-Hosted Nextcloud: Architecture, Setup, and Lessons Learned
 &lt;/h1&gt;&lt;h2 id=&#34;introduction-how-we-designed-this-setup&#34;&gt;&lt;a href=&#34;#introduction-how-we-designed-this-setup&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Introduction: How We Designed This Setup
 &lt;/h2&gt;&lt;p&gt;When setting up Nextcloud, I wanted to &lt;strong&gt;strike a balance between speed, scalability, and reliability&lt;/strong&gt; while keeping everything self-hosted. That meant carefully choosing &lt;strong&gt;where to store each component&lt;/strong&gt; and how to optimize performance. Here&amp;rsquo;s the structure I landed on:&lt;/p&gt;
 &lt;ol&gt;
@@ -599,6 +547,111 @@ LXCs are &lt;strong&gt;more lightweight and efficient&lt;/strong&gt; than a full
 &lt;li&gt;&lt;strong&gt;Reliability&lt;/strong&gt; (PostgreSQL, separate DB &amp;amp; app containers)&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;Next steps? &lt;strong&gt;Automating backups, adding SMTP email alerts, and possibly integrating OnlyOffice for document editing.&lt;/strong&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Untitled</title>
+        <link>http://192.168.100.63:1313/projects/tandoor-recipe-management/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/projects/tandoor-recipe-management/</guid>
+        <description>&lt;h2 id=&#34;draft-false&#34;&gt;&lt;a href=&#34;#draft-false&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;title: &amp;ldquo;Self-Hosted Series: Tandoor&amp;rdquo;&lt;br&gt;
+date: 2025-03-15&lt;br&gt;
+description: &amp;ldquo;A guide to setting up one of the most popular recipie tracking services.&amp;rdquo;
+tags: [Self-Hosting, Tandoor, Open Source, Recipe Management, Privacy]
+categories: [Technology, Self-Hosting]&lt;br&gt;
+draft: false
+&lt;/h2&gt;&lt;h1 id=&#34;self-hosting-tandoor-recipes-taking-control-of-your-recipe-collection&#34;&gt;&lt;a href=&#34;#self-hosting-tandoor-recipes-taking-control-of-your-recipe-collection&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Self-Hosting Tandoor Recipes: Taking Control of Your Recipe Collection
+&lt;/h1&gt;&lt;p&gt;If you&amp;rsquo;re like me, you&amp;rsquo;ve probably got recipes scattered everywhere—saved in browser bookmarks, tucked away in old notes, maybe even written down on random scraps of paper. It&amp;rsquo;s a mess. I wanted a better way to organize everything, but I didn&amp;rsquo;t want to rely on a third-party service. I wanted something &lt;strong&gt;self-hosted&lt;/strong&gt;, something I controlled. That&amp;rsquo;s where &lt;strong&gt;Tandoor Recipes&lt;/strong&gt; comes in.&lt;/p&gt;
+&lt;p&gt;Tandoor is an open-source recipe manager that lets you store, categorize, and search your recipes while giving you full control over your data. It’s basically a &lt;strong&gt;self-hosted, privacy-first alternative to something like Paprika or AnyList&lt;/strong&gt;, but with even more customization. Since it runs in Docker, it’s easy to set up on any home server or VPS.&lt;/p&gt;
+&lt;h2 id=&#34;why-self-host-your-recipes&#34;&gt;&lt;a href=&#34;#why-self-host-your-recipes&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why Self-Host Your Recipes?
+&lt;/h2&gt;&lt;p&gt;The idea of self-hosting recipes might sound a bit excessive at first. I mean, it’s just recipes, right? But once you start using a dedicated system, you realize how much of an upgrade it is. Here’s why I think Tandoor is worth the effort:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No data lock-in.&lt;/strong&gt; Your recipes are yours. No cloud service decides to shut down and take your collection with it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy.&lt;/strong&gt; No tracking, no ads, no creepy AI trying to &amp;ldquo;enhance&amp;rdquo; your cooking habits.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Full customization.&lt;/strong&gt; You control the categories, tags, and even the UI themes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Automatic ingredient scaling and meal planning.&lt;/strong&gt; Helps with grocery shopping and weekly planning.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Built-in OCR for scanned recipes.&lt;/strong&gt; Perfect for digitizing old family cookbooks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So yeah, it&amp;rsquo;s a niche tool, but once you get it set up, it&amp;rsquo;s pretty great.&lt;/p&gt;
+&lt;h2 id=&#34;setting-up-tandoor-recipes-with-docker&#34;&gt;&lt;a href=&#34;#setting-up-tandoor-recipes-with-docker&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Setting Up Tandoor Recipes with Docker
+&lt;/h2&gt;&lt;p&gt;I run Tandoor in Docker on my home server. Here’s how I set it up, along with my redacted configuration files so you can replicate it if you want.&lt;/p&gt;
+&lt;h3 id=&#34;folder-structure&#34;&gt;&lt;a href=&#34;#folder-structure&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Folder Structure
+&lt;/h3&gt;&lt;p&gt;I keep all my self-hosted apps organized under &lt;code&gt;/opt/docker/&lt;/code&gt;, with persistent data stored on my NAS. Here’s the structure for Tandoor:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/opt/docker/tandoor/          # Tandoor install location
+/mnt/r430/tandoor/recipes/    # Recipe data storage
+/mnt/r430/tandoor/mediafiles/ # Uploaded images
+/mnt/r430/tandoor/staticfiles/ # Static assets
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;docker-composeyml&#34;&gt;&lt;a href=&#34;#docker-composeyml&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;code&gt;docker-compose.yml&lt;/code&gt;
+&lt;/h3&gt;&lt;p&gt;This is the main Docker Compose file for Tandoor. I’m using an &lt;strong&gt;external PostgreSQL database&lt;/strong&gt; running on an LXC container, but you could run it in Docker if you prefer.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;web&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;vabene1111/recipes:latest&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;container_name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;tandoor_web&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;restart&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;unless-stopped&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;depends_on&lt;/span&gt;: []
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;volumes&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/recipes:/opt/recipes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/mediafiles:/opt/recipes/mediafiles&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/staticfiles:/opt/recipes/staticfiles&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;env_file&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;.env&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;8080:8000&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# Expose Tandoor on port 8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;networks&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;tandoor-net&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;networks&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;tandoor-net&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;driver&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;bridge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;env&#34;&gt;&lt;a href=&#34;#env&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;code&gt;.env&lt;/code&gt;
+&lt;/h3&gt;&lt;p&gt;This contains the database credentials and general app settings. Make sure to set a strong &lt;code&gt;SECRET_KEY&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Database settings&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_HOST&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;192.168.100.52&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_PORT&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;5432&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_USER&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tandoor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;your-secure-password&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_DB&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tandoor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Django settings&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SECRET_KEY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;your-random-secret-key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;DEBUG&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ALLOWED_HOSTS&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;TZ&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;America/New_York&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;setting-up-postgresql-if-external&#34;&gt;&lt;a href=&#34;#setting-up-postgresql-if-external&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Setting Up PostgreSQL (If External)
+&lt;/h3&gt;&lt;p&gt;If you&amp;rsquo;re running PostgreSQL in an LXC like I am, you need to set it up manually.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;SSH into the LXC container running PostgreSQL.&lt;/li&gt;
+&lt;li&gt;Open the PostgreSQL shell:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo -u postgres psql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Create the database and user:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; tandoor;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;USER&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;WITH&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ENCRYPTED&lt;/span&gt; PASSWORD &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;your-secure-password&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ALL&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIVILEGES&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; tandoor;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;OWNER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; tandoor;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Allow remote connections by editing &lt;code&gt;postgresql.conf&lt;/code&gt;:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;listen_addresses&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Update &lt;code&gt;pg_hba.conf&lt;/code&gt; to allow connections from your Docker host:
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;host    tandoor    tandoor    192.168.100.0/24    md5
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Restart PostgreSQL:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl restart postgresql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;starting-tandoor&#34;&gt;&lt;a href=&#34;#starting-tandoor&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Starting Tandoor
+&lt;/h3&gt;&lt;p&gt;Once everything is configured, start the container:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker-compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you need to check logs:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker logs -f tandoor_web
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, Tandoor should be available at &lt;code&gt;http://your-server-ip:8080&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;wrapping-up&#34;&gt;&lt;a href=&#34;#wrapping-up&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Wrapping Up
+&lt;/h2&gt;&lt;p&gt;Tandoor is a fantastic tool if you want full control over your recipes and meal planning. It takes a little effort to set up, but once it’s running, you get &lt;strong&gt;complete data freedom&lt;/strong&gt;—no subscriptions, no forced updates, just a solid, reliable system for organizing your kitchen. If you’re into self-hosting and home automation, it fits right in with the whole ethos of controlling your own data.&lt;/p&gt;
+&lt;p&gt;If you set it up, let me know how it works for you. I’d love to hear about any customizations or integrations you come up with. Also, if you have a killer recipe collection, I’m always open to swapping ideas.&lt;/p&gt;
 </description>
         </item>
         

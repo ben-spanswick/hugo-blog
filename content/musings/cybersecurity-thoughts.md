@@ -1,11 +1,11 @@
----  
+---
 title: "The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move"  
 date: 2025-03-15  
 description: "The U.S. deprioritizing Russia as a cyber threat might seem like a strategic shift, but is it a smart one? Let’s break it down."  
 tags: [Cybersecurity, Geopolitics, Russia, United States, National Security]  
 categories: [Technology, Politics, Security]  
 draft: false  
----  
+---
 
 ## The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move  
 
@@ -35,4 +35,3 @@ If the U.S. truly goes all-in on prioritizing China over Russia in cyber defense
 The internet doesn’t have borders, and cyber warfare doesn’t operate on a neat ranking system where one country gets priority over another. Both Russia and China (and others) pose serious threats, and treating cybersecurity like a geopolitical popularity contest is **a recipe for disaster.** 
 
 The U.S. should absolutely focus on China’s cyber strategy—but not at the cost of ignoring a very real, very active, and very capable Russian threat. If history has taught us anything, it’s that underestimating an adversary tends to backfire. And in cybersecurity, the cost of getting it wrong isn’t just lost data—it’s national security.
-
