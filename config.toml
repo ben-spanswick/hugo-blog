@@ -10,6 +10,7 @@ languageCode = "en-us"
   featuredImageField = "image"
   rssFullContent = true
   favicon = "/favicon.ico"
+  lastmod = "2025-03-15T00:00:00Z"  # Set a static Last Modified date
 
   [params.footer]
     since = 2024
