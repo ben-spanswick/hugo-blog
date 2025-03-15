@@ -1,3 +1,11 @@
+---
+title: "Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages"
+date: 2025-03-15
+tags: ["Hugo", "Cloudflare Pages", "Gitea", "GitHub", "Self-Hosting"]
+categories: ["Tech", "Self-Hosting"]
+draft: false
+---
+
 # Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages
 
 ## Why Hugo?
