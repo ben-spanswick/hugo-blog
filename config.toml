@@ -1,0 +1,63 @@
+baseURL = "http://192.168.100.63/"
+title = "My Blog"
+theme = "stack"
+enableRobotsTXT = true
+defaultContentLanguage = "en"
+languageCode = "en-us"
+
+[params]
+  mainSections = ["posts"]
+  featuredImageField = "image"
+  rssFullContent = true
+  favicon = "/favicon.ico"
+
+  [params.footer]
+    since = 2024
+    customText = "Powered by Hugo & Stack Theme"
+
+  [params.dateFormat]
+    published = "Jan 02, 2006"
+    lastUpdated = "Jan 02, 2006 15:04 MST"
+
+  [params.sidebar]
+    compact = false
+    emoji = "🚀"
+    subtitle = "Exploring Tech, Homelabs, & Self-Hosting"
+    [params.sidebar.avatar]
+      enabled = true
+      local = true
+      src = "img/avatar.png"
+
+  [params.article]
+    headingAnchor = true
+    math = true
+    toc = true
+    readingTime = true
+    [params.article.license]
+      enabled = true
+      default = "Licensed under CC BY-NC-SA 4.0"
+
+  [params.colorScheme]
+    toggle = true
+    default = "dark"  # Options: auto, light, dark
+
+  [params.opengraph.twitter]
+    site = "@yourtwitter"
+    card = "summary_large_image"
+
+  [params.defaultImage.opengraph]
+    enabled = true
+    local = false
+    src = "/images/default-thumbnail.png"
+
+  [params.imageProcessing.cover]
+    enabled = true
+  [params.imageProcessing.content]
+    enabled = true
+
+  [params.widgets]
+    homepage = []
+    page = []
+
+[pagination]
+  pagerSize = 5

@@ -1,0 +1,24 @@
+baseURL = "/"
+languageCode = "en-us"
+theme = "poison"
+pagerSize = 10
+pluralizelisttitles = false
+
+[params]
+    brand = "Poison"
+    description = "A Hugo-powered blog"
+    dark_mode = true
+    front_page_content = ["posts"]
+
+    menu = [
+        {Name = "About", URL = "/about/", HasChildren = false},
+        {Name = "Posts", URL = "/posts/", Pre = "Recent", HasChildren = true, Limit = 5}
+    ]
+
+    # Social Links
+    github_url = "https://github.com"
+    twitter_url = "https://twitter.com"
+
+[taxonomies]
+    series = 'series'
+    tags = 'tags'

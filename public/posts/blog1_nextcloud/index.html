@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="This is my first blog post using Hugo and the Poison theme!">
+<title>Nextcloud Setup</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/posts/blog1_nextcloud/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Nextcloud Setup">
+<meta property='og:description' content="This is my first blog post using Hugo and the Poison theme!">
+<meta property='og:url' content='http://192.168.100.63:1313/posts/blog1_nextcloud/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Posts' /><meta property='article:tag' content='nextcloud' /><meta property='article:tag' content='services' /><meta property='article:tag' content='self-hosted' /><meta property='article:published_time' content='2025-03-13T12:00:00-05:00'/><meta property='article:modified_time' content='2025-03-13T12:00:00-05:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Nextcloud Setup">
+<meta name="twitter:description" content="This is my first blog post using Hugo and the Poison theme!"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🚀</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/posts/blog1_nextcloud/">Nextcloud Setup</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            This is my first blog post using Hugo and the Poison theme!
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 13, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    4 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="building-a-self-hosted-nextcloud-architecture-setup-and-lessons-learned"><a href="#building-a-self-hosted-nextcloud-architecture-setup-and-lessons-learned" class="header-anchor"></a>Building a Self-Hosted Nextcloud: Architecture, Setup, and Lessons Learned
+</h1><h2 id="introduction-how-we-designed-this-setup"><a href="#introduction-how-we-designed-this-setup" class="header-anchor"></a>Introduction: How We Designed This Setup
+</h2><p>When setting up Nextcloud, I wanted to <strong>strike a balance between speed, scalability, and reliability</strong> while keeping everything self-hosted. That meant carefully choosing <strong>where to store each component</strong> and how to optimize performance. Here&rsquo;s the structure I landed on:</p>
+<ol>
+<li>
+<p><strong>Nextcloud app runs on an SSD</strong></p>
+<ul>
+<li>The core application and web interface should be as fast as possible. Running Nextcloud on an LXC container stored on a local SSD ensures fast load times.</li>
+</ul>
+</li>
+<li>
+<p><strong>PostgreSQL for database performance</strong></p>
+<ul>
+<li>Instead of MariaDB, I went with PostgreSQL, which offers better scalability and performance, especially when dealing with metadata-heavy queries.</li>
+<li>The database is stored on an HDD pool, where I have plenty of storage but still decent IOPS for database operations.</li>
+</ul>
+</li>
+<li>
+<p><strong>Large file storage on a separate HDD pool</strong></p>
+<ul>
+<li>Instead of storing everything on SSDs, I mounted an HDD-based ZFS pool for bulk file storage (videos, documents, backups). This keeps costs down while still being performant enough for Nextcloud’s use case.</li>
+</ul>
+</li>
+<li>
+<p><strong>Backups scheduled to the NAS</strong></p>
+<ul>
+<li>In the near future, I plan to automate nightly rsync backups from the HDD pool to a separate NAS, ensuring redundancy and data safety.</li>
+</ul>
+</li>
+</ol>
+<p>With this approach, I get fast UI response times, efficient database operations, scalable storage for large files, and a solid backup plan.</p>
+<p><strong>Now, let&rsquo;s dive into how we built it.</strong></p>
+<hr>
+<h2 id="why-nextcloud"><a href="#why-nextcloud" class="header-anchor"></a>Why Nextcloud?
+</h2><p>Nextcloud is an open-source cloud storage platform that gives you complete control over your data. Unlike Google Drive or Dropbox, you aren’t locked into a proprietary ecosystem, and there are no monthly fees.</p>
+<p>Beyond just storing files, Nextcloud offers:</p>
+<ul>
+<li><strong>File synchronization across devices</strong></li>
+<li><strong>Built-in sharing and collaboration</strong></li>
+<li><strong>A growing ecosystem of apps</strong> (e.g., calendar, tasks, media streaming)</li>
+<li><strong>Advanced security features</strong> (encryption, 2FA, remote wipe)</li>
+</ul>
+<p>For a homelab or self-hosted setup, <strong>it’s one of the best tools available.</strong></p>
+<hr>
+<h2 id="how-we-set-it-up"><a href="#how-we-set-it-up" class="header-anchor"></a>How We Set It Up
+</h2><h3 id="1-choosing-turnkey-lxc-for-simplicity"><a href="#1-choosing-turnkey-lxc-for-simplicity" class="header-anchor"></a>1. Choosing TurnKey LXC for Simplicity
+</h3><p>Rather than manually installing Apache, PHP, and configuring everything from scratch, I opted for a <strong>TurnKey Linux (TKL) LXC container</strong>. The benefits:</p>
+<ul>
+<li>Comes with <strong>Nextcloud pre-installed</strong></li>
+<li><strong>Pre-configured Apache, PHP, and Redis</strong></li>
+<li><strong>Automated security updates</strong></li>
+</ul>
+<p><strong>Why an LXC instead of a VM?</strong><br>
+LXCs are <strong>more lightweight and efficient</strong> than a full virtual machine. Since they share the Proxmox kernel, they <strong>use fewer system resources</strong> while still maintaining isolation.</p>
+<p><strong>Resources Allocated:</strong></p>
+<ul>
+<li><strong>4 vCPUs</strong> – To handle Nextcloud’s PHP and web requests efficiently.</li>
+<li><strong>8GB RAM</strong> – Since Nextcloud benefits from caching, more RAM helps.</li>
+<li><strong>8GB SSD root disk</strong> – Only the core OS and application live here.</li>
+</ul>
+<hr>
+<h3 id="2-using-postgresql-instead-of-mariadb"><a href="#2-using-postgresql-instead-of-mariadb" class="header-anchor"></a>2. Using PostgreSQL Instead of MariaDB
+</h3><p>Nextcloud supports <strong>both MariaDB and PostgreSQL</strong>, but PostgreSQL is <strong>better for high-concurrency workloads</strong> and provides <strong>stronger ACID compliance</strong>.</p>
+<p><strong>Why PostgreSQL?</strong></p>
+<ul>
+<li><strong>Handles concurrent users better</strong> – More efficient transaction management.</li>
+<li><strong>Better JSON &amp; search performance</strong> – Useful for Nextcloud&rsquo;s metadata queries.</li>
+<li><strong>More robust scaling</strong> – PostgreSQL handles larger datasets with ease.</li>
+</ul>
+<h4 id="setting-up-postgresql"><a href="#setting-up-postgresql" class="header-anchor"></a>Setting Up PostgreSQL
+</h4><p>We installed it in a <strong>separate LXC container</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install -y postgresql
+</span></span></code></pre></div><p>Then created a <strong>Nextcloud-specific database</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -u postgres psql
+</span></span><span style="display:flex;"><span>CREATE DATABASE nextcloud;
+</span></span><span style="display:flex;"><span>CREATE USER user WITH PASSWORD <span style="color:#e6db74">&#39;supersecurepassword&#39;</span>;
+</span></span><span style="display:flex;"><span>ALTER DATABASE nextcloud OWNER TO mandrake;
+</span></span></code></pre></div><p>Finally, we pointed Nextcloud to use the external database server at <code>192.168.xxx.xxx</code>.</p>
+<hr>
+<h3 id="3-separating-file-storage-ssd-for-system-hdd-for-data"><a href="#3-separating-file-storage-ssd-for-system-hdd-for-data" class="header-anchor"></a>3. Separating File Storage: SSD for System, HDD for Data
+</h3><p>Storing Nextcloud’s <strong>entire dataset on SSDs</strong> is overkill—especially for <strong>large media files</strong> that don’t need instant access speeds.</p>
+<h4 id="our-storage-breakdown"><a href="#our-storage-breakdown" class="header-anchor"></a>Our Storage Breakdown:
+</h4><ul>
+<li><strong>SSD (local-zfs):</strong> Hosts the LXC container and Nextcloud application.</li>
+<li><strong>HDD Pool (r430pool):</strong> Stores Nextcloud user files (documents, videos, etc.).</li>
+<li><strong>NAS Backup (future upgrade):</strong> Will hold nightly snapshots of the data.</li>
+</ul>
+<p>This ensures the <strong>UI stays fast</strong>, while <strong>bulk storage remains cost-effective</strong>.</p>
+<h4 id="how-we-mounted-the-hdd-pool-in-nextcloud-lxc"><a href="#how-we-mounted-the-hdd-pool-in-nextcloud-lxc" class="header-anchor"></a>How We Mounted the HDD Pool in Nextcloud LXC
+</h4><p>First, we created a <strong>ZFS dataset</strong> for Nextcloud data:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zfs create -o mountpoint<span style="color:#f92672">=</span>/mnt/r430pool/nextcloud r430pool/nextcloud
+</span></span></code></pre></div><p>Then, we <strong>mounted it inside the LXC container</strong>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano /etc/pve/lxc/101.conf
+</span></span></code></pre></div><p>Added:</p>
+<pre tabindex="0"><code>mp0: /mnt/r430pool/nextcloud,mp=/mnt/nextcloud
+</code></pre><p>Finally, we moved Nextcloud’s data:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync -av /var/www/nextcloud/data/ /mnt/nextcloud/
+</span></span></code></pre></div><hr>
+<h3 id="4-caching-for-performance-redis--apcu"><a href="#4-caching-for-performance-redis--apcu" class="header-anchor"></a>4. Caching for Performance: Redis &amp; APCu
+</h3><p>Caching <strong>reduces database queries</strong> and <strong>makes Nextcloud feel more responsive</strong>.</p>
+<h4 id="what-apcu-does"><a href="#what-apcu-does" class="header-anchor"></a><strong>What APCu Does</strong>
+</h4><ul>
+<li><strong>APCu (Alternative PHP Cache)</strong> speeds up Nextcloud by <strong>caching PHP objects and session data in memory</strong>.</li>
+<li>This prevents Nextcloud from constantly hitting the database for <strong>frequently accessed metadata</strong>.</li>
+</ul>
+<h4 id="what-redis-does"><a href="#what-redis-does" class="header-anchor"></a><strong>What Redis Does</strong>
+</h4><ul>
+<li><strong>Redis is an in-memory key-value store</strong> that Nextcloud uses for <strong>file locking</strong>.</li>
+<li>Without Redis, Nextcloud relies on <strong>database locks</strong>, which slow things down.</li>
+<li>Redis ensures <strong>simultaneous users don’t interfere with each other’s file operations</strong>.</li>
+</ul>
+<h4 id="installing-redis--apcu"><a href="#installing-redis--apcu" class="header-anchor"></a>Installing Redis &amp; APCu
+</h4><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install -y redis-server php-redis php-apcu
+</span></span></code></pre></div><p>Then, we updated <code>config.php</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#e6db74">&#39;memcache.local&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;\OC\Memcache\APCu&#39;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;memcache.locking&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;\OC\Memcache\Redis&#39;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;redis&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">array</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;host&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;localhost&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;port&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">6379</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;timeout&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0.0</span>,
+</span></span><span style="display:flex;"><span>),
+</span></span></code></pre></div><p>This dramatically <strong>improves Nextcloud’s performance</strong>.</p>
+<hr>
+<h2 id="next-steps--future-improvements"><a href="#next-steps--future-improvements" class="header-anchor"></a>Next Steps &amp; Future Improvements
+</h2><ul>
+<li><strong>Automated Nightly Backups</strong>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync -av /mnt/nextcloud/ /mnt/nas/backups/nextcloud/
+</span></span></code></pre></div></li>
+<li><strong>Setting Up an SMTP Server for Notifications</strong></li>
+</ul>
+<hr>
+<h2 id="final-thoughts"><a href="#final-thoughts" class="header-anchor"></a>Final Thoughts
+</h2><p>This setup gives us:</p>
+<ul>
+<li><strong>Fast performance</strong> (SSD for app, Redis caching)</li>
+<li><strong>Scalable storage</strong> (HDD pool for bulk files)</li>
+<li><strong>Reliability</strong> (PostgreSQL, separate DB &amp; app containers)</li>
+</ul>
+<p>Next steps? <strong>Automating backups, adding SMTP email alerts, and possibly integrating OnlyOffice for document editing.</strong></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/nextcloud/">Nextcloud</a>
+        
+            <a href="/tags/services/">Services</a>
+        
+            <a href="/tags/self-hosted/">Self-Hosted</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/posts/blog2_nextcloudbuild/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Building a Self-Hosted Nextcloud: Detailed Setup</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 My Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
