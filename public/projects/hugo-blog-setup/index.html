@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages Why Hugo? Hugo is one of the fastest static site generators available, making it ideal for self-hosted and low-maintenance deployments. I wanted a simple, efficient way to publish content without dealing with databases or complex CMS setups. The goal was to maintain full control over the blog while using a streamlined deployment process.\nThe Setup I started with a local Hugo installation, managed through an internal Gitea instance for private version control. The blog needed to be public, though, so I mirrored the repository to GitHub, allowing Cloudflare Pages to handle automatic deployments. This approach keeps the primary repo internal while using GitHub as an intermediary for seamless publishing.\n">
+<title>Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/projects/hugo-blog-setup/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages">
+<meta property='og:description' content="Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages Why Hugo? Hugo is one of the fastest static site generators available, making it ideal for self-hosted and low-maintenance deployments. I wanted a simple, efficient way to publish content without dealing with databases or complex CMS setups. The goal was to maintain full control over the blog while using a streamlined deployment process.\nThe Setup I started with a local Hugo installation, managed through an internal Gitea instance for private version control. The blog needed to be public, though, so I mirrored the repository to GitHub, allowing Cloudflare Pages to handle automatic deployments. This approach keeps the primary repo internal while using GitHub as an intermediary for seamless publishing.\n">
+<meta property='og:url' content='http://192.168.100.63:1313/projects/hugo-blog-setup/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Projects' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='Cloudflare Pages' /><meta property='article:tag' content='Gitea' /><meta property='article:tag' content='GitHub' /><meta property='article:tag' content='Self-Hosting' /><meta property='article:published_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages">
+<meta name="twitter:description" content="Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages Why Hugo? Hugo is one of the fastest static site generators available, making it ideal for self-hosted and low-maintenance deployments. I wanted a simple, efficient way to publish content without dealing with databases or complex CMS setups. The goal was to maintain full control over the blog while using a streamlined deployment process.\nThe Setup I started with a local Hugo installation, managed through an internal Gitea instance for private version control. The blog needed to be public, though, so I mirrored the repository to GitHub, allowing Cloudflare Pages to handle automatic deployments. This approach keeps the primary repo internal while using GitHub as an intermediary for seamless publishing.\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🚀</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech/" >
+                Tech
+            </a>
+        
+            <a href="/categories/self-hosting/" >
+                Self-Hosting
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/projects/hugo-blog-setup/">Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages</a>
+        </h2>
+    
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 15, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="setting-up-hugo-with-gitea-github-and-cloudflare-pages"><a href="#setting-up-hugo-with-gitea-github-and-cloudflare-pages" class="header-anchor"></a>Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages
+</h1><h2 id="why-hugo"><a href="#why-hugo" class="header-anchor"></a>Why Hugo?
+</h2><p>Hugo is one of the fastest static site generators available, making it ideal for self-hosted and low-maintenance deployments. I wanted a simple, efficient way to publish content without dealing with databases or complex CMS setups. The goal was to maintain full control over the blog while using a streamlined deployment process.</p>
+<h2 id="the-setup"><a href="#the-setup" class="header-anchor"></a>The Setup
+</h2><p>I started with a local Hugo installation, managed through an internal <strong>Gitea</strong> instance for private version control. The blog needed to be public, though, so I mirrored the repository to <strong>GitHub</strong>, allowing <strong>Cloudflare Pages</strong> to handle automatic deployments. This approach keeps the primary repo internal while using GitHub as an intermediary for seamless publishing.</p>
+<h3 id="1-installing-hugo"><a href="#1-installing-hugo" class="header-anchor"></a><strong>1. Installing Hugo</strong>
+</h3><p>I installed Hugo directly on my server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install hugo
+</span></span></code></pre></div><p>Then, I created the site structure:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site myblog
+</span></span></code></pre></div><h2 id="using-a-theme-submodule-issues-and-fixes"><a href="#using-a-theme-submodule-issues-and-fixes" class="header-anchor"></a><strong>Using a Theme: Submodule Issues and Fixes</strong>
+</h2><p>Hugo themes are typically managed as Git submodules, which caused some headaches when syncing between Gitea and GitHub.</p>
+<h3 id="the-submodule-problem"><a href="#the-submodule-problem" class="header-anchor"></a><strong>The Submodule Problem</strong>
+</h3><p>Initially, I added a theme as a submodule:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
+</span></span></code></pre></div><p>This worked locally, but Cloudflare Pages failed to build, throwing errors like:</p>
+<pre tabindex="0"><code>fatal: No url found for submodule path &#39;themes/stack&#39; in .gitmodules
+</code></pre><p>This happened because GitHub wasn’t properly recognizing the submodule reference. Attempts to remove and re-add it using <code>git rm --cached</code> didn’t fully resolve the issue.</p>
+<h3 id="the-proper-fix"><a href="#the-proper-fix" class="header-anchor"></a><strong>The Proper Fix</strong>
+</h3><p>The cleanest way to handle submodules for a public build was:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Remove any broken references</span>
+</span></span><span style="display:flex;"><span>git submodule deinit -f themes/stack
+</span></span><span style="display:flex;"><span>git rm --cached themes/stack
+</span></span><span style="display:flex;"><span>rm -rf .git/modules/themes/stack
+</span></span><span style="display:flex;"><span>rm -rf themes/stack
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Re-add as a proper submodule</span>
+</span></span><span style="display:flex;"><span>git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
+</span></span><span style="display:flex;"><span>git submodule update --init --recursive
+</span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Re-added Stack theme as a proper submodule&#34;</span>
+</span></span><span style="display:flex;"><span>git push origin main
+</span></span></code></pre></div><p>Once this was done, Cloudflare Pages could properly clone the theme during its build process.</p>
+<h2 id="configuring-cloudflare-pages"><a href="#configuring-cloudflare-pages" class="header-anchor"></a><strong>Configuring Cloudflare Pages</strong>
+</h2><p>With GitHub mirroring the repository, Cloudflare Pages handled automatic deployments.</p>
+<ol>
+<li><strong>Connected the GitHub repo</strong> to Cloudflare Pages.</li>
+<li>Set the <strong>build command</strong> to:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule update --init --recursive <span style="color:#f92672">&amp;&amp;</span> hugo --gc --minify
+</span></span></code></pre></div></li>
+<li><strong>Fixed Hugo Version Issues</strong> – Cloudflare was running an outdated Hugo version by default, causing errors like:
+<pre tabindex="0"><code>can&#39;t evaluate field Lastmod in type page.Site
+</code></pre>The fix was to <strong>specify the correct Hugo version</strong> in <code>package.json</code>:
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;engines&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;hugo&#34;</span>: <span style="color:#e6db74">&#34;0.118.2&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div>This ensured Cloudflare Pages used a compatible version.</li>
+</ol>
+<h2 id="adding-a-custom-domain"><a href="#adding-a-custom-domain" class="header-anchor"></a><strong>Adding a Custom Domain</strong>
+</h2><p>The final step was setting up a custom domain (<code>blog.spanswick.dev</code>).</p>
+<ol>
+<li><strong>Added the domain in Cloudflare Pages</strong> under <code>Custom Domains</code>.</li>
+<li>Updated <strong>DNS settings</strong>:
+<ul>
+<li>Added a CNAME record pointing <code>blog.spanswick.dev</code> to <code>pages.dev</code>.</li>
+<li>Enabled <strong>proxied mode</strong> for better performance and security.</li>
+</ul>
+</li>
+<li>Enabled <strong>Full (Strict) SSL</strong> to ensure HTTPS worked correctly.</li>
+</ol>
+<h2 id="final-thoughts"><a href="#final-thoughts" class="header-anchor"></a><strong>Final Thoughts</strong>
+</h2><p>The final setup works smoothly:</p>
+<ul>
+<li><strong>Gitea</strong> for internal version control.</li>
+<li><strong>GitHub</strong> as a public mirror.</li>
+<li><strong>Cloudflare Pages</strong> for automatic deployments.</li>
+<li><strong>Custom domain</strong> for a professional look.</li>
+</ul>
+<p>The biggest pain point was dealing with <strong>submodules</strong>—GitHub didn’t always handle them correctly, and Cloudflare’s default Hugo version was outdated. Once those were sorted, everything fell into place.</p>
+<p>Going forward, I might explore additional integrations like <strong>webhooks</strong> to automatically push from Gitea to GitHub, removing the need for manual mirroring.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/hugo/">Hugo</a>
+        
+            <a href="/tags/cloudflare-pages/">Cloudflare Pages</a>
+        
+            <a href="/tags/gitea/">Gitea</a>
+        
+            <a href="/tags/github/">GitHub</a>
+        
+            <a href="/tags/self-hosting/">Self-Hosting</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/projects/tandoor-recipe-management/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Self-Hosted Series: Tandoor</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 My Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

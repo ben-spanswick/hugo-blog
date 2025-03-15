@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Thu, 13 Mar 2025 12:00:00 -0500</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/homelab/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Building a Self-Hosted Nextcloud: Detailed Setup</title>
-        <link>http://192.168.100.63:1313/posts/blog2_nextcloudbuild/</link>
+        <link>http://192.168.100.63:1313/projects/nextcloud-setup/</link>
         <pubDate>Thu, 13 Mar 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63:1313/posts/blog2_nextcloudbuild/</guid>
+        <guid>http://192.168.100.63:1313/projects/nextcloud-setup/</guid>
         <description>&lt;h1 id=&#34;nextcloud-lxc-setup-guide-step-by-step&#34;&gt;&lt;a href=&#34;#nextcloud-lxc-setup-guide-step-by-step&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Nextcloud LXC Setup Guide (Step-by-Step)
 &lt;/h1&gt;&lt;h2 id=&#34;1-install-the-turnkey-nextcloud-lxc&#34;&gt;&lt;a href=&#34;#1-install-the-turnkey-nextcloud-lxc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;1. Install the TurnKey Nextcloud LXC
 &lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pct create &lt;span style=&#34;color:#ae81ff&#34;&gt;101&lt;/span&gt; local:vztmpl/turnkey-nextcloud-18.0-buster-amd64.tar.gz --storage local-zfs --hostname NextCloud --memory &lt;span style=&#34;color:#ae81ff&#34;&gt;8000&lt;/span&gt; --cores &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;

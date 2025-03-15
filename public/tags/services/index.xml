@@ -8,10 +8,10 @@
         <language>en-us</language>
         <lastBuildDate>Thu, 13 Mar 2025 12:00:00 -0500</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/services/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Nextcloud Setup</title>
-        <link>http://192.168.100.63:1313/posts/blog1_nextcloud/</link>
+        <link>http://192.168.100.63:1313/projects/self-hosting-nextcloud/</link>
         <pubDate>Thu, 13 Mar 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63:1313/posts/blog1_nextcloud/</guid>
+        <guid>http://192.168.100.63:1313/projects/self-hosting-nextcloud/</guid>
         <description>&lt;h1 id=&#34;building-a-self-hosted-nextcloud-architecture-setup-and-lessons-learned&#34;&gt;&lt;a href=&#34;#building-a-self-hosted-nextcloud-architecture-setup-and-lessons-learned&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Building a Self-Hosted Nextcloud: Architecture, Setup, and Lessons Learned
 &lt;/h1&gt;&lt;h2 id=&#34;introduction-how-we-designed-this-setup&#34;&gt;&lt;a href=&#34;#introduction-how-we-designed-this-setup&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Introduction: How We Designed This Setup
 &lt;/h2&gt;&lt;p&gt;When setting up Nextcloud, I wanted to &lt;strong&gt;strike a balance between speed, scalability, and reliability&lt;/strong&gt; while keeping everything self-hosted. That meant carefully choosing &lt;strong&gt;where to store each component&lt;/strong&gt; and how to optimize performance. Here&amp;rsquo;s the structure I landed on:&lt;/p&gt;

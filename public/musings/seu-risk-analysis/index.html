@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Ann Arbor is building its own sustainable energy utility, and as someone in the grid space, I can’t help but wonder—could this be the future of how we power our cities?">
+<title>Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/musings/seu-risk-analysis/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy">
+<meta property='og:description' content="Ann Arbor is building its own sustainable energy utility, and as someone in the grid space, I can’t help but wonder—could this be the future of how we power our cities?">
+<meta property='og:url' content='http://192.168.100.63:1313/musings/seu-risk-analysis/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Musings' /><meta property='article:tag' content='Sustainable Energy' /><meta property='article:tag' content='Microgrids' /><meta property='article:tag' content='Ann Arbor' /><meta property='article:tag' content='The Grid' /><meta property='article:tag' content='Gretchen Bakke' /><meta property='article:published_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy">
+<meta name="twitter:description" content="Ann Arbor is building its own sustainable energy utility, and as someone in the grid space, I can’t help but wonder—could this be the future of how we power our cities?"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    
+                    
+                    
+                        
+                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
+                            height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    
+                
+                </a>
+                
+                    <span class="emoji">🚀</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/energy/" >
+                Energy
+            </a>
+        
+            <a href="/categories/sustainability/" >
+                Sustainability
+            </a>
+        
+            <a href="/categories/technology/" >
+                Technology
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/musings/seu-risk-analysis/">Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Ann Arbor is building its own sustainable energy utility, and as someone in the grid space, I can’t help but wonder—could this be the future of how we power our cities?
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 15, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    3 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h2 id="ann-arbors-big-grid-experiment-a-glimpse-into-the-future-of-energy"><a href="#ann-arbors-big-grid-experiment-a-glimpse-into-the-future-of-energy" class="header-anchor"></a>Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy
+</h2><p>If you work in energy like I do, the news coming out of Ann Arbor is <strong>pretty fascinating</strong>—they&rsquo;re building their own <strong>Sustainable Energy Utility (SEU)</strong>. Instead of relying entirely on the traditional grid, they&rsquo;re developing a localized system that uses <strong>solar, battery storage, and even geothermal</strong> to power the city. The idea? More independence, more reliability, and more resilience against blackouts. (<a class="link" href="https://techxplore.com/news/2025-03-ann-arbor-sustainable-energy-aims.html"  target="_blank" rel="noopener"
+    >Read the full story</a>)</p>
+<p>For those of us knee-deep in grid infrastructure, this is <strong>huge</strong>. The grid we have today was never built for decentralized, community-driven power solutions. In fact, it actively resists them. Which brings me to <em>The Grid</em> by Gretchen Bakke—if you haven’t read it, it’s worth your time. Bakke makes the case that our electrical grid is old, overburdened, and <strong>fundamentally not designed for a world where renewables dominate</strong>. She lays out why incorporating <strong>localized energy solutions</strong> like what Ann Arbor is attempting is easier said than done.</p>
+<h3 id="why-this-matters"><a href="#why-this-matters" class="header-anchor"></a>Why This Matters
+</h3><p>The way we generate and distribute electricity is shifting—<strong>fast</strong>. What Ann Arbor is doing is more than just a cool local project; it’s a preview of what other cities <strong>might</strong> (and probably should) start doing.</p>
+<p>Right now, utilities work on a top-down model: power plants generate electricity, send it through transmission lines, and eventually, it trickles down to homes and businesses. It’s centralized, efficient in some ways, but <strong>insanely vulnerable</strong> to disruptions. One bad storm, one cyberattack, one aging transformer failure, and entire regions go dark. Ann Arbor’s plan flips that on its head. <strong>Instead of one big system, they’re thinking in microgrids.</strong></p>
+<p>This means:</p>
+<ul>
+<li><strong>Power stays local</strong> – Generated and used within the community, cutting down on transmission losses.</li>
+<li><strong>More resilience</strong> – If the main grid goes down, parts of the city could still function.</li>
+<li><strong>Community control</strong> – Instead of being at the mercy of investor-owned utilities, residents have a say in their power source.</li>
+</ul>
+<h3 id="but-lets-be-realthis-wont-be-easy"><a href="#but-lets-be-realthis-wont-be-easy" class="header-anchor"></a>But Let’s Be Real—This Won’t Be Easy
+</h3><p>I love the idea of localized power, but I also know the massive headaches that come with integrating it. A city can’t just unplug from the existing grid and go full renewable overnight. There are regulatory hurdles, <strong>legacy infrastructure issues</strong>, and the ever-persistent problem of intermittency (aka, what happens when the sun isn’t shining, and the wind isn’t blowing?).</p>
+<p>Ann Arbor’s SEU is aiming to tackle these issues with <strong>battery storage and smart grid tech</strong>, but that requires serious investment and long-term planning. And let’s be honest—utilities don’t always play nice when local governments try to carve out their own energy systems. We’ve seen plenty of legal battles over cities trying to establish public power utilities, and you can bet some big players aren’t thrilled about Ann Arbor’s plan.</p>
+<h3 id="the-future-more-cities-following-suit"><a href="#the-future-more-cities-following-suit" class="header-anchor"></a>The Future: More Cities Following Suit?
+</h3><p>So, could this work elsewhere? Maybe. Maybe not. But Ann Arbor’s project is a <strong>bold experiment in how we rethink energy infrastructure</strong>. If it succeeds, it could be a blueprint for cities looking to break free from aging, vulnerable grids. If it struggles? Well, that’s valuable too—because every failure teaches us something about what needs to change.</p>
+<p>The big takeaway? We’re moving toward a more localized, resilient, and renewable-powered energy future. Ann Arbor is just ahead of the curve. The rest of us? We’d better start paying attention.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/sustainable-energy/">Sustainable Energy</a>
+        
+            <a href="/tags/microgrids/">Microgrids</a>
+        
+            <a href="/tags/ann-arbor/">Ann Arbor</a>
+        
+            <a href="/tags/the-grid/">The Grid</a>
+        
+            <a href="/tags/gretchen-bakke/">Gretchen Bakke</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 My Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>
