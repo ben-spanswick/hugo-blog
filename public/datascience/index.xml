@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Data Science, Strategy, Leadership on My Blog</title>
+        <link>http://192.168.100.63:1313/datascience/</link>
+        <description>Recent content in Data Science, Strategy, Leadership on My Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/datascience/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Building High Impact Data Science Teams</title>
+        <link>http://192.168.100.63:1313/datascience/foundations/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/datascience/foundations/</guid>
+        <description>&lt;h1 id=&#34;building-high-impact-data-science-teams-avoiding-the-tech-debt-trap-and-driving-real-business-value&#34;&gt;&lt;a href=&#34;#building-high-impact-data-science-teams-avoiding-the-tech-debt-trap-and-driving-real-business-value&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Building High-Impact Data Science Teams: Avoiding the Tech Debt Trap and Driving Real Business Value&lt;/strong&gt;
+&lt;/h1&gt;&lt;p&gt;Everyone wants a high-impact data science team. But too often, companies end up with a &lt;strong&gt;high-cost, low-output, tech-debt-ridden mess&lt;/strong&gt; that looks great in a slide deck but doesn’t actually move the business forward.&lt;/p&gt;
+&lt;p&gt;I’ve seen teams over-index on hiring the &lt;strong&gt;smartest person in the room&lt;/strong&gt;, chase cutting-edge models that add complexity without value, and burn months on projects that never get adopted. The difference between a &lt;strong&gt;high-impact&lt;/strong&gt; data science function and a &lt;strong&gt;high-friction&lt;/strong&gt; one usually comes down to a few key things: &lt;strong&gt;vision, execution, and integration.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Let’s talk about what actually works.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;data-science-exists-to-drive-business-valuenot-impress-your-peers&#34;&gt;&lt;a href=&#34;#data-science-exists-to-drive-business-valuenot-impress-your-peers&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Data Science Exists to Drive Business Value—Not Impress Your Peers&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;At its core, &lt;strong&gt;data science is a business function.&lt;/strong&gt; If your team is optimizing for the best possible model instead of the best possible outcome, you&amp;rsquo;re doing it wrong.&lt;/p&gt;
+&lt;p&gt;The reality is that &lt;strong&gt;most business problems don’t need a deep learning model&lt;/strong&gt;. If a well-tuned linear regression gets the job done, use it. The goal is &lt;strong&gt;impact&lt;/strong&gt;, not intellectual satisfaction. A great data science team understands that the real challenge isn’t the math—it’s &lt;strong&gt;adoption, integration, and execution&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;So before anyone on your team builds a model, they need to be able to answer:&lt;br&gt;
+✅ &lt;strong&gt;What business problem are we solving?&lt;/strong&gt;&lt;br&gt;
+✅ &lt;strong&gt;How will this change the way people work?&lt;/strong&gt;&lt;br&gt;
+✅ &lt;strong&gt;What’s the simplest, most scalable way to implement this?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you can’t answer those questions, you’re probably solving the wrong problem.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-people-you-need-and-the-ones-you-dont&#34;&gt;&lt;a href=&#34;#the-people-you-need-and-the-ones-you-dont&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The People You Need (And the Ones You Don’t)&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;A truly effective data science team isn’t just &lt;strong&gt;PhDs slinging PyTorch models&lt;/strong&gt;—it’s a mix of &lt;strong&gt;deep technical talent, business integration expertise, and operational support&lt;/strong&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;what-works&#34;&gt;&lt;a href=&#34;#what-works&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;What Works:&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Deep Technical Experts:&lt;/strong&gt; You need strong ML engineers and statisticians, but they can’t work in a vacuum.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Analytics-Minded Data Scientists:&lt;/strong&gt; People who understand the business, not just the math.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Business Analysts &amp;amp; PMs:&lt;/strong&gt; Absolutely critical for translating insights into real change.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Change Management Experts:&lt;/strong&gt; Because if people don’t change how they work, your model is useless.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-fails&#34;&gt;&lt;a href=&#34;#what-fails&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;What Fails:&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Over-Indexing on &amp;ldquo;Genius&amp;rdquo; Hires:&lt;/strong&gt; One hyper-technical unicorn won’t save you if the team lacks execution skills.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No Product Thinking:&lt;/strong&gt; If you’re not thinking about reproducibility and scale, you’re just building &lt;strong&gt;expensive science experiments&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Ignoring Operational Realities:&lt;/strong&gt; If your work requires a total rewrite of how employees do their jobs, expect resistance.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-biggest-mistake-the-tech-debt-nightmare&#34;&gt;&lt;a href=&#34;#the-biggest-mistake-the-tech-debt-nightmare&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The Biggest Mistake: The Tech Debt Nightmare&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;Let’s talk about &lt;strong&gt;the single most common failure mode&lt;/strong&gt; in data science teams:&lt;/p&gt;
+&lt;p&gt;🚨 &lt;strong&gt;The tech debt black hole.&lt;/strong&gt; 🚨&lt;/p&gt;
+&lt;p&gt;Here’s how it happens:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;The team builds a &lt;strong&gt;one-off, highly customized model&lt;/strong&gt; that works beautifully in a proof of concept.&lt;/li&gt;
+&lt;li&gt;It’s &lt;strong&gt;not reproducible&lt;/strong&gt;, &lt;strong&gt;not documented&lt;/strong&gt;, and &lt;strong&gt;not scalable&lt;/strong&gt;, but leadership loves the numbers.&lt;/li&gt;
+&lt;li&gt;The business wants more insights, so new models get built &lt;strong&gt;on top of the old, messy infrastructure&lt;/strong&gt;.&lt;/li&gt;
+&lt;li&gt;Six months in, &lt;strong&gt;everything is duct-taped together&lt;/strong&gt; and breaking constantly.&lt;/li&gt;
+&lt;li&gt;Eventually, the tech debt is so bad that &lt;strong&gt;shipping anything new takes forever&lt;/strong&gt;—and the business starts losing faith in data science altogether.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;I’ve seen this play out &lt;strong&gt;again and again&lt;/strong&gt;. The fix? &lt;strong&gt;Think like an engineer, not an academic.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;✅ Build &lt;strong&gt;reproducible, modular solutions&lt;/strong&gt; from Day 1.&lt;br&gt;
+✅ Use &lt;strong&gt;standardized data pipelines&lt;/strong&gt; instead of one-off ETLs.&lt;br&gt;
+✅ Create &lt;strong&gt;model monitoring and maintenance plans&lt;/strong&gt; before deployment.&lt;br&gt;
+✅ If your team needs an entire PhD dissertation to explain their model, &lt;strong&gt;it’s too complex to scale&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;The best data science teams &lt;strong&gt;build for longevity&lt;/strong&gt;—not just the next flashy demo.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;defining-impact-metrics-that-matter&#34;&gt;&lt;a href=&#34;#defining-impact-metrics-that-matter&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Defining Impact: Metrics That Matter&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;A high-value data science team doesn’t just build cool stuff—it delivers &lt;strong&gt;measurable business outcomes&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Before you ever start a project, your team should be aligned on:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Expanding market share&lt;/strong&gt; (Are we helping grow the business?)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Saving costs&lt;/strong&gt; (Are we making operations more efficient?)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Improving customer experience&lt;/strong&gt; (Are we driving better engagement and retention?)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Data science should &lt;strong&gt;never&lt;/strong&gt; exist in a vacuum. The best teams &lt;strong&gt;tie their work directly to company priorities&lt;/strong&gt;—otherwise, it’s just expensive academic research.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;org-design-hub-and-spoke-vs-federated-vs-centralized&#34;&gt;&lt;a href=&#34;#org-design-hub-and-spoke-vs-federated-vs-centralized&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Org Design: Hub-and-Spoke vs. Federated vs. Centralized&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;There’s no one-size-fits-all answer to structuring a data science team. I’ve had success with both &lt;strong&gt;hub-and-spoke&lt;/strong&gt; and &lt;strong&gt;federated&lt;/strong&gt; models, but the right choice depends on your company’s needs.&lt;/p&gt;
+&lt;h3 id=&#34;centralized-model&#34;&gt;&lt;a href=&#34;#centralized-model&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Centralized Model&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;✅ Best for: Organizations just starting their data science journey.&lt;br&gt;
+🚫 Risk: Can become siloed from the business.&lt;/p&gt;
+&lt;h3 id=&#34;hub-and-spoke-model&#34;&gt;&lt;a href=&#34;#hub-and-spoke-model&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Hub-and-Spoke Model&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;✅ Best for: Large orgs that need a balance of oversight and integration.&lt;br&gt;
+🚫 Risk: Requires strong leadership to keep alignment.&lt;/p&gt;
+&lt;h3 id=&#34;fully-embedded-federated-model&#34;&gt;&lt;a href=&#34;#fully-embedded-federated-model&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Fully Embedded (Federated) Model&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;✅ Best for: Highly mature companies with data-driven cultures.&lt;br&gt;
+🚫 Risk: Can lead to fragmented teams and duplicated effort.&lt;/p&gt;
+&lt;p&gt;Whatever structure you choose, the key is ensuring that &lt;strong&gt;data science isn’t an island.&lt;/strong&gt; The closer your team is to decision-making, the more valuable they become.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;final-thoughts-build-for-scale-not-just-the-next-model&#34;&gt;&lt;a href=&#34;#final-thoughts-build-for-scale-not-just-the-next-model&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Final Thoughts: Build for Scale, Not Just the Next Model&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;A high-impact data science team isn’t measured by how many models they build—it’s measured by &lt;strong&gt;how much the business changes because of them&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Too many teams focus on the &lt;strong&gt;hardest&lt;/strong&gt; problems instead of the &lt;strong&gt;most impactful&lt;/strong&gt; ones. They chase state-of-the-art models instead of &lt;strong&gt;scalable, reliable solutions&lt;/strong&gt;. And they &lt;strong&gt;ignore change management&lt;/strong&gt;, leading to insights that never get implemented.&lt;/p&gt;
+&lt;p&gt;If you want a data science team that actually delivers:&lt;br&gt;
+✅ Prioritize business value over model complexity.&lt;br&gt;
+✅ Hire for &lt;strong&gt;execution&lt;/strong&gt;, not just intelligence.&lt;br&gt;
+✅ Avoid the &lt;strong&gt;tech debt trap&lt;/strong&gt; by building with scale in mind.&lt;br&gt;
+✅ Align on &lt;strong&gt;business metrics that matter.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;At the end of the day, &lt;strong&gt;a great data science team doesn’t just generate insights—it drives real, lasting change.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

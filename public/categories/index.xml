@@ -23,6 +23,14 @@
         <description></description>
         </item>
         <item>
+        <title>Data Science</title>
+        <link>http://192.168.100.63:1313/categories/data-science/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/data-science/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Energy</title>
         <link>http://192.168.100.63:1313/categories/energy/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
@@ -52,6 +60,14 @@
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/categories/self-hosting/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Strategy</title>
+        <link>http://192.168.100.63:1313/categories/strategy/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/strategy/</guid>
         <description></description>
         </item>
         <item>

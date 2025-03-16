@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Lessons learned and pitfalls to avoid from over a decade of building data science teams.">
+<title>Building High Impact Data Science Teams</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/datascience/foundations/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Building High Impact Data Science Teams">
+<meta property='og:description' content="Lessons learned and pitfalls to avoid from over a decade of building data science teams.">
+<meta property='og:url' content='http://192.168.100.63:1313/datascience/foundations/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Datascience' /><meta property='article:tag' content='Data Science' /><meta property='article:tag' content='Team Building' /><meta property='article:tag' content='Strategy' /><meta property='article:tag' content='Leadership' /><meta property='article:published_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Building High Impact Data Science Teams">
+<meta name="twitter:description" content="Lessons learned and pitfalls to avoid from over a decade of building data science teams."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">💾</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/datascience/' >
+                
+                
+                
+                <span>Data Strategy</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/files/spanswick_resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/data-science/" >
+                Data Science
+            </a>
+        
+            <a href="/categories/strategy/" >
+                Strategy
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/datascience/foundations/">Building High Impact Data Science Teams</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Lessons learned and pitfalls to avoid from over a decade of building data science teams.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 15, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="building-high-impact-data-science-teams-avoiding-the-tech-debt-trap-and-driving-real-business-value"><a href="#building-high-impact-data-science-teams-avoiding-the-tech-debt-trap-and-driving-real-business-value" class="header-anchor"></a><strong>Building High-Impact Data Science Teams: Avoiding the Tech Debt Trap and Driving Real Business Value</strong>
+</h1><p>Everyone wants a high-impact data science team. But too often, companies end up with a <strong>high-cost, low-output, tech-debt-ridden mess</strong> that looks great in a slide deck but doesn’t actually move the business forward.</p>
+<p>I’ve seen teams over-index on hiring the <strong>smartest person in the room</strong>, chase cutting-edge models that add complexity without value, and burn months on projects that never get adopted. The difference between a <strong>high-impact</strong> data science function and a <strong>high-friction</strong> one usually comes down to a few key things: <strong>vision, execution, and integration.</strong></p>
+<p>Let’s talk about what actually works.</p>
+<hr>
+<h2 id="data-science-exists-to-drive-business-valuenot-impress-your-peers"><a href="#data-science-exists-to-drive-business-valuenot-impress-your-peers" class="header-anchor"></a><strong>Data Science Exists to Drive Business Value—Not Impress Your Peers</strong>
+</h2><p>At its core, <strong>data science is a business function.</strong> If your team is optimizing for the best possible model instead of the best possible outcome, you&rsquo;re doing it wrong.</p>
+<p>The reality is that <strong>most business problems don’t need a deep learning model</strong>. If a well-tuned linear regression gets the job done, use it. The goal is <strong>impact</strong>, not intellectual satisfaction. A great data science team understands that the real challenge isn’t the math—it’s <strong>adoption, integration, and execution</strong>.</p>
+<p>So before anyone on your team builds a model, they need to be able to answer:<br>
+✅ <strong>What business problem are we solving?</strong><br>
+✅ <strong>How will this change the way people work?</strong><br>
+✅ <strong>What’s the simplest, most scalable way to implement this?</strong></p>
+<p>If you can’t answer those questions, you’re probably solving the wrong problem.</p>
+<hr>
+<h2 id="the-people-you-need-and-the-ones-you-dont"><a href="#the-people-you-need-and-the-ones-you-dont" class="header-anchor"></a><strong>The People You Need (And the Ones You Don’t)</strong>
+</h2><p>A truly effective data science team isn’t just <strong>PhDs slinging PyTorch models</strong>—it’s a mix of <strong>deep technical talent, business integration expertise, and operational support</strong>.</p>
+<h3 id="what-works"><a href="#what-works" class="header-anchor"></a><strong>What Works:</strong>
+</h3><ul>
+<li><strong>Deep Technical Experts:</strong> You need strong ML engineers and statisticians, but they can’t work in a vacuum.</li>
+<li><strong>Analytics-Minded Data Scientists:</strong> People who understand the business, not just the math.</li>
+<li><strong>Business Analysts &amp; PMs:</strong> Absolutely critical for translating insights into real change.</li>
+<li><strong>Change Management Experts:</strong> Because if people don’t change how they work, your model is useless.</li>
+</ul>
+<h3 id="what-fails"><a href="#what-fails" class="header-anchor"></a><strong>What Fails:</strong>
+</h3><ul>
+<li><strong>Over-Indexing on &ldquo;Genius&rdquo; Hires:</strong> One hyper-technical unicorn won’t save you if the team lacks execution skills.</li>
+<li><strong>No Product Thinking:</strong> If you’re not thinking about reproducibility and scale, you’re just building <strong>expensive science experiments</strong>.</li>
+<li><strong>Ignoring Operational Realities:</strong> If your work requires a total rewrite of how employees do their jobs, expect resistance.</li>
+</ul>
+<hr>
+<h2 id="the-biggest-mistake-the-tech-debt-nightmare"><a href="#the-biggest-mistake-the-tech-debt-nightmare" class="header-anchor"></a><strong>The Biggest Mistake: The Tech Debt Nightmare</strong>
+</h2><p>Let’s talk about <strong>the single most common failure mode</strong> in data science teams:</p>
+<p>🚨 <strong>The tech debt black hole.</strong> 🚨</p>
+<p>Here’s how it happens:</p>
+<ol>
+<li>The team builds a <strong>one-off, highly customized model</strong> that works beautifully in a proof of concept.</li>
+<li>It’s <strong>not reproducible</strong>, <strong>not documented</strong>, and <strong>not scalable</strong>, but leadership loves the numbers.</li>
+<li>The business wants more insights, so new models get built <strong>on top of the old, messy infrastructure</strong>.</li>
+<li>Six months in, <strong>everything is duct-taped together</strong> and breaking constantly.</li>
+<li>Eventually, the tech debt is so bad that <strong>shipping anything new takes forever</strong>—and the business starts losing faith in data science altogether.</li>
+</ol>
+<p>I’ve seen this play out <strong>again and again</strong>. The fix? <strong>Think like an engineer, not an academic.</strong></p>
+<p>✅ Build <strong>reproducible, modular solutions</strong> from Day 1.<br>
+✅ Use <strong>standardized data pipelines</strong> instead of one-off ETLs.<br>
+✅ Create <strong>model monitoring and maintenance plans</strong> before deployment.<br>
+✅ If your team needs an entire PhD dissertation to explain their model, <strong>it’s too complex to scale</strong>.</p>
+<p>The best data science teams <strong>build for longevity</strong>—not just the next flashy demo.</p>
+<hr>
+<h2 id="defining-impact-metrics-that-matter"><a href="#defining-impact-metrics-that-matter" class="header-anchor"></a><strong>Defining Impact: Metrics That Matter</strong>
+</h2><p>A high-value data science team doesn’t just build cool stuff—it delivers <strong>measurable business outcomes</strong>.</p>
+<p>Before you ever start a project, your team should be aligned on:</p>
+<ul>
+<li><strong>Expanding market share</strong> (Are we helping grow the business?)</li>
+<li><strong>Saving costs</strong> (Are we making operations more efficient?)</li>
+<li><strong>Improving customer experience</strong> (Are we driving better engagement and retention?)</li>
+</ul>
+<p>Data science should <strong>never</strong> exist in a vacuum. The best teams <strong>tie their work directly to company priorities</strong>—otherwise, it’s just expensive academic research.</p>
+<hr>
+<h2 id="org-design-hub-and-spoke-vs-federated-vs-centralized"><a href="#org-design-hub-and-spoke-vs-federated-vs-centralized" class="header-anchor"></a><strong>Org Design: Hub-and-Spoke vs. Federated vs. Centralized</strong>
+</h2><p>There’s no one-size-fits-all answer to structuring a data science team. I’ve had success with both <strong>hub-and-spoke</strong> and <strong>federated</strong> models, but the right choice depends on your company’s needs.</p>
+<h3 id="centralized-model"><a href="#centralized-model" class="header-anchor"></a><strong>Centralized Model</strong>
+</h3><p>✅ Best for: Organizations just starting their data science journey.<br>
+🚫 Risk: Can become siloed from the business.</p>
+<h3 id="hub-and-spoke-model"><a href="#hub-and-spoke-model" class="header-anchor"></a><strong>Hub-and-Spoke Model</strong>
+</h3><p>✅ Best for: Large orgs that need a balance of oversight and integration.<br>
+🚫 Risk: Requires strong leadership to keep alignment.</p>
+<h3 id="fully-embedded-federated-model"><a href="#fully-embedded-federated-model" class="header-anchor"></a><strong>Fully Embedded (Federated) Model</strong>
+</h3><p>✅ Best for: Highly mature companies with data-driven cultures.<br>
+🚫 Risk: Can lead to fragmented teams and duplicated effort.</p>
+<p>Whatever structure you choose, the key is ensuring that <strong>data science isn’t an island.</strong> The closer your team is to decision-making, the more valuable they become.</p>
+<hr>
+<h2 id="final-thoughts-build-for-scale-not-just-the-next-model"><a href="#final-thoughts-build-for-scale-not-just-the-next-model" class="header-anchor"></a><strong>Final Thoughts: Build for Scale, Not Just the Next Model</strong>
+</h2><p>A high-impact data science team isn’t measured by how many models they build—it’s measured by <strong>how much the business changes because of them</strong>.</p>
+<p>Too many teams focus on the <strong>hardest</strong> problems instead of the <strong>most impactful</strong> ones. They chase state-of-the-art models instead of <strong>scalable, reliable solutions</strong>. And they <strong>ignore change management</strong>, leading to insights that never get implemented.</p>
+<p>If you want a data science team that actually delivers:<br>
+✅ Prioritize business value over model complexity.<br>
+✅ Hire for <strong>execution</strong>, not just intelligence.<br>
+✅ Avoid the <strong>tech debt trap</strong> by building with scale in mind.<br>
+✅ Align on <strong>business metrics that matter.</strong></p>
+<p>At the end of the day, <strong>a great data science team doesn’t just generate insights—it drives real, lasting change.</strong></p>
+<hr>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/data-science/">Data Science</a>
+        
+            <a href="/tags/team-building/">Team Building</a>
+        
+            <a href="/tags/strategy/">Strategy</a>
+        
+            <a href="/tags/leadership/">Leadership</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 My Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

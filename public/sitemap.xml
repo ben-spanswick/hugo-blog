@@ -17,10 +17,19 @@
     <loc>http://192.168.100.63:1313/categories/ai-trends/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://192.168.100.63:1313/tags/aig/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/musings/agi/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://192.168.100.63:1313/tags/ann-arbor/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/musings/seu-risk-analysis/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/foundations/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/categories/</loc>
@@ -32,10 +41,22 @@
     <loc>http://192.168.100.63:1313/tags/cybersecurity/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://192.168.100.63:1313/categories/data-science/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/data-science/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://192.168.100.63:1313/tags/deepseek-v3/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/categories/energy/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/futurology/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/gemma-3/</loc>
@@ -72,6 +93,9 @@
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/hugo/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/leadership/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/machine-learning/</loc>
@@ -125,6 +149,12 @@
     <loc>http://192.168.100.63:1313/projects/hugo-blog-setup/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://192.168.100.63:1313/categories/strategy/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/strategy/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://192.168.100.63:1313/categories/sustainability/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -135,6 +165,9 @@
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/tandoor/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/team-building/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/categories/tech/</loc>
@@ -150,6 +183,9 @@
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/musings/gpt5-future-ai/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/ubi/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/united-states/</loc>

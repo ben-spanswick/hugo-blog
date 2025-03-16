@@ -23,6 +23,14 @@
         <description></description>
         </item>
         <item>
+        <title>AIG</title>
+        <link>http://192.168.100.63:1313/tags/aig/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/tags/aig/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Ann Arbor</title>
         <link>http://192.168.100.63:1313/tags/ann-arbor/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
@@ -47,11 +55,27 @@
         <description></description>
         </item>
         <item>
+        <title>Data Science</title>
+        <link>http://192.168.100.63:1313/tags/data-science/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/tags/data-science/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>DeepSeek V3</title>
         <link>http://192.168.100.63:1313/tags/deepseek-v3/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/tags/deepseek-v3/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Futurology</title>
+        <link>http://192.168.100.63:1313/tags/futurology/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/tags/futurology/</guid>
         <description></description>
         </item>
         <item>
@@ -135,6 +159,14 @@
         <description></description>
         </item>
         <item>
+        <title>Leadership</title>
+        <link>http://192.168.100.63:1313/tags/leadership/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/tags/leadership/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Machine Learning</title>
         <link>http://192.168.100.63:1313/tags/machine-learning/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
@@ -207,6 +239,14 @@
         <description></description>
         </item>
         <item>
+        <title>Strategy</title>
+        <link>http://192.168.100.63:1313/tags/strategy/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/tags/strategy/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Sustainable Energy</title>
         <link>http://192.168.100.63:1313/tags/sustainable-energy/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
@@ -223,11 +263,27 @@
         <description></description>
         </item>
         <item>
+        <title>Team Building</title>
+        <link>http://192.168.100.63:1313/tags/team-building/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/tags/team-building/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>The Grid</title>
         <link>http://192.168.100.63:1313/tags/the-grid/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/tags/the-grid/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>UBI</title>
+        <link>http://192.168.100.63:1313/tags/ubi/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/tags/ubi/</guid>
         <description></description>
         </item>
         <item>

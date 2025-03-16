@@ -7,7 +7,7 @@ languageCode = "en-us"
 enableEmoji = true
 
 [params]
-  mainSections = ["musings", "projects", "about"]  # Updated to reflect actual content folders
+  mainSections = ["datascience", "musings", "projects", "about"]  # Reflects actual content folders
   featuredImageField = "image"
   rssFullContent = true
   favicon = "/favicon.ico"
@@ -25,7 +25,7 @@ enableEmoji = true
     compact = false
     emoji = "💾"
     subtitle = "Exploring Tech, Homelabs, & Self-Hosting"
-    
+
     [params.sidebar.avatar]
       enabled = true
       local = false
@@ -36,7 +36,7 @@ enableEmoji = true
     math = true
     toc = true
     readingTime = true
-    
+
     [params.article.license]
       enabled = true
       default = "Licensed under CC BY-NC-SA 4.0"
@@ -59,9 +59,19 @@ enableEmoji = true
   [params.imageProcessing.content]
     enabled = true
 
+  # Widgets for Sidebar
   [params.widgets]
     homepage = []
     page = []
+
+  [[params.widgets.sidebar]]
+    type = "search"
+
+  [[params.widgets.sidebar]]
+    type = "categories"
+
+  [[params.widgets.sidebar]]
+    type = "tags"
 
 [pagination]
   pagerSize = 5
@@ -89,6 +99,11 @@ enableEmoji = true
     weight = 4
 
   [[menu.main]]
-    name = "Resume"
-    url = "Spanswick_Resume2025.pdf"
+    name = "Data Strategy"
+    url = "/datascience/"
     weight = 5
+
+  [[menu.main]]
+    name = "Resume"
+    url = "/files/Spanswick_Resume2025.pdf"
+    weight = 6
