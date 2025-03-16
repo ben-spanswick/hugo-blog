@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="title: &ldquo;Nextcloud Setup&rdquo; date: 2025-03-13T12:00:00-05:00 description: &ldquo;This is my first blog post using Hugo and the Poison theme!&rdquo; tags: [&ldquo;nextcloud&rdquo;, &ldquo;services&rdquo;, &ldquo;self-hosted&rdquo;] draft: false Building a Self-Hosted Nextcloud: Architecture, Setup, and Lessons Learned Introduction: How We Designed This Setup When setting up Nextcloud, I wanted to strike a balance between speed, scalability, and reliability while keeping everything self-hosted. That meant carefully choosing where to store each component and how to optimize performance. Here&rsquo;s the structure I landed on:\n">
-<title>Untitled</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="This is my first blog post using Hugo and the Poison theme!">
+<title>Nextcloud Setup</title>
 
 <link rel='canonical' href='http://192.168.100.63:1313/projects/self-hosting-nextcloud/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Untitled">
-<meta property='og:description' content="title: &ldquo;Nextcloud Setup&rdquo; date: 2025-03-13T12:00:00-05:00 description: &ldquo;This is my first blog post using Hugo and the Poison theme!&rdquo; tags: [&ldquo;nextcloud&rdquo;, &ldquo;services&rdquo;, &ldquo;self-hosted&rdquo;] draft: false Building a Self-Hosted Nextcloud: Architecture, Setup, and Lessons Learned Introduction: How We Designed This Setup When setting up Nextcloud, I wanted to strike a balance between speed, scalability, and reliability while keeping everything self-hosted. That meant carefully choosing where to store each component and how to optimize performance. Here&rsquo;s the structure I landed on:\n">
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Nextcloud Setup">
+<meta property='og:description' content="This is my first blog post using Hugo and the Poison theme!">
 <meta property='og:url' content='http://192.168.100.63:1313/projects/self-hosting-nextcloud/'>
 <meta property='og:site_name' content='My Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Projects' /><meta property='article:published_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Projects' /><meta property='article:tag' content='nextcloud' /><meta property='article:tag' content='services' /><meta property='article:tag' content='self-hosted' /><meta property='article:published_time' content='2025-03-13T12:00:00-05:00'/><meta property='article:modified_time' content='2025-03-13T12:00:00-05:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
 <meta name="twitter:site" content="@@yourtwitter">
-    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Untitled">
-<meta name="twitter:description" content="title: &ldquo;Nextcloud Setup&rdquo; date: 2025-03-13T12:00:00-05:00 description: &ldquo;This is my first blog post using Hugo and the Poison theme!&rdquo; tags: [&ldquo;nextcloud&rdquo;, &ldquo;services&rdquo;, &ldquo;self-hosted&rdquo;] draft: false Building a Self-Hosted Nextcloud: Architecture, Setup, and Lessons Learned Introduction: How We Designed This Setup When setting up Nextcloud, I wanted to strike a balance between speed, scalability, and reliability while keeping everything self-hosted. That meant carefully choosing where to store each component and how to optimize performance. Here&rsquo;s the structure I landed on:\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Nextcloud Setup">
+<meta name="twitter:description" content="This is my first blog post using Hugo and the Poison theme!"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -56,17 +56,11 @@
             <figure class="site-avatar">
                 <a href="/">
                 
-                    
-                    
-                    
-                        
-                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
+                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
                 
                 </a>
                 
-                    <span class="emoji">🚀</span>
+                    <span class="emoji"> ^=^z^`</span>
                 
             </figure>
             
@@ -78,6 +72,56 @@
         </div>
     </header><ol class="menu" id="main-menu">
         
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='Spanswick_resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
         
         <li class="menu-bottom-section">
             <ol class="menu">
@@ -119,9 +163,13 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/projects/self-hosting-nextcloud/">Untitled</a>
+            <a href="/projects/self-hosting-nextcloud/">Nextcloud Setup</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            This is my first blog post using Hugo and the Poison theme!
+        </h3>
         
     </div>
 
@@ -141,7 +189,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 15, 2025</time>
+                <time class="article-time--published">Mar 13, 2025</time>
             </div>
         
 
@@ -156,7 +204,7 @@
 
 
                 <time class="article-time--reading">
-                    5 minute read
+                    4 minute read
                 </time>
             </div>
         
@@ -171,12 +219,7 @@
     <section class="article-content">
     
     
-    <h2 id="draft-false"><a href="#draft-false" class="header-anchor"></a>title: &ldquo;Nextcloud Setup&rdquo;
-date: 2025-03-13T12:00:00-05:00
-description: &ldquo;This is my first blog post using Hugo and the Poison theme!&rdquo;
-tags: [&ldquo;nextcloud&rdquo;, &ldquo;services&rdquo;, &ldquo;self-hosted&rdquo;]
-draft: false
-</h2><h1 id="building-a-self-hosted-nextcloud-architecture-setup-and-lessons-learned"><a href="#building-a-self-hosted-nextcloud-architecture-setup-and-lessons-learned" class="header-anchor"></a>Building a Self-Hosted Nextcloud: Architecture, Setup, and Lessons Learned
+    <h1 id="building-a-self-hosted-nextcloud-architecture-setup-and-lessons-learned"><a href="#building-a-self-hosted-nextcloud-architecture-setup-and-lessons-learned" class="header-anchor"></a>Building a Self-Hosted Nextcloud: Architecture, Setup, and Lessons Learned
 </h1><h2 id="introduction-how-we-designed-this-setup"><a href="#introduction-how-we-designed-this-setup" class="header-anchor"></a>Introduction: How We Designed This Setup
 </h2><p>When setting up Nextcloud, I wanted to <strong>strike a balance between speed, scalability, and reliability</strong> while keeping everything self-hosted. That meant carefully choosing <strong>where to store each component</strong> and how to optimize performance. Here&rsquo;s the structure I landed on:</p>
 <ol>
@@ -321,6 +364,16 @@ LXCs are <strong>more lightweight and efficient</strong> than a full virtual mac
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/nextcloud/">Nextcloud</a>
+        
+            <a href="/tags/services/">Services</a>
+        
+            <a href="/tags/self-hosted/">Self-Hosted</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -369,6 +422,28 @@ LXCs are <strong>more lightweight and efficient</strong> than a full virtual mac
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/projects/nextcloud-setup/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Building a Self-Hosted Nextcloud: Detailed Setup</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     

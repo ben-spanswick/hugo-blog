@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="title: &ldquo;Building a Self-Hosted Nextcloud: Detailed Setup&rdquo; date: 2025-03-13T12:00:00-05:00 description: &ldquo;A deep dive into building a self-hosted Nextcloud for scalability, speed, and reliability.&rdquo; tags: [&ldquo;nextcloud&rdquo;, &ldquo;self-hosting&rdquo;, &ldquo;homelab&rdquo;, &ldquo;storage&rdquo;] draft: false Nextcloud LXC Setup Guide (Step-by-Step) 1. Install the TurnKey Nextcloud LXC pct create 101 local:vztmpl/turnkey-nextcloud-18.0-buster-amd64.tar.gz --storage local-zfs --hostname NextCloud --memory 8000 --cores 4 pct start 101 2. Install PostgreSQL in a Separate LXC apt update &amp;&amp; apt install -y postgresql systemctl enable --now postgresql Create the Nextcloud Database sudo -u postgres psql CREATE DATABASE nextcloud; CREATE USER nextclouduser WITH PASSWORD &#39;REDACTED&#39;; ALTER DATABASE nextcloud OWNER TO nextclouduser; \\q 3. Mount HDD Pool for Nextcloud Data On Proxmox Host: zfs create -o mountpoint=/mnt/r430pool/nextcloud r430pool/nextcloud Bind to LXC: nano /etc/pve/lxc/101.conf Add:\n">
-<title>Untitled</title>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="A deep dive into building a self-hosted Nextcloud for scalability, speed, and reliability.">
+<title>Building a Self-Hosted Nextcloud: Detailed Setup</title>
 
 <link rel='canonical' href='http://192.168.100.63:1313/projects/nextcloud-setup/'>
 
-<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Untitled">
-<meta property='og:description' content="title: &ldquo;Building a Self-Hosted Nextcloud: Detailed Setup&rdquo; date: 2025-03-13T12:00:00-05:00 description: &ldquo;A deep dive into building a self-hosted Nextcloud for scalability, speed, and reliability.&rdquo; tags: [&ldquo;nextcloud&rdquo;, &ldquo;self-hosting&rdquo;, &ldquo;homelab&rdquo;, &ldquo;storage&rdquo;] draft: false Nextcloud LXC Setup Guide (Step-by-Step) 1. Install the TurnKey Nextcloud LXC pct create 101 local:vztmpl/turnkey-nextcloud-18.0-buster-amd64.tar.gz --storage local-zfs --hostname NextCloud --memory 8000 --cores 4 pct start 101 2. Install PostgreSQL in a Separate LXC apt update &amp;&amp; apt install -y postgresql systemctl enable --now postgresql Create the Nextcloud Database sudo -u postgres psql CREATE DATABASE nextcloud; CREATE USER nextclouduser WITH PASSWORD &#39;REDACTED&#39;; ALTER DATABASE nextcloud OWNER TO nextclouduser; \\q 3. Mount HDD Pool for Nextcloud Data On Proxmox Host: zfs create -o mountpoint=/mnt/r430pool/nextcloud r430pool/nextcloud Bind to LXC: nano /etc/pve/lxc/101.conf Add:\n">
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Building a Self-Hosted Nextcloud: Detailed Setup">
+<meta property='og:description' content="A deep dive into building a self-hosted Nextcloud for scalability, speed, and reliability.">
 <meta property='og:url' content='http://192.168.100.63:1313/projects/nextcloud-setup/'>
 <meta property='og:site_name' content='My Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Projects' /><meta property='article:published_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta property='og:type' content='article'><meta property='article:section' content='Projects' /><meta property='article:tag' content='nextcloud' /><meta property='article:tag' content='self-hosting' /><meta property='article:tag' content='homelab' /><meta property='article:tag' content='storage' /><meta property='article:published_time' content='2025-03-13T12:00:00-05:00'/><meta property='article:modified_time' content='2025-03-13T12:00:00-05:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
 <meta name="twitter:site" content="@@yourtwitter">
-    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Untitled">
-<meta name="twitter:description" content="title: &ldquo;Building a Self-Hosted Nextcloud: Detailed Setup&rdquo; date: 2025-03-13T12:00:00-05:00 description: &ldquo;A deep dive into building a self-hosted Nextcloud for scalability, speed, and reliability.&rdquo; tags: [&ldquo;nextcloud&rdquo;, &ldquo;self-hosting&rdquo;, &ldquo;homelab&rdquo;, &ldquo;storage&rdquo;] draft: false Nextcloud LXC Setup Guide (Step-by-Step) 1. Install the TurnKey Nextcloud LXC pct create 101 local:vztmpl/turnkey-nextcloud-18.0-buster-amd64.tar.gz --storage local-zfs --hostname NextCloud --memory 8000 --cores 4 pct start 101 2. Install PostgreSQL in a Separate LXC apt update &amp;&amp; apt install -y postgresql systemctl enable --now postgresql Create the Nextcloud Database sudo -u postgres psql CREATE DATABASE nextcloud; CREATE USER nextclouduser WITH PASSWORD &#39;REDACTED&#39;; ALTER DATABASE nextcloud OWNER TO nextclouduser; \\q 3. Mount HDD Pool for Nextcloud Data On Proxmox Host: zfs create -o mountpoint=/mnt/r430pool/nextcloud r430pool/nextcloud Bind to LXC: nano /etc/pve/lxc/101.conf Add:\n"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Building a Self-Hosted Nextcloud: Detailed Setup">
+<meta name="twitter:description" content="A deep dive into building a self-hosted Nextcloud for scalability, speed, and reliability."><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -56,17 +56,11 @@
             <figure class="site-avatar">
                 <a href="/">
                 
-                    
-                    
-                    
-                        
-                        <img src="/img/avatar_hu_f509edb42ecc0ebd.png" width="300"
-                            height="300" class="site-logo" loading="lazy" alt="Avatar">
-                    
+                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
                 
                 </a>
                 
-                    <span class="emoji">🚀</span>
+                    <span class="emoji"> ^=^z^`</span>
                 
             </figure>
             
@@ -78,6 +72,56 @@
         </div>
     </header><ol class="menu" id="main-menu">
         
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='Spanswick_resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
         
         <li class="menu-bottom-section">
             <ol class="menu">
@@ -119,9 +163,13 @@
 
     <div class="article-title-wrapper">
         <h2 class="article-title">
-            <a href="/projects/nextcloud-setup/">Untitled</a>
+            <a href="/projects/nextcloud-setup/">Building a Self-Hosted Nextcloud: Detailed Setup</a>
         </h2>
     
+        
+        <h3 class="article-subtitle">
+            A deep dive into building a self-hosted Nextcloud for scalability, speed, and reliability.
+        </h3>
         
     </div>
 
@@ -141,7 +189,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 15, 2025</time>
+                <time class="article-time--published">Mar 13, 2025</time>
             </div>
         
 
@@ -171,12 +219,7 @@
     <section class="article-content">
     
     
-    <h2 id="draft-false"><a href="#draft-false" class="header-anchor"></a>title: &ldquo;Building a Self-Hosted Nextcloud: Detailed Setup&rdquo;
-date: 2025-03-13T12:00:00-05:00
-description: &ldquo;A deep dive into building a self-hosted Nextcloud for scalability, speed, and reliability.&rdquo;
-tags: [&ldquo;nextcloud&rdquo;, &ldquo;self-hosting&rdquo;, &ldquo;homelab&rdquo;, &ldquo;storage&rdquo;]
-draft: false
-</h2><h1 id="nextcloud-lxc-setup-guide-step-by-step"><a href="#nextcloud-lxc-setup-guide-step-by-step" class="header-anchor"></a>Nextcloud LXC Setup Guide (Step-by-Step)
+    <h1 id="nextcloud-lxc-setup-guide-step-by-step"><a href="#nextcloud-lxc-setup-guide-step-by-step" class="header-anchor"></a>Nextcloud LXC Setup Guide (Step-by-Step)
 </h1><h2 id="1-install-the-turnkey-nextcloud-lxc"><a href="#1-install-the-turnkey-nextcloud-lxc" class="header-anchor"></a>1. Install the TurnKey Nextcloud LXC
 </h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pct create <span style="color:#ae81ff">101</span> local:vztmpl/turnkey-nextcloud-18.0-buster-amd64.tar.gz --storage local-zfs --hostname NextCloud --memory <span style="color:#ae81ff">8000</span> --cores <span style="color:#ae81ff">4</span>
 </span></span><span style="display:flex;"><span>pct start <span style="color:#ae81ff">101</span>
@@ -276,6 +319,18 @@ unprivileged: 1
 
     <footer class="article-footer">
     
+    <section class="article-tags">
+        
+            <a href="/tags/nextcloud/">Nextcloud</a>
+        
+            <a href="/tags/self-hosting/">Self-Hosting</a>
+        
+            <a href="/tags/homelab/">Homelab</a>
+        
+            <a href="/tags/storage/">Storage</a>
+        
+    </section>
+
 
     
     <section class="article-copyright">
@@ -324,6 +379,28 @@ unprivileged: 1
     
 
     
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/projects/self-hosting-nextcloud/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Nextcloud Setup</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
 
      
     

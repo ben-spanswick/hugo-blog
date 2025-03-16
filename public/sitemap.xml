@@ -2,47 +2,184 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://192.168.100.63:1313/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/about/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/musings/</loc>
+    <loc>http://192.168.100.63:1313/tags/ai/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</loc>
+    <loc>http://192.168.100.63:1313/categories/ai-developments/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/musings/gemma3-ai/</loc>
+    <loc>http://192.168.100.63:1313/tags/ai-strategy/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/musings/gencast/</loc>
+    <loc>http://192.168.100.63:1313/categories/ai-trends/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/musings/gpt5-future-ai/</loc>
+    <loc>http://192.168.100.63:1313/tags/ann-arbor/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/musings/seu-risk-analysis/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
+    <loc>http://192.168.100.63:1313/categories/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/cloudflare-pages/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/cybersecurity/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/deepseek-v3/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/energy/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/gemma-3/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/musings/gemma3-ai/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/geopolitics/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/gitea/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/github/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/google/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/musings/gencast/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/gpt-5/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/gpu-efficiency/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/gretchen-bakke/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/grid-resiliency/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/hugo/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/machine-learning/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/microgrids/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/musings/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/national-security/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/open-source/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/openai/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/politics/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/privacy/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://192.168.100.63:1313/projects/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/projects/hugo-blog-setup/</loc>
+    <loc>http://192.168.100.63:1313/tags/recipe-management/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/projects/nextcloud-setup/</loc>
+    <loc>http://192.168.100.63:1313/tags/russia/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/projects/self-hosting-nextcloud/</loc>
+    <loc>http://192.168.100.63:1313/categories/security/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/projects/tandoor-recipe-management/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/categories/</loc>
+    <loc>http://192.168.100.63:1313/categories/self-hosting/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/self-hosting/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/projects/hugo-blog-setup/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/sustainability/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/sustainable-energy/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/tandoor/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/tech/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/technology/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/the-grid/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/musings/gpt5-future-ai/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/united-states/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/utilities/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/weather-forecasting/</loc>
+    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/projects/nextcloud-setup/</loc>
+    <lastmod>2025-03-13T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/homelab/</loc>
+    <lastmod>2025-03-13T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/nextcloud/</loc>
+    <lastmod>2025-03-13T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/projects/self-hosting-nextcloud/</loc>
+    <lastmod>2025-03-13T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/self-hosted/</loc>
+    <lastmod>2025-03-13T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/services/</loc>
+    <lastmod>2025-03-13T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/storage/</loc>
+    <lastmod>2025-03-13T12:00:00-05:00</lastmod>
   </url>
 </urlset>

@@ -1,6 +1,8 @@
 ---
 title: "About Me"
 description: "Who I am, what I do, and why I built this blog."
+date: 2025-03-15
+draft: false
 ---
 
 # About Me
