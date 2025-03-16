@@ -6,7 +6,31 @@
         <description>Recent content in Categories on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Data Science</title>
+        <link>http://192.168.100.63:1313/categories/data-science/</link>
+        <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/data-science/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Engineering Leadership</title>
+        <link>http://192.168.100.63:1313/categories/engineering-leadership/</link>
+        <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/engineering-leadership/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Strategy</title>
+        <link>http://192.168.100.63:1313/categories/strategy/</link>
+        <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/strategy/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>AI Developments</title>
         <link>http://192.168.100.63:1313/categories/ai-developments/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
@@ -20,14 +44,6 @@
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/categories/ai-trends/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Data Science</title>
-        <link>http://192.168.100.63:1313/categories/data-science/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/data-science/</guid>
         <description></description>
         </item>
         <item>
@@ -60,14 +76,6 @@
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/categories/self-hosting/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Strategy</title>
-        <link>http://192.168.100.63:1313/categories/strategy/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/strategy/</guid>
         <description></description>
         </item>
         <item>

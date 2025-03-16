@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Engineering Leadership on My Blog</title>
+        <link>http://192.168.100.63:1313/categories/engineering-leadership/</link>
+        <description>Recent content in Engineering Leadership on My Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/engineering-leadership/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale</title>
+        <link>http://192.168.100.63:1313/datascience/techdebt/</link>
+        <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/datascience/techdebt/</guid>
+        <description>&lt;h1 id=&#34;managing-tech-debt-how-to-stop-paying-the-interest-and-start-building-for-scale&#34;&gt;&lt;a href=&#34;#managing-tech-debt-how-to-stop-paying-the-interest-and-start-building-for-scale&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale&lt;/strong&gt;
+&lt;/h1&gt;&lt;p&gt;Tech debt isn’t a failure—it’s a fact of life.&lt;/p&gt;
+&lt;p&gt;Every company, every team, and every project accrues tech debt in some form. The real question isn’t &lt;strong&gt;how to avoid it completely&lt;/strong&gt; (because you won’t), but &lt;strong&gt;how to manage it so it doesn’t cripple your ability to deliver.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In data science, tech debt comes from &lt;strong&gt;unreproducible code, lack of standardization, ignoring MLOps, poor data governance, and overcomplicated models.&lt;/strong&gt; In tech more broadly, it happens when teams &lt;strong&gt;over-customize applications, hack together one-off solutions, and fail to think about long-term infrastructure.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Before we implemented serious tech debt reduction strategies, we were constantly &lt;strong&gt;rebuilding models from scratch&lt;/strong&gt; while keeping others duct-taped together. The inefficiency was staggering. Once we actively started tackling tech debt, I’d estimate we gained &lt;strong&gt;50%+ efficiency&lt;/strong&gt; in actual delivery.&lt;/p&gt;
+&lt;p&gt;So how do you get tech debt under control?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-happens-when-you-ignore-tech-debt&#34;&gt;&lt;a href=&#34;#what-happens-when-you-ignore-tech-debt&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;What Happens When You Ignore Tech Debt&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;The biggest problem with tech debt is that &lt;strong&gt;you don’t feel it until it’s already a crisis.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;New hires struggle to ramp up because there’s no documentation.&lt;/li&gt;
+&lt;li&gt;Models break and no one knows why because the code isn’t reproducible.&lt;/li&gt;
+&lt;li&gt;Feature delivery slows to a crawl because everything is held together with duct tape.&lt;/li&gt;
+&lt;li&gt;Business users lose trust in data science because insights take too long or aren’t reliable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tech debt &lt;strong&gt;kills momentum.&lt;/strong&gt; And once you’re deep in the hole, every project takes longer, requires more work, and causes more frustration.&lt;/p&gt;
+&lt;p&gt;The longer you ignore it, the harder it becomes to dig out.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-to-actively-reduce-tech-debt-without-stopping-everything&#34;&gt;&lt;a href=&#34;#how-to-actively-reduce-tech-debt-without-stopping-everything&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;How to Actively Reduce Tech Debt (Without Stopping Everything)&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;Tech debt reduction isn’t a one-time fix—it’s a &lt;strong&gt;continuous process&lt;/strong&gt;. But if you commit to keeping it at a minimum, the payoff is massive.&lt;/p&gt;
+&lt;h3 id=&#34;1-standardize-everything-and-stick-to-it&#34;&gt;&lt;a href=&#34;#1-standardize-everything-and-stick-to-it&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;1. Standardize Everything (And Stick to It)&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;One of the biggest sources of tech debt is &lt;strong&gt;everyone doing things their own way.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Data science teams:&lt;/strong&gt; Use &lt;strong&gt;cookiecutter templates&lt;/strong&gt; for projects, enforce coding best practices, and make reproducibility non-negotiable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ML teams:&lt;/strong&gt; Implement &lt;strong&gt;MLOps pipelines&lt;/strong&gt; to automate training, deployment, and monitoring instead of manually managing models.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Software teams:&lt;/strong&gt; Use &lt;strong&gt;infrastructure as code&lt;/strong&gt; and standardized toolchains instead of letting every project introduce a new stack.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you don’t standardize upfront, you’ll be rebuilding and refactoring constantly.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-stop-writing-one-off-solutions&#34;&gt;&lt;a href=&#34;#2-stop-writing-one-off-solutions&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;2. Stop Writing One-Off Solutions&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;Most tech debt comes from people thinking &lt;strong&gt;short-term instead of long-term.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Every &lt;strong&gt;ad hoc model that doesn’t integrate with a data pipeline&lt;/strong&gt; is tech debt.&lt;/li&gt;
+&lt;li&gt;Every &lt;strong&gt;customized application with no upgrade path&lt;/strong&gt; is tech debt.&lt;/li&gt;
+&lt;li&gt;Every &lt;strong&gt;tool built for a single use case without considering future expansion&lt;/strong&gt; is tech debt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The mindset shift is simple: &lt;strong&gt;build ecosystems, not one-off solutions.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you build a model, make sure it can be &lt;strong&gt;versioned, retrained, and deployed&lt;/strong&gt; at scale.&lt;/li&gt;
+&lt;li&gt;If you need a custom solution, &lt;strong&gt;ask if there’s an existing tool&lt;/strong&gt; that can be adapted instead.&lt;/li&gt;
+&lt;li&gt;If you’re implementing software, &lt;strong&gt;consider how it fits into the broader architecture.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is where &lt;strong&gt;strong data engineering, DevOps, and platform thinking&lt;/strong&gt; come in. The more you can build &lt;strong&gt;composable, reusable solutions&lt;/strong&gt;, the less tech debt you accumulate.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-make-tech-debt-visible-and-quantifiable&#34;&gt;&lt;a href=&#34;#3-make-tech-debt-visible-and-quantifiable&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;3. Make Tech Debt Visible (and Quantifiable)&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;Leadership won’t sign off on tech debt reduction if they can’t see the problem.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Track the cost of inefficiency.&lt;/strong&gt; If bad data pipelines require constant rework, measure how much engineering time is lost.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Show delays caused by tech debt.&lt;/strong&gt; If feature delivery is slowing down due to bad infrastructure, make that impact clear.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tie tech debt to business outcomes.&lt;/strong&gt; If a model takes two months to retrain instead of two days, calculate what that means for revenue.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The more you can &lt;strong&gt;translate tech debt into business impact&lt;/strong&gt;, the easier it is to justify fixing it.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-implement-a-dedicated-tech-debt-strategy&#34;&gt;&lt;a href=&#34;#4-implement-a-dedicated-tech-debt-strategy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;4. Implement a Dedicated Tech Debt Strategy&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;Fixing tech debt requires &lt;strong&gt;a deliberate approach&lt;/strong&gt;. If you just assume engineers will clean things up in their spare time, it won’t happen.&lt;/p&gt;
+&lt;p&gt;Some approaches that work:&lt;/p&gt;
+&lt;h4 id=&#34;the&#34;&gt;&lt;a href=&#34;#the&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The &amp;ldquo;Tech Debt Tax&amp;rdquo;&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Allocate &lt;strong&gt;10-20% of every sprint&lt;/strong&gt; to tech debt work.&lt;/li&gt;
+&lt;li&gt;It’s a small enough percentage that leadership won’t panic, but big enough to make progress over time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;tech-debt-sprints&#34;&gt;&lt;a href=&#34;#tech-debt-sprints&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Tech Debt Sprints&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Set aside &lt;strong&gt;dedicated time (quarterly or semi-annually)&lt;/strong&gt; for major tech debt reduction efforts.&lt;/li&gt;
+&lt;li&gt;Useful when you need to fix large-scale issues without constantly derailing feature work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;define-an&#34;&gt;&lt;a href=&#34;#define-an&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Define an &amp;ldquo;Unacceptable Debt&amp;rdquo; Threshold&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Identify the biggest blockers to productivity (e.g., unreliable data pipelines, excessive manual work).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Set a threshold:&lt;/strong&gt; If a system or process causes X amount of rework, it gets prioritized for refactoring.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The key is &lt;strong&gt;intentionality&lt;/strong&gt;—if you don’t schedule time for tech debt, it will never get addressed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;final-thoughts-build-for-the-future-not-just-for-today&#34;&gt;&lt;a href=&#34;#final-thoughts-build-for-the-future-not-just-for-today&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Final Thoughts: Build for the Future, Not Just for Today&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;Tech debt is inevitable. But &lt;strong&gt;letting it pile up unchecked is a choice.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you want a team that can actually scale, you need to:&lt;br&gt;
+✅ &lt;strong&gt;Standardize processes&lt;/strong&gt; so you’re not reinventing the wheel every project.&lt;br&gt;
+✅ &lt;strong&gt;Think beyond one-off solutions&lt;/strong&gt; and build systems that last.&lt;br&gt;
+✅ &lt;strong&gt;Make tech debt visible&lt;/strong&gt; so leadership understands its impact.&lt;br&gt;
+✅ &lt;strong&gt;Commit to ongoing cleanup&lt;/strong&gt; through dedicated time and structured plans.&lt;/p&gt;
+&lt;p&gt;High-performing teams don’t just deliver features—they &lt;strong&gt;build scalable, maintainable ecosystems&lt;/strong&gt;. The difference between a team that’s constantly firefighting and a team that ships smoothly is &lt;strong&gt;whether they take tech debt seriously.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Because at the end of the day, tech debt is like financial debt—the sooner you pay it down, the more freedom you have to innovate.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

@@ -6,7 +6,206 @@
         <description>Recent content in Data Science, Strategy, Leadership on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/datascience/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/datascience/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale</title>
+        <link>http://192.168.100.63:1313/datascience/techdebt/</link>
+        <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/datascience/techdebt/</guid>
+        <description>&lt;h1 id=&#34;managing-tech-debt-how-to-stop-paying-the-interest-and-start-building-for-scale&#34;&gt;&lt;a href=&#34;#managing-tech-debt-how-to-stop-paying-the-interest-and-start-building-for-scale&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale&lt;/strong&gt;
+&lt;/h1&gt;&lt;p&gt;Tech debt isn’t a failure—it’s a fact of life.&lt;/p&gt;
+&lt;p&gt;Every company, every team, and every project accrues tech debt in some form. The real question isn’t &lt;strong&gt;how to avoid it completely&lt;/strong&gt; (because you won’t), but &lt;strong&gt;how to manage it so it doesn’t cripple your ability to deliver.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;In data science, tech debt comes from &lt;strong&gt;unreproducible code, lack of standardization, ignoring MLOps, poor data governance, and overcomplicated models.&lt;/strong&gt; In tech more broadly, it happens when teams &lt;strong&gt;over-customize applications, hack together one-off solutions, and fail to think about long-term infrastructure.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Before we implemented serious tech debt reduction strategies, we were constantly &lt;strong&gt;rebuilding models from scratch&lt;/strong&gt; while keeping others duct-taped together. The inefficiency was staggering. Once we actively started tackling tech debt, I’d estimate we gained &lt;strong&gt;50%+ efficiency&lt;/strong&gt; in actual delivery.&lt;/p&gt;
+&lt;p&gt;So how do you get tech debt under control?&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-happens-when-you-ignore-tech-debt&#34;&gt;&lt;a href=&#34;#what-happens-when-you-ignore-tech-debt&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;What Happens When You Ignore Tech Debt&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;The biggest problem with tech debt is that &lt;strong&gt;you don’t feel it until it’s already a crisis.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;New hires struggle to ramp up because there’s no documentation.&lt;/li&gt;
+&lt;li&gt;Models break and no one knows why because the code isn’t reproducible.&lt;/li&gt;
+&lt;li&gt;Feature delivery slows to a crawl because everything is held together with duct tape.&lt;/li&gt;
+&lt;li&gt;Business users lose trust in data science because insights take too long or aren’t reliable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Tech debt &lt;strong&gt;kills momentum.&lt;/strong&gt; And once you’re deep in the hole, every project takes longer, requires more work, and causes more frustration.&lt;/p&gt;
+&lt;p&gt;The longer you ignore it, the harder it becomes to dig out.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-to-actively-reduce-tech-debt-without-stopping-everything&#34;&gt;&lt;a href=&#34;#how-to-actively-reduce-tech-debt-without-stopping-everything&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;How to Actively Reduce Tech Debt (Without Stopping Everything)&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;Tech debt reduction isn’t a one-time fix—it’s a &lt;strong&gt;continuous process&lt;/strong&gt;. But if you commit to keeping it at a minimum, the payoff is massive.&lt;/p&gt;
+&lt;h3 id=&#34;1-standardize-everything-and-stick-to-it&#34;&gt;&lt;a href=&#34;#1-standardize-everything-and-stick-to-it&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;1. Standardize Everything (And Stick to It)&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;One of the biggest sources of tech debt is &lt;strong&gt;everyone doing things their own way.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Data science teams:&lt;/strong&gt; Use &lt;strong&gt;cookiecutter templates&lt;/strong&gt; for projects, enforce coding best practices, and make reproducibility non-negotiable.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;ML teams:&lt;/strong&gt; Implement &lt;strong&gt;MLOps pipelines&lt;/strong&gt; to automate training, deployment, and monitoring instead of manually managing models.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Software teams:&lt;/strong&gt; Use &lt;strong&gt;infrastructure as code&lt;/strong&gt; and standardized toolchains instead of letting every project introduce a new stack.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you don’t standardize upfront, you’ll be rebuilding and refactoring constantly.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;2-stop-writing-one-off-solutions&#34;&gt;&lt;a href=&#34;#2-stop-writing-one-off-solutions&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;2. Stop Writing One-Off Solutions&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;Most tech debt comes from people thinking &lt;strong&gt;short-term instead of long-term.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Every &lt;strong&gt;ad hoc model that doesn’t integrate with a data pipeline&lt;/strong&gt; is tech debt.&lt;/li&gt;
+&lt;li&gt;Every &lt;strong&gt;customized application with no upgrade path&lt;/strong&gt; is tech debt.&lt;/li&gt;
+&lt;li&gt;Every &lt;strong&gt;tool built for a single use case without considering future expansion&lt;/strong&gt; is tech debt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The mindset shift is simple: &lt;strong&gt;build ecosystems, not one-off solutions.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If you build a model, make sure it can be &lt;strong&gt;versioned, retrained, and deployed&lt;/strong&gt; at scale.&lt;/li&gt;
+&lt;li&gt;If you need a custom solution, &lt;strong&gt;ask if there’s an existing tool&lt;/strong&gt; that can be adapted instead.&lt;/li&gt;
+&lt;li&gt;If you’re implementing software, &lt;strong&gt;consider how it fits into the broader architecture.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This is where &lt;strong&gt;strong data engineering, DevOps, and platform thinking&lt;/strong&gt; come in. The more you can build &lt;strong&gt;composable, reusable solutions&lt;/strong&gt;, the less tech debt you accumulate.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;3-make-tech-debt-visible-and-quantifiable&#34;&gt;&lt;a href=&#34;#3-make-tech-debt-visible-and-quantifiable&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;3. Make Tech Debt Visible (and Quantifiable)&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;Leadership won’t sign off on tech debt reduction if they can’t see the problem.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Track the cost of inefficiency.&lt;/strong&gt; If bad data pipelines require constant rework, measure how much engineering time is lost.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Show delays caused by tech debt.&lt;/strong&gt; If feature delivery is slowing down due to bad infrastructure, make that impact clear.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Tie tech debt to business outcomes.&lt;/strong&gt; If a model takes two months to retrain instead of two days, calculate what that means for revenue.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The more you can &lt;strong&gt;translate tech debt into business impact&lt;/strong&gt;, the easier it is to justify fixing it.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;4-implement-a-dedicated-tech-debt-strategy&#34;&gt;&lt;a href=&#34;#4-implement-a-dedicated-tech-debt-strategy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;4. Implement a Dedicated Tech Debt Strategy&lt;/strong&gt;
+&lt;/h3&gt;&lt;p&gt;Fixing tech debt requires &lt;strong&gt;a deliberate approach&lt;/strong&gt;. If you just assume engineers will clean things up in their spare time, it won’t happen.&lt;/p&gt;
+&lt;p&gt;Some approaches that work:&lt;/p&gt;
+&lt;h4 id=&#34;the&#34;&gt;&lt;a href=&#34;#the&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The &amp;ldquo;Tech Debt Tax&amp;rdquo;&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Allocate &lt;strong&gt;10-20% of every sprint&lt;/strong&gt; to tech debt work.&lt;/li&gt;
+&lt;li&gt;It’s a small enough percentage that leadership won’t panic, but big enough to make progress over time.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;tech-debt-sprints&#34;&gt;&lt;a href=&#34;#tech-debt-sprints&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Tech Debt Sprints&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Set aside &lt;strong&gt;dedicated time (quarterly or semi-annually)&lt;/strong&gt; for major tech debt reduction efforts.&lt;/li&gt;
+&lt;li&gt;Useful when you need to fix large-scale issues without constantly derailing feature work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;define-an&#34;&gt;&lt;a href=&#34;#define-an&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Define an &amp;ldquo;Unacceptable Debt&amp;rdquo; Threshold&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Identify the biggest blockers to productivity (e.g., unreliable data pipelines, excessive manual work).&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Set a threshold:&lt;/strong&gt; If a system or process causes X amount of rework, it gets prioritized for refactoring.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The key is &lt;strong&gt;intentionality&lt;/strong&gt;—if you don’t schedule time for tech debt, it will never get addressed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;final-thoughts-build-for-the-future-not-just-for-today&#34;&gt;&lt;a href=&#34;#final-thoughts-build-for-the-future-not-just-for-today&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Final Thoughts: Build for the Future, Not Just for Today&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;Tech debt is inevitable. But &lt;strong&gt;letting it pile up unchecked is a choice.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you want a team that can actually scale, you need to:&lt;br&gt;
+✅ &lt;strong&gt;Standardize processes&lt;/strong&gt; so you’re not reinventing the wheel every project.&lt;br&gt;
+✅ &lt;strong&gt;Think beyond one-off solutions&lt;/strong&gt; and build systems that last.&lt;br&gt;
+✅ &lt;strong&gt;Make tech debt visible&lt;/strong&gt; so leadership understands its impact.&lt;br&gt;
+✅ &lt;strong&gt;Commit to ongoing cleanup&lt;/strong&gt; through dedicated time and structured plans.&lt;/p&gt;
+&lt;p&gt;High-performing teams don’t just deliver features—they &lt;strong&gt;build scalable, maintainable ecosystems&lt;/strong&gt;. The difference between a team that’s constantly firefighting and a team that ships smoothly is &lt;strong&gt;whether they take tech debt seriously.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Because at the end of the day, tech debt is like financial debt—the sooner you pay it down, the more freedom you have to innovate.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle</title>
+        <link>http://192.168.100.63:1313/datascience/8020rule/</link>
+        <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/datascience/8020rule/</guid>
+        <description>&lt;h1 id=&#34;the-8020-rule-of-data-science-focus-on-what-actually-moves-the-needle&#34;&gt;&lt;a href=&#34;#the-8020-rule-of-data-science-focus-on-what-actually-moves-the-needle&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle&lt;/strong&gt;
+&lt;/h1&gt;&lt;p&gt;One of the biggest mistakes data science teams make is &lt;strong&gt;spending too much time on the wrong things.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;It’s easy to fall into the trap of optimizing a model for another 0.2% accuracy, building complex pipelines for edge cases, or experimenting endlessly without delivering real impact. But &lt;strong&gt;the harsh reality is that 80% of business impact comes from just 20% of the work.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Understanding what actually drives results—and what’s just &lt;strong&gt;intellectual busywork&lt;/strong&gt;—is what separates high-performing data science teams from those stuck in the weeds.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;whats-in-the-20-the-work-that-actually-drives-impact&#34;&gt;&lt;a href=&#34;#whats-in-the-20-the-work-that-actually-drives-impact&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;What’s in the 20%? The Work That Actually Drives Impact&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;If you want to maximize the impact of data science in an organization, you have to focus on &lt;strong&gt;the core tasks that directly drive business value&lt;/strong&gt;.&lt;/p&gt;
+&lt;p&gt;Here’s what usually makes up the &lt;strong&gt;critical 20% of work&lt;/strong&gt;:&lt;/p&gt;
+&lt;h3 id=&#34;1-simple-interpretable-models-over-over-engineered-complexity&#34;&gt;&lt;a href=&#34;#1-simple-interpretable-models-over-over-engineered-complexity&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;1. Simple, Interpretable Models Over Over-Engineered Complexity&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;In most business cases, a well-tuned &lt;strong&gt;logistic regression, decision tree, or even basic SQL analytics&lt;/strong&gt; can solve 80% of problems.&lt;/li&gt;
+&lt;li&gt;Advanced deep learning models can sometimes provide an edge, but they come with &lt;strong&gt;higher maintenance costs, slower iteration cycles, and adoption challenges.&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;The real value is in &lt;strong&gt;actionable insights&lt;/strong&gt;, not model sophistication.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-well-defined-business-aligned-metrics&#34;&gt;&lt;a href=&#34;#2-well-defined-business-aligned-metrics&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;2. Well-Defined, Business-Aligned Metrics&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;The best teams spend time &lt;strong&gt;defining success upfront&lt;/strong&gt;: is the goal revenue growth, cost savings, churn reduction, or operational efficiency?&lt;/li&gt;
+&lt;li&gt;If a project doesn’t have a &lt;strong&gt;clear, measurable business goal&lt;/strong&gt;, it’s probably part of the 80% of wasted effort.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-robust-reusable-data-pipelines&#34;&gt;&lt;a href=&#34;#3-robust-reusable-data-pipelines&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;3. Robust, Reusable Data Pipelines&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Data engineering is often more valuable than model optimization.&lt;/strong&gt; A 95% accurate model with a broken data pipeline is useless.&lt;/li&gt;
+&lt;li&gt;Investing in &lt;strong&gt;clean, well-documented, and reproducible data pipelines&lt;/strong&gt; makes every future project faster and more reliable.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-stakeholder-alignment-and-change-management&#34;&gt;&lt;a href=&#34;#4-stakeholder-alignment-and-change-management&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;4. Stakeholder Alignment and Change Management&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;A great model that no one uses is worthless.&lt;/strong&gt; Data science isn’t just about building models—it’s about driving adoption.&lt;/li&gt;
+&lt;li&gt;The most impactful teams prioritize &lt;strong&gt;collaboration with business leaders&lt;/strong&gt; to ensure insights translate into real decisions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;5-fast-prototyping-and-iteration&#34;&gt;&lt;a href=&#34;#5-fast-prototyping-and-iteration&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;5. Fast Prototyping and Iteration&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Instead of spending months perfecting a model, focus on &lt;strong&gt;quick iterations&lt;/strong&gt; to validate assumptions early.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Rapid feedback loops&lt;/strong&gt; (e.g., weekly check-ins, early MVPs, internal A/B testing) ensure that projects don’t spiral into wasted effort.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;whats-in-the-80-work-that-rarely-moves-the-needle&#34;&gt;&lt;a href=&#34;#whats-in-the-80-work-that-rarely-moves-the-needle&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;What’s in the 80%? Work That Rarely Moves the Needle&lt;/strong&gt;
+&lt;/h2&gt;&lt;h3 id=&#34;1-chasing-marginal-accuracy-gains&#34;&gt;&lt;a href=&#34;#1-chasing-marginal-accuracy-gains&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;1. Chasing Marginal Accuracy Gains&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Teams often waste weeks tweaking a model to &lt;strong&gt;improve accuracy from 91% to 91.5%&lt;/strong&gt;, but the extra effort rarely justifies the business impact.&lt;/li&gt;
+&lt;li&gt;If a model is &lt;strong&gt;&amp;ldquo;good enough&amp;rdquo; to drive the desired outcome&lt;/strong&gt;, ship it and move on.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;2-over-complicated-mlops-for-low-scale-needs&#34;&gt;&lt;a href=&#34;#2-over-complicated-mlops-for-low-scale-needs&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;2. Over-Complicated MLOps for Low-Scale Needs&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Building a &lt;strong&gt;full-blown CI/CD pipeline for a model that updates monthly&lt;/strong&gt; is overkill.&lt;/li&gt;
+&lt;li&gt;Focus on &lt;strong&gt;automation where it actually saves time&lt;/strong&gt;, not where it looks good on a slide deck.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;3-one-off-hard-to-maintain-solutions&#34;&gt;&lt;a href=&#34;#3-one-off-hard-to-maintain-solutions&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;3. One-Off, Hard-to-Maintain Solutions&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Every ad-hoc model, notebook, or dashboard that &lt;strong&gt;isn’t reproducible or scalable&lt;/strong&gt; adds unnecessary complexity.&lt;/li&gt;
+&lt;li&gt;Instead, invest in &lt;strong&gt;templates, automation, and standardized processes&lt;/strong&gt; to prevent long-term tech debt.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;4-solving-problems-that-dont-exist&#34;&gt;&lt;a href=&#34;#4-solving-problems-that-dont-exist&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;4. Solving Problems That Don’t Exist&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;If a project doesn’t solve a &lt;strong&gt;clear business pain point&lt;/strong&gt;, it’s probably just data science for data science’s sake.&lt;/li&gt;
+&lt;li&gt;Validate that the problem is real &lt;strong&gt;before committing major resources.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-to-spot-when-youre-in-the-80-and-fix-it&#34;&gt;&lt;a href=&#34;#how-to-spot-when-youre-in-the-80-and-fix-it&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;How to Spot When You’re in the 80% (And Fix It)&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;Here’s how to tell if you or your team is wasting time on low-impact work:&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;Projects drag on with no clear business outcome&lt;/strong&gt; – If no one can articulate the expected ROI, it’s time to reassess.&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;Endless iterations without deployment&lt;/strong&gt; – If a model has been tweaked 20 times but never used in production, something is wrong.&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;Low adoption from stakeholders&lt;/strong&gt; – If no one is using the insights, the problem isn’t the model—it’s the integration.&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;More focus on &amp;ldquo;cool tech&amp;rdquo; than business needs&lt;/strong&gt; – If your team is more excited about new tools than solving real problems, you’re in the 80%.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;how-to-redirect-leadership-toward-the-20-that-matters&#34;&gt;&lt;a href=&#34;#how-to-redirect-leadership-toward-the-20-that-matters&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;How to Redirect Leadership Toward the 20% That Matters&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;Leadership often pushes for overcomplicated, low-impact work because &lt;strong&gt;they don’t know what’s possible or practical&lt;/strong&gt;. Here’s how to guide them toward &lt;strong&gt;high-value efforts&lt;/strong&gt;:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Frame everything in terms of business outcomes.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Instead of talking about data science models, &lt;strong&gt;talk about revenue, cost savings, efficiency, or customer satisfaction.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Push for iterative delivery, not big-bang projects.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Avoid multi-month projects with no feedback loop—&lt;strong&gt;deliver something small early&lt;/strong&gt; and refine from there.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Educate on the cost of complexity.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make it clear that &lt;strong&gt;every additional layer of sophistication adds maintenance overhead, delays, and failure points.&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;li&gt;
+&lt;p&gt;&lt;strong&gt;Show examples of simple solutions driving massive impact.&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;If a simple dashboard or basic model is &lt;strong&gt;already solving 80% of the problem, why add complexity?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;final-thoughts-do-less-deliver-more&#34;&gt;&lt;a href=&#34;#final-thoughts-do-less-deliver-more&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Final Thoughts: Do Less, Deliver More&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;The best data science teams &lt;strong&gt;aren’t the ones that build the most complex models—they’re the ones that create the most business impact.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;If you want to drive real value:&lt;br&gt;
+✅ &lt;strong&gt;Prioritize simple, interpretable models over marginal accuracy gains.&lt;/strong&gt;&lt;br&gt;
+✅ &lt;strong&gt;Invest in clean data pipelines and reproducibility.&lt;/strong&gt;&lt;br&gt;
+✅ &lt;strong&gt;Work closely with stakeholders to ensure adoption.&lt;/strong&gt;&lt;br&gt;
+✅ &lt;strong&gt;Stop chasing complexity for its own sake—focus on fast, practical solutions.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The difference between a &lt;strong&gt;high-performing&lt;/strong&gt; data science team and a &lt;strong&gt;high-friction&lt;/strong&gt; one isn’t intelligence or technical skill. It’s knowing &lt;strong&gt;what work actually matters—and having the discipline to ignore the rest.&lt;/strong&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Building High Impact Data Science Teams</title>
         <link>http://192.168.100.63:1313/datascience/foundations/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>

@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Tech debt is inevitable, but letting it spiral out of control is a choice. Learn how to actively manage and reduce tech debt so your team can scale efficiently.">
+<title>Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/datascience/techdebt/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale">
+<meta property='og:description' content="Tech debt is inevitable, but letting it spiral out of control is a choice. Learn how to actively manage and reduce tech debt so your team can scale efficiently.">
+<meta property='og:url' content='http://192.168.100.63:1313/datascience/techdebt/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Datascience' /><meta property='article:tag' content='tech debt' /><meta property='article:tag' content='data science' /><meta property='article:tag' content='software engineering' /><meta property='article:tag' content='best practices' /><meta property='article:published_time' content='2025-03-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-16T00:00:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale">
+<meta name="twitter:description" content="Tech debt is inevitable, but letting it spiral out of control is a choice. Learn how to actively manage and reduce tech debt so your team can scale efficiently."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">💾</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/datascience/' >
+                
+                
+                
+                <span>Data Strategy</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/files/spanswick_resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/data-science/" >
+                Data Science
+            </a>
+        
+            <a href="/categories/engineering-leadership/" >
+                Engineering Leadership
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/datascience/techdebt/">Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Tech debt is inevitable, but letting it spiral out of control is a choice. Learn how to actively manage and reduce tech debt so your team can scale efficiently.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 16, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="managing-tech-debt-how-to-stop-paying-the-interest-and-start-building-for-scale"><a href="#managing-tech-debt-how-to-stop-paying-the-interest-and-start-building-for-scale" class="header-anchor"></a><strong>Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale</strong>
+</h1><p>Tech debt isn’t a failure—it’s a fact of life.</p>
+<p>Every company, every team, and every project accrues tech debt in some form. The real question isn’t <strong>how to avoid it completely</strong> (because you won’t), but <strong>how to manage it so it doesn’t cripple your ability to deliver.</strong></p>
+<p>In data science, tech debt comes from <strong>unreproducible code, lack of standardization, ignoring MLOps, poor data governance, and overcomplicated models.</strong> In tech more broadly, it happens when teams <strong>over-customize applications, hack together one-off solutions, and fail to think about long-term infrastructure.</strong></p>
+<p>Before we implemented serious tech debt reduction strategies, we were constantly <strong>rebuilding models from scratch</strong> while keeping others duct-taped together. The inefficiency was staggering. Once we actively started tackling tech debt, I’d estimate we gained <strong>50%+ efficiency</strong> in actual delivery.</p>
+<p>So how do you get tech debt under control?</p>
+<hr>
+<h2 id="what-happens-when-you-ignore-tech-debt"><a href="#what-happens-when-you-ignore-tech-debt" class="header-anchor"></a><strong>What Happens When You Ignore Tech Debt</strong>
+</h2><p>The biggest problem with tech debt is that <strong>you don’t feel it until it’s already a crisis.</strong></p>
+<ul>
+<li>New hires struggle to ramp up because there’s no documentation.</li>
+<li>Models break and no one knows why because the code isn’t reproducible.</li>
+<li>Feature delivery slows to a crawl because everything is held together with duct tape.</li>
+<li>Business users lose trust in data science because insights take too long or aren’t reliable.</li>
+</ul>
+<p>Tech debt <strong>kills momentum.</strong> And once you’re deep in the hole, every project takes longer, requires more work, and causes more frustration.</p>
+<p>The longer you ignore it, the harder it becomes to dig out.</p>
+<hr>
+<h2 id="how-to-actively-reduce-tech-debt-without-stopping-everything"><a href="#how-to-actively-reduce-tech-debt-without-stopping-everything" class="header-anchor"></a><strong>How to Actively Reduce Tech Debt (Without Stopping Everything)</strong>
+</h2><p>Tech debt reduction isn’t a one-time fix—it’s a <strong>continuous process</strong>. But if you commit to keeping it at a minimum, the payoff is massive.</p>
+<h3 id="1-standardize-everything-and-stick-to-it"><a href="#1-standardize-everything-and-stick-to-it" class="header-anchor"></a><strong>1. Standardize Everything (And Stick to It)</strong>
+</h3><p>One of the biggest sources of tech debt is <strong>everyone doing things their own way.</strong></p>
+<ul>
+<li><strong>Data science teams:</strong> Use <strong>cookiecutter templates</strong> for projects, enforce coding best practices, and make reproducibility non-negotiable.</li>
+<li><strong>ML teams:</strong> Implement <strong>MLOps pipelines</strong> to automate training, deployment, and monitoring instead of manually managing models.</li>
+<li><strong>Software teams:</strong> Use <strong>infrastructure as code</strong> and standardized toolchains instead of letting every project introduce a new stack.</li>
+</ul>
+<p>If you don’t standardize upfront, you’ll be rebuilding and refactoring constantly.</p>
+<hr>
+<h3 id="2-stop-writing-one-off-solutions"><a href="#2-stop-writing-one-off-solutions" class="header-anchor"></a><strong>2. Stop Writing One-Off Solutions</strong>
+</h3><p>Most tech debt comes from people thinking <strong>short-term instead of long-term.</strong></p>
+<ul>
+<li>Every <strong>ad hoc model that doesn’t integrate with a data pipeline</strong> is tech debt.</li>
+<li>Every <strong>customized application with no upgrade path</strong> is tech debt.</li>
+<li>Every <strong>tool built for a single use case without considering future expansion</strong> is tech debt.</li>
+</ul>
+<p>The mindset shift is simple: <strong>build ecosystems, not one-off solutions.</strong></p>
+<ul>
+<li>If you build a model, make sure it can be <strong>versioned, retrained, and deployed</strong> at scale.</li>
+<li>If you need a custom solution, <strong>ask if there’s an existing tool</strong> that can be adapted instead.</li>
+<li>If you’re implementing software, <strong>consider how it fits into the broader architecture.</strong></li>
+</ul>
+<p>This is where <strong>strong data engineering, DevOps, and platform thinking</strong> come in. The more you can build <strong>composable, reusable solutions</strong>, the less tech debt you accumulate.</p>
+<hr>
+<h3 id="3-make-tech-debt-visible-and-quantifiable"><a href="#3-make-tech-debt-visible-and-quantifiable" class="header-anchor"></a><strong>3. Make Tech Debt Visible (and Quantifiable)</strong>
+</h3><p>Leadership won’t sign off on tech debt reduction if they can’t see the problem.</p>
+<ul>
+<li><strong>Track the cost of inefficiency.</strong> If bad data pipelines require constant rework, measure how much engineering time is lost.</li>
+<li><strong>Show delays caused by tech debt.</strong> If feature delivery is slowing down due to bad infrastructure, make that impact clear.</li>
+<li><strong>Tie tech debt to business outcomes.</strong> If a model takes two months to retrain instead of two days, calculate what that means for revenue.</li>
+</ul>
+<p>The more you can <strong>translate tech debt into business impact</strong>, the easier it is to justify fixing it.</p>
+<hr>
+<h3 id="4-implement-a-dedicated-tech-debt-strategy"><a href="#4-implement-a-dedicated-tech-debt-strategy" class="header-anchor"></a><strong>4. Implement a Dedicated Tech Debt Strategy</strong>
+</h3><p>Fixing tech debt requires <strong>a deliberate approach</strong>. If you just assume engineers will clean things up in their spare time, it won’t happen.</p>
+<p>Some approaches that work:</p>
+<h4 id="the"><a href="#the" class="header-anchor"></a><strong>The &ldquo;Tech Debt Tax&rdquo;</strong>
+</h4><ul>
+<li>Allocate <strong>10-20% of every sprint</strong> to tech debt work.</li>
+<li>It’s a small enough percentage that leadership won’t panic, but big enough to make progress over time.</li>
+</ul>
+<h4 id="tech-debt-sprints"><a href="#tech-debt-sprints" class="header-anchor"></a><strong>Tech Debt Sprints</strong>
+</h4><ul>
+<li>Set aside <strong>dedicated time (quarterly or semi-annually)</strong> for major tech debt reduction efforts.</li>
+<li>Useful when you need to fix large-scale issues without constantly derailing feature work.</li>
+</ul>
+<h4 id="define-an"><a href="#define-an" class="header-anchor"></a><strong>Define an &ldquo;Unacceptable Debt&rdquo; Threshold</strong>
+</h4><ul>
+<li>Identify the biggest blockers to productivity (e.g., unreliable data pipelines, excessive manual work).</li>
+<li><strong>Set a threshold:</strong> If a system or process causes X amount of rework, it gets prioritized for refactoring.</li>
+</ul>
+<p>The key is <strong>intentionality</strong>—if you don’t schedule time for tech debt, it will never get addressed.</p>
+<hr>
+<h2 id="final-thoughts-build-for-the-future-not-just-for-today"><a href="#final-thoughts-build-for-the-future-not-just-for-today" class="header-anchor"></a><strong>Final Thoughts: Build for the Future, Not Just for Today</strong>
+</h2><p>Tech debt is inevitable. But <strong>letting it pile up unchecked is a choice.</strong></p>
+<p>If you want a team that can actually scale, you need to:<br>
+✅ <strong>Standardize processes</strong> so you’re not reinventing the wheel every project.<br>
+✅ <strong>Think beyond one-off solutions</strong> and build systems that last.<br>
+✅ <strong>Make tech debt visible</strong> so leadership understands its impact.<br>
+✅ <strong>Commit to ongoing cleanup</strong> through dedicated time and structured plans.</p>
+<p>High-performing teams don’t just deliver features—they <strong>build scalable, maintainable ecosystems</strong>. The difference between a team that’s constantly firefighting and a team that ships smoothly is <strong>whether they take tech debt seriously.</strong></p>
+<p>Because at the end of the day, tech debt is like financial debt—the sooner you pay it down, the more freedom you have to innovate.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/tech-debt/">Tech Debt</a>
+        
+            <a href="/tags/data-science/">Data Science</a>
+        
+            <a href="/tags/software-engineering/">Software Engineering</a>
+        
+            <a href="/tags/best-practices/">Best Practices</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/datascience/8020rule/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 My Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

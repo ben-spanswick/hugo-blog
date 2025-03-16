@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="80% of data science impact comes from 20% of the work. Learn how to avoid wasted effort and focus on what actually delivers business value.">
+<title>The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/datascience/8020rule/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle">
+<meta property='og:description' content="80% of data science impact comes from 20% of the work. Learn how to avoid wasted effort and focus on what actually delivers business value.">
+<meta property='og:url' content='http://192.168.100.63:1313/datascience/8020rule/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Datascience' /><meta property='article:tag' content='data science' /><meta property='article:tag' content='prioritization' /><meta property='article:tag' content='business impact' /><meta property='article:tag' content='best practices' /><meta property='article:published_time' content='2025-03-16T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-16T00:00:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle">
+<meta name="twitter:description" content="80% of data science impact comes from 20% of the work. Learn how to avoid wasted effort and focus on what actually delivers business value."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">💾</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/datascience/' >
+                
+                
+                
+                <span>Data Strategy</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/files/spanswick_resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/data-science/" >
+                Data Science
+            </a>
+        
+            <a href="/categories/strategy/" >
+                Strategy
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/datascience/8020rule/">The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            80% of data science impact comes from 20% of the work. Learn how to avoid wasted effort and focus on what actually delivers business value.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 16, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="the-8020-rule-of-data-science-focus-on-what-actually-moves-the-needle"><a href="#the-8020-rule-of-data-science-focus-on-what-actually-moves-the-needle" class="header-anchor"></a><strong>The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle</strong>
+</h1><p>One of the biggest mistakes data science teams make is <strong>spending too much time on the wrong things.</strong></p>
+<p>It’s easy to fall into the trap of optimizing a model for another 0.2% accuracy, building complex pipelines for edge cases, or experimenting endlessly without delivering real impact. But <strong>the harsh reality is that 80% of business impact comes from just 20% of the work.</strong></p>
+<p>Understanding what actually drives results—and what’s just <strong>intellectual busywork</strong>—is what separates high-performing data science teams from those stuck in the weeds.</p>
+<hr>
+<h2 id="whats-in-the-20-the-work-that-actually-drives-impact"><a href="#whats-in-the-20-the-work-that-actually-drives-impact" class="header-anchor"></a><strong>What’s in the 20%? The Work That Actually Drives Impact</strong>
+</h2><p>If you want to maximize the impact of data science in an organization, you have to focus on <strong>the core tasks that directly drive business value</strong>.</p>
+<p>Here’s what usually makes up the <strong>critical 20% of work</strong>:</p>
+<h3 id="1-simple-interpretable-models-over-over-engineered-complexity"><a href="#1-simple-interpretable-models-over-over-engineered-complexity" class="header-anchor"></a><strong>1. Simple, Interpretable Models Over Over-Engineered Complexity</strong>
+</h3><ul>
+<li>In most business cases, a well-tuned <strong>logistic regression, decision tree, or even basic SQL analytics</strong> can solve 80% of problems.</li>
+<li>Advanced deep learning models can sometimes provide an edge, but they come with <strong>higher maintenance costs, slower iteration cycles, and adoption challenges.</strong></li>
+<li>The real value is in <strong>actionable insights</strong>, not model sophistication.</li>
+</ul>
+<h3 id="2-well-defined-business-aligned-metrics"><a href="#2-well-defined-business-aligned-metrics" class="header-anchor"></a><strong>2. Well-Defined, Business-Aligned Metrics</strong>
+</h3><ul>
+<li>The best teams spend time <strong>defining success upfront</strong>: is the goal revenue growth, cost savings, churn reduction, or operational efficiency?</li>
+<li>If a project doesn’t have a <strong>clear, measurable business goal</strong>, it’s probably part of the 80% of wasted effort.</li>
+</ul>
+<h3 id="3-robust-reusable-data-pipelines"><a href="#3-robust-reusable-data-pipelines" class="header-anchor"></a><strong>3. Robust, Reusable Data Pipelines</strong>
+</h3><ul>
+<li><strong>Data engineering is often more valuable than model optimization.</strong> A 95% accurate model with a broken data pipeline is useless.</li>
+<li>Investing in <strong>clean, well-documented, and reproducible data pipelines</strong> makes every future project faster and more reliable.</li>
+</ul>
+<h3 id="4-stakeholder-alignment-and-change-management"><a href="#4-stakeholder-alignment-and-change-management" class="header-anchor"></a><strong>4. Stakeholder Alignment and Change Management</strong>
+</h3><ul>
+<li><strong>A great model that no one uses is worthless.</strong> Data science isn’t just about building models—it’s about driving adoption.</li>
+<li>The most impactful teams prioritize <strong>collaboration with business leaders</strong> to ensure insights translate into real decisions.</li>
+</ul>
+<h3 id="5-fast-prototyping-and-iteration"><a href="#5-fast-prototyping-and-iteration" class="header-anchor"></a><strong>5. Fast Prototyping and Iteration</strong>
+</h3><ul>
+<li>Instead of spending months perfecting a model, focus on <strong>quick iterations</strong> to validate assumptions early.</li>
+<li><strong>Rapid feedback loops</strong> (e.g., weekly check-ins, early MVPs, internal A/B testing) ensure that projects don’t spiral into wasted effort.</li>
+</ul>
+<hr>
+<h2 id="whats-in-the-80-work-that-rarely-moves-the-needle"><a href="#whats-in-the-80-work-that-rarely-moves-the-needle" class="header-anchor"></a><strong>What’s in the 80%? Work That Rarely Moves the Needle</strong>
+</h2><h3 id="1-chasing-marginal-accuracy-gains"><a href="#1-chasing-marginal-accuracy-gains" class="header-anchor"></a><strong>1. Chasing Marginal Accuracy Gains</strong>
+</h3><ul>
+<li>Teams often waste weeks tweaking a model to <strong>improve accuracy from 91% to 91.5%</strong>, but the extra effort rarely justifies the business impact.</li>
+<li>If a model is <strong>&ldquo;good enough&rdquo; to drive the desired outcome</strong>, ship it and move on.</li>
+</ul>
+<h3 id="2-over-complicated-mlops-for-low-scale-needs"><a href="#2-over-complicated-mlops-for-low-scale-needs" class="header-anchor"></a><strong>2. Over-Complicated MLOps for Low-Scale Needs</strong>
+</h3><ul>
+<li>Building a <strong>full-blown CI/CD pipeline for a model that updates monthly</strong> is overkill.</li>
+<li>Focus on <strong>automation where it actually saves time</strong>, not where it looks good on a slide deck.</li>
+</ul>
+<h3 id="3-one-off-hard-to-maintain-solutions"><a href="#3-one-off-hard-to-maintain-solutions" class="header-anchor"></a><strong>3. One-Off, Hard-to-Maintain Solutions</strong>
+</h3><ul>
+<li>Every ad-hoc model, notebook, or dashboard that <strong>isn’t reproducible or scalable</strong> adds unnecessary complexity.</li>
+<li>Instead, invest in <strong>templates, automation, and standardized processes</strong> to prevent long-term tech debt.</li>
+</ul>
+<h3 id="4-solving-problems-that-dont-exist"><a href="#4-solving-problems-that-dont-exist" class="header-anchor"></a><strong>4. Solving Problems That Don’t Exist</strong>
+</h3><ul>
+<li>If a project doesn’t solve a <strong>clear business pain point</strong>, it’s probably just data science for data science’s sake.</li>
+<li>Validate that the problem is real <strong>before committing major resources.</strong></li>
+</ul>
+<hr>
+<h2 id="how-to-spot-when-youre-in-the-80-and-fix-it"><a href="#how-to-spot-when-youre-in-the-80-and-fix-it" class="header-anchor"></a><strong>How to Spot When You’re in the 80% (And Fix It)</strong>
+</h2><p>Here’s how to tell if you or your team is wasting time on low-impact work:</p>
+<p>✅ <strong>Projects drag on with no clear business outcome</strong> – If no one can articulate the expected ROI, it’s time to reassess.</p>
+<p>✅ <strong>Endless iterations without deployment</strong> – If a model has been tweaked 20 times but never used in production, something is wrong.</p>
+<p>✅ <strong>Low adoption from stakeholders</strong> – If no one is using the insights, the problem isn’t the model—it’s the integration.</p>
+<p>✅ <strong>More focus on &ldquo;cool tech&rdquo; than business needs</strong> – If your team is more excited about new tools than solving real problems, you’re in the 80%.</p>
+<hr>
+<h2 id="how-to-redirect-leadership-toward-the-20-that-matters"><a href="#how-to-redirect-leadership-toward-the-20-that-matters" class="header-anchor"></a><strong>How to Redirect Leadership Toward the 20% That Matters</strong>
+</h2><p>Leadership often pushes for overcomplicated, low-impact work because <strong>they don’t know what’s possible or practical</strong>. Here’s how to guide them toward <strong>high-value efforts</strong>:</p>
+<ol>
+<li>
+<p><strong>Frame everything in terms of business outcomes.</strong></p>
+<ul>
+<li>Instead of talking about data science models, <strong>talk about revenue, cost savings, efficiency, or customer satisfaction.</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Push for iterative delivery, not big-bang projects.</strong></p>
+<ul>
+<li>Avoid multi-month projects with no feedback loop—<strong>deliver something small early</strong> and refine from there.</li>
+</ul>
+</li>
+<li>
+<p><strong>Educate on the cost of complexity.</strong></p>
+<ul>
+<li>Make it clear that <strong>every additional layer of sophistication adds maintenance overhead, delays, and failure points.</strong></li>
+</ul>
+</li>
+<li>
+<p><strong>Show examples of simple solutions driving massive impact.</strong></p>
+<ul>
+<li>If a simple dashboard or basic model is <strong>already solving 80% of the problem, why add complexity?</strong></li>
+</ul>
+</li>
+</ol>
+<hr>
+<h2 id="final-thoughts-do-less-deliver-more"><a href="#final-thoughts-do-less-deliver-more" class="header-anchor"></a><strong>Final Thoughts: Do Less, Deliver More</strong>
+</h2><p>The best data science teams <strong>aren’t the ones that build the most complex models—they’re the ones that create the most business impact.</strong></p>
+<p>If you want to drive real value:<br>
+✅ <strong>Prioritize simple, interpretable models over marginal accuracy gains.</strong><br>
+✅ <strong>Invest in clean data pipelines and reproducibility.</strong><br>
+✅ <strong>Work closely with stakeholders to ensure adoption.</strong><br>
+✅ <strong>Stop chasing complexity for its own sake—focus on fast, practical solutions.</strong></p>
+<p>The difference between a <strong>high-performing</strong> data science team and a <strong>high-friction</strong> one isn’t intelligence or technical skill. It’s knowing <strong>what work actually matters—and having the discipline to ignore the rest.</strong></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/data-science/">Data Science</a>
+        
+            <a href="/tags/prioritization/">Prioritization</a>
+        
+            <a href="/tags/business-impact/">Business Impact</a>
+        
+            <a href="/tags/best-practices/">Best Practices</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/datascience/techdebt/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 My Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

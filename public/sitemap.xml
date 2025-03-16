@@ -2,6 +2,51 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://192.168.100.63:1313/tags/best-practices/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/business-impact/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/data-science/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/data-science/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/engineering-leadership/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/techdebt/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/prioritization/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/software-engineering/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/strategy/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/tech-debt/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/8020rule/</loc>
+    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
+  </url><url>
     <loc>http://192.168.100.63:1313/about/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -32,22 +77,10 @@
     <loc>http://192.168.100.63:1313/datascience/foundations/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/categories/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/tags/cloudflare-pages/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/cybersecurity/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/categories/data-science/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/tags/data-science/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/datascience/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/deepseek-v3/</loc>
@@ -107,9 +140,6 @@
     <loc>http://192.168.100.63:1313/musings/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/tags/national-security/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -149,9 +179,6 @@
     <loc>http://192.168.100.63:1313/projects/hugo-blog-setup/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/categories/strategy/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/tags/strategy/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -159,9 +186,6 @@
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/sustainable-energy/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/tags/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/tandoor/</loc>
