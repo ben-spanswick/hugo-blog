@@ -4,6 +4,7 @@ theme = "stack"
 enableRobotsTXT = true
 defaultContentLanguage = "en"
 languageCode = "en-us"
+enableEmoji = true
 
 [params]
   mainSections = ["musings", "projects", "about"]  # Updated to reflect actual content folders
@@ -22,7 +23,7 @@ languageCode = "en-us"
 
   [params.sidebar]
     compact = false
-    emoji = " ^=^z^`"
+    emoji = "💾"
     subtitle = "Exploring Tech, Homelabs, & Self-Hosting"
     
     [params.sidebar.avatar]
@@ -89,5 +90,5 @@ languageCode = "en-us"
 
   [[menu.main]]
     name = "Resume"
-    url = "Spanswick_resume2025.pdf"
+    url = "Spanswick_Resume2025.pdf"
     weight = 5
