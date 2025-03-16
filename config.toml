@@ -6,11 +6,11 @@ defaultContentLanguage = "en"
 languageCode = "en-us"
 
 [params]
-  mainSections = ["posts"]
+  mainSections = ["musings", "projects", "about"]  # Updated to reflect actual content folders
   featuredImageField = "image"
   rssFullContent = true
   favicon = "/favicon.ico"
-  lastmod = "2025-03-15T00:00:00Z"  # Set a static Last Modified date
+  lastmod = "2025-03-15T00:00:00Z"
 
   [params.footer]
     since = 2024
@@ -22,25 +22,27 @@ languageCode = "en-us"
 
   [params.sidebar]
     compact = false
-    emoji = "🚀"
+    emoji = " ^=^z^`"
     subtitle = "Exploring Tech, Homelabs, & Self-Hosting"
+    
     [params.sidebar.avatar]
       enabled = true
-      local = true
-      src = "img/avatar.png"
+      local = false
+      src = "/img/headshot.png"  # Updated path (must be inside /static/)
 
   [params.article]
     headingAnchor = true
     math = true
     toc = true
     readingTime = true
+    
     [params.article.license]
       enabled = true
       default = "Licensed under CC BY-NC-SA 4.0"
 
   [params.colorScheme]
     toggle = true
-    default = "dark"  # Options: auto, light, dark
+    default = "dark"
 
   [params.opengraph.twitter]
     site = "@yourtwitter"
@@ -62,3 +64,30 @@ languageCode = "en-us"
 
 [pagination]
   pagerSize = 5
+
+[menu]
+
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About Me"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Musings"
+    url = "/musings/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 4
+
+  [[menu.main]]
+    name = "Resume"
+    url = "Spanswick_resume2025.pdf"
+    weight = 5
