@@ -23,7 +23,7 @@ enableEmoji = true
 
   [params.sidebar]
     compact = false
-    emoji = " ^=^t^m"
+    emoji = "💾"  # Floppy Disk emoji
     subtitle = "Exploring Tech, Homelabs, & Self-Hosting"
 
     [params.sidebar.avatar]
