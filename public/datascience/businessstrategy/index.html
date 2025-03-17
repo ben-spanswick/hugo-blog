@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="A blueprint for ensuring data teams actually drive impact">
+<title>How to Align Data Science with Business Strategy (And Stop Being a Science Project Team)</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/datascience/businessstrategy/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="How to Align Data Science with Business Strategy (And Stop Being a Science Project Team)">
+<meta property='og:description' content="A blueprint for ensuring data teams actually drive impact">
+<meta property='og:url' content='http://192.168.100.63:1313/datascience/businessstrategy/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Datascience' /><meta property='article:tag' content='data science' /><meta property='article:tag' content='business alignment' /><meta property='article:tag' content='strategy' /><meta property='article:tag' content='leadership' /><meta property='article:published_time' content='2025-03-17T02:36:40&#43;00:00'/><meta property='article:modified_time' content='2025-03-17T02:36:40&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="How to Align Data Science with Business Strategy (And Stop Being a Science Project Team)">
+<meta name="twitter:description" content="A blueprint for ensuring data teams actually drive impact"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji"> ^=^t^m</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/datascience/' >
+                
+                
+                
+                <span>Data Strategy</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/spanswick_resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">Categories</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/categories/data-science/" class="font_size_7">
+                Data Science
+            </a>
+        
+            <a href="/categories/technology/" class="font_size_7">
+                Technology
+            </a>
+        
+            <a href="/categories/ai-trends/" class="font_size_3">
+                AI Trends
+            </a>
+        
+            <a href="/categories/energy/" class="font_size_2">
+                Energy
+            </a>
+        
+            <a href="/categories/self-hosting/" class="font_size_2">
+                Self-Hosting
+            </a>
+        
+            <a href="/categories/strategy/" class="font_size_2">
+                Strategy
+            </a>
+        
+            <a href="/categories/team-management/" class="font_size_2">
+                Team Management
+            </a>
+        
+            <a href="/categories/ai-developments/" class="font_size_1">
+                AI Developments
+            </a>
+        
+            <a href="/categories/business-leadership/" class="font_size_1">
+                Business Leadership
+            </a>
+        
+            <a href="/categories/business-strategy/" class="font_size_1">
+                Business Strategy
+            </a>
+        
+    </div>
+</section>
+
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">Tags</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/tags/data-science/" class="font_size_7">
+                Data Science
+            </a>
+        
+            <a href="/tags/leadership/" class="font_size_5">
+                Leadership
+            </a>
+        
+            <a href="/tags/ai/" class="font_size_4">
+                AI
+            </a>
+        
+            <a href="/tags/self-hosting/" class="font_size_3">
+                Self-Hosting
+            </a>
+        
+            <a href="/tags/best-practices/" class="font_size_2">
+                Best Practices
+            </a>
+        
+            <a href="/tags/machine-learning/" class="font_size_2">
+                Machine Learning
+            </a>
+        
+            <a href="/tags/nextcloud/" class="font_size_2">
+                Nextcloud
+            </a>
+        
+            <a href="/tags/strategy/" class="font_size_2">
+                Strategy
+            </a>
+        
+            <a href="/tags/team-building/" class="font_size_2">
+                Team Building
+            </a>
+        
+            <a href="/tags/agility/" class="font_size_1">
+                Agility
+            </a>
+        
+    </div>
+</section>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/data-science/" >
+                Data Science
+            </a>
+        
+            <a href="/categories/business-strategy/" >
+                Business Strategy
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/datascience/businessstrategy/">How to Align Data Science with Business Strategy (And Stop Being a Science Project Team)</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            A blueprint for ensuring data teams actually drive impact
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 17, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    8 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="how-to-align-data-science-with-business-strategy-and-stop-being-a-science-project-team"><a href="#how-to-align-data-science-with-business-strategy-and-stop-being-a-science-project-team" class="header-anchor"></a><strong>How to Align Data Science with Business Strategy (And Stop Being a Science Project Team)</strong>
+</h1><p>Data science teams often find themselves in a frustrating position: technically brilliant but strategically irrelevant.</p>
+<p>I&rsquo;ve seen it countless times. Teams of PhDs and talented engineers building sophisticated models that never see the light of day. Data scientists spending months on projects that executives don&rsquo;t understand or care about. Analytics capabilities that impress at conferences but fail to move the business forward.</p>
+<p>The gap between data science capabilities and business impact isn&rsquo;t about technical skills—it&rsquo;s about <strong>strategic alignment</strong>. When I transformed our data science function from a &ldquo;cool science project&rdquo; team to a strategic business partner, our project implementation rate went from roughly 30% to over 80%. The difference wasn&rsquo;t better algorithms—it was better alignment.</p>
+<p>The hard truth is that most data science teams are solving the wrong problems. They&rsquo;re optimizing for technical elegance rather than business outcomes. They&rsquo;re answering questions no one asked instead of addressing the challenges keeping executives up at night.</p>
+<p>Let&rsquo;s fix that.</p>
+<hr>
+<h2 id="why-most-data-science-teams-fail-to-deliver-value"><a href="#why-most-data-science-teams-fail-to-deliver-value" class="header-anchor"></a><strong>Why Most Data Science Teams Fail to Deliver Value</strong>
+</h2><p>The symptoms of misalignment are painfully obvious once you know what to look for:</p>
+<ul>
+<li>Projects that get enthusiastic nods in development but die before implementation</li>
+<li>Models that technically work but don&rsquo;t address actual business problems</li>
+<li>Data scientists who can explain p-values but not profit margins</li>
+<li>Executives who view data science as a cost center rather than a value driver</li>
+<li>A growing portfolio of proofs-of-concept that never reach production</li>
+</ul>
+<p>The root cause is almost always the same: <strong>data science teams operate in a business vacuum</strong>.</p>
+<p>They&rsquo;re disconnected from strategic priorities, don&rsquo;t understand the operational constraints, and can&rsquo;t translate their work into terms that resonate with decision-makers. They&rsquo;re building solutions looking for problems instead of solving the problems the business actually has.</p>
+<p>This disconnect is expensive. One study from VentureBeat found that <strong>87% of data science projects never make it to production</strong>. That&rsquo;s an enormous waste of talent, time, and potential. In my experience leading data teams, I&rsquo;ve seen organizations burn millions on sophisticated analytics capabilities that delivered virtually no return.</p>
+<hr>
+<h2 id="the-blueprint-for-business-aligned-data-science"><a href="#the-blueprint-for-business-aligned-data-science" class="header-anchor"></a><strong>The Blueprint for Business-Aligned Data Science</strong>
+</h2><p>Transforming your data science function from a science project team to a strategic asset requires fundamental changes in how you operate. Here&rsquo;s the blueprint that worked for us:</p>
+<h3 id="1-start-with-business-problems-not-data-or-algorithms"><a href="#1-start-with-business-problems-not-data-or-algorithms" class="header-anchor"></a><strong>1. Start with Business Problems, Not Data or Algorithms</strong>
+</h3><p>The single biggest mistake data teams make is starting with the wrong question. They ask &ldquo;What interesting patterns can we find in this data?&rdquo; instead of &ldquo;What decisions need to be made, and how can data improve them?&rdquo;</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Establish a business-first intake process.</strong> Every project should start with a clear statement of the business problem, the decisions it affects, and the value of improving those decisions.</li>
+<li><strong>Require business sponsors, not just technical sponsors.</strong> Someone with P&amp;L responsibility should be invested in the outcome of every significant data science initiative.</li>
+<li><strong>Define success in business terms first, technical terms second.</strong> &ldquo;Improving forecast accuracy by 10%&rdquo; isn&rsquo;t a business outcome. &ldquo;Reducing inventory costs by $2M while maintaining service levels&rdquo; is.</li>
+</ul>
+<p>When we implemented this approach, we immediately killed about 30% of our project backlog—initiatives that were technically interesting but had no clear path to business impact. The resources we freed up went to projects with direct revenue or efficiency implications.</p>
+<hr>
+<h3 id="2-speak-the-language-of-the-business-and-make-executives-speak-yours"><a href="#2-speak-the-language-of-the-business-and-make-executives-speak-yours" class="header-anchor"></a><strong>2. Speak the Language of the Business (And Make Executives Speak Yours)</strong>
+</h3><p>The translation gap between data scientists and business leaders is real. Data teams talk about algorithms and accuracy; executives talk about revenue and risk. If you can&rsquo;t bridge that gap, your brilliant solutions will die in PowerPoint.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Create a shared vocabulary.</strong> Develop a simple glossary that translates data science concepts into business terms and vice versa. Distribute it to both teams.</li>
+<li><strong>Train data scientists in business fundamentals.</strong> Every data scientist should understand your business model, value chain, and key performance indicators. Make business training part of onboarding.</li>
+<li><strong>Train executives in data literacy.</strong> Leadership needs enough understanding to ask good questions and evaluate recommendations. Short workshops on data interpretation and statistical thinking can dramatically improve collaboration.</li>
+<li><strong>Present results in business terms first, with technical details available on request.</strong> Lead with impact, not methodology.</li>
+</ul>
+<p>After implementing a shared language program, our project approval rate from senior leadership increased by 65%. Not because our technical work improved, but because we could articulate its value in terms that resonated with decision-makers.</p>
+<hr>
+<h3 id="3-embed-data-scientists-in-business-teams"><a href="#3-embed-data-scientists-in-business-teams" class="header-anchor"></a><strong>3. Embed Data Scientists in Business Teams</strong>
+</h3><p>Centralized data science teams often become ivory towers—technically strong but disconnected from day-to-day business operations. Embedding data scientists directly in business units creates proximity to real problems and stakeholders.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Adopt a hub-and-spoke model.</strong> Maintain a central team for standards, tools, and specialized expertise, but embed individual data scientists or small teams within business units.</li>
+<li><strong>Implement rotation programs.</strong> Have data scientists spend time in customer service, sales, or operations to gain firsthand experience with the problems they&rsquo;re trying to solve.</li>
+<li><strong>Create joint accountability.</strong> Make both the data scientist and their business partner accountable for project outcomes. Shared KPIs drive collaboration.</li>
+<li><strong>Co-locate when possible.</strong> Physical proximity to business stakeholders dramatically improves collaboration and understanding.</li>
+</ul>
+<p>When we moved from a purely centralized model to a hub-and-spoke approach, the average time from project initiation to value delivery dropped by 40%. Being close to the business accelerated everything from problem definition to implementation.</p>
+<hr>
+<h3 id="4-build-for-decisions-not-insights"><a href="#4-build-for-decisions-not-insights" class="header-anchor"></a><strong>4. Build for Decisions, Not Insights</strong>
+</h3><p>Data science that produces &ldquo;interesting insights&rdquo; without changing decisions is just expensive trivia. Every project should have a clear path to influencing specific business decisions.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Map the decision-making process before building solutions.</strong> Understand who makes decisions, what inputs they currently use, and how your work will fit into their workflow.</li>
+<li><strong>Design for the last mile.</strong> The most sophisticated model is worthless if its outputs aren&rsquo;t accessible when and where decisions are made. Invest as much in delivery mechanisms (dashboards, APIs, integrations) as in the analytics themselves.</li>
+<li><strong>Measure decision changes, not just model accuracy.</strong> Track how often your work actually changes decisions and what the impact of those changes is.</li>
+<li><strong>Create feedback loops.</strong> Establish processes to capture the outcomes of data-influenced decisions so you can continuously improve.</li>
+</ul>
+<p>After implementing decision-focused development, our implementation rate for completed projects rose from about 50% to over 90%. The difference was designing for actual use from the beginning, not treating implementation as an afterthought.</p>
+<hr>
+<h3 id="5-implement-portfolio-management-for-data-initiatives"><a href="#5-implement-portfolio-management-for-data-initiatives" class="header-anchor"></a><strong>5. Implement Portfolio Management for Data Initiatives</strong>
+</h3><p>Not all data projects are created equal. Without a structured approach to prioritization, teams often focus on what&rsquo;s technically interesting rather than what&rsquo;s strategically important.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Create a formal scoring system for project prioritization.</strong> Evaluate potential initiatives based on strategic alignment, expected value, feasibility, and time to impact.</li>
+<li><strong>Balance your portfolio across time horizons.</strong> Allocate resources to quick wins (1-3 months), medium-term improvements (3-12 months), and strategic capabilities (12+ months).</li>
+<li><strong>Set explicit limits on &ldquo;science projects.&rdquo;</strong> Allocate a small percentage of capacity (we used 15%) to exploration and capability building without immediate business applications. This creates space for innovation while ensuring most resources go to value-driving work.</li>
+<li><strong>Review and rebalance quarterly.</strong> Business priorities change; your data science portfolio should adapt accordingly.</li>
+</ul>
+<p>Portfolio management increased our overall return on data science investment by approximately 3x. We weren&rsquo;t necessarily doing better technical work—we were just working on more valuable problems.</p>
+<hr>
+<h2 id="from-science-projects-to-strategic-assets-the-transformation-journey"><a href="#from-science-projects-to-strategic-assets-the-transformation-journey" class="header-anchor"></a><strong>From Science Projects to Strategic Assets: The Transformation Journey</strong>
+</h2><p>Transforming a data science function isn&rsquo;t a one-time fix—it&rsquo;s a journey that requires sustained effort from both data teams and business leaders. Here&rsquo;s what to expect:</p>
+<h3 id="phase-1-alignment-1-3-months"><a href="#phase-1-alignment-1-3-months" class="header-anchor"></a><strong>Phase 1: Alignment (1-3 months)</strong>
+</h3><ul>
+<li>Audit current projects for business alignment</li>
+<li>Establish new intake and prioritization processes</li>
+<li>Develop shared vocabulary and training</li>
+<li>Identify quick wins to build credibility</li>
+</ul>
+<h3 id="phase-2-integration-3-6-months"><a href="#phase-2-integration-3-6-months" class="header-anchor"></a><strong>Phase 2: Integration (3-6 months)</strong>
+</h3><ul>
+<li>Begin embedding data scientists in business teams</li>
+<li>Implement decision-focused development methodology</li>
+<li>Create joint accountability structures</li>
+<li>Build feedback mechanisms to track impact</li>
+</ul>
+<h3 id="phase-3-acceleration-6-12-months"><a href="#phase-3-acceleration-6-12-months" class="header-anchor"></a><strong>Phase 3: Acceleration (6-12 months)</strong>
+</h3><ul>
+<li>Scale successful patterns across the organization</li>
+<li>Formalize portfolio management approach</li>
+<li>Develop specialized capabilities based on proven business needs</li>
+<li>Establish data science as a core strategic function</li>
+</ul>
+<p>The transformation isn&rsquo;t easy. You&rsquo;ll likely face resistance from both sides—data scientists who prefer technical autonomy and business leaders skeptical of yet another &ldquo;data initiative.&rdquo; The key is demonstrating value early and often. Nothing builds support like results.</p>
+<hr>
+<h2 id="final-thoughts-the-future-belongs-to-aligned-data-teams"><a href="#final-thoughts-the-future-belongs-to-aligned-data-teams" class="header-anchor"></a><strong>Final Thoughts: The Future Belongs to Aligned Data Teams</strong>
+</h2><p>In a world drowning in data but starving for insight, the competitive advantage doesn&rsquo;t go to companies with the most data scientists or the most sophisticated algorithms. It goes to organizations that can translate data into better decisions and decisive action.</p>
+<p>The most successful data science teams I&rsquo;ve seen share three characteristics:</p>
+<p>✅ <strong>They&rsquo;re business-first, not technology-first.</strong> They start with problems worth solving, not data worth analyzing.</p>
+<p>✅ <strong>They&rsquo;re integrated, not isolated.</strong> They work alongside business teams rather than throwing solutions over the wall.</p>
+<p>✅ <strong>They&rsquo;re outcome-obsessed, not output-obsessed.</strong> They measure success by business impact, not model accuracy or the number of insights generated.</p>
+<p>The gap between data science potential and realized value remains enormous in most organizations. Bridging that gap doesn&rsquo;t require more technical talent—it requires better alignment, clearer communication, and relentless focus on decisions that matter.</p>
+<p>Because at the end of the day, the most sophisticated data science in the world is worthless if it doesn&rsquo;t change how your business operates. Stop being a science project team. Start being a strategic partner in business transformation.</p>
+<p>The future of your data science function—and possibly your company—depends on it.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/data-science/">Data Science</a>
+        
+            <a href="/tags/business-alignment/">Business Alignment</a>
+        
+            <a href="/tags/strategy/">Strategy</a>
+        
+            <a href="/tags/leadership/">Leadership</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/datascience/techdebt/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/datascience/8020rule/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 My Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

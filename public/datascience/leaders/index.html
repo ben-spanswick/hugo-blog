@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="How to bridge the gap between business expectations and reality">
+<title>What Business Leaders Get Wrong About Data Science (And How to Educate Them)</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/datascience/leaders/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="What Business Leaders Get Wrong About Data Science (And How to Educate Them)">
+<meta property='og:description' content="How to bridge the gap between business expectations and reality">
+<meta property='og:url' content='http://192.168.100.63:1313/datascience/leaders/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Datascience' /><meta property='article:tag' content='data science' /><meta property='article:tag' content='leadership' /><meta property='article:tag' content='business strategy' /><meta property='article:tag' content='communication' /><meta property='article:published_time' content='2025-03-17T02:44:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-17T02:44:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="What Business Leaders Get Wrong About Data Science (And How to Educate Them)">
+<meta name="twitter:description" content="How to bridge the gap between business expectations and reality"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji"> ^=^t^m</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/datascience/' >
+                
+                
+                
+                <span>Data Strategy</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/spanswick_resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">Categories</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/categories/data-science/" class="font_size_7">
+                Data Science
+            </a>
+        
+            <a href="/categories/technology/" class="font_size_7">
+                Technology
+            </a>
+        
+            <a href="/categories/ai-trends/" class="font_size_3">
+                AI Trends
+            </a>
+        
+            <a href="/categories/energy/" class="font_size_2">
+                Energy
+            </a>
+        
+            <a href="/categories/self-hosting/" class="font_size_2">
+                Self-Hosting
+            </a>
+        
+            <a href="/categories/strategy/" class="font_size_2">
+                Strategy
+            </a>
+        
+            <a href="/categories/team-management/" class="font_size_2">
+                Team Management
+            </a>
+        
+            <a href="/categories/ai-developments/" class="font_size_1">
+                AI Developments
+            </a>
+        
+            <a href="/categories/business-leadership/" class="font_size_1">
+                Business Leadership
+            </a>
+        
+            <a href="/categories/business-strategy/" class="font_size_1">
+                Business Strategy
+            </a>
+        
+    </div>
+</section>
+
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">Tags</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/tags/data-science/" class="font_size_7">
+                Data Science
+            </a>
+        
+            <a href="/tags/leadership/" class="font_size_5">
+                Leadership
+            </a>
+        
+            <a href="/tags/ai/" class="font_size_4">
+                AI
+            </a>
+        
+            <a href="/tags/self-hosting/" class="font_size_3">
+                Self-Hosting
+            </a>
+        
+            <a href="/tags/best-practices/" class="font_size_2">
+                Best Practices
+            </a>
+        
+            <a href="/tags/machine-learning/" class="font_size_2">
+                Machine Learning
+            </a>
+        
+            <a href="/tags/nextcloud/" class="font_size_2">
+                Nextcloud
+            </a>
+        
+            <a href="/tags/strategy/" class="font_size_2">
+                Strategy
+            </a>
+        
+            <a href="/tags/team-building/" class="font_size_2">
+                Team Building
+            </a>
+        
+            <a href="/tags/agility/" class="font_size_1">
+                Agility
+            </a>
+        
+    </div>
+</section>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/data-science/" >
+                Data Science
+            </a>
+        
+            <a href="/categories/business-leadership/" >
+                Business Leadership
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/datascience/leaders/">What Business Leaders Get Wrong About Data Science (And How to Educate Them)</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            How to bridge the gap between business expectations and reality
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 17, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    10 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="what-business-leaders-get-wrong-about-data-science-and-how-to-educate-them"><a href="#what-business-leaders-get-wrong-about-data-science-and-how-to-educate-them" class="header-anchor"></a><strong>What Business Leaders Get Wrong About Data Science (And How to Educate Them)</strong>
+</h1><p>I&rsquo;ve sat through hundreds of meetings where business leaders talk about data science like it&rsquo;s magic.</p>
+<p>&ldquo;Can&rsquo;t we just use AI to predict which customers will churn?&rdquo;</p>
+<p>&ldquo;Let&rsquo;s build a model that tells us exactly what products to develop next.&rdquo;</p>
+<p>&ldquo;I heard Company X increased revenue by 40% with machine learning—we should do that.&rdquo;</p>
+<p>The enthusiasm is great. The understanding? Not so much.</p>
+<p>After a decade of leading data teams and advising executives, I&rsquo;ve found that <strong>the gap between what business leaders expect from data science and what it can actually deliver is enormous</strong>. This misalignment leads to wasted investment, frustrated teams, and missed opportunities for genuine impact.</p>
+<p>The problem isn&rsquo;t that business leaders are wrong to be excited about data science—they&rsquo;re absolutely right to see its potential. The problem is that <strong>without a realistic understanding of how data science actually works, they set impossible expectations and measure success by the wrong metrics.</strong></p>
+<p>Let&rsquo;s explore what business leaders consistently get wrong about data science—and how to educate them without crushing their enthusiasm.</p>
+<hr>
+<h2 id="the-five-biggest-misconceptions-business-leaders-have-about-data-science"><a href="#the-five-biggest-misconceptions-business-leaders-have-about-data-science" class="header-anchor"></a><strong>The Five Biggest Misconceptions Business Leaders Have About Data Science</strong>
+</h2><h3 id="1"><a href="#1" class="header-anchor"></a><strong>1. &ldquo;Data Science Is Primarily About Algorithms and AI&rdquo;</strong>
+</h3><p>Most business leaders think data science is all about sophisticated algorithms and cutting-edge AI. In reality, <strong>data science is 80% data preparation and only 20% actual modeling</strong>.</p>
+<p>The misconception leads to:</p>
+<ul>
+<li>Underinvestment in data infrastructure and quality</li>
+<li>Unrealistic timelines that don&rsquo;t account for data preparation</li>
+<li>Frustration when teams spend months on &ldquo;boring&rdquo; data work instead of building exciting algorithms</li>
+</ul>
+<p><strong>The reality:</strong> The most advanced algorithm in the world is worthless without clean, relevant data. One healthcare client spent $2M on an AI initiative before realizing their data was too fragmented and inconsistent to support it. They would have been better off investing that first million in data governance and integration.</p>
+<h3 id="2"><a href="#2" class="header-anchor"></a><strong>2. &ldquo;More Data Always Means Better Results&rdquo;</strong>
+</h3><p>There&rsquo;s a persistent belief that the path to better insights is simply collecting more data. This &ldquo;data hoarding&rdquo; mentality leads to massive data lakes filled with information that&rsquo;s never used.</p>
+<p>The misconception leads to:</p>
+<ul>
+<li>Expensive data collection efforts with no clear purpose</li>
+<li>Analysis paralysis as teams drown in irrelevant information</li>
+<li>Privacy and security risks from storing unnecessary data</li>
+</ul>
+<p><strong>The reality:</strong> What matters is having the right data, not the most data. When we audited one retail client&rsquo;s analytics infrastructure, we found they were storing over 200 variables per customer but only using 12 in their actual decision-making. The storage and management costs for the unused data exceeded $500K annually.</p>
+<h3 id="3"><a href="#3" class="header-anchor"></a><strong>3. &ldquo;Data Science Projects Deliver Immediate ROI&rdquo;</strong>
+</h3><p>Many executives expect data science initiatives to deliver clear, immediate returns like other technology investments. They become impatient when projects take time to show value.</p>
+<p>The misconception leads to:</p>
+<ul>
+<li>Premature cancellation of promising projects</li>
+<li>Pressure to show results that leads to bad methodological choices</li>
+<li>Reluctance to invest in foundational capabilities</li>
+</ul>
+<p><strong>The reality:</strong> Data science is often more like R&amp;D than IT implementation. The most valuable projects frequently require experimentation, iteration, and capability building before delivering returns. When we implemented a customer lifetime value model for a subscription business, it took three quarters before we saw the impact on retention—but that impact was eventually worth $14M annually.</p>
+<h3 id="4"><a href="#4" class="header-anchor"></a><strong>4. &ldquo;A Good Data Scientist Can Solve Any Problem&rdquo;</strong>
+</h3><p>There&rsquo;s a tendency to view data scientists as universal problem solvers who can tackle any business challenge with enough data. This leads to unrealistic expectations about what a single data scientist or small team can accomplish.</p>
+<p>The misconception leads to:</p>
+<ul>
+<li>Hiring generalists when specialists are needed</li>
+<li>Overloading data scientists with too many disparate projects</li>
+<li>Disappointment when data scientists can&rsquo;t deliver miracles</li>
+</ul>
+<p><strong>The reality:</strong> Data science is a broad field with many specializations. A data scientist who excels at building recommendation systems might struggle with time series forecasting. One who&rsquo;s brilliant at statistical analysis might have limited experience with deep learning. When we restructured one client&rsquo;s data team around domains of expertise rather than treating everyone as interchangeable, their project success rate increased from 35% to over 70%.</p>
+<h3 id="5"><a href="#5" class="header-anchor"></a><strong>5. &ldquo;Data Science Will Give Us The Answer&rdquo;</strong>
+</h3><p>Perhaps the most dangerous misconception is that data science provides definitive answers rather than probabilistic insights. Business leaders often want certainty, not probabilities.</p>
+<p>The misconception leads to:</p>
+<ul>
+<li>Overconfidence in model predictions</li>
+<li>Resistance to probabilistic recommendations</li>
+<li>Disappointment when &ldquo;the answer&rdquo; turns out to be wrong</li>
+</ul>
+<p><strong>The reality:</strong> Data science deals in probabilities, not certainties. It can tell you that a customer has a 70% likelihood of churning, not that they will definitely churn. It can identify factors correlated with success, not guarantee it. When we implemented a risk model for a financial services client, the executives initially rejected it because it couldn&rsquo;t predict with certainty which loans would default—missing the point that improving probability estimates by even 10% was worth millions.</p>
+<hr>
+<h2 id="how-to-educate-business-leaders-without-losing-their-support"><a href="#how-to-educate-business-leaders-without-losing-their-support" class="header-anchor"></a><strong>How to Educate Business Leaders (Without Losing Their Support)</strong>
+</h2><p>Correcting these misconceptions is delicate work. Push too hard against executives&rsquo; enthusiasm, and you risk losing their support entirely. Don&rsquo;t push hard enough, and you&rsquo;re setting everyone up for disappointment. Here&rsquo;s how to thread that needle:</p>
+<h3 id="1-speak-their-language-not-yours"><a href="#1-speak-their-language-not-yours" class="header-anchor"></a><strong>1. Speak Their Language, Not Yours</strong>
+</h3><p>The biggest mistake data professionals make when educating business leaders is drowning them in technical jargon. This doesn&rsquo;t make you look smart—it makes you look out of touch.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Translate everything into business outcomes.</strong> Don&rsquo;t talk about model accuracy; talk about reduced customer acquisition costs or increased retention rates.</li>
+<li><strong>Use analogies from business domains they understand.</strong> Compare data preparation to manufacturing quality control. Compare model development to product R&amp;D.</li>
+<li><strong>Create a simple one-page reference guide</strong> that translates common data science terms into business concepts. Share it before important meetings.</li>
+</ul>
+<p>When I started translating our technical work into business language, executive engagement in our quarterly reviews increased from 20% active participation to over 80%. They weren&rsquo;t less interested before—they just couldn&rsquo;t connect our work to things they cared about.</p>
+<hr>
+<h3 id="2-show-don"><a href="#2-show-don" class="header-anchor"></a><strong>2. Show, Don&rsquo;t Tell</strong>
+</h3><p>Abstract explanations rarely change minds. Demonstrations and experiences do.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Create interactive simulations</strong> that let executives experience how changing data quality affects outcomes.</li>
+<li><strong>Run &ldquo;data science for executives&rdquo; workshops</strong> where leaders work through simplified versions of actual problems.</li>
+<li><strong>Develop before/after case studies</strong> that concretely show the impact of data science done right versus done wrong.</li>
+<li><strong>Use visualization to make abstract concepts tangible.</strong> Show them what &ldquo;dirty data&rdquo; actually looks like compared to clean data.</li>
+</ul>
+<p>We developed a half-day &ldquo;Data Science Reality&rdquo; workshop for one client&rsquo;s executive team. The most powerful exercise was having them clean a small dataset manually, then try to draw conclusions from it. The frustration they experienced firsthand did more to reset expectations than a dozen presentations could have.</p>
+<hr>
+<h3 id="3-start-small-win-big"><a href="#3-start-small-win-big" class="header-anchor"></a><strong>3. Start Small, Win Big</strong>
+</h3><p>Nothing educates like success. Instead of trying to correct all misconceptions at once, focus on delivering small wins that challenge one misconception at a time.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Identify a narrow problem</strong> with clear business value and good data availability.</li>
+<li><strong>Set explicit expectations about what data science can and cannot do</strong> for this specific problem.</li>
+<li><strong>Deliver results quickly</strong>, even if they&rsquo;re not perfect.</li>
+<li><strong>Document the entire process</strong>, not just the outcome, to show the reality of data work.</li>
+<li><strong>Explicitly connect the success to the business metrics leadership cares about.</strong></li>
+</ul>
+<p>When one retail executive insisted AI could automatically optimize their entire pricing strategy, we instead proposed a focused pilot on a single product category. We delivered a 4% margin improvement in eight weeks. This quick win earned us the credibility to have a more realistic conversation about what a full pricing optimization system would actually require.</p>
+<hr>
+<h3 id="4-make-them-partners-in-the-process"><a href="#4-make-them-partners-in-the-process" class="header-anchor"></a><strong>4. Make Them Partners in the Process</strong>
+</h3><p>Business leaders who participate in data science projects develop more realistic expectations than those who just receive the outputs.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Create a &ldquo;data science steering committee&rdquo;</strong> with business representation.</li>
+<li><strong>Involve business leaders in problem formulation and feature selection.</strong></li>
+<li><strong>Hold regular open houses</strong> where business teams can see data science work in progress.</li>
+<li><strong>Implement &ldquo;ride-along&rdquo; programs</strong> where executives spend a day with the data team.</li>
+<li><strong>Create joint accountability</strong> for both the technical and business aspects of projects.</li>
+</ul>
+<p>After implementing a steering committee at one organization, project completion rates increased by 60%. Not because the data science got better, but because business leaders developed a more realistic understanding of what was possible and what was required from their side.</p>
+<hr>
+<h3 id="5-quantify-the-full-cost-of-data-work"><a href="#5-quantify-the-full-cost-of-data-work" class="header-anchor"></a><strong>5. Quantify the Full Cost of Data Work</strong>
+</h3><p>Business leaders often undervalue data preparation because they don&rsquo;t see its costs. Make these costs explicit to reset expectations.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Track and report time spent on data preparation versus modeling.</strong></li>
+<li><strong>Quantify the cost of poor data quality</strong> in terms of delayed projects and missed opportunities.</li>
+<li><strong>Create &ldquo;data readiness assessments&rdquo;</strong> before starting projects to set realistic timelines.</li>
+<li><strong>Develop case studies comparing projects with good versus poor data foundations.</strong></li>
+</ul>
+<p>For one financial services client, we created a &ldquo;data readiness index&rdquo; that scored potential projects on a scale of 1-100 based on data availability, quality, and accessibility. Projects scoring below 60 were required to include a data preparation phase with its own budget and timeline. This simple tool reduced project failures by 40% by setting realistic expectations upfront.</p>
+<hr>
+<h2 id="implementing-an-executive-data-education-program"><a href="#implementing-an-executive-data-education-program" class="header-anchor"></a><strong>Implementing an Executive Data Education Program</strong>
+</h2><p>If you&rsquo;re serious about bridging the gap between business expectations and data science reality, an ad hoc approach won&rsquo;t cut it. You need a structured program to educate your leadership team.</p>
+<p>Here&rsquo;s a 90-day blueprint for implementing an executive data education program:</p>
+<h3 id="days-1-30-assessment-and-foundation"><a href="#days-1-30-assessment-and-foundation" class="header-anchor"></a><strong>Days 1-30: Assessment and Foundation</strong>
+</h3><ul>
+<li>Conduct anonymous surveys to identify specific misconceptions among your leadership team</li>
+<li>Develop a &ldquo;data science reality&rdquo; reference guide customized to your organization</li>
+<li>Create a data science project retrospective that honestly documents the full process, challenges, and timeline of a successful project</li>
+<li>Identify 2-3 quick win opportunities that can demonstrate data science value while educating on process</li>
+</ul>
+<h3 id="days-31-60-engagement-and-experience"><a href="#days-31-60-engagement-and-experience" class="header-anchor"></a><strong>Days 31-60: Engagement and Experience</strong>
+</h3><ul>
+<li>Run a half-day &ldquo;Data Science Reality&rdquo; workshop for executives</li>
+<li>Implement a data science steering committee with monthly meetings</li>
+<li>Launch at least one quick win project with heavy executive involvement</li>
+<li>Develop a data readiness assessment framework for future projects</li>
+<li>Create a shared dashboard that shows time allocation across data science activities</li>
+</ul>
+<h3 id="days-61-90-reinforcement-and-systems"><a href="#days-61-90-reinforcement-and-systems" class="header-anchor"></a><strong>Days 61-90: Reinforcement and Systems</strong>
+</h3><ul>
+<li>Document and share results from quick win projects, emphasizing process as much as outcomes</li>
+<li>Implement formal data readiness requirements for new project approvals</li>
+<li>Create a &ldquo;data science for executives&rdquo; resource center with case studies, guides, and tools</li>
+<li>Establish quarterly data science reviews that explicitly address expectations versus reality</li>
+<li>Develop metrics to track improvement in project success rates and implementation</li>
+</ul>
+<p>The goal isn&rsquo;t to turn business leaders into data scientists—it&rsquo;s to create enough shared understanding that you can work together effectively. When we implemented a similar program at one organization, project approval times decreased by 50%, implementation rates increased by 65%, and overall satisfaction with data science investments improved dramatically.</p>
+<hr>
+<h2 id="final-thoughts-building-a-culture-of-realistic-data-optimism"><a href="#final-thoughts-building-a-culture-of-realistic-data-optimism" class="header-anchor"></a><strong>Final Thoughts: Building a Culture of Realistic Data Optimism</strong>
+</h2><p>The goal of educating business leaders isn&rsquo;t to dampen their enthusiasm for data science—it&rsquo;s to channel that enthusiasm in productive directions.</p>
+<p>The most successful organizations I&rsquo;ve worked with maintain what I call &ldquo;realistic data optimism.&rdquo; They&rsquo;re genuinely excited about the potential of data science to transform their business, but they&rsquo;re clear-eyed about what it takes to realize that potential.</p>
+<p>They understand that:</p>
+<ul>
+<li>
+<p><strong>Data science is a process, not a product.</strong> It requires ongoing investment, iteration, and patience.</p>
+</li>
+<li>
+<p><strong>Data quality is as important as analytical sophistication.</strong> They invest accordingly.</p>
+</li>
+<li>
+<p><strong>Not every problem needs advanced AI.</strong> Sometimes simple analytics deliver more value faster.</p>
+</li>
+<li>
+<p><strong>Data scientists are partners, not magicians.</strong> They need business context, clear problems, and reasonable expectations.</p>
+</li>
+</ul>
+<p>The organizations that get the most value from data science aren&rsquo;t necessarily those with the biggest teams or the most advanced technology. They&rsquo;re the ones where business and data leaders share a common understanding of what&rsquo;s possible, what&rsquo;s required, and how to measure success.</p>
+<p>Because at the end of the day, the biggest competitive advantage isn&rsquo;t having better algorithms than everyone else—it&rsquo;s having better alignment between your data capabilities and your business strategy.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/data-science/">Data Science</a>
+        
+            <a href="/tags/leadership/">Leadership</a>
+        
+            <a href="/tags/business-strategy/">Business Strategy</a>
+        
+            <a href="/tags/communication/">Communication</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/datascience/businessstrategy/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">How to Align Data Science with Business Strategy (And Stop Being a Science Project Team)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/datascience/techdebt/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/datascience/8020rule/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 My Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

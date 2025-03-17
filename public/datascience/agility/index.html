@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Balancing rapid iteration with long-term sustainability">
+<title>How to Scale a Data Science Team Without Losing Agility</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/datascience/agility/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="How to Scale a Data Science Team Without Losing Agility">
+<meta property='og:description' content="Balancing rapid iteration with long-term sustainability">
+<meta property='og:url' content='http://192.168.100.63:1313/datascience/agility/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Datascience' /><meta property='article:tag' content='data science' /><meta property='article:tag' content='scaling' /><meta property='article:tag' content='agility' /><meta property='article:tag' content='team building' /><meta property='article:tag' content='leadership' /><meta property='article:published_time' content='2025-03-17T02:59:30&#43;00:00'/><meta property='article:modified_time' content='2025-03-17T02:59:30&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="How to Scale a Data Science Team Without Losing Agility">
+<meta name="twitter:description" content="Balancing rapid iteration with long-term sustainability"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji"> ^=^t^m</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/datascience/' >
+                
+                
+                
+                <span>Data Strategy</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/spanswick_resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    <aside class="sidebar right-sidebar sticky">
+        
+            
+                
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-hash" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <line x1="5" y1="9" x2="19" y2="9" />
+  <line x1="5" y1="15" x2="19" y2="15" />
+  <line x1="11" y1="4" x2="7" y2="20" />
+  <line x1="17" y1="4" x2="13" y2="20" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">Categories</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/categories/data-science/" class="font_size_7">
+                Data Science
+            </a>
+        
+            <a href="/categories/technology/" class="font_size_7">
+                Technology
+            </a>
+        
+            <a href="/categories/ai-trends/" class="font_size_3">
+                AI Trends
+            </a>
+        
+            <a href="/categories/energy/" class="font_size_2">
+                Energy
+            </a>
+        
+            <a href="/categories/self-hosting/" class="font_size_2">
+                Self-Hosting
+            </a>
+        
+            <a href="/categories/strategy/" class="font_size_2">
+                Strategy
+            </a>
+        
+            <a href="/categories/team-management/" class="font_size_2">
+                Team Management
+            </a>
+        
+            <a href="/categories/ai-developments/" class="font_size_1">
+                AI Developments
+            </a>
+        
+            <a href="/categories/business-leadership/" class="font_size_1">
+                Business Leadership
+            </a>
+        
+            <a href="/categories/business-strategy/" class="font_size_1">
+                Business Strategy
+            </a>
+        
+    </div>
+</section>
+
+            
+        
+            
+                <section class="widget tagCloud">
+    <div class="widget-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-tag" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11 3L20 12a1.5 1.5 0 0 1 0 2L14 20a1.5 1.5 0 0 1 -2 0L3 11v-4a4 4 0 0 1 4 -4h4" />
+  <circle cx="9" cy="9" r="2" />
+</svg>
+
+
+
+    </div>
+    <h2 class="widget-title section-title">Tags</h2>
+
+    <div class="tagCloud-tags">
+        
+            <a href="/tags/data-science/" class="font_size_7">
+                Data Science
+            </a>
+        
+            <a href="/tags/leadership/" class="font_size_5">
+                Leadership
+            </a>
+        
+            <a href="/tags/ai/" class="font_size_4">
+                AI
+            </a>
+        
+            <a href="/tags/self-hosting/" class="font_size_3">
+                Self-Hosting
+            </a>
+        
+            <a href="/tags/best-practices/" class="font_size_2">
+                Best Practices
+            </a>
+        
+            <a href="/tags/machine-learning/" class="font_size_2">
+                Machine Learning
+            </a>
+        
+            <a href="/tags/nextcloud/" class="font_size_2">
+                Nextcloud
+            </a>
+        
+            <a href="/tags/strategy/" class="font_size_2">
+                Strategy
+            </a>
+        
+            <a href="/tags/team-building/" class="font_size_2">
+                Team Building
+            </a>
+        
+            <a href="/tags/agility/" class="font_size_1">
+                Agility
+            </a>
+        
+    </div>
+</section>
+            
+        
+    </aside>
+
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/data-science/" >
+                Data Science
+            </a>
+        
+            <a href="/categories/team-management/" >
+                Team Management
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/datascience/agility/">How to Scale a Data Science Team Without Losing Agility</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Balancing rapid iteration with long-term sustainability
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 17, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    9 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="how-to-scale-a-data-science-team-without-losing-agility"><a href="#how-to-scale-a-data-science-team-without-losing-agility" class="header-anchor"></a><strong>How to Scale a Data Science Team Without Losing Agility</strong>
+</h1><p>I&rsquo;ve watched dozens of data science teams follow the same painful trajectory.</p>
+<p>They start small—three or four talented individuals moving fast, shipping models, and delivering insights that make the business take notice. Leadership gets excited. Budgets expand. Headcount doubles, then doubles again.</p>
+<p>And then, somehow, everything grinds to a halt.</p>
+<p>The team that once deployed models in weeks now takes months. Projects that used to flow seamlessly now get bogged down in meetings and documentation. The scrappy, high-impact group has transformed into a sluggish bureaucracy that spends more time managing processes than delivering value.</p>
+<p>I&rsquo;ve lived this story from both sides—first as a data scientist watching my nimble team calcify as it grew, then as a leader tasked with scaling teams without sacrificing their speed. What I&rsquo;ve learned is that <strong>scaling a data science function isn&rsquo;t just about adding people—it&rsquo;s about evolving your operating model while preserving your core strengths.</strong></p>
+<p>When we finally got this right at my previous company, we grew from a team of 5 to a function of 50+ while actually decreasing our time-to-value by 30%. The secret wasn&rsquo;t working harder—it was working differently.</p>
+<p>Let&rsquo;s talk about how to scale without stalling.</p>
+<hr>
+<h2 id="why-data-science-teams-lose-agility-as-they-scale"><a href="#why-data-science-teams-lose-agility-as-they-scale" class="header-anchor"></a><strong>Why Data Science Teams Lose Agility as They Scale</strong>
+</h2><p>Before we dive into solutions, let&rsquo;s understand why scaling so often kills agility in data science teams:</p>
+<h3 id="1-communication-overhead-explodes"><a href="#1-communication-overhead-explodes" class="header-anchor"></a><strong>1. Communication Overhead Explodes</strong>
+</h3><p>In a small team, everyone knows what everyone else is doing. Communication is constant and informal. As you add people, the number of potential connections between team members grows exponentially, not linearly.</p>
+<p>With 5 people, you have 10 potential one-to-one connections. With 15 people, that jumps to 105. With 50 people, you&rsquo;re looking at 1,225 possible connections. No wonder information stops flowing smoothly.</p>
+<h3 id="2-knowledge-becomes-siloed"><a href="#2-knowledge-becomes-siloed" class="header-anchor"></a><strong>2. Knowledge Becomes Siloed</strong>
+</h3><p>In the early days, everyone has context on most projects. As you scale, specialization naturally increases. The computer vision expert doesn&rsquo;t know what the NLP team is doing. The forecasting group is disconnected from the recommendation systems team.</p>
+<p>Without deliberate knowledge sharing, teams develop tunnel vision and lose the cross-pollination of ideas that drove early innovation.</p>
+<h3 id="3-technical-debt-compounds"><a href="#3-technical-debt-compounds" class="header-anchor"></a><strong>3. Technical Debt Compounds</strong>
+</h3><p>Small teams can get away with minimal documentation, ad-hoc processes, and quick-and-dirty solutions. As you scale, these shortcuts become increasingly costly. New team members struggle to understand existing systems. Maintenance burdens grow. Dependencies between projects create cascading failures.</p>
+<p>What was once acceptable technical debt becomes crippling.</p>
+<h3 id="4-decision-making-slows-down"><a href="#4-decision-making-slows-down" class="header-anchor"></a><strong>4. Decision-Making Slows Down</strong>
+</h3><p>Early-stage data science teams make decisions quickly, often based on gut feel and rapid experimentation. As the team grows, decision-making processes become more formal. More stakeholders get involved. Approvals multiply. Risk aversion increases.</p>
+<p>The ability to pivot quickly and try new approaches diminishes.</p>
+<h3 id="5-standardization-fights-innovation"><a href="#5-standardization-fights-innovation" class="header-anchor"></a><strong>5. Standardization Fights Innovation</strong>
+</h3><p>As teams scale, they naturally implement standards and best practices to maintain quality and consistency. But taken too far, standardization can stifle the creativity and experimentation that data science requires.</p>
+<p>When process becomes more important than outcomes, innovation suffers.</p>
+<p>I&rsquo;ve seen these dynamics play out repeatedly. One financial services client grew their data science team from 8 to 40 people in 18 months, only to see their model deployment rate drop by 60%. They were doing more work but delivering less value—the classic scaling trap.</p>
+<hr>
+<h2 id="the-blueprint-for-scaling-without-stalling"><a href="#the-blueprint-for-scaling-without-stalling" class="header-anchor"></a><strong>The Blueprint for Scaling Without Stalling</strong>
+</h2><p>Scaling a data science team without losing agility requires a deliberate approach that preserves what makes small teams effective while adding the structure needed to coordinate larger groups. Here&rsquo;s the blueprint that&rsquo;s worked for me:</p>
+<h3 id="1-implement-team-topologies-that-preserve-autonomy"><a href="#1-implement-team-topologies-that-preserve-autonomy" class="header-anchor"></a><strong>1. Implement Team Topologies That Preserve Autonomy</strong>
+</h3><p>The organizational structure of your data science function is the foundation for everything else. The wrong structure will fight against agility no matter what else you do.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Adopt a &ldquo;squad&rdquo; model with 4-7 people per team.</strong> Each squad should have end-to-end capabilities (data engineering, modeling, deployment) and clear ownership of specific domains or products.</li>
+<li><strong>Create communities of practice across squads.</strong> While squads own products or domains, communities of practice connect specialists across the organization (e.g., all NLP experts, all data engineers).</li>
+<li><strong>Establish clear interfaces between teams.</strong> Define how teams share data, models, and infrastructure to minimize coordination overhead.</li>
+<li><strong>Limit management layers.</strong> Each additional layer of management adds communication overhead and decision latency. Keep it flat.</li>
+</ul>
+<p>When we reorganized one team from a functional structure (separate data engineering, modeling, and deployment teams) to a squad model, their deployment frequency increased by 200% within three months. The end-to-end ownership eliminated handoffs and dramatically reduced coordination costs.</p>
+<hr>
+<h3 id="2-build-platforms-not-just-models"><a href="#2-build-platforms-not-just-models" class="header-anchor"></a><strong>2. Build Platforms, Not Just Models</strong>
+</h3><p>As data science teams scale, the leverage point shifts from individual models to the platforms that enable model development and deployment.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Invest in internal tooling that automates repetitive tasks.</strong> Build feature stores, model registries, and automated deployment pipelines.</li>
+<li><strong>Create self-service capabilities for common use cases.</strong> Enable business users to run analyses and get predictions without requiring data scientist involvement for every request.</li>
+<li><strong>Develop reusable components rather than one-off solutions.</strong> Build model architectures, data pipelines, and evaluation frameworks that can be reused across projects.</li>
+<li><strong>Implement &ldquo;paved roads&rdquo; for common workflows.</strong> Make it easier to do things the right way than to create custom solutions.</li>
+</ul>
+<p>One retail client invested six months in building a feature store and automated deployment pipeline before scaling their team. When they grew from 10 to 35 data scientists, their productivity per person actually increased by 40% because the platform eliminated so much repetitive work.</p>
+<hr>
+<h3 id="3-embrace-intentional-technical-debt"><a href="#3-embrace-intentional-technical-debt" class="header-anchor"></a><strong>3. Embrace Intentional Technical Debt</strong>
+</h3><p>The goal isn&rsquo;t to eliminate technical debt—it&rsquo;s to manage it strategically. Some technical debt is worth taking on for speed; other types will cripple you as you scale.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Distinguish between &ldquo;deliberate&rdquo; and &ldquo;reckless&rdquo; technical debt.</strong> Deliberate debt is a conscious tradeoff for speed. Reckless debt comes from poor practices.</li>
+<li><strong>Create a technical debt registry.</strong> Track known issues, their impact, and the estimated cost to fix them.</li>
+<li><strong>Allocate 20% of capacity to debt reduction.</strong> Make paying down high-impact debt a regular part of your workflow, not a special project.</li>
+<li><strong>Establish &ldquo;quality gates&rdquo; for different project phases.</strong> Prototypes can have lower quality standards than production systems.</li>
+</ul>
+<p>When we implemented a technical debt registry and dedicated 20% of sprint capacity to debt reduction at one organization, we saw a 45% decrease in production incidents within six months. More importantly, the team&rsquo;s velocity on new features increased because they weren&rsquo;t constantly fighting fires.</p>
+<hr>
+<h3 id="4-implement-tiered-governance-based-on-risk"><a href="#4-implement-tiered-governance-based-on-risk" class="header-anchor"></a><strong>4. Implement Tiered Governance Based on Risk</strong>
+</h3><p>Not all data science work needs the same level of oversight. Applying heavy governance to low-risk projects kills agility; applying light governance to high-risk projects creates unacceptable risks.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Create a risk assessment framework</strong> that considers factors like business impact, regulatory requirements, and technical complexity.</li>
+<li><strong>Implement tiered governance based on risk level.</strong> Low-risk projects should have minimal oversight; high-risk projects need more rigorous controls.</li>
+<li><strong>Automate compliance where possible.</strong> Build guardrails into your platforms rather than relying on manual checks.</li>
+<li><strong>Push decision-making authority as close to the work as possible.</strong> Teams should have clear autonomy within defined guardrails.</li>
+</ul>
+<p>One healthcare client implemented a three-tier governance model: Tier 1 (experimental/low risk) had minimal oversight, Tier 2 (production/medium risk) had standard controls, and Tier 3 (critical/high risk) had rigorous governance. This approach reduced approval times for low-risk projects by 70% while actually strengthening controls for high-risk work.</p>
+<hr>
+<h3 id="5-create-knowledge-sharing-systems-that-scale"><a href="#5-create-knowledge-sharing-systems-that-scale" class="header-anchor"></a><strong>5. Create Knowledge Sharing Systems That Scale</strong>
+</h3><p>As teams grow, knowledge sharing can&rsquo;t rely on informal conversations. You need systems that scale.</p>
+<p><strong>Practical implementation:</strong></p>
+<ul>
+<li><strong>Implement a central knowledge repository</strong> with standardized documentation for models, data sources, and infrastructure.</li>
+<li><strong>Create &ldquo;learning loops&rdquo; through regular retrospectives</strong> and knowledge-sharing sessions.</li>
+<li><strong>Develop an onboarding curriculum</strong> that gets new team members productive quickly.</li>
+<li><strong>Use internal open source practices</strong> like pull requests and code reviews to spread knowledge through the work itself.</li>
+<li><strong>Rotate people between teams periodically</strong> to cross-pollinate ideas and prevent silos.</li>
+</ul>
+<p>After implementing a comprehensive knowledge management system, one financial services team reduced onboarding time for new data scientists from 12 weeks to 4 weeks. The system didn&rsquo;t just document what they knew—it changed how they worked together.</p>
+<hr>
+<h2 id="the-scaling-journey-what-to-expect-at-each-stage"><a href="#the-scaling-journey-what-to-expect-at-each-stage" class="header-anchor"></a><strong>The Scaling Journey: What to Expect at Each Stage</strong>
+</h2><p>Scaling a data science team isn&rsquo;t a single transition—it&rsquo;s a series of evolutions, each with its own challenges and opportunities. Here&rsquo;s what to expect at each stage:</p>
+<h3 id="stage-1-the-founding-team-3-8-people"><a href="#stage-1-the-founding-team-3-8-people" class="header-anchor"></a><strong>Stage 1: The Founding Team (3-8 people)</strong>
+</h3><ul>
+<li><strong>Focus on:</strong> Proving value through quick wins</li>
+<li><strong>Key challenge:</strong> Building credibility with limited resources</li>
+<li><strong>Critical capability:</strong> End-to-end delivery by generalists</li>
+</ul>
+<h3 id="stage-2-the-growth-team-8-20-people"><a href="#stage-2-the-growth-team-8-20-people" class="header-anchor"></a><strong>Stage 2: The Growth Team (8-20 people)</strong>
+</h3><ul>
+<li><strong>Focus on:</strong> Creating repeatable processes and foundational infrastructure</li>
+<li><strong>Key challenge:</strong> Maintaining speed while adding necessary structure</li>
+<li><strong>Critical capability:</strong> Knowledge sharing and technical debt management</li>
+</ul>
+<h3 id="stage-3-the-scaled-function-20-50-people"><a href="#stage-3-the-scaled-function-20-50-people" class="header-anchor"></a><strong>Stage 3: The Scaled Function (20-50+ people)</strong>
+</h3><ul>
+<li><strong>Focus on:</strong> Maximizing leverage through platforms and specialization</li>
+<li><strong>Key challenge:</strong> Coordinating multiple teams without creating silos</li>
+<li><strong>Critical capability:</strong> Governance that enables rather than restricts</li>
+</ul>
+<p>Each stage requires different leadership approaches, team structures, and processes. The mistake many organizations make is trying to skip stages or applying Stage 3 solutions to Stage 1 problems.</p>
+<p>When I took over a data science function that had grown chaotically from 5 to 25 people, we actually had to take a step back and implement Stage 2 capabilities before we could successfully scale further. It felt like slowing down, but it ultimately accelerated our growth.</p>
+<hr>
+<h2 id="measuring-success-agility-metrics-for-scaled-teams"><a href="#measuring-success-agility-metrics-for-scaled-teams" class="header-anchor"></a><strong>Measuring Success: Agility Metrics for Scaled Teams</strong>
+</h2><p>How do you know if you&rsquo;re successfully maintaining agility as you scale? These metrics have proven valuable:</p>
+<ul>
+<li><strong>Time from idea to production:</strong> How long does it take to go from concept to deployed model? This should remain stable or decrease as you scale.</li>
+<li><strong>Deployment frequency:</strong> How often are you shipping new models or features? Higher is generally better.</li>
+<li><strong>Onboarding time to productivity:</strong> How quickly can new team members become productive contributors? This tests your knowledge sharing and platform capabilities.</li>
+<li><strong>Maintenance overhead percentage:</strong> What portion of your capacity goes to maintaining existing systems versus building new capabilities? This should remain manageable as you scale.</li>
+<li><strong>Cross-team collaboration rate:</strong> How often do people from different teams work together on projects? This measures your success in preventing silos.</li>
+</ul>
+<p>One media company I worked with tracked these metrics religiously as they scaled from 12 to 60 data scientists over two years. The discipline paid off—they maintained their initial time-to-production while tripling their deployment frequency, a clear sign that their scaling approach was working.</p>
+<hr>
+<h2 id="final-thoughts-the-paradox-of-scaling"><a href="#final-thoughts-the-paradox-of-scaling" class="header-anchor"></a><strong>Final Thoughts: The Paradox of Scaling</strong>
+</h2><p>The paradox of scaling data science teams is that the very things that make small teams effective—minimal process, generalist roles, informal communication—become liabilities as you grow. Yet simply adding bureaucracy isn&rsquo;t the answer.</p>
+<p>The teams that scale successfully find a middle path. They:</p>
+<ul>
+<li>
+<p><strong>Add structure that enables rather than constrains.</strong> Their processes create leverage, not overhead.</p>
+</li>
+<li>
+<p><strong>Build platforms that amplify individual contributions.</strong> They invest in tools that make everyone more productive.</p>
+</li>
+<li>
+<p><strong>Create team structures that preserve autonomy and purpose.</strong> They organize for ownership and accountability, not control.</p>
+</li>
+<li>
+<p><strong>Manage technical debt strategically.</strong> They distinguish between debt that speeds them up and debt that slows them down.</p>
+</li>
+<li>
+<p><strong>Evolve their practices as they grow.</strong> They recognize that what works at 5 people won&rsquo;t work at 50.</p>
+</li>
+</ul>
+<p>The most successful data science leaders I&rsquo;ve worked with understand that scaling isn&rsquo;t about preserving the exact practices that made small teams successful. It&rsquo;s about preserving the principles—speed, ownership, experimentation, impact—while evolving the practices to work at scale.</p>
+<p>Because at the end of the day, the goal isn&rsquo;t to be a perfectly agile small team or a perfectly structured large organization. The goal is to deliver maximum value through data science, at whatever scale your business requires.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/data-science/">Data Science</a>
+        
+            <a href="/tags/scaling/">Scaling</a>
+        
+            <a href="/tags/agility/">Agility</a>
+        
+            <a href="/tags/team-building/">Team Building</a>
+        
+            <a href="/tags/leadership/">Leadership</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/datascience/leaders/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">What Business Leaders Get Wrong About Data Science (And How to Educate Them)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/datascience/businessstrategy/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">How to Align Data Science with Business Strategy (And Stop Being a Science Project Team)</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/datascience/techdebt/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/datascience/8020rule/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 My Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

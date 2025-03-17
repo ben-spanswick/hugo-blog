@@ -7,7 +7,7 @@ languageCode = "en-us"
 enableEmoji = true
 
 [params]
-  mainSections = ["datascience", "musings", "projects", "about"]  # Reflects actual content folders
+  mainSections = ["datascience", "musings", "projects", "about"]
   featuredImageField = "image"
   rssFullContent = true
   favicon = "/favicon.ico"
@@ -23,13 +23,13 @@ enableEmoji = true
 
   [params.sidebar]
     compact = false
-    emoji = "💾"
+    emoji = " ^=^t^m"
     subtitle = "Exploring Tech, Homelabs, & Self-Hosting"
 
     [params.sidebar.avatar]
       enabled = true
       local = false
-      src = "/img/headshot.png"  # Updated path (must be inside /static/)
+      src = "/img/headshot.png"  # Ensure image exists in /static/img/
 
   [params.article]
     headingAnchor = true
@@ -59,25 +59,27 @@ enableEmoji = true
   [params.imageProcessing.content]
     enabled = true
 
-  # Widgets for Sidebar
-  [params.widgets]
-    homepage = []
-    page = []
+# Enable widgets for search, categories, and tag cloud in sidebar and homepage
+[params.widgets]
+  homepage = [
+    { type = "search" },
+    { type = "categories", params = { limit = 10 } },
+    { type = "tag-cloud", params = { limit = 10 } }
+  ]
+  page = [
+    { type = "search" },
+    { type = "categories", params = { limit = 10 } },
+    { type = "tag-cloud", params = { limit = 10 } }
+  ]
 
-  [[params.widgets.sidebar]]
-    type = "search"
-
-  [[params.widgets.sidebar]]
-    type = "categories"
-
-  [[params.widgets.sidebar]]
-    type = "tags"
-
-[pagination]
-  pagerSize = 5
+# Enable search indexing
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
 
 [menu]
-
   [[menu.main]]
     name = "Home"
     url = "/"
@@ -105,5 +107,5 @@ enableEmoji = true
 
   [[menu.main]]
     name = "Resume"
-    url = "/files/Spanswick_Resume2025.pdf"
+    url = "/Spanswick_Resume2025.pdf"
     weight = 6

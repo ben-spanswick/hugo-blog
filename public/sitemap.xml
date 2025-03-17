@@ -2,31 +2,85 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://192.168.100.63:1313/categories/</loc>
+    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/collaboration/</loc>
+    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/data-science/</loc>
+    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/data-science/</loc>
+    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/</loc>
+    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/leadership/</loc>
+    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/</loc>
+    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/</loc>
+    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/team-culture/</loc>
+    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/team-management/</loc>
+    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/genius/</loc>
+    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/agility/</loc>
+    <lastmod>2025-03-17T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/agility/</loc>
+    <lastmod>2025-03-17T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/scaling/</loc>
+    <lastmod>2025-03-17T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/team-building/</loc>
+    <lastmod>2025-03-17T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/business-leadership/</loc>
+    <lastmod>2025-03-17T02:44:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/business-strategy/</loc>
+    <lastmod>2025-03-17T02:44:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/communication/</loc>
+    <lastmod>2025-03-17T02:44:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/leaders/</loc>
+    <lastmod>2025-03-17T02:44:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/business-alignment/</loc>
+    <lastmod>2025-03-17T02:36:40+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/business-strategy/</loc>
+    <lastmod>2025-03-17T02:36:40+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/businessstrategy/</loc>
+    <lastmod>2025-03-17T02:36:40+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/strategy/</loc>
+    <lastmod>2025-03-17T02:36:40+00:00</lastmod>
+  </url><url>
     <loc>http://192.168.100.63:1313/tags/best-practices/</loc>
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/business-impact/</loc>
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/categories/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/categories/data-science/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/tags/data-science/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/datascience/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/categories/engineering-leadership/</loc>
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/datascience/techdebt/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/</loc>
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/prioritization/</loc>
@@ -36,9 +90,6 @@
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/categories/strategy/</loc>
-    <lastmod>2025-03-16T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/tags/</loc>
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/tech-debt/</loc>
@@ -128,9 +179,6 @@
     <loc>http://192.168.100.63:1313/tags/hugo/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/tags/leadership/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/tags/machine-learning/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -179,9 +227,6 @@
     <loc>http://192.168.100.63:1313/projects/hugo-blog-setup/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/tags/strategy/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/categories/sustainability/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -189,9 +234,6 @@
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/tandoor/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/tags/team-building/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/categories/tech/</loc>

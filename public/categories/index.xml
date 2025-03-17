@@ -6,12 +6,36 @@
         <description>Recent content in Categories on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 17 Mar 2025 03:00:30 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Data Science</title>
         <link>http://192.168.100.63:1313/categories/data-science/</link>
-        <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+        <pubDate>Mon, 17 Mar 2025 03:00:30 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/categories/data-science/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Team Management</title>
+        <link>http://192.168.100.63:1313/categories/team-management/</link>
+        <pubDate>Mon, 17 Mar 2025 03:00:30 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/team-management/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Business Leadership</title>
+        <link>http://192.168.100.63:1313/categories/business-leadership/</link>
+        <pubDate>Mon, 17 Mar 2025 02:44:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/business-leadership/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Business Strategy</title>
+        <link>http://192.168.100.63:1313/categories/business-strategy/</link>
+        <pubDate>Mon, 17 Mar 2025 02:36:40 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/business-strategy/</guid>
         <description></description>
         </item>
         <item>
