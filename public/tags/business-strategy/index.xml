@@ -1,182 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Business Strategy on My Blog</title>
-        <link>http://192.168.100.63:1313/tags/business-strategy/</link>
-        <description>Recent content in Business Strategy on My Blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Mon, 17 Mar 2025 02:44:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/business-strategy/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>What Business Leaders Get Wrong About Data Science (And How to Educate Them)</title>
-        <link>http://192.168.100.63:1313/datascience/leaders/</link>
-        <pubDate>Mon, 17 Mar 2025 02:44:00 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/datascience/leaders/</guid>
-        <description>&lt;h1 id=&#34;what-business-leaders-get-wrong-about-data-science-and-how-to-educate-them&#34;&gt;&lt;a href=&#34;#what-business-leaders-get-wrong-about-data-science-and-how-to-educate-them&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;What Business Leaders Get Wrong About Data Science (And How to Educate Them)&lt;/strong&gt;
-&lt;/h1&gt;&lt;p&gt;I&amp;rsquo;ve sat through hundreds of meetings where business leaders talk about data science like it&amp;rsquo;s magic.&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;Can&amp;rsquo;t we just use AI to predict which customers will churn?&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;Let&amp;rsquo;s build a model that tells us exactly what products to develop next.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;I heard Company X increased revenue by 40% with machine learning—we should do that.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;The enthusiasm is great. The understanding? Not so much.&lt;/p&gt;
-&lt;p&gt;After a decade of leading data teams and advising executives, I&amp;rsquo;ve found that &lt;strong&gt;the gap between what business leaders expect from data science and what it can actually deliver is enormous&lt;/strong&gt;. This misalignment leads to wasted investment, frustrated teams, and missed opportunities for genuine impact.&lt;/p&gt;
-&lt;p&gt;The problem isn&amp;rsquo;t that business leaders are wrong to be excited about data science—they&amp;rsquo;re absolutely right to see its potential. The problem is that &lt;strong&gt;without a realistic understanding of how data science actually works, they set impossible expectations and measure success by the wrong metrics.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s explore what business leaders consistently get wrong about data science—and how to educate them without crushing their enthusiasm.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;the-five-biggest-misconceptions-business-leaders-have-about-data-science&#34;&gt;&lt;a href=&#34;#the-five-biggest-misconceptions-business-leaders-have-about-data-science&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The Five Biggest Misconceptions Business Leaders Have About Data Science&lt;/strong&gt;
-&lt;/h2&gt;&lt;h3 id=&#34;1&#34;&gt;&lt;a href=&#34;#1&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;1. &amp;ldquo;Data Science Is Primarily About Algorithms and AI&amp;rdquo;&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Most business leaders think data science is all about sophisticated algorithms and cutting-edge AI. In reality, &lt;strong&gt;data science is 80% data preparation and only 20% actual modeling&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;The misconception leads to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Underinvestment in data infrastructure and quality&lt;/li&gt;
-&lt;li&gt;Unrealistic timelines that don&amp;rsquo;t account for data preparation&lt;/li&gt;
-&lt;li&gt;Frustration when teams spend months on &amp;ldquo;boring&amp;rdquo; data work instead of building exciting algorithms&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The reality:&lt;/strong&gt; The most advanced algorithm in the world is worthless without clean, relevant data. One healthcare client spent $2M on an AI initiative before realizing their data was too fragmented and inconsistent to support it. They would have been better off investing that first million in data governance and integration.&lt;/p&gt;
-&lt;h3 id=&#34;2&#34;&gt;&lt;a href=&#34;#2&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;2. &amp;ldquo;More Data Always Means Better Results&amp;rdquo;&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;There&amp;rsquo;s a persistent belief that the path to better insights is simply collecting more data. This &amp;ldquo;data hoarding&amp;rdquo; mentality leads to massive data lakes filled with information that&amp;rsquo;s never used.&lt;/p&gt;
-&lt;p&gt;The misconception leads to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Expensive data collection efforts with no clear purpose&lt;/li&gt;
-&lt;li&gt;Analysis paralysis as teams drown in irrelevant information&lt;/li&gt;
-&lt;li&gt;Privacy and security risks from storing unnecessary data&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The reality:&lt;/strong&gt; What matters is having the right data, not the most data. When we audited one retail client&amp;rsquo;s analytics infrastructure, we found they were storing over 200 variables per customer but only using 12 in their actual decision-making. The storage and management costs for the unused data exceeded $500K annually.&lt;/p&gt;
-&lt;h3 id=&#34;3&#34;&gt;&lt;a href=&#34;#3&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;3. &amp;ldquo;Data Science Projects Deliver Immediate ROI&amp;rdquo;&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Many executives expect data science initiatives to deliver clear, immediate returns like other technology investments. They become impatient when projects take time to show value.&lt;/p&gt;
-&lt;p&gt;The misconception leads to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Premature cancellation of promising projects&lt;/li&gt;
-&lt;li&gt;Pressure to show results that leads to bad methodological choices&lt;/li&gt;
-&lt;li&gt;Reluctance to invest in foundational capabilities&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The reality:&lt;/strong&gt; Data science is often more like R&amp;amp;D than IT implementation. The most valuable projects frequently require experimentation, iteration, and capability building before delivering returns. When we implemented a customer lifetime value model for a subscription business, it took three quarters before we saw the impact on retention—but that impact was eventually worth $14M annually.&lt;/p&gt;
-&lt;h3 id=&#34;4&#34;&gt;&lt;a href=&#34;#4&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;4. &amp;ldquo;A Good Data Scientist Can Solve Any Problem&amp;rdquo;&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;There&amp;rsquo;s a tendency to view data scientists as universal problem solvers who can tackle any business challenge with enough data. This leads to unrealistic expectations about what a single data scientist or small team can accomplish.&lt;/p&gt;
-&lt;p&gt;The misconception leads to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Hiring generalists when specialists are needed&lt;/li&gt;
-&lt;li&gt;Overloading data scientists with too many disparate projects&lt;/li&gt;
-&lt;li&gt;Disappointment when data scientists can&amp;rsquo;t deliver miracles&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The reality:&lt;/strong&gt; Data science is a broad field with many specializations. A data scientist who excels at building recommendation systems might struggle with time series forecasting. One who&amp;rsquo;s brilliant at statistical analysis might have limited experience with deep learning. When we restructured one client&amp;rsquo;s data team around domains of expertise rather than treating everyone as interchangeable, their project success rate increased from 35% to over 70%.&lt;/p&gt;
-&lt;h3 id=&#34;5&#34;&gt;&lt;a href=&#34;#5&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;5. &amp;ldquo;Data Science Will Give Us The Answer&amp;rdquo;&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Perhaps the most dangerous misconception is that data science provides definitive answers rather than probabilistic insights. Business leaders often want certainty, not probabilities.&lt;/p&gt;
-&lt;p&gt;The misconception leads to:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Overconfidence in model predictions&lt;/li&gt;
-&lt;li&gt;Resistance to probabilistic recommendations&lt;/li&gt;
-&lt;li&gt;Disappointment when &amp;ldquo;the answer&amp;rdquo; turns out to be wrong&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;The reality:&lt;/strong&gt; Data science deals in probabilities, not certainties. It can tell you that a customer has a 70% likelihood of churning, not that they will definitely churn. It can identify factors correlated with success, not guarantee it. When we implemented a risk model for a financial services client, the executives initially rejected it because it couldn&amp;rsquo;t predict with certainty which loans would default—missing the point that improving probability estimates by even 10% was worth millions.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;how-to-educate-business-leaders-without-losing-their-support&#34;&gt;&lt;a href=&#34;#how-to-educate-business-leaders-without-losing-their-support&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;How to Educate Business Leaders (Without Losing Their Support)&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;Correcting these misconceptions is delicate work. Push too hard against executives&amp;rsquo; enthusiasm, and you risk losing their support entirely. Don&amp;rsquo;t push hard enough, and you&amp;rsquo;re setting everyone up for disappointment. Here&amp;rsquo;s how to thread that needle:&lt;/p&gt;
-&lt;h3 id=&#34;1-speak-their-language-not-yours&#34;&gt;&lt;a href=&#34;#1-speak-their-language-not-yours&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;1. Speak Their Language, Not Yours&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;The biggest mistake data professionals make when educating business leaders is drowning them in technical jargon. This doesn&amp;rsquo;t make you look smart—it makes you look out of touch.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Practical implementation:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Translate everything into business outcomes.&lt;/strong&gt; Don&amp;rsquo;t talk about model accuracy; talk about reduced customer acquisition costs or increased retention rates.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Use analogies from business domains they understand.&lt;/strong&gt; Compare data preparation to manufacturing quality control. Compare model development to product R&amp;amp;D.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create a simple one-page reference guide&lt;/strong&gt; that translates common data science terms into business concepts. Share it before important meetings.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When I started translating our technical work into business language, executive engagement in our quarterly reviews increased from 20% active participation to over 80%. They weren&amp;rsquo;t less interested before—they just couldn&amp;rsquo;t connect our work to things they cared about.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;2-show-don&#34;&gt;&lt;a href=&#34;#2-show-don&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;2. Show, Don&amp;rsquo;t Tell&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Abstract explanations rarely change minds. Demonstrations and experiences do.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Practical implementation:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create interactive simulations&lt;/strong&gt; that let executives experience how changing data quality affects outcomes.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Run &amp;ldquo;data science for executives&amp;rdquo; workshops&lt;/strong&gt; where leaders work through simplified versions of actual problems.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Develop before/after case studies&lt;/strong&gt; that concretely show the impact of data science done right versus done wrong.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Use visualization to make abstract concepts tangible.&lt;/strong&gt; Show them what &amp;ldquo;dirty data&amp;rdquo; actually looks like compared to clean data.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We developed a half-day &amp;ldquo;Data Science Reality&amp;rdquo; workshop for one client&amp;rsquo;s executive team. The most powerful exercise was having them clean a small dataset manually, then try to draw conclusions from it. The frustration they experienced firsthand did more to reset expectations than a dozen presentations could have.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;3-start-small-win-big&#34;&gt;&lt;a href=&#34;#3-start-small-win-big&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;3. Start Small, Win Big&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Nothing educates like success. Instead of trying to correct all misconceptions at once, focus on delivering small wins that challenge one misconception at a time.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Practical implementation:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Identify a narrow problem&lt;/strong&gt; with clear business value and good data availability.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Set explicit expectations about what data science can and cannot do&lt;/strong&gt; for this specific problem.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Deliver results quickly&lt;/strong&gt;, even if they&amp;rsquo;re not perfect.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Document the entire process&lt;/strong&gt;, not just the outcome, to show the reality of data work.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Explicitly connect the success to the business metrics leadership cares about.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;When one retail executive insisted AI could automatically optimize their entire pricing strategy, we instead proposed a focused pilot on a single product category. We delivered a 4% margin improvement in eight weeks. This quick win earned us the credibility to have a more realistic conversation about what a full pricing optimization system would actually require.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;4-make-them-partners-in-the-process&#34;&gt;&lt;a href=&#34;#4-make-them-partners-in-the-process&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;4. Make Them Partners in the Process&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Business leaders who participate in data science projects develop more realistic expectations than those who just receive the outputs.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Practical implementation:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Create a &amp;ldquo;data science steering committee&amp;rdquo;&lt;/strong&gt; with business representation.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Involve business leaders in problem formulation and feature selection.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hold regular open houses&lt;/strong&gt; where business teams can see data science work in progress.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Implement &amp;ldquo;ride-along&amp;rdquo; programs&lt;/strong&gt; where executives spend a day with the data team.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create joint accountability&lt;/strong&gt; for both the technical and business aspects of projects.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;After implementing a steering committee at one organization, project completion rates increased by 60%. Not because the data science got better, but because business leaders developed a more realistic understanding of what was possible and what was required from their side.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h3 id=&#34;5-quantify-the-full-cost-of-data-work&#34;&gt;&lt;a href=&#34;#5-quantify-the-full-cost-of-data-work&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;5. Quantify the Full Cost of Data Work&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Business leaders often undervalue data preparation because they don&amp;rsquo;t see its costs. Make these costs explicit to reset expectations.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Practical implementation:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Track and report time spent on data preparation versus modeling.&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Quantify the cost of poor data quality&lt;/strong&gt; in terms of delayed projects and missed opportunities.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Create &amp;ldquo;data readiness assessments&amp;rdquo;&lt;/strong&gt; before starting projects to set realistic timelines.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Develop case studies comparing projects with good versus poor data foundations.&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For one financial services client, we created a &amp;ldquo;data readiness index&amp;rdquo; that scored potential projects on a scale of 1-100 based on data availability, quality, and accessibility. Projects scoring below 60 were required to include a data preparation phase with its own budget and timeline. This simple tool reduced project failures by 40% by setting realistic expectations upfront.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;implementing-an-executive-data-education-program&#34;&gt;&lt;a href=&#34;#implementing-an-executive-data-education-program&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Implementing an Executive Data Education Program&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;If you&amp;rsquo;re serious about bridging the gap between business expectations and data science reality, an ad hoc approach won&amp;rsquo;t cut it. You need a structured program to educate your leadership team.&lt;/p&gt;
-&lt;p&gt;Here&amp;rsquo;s a 90-day blueprint for implementing an executive data education program:&lt;/p&gt;
-&lt;h3 id=&#34;days-1-30-assessment-and-foundation&#34;&gt;&lt;a href=&#34;#days-1-30-assessment-and-foundation&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Days 1-30: Assessment and Foundation&lt;/strong&gt;
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Conduct anonymous surveys to identify specific misconceptions among your leadership team&lt;/li&gt;
-&lt;li&gt;Develop a &amp;ldquo;data science reality&amp;rdquo; reference guide customized to your organization&lt;/li&gt;
-&lt;li&gt;Create a data science project retrospective that honestly documents the full process, challenges, and timeline of a successful project&lt;/li&gt;
-&lt;li&gt;Identify 2-3 quick win opportunities that can demonstrate data science value while educating on process&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;days-31-60-engagement-and-experience&#34;&gt;&lt;a href=&#34;#days-31-60-engagement-and-experience&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Days 31-60: Engagement and Experience&lt;/strong&gt;
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Run a half-day &amp;ldquo;Data Science Reality&amp;rdquo; workshop for executives&lt;/li&gt;
-&lt;li&gt;Implement a data science steering committee with monthly meetings&lt;/li&gt;
-&lt;li&gt;Launch at least one quick win project with heavy executive involvement&lt;/li&gt;
-&lt;li&gt;Develop a data readiness assessment framework for future projects&lt;/li&gt;
-&lt;li&gt;Create a shared dashboard that shows time allocation across data science activities&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;days-61-90-reinforcement-and-systems&#34;&gt;&lt;a href=&#34;#days-61-90-reinforcement-and-systems&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Days 61-90: Reinforcement and Systems&lt;/strong&gt;
-&lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;Document and share results from quick win projects, emphasizing process as much as outcomes&lt;/li&gt;
-&lt;li&gt;Implement formal data readiness requirements for new project approvals&lt;/li&gt;
-&lt;li&gt;Create a &amp;ldquo;data science for executives&amp;rdquo; resource center with case studies, guides, and tools&lt;/li&gt;
-&lt;li&gt;Establish quarterly data science reviews that explicitly address expectations versus reality&lt;/li&gt;
-&lt;li&gt;Develop metrics to track improvement in project success rates and implementation&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The goal isn&amp;rsquo;t to turn business leaders into data scientists—it&amp;rsquo;s to create enough shared understanding that you can work together effectively. When we implemented a similar program at one organization, project approval times decreased by 50%, implementation rates increased by 65%, and overall satisfaction with data science investments improved dramatically.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;final-thoughts-building-a-culture-of-realistic-data-optimism&#34;&gt;&lt;a href=&#34;#final-thoughts-building-a-culture-of-realistic-data-optimism&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Final Thoughts: Building a Culture of Realistic Data Optimism&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;The goal of educating business leaders isn&amp;rsquo;t to dampen their enthusiasm for data science—it&amp;rsquo;s to channel that enthusiasm in productive directions.&lt;/p&gt;
-&lt;p&gt;The most successful organizations I&amp;rsquo;ve worked with maintain what I call &amp;ldquo;realistic data optimism.&amp;rdquo; They&amp;rsquo;re genuinely excited about the potential of data science to transform their business, but they&amp;rsquo;re clear-eyed about what it takes to realize that potential.&lt;/p&gt;
-&lt;p&gt;They understand that:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Data science is a process, not a product.&lt;/strong&gt; It requires ongoing investment, iteration, and patience.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Data quality is as important as analytical sophistication.&lt;/strong&gt; They invest accordingly.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Not every problem needs advanced AI.&lt;/strong&gt; Sometimes simple analytics deliver more value faster.&lt;/p&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Data scientists are partners, not magicians.&lt;/strong&gt; They need business context, clear problems, and reasonable expectations.&lt;/p&gt;
-&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The organizations that get the most value from data science aren&amp;rsquo;t necessarily those with the biggest teams or the most advanced technology. They&amp;rsquo;re the ones where business and data leaders share a common understanding of what&amp;rsquo;s possible, what&amp;rsquo;s required, and how to measure success.&lt;/p&gt;
-&lt;p&gt;Because at the end of the day, the biggest competitive advantage isn&amp;rsquo;t having better algorithms than everyone else—it&amp;rsquo;s having better alignment between your data capabilities and your business strategy.&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>Business Strategy on My Blog</title>
+    <link>http://192.168.100.63:1313/tags/business-strategy/</link>
+    <description>Recent content in Business Strategy on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 17 Mar 2025 02:44:00 +0000</lastBuildDate>
+    <atom:link href="http://192.168.100.63:1313/tags/business-strategy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What Business Leaders Get Wrong About Data Science (And How to Educate Them)</title>
+      <link>http://192.168.100.63:1313/datascience/leaders/</link>
+      <pubDate>Mon, 17 Mar 2025 02:44:00 +0000</pubDate>
+      <guid>http://192.168.100.63:1313/datascience/leaders/</guid>
+      <description>&lt;h1 id=&#34;what-business-leaders-get-wrong-about-data-science-and-how-to-educate-them&#34;&gt;&lt;strong&gt;What Business Leaders Get Wrong About Data Science (And How to Educate Them)&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;p&gt;I&amp;rsquo;ve sat through hundreds of meetings where business leaders talk about data science like it&amp;rsquo;s magic.&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Can&amp;rsquo;t we just use AI to predict which customers will churn?&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;Let&amp;rsquo;s build a model that tells us exactly what products to develop next.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;&amp;ldquo;I heard Company X increased revenue by 40% with machine learning—we should do that.&amp;rdquo;&lt;/p&gt;&#xA;&lt;p&gt;The enthusiasm is great. The understanding? Not so much.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

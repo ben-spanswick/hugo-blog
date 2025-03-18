@@ -1,38 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-    <channel>
-        <title>Microgrids on My Blog</title>
-        <link>http://192.168.100.63:1313/tags/microgrids/</link>
-        <description>Recent content in Microgrids on My Blog</description>
-        <generator>Hugo -- gohugo.io</generator>
-        <language>en-us</language>
-        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/microgrids/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy</title>
-        <link>http://192.168.100.63:1313/musings/seu-risk-analysis/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/musings/seu-risk-analysis/</guid>
-        <description>&lt;h2 id=&#34;ann-arbors-big-grid-experiment-a-glimpse-into-the-future-of-energy&#34;&gt;&lt;a href=&#34;#ann-arbors-big-grid-experiment-a-glimpse-into-the-future-of-energy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy
-&lt;/h2&gt;&lt;p&gt;If you work in energy like I do, the news coming out of Ann Arbor is &lt;strong&gt;pretty fascinating&lt;/strong&gt;—they&amp;rsquo;re building their own &lt;strong&gt;Sustainable Energy Utility (SEU)&lt;/strong&gt;. Instead of relying entirely on the traditional grid, they&amp;rsquo;re developing a localized system that uses &lt;strong&gt;solar, battery storage, and even geothermal&lt;/strong&gt; to power the city. The idea? More independence, more reliability, and more resilience against blackouts. (&lt;a class=&#34;link&#34; href=&#34;https://techxplore.com/news/2025-03-ann-arbor-sustainable-energy-aims.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Read the full story&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;For those of us knee-deep in grid infrastructure, this is &lt;strong&gt;huge&lt;/strong&gt;. The grid we have today was never built for decentralized, community-driven power solutions. In fact, it actively resists them. Which brings me to &lt;em&gt;The Grid&lt;/em&gt; by Gretchen Bakke—if you haven’t read it, it’s worth your time. Bakke makes the case that our electrical grid is old, overburdened, and &lt;strong&gt;fundamentally not designed for a world where renewables dominate&lt;/strong&gt;. She lays out why incorporating &lt;strong&gt;localized energy solutions&lt;/strong&gt; like what Ann Arbor is attempting is easier said than done.&lt;/p&gt;
-&lt;h3 id=&#34;why-this-matters&#34;&gt;&lt;a href=&#34;#why-this-matters&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This Matters
-&lt;/h3&gt;&lt;p&gt;The way we generate and distribute electricity is shifting—&lt;strong&gt;fast&lt;/strong&gt;. What Ann Arbor is doing is more than just a cool local project; it’s a preview of what other cities &lt;strong&gt;might&lt;/strong&gt; (and probably should) start doing.&lt;/p&gt;
-&lt;p&gt;Right now, utilities work on a top-down model: power plants generate electricity, send it through transmission lines, and eventually, it trickles down to homes and businesses. It’s centralized, efficient in some ways, but &lt;strong&gt;insanely vulnerable&lt;/strong&gt; to disruptions. One bad storm, one cyberattack, one aging transformer failure, and entire regions go dark. Ann Arbor’s plan flips that on its head. &lt;strong&gt;Instead of one big system, they’re thinking in microgrids.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This means:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Power stays local&lt;/strong&gt; – Generated and used within the community, cutting down on transmission losses.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;More resilience&lt;/strong&gt; – If the main grid goes down, parts of the city could still function.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Community control&lt;/strong&gt; – Instead of being at the mercy of investor-owned utilities, residents have a say in their power source.&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h3 id=&#34;but-lets-be-realthis-wont-be-easy&#34;&gt;&lt;a href=&#34;#but-lets-be-realthis-wont-be-easy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;But Let’s Be Real—This Won’t Be Easy
-&lt;/h3&gt;&lt;p&gt;I love the idea of localized power, but I also know the massive headaches that come with integrating it. A city can’t just unplug from the existing grid and go full renewable overnight. There are regulatory hurdles, &lt;strong&gt;legacy infrastructure issues&lt;/strong&gt;, and the ever-persistent problem of intermittency (aka, what happens when the sun isn’t shining, and the wind isn’t blowing?).&lt;/p&gt;
-&lt;p&gt;Ann Arbor’s SEU is aiming to tackle these issues with &lt;strong&gt;battery storage and smart grid tech&lt;/strong&gt;, but that requires serious investment and long-term planning. And let’s be honest—utilities don’t always play nice when local governments try to carve out their own energy systems. We’ve seen plenty of legal battles over cities trying to establish public power utilities, and you can bet some big players aren’t thrilled about Ann Arbor’s plan.&lt;/p&gt;
-&lt;h3 id=&#34;the-future-more-cities-following-suit&#34;&gt;&lt;a href=&#34;#the-future-more-cities-following-suit&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Future: More Cities Following Suit?
-&lt;/h3&gt;&lt;p&gt;So, could this work elsewhere? Maybe. Maybe not. But Ann Arbor’s project is a &lt;strong&gt;bold experiment in how we rethink energy infrastructure&lt;/strong&gt;. If it succeeds, it could be a blueprint for cities looking to break free from aging, vulnerable grids. If it struggles? Well, that’s valuable too—because every failure teaches us something about what needs to change.&lt;/p&gt;
-&lt;p&gt;The big takeaway? We’re moving toward a more localized, resilient, and renewable-powered energy future. Ann Arbor is just ahead of the curve. The rest of us? We’d better start paying attention.&lt;/p&gt;
-</description>
-        </item>
-        
-    </channel>
+  <channel>
+    <title>Microgrids on My Blog</title>
+    <link>http://192.168.100.63:1313/tags/microgrids/</link>
+    <description>Recent content in Microgrids on My Blog</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://192.168.100.63:1313/tags/microgrids/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy</title>
+      <link>http://192.168.100.63:1313/musings/seu-risk-analysis/</link>
+      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+      <guid>http://192.168.100.63:1313/musings/seu-risk-analysis/</guid>
+      <description>&lt;h2 id=&#34;ann-arbors-big-grid-experiment-a-glimpse-into-the-future-of-energy&#34;&gt;Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy&lt;/h2&gt;&#xA;&lt;p&gt;If you work in energy like I do, the news coming out of Ann Arbor is &lt;strong&gt;pretty fascinating&lt;/strong&gt;—they&amp;rsquo;re building their own &lt;strong&gt;Sustainable Energy Utility (SEU)&lt;/strong&gt;. Instead of relying entirely on the traditional grid, they&amp;rsquo;re developing a localized system that uses &lt;strong&gt;solar, battery storage, and even geothermal&lt;/strong&gt; to power the city. The idea? More independence, more reliability, and more resilience against blackouts. (&lt;a href=&#34;https://techxplore.com/news/2025-03-ann-arbor-sustainable-energy-aims.html&#34;&gt;Read the full story&lt;/a&gt;)&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>
