@@ -6,6 +6,12 @@ defaultContentLanguage = "en"
 languageCode = "en-us"
 enableEmoji = true
 
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
 [params]
   mainSections = ["datascience", "musings", "projects", "about"]  # Updated to reflect actual content folders
   featuredImageField = "image"
@@ -23,7 +29,7 @@ enableEmoji = true
 
   [params.sidebar]
     compact = false
-    emoji = " ^=^r "
+    emoji = "💾"
     subtitle = "Exploring Tech, Homelabs, & Self-Hosting"
 
     [params.sidebar.avatar]
@@ -60,8 +66,19 @@ enableEmoji = true
     enabled = true
 
   [params.widgets]
-    homepage = []
-    page = []
+    sidebar = [
+      { type = "search" },
+      { type = "categories", params.limit = 10 },
+      { type = "tag-cloud", params.limit = 10 }
+    ]
+
+    homepage = [
+      { type = "search" },
+      { type = "categories", params.limit = 10 },
+      { type = "tag-cloud", params.limit = 10 }
+    ]
+
+
 
 [pagination]
   pagerSize = 5

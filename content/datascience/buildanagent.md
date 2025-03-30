@@ -1,7 +1,10 @@
 ---
 title: "I Built My Own AI Agent with GPT-4 (And You Can Too)"
-date: 2024-03-29
+date: 2025-03-29T02:59:30Z
 draft: false
+categories: ["AI", "AgenticAI", "Guide"]
+tags: ["AI Agent", "AI"]
+description: "Building a Quick and Dirty AI Agent"
 ---
 
 # Building a Simple Agentic AI with GPT-4: A Hands-On Guide

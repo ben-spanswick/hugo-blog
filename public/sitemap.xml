@@ -2,16 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://192.168.100.63:1313/datascience/agenticai/</loc>
+    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/ai/</loc>
+    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/ai/</loc>
+    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/ai-agent/</loc>
+    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/</loc>
+    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/</loc>
+    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/buildanagent2/</loc>
+    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/</loc>
+    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/</loc>
+    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
+  </url><url>
     <loc>http://192.168.100.63:1313/categories/artificial-intelligence/</loc>
     <lastmod>2025-03-21T02:08:37+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/datascience/genaiframework/</loc>
-    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/categories/</loc>
-    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/datascience/</loc>
     <lastmod>2025-03-21T02:08:37+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/categories/document-processing/</loc>
@@ -29,13 +50,7 @@
     <loc>http://192.168.100.63:1313/tags/lexrank/</loc>
     <lastmod>2025-03-21T02:08:37+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/</loc>
-    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/tags/rag/</loc>
-    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/tags/</loc>
     <lastmod>2025-03-21T02:08:37+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/vector-databases/</loc>
@@ -144,9 +159,6 @@
     <lastmod>2025-03-16T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/about/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/tags/ai/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/categories/ai-developments/</loc>
@@ -328,11 +340,5 @@
   </url><url>
     <loc>http://192.168.100.63:1313/tags/storage/</loc>
     <lastmod>2025-03-13T12:00:00-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/datascience/buildanagent/</loc>
-    <lastmod>2024-03-29T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/datascience/agenticai/</loc>
-    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
   </url>
 </urlset>
