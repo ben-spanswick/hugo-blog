@@ -2,7 +2,7 @@
 title: "Agentic AI: The Mind-Blowing Future That's Already Here"
 date: 2025-03-29T02:59:30Z
 draft: false
-categories: ["AI", "AgenticAI"y]
+categories: ["AI", "AgenticAI"]
 tags: ["AI Agent", "AI"]
 description: "Intro to Agentic AI"
 ---
