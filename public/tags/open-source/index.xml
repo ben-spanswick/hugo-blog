@@ -1,19 +1,110 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Open Source on My Blog</title>
-    <link>http://192.168.100.63:1313/tags/open-source/</link>
-    <description>Recent content in Open Source on My Blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://192.168.100.63:1313/tags/open-source/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Self-Hosted Series: Tandoor</title>
-      <link>http://192.168.100.63:1313/projects/tandoor-recipe-management/</link>
-      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://192.168.100.63:1313/projects/tandoor-recipe-management/</guid>
-      <description>&lt;h1 id=&#34;self-hosting-tandoor-recipes-taking-control-of-your-recipe-collection&#34;&gt;Self-Hosting Tandoor Recipes: Taking Control of Your Recipe Collection&lt;/h1&gt;&#xA;&lt;p&gt;If you&amp;rsquo;re like me, you&amp;rsquo;ve probably got recipes scattered everywhere—saved in browser bookmarks, tucked away in old notes, maybe even written down on random scraps of paper. It&amp;rsquo;s a mess. I wanted a better way to organize everything, but I didn&amp;rsquo;t want to rely on a third-party service. I wanted something &lt;strong&gt;self-hosted&lt;/strong&gt;, something I controlled. That&amp;rsquo;s where &lt;strong&gt;Tandoor Recipes&lt;/strong&gt; comes in.&lt;/p&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Open Source on My Blog</title>
+        <link>http://192.168.100.63:1313/tags/open-source/</link>
+        <description>Recent content in Open Source on My Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/open-source/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Self-Hosted Series: Tandoor</title>
+        <link>http://192.168.100.63:1313/projects/tandoor-recipe-management/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/projects/tandoor-recipe-management/</guid>
+        <description>&lt;h1 id=&#34;self-hosting-tandoor-recipes-taking-control-of-your-recipe-collection&#34;&gt;&lt;a href=&#34;#self-hosting-tandoor-recipes-taking-control-of-your-recipe-collection&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Self-Hosting Tandoor Recipes: Taking Control of Your Recipe Collection
+&lt;/h1&gt;&lt;p&gt;If you&amp;rsquo;re like me, you&amp;rsquo;ve probably got recipes scattered everywhere—saved in browser bookmarks, tucked away in old notes, maybe even written down on random scraps of paper. It&amp;rsquo;s a mess. I wanted a better way to organize everything, but I didn&amp;rsquo;t want to rely on a third-party service. I wanted something &lt;strong&gt;self-hosted&lt;/strong&gt;, something I controlled. That&amp;rsquo;s where &lt;strong&gt;Tandoor Recipes&lt;/strong&gt; comes in.&lt;/p&gt;
+&lt;p&gt;Tandoor is an open-source recipe manager that lets you store, categorize, and search your recipes while giving you full control over your data. It’s basically a &lt;strong&gt;self-hosted, privacy-first alternative to something like Paprika or AnyList&lt;/strong&gt;, but with even more customization. Since it runs in Docker, it’s easy to set up on any home server or VPS.&lt;/p&gt;
+&lt;h2 id=&#34;why-self-host-your-recipes&#34;&gt;&lt;a href=&#34;#why-self-host-your-recipes&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why Self-Host Your Recipes?
+&lt;/h2&gt;&lt;p&gt;The idea of self-hosting recipes might sound a bit excessive at first. I mean, it’s just recipes, right? But once you start using a dedicated system, you realize how much of an upgrade it is. Here’s why I think Tandoor is worth the effort:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;No data lock-in.&lt;/strong&gt; Your recipes are yours. No cloud service decides to shut down and take your collection with it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Privacy.&lt;/strong&gt; No tracking, no ads, no creepy AI trying to &amp;ldquo;enhance&amp;rdquo; your cooking habits.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Full customization.&lt;/strong&gt; You control the categories, tags, and even the UI themes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Automatic ingredient scaling and meal planning.&lt;/strong&gt; Helps with grocery shopping and weekly planning.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Built-in OCR for scanned recipes.&lt;/strong&gt; Perfect for digitizing old family cookbooks.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;So yeah, it&amp;rsquo;s a niche tool, but once you get it set up, it&amp;rsquo;s pretty great.&lt;/p&gt;
+&lt;h2 id=&#34;setting-up-tandoor-recipes-with-docker&#34;&gt;&lt;a href=&#34;#setting-up-tandoor-recipes-with-docker&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Setting Up Tandoor Recipes with Docker
+&lt;/h2&gt;&lt;p&gt;I run Tandoor in Docker on my home server. Here’s how I set it up, along with my redacted configuration files so you can replicate it if you want.&lt;/p&gt;
+&lt;h3 id=&#34;folder-structure&#34;&gt;&lt;a href=&#34;#folder-structure&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Folder Structure
+&lt;/h3&gt;&lt;p&gt;I keep all my self-hosted apps organized under &lt;code&gt;/opt/docker/&lt;/code&gt;, with persistent data stored on my NAS. Here’s the structure for Tandoor:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/opt/docker/tandoor/          # Tandoor install location
+/mnt/r430/tandoor/recipes/    # Recipe data storage
+/mnt/r430/tandoor/mediafiles/ # Uploaded images
+/mnt/r430/tandoor/staticfiles/ # Static assets
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;docker-composeyml&#34;&gt;&lt;a href=&#34;#docker-composeyml&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;code&gt;docker-compose.yml&lt;/code&gt;
+&lt;/h3&gt;&lt;p&gt;This is the main Docker Compose file for Tandoor. I’m using an &lt;strong&gt;external PostgreSQL database&lt;/strong&gt; running on an LXC container, but you could run it in Docker if you prefer.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;web&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;vabene1111/recipes:latest&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;container_name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;tandoor_web&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;restart&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;unless-stopped&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;depends_on&lt;/span&gt;: []
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;volumes&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/recipes:/opt/recipes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/mediafiles:/opt/recipes/mediafiles&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/staticfiles:/opt/recipes/staticfiles&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;env_file&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;.env&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;8080:8000&amp;#34;&lt;/span&gt; &lt;span style=&#34;color:#75715e&#34;&gt;# Expose Tandoor on port 8080&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;networks&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;tandoor-net&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;networks&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;tandoor-net&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;driver&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;bridge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;env&#34;&gt;&lt;a href=&#34;#env&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;code&gt;.env&lt;/code&gt;
+&lt;/h3&gt;&lt;p&gt;This contains the database credentials and general app settings. Make sure to set a strong &lt;code&gt;SECRET_KEY&lt;/code&gt;.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Database settings&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_HOST&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;192.168.100.52&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_PORT&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;5432&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_USER&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tandoor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;your-secure-password&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_DB&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tandoor&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Django settings&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SECRET_KEY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;your-random-secret-key&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;DEBUG&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ALLOWED_HOSTS&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;*&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;TZ&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;America/New_York&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;setting-up-postgresql-if-external&#34;&gt;&lt;a href=&#34;#setting-up-postgresql-if-external&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Setting Up PostgreSQL (If External)
+&lt;/h3&gt;&lt;p&gt;If you&amp;rsquo;re running PostgreSQL in an LXC like I am, you need to set it up manually.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;SSH into the LXC container running PostgreSQL.&lt;/li&gt;
+&lt;li&gt;Open the PostgreSQL shell:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo -u postgres psql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Create the database and user:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; tandoor;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;USER&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;WITH&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ENCRYPTED&lt;/span&gt; PASSWORD &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;your-secure-password&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ALL&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIVILEGES&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; tandoor;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;OWNER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; tandoor;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Allow remote connections by editing &lt;code&gt;postgresql.conf&lt;/code&gt;:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;listen_addresses&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;li&gt;Update &lt;code&gt;pg_hba.conf&lt;/code&gt; to allow connections from your Docker host:
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;host    tandoor    tandoor    192.168.100.0/24    md5
+&lt;/code&gt;&lt;/pre&gt;&lt;/li&gt;
+&lt;li&gt;Restart PostgreSQL:
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl restart postgresql
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;starting-tandoor&#34;&gt;&lt;a href=&#34;#starting-tandoor&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Starting Tandoor
+&lt;/h3&gt;&lt;p&gt;Once everything is configured, start the container:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker-compose up -d
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If you need to check logs:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker logs -f tandoor_web
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now, Tandoor should be available at &lt;code&gt;http://your-server-ip:8080&lt;/code&gt;.&lt;/p&gt;
+&lt;h2 id=&#34;wrapping-up&#34;&gt;&lt;a href=&#34;#wrapping-up&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Wrapping Up
+&lt;/h2&gt;&lt;p&gt;Tandoor is a fantastic tool if you want full control over your recipes and meal planning. It takes a little effort to set up, but once it’s running, you get &lt;strong&gt;complete data freedom&lt;/strong&gt;—no subscriptions, no forced updates, just a solid, reliable system for organizing your kitchen. If you’re into self-hosting and home automation, it fits right in with the whole ethos of controlling your own data.&lt;/p&gt;
+&lt;p&gt;If you set it up, let me know how it works for you. I’d love to hear about any customizations or integrations you come up with. Also, if you have a killer recipe collection, I’m always open to swapping ideas.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

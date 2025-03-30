@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="A practical guide to building a scalable framework for retrieving and interacting with information from thousands of documents">
+<title>Building a Modular GenAI Framework for Document Retrieval and Interaction</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/datascience/genaiframework/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Building a Modular GenAI Framework for Document Retrieval and Interaction">
+<meta property='og:description' content="A practical guide to building a scalable framework for retrieving and interacting with information from thousands of documents">
+<meta property='og:url' content='http://192.168.100.63:1313/datascience/genaiframework/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Datascience' /><meta property='article:tag' content='generative AI' /><meta property='article:tag' content='RAG' /><meta property='article:tag' content='LexRank' /><meta property='article:tag' content='vector databases' /><meta property='article:tag' content='document retrieval' /><meta property='article:tag' content='legal tech' /><meta property='article:published_time' content='2025-03-21T02:08:37&#43;00:00'/><meta property='article:modified_time' content='2025-03-21T02:08:37&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Building a Modular GenAI Framework for Document Retrieval and Interaction">
+<meta name="twitter:description" content="A practical guide to building a scalable framework for retrieving and interacting with information from thousands of documents"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column compact"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji"> ^=^r </span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/datascience/' >
+                
+                
+                
+                <span>Data Strategy</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='Spanswick_Resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/artificial-intelligence/" >
+                Artificial Intelligence
+            </a>
+        
+            <a href="/categories/document-processing/" >
+                Document Processing
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/datascience/genaiframework/">Building a Modular GenAI Framework for Document Retrieval and Interaction</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            A practical guide to building a scalable framework for retrieving and interacting with information from thousands of documents
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 21, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    14 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="building-a-modular-genai-framework-for-document-retrieval-and-interaction"><a href="#building-a-modular-genai-framework-for-document-retrieval-and-interaction" class="header-anchor"></a><strong>Building a Modular GenAI Framework for Document Retrieval and Interaction</strong>
+</h1><p>Without giving too much away, professionally, we&rsquo;re working on a project that has us knee deep in legal documents—thousands upon thousands of pages of contracts, case law, and regulatory filings. Our team was tasked with building a system that could help attorneys quickly find relevant information across this massive corpus and generate accurate, properly cited responses to complex legal questions.</p>
+<p>The challenge isn&rsquo;t just the volume of documents. It&rsquo;s the need for precision, attribution, and the ability to synthesize information across multiple sources. Traditional search approaches fell short, and off-the-shelf GenAI solutions can&rsquo;t provide the reliability or citation tracking we needed.</p>
+<p>The proposed apporach is a modular framework that combined the best of retrieval augmented generation (RAG), document summarization techniques like LexRank, and agentic models—all designed to be quickly repurposed for different document-heavy domains.</p>
+<p>When we finally deployed this system, it should reduce research time for complex legal questions  while maintaining a high accuracy rate compared to expert-generated answers. The key isn&rsquo;t any single technology—it  how we integrated multiple approaches into a cohesive, modular system.</p>
+<p>Let&rsquo;s dive into the framework for your own document-intensive use cases.</p>
+<hr>
+<h2 id="the-technology-stack-beyond-basic-rag"><a href="#the-technology-stack-beyond-basic-rag" class="header-anchor"></a><strong>The Technology Stack: Beyond Basic RAG</strong>
+</h2><p>Before we get into implementation details, let&rsquo;s understand the core technologies that make this framework possible:</p>
+<h3 id="rag-the-foundation-not-the-destination"><a href="#rag-the-foundation-not-the-destination" class="header-anchor"></a><strong>RAG: The Foundation, Not the Destination</strong>
+</h3><p>Retrieval Augmented Generation has become the standard approach for grounding LLMs in external knowledge. But basic RAG implementations—which simply retrieve chunks of text based on vector similarity and feed them to an LLM—have significant limitations when dealing with complex document sets:</p>
+<ul>
+<li>They struggle with multi-hop reasoning across documents</li>
+<li>They often miss important context that&rsquo;s spread across multiple sections</li>
+<li>They provide limited citation capabilities</li>
+<li>They can&rsquo;t effectively prioritize authoritative sources</li>
+</ul>
+<p>Our approach uses RAG as a foundation but extends it significantly with additional components.</p>
+<h3 id="lexrank-the-unsung-hero-of-document-summarization"><a href="#lexrank-the-unsung-hero-of-document-summarization" class="header-anchor"></a><strong>LexRank: The Unsung Hero of Document Summarization</strong>
+</h3><p>While everyone talks about RAG, fewer people leverage LexRank—an algorithm that identifies the most representative sentences in a document or collection of documents.</p>
+<p>LexRank works by:</p>
+<ol>
+<li>Creating a graph where sentences are nodes</li>
+<li>Connecting sentences based on similarity measures</li>
+<li>Applying a PageRank-like algorithm to identify the most central sentences</li>
+</ol>
+<p>What makes LexRank powerful for our use case is that it excels at extractive summarization—pulling out the most important sentences verbatim rather than generating new text. This is crucial for legal and technical domains where precise wording matters.</p>
+<h3 id="vector-databases-the-retrieval-engine"><a href="#vector-databases-the-retrieval-engine" class="header-anchor"></a><strong>Vector Databases: The Retrieval Engine</strong>
+</h3><p>The choice of vector database significantly impacts both performance and capabilities. We evaluated several options:</p>
+<ul>
+<li><strong>Pinecone:</strong> Excellent performance but limited filtering capabilities</li>
+<li><strong>Weaviate:</strong> Strong hybrid search but more complex to set up</li>
+<li><strong>Chroma:</strong> Simple to use but less scalable for very large collections</li>
+<li><strong>Azure AI Search:</strong> Well-integrated with Azure ecosystem with strong vector search capabilities</li>
+</ul>
+<p>For our implementation, we consider Weaviate due to its hybrid search capabilities, which allowes us to combine semantic search with metadata filtering—crucial for narrowing results by date, document type, jurisdiction, and other attributes.</p>
+<h3 id="chunking-strategies-the-art-of-document-segmentation"><a href="#chunking-strategies-the-art-of-document-segmentation" class="header-anchor"></a><strong>Chunking Strategies: The Art of Document Segmentation</strong>
+</h3><p>How you divide documents into chunks dramatically affects retrieval quality. Hierarchical chunking approaches typically work best:</p>
+<ol>
+<li><strong>Document-level embeddings:</strong> For initial corpus filtering</li>
+<li><strong>Section-level chunks:</strong> For main retrieval (typically 500-1000 tokens)</li>
+<li><strong>Paragraph-level chunks:</strong> For targeted information extraction</li>
+<li><strong>Sentence-level analysis:</strong> For LexRank summarization</li>
+</ol>
+<p>This multi-level approach allows the system to zoom in and out as needed, maintaining both broad context and detailed information.</p>
+<h3 id="agentic-models-the-orchestrators"><a href="#agentic-models-the-orchestrators" class="header-anchor"></a><strong>Agentic Models: The Orchestrators</strong>
+</h3><p>The final piece is an agentic layer that orchestrates the entire process. This layer:</p>
+<ul>
+<li>Interprets user queries</li>
+<li>Determines the optimal retrieval strategy</li>
+<li>Coordinates between retrieval and summarization components</li>
+<li>Formulates responses with proper citations</li>
+<li>Handles follow-up questions with context awareness</li>
+</ul>
+<p>We can implement this using a combination of prompt engineering and tool-calling capabilities in models like GPT-4 and Claude 3.</p>
+<hr>
+<h2 id="building-the-document-processing-pipeline"><a href="#building-the-document-processing-pipeline" class="header-anchor"></a><strong>Building the Document Processing Pipeline</strong>
+</h2><p>With our technology stack defined, let&rsquo;s look at how to build the document processing pipeline—the foundation of our framework.</p>
+<h3 id="document-ingestion-and-preprocessing"><a href="#document-ingestion-and-preprocessing" class="header-anchor"></a><strong>Document Ingestion and Preprocessing</strong>
+</h3><p>The quality of your document processing directly impacts everything downstream. Our pipeline includes:</p>
+<ol>
+<li><strong>Format conversion:</strong> Standardizing all documents to text-based formats</li>
+<li><strong>Structure preservation:</strong> Maintaining headings, lists, and paragraph breaks</li>
+<li><strong>Metadata extraction:</strong> Pulling out document dates, authors, titles, and other attributes</li>
+<li><strong>Entity recognition:</strong> Identifying key entities like organizations, people, and legal citations</li>
+<li><strong>Cross-reference detection:</strong> Finding and normalizing references between documents</li>
+</ol>
+<p><strong>Implementation tip:</strong> A combination of Apache Tika for initial conversion, custom Python scripts for structure preservation, and SpaCy for entity recognition. The key is creating a consistent intermediate format that preserves both content and structure.</p>
+<h3 id="implementing-hierarchical-chunking"><a href="#implementing-hierarchical-chunking" class="header-anchor"></a><strong>Implementing Hierarchical Chunking</strong>
+</h3><p>Rather than using a one-size-fits-all chunking strategy, a hierarchical approach required multiple chunking passes:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">create_hierarchical_chunks</span>(document):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Document-level embedding</span>
+</span></span><span style="display:flex;"><span>    doc_embedding <span style="color:#f92672">=</span> embed_text(document<span style="color:#f92672">.</span>full_text)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Section-level chunks (based on headings)</span>
+</span></span><span style="display:flex;"><span>    sections <span style="color:#f92672">=</span> split_by_headings(document<span style="color:#f92672">.</span>full_text)
+</span></span><span style="display:flex;"><span>    section_chunks <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>        {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;text&#34;</span>: section,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;embedding&#34;</span>: embed_text(section),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;metadata&#34;</span>: document<span style="color:#f92672">.</span>metadata
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> section <span style="color:#f92672">in</span> sections
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Paragraph-level chunks</span>
+</span></span><span style="display:flex;"><span>    paragraph_chunks <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> section <span style="color:#f92672">in</span> sections:
+</span></span><span style="display:flex;"><span>        paragraphs <span style="color:#f92672">=</span> split_by_paragraphs(section)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> paragraph <span style="color:#f92672">in</span> paragraphs:
+</span></span><span style="display:flex;"><span>            paragraph_chunks<span style="color:#f92672">.</span>append({
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;text&#34;</span>: paragraph,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;embedding&#34;</span>: embed_text(paragraph),
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;metadata&#34;</span>: document<span style="color:#f92672">.</span>metadata,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;parent_section&#34;</span>: section[:<span style="color:#ae81ff">100</span>]  <span style="color:#75715e"># Reference to parent</span>
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Store all levels</span>
+</span></span><span style="display:flex;"><span>    store_chunks(document<span style="color:#f92672">.</span>id, {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;document&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: document<span style="color:#f92672">.</span>full_text, <span style="color:#e6db74">&#34;embedding&#34;</span>: doc_embedding},
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;sections&#34;</span>: section_chunks,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;paragraphs&#34;</span>: paragraph_chunks
+</span></span><span style="display:flex;"><span>    })
+</span></span></code></pre></div><p>This approach creates a hierarchical relationship between chunks, allowing the retrieval system to navigate up and down the hierarchy as needed.</p>
+<h3 id="data-vetting-and-quality-control"><a href="#data-vetting-and-quality-control" class="header-anchor"></a><strong>Data Vetting and Quality Control</strong>
+</h3><p>Not all documents are created equal. The proposed implementation includes several data vetting mechanisms:</p>
+<ol>
+<li><strong>Duplicate detection:</strong> Identifying and merging duplicate or near-duplicate content</li>
+<li><strong>Contradiction detection:</strong> Flagging conflicting information across documents</li>
+<li><strong>Recency analysis:</strong> Prioritizing more recent documents when information conflicts</li>
+<li><strong>Authority scoring:</strong> Weighting documents based on source authority</li>
+<li><strong>Quality filtering:</strong> Removing low-quality or irrelevant documents</li>
+</ol>
+<p><strong>Implementation tip:</strong> Implement a quality scoring system that assigns each document a composite score based on these factors. This score is used both for filtering during ingestion and for ranking during retrieval.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">calculate_quality_score</span>(document):
+</span></span><span style="display:flex;"><span>    scores <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;completeness&#34;</span>: assess_completeness(document),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;consistency&#34;</span>: check_internal_consistency(document),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;authority&#34;</span>: authority_score(document<span style="color:#f92672">.</span>metadata[<span style="color:#e6db74">&#34;source&#34;</span>]),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;recency&#34;</span>: recency_score(document<span style="color:#f92672">.</span>metadata[<span style="color:#e6db74">&#34;date&#34;</span>]),
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;relevance&#34;</span>: domain_relevance_score(document)
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Weighted average</span>
+</span></span><span style="display:flex;"><span>    weights <span style="color:#f92672">=</span> {<span style="color:#e6db74">&#34;completeness&#34;</span>: <span style="color:#ae81ff">0.2</span>, <span style="color:#e6db74">&#34;consistency&#34;</span>: <span style="color:#ae81ff">0.2</span>, 
+</span></span><span style="display:flex;"><span>               <span style="color:#e6db74">&#34;authority&#34;</span>: <span style="color:#ae81ff">0.3</span>, <span style="color:#e6db74">&#34;recency&#34;</span>: <span style="color:#ae81ff">0.2</span>, <span style="color:#e6db74">&#34;relevance&#34;</span>: <span style="color:#ae81ff">0.1</span>}
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> sum(scores[k] <span style="color:#f92672">*</span> weights[k] <span style="color:#66d9ef">for</span> k <span style="color:#f92672">in</span> scores)
+</span></span></code></pre></div><h3 id="vector-embedding-approaches"><a href="#vector-embedding-approaches" class="header-anchor"></a><strong>Vector Embedding Approaches</strong>
+</h3><p>The choice of embedding model significantly impacts retrieval quality:</p>
+<ol>
+<li><strong>Domain-specific models outperform general models:</strong> We fine-tuned embeddings on legal text</li>
+<li><strong>Larger embedding dimensions improve precision:</strong> We used 1536-dimensional embeddings</li>
+<li><strong>Hybrid models combining multiple embeddings perform best:</strong> We ensemble multiple models</li>
+</ol>
+<p>For legal documents specifically, the combination of a fine-tuned legal embedding model with a general-purpose model like OpenAI&rsquo;s text-embedding-3-large provided the best results.</p>
+<hr>
+<h2 id="the-retrieval-engine-finding-the-needle-in-the-haystack"><a href="#the-retrieval-engine-finding-the-needle-in-the-haystack" class="header-anchor"></a><strong>The Retrieval Engine: Finding the Needle in the Haystack</strong>
+</h2><p>The next component is the retrieval engine—the system that finds relevant information based on user queries.</p>
+<h3 id="vector-database-configuration"><a href="#vector-database-configuration" class="header-anchor"></a><strong>Vector Database Configuration</strong>
+</h3><p>A possible Weaviate configuration includes:</p>
+<ol>
+<li><strong>Multiple collections for different chunk sizes:</strong> Document, section, and paragraph levels</li>
+<li><strong>Hybrid search configuration:</strong> Combining vector search with BM25 text search</li>
+<li><strong>Metadata filtering:</strong> Enabling filtering by document attributes</li>
+<li><strong>Cross-references:</strong> Maintaining relationships between chunks</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>class_obj <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;class&#34;</span>: <span style="color:#e6db74">&#34;Paragraph&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;vectorizer&#34;</span>: <span style="color:#e6db74">&#34;text2vec-openai&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;moduleConfig&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;text2vec-openai&#34;</span>: {
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;model&#34;</span>: <span style="color:#e6db74">&#34;text-embedding-3-large&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;modelVersion&#34;</span>: <span style="color:#e6db74">&#34;latest&#34;</span>
+</span></span><span style="display:flex;"><span>        }
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;properties&#34;</span>: [
+</span></span><span style="display:flex;"><span>        {<span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;content&#34;</span>, <span style="color:#e6db74">&#34;dataType&#34;</span>: [<span style="color:#e6db74">&#34;text&#34;</span>]},
+</span></span><span style="display:flex;"><span>        {<span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;document_id&#34;</span>, <span style="color:#e6db74">&#34;dataType&#34;</span>: [<span style="color:#e6db74">&#34;string&#34;</span>]},
+</span></span><span style="display:flex;"><span>        {<span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;section_id&#34;</span>, <span style="color:#e6db74">&#34;dataType&#34;</span>: [<span style="color:#e6db74">&#34;string&#34;</span>]},
+</span></span><span style="display:flex;"><span>        {<span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;metadata&#34;</span>, <span style="color:#e6db74">&#34;dataType&#34;</span>: [<span style="color:#e6db74">&#34;object&#34;</span>]},
+</span></span><span style="display:flex;"><span>        {<span style="color:#e6db74">&#34;name&#34;</span>: <span style="color:#e6db74">&#34;quality_score&#34;</span>, <span style="color:#e6db74">&#34;dataType&#34;</span>: [<span style="color:#e6db74">&#34;number&#34;</span>]}
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><h3 id="multi-stage-retrieval-process"><a href="#multi-stage-retrieval-process" class="header-anchor"></a><strong>Multi-Stage Retrieval Process</strong>
+</h3><p>Rather than a single retrieval step, we can implemented a multi-stage process:</p>
+<ol>
+<li><strong>Query analysis:</strong> Understanding the type of information needed</li>
+<li><strong>Corpus filtering:</strong> Using document-level embeddings to narrow the search space</li>
+<li><strong>Primary retrieval:</strong> Finding the most relevant sections</li>
+<li><strong>Contextual expansion:</strong> Adding related paragraphs for context</li>
+<li><strong>Re-ranking:</strong> Applying additional relevance criteria</li>
+</ol>
+<p>This multi-stage approach significantly improves precision while maintaining recall.</p>
+<h3 id="relevance-scoring-beyond-vector-similarity"><a href="#relevance-scoring-beyond-vector-similarity" class="header-anchor"></a><strong>Relevance Scoring Beyond Vector Similarity</strong>
+</h3><p>Vector similarity alone isn&rsquo;t enough for complex queries:</p>
+<ol>
+<li><strong>Vector similarity:</strong> Semantic relevance to the query</li>
+<li><strong>Term overlap:</strong> Keyword matching for precision</li>
+<li><strong>Authority score:</strong> Weighting by source reliability</li>
+<li><strong>Recency:</strong> Prioritizing newer information when appropriate</li>
+<li><strong>Contextual relevance:</strong> How well the chunk fits with other retrieved chunks</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">score_chunk</span>(chunk, query, retrieved_chunks):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Base vector similarity</span>
+</span></span><span style="display:flex;"><span>    vector_score <span style="color:#f92672">=</span> vector_similarity(chunk<span style="color:#f92672">.</span>embedding, query_embedding)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Term overlap</span>
+</span></span><span style="display:flex;"><span>    term_score <span style="color:#f92672">=</span> calculate_term_overlap(chunk<span style="color:#f92672">.</span>text, query)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Authority from metadata</span>
+</span></span><span style="display:flex;"><span>    authority_score <span style="color:#f92672">=</span> get_authority_score(chunk<span style="color:#f92672">.</span>metadata)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Recency factor</span>
+</span></span><span style="display:flex;"><span>    recency_score <span style="color:#f92672">=</span> calculate_recency(chunk<span style="color:#f92672">.</span>metadata<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;date&#34;</span>))
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Contextual relevance to other retrieved chunks</span>
+</span></span><span style="display:flex;"><span>    context_score <span style="color:#f92672">=</span> calculate_contextual_relevance(chunk, retrieved_chunks)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Weighted combination</span>
+</span></span><span style="display:flex;"><span>    final_score <span style="color:#f92672">=</span> (vector_score <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.4</span> <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>                  term_score <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.2</span> <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>                  authority_score <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.2</span> <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>                  recency_score <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.1</span> <span style="color:#f92672">+</span> 
+</span></span><span style="display:flex;"><span>                  context_score <span style="color:#f92672">*</span> <span style="color:#ae81ff">0.1</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> final_score
+</span></span></code></pre></div><h3 id="citation-tracking-and-source-attribution"><a href="#citation-tracking-and-source-attribution" class="header-anchor"></a><strong>Citation Tracking and Source Attribution</strong>
+</h3><p>For domains like legal research, proper citation is critical:</p>
+<ol>
+<li><strong>Source documents for all retrieved information</strong></li>
+<li><strong>Specific locations within documents (page, section, paragraph)</strong></li>
+<li><strong>Citation formatting based on domain standards</strong></li>
+<li><strong>Confidence scores for each piece of information</strong></li>
+</ol>
+<p>This enables the system to generate properly cited responses and allows users to verify information directly from source documents.</p>
+<hr>
+<h2 id="the-summarization-layer-from-retrieval-to-understanding"><a href="#the-summarization-layer-from-retrieval-to-understanding" class="header-anchor"></a><strong>The Summarization Layer: From Retrieval to Understanding</strong>
+</h2><p>Retrieving relevant chunks is only half the battle. The summarization layer transforms these chunks into coherent, comprehensive answers.</p>
+<h3 id="lexrank-implementation-for-extractive-summarization"><a href="#lexrank-implementation-for-extractive-summarization" class="header-anchor"></a><strong>LexRank Implementation for Extractive Summarization</strong>
+</h3><p>LexRank implementation works in several stages:</p>
+<ol>
+<li><strong>Sentence segmentation:</strong> Breaking retrieved chunks into individual sentences</li>
+<li><strong>Similarity matrix construction:</strong> Calculating pairwise similarities between sentences</li>
+<li><strong>Graph creation:</strong> Building a graph where sentences are nodes and similarities are edges</li>
+<li><strong>Centrality calculation:</strong> Applying a modified PageRank algorithm</li>
+<li><strong>Sentence selection:</strong> Extracting the most central sentences</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">lexrank_summarize</span>(chunks, query, num_sentences<span style="color:#f92672">=</span><span style="color:#ae81ff">5</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Extract all sentences from chunks</span>
+</span></span><span style="display:flex;"><span>    sentences <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> chunk <span style="color:#f92672">in</span> chunks:
+</span></span><span style="display:flex;"><span>        chunk_sentences <span style="color:#f92672">=</span> split_into_sentences(chunk<span style="color:#f92672">.</span>text)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> sentence <span style="color:#f92672">in</span> chunk_sentences:
+</span></span><span style="display:flex;"><span>            sentences<span style="color:#f92672">.</span>append({
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;text&#34;</span>: sentence,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;source&#34;</span>: chunk<span style="color:#f92672">.</span>metadata,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;chunk_id&#34;</span>: chunk<span style="color:#f92672">.</span>id
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Create similarity matrix</span>
+</span></span><span style="display:flex;"><span>    embeddings <span style="color:#f92672">=</span> [embed_text(s[<span style="color:#e6db74">&#34;text&#34;</span>]) <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> sentences]
+</span></span><span style="display:flex;"><span>    similarity_matrix <span style="color:#f92672">=</span> cosine_similarity(embeddings)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Apply threshold to create graph</span>
+</span></span><span style="display:flex;"><span>    threshold <span style="color:#f92672">=</span> <span style="color:#ae81ff">0.3</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(similarity_matrix)):
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">for</span> j <span style="color:#f92672">in</span> range(len(similarity_matrix)):
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">if</span> similarity_matrix[i][j] <span style="color:#f92672">&lt;</span> threshold:
+</span></span><span style="display:flex;"><span>                similarity_matrix[i][j] <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Calculate LexRank scores</span>
+</span></span><span style="display:flex;"><span>    scores <span style="color:#f92672">=</span> calculate_lexrank_scores(similarity_matrix)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Select top sentences</span>
+</span></span><span style="display:flex;"><span>    ranked_sentences <span style="color:#f92672">=</span> [(sentences[i], scores[i]) 
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(len(sentences))]
+</span></span><span style="display:flex;"><span>    ranked_sentences<span style="color:#f92672">.</span>sort(key<span style="color:#f92672">=</span><span style="color:#66d9ef">lambda</span> x: x[<span style="color:#ae81ff">1</span>], reverse<span style="color:#f92672">=</span><span style="color:#66d9ef">True</span>)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Return top sentences with their sources</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> [rs[<span style="color:#ae81ff">0</span>] <span style="color:#66d9ef">for</span> rs <span style="color:#f92672">in</span> ranked_sentences[:num_sentences]]
+</span></span></code></pre></div><p>The key advantage of LexRank is that it extracts actual sentences from the documents, preserving the original wording—critical for accuracy in technical and legal domains.</p>
+<h3 id="combining-rag-with-lexrank"><a href="#combining-rag-with-lexrank" class="header-anchor"></a><strong>Combining RAG with LexRank</strong>
+</h3><p>This framework combines RAG and LexRank in a complementary way:</p>
+<ol>
+<li><strong>RAG retrieves relevant chunks</strong> based on semantic similarity</li>
+<li><strong>LexRank identifies the most representative sentences</strong> within those chunks</li>
+<li><strong>The LLM generates a coherent answer</strong> using both the retrieved chunks and the LexRank summary</li>
+<li><strong>Citations are maintained throughout</strong> the process</li>
+</ol>
+<p>This hybrid approach leverages the strengths of both techniques—RAG&rsquo;s ability to find relevant information and LexRank&rsquo;s ability to identify the most important points.</p>
+<h3 id="maintaining-context-across-multiple-documents"><a href="#maintaining-context-across-multiple-documents" class="header-anchor"></a><strong>Maintaining Context Across Multiple Documents</strong>
+</h3><p>One challenge with complex queries is maintaining context across multiple documents:</p>
+<ol>
+<li><strong>Cross-document entity resolution:</strong> Identifying when different documents refer to the same entities</li>
+<li><strong>Temporal alignment:</strong> Understanding the chronological relationship between documents</li>
+<li><strong>Contradiction detection:</strong> Identifying and resolving conflicting information</li>
+<li><strong>Context graphs:</strong> Building relationships between information across documents</li>
+</ol>
+<p>This allows the system to synthesize information coherently even when it&rsquo;s spread across multiple sources.</p>
+<h3 id="ensuring-factual-accuracy"><a href="#ensuring-factual-accuracy" class="header-anchor"></a><strong>Ensuring Factual Accuracy</strong>
+</h3><p>To maximize accuracy, this framework includes several verification mechanisms:</p>
+<ol>
+<li><strong>Fact verification:</strong> Checking generated content against retrieved chunks</li>
+<li><strong>Citation validation:</strong> Ensuring citations actually support the claims</li>
+<li><strong>Confidence scoring:</strong> Indicating the system&rsquo;s confidence in each part of the response</li>
+<li><strong>Uncertainty highlighting:</strong> Explicitly marking areas where information is ambiguous or conflicting</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">verify_response</span>(generated_response, retrieved_chunks):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Extract claims from response</span>
+</span></span><span style="display:flex;"><span>    claims <span style="color:#f92672">=</span> extract_claims(generated_response)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Verify each claim against retrieved chunks</span>
+</span></span><span style="display:flex;"><span>    verification_results <span style="color:#f92672">=</span> []
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">for</span> claim <span style="color:#f92672">in</span> claims:
+</span></span><span style="display:flex;"><span>        support <span style="color:#f92672">=</span> find_supporting_evidence(claim, retrieved_chunks)
+</span></span><span style="display:flex;"><span>        contradictions <span style="color:#f92672">=</span> find_contradicting_evidence(claim, retrieved_chunks)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        verification_results<span style="color:#f92672">.</span>append({
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;claim&#34;</span>: claim,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;supported&#34;</span>: len(support) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;support_strength&#34;</span>: calculate_support_strength(support),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;contradicted&#34;</span>: len(contradictions) <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;sources&#34;</span>: [s<span style="color:#f92672">.</span>metadata <span style="color:#66d9ef">for</span> s <span style="color:#f92672">in</span> support]
+</span></span><span style="display:flex;"><span>        })
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Annotate response with verification results</span>
+</span></span><span style="display:flex;"><span>    annotated_response <span style="color:#f92672">=</span> annotate_response(generated_response, verification_results)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> annotated_response
+</span></span></code></pre></div><hr>
+<h2 id="the-interaction-layer-making-it-user-friendly"><a href="#the-interaction-layer-making-it-user-friendly" class="header-anchor"></a><strong>The Interaction Layer: Making It User-Friendly</strong>
+</h2><p>The final component is the interaction layer—the interface between users and the underlying system.</p>
+<h3 id="agentic-models-for-user-interaction"><a href="#agentic-models-for-user-interaction" class="header-anchor"></a><strong>Agentic Models for User Interaction</strong>
+</h3><p>Implementation of an agentic approach where the model:</p>
+<ol>
+<li><strong>Interprets the user&rsquo;s question</strong> to understand intent</li>
+<li><strong>Formulates a retrieval strategy</strong> based on the question type</li>
+<li><strong>Executes the appropriate retrieval and summarization steps</strong></li>
+<li><strong>Generates a response</strong> with appropriate citations</li>
+<li><strong>Maintains conversation context</strong> for follow-up questions</li>
+</ol>
+<p>This agent-based approach allows the system to adapt its strategy based on the specific question rather than using a one-size-fits-all approach.</p>
+<h3 id="query-understanding-and-refinement"><a href="#query-understanding-and-refinement" class="header-anchor"></a><strong>Query Understanding and Refinement</strong>
+</h3><p>Not all user queries are well-formed:</p>
+<ol>
+<li><strong>Query classification:</strong> Identifying the type of question (factual, analytical, comparative)</li>
+<li><strong>Query expansion:</strong> Adding relevant terms to improve retrieval</li>
+<li><strong>Ambiguity resolution:</strong> Identifying and clarifying ambiguous terms</li>
+<li><strong>Decomposition:</strong> Breaking complex questions into simpler sub-questions</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">process_query</span>(query, conversation_history<span style="color:#f92672">=</span><span style="color:#66d9ef">None</span>):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Classify query type</span>
+</span></span><span style="display:flex;"><span>    query_type <span style="color:#f92672">=</span> classify_query(query)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Expand query based on type</span>
+</span></span><span style="display:flex;"><span>    expanded_query <span style="color:#f92672">=</span> expand_query(query, query_type)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Check for ambiguities</span>
+</span></span><span style="display:flex;"><span>    ambiguities <span style="color:#f92672">=</span> detect_ambiguities(expanded_query)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> ambiguities <span style="color:#f92672">and</span> <span style="color:#f92672">not</span> conversation_history:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># If this is the first interaction, ask for clarification</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> generate_clarification_request(ambiguities)
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># For complex queries, decompose into sub-questions</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> query_type <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;complex&#34;</span>:
+</span></span><span style="display:flex;"><span>        sub_questions <span style="color:#f92672">=</span> decompose_query(expanded_query)
+</span></span><span style="display:flex;"><span>        sub_answers <span style="color:#f92672">=</span> [retrieve_and_generate(sq) <span style="color:#66d9ef">for</span> sq <span style="color:#f92672">in</span> sub_questions]
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> synthesize_answers(sub_answers, query)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#75715e"># Standard retrieval and generation</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> retrieve_and_generate(expanded_query)
+</span></span></code></pre></div><h3 id="presenting-results-with-citations"><a href="#presenting-results-with-citations" class="header-anchor"></a><strong>Presenting Results with Citations</strong>
+</h3><p>The presentation of results is critical for usability:</p>
+<ol>
+<li><strong>Structures responses logically</strong> with clear sections</li>
+<li><strong>Includes inline citations</strong> linked to source documents</li>
+<li><strong>Provides confidence indicators</strong> for different parts of the response</li>
+<li><strong>Offers direct quotes from source documents</strong> for key points</li>
+<li><strong>Includes a summary of sources used</strong> at the end</li>
+</ol>
+<h3 id="handling-follow-up-questions"><a href="#handling-follow-up-questions" class="header-anchor"></a><strong>Handling Follow-up Questions</strong>
+</h3><p>One of the most powerful features is the ability to handle follow-up questions with full context awareness:</p>
+<ol>
+<li><strong>Maintaining conversation history</strong> across interactions</li>
+<li><strong>Resolving references</strong> to previous questions and answers</li>
+<li><strong>Reusing relevant retrievals</strong> from previous questions</li>
+<li><strong>Tracking the user&rsquo;s focus</strong> as it shifts during conversation</li>
+</ol>
+<p>This creates a much more natural interaction pattern where users can drill down into topics of interest.</p>
+<hr>
+<h2 id="making-it-modular-and-scalable"><a href="#making-it-modular-and-scalable" class="header-anchor"></a><strong>Making It Modular and Scalable</strong>
+</h2><p>The key to making this framework reusable across different domains is its modular architecture.</p>
+<h3 id="component-based-architecture"><a href="#component-based-architecture" class="header-anchor"></a><strong>Component-Based Architecture</strong>
+</h3><p>This framework is built around clearly defined components:</p>
+<ol>
+<li><strong>Document Processor:</strong> Handles ingestion and chunking</li>
+<li><strong>Embedding Service:</strong> Manages vector embeddings</li>
+<li><strong>Retrieval Engine:</strong> Finds relevant information</li>
+<li><strong>Summarization Service:</strong> Applies LexRank and other techniques</li>
+<li><strong>Response Generator:</strong> Creates the final output</li>
+<li><strong>Interaction Manager:</strong> Handles user queries and conversation</li>
+</ol>
+<p>Each component has well-defined interfaces, allowing them to be replaced or modified independently.</p>
+<h3 id="separation-of-concerns"><a href="#separation-of-concerns" class="header-anchor"></a><strong>Separation of Concerns</strong>
+</h3><p>This modular approach enables clear separation of concerns:</p>
+<ol>
+<li><strong>Domain-specific knowledge</strong> is contained in the document corpus</li>
+<li><strong>Retrieval logic</strong> is independent of document content</li>
+<li><strong>Summarization techniques</strong> can be swapped based on domain needs</li>
+<li><strong>Interaction patterns</strong> can be customized for different user types</li>
+</ol>
+<p>This makes the framework adaptable to different domains without rewriting core components.</p>
+<h3 id="configuration-driven-customization"><a href="#configuration-driven-customization" class="header-anchor"></a><strong>Configuration-Driven Customization</strong>
+</h3><p>Rather than hardcoding domain-specific logic, we can use configuration files to customize behavior:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">domain_config</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">name</span>: <span style="color:#e6db74">&#34;legal_research&#34;</span>
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Document processing</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">chunking</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">strategy</span>: <span style="color:#e6db74">&#34;hierarchical&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">section_delimiters</span>: [<span style="color:#e6db74">&#34;##&#34;</span>, <span style="color:#e6db74">&#34;Section&#34;</span>, <span style="color:#e6db74">&#34;Article&#34;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">max_chunk_size</span>: <span style="color:#ae81ff">1000</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Embedding</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">embedding</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">model</span>: <span style="color:#e6db74">&#34;text-embedding-3-large&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">dimensions</span>: <span style="color:#ae81ff">1536</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Retrieval</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">retrieval</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">vector_db</span>: <span style="color:#e6db74">&#34;weaviate&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">top_k</span>: <span style="color:#ae81ff">25</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">reranking</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">filters</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">metadata_field</span>: <span style="color:#e6db74">&#34;jurisdiction&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#f92672">metadata_field</span>: <span style="color:#e6db74">&#34;document_type&#34;</span>
+</span></span><span style="display:flex;"><span>        <span style="color:#f92672">required</span>: <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Summarization</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">summarization</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">primary_method</span>: <span style="color:#e6db74">&#34;lexrank&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">extractive_ratio</span>: <span style="color:#ae81ff">0.7</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">min_sentences</span>: <span style="color:#ae81ff">3</span>
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e"># Response generation</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">response</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">citation_format</span>: <span style="color:#e6db74">&#34;bluebook&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">include_confidence</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">max_length</span>: <span style="color:#ae81ff">1000</span>
+</span></span></code></pre></div><p>This configuration-driven approach allows quick adaptation to new domains without code changes.</p>
+<h3 id="deployment-patterns"><a href="#deployment-patterns" class="header-anchor"></a><strong>Deployment Patterns</strong>
+</h3><p>The framework supports several deployment patterns:</p>
+<ol>
+<li><strong>Standalone application:</strong> For self-contained deployments</li>
+<li><strong>Microservices architecture:</strong> For scalable cloud deployments</li>
+<li><strong>Hybrid deployment:</strong> With sensitive components on-premises</li>
+<li><strong>Serverless functions:</strong> For cost-effective scaling</li>
+</ol>
+<p>This framework can be deployed in both cloud and on-premises environments.</p>
+<hr>
+<h2 id="implementation-case-study-legal-document-analysis"><a href="#implementation-case-study-legal-document-analysis" class="header-anchor"></a><strong>Implementation Case Study: Legal Document Analysis</strong>
+</h2><p>To illustrate the framework in action, let&rsquo;s look at our implementation for a legal research application.</p>
+<h3 id="the-challenge"><a href="#the-challenge" class="header-anchor"></a><strong>The Challenge</strong>
+</h3><p>A law firm needed to analyze thousands of contracts, case law documents, and regulatory filings to:</p>
+<ul>
+<li>Identify relevant precedents for specific legal questions</li>
+<li>Extract key clauses and provisions from contracts</li>
+<li>Track regulatory changes affecting client obligations</li>
+<li>Generate properly cited legal memos</li>
+</ul>
+<h3 id="implementation-details"><a href="#implementation-details" class="header-anchor"></a><strong>Implementation Details</strong>
+</h3><ol>
+<li>
+<p><strong>Document Processing:</strong></p>
+<ul>
+<li>Specialized legal document parsers for different document types</li>
+<li>Hierarchical chunking based on legal document structure</li>
+<li>Entity recognition for legal entities, citations, and provisions</li>
+</ul>
+</li>
+<li>
+<p><strong>Retrieval Strategy:</strong></p>
+<ul>
+<li>Primary focus on authoritative sources</li>
+<li>Jurisdiction-based filtering</li>
+<li>Temporal awareness for legal precedents</li>
+<li>Citation graph analysis</li>
+</ul>
+</li>
+<li>
+<p><strong>Summarization Approach:</strong></p>
+<ul>
+<li>Heavy emphasis on extractive summarization</li>
+<li>Preservation of exact legal language</li>
+<li>Structured output following legal memo formats</li>
+</ul>
+</li>
+<li>
+<p><strong>User Interaction:</strong></p>
+<ul>
+<li>Query templates for common legal questions</li>
+<li>Explicit confidence indicators</li>
+<li>Full citation tracking</li>
+<li>Interactive exploration of legal reasoning</li>
+</ul>
+</li>
+</ol>
+<h3 id="lessons-learned"><a href="#lessons-learned" class="header-anchor"></a><strong>Lessons Learned</strong>
+</h3><ol>
+<li><strong>Domain-specific chunking is critical:</strong> Legal documents required specialized chunking based on their structure</li>
+<li><strong>Authority matters more than recency:</strong> Unlike some domains, older but more authoritative sources often take precedence</li>
+<li><strong>Citation precision is non-negotiable:</strong> Even small citation errors significantly reduced trust in the system</li>
+<li><strong>Explanation is as important as answers:</strong> Attorneys valued the system&rsquo;s ability to explain its reasoning</li>
+</ol>
+<hr>
+<h2 id="final-thoughts-building-your-own-framework"><a href="#final-thoughts-building-your-own-framework" class="header-anchor"></a><strong>Final Thoughts: Building Your Own Framework</strong>
+</h2><p>Here are the key takeaways for building your own implementation:</p>
+<ol>
+<li><strong>Go beyond basic RAG:</strong> Combine multiple techniques like LexRank for better results</li>
+<li><strong>Invest in document processing:</strong> The quality of your chunking and metadata extraction directly impacts everything downstream</li>
+<li><strong>Make modularity a priority:</strong> Design for reusability across domains from the start</li>
+<li><strong>Focus on attribution:</strong> Proper citation and source tracking builds trust and enables verification</li>
+<li><strong>Adapt to your domain:</strong> Customize retrieval and summarization strategies based on domain-specific needs</li>
+</ol>
+<p>The most exciting aspect of this approach is its adaptability. Variations of this framework can be deployed across legal, medical, financial, and technical documentation domains—each time adapting the components rather than starting from scratch.</p>
+<p>If you&rsquo;re dealing with large document collections and need more than just basic search or generic AI responses, this modular approach combining RAG, LexRank, and agentic models provides a powerful foundation that can be tailored to your specific needs.</p>
+<p>The future of document intelligence isn&rsquo;t just about finding information—it&rsquo;s about understanding it, synthesizing it, and presenting it in ways that augment human expertise rather than just attempting to replace it.</p>
+<hr>
+<p><em>This post draws on my experience building document intelligence systems across multiple domains. The approaches outlined here have been implemented in production environments handling millions of documents and thousands of daily queries.</em></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/generative-ai/">Generative AI</a>
+        
+            <a href="/tags/rag/">RAG</a>
+        
+            <a href="/tags/lexrank/">LexRank</a>
+        
+            <a href="/tags/vector-databases/">Vector Databases</a>
+        
+            <a href="/tags/document-retrieval/">Document Retrieval</a>
+        
+            <a href="/tags/legal-tech/">Legal Tech</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 My Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

@@ -99,7 +99,6 @@ The EU's AI Act now has special rules for "high-risk autonomous agents." Coming 
 1. **Start with Low-Risk Wins**
    - Try customer support triage (not life-or-death medical stuff)
    - Maybe IT asset management (not your core security)
-
 2. **Metrics That Actually Matter**
    - Track your "Agent Efficiency Ratio" - how often humans need to step in
    - Monitor "Swarm Coherence" - are your agents working together or fighting?

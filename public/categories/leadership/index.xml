@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Leadership on My Blog</title>
+        <link>http://192.168.100.63:1313/categories/leadership/</link>
+        <description>Recent content in Leadership on My Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Tue, 18 Mar 2025 13:37:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/leadership/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>What My 1 and 4-Year-Olds Taught Me About Leading Data Teams</title>
+        <link>http://192.168.100.63:1313/datascience/kids/</link>
+        <pubDate>Tue, 18 Mar 2025 13:37:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/datascience/kids/</guid>
+        <description>&lt;h1 id=&#34;what-my-1-and-4-year-olds-taught-me-about-leading-data-teams&#34;&gt;&lt;a href=&#34;#what-my-1-and-4-year-olds-taught-me-about-leading-data-teams&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;What My 1 and 4-Year-Olds Taught Me About Leading Data Teams&lt;/strong&gt;
+&lt;/h1&gt;&lt;p&gt;I never expected my most profound leadership training would come from two people who can&amp;rsquo;t tie their own shoes.&lt;/p&gt;
+&lt;p&gt;Before having kids, I thought I understood empathetic leadership. I&amp;rsquo;d read the books, attended the workshops, and prided myself on being a &amp;ldquo;people-first&amp;rdquo; data leader. Then my children arrived and completely rewrote my understanding of what it means to truly connect with and guide others.&lt;/p&gt;
+&lt;p&gt;The parallels between raising young children and leading data teams aren&amp;rsquo;t immediately obvious. One group builds with blocks while the other builds with code. One group has meltdowns over broken crayons while the other&amp;hellip; well, sometimes has meltdowns over broken code.&lt;/p&gt;
+&lt;p&gt;But after four years of simultaneously growing as a parent and a leader, I&amp;rsquo;ve realized that my 1-year-old daughter and 4-year-old son have become my most insightful leadership coaches. They&amp;rsquo;ve taught me lessons about empathy, creativity, and wonder that have fundamentally changed how I lead data teams.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-empathy-imperative-understanding-before-solving&#34;&gt;&lt;a href=&#34;#the-empathy-imperative-understanding-before-solving&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The Empathy Imperative: Understanding Before Solving&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;My 1-year-old daughter can&amp;rsquo;t tell me what&amp;rsquo;s wrong. When she&amp;rsquo;s upset, I have to become a detective—is she hungry? Tired? In pain? Frustrated by the limitations of her tiny body? The process requires putting aside my own agenda and fully immersing myself in her experience.&lt;/p&gt;
+&lt;p&gt;This has completely transformed how I approach team challenges.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What my children taught me:&lt;/strong&gt; True empathy isn&amp;rsquo;t just acknowledging feelings—it&amp;rsquo;s the committed practice of seeing the world through someone else&amp;rsquo;s eyes before attempting to solve their problems.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it changed my leadership:&lt;/strong&gt; When a data scientist comes to me with a problem, my first response used to be solutions-oriented. Now, I start with understanding:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Walk me through how you&amp;rsquo;re experiencing this challenge&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;What parts of this are most frustrating for you?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;What have you already tried?&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When we implemented this &amp;ldquo;understand first&amp;rdquo; approach across our data leadership team, our employee satisfaction scores around &amp;ldquo;feeling heard&amp;rdquo; increased by 42% in six months. More importantly, the solutions we eventually developed actually addressed the real problems, not just the symptoms.&lt;/p&gt;
+&lt;p&gt;The most powerful question I&amp;rsquo;ve learned to ask both my children and my team: &amp;ldquo;Can you help me understand what you&amp;rsquo;re seeing right now?&amp;rdquo; This simple question has prevented countless misalignments and built deeper trust than any technical solution could have achieved.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;embracing-the-power-of&#34;&gt;&lt;a href=&#34;#embracing-the-power-of&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Embracing the Power of &amp;ldquo;Why?&amp;rdquo;: Curiosity as a Leadership Tool&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;My 4-year-old son asks &amp;ldquo;why&amp;rdquo; approximately 400 times per day (I&amp;rsquo;ve counted). It can be exhausting, but it&amp;rsquo;s also a masterclass in challenging assumptions.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Why is the sky blue?&amp;rdquo;
+&amp;ldquo;Why do we have to wear shoes?&amp;rdquo;
+&amp;ldquo;Why can&amp;rsquo;t dogs talk?&amp;rdquo;
+&amp;ldquo;Why do we use this database?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;That last one he hasn&amp;rsquo;t asked yet, but the spirit of the question has changed how I approach data strategy.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What my children taught me:&lt;/strong&gt; Relentless curiosity breaks through calcified thinking and opens up possibilities that expertise often blinds us to.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it changed my leadership:&lt;/strong&gt; I&amp;rsquo;ve started deliberately channeling my inner 4-year-old in strategy meetings, asking fundamental &amp;ldquo;why&amp;rdquo; questions that we&amp;rsquo;ve long stopped considering:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Why do we structure data this way?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Why is this report necessary?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Why do we believe this approach is best?&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These questions initially met resistance—they can feel naïve or challenging to subject matter experts. But they&amp;rsquo;ve led to some of our most significant breakthroughs. One simple &amp;ldquo;why do we run this process weekly instead of continuously?&amp;rdquo; led to a complete redesign that improved data freshness by 80%.&lt;/p&gt;
+&lt;p&gt;I now build &amp;ldquo;fundamental questioning&amp;rdquo; sessions into our quarterly planning, where we deliberately examine our basic assumptions. The only rule: respond to every &amp;ldquo;why&amp;rdquo; with genuine consideration, not defensiveness.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-wonder-of-discovery-learning-alongside-your-team&#34;&gt;&lt;a href=&#34;#the-wonder-of-discovery-learning-alongside-your-team&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The Wonder of Discovery: Learning Alongside Your Team&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;Watching my 1-year-old daughter discover that shadows exist or my 4-year-old son realize he can mix blue and yellow paint to make green is a reminder of how powerful shared discovery can be.&lt;/p&gt;
+&lt;p&gt;Their wide-eyed wonder at the world has made me reconsider what it means to be a leader who doesn&amp;rsquo;t have all the answers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What my children taught me:&lt;/strong&gt; The joy of discovery is amplified when shared, and there&amp;rsquo;s unique power in learning alongside others rather than teaching from a position of expertise.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it changed my leadership:&lt;/strong&gt; I&amp;rsquo;ve deliberately created more opportunities for collaborative exploration where I&amp;rsquo;m not the expert:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Joint learning sessions where we tackle new technologies together&lt;/li&gt;
+&lt;li&gt;Research spikes where the team explores a question without predetermined answers&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;I don&amp;rsquo;t know, let&amp;rsquo;s find out&amp;rdquo; becoming a standard part of my leadership vocabulary&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;When we implemented a new computer vision system, rather than bringing in external experts, we formed a cross-functional learning team. I participated not as a leader but as a fellow learner. The project took slightly longer than it might have with outside experts, but the team&amp;rsquo;s capability and confidence grew exponentially.&lt;/p&gt;
+&lt;p&gt;The most successful leaders I know now aren&amp;rsquo;t those with the most expertise—they&amp;rsquo;re those who can create environments where collective discovery thrives.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;embracing-imperfection-the-freedom-to-try-and-fail&#34;&gt;&lt;a href=&#34;#embracing-imperfection-the-freedom-to-try-and-fail&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Embracing Imperfection: The Freedom to Try and Fail&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;My 4-year-old son recently spent 30 minutes creating what he described as a &amp;ldquo;beautiful castle&amp;rdquo; out of magnet tiles. When he accidentally knocked it over, I braced for tears. Instead, he paused, said &amp;ldquo;Now I can build something even better!&amp;rdquo; and started again.&lt;/p&gt;
+&lt;p&gt;His resilience wasn&amp;rsquo;t innate—it developed because we&amp;rsquo;ve created an environment where mistakes are treated as learning opportunities, not failures.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What my children taught me:&lt;/strong&gt; Creativity and innovation require psychological safety—the freedom to try, fail, learn, and try again without shame.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;How it changed my leadership:&lt;/strong&gt; I&amp;rsquo;ve become much more transparent about my own mistakes and deliberate about how we respond to failure:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;I regularly share my own &amp;ldquo;learning moments&amp;rdquo; (corporate-speak for mistakes)&lt;/li&gt;
+&lt;li&gt;We&amp;rsquo;ve implemented &amp;ldquo;failure retrospectives&amp;rdquo; that focus on learning, not blame&lt;/li&gt;
+&lt;li&gt;We celebrate bold attempts, even when they don&amp;rsquo;t succeed&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;After one particularly visible project failure, rather than looking for accountability, I guided the team through a learning-focused retrospective. The insights from that session informed a second attempt that became one of our most successful initiatives. More importantly, the team&amp;rsquo;s willingness to take smart risks increased dramatically.&lt;/p&gt;
+&lt;p&gt;The data teams that innovate most effectively aren&amp;rsquo;t those with the smartest individuals—they&amp;rsquo;re those where people feel safe enough to propose imperfect ideas and learn from inevitable setbacks.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;final-thoughts-the-unexpected-leadership-curriculum&#34;&gt;&lt;a href=&#34;#final-thoughts-the-unexpected-leadership-curriculum&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Final Thoughts: The Unexpected Leadership Curriculum&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;Parenthood offers a leadership masterclass if we&amp;rsquo;re willing to see the lessons. My children have taught me that the most powerful leadership tools aren&amp;rsquo;t technical expertise or strategic brilliance—they&amp;rsquo;re human connection, curiosity, shared discovery, and psychological safety.&lt;/p&gt;
+&lt;p&gt;The best data leaders I know:&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;Lead with empathy first, solutions second.&lt;/strong&gt; They understand before they solve.&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;Maintain childlike curiosity.&lt;/strong&gt; They ask fundamental questions that challenge basic assumptions.&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;Share in discovery.&lt;/strong&gt; They learn alongside their teams rather than always teaching from expertise.&lt;/p&gt;
+&lt;p&gt;✅ &lt;strong&gt;Create safety for imperfection.&lt;/strong&gt; They build environments where creativity can flourish through iteration and learning.&lt;/p&gt;
+&lt;p&gt;These principles aren&amp;rsquo;t just nice-to-haves—they&amp;rsquo;re competitive advantages. In a field where technical skills are increasingly commoditized, the ability to build truly human-centered teams is what separates good data organizations from great ones.&lt;/p&gt;
+&lt;p&gt;So if you find your leadership approach needs refreshing, you might find your best teachers aren&amp;rsquo;t in the boardroom or on the bestseller list. They might be building block towers and asking &amp;ldquo;why&amp;rdquo; for the hundredth time today.&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;This post draws on my dual journey as a parent and data leader. The approaches outlined here have transformed how I build and lead teams, creating environments where both people and innovation can thrive.&lt;/em&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

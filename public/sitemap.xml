@@ -2,28 +2,73 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://192.168.100.63:1313/categories/artificial-intelligence/</loc>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/genaiframework/</loc>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
     <loc>http://192.168.100.63:1313/categories/</loc>
-    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/</loc>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/document-processing/</loc>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/document-retrieval/</loc>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/generative-ai/</loc>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/legal-tech/</loc>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/lexrank/</loc>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/</loc>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/rag/</loc>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/</loc>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/vector-databases/</loc>
+    <lastmod>2025-03-21T02:08:37+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/creativity/</loc>
+    <lastmod>2025-03-18T13:37:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/data-science/</loc>
+    <lastmod>2025-03-18T13:37:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/data-teams/</loc>
+    <lastmod>2025-03-18T13:37:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/empathy/</loc>
+    <lastmod>2025-03-18T13:37:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/leadership/</loc>
+    <lastmod>2025-03-18T13:37:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/leadership/</loc>
+    <lastmod>2025-03-18T13:37:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/parenting/</loc>
+    <lastmod>2025-03-18T13:37:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/kids/</loc>
+    <lastmod>2025-03-18T13:37:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/collaboration/</loc>
     <lastmod>2025-03-17T03:00:30+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/categories/data-science/</loc>
-    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/tags/data-science/</loc>
-    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/datascience/</loc>
-    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/tags/leadership/</loc>
-    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/</loc>
-    <lastmod>2025-03-17T03:00:30+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/tags/</loc>
     <lastmod>2025-03-17T03:00:30+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/team-culture/</loc>
@@ -283,5 +328,11 @@
   </url><url>
     <loc>http://192.168.100.63:1313/tags/storage/</loc>
     <lastmod>2025-03-13T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/buildanagent/</loc>
+    <lastmod>2024-03-29T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/datascience/agenticai/</loc>
+    <lastmod>2024-03-15T00:00:00+00:00</lastmod>
   </url>
 </urlset>

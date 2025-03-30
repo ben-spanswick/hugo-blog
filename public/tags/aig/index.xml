@@ -1,19 +1,55 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>AIG on My Blog</title>
-    <link>http://192.168.100.63:1313/tags/aig/</link>
-    <description>Recent content in AIG on My Blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://192.168.100.63:1313/tags/aig/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>AIG: The Dumb Smart Thing That Might Change Everything</title>
-      <link>http://192.168.100.63:1313/musings/agi/</link>
-      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://192.168.100.63:1313/musings/agi/</guid>
-      <description>&lt;h1 id=&#34;agi-the-dumb-smart-thing-that-might-change-everything&#34;&gt;&lt;strong&gt;AGI: The Dumb Smart Thing That Might Change Everything&lt;/strong&gt;&lt;/h1&gt;&#xA;&lt;p&gt;Every few months, a new AI breakthrough is hailed as a step toward Artificial General Intelligence (AGI), the fabled &amp;ldquo;thinking machine&amp;rdquo; that could match or surpass human intelligence. Lately, I’ve been feeling a mix of excitement and unease about the whole thing. The potential is staggering, but so are the risks. And frankly, right now, AI is still just dumb enough that I’m not scared—yet.&lt;/p&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>AIG on My Blog</title>
+        <link>http://192.168.100.63:1313/tags/aig/</link>
+        <description>Recent content in AIG on My Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/aig/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>AIG: The Dumb Smart Thing That Might Change Everything</title>
+        <link>http://192.168.100.63:1313/musings/agi/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/musings/agi/</guid>
+        <description>&lt;h1 id=&#34;agi-the-dumb-smart-thing-that-might-change-everything&#34;&gt;&lt;a href=&#34;#agi-the-dumb-smart-thing-that-might-change-everything&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;AGI: The Dumb Smart Thing That Might Change Everything&lt;/strong&gt;
+&lt;/h1&gt;&lt;p&gt;Every few months, a new AI breakthrough is hailed as a step toward Artificial General Intelligence (AGI), the fabled &amp;ldquo;thinking machine&amp;rdquo; that could match or surpass human intelligence. Lately, I’ve been feeling a mix of excitement and unease about the whole thing. The potential is staggering, but so are the risks. And frankly, right now, AI is still just dumb enough that I’m not scared—yet.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-agi-feels-more-inevitable-than-ever&#34;&gt;&lt;a href=&#34;#why-agi-feels-more-inevitable-than-ever&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Why AGI Feels More Inevitable Than Ever&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;I read a &lt;a class=&#34;link&#34; href=&#34;https://www.nytimes.com/2025/03/14/technology/why-im-feeling-the-agi.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;recent NYT piece&lt;/a&gt; about AGI, and while I didn&amp;rsquo;t find it particularly shocking, it did reinforce something I’ve been thinking a lot about: &lt;strong&gt;AGI isn&amp;rsquo;t a question of if, but when.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;There are obvious technical hurdles—alignment, reasoning, self-improvement—but there’s also an unstoppable momentum. The smartest minds in the world are chasing it, billions of dollars are being thrown at it, and the breakthroughs are piling up. It’s only a matter of time before we move from &amp;ldquo;AI that&amp;rsquo;s pretty good at pattern recognition&amp;rdquo; to &amp;ldquo;AI that can actually think and plan in a way that feels human.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;That’s where things start to get weird.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-job-apocalypse-but-not-yours-yet&#34;&gt;&lt;a href=&#34;#the-job-apocalypse-but-not-yours-yet&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The Job Apocalypse (But Not Yours… Yet)&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;Most people’s first question about AGI is, “Will it take my job?” The answer is: probably not if you’re doing anything creative or deeply analytical. But if you’re in a &lt;strong&gt;non-creative back-office job—think bookkeeping, low-level legal work, customer support—then yeah, you should be paying attention.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The efficiency gains will be too tempting for corporations to ignore. Entire roles will be automated overnight, and that’s when conversations around &lt;strong&gt;Universal Basic Income (UBI)&lt;/strong&gt; will go from niche policy debates to mainstream survival strategies.&lt;/p&gt;
+&lt;p&gt;UBI was already an interesting concept when automation was picking off warehouse jobs—now imagine what happens when AI starts hollowing out middle-class knowledge work. Governments will have to start thinking about how to redistribute wealth when jobs as we know them start disappearing.&lt;/p&gt;
+&lt;p&gt;And it &lt;em&gt;will&lt;/em&gt; happen.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;chinas-ai-strategy-the-cheat-code-no-one-talks-about&#34;&gt;&lt;a href=&#34;#chinas-ai-strategy-the-cheat-code-no-one-talks-about&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;China’s AI Strategy: The Cheat Code No One Talks About&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;One of the biggest factors accelerating AGI isn’t just the rapid improvements in AI models—it’s how &lt;strong&gt;different countries approach AI development.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;China, for example, has a &lt;em&gt;huge&lt;/em&gt; advantage over the West. Sam Altman wasn’t wrong when he pointed out that China’s disregard for copyright and intellectual property means they can move much faster. They can scrape and train on everything without worrying about lawsuits, while Western AI companies tiptoe around legal minefields.&lt;/p&gt;
+&lt;p&gt;Then there’s the fact that China’s government is &lt;strong&gt;directly bankrolling AI research.&lt;/strong&gt; No need to worry about venture capital or short-term profit pressures—just an endless budget to push the technology forward. That’s how you end up with projects like &lt;strong&gt;Manus&lt;/strong&gt;, China’s latest AGI-like agent that’s supposedly the closest thing we’ve seen to real AGI.&lt;/p&gt;
+&lt;p&gt;If the US and Europe want to stay competitive, they’ll either have to &lt;strong&gt;rethink their AI regulations or accept that China will likely be first to AGI.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;ethical-agi-do-we-even-know-what-that-means&#34;&gt;&lt;a href=&#34;#ethical-agi-do-we-even-know-what-that-means&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Ethical AGI: Do We Even Know What That Means?&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;This is where things get murky. We can all agree that AGI should be developed &lt;strong&gt;ethically&lt;/strong&gt;, but what does that even mean?&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Should it be built to serve humanity or to be an independent entity?&lt;/li&gt;
+&lt;li&gt;Should it have rights if it becomes sentient?&lt;/li&gt;
+&lt;li&gt;Who gets to decide what an AGI is &lt;em&gt;allowed&lt;/em&gt; to do?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We already see bias issues with current AI—what happens when those biases get baked into an AGI that makes real decisions? Or worse, what if we create something truly independent and &lt;em&gt;lose control of it&lt;/em&gt; before we even understand what we&amp;rsquo;ve built?&lt;/p&gt;
+&lt;p&gt;I don’t know the answers. I don’t think anyone does. But the fact that we’re moving at breakneck speed without clear guidelines is, at best, &lt;strong&gt;reckless&lt;/strong&gt;.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;final-thoughts-why-im-not-freaking-out-yet&#34;&gt;&lt;a href=&#34;#final-thoughts-why-im-not-freaking-out-yet&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Final Thoughts: Why I’m Not Freaking Out (Yet)&lt;/strong&gt;
+&lt;/h2&gt;&lt;p&gt;Despite all this, I still &lt;em&gt;love&lt;/em&gt; AI.&lt;/p&gt;
+&lt;p&gt;Right now, it&amp;rsquo;s powerful, useful, and incredibly dumb in just the right ways. It can generate ideas, summarize complex papers, and automate some tedious tasks, but it &lt;strong&gt;doesn’t “think”&lt;/strong&gt;—not in a way that threatens human intelligence.&lt;/p&gt;
+&lt;p&gt;That’s what keeps me from losing sleep over AGI. Today’s AI is still just a really fancy autocomplete machine. But when that changes—when it stops just predicting the next word and starts &lt;em&gt;understanding&lt;/em&gt;—that’s when things get truly interesting.&lt;/p&gt;
+&lt;p&gt;And that’s when we might not be in control anymore.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>

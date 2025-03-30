@@ -1,0 +1,111 @@
+baseURL = "http://192.168.100.63/"
+title = "My Blog"
+theme = "stack"
+enableRobotsTXT = true
+defaultContentLanguage = "en"
+languageCode = "en-us"
+enableEmoji = true
+
+[params]
+  mainSections = ["datascience", "musings", "projects", "about"]
+  featuredImageField = "image"
+  rssFullContent = true
+  favicon = "/favicon.ico"
+  lastmod = "2025-03-15T00:00:00Z"
+
+  [params.footer]
+    since = 2024
+    customText = "Powered by Hugo & Stack Theme"
+
+  [params.dateFormat]
+    published = "Jan 02, 2006"
+    lastUpdated = "Jan 02, 2006 15:04 MST"
+
+  [params.sidebar]
+    compact = false
+    emoji = "💾"  # Floppy Disk emoji
+    subtitle = "Exploring Tech, Homelabs, & Self-Hosting"
+
+    [params.sidebar.avatar]
+      enabled = true
+      local = false
+      src = "/img/headshot.png"  # Ensure image exists in /static/img/
+
+  [params.article]
+    headingAnchor = true
+    math = true
+    toc = true
+    readingTime = true
+
+    [params.article.license]
+      enabled = true
+      default = "Licensed under CC BY-NC-SA 4.0"
+
+  [params.colorScheme]
+    toggle = true
+    default = "dark"
+
+  [params.opengraph.twitter]
+    site = "@yourtwitter"
+    card = "summary_large_image"
+
+  [params.defaultImage.opengraph]
+    enabled = true
+    local = false
+    src = "/images/default-thumbnail.png"
+
+  [params.imageProcessing.cover]
+    enabled = true
+  [params.imageProcessing.content]
+    enabled = true
+
+# Enable widgets for search, categories, and tag cloud in sidebar and homepage
+[params.widgets]
+  homepage = [
+    { type = "search" },
+    { type = "categories", params = { limit = 10 } },
+    { type = "tag-cloud", params = { limit = 10 } }
+  ]
+  page = [
+    { type = "search" },
+    { type = "categories", params = { limit = 10 } },
+    { type = "tag-cloud", params = { limit = 10 } }
+  ]
+
+# Enable search indexing
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
+[menu]
+  [[menu.main]]
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    name = "About Me"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    name = "Musings"
+    url = "/musings/"
+    weight = 3
+
+  [[menu.main]]
+    name = "Projects"
+    url = "/projects/"
+    weight = 4
+
+  [[menu.main]]
+    name = "Data Strategy"
+    url = "/datascience/"
+    weight = 5
+
+  [[menu.main]]
+    name = "Resume"
+    url = "Spanswick_Resume2025.pdf"
+    weight = 6

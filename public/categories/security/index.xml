@@ -1,19 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-  <channel>
-    <title>Security on My Blog</title>
-    <link>http://192.168.100.63:1313/categories/security/</link>
-    <description>Recent content in Security on My Blog</description>
-    <generator>Hugo</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate>
-    <atom:link href="http://192.168.100.63:1313/categories/security/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move</title>
-      <link>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</link>
-      <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-      <guid>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</guid>
-      <description>&lt;h2 id=&#34;the-cybersecurity-misdirection-why-ignoring-russia-is-a-risky-move&#34;&gt;The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move&lt;/h2&gt;&#xA;&lt;p&gt;The U.S. has made a pretty surprising decision: shifting focus away from Russian cyber threats. The idea seems to be that China is the bigger concern now, so Russia is taking a backseat. But here’s the thing—just because you stop watching someone doesn’t mean they stop watching you. (&lt;a href=&#34;https://www.theguardian.com/us-news/2025/feb/28/trump-russia-hacking-cyber-security?utm_source=chatgpt.com&#34;&gt;Read full article&lt;/a&gt;)&lt;/p&gt;&#xA;&lt;h3 id=&#34;out-of-sight-out-of-mind-not-exactly&#34;&gt;Out of Sight, Out of Mind? Not Exactly.&lt;/h3&gt;&#xA;&lt;p&gt;If you’ve been paying attention to cybersecurity over the past decade, you know Russia has been &lt;strong&gt;consistently&lt;/strong&gt; behind some of the most sophisticated and damaging cyber operations. &lt;strong&gt;SolarWinds, NotPetya, election meddling—you name it.&lt;/strong&gt; These weren’t just little experiments; they were calculated attacks that had major consequences. So why would we suddenly decide they’re not a top-tier concern anymore?&lt;/p&gt;</description>
-    </item>
-  </channel>
+    <channel>
+        <title>Security on My Blog</title>
+        <link>http://192.168.100.63:1313/categories/security/</link>
+        <description>Recent content in Security on My Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/security/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move</title>
+        <link>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</link>
+        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</guid>
+        <description>&lt;h2 id=&#34;the-cybersecurity-misdirection-why-ignoring-russia-is-a-risky-move&#34;&gt;&lt;a href=&#34;#the-cybersecurity-misdirection-why-ignoring-russia-is-a-risky-move&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move
+&lt;/h2&gt;&lt;p&gt;The U.S. has made a pretty surprising decision: shifting focus away from Russian cyber threats. The idea seems to be that China is the bigger concern now, so Russia is taking a backseat. But here’s the thing—just because you stop watching someone doesn’t mean they stop watching you. (&lt;a class=&#34;link&#34; href=&#34;https://www.theguardian.com/us-news/2025/feb/28/trump-russia-hacking-cyber-security?utm_source=chatgpt.com&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Read full article&lt;/a&gt;)&lt;/p&gt;
+&lt;h3 id=&#34;out-of-sight-out-of-mind-not-exactly&#34;&gt;&lt;a href=&#34;#out-of-sight-out-of-mind-not-exactly&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Out of Sight, Out of Mind? Not Exactly.
+&lt;/h3&gt;&lt;p&gt;If you’ve been paying attention to cybersecurity over the past decade, you know Russia has been &lt;strong&gt;consistently&lt;/strong&gt; behind some of the most sophisticated and damaging cyber operations. &lt;strong&gt;SolarWinds, NotPetya, election meddling—you name it.&lt;/strong&gt; These weren’t just little experiments; they were calculated attacks that had major consequences. So why would we suddenly decide they’re not a top-tier concern anymore?&lt;/p&gt;
+&lt;p&gt;The logic, apparently, is that we need to focus on China’s growing cyber capabilities. And yes, China is a big player when it comes to espionage and intellectual property theft. But cybersecurity isn’t a zero-sum game. You don’t just swap out threats like an old phone upgrade. Ignoring Russia in favor of China assumes that one cancels out the other, which isn’t how cyber threats work.&lt;/p&gt;
+&lt;h3 id=&#34;the-risk-of-complacency&#34;&gt;&lt;a href=&#34;#the-risk-of-complacency&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Risk of Complacency
+&lt;/h3&gt;&lt;p&gt;Let’s put this in simple terms: if you know a burglar has been casing your house for years, would you stop locking your doors just because you heard about another break-in across town?&lt;/p&gt;
+&lt;p&gt;That’s the kind of flawed thinking at play here. Russia’s cyber activities haven’t stopped just because our focus has shifted. If anything, downplaying the threat could embolden them. Hackers—especially state-sponsored ones—aren’t waiting for permission to strike. They exploit &lt;strong&gt;gaps in attention, weak defenses, and lapses in policy.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;what-this-means-for-the-future&#34;&gt;&lt;a href=&#34;#what-this-means-for-the-future&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What This Means for the Future
+&lt;/h3&gt;&lt;p&gt;If the U.S. truly goes all-in on prioritizing China over Russia in cyber defense, a few things could happen:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;More unchecked Russian cyber activity&lt;/strong&gt; – With less scrutiny, Russian actors could ramp up operations, knowing they’re not the top priority.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Increased risk of coordinated threats&lt;/strong&gt; – What if China and Russia &lt;strong&gt;collaborate&lt;/strong&gt; on cyberattacks? They don’t need to be best friends to find common interests in weakening U.S. infrastructure.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Reaction instead of prevention&lt;/strong&gt; – Instead of proactively strengthening defenses, we may find ourselves in a position where we’re reacting to Russian cyberattacks &lt;em&gt;after&lt;/em&gt; they’ve already done damage.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;the-bottom-line&#34;&gt;&lt;a href=&#34;#the-bottom-line&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bottom Line
+&lt;/h3&gt;&lt;p&gt;The internet doesn’t have borders, and cyber warfare doesn’t operate on a neat ranking system where one country gets priority over another. Both Russia and China (and others) pose serious threats, and treating cybersecurity like a geopolitical popularity contest is &lt;strong&gt;a recipe for disaster.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The U.S. should absolutely focus on China’s cyber strategy—but not at the cost of ignoring a very real, very active, and very capable Russian threat. If history has taught us anything, it’s that underestimating an adversary tends to backfire. And in cybersecurity, the cost of getting it wrong isn’t just lost data—it’s national security.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
 </rss>
