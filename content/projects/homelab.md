@@ -8,7 +8,7 @@ weight: 1
 draft: false
 ---
 
-![Homelab Diagram](/static/img/Homelab.png)
+![Homelab Diagram](/static/img/HL.jpg)
 
 # Building My First Homelab: Reflections, Stack, and Next Steps
 
