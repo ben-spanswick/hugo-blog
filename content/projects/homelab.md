@@ -5,7 +5,7 @@ description: "My first ever homelab diagram, hardware reflections, and current s
 tags: ["homelab", "self-hosting", "networking", "AI", "hardware"]
 categories: ["Self-Hosting", "Hardware"]
 weight: 1
-featuredImage: /img/HL.jpg
+featured: "/img/HL.jpg"
 draft: false
 ---
 
