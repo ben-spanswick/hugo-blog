@@ -7,121 +7,181 @@ tags: ["leadership", "parenting", "data teams", "empathy", "creativity"]
 description: "Leadership lessons from the unexpected teachers at home"
 ---
 
-# **What My 1 and 4-Year-Olds Taught Me About Leading Data Teams**
+# My Kids Accidentally Made Me a Better Data Leader
 
-I never expected my most profound leadership training would come from two people who can't tie their own shoes.
-
-Before having kids, I thought I understood empathetic leadership. I'd read the books, attended the workshops, and prided myself on being a "people-first" data leader. Then my children arrived and completely rewrote my understanding of what it means to truly connect with and guide others.
-
-The parallels between raising young children and leading data teams aren't immediately obvious. One group builds with blocks while the other builds with code. One group has meltdowns over broken crayons while the other... well, sometimes has meltdowns over broken code.
-
-But after four years of simultaneously growing as a parent and a leader, I've realized that my 1-year-old daughter and 4-year-old son have become my most insightful leadership coaches. They've taught me lessons about empathy, creativity, and wonder that have fundamentally changed how I lead data teams.
+*What a 1-year-old and 4-year-old taught me about managing teams*
 
 ---
 
-## **The Empathy Imperative: Understanding Before Solving**
+I thought I had leadership figured out. Read all the right books, attended the workshops, considered myself pretty good with people. Then I became a dad and realized I knew absolutely nothing.
 
-My 1-year-old daughter can't tell me what's wrong. When she's upset, I have to become a detective—is she hungry? Tired? In pain? Frustrated by the limitations of her tiny body? The process requires putting aside my own agenda and fully immersing myself in her experience.
+My 1-year-old daughter and 4-year-old son don't care about my MBA or how many data scientists I've managed. They just want me to understand them, be curious with them, and not lose my mind when things go sideways.
 
-This has completely transformed how I approach team challenges.
+Turns out, that's exactly what my data teams needed too.
 
-**What my children taught me:** True empathy isn't just acknowledging feelings—it's the committed practice of seeing the world through someone else's eyes before attempting to solve their problems.
+After four years of fumbling through both parenting and leadership simultaneously, I've discovered that toddlers make surprisingly good leadership coaches. They've completely changed how I think about empathy, curiosity, and creating safe spaces for people to grow.
 
-**How it changed my leadership:** When a data scientist comes to me with a problem, my first response used to be solutions-oriented. Now, I start with understanding:
-
-- "Walk me through how you're experiencing this challenge"
-- "What parts of this are most frustrating for you?"
-- "What have you already tried?"
-
-When we implemented this "understand first" approach across our data leadership team, our employee satisfaction scores around "feeling heard" increased by 42% in six months. More importantly, the solutions we eventually developed actually addressed the real problems, not just the symptoms.
-
-The most powerful question I've learned to ask both my children and my team: "Can you help me understand what you're seeing right now?" This simple question has prevented countless misalignments and built deeper trust than any technical solution could have achieved.
+Here's what they taught me.
 
 ---
 
-## **Embracing the Power of "Why?": Curiosity as a Leadership Tool**
+## Lesson 1: Actually Listen Before You Try to Fix Everything
 
-My 4-year-old son asks "why" approximately 400 times per day (I've counted). It can be exhausting, but it's also a masterclass in challenging assumptions.
+My 1-year-old can't tell me what's wrong when she's upset. She just cries. So I've become a detective - is she hungry? Tired? Frustrated that she can't reach her toy? I have to put aside whatever I was doing and really pay attention to understand what she needs.
+
+This completely changed how I handle team problems.
+
+**Before kids:** Someone comes to me with an issue, I immediately start problem-solving.
+
+**After kids:** I force myself to understand first, solve second.
+
+Instead of jumping to solutions, I started asking things like:
+- "Help me understand what you're experiencing"
+- "What's the most frustrating part of this for you?"
+- "Walk me through how this feels from your perspective"
+
+The difference has been huge. When we actually understand the real problem - not just the surface symptoms - our solutions actually work.
+
+One data scientist came to me complaining about "technical debt in our models." My old approach would have been to immediately discuss refactoring strategies. Instead, I asked her to help me understand what she was experiencing day-to-day.
+
+Turns out the real issue wasn't technical debt - it was that she felt like her work wasn't valued because leadership kept asking for quick fixes instead of letting her build things properly. Completely different problem, completely different solution.
+
+---
+
+## Lesson 2: Ask "Why" Like Your Job Depends on It
+
+My 4-year-old asks "why" about everything. And I mean everything.
 
 "Why is the sky blue?"
-"Why do we have to wear shoes?"
-"Why can't dogs talk?"
-"Why do we use this database?"
+"Why do cars have wheels?"
+"Why do we brush our teeth?"
 
-That last one he hasn't asked yet, but the spirit of the question has changed how I approach data strategy.
+It's exhausting, but it's also brilliant. He doesn't accept "that's just how things are" as an answer.
 
-**What my children taught me:** Relentless curiosity breaks through calcified thinking and opens up possibilities that expertise often blinds us to.
+I started bringing that same energy to work, and it's been a game-changer.
 
-**How it changed my leadership:** I've started deliberately channeling my inner 4-year-old in strategy meetings, asking fundamental "why" questions that we've long stopped considering:
+**In strategy meetings, I became the annoying person asking:**
+- "Why do we structure our data this way?"
+- "Why is this the process we follow?"
+- "Why do we think this approach is best?"
 
-- "Why do we structure data this way?"
-- "Why is this report necessary?"
-- "Why do we believe this approach is best?"
+At first, people were a bit put off. These questions can feel naive when you're deep in expertise. But they've led to some of our biggest breakthroughs.
 
-These questions initially met resistance—they can feel naïve or challenging to subject matter experts. But they've led to some of our most significant breakthroughs. One simple "why do we run this process weekly instead of continuously?" led to a complete redesign that improved data freshness by 80%.
+One simple "why do we run this report weekly instead of daily?" led us to redesign the entire process and improve data freshness by 80%. Sometimes the most basic questions unlock the biggest improvements.
 
-I now build "fundamental questioning" sessions into our quarterly planning, where we deliberately examine our basic assumptions. The only rule: respond to every "why" with genuine consideration, not defensiveness.
-
----
-
-## **The Wonder of Discovery: Learning Alongside Your Team**
-
-Watching my 1-year-old daughter discover that shadows exist or my 4-year-old son realize he can mix blue and yellow paint to make green is a reminder of how powerful shared discovery can be.
-
-Their wide-eyed wonder at the world has made me reconsider what it means to be a leader who doesn't have all the answers.
-
-**What my children taught me:** The joy of discovery is amplified when shared, and there's unique power in learning alongside others rather than teaching from a position of expertise.
-
-**How it changed my leadership:** I've deliberately created more opportunities for collaborative exploration where I'm not the expert:
-
-- Joint learning sessions where we tackle new technologies together
-- Research spikes where the team explores a question without predetermined answers
-- "I don't know, let's find out" becoming a standard part of my leadership vocabulary
-
-When we implemented a new computer vision system, rather than bringing in external experts, we formed a cross-functional learning team. I participated not as a leader but as a fellow learner. The project took slightly longer than it might have with outside experts, but the team's capability and confidence grew exponentially.
-
-The most successful leaders I know now aren't those with the most expertise—they're those who can create environments where collective discovery thrives.
+I now schedule "fundamental questioning" sessions quarterly where we deliberately challenge our basic assumptions. The only rule: every "why" gets a real answer, not defensiveness.
 
 ---
 
-## **Embracing Imperfection: The Freedom to Try and Fail**
+## Lesson 3: Learn Stuff Together (Even When You Don't Know the Answer)
 
-My 4-year-old son recently spent 30 minutes creating what he described as a "beautiful castle" out of magnet tiles. When he accidentally knocked it over, I braced for tears. Instead, he paused, said "Now I can build something even better!" and started again.
+Watching my daughter discover shadows for the first time, or my son realize he can mix colors to make new ones - the pure joy of discovery is infectious.
 
-His resilience wasn't innate—it developed because we've created an environment where mistakes are treated as learning opportunities, not failures.
+And here's the thing: I'm learning right alongside them. I don't have all the answers about why leaves change color or how airplanes stay up. We figure it out together.
 
-**What my children taught me:** Creativity and innovation require psychological safety—the freedom to try, fail, learn, and try again without shame.
+This completely changed how I approach new challenges at work.
 
-**How it changed my leadership:** I've become much more transparent about my own mistakes and deliberate about how we respond to failure:
+**Instead of feeling like I need to be the expert on everything, I started saying:** "I don't know, let's figure it out together."
 
-- I regularly share my own "learning moments" (corporate-speak for mistakes)
-- We've implemented "failure retrospectives" that focus on learning, not blame
-- We celebrate bold attempts, even when they don't succeed
+When we needed to implement a new computer vision system, instead of bringing in external consultants, I formed a learning team. I participated not as the leader with all the answers, but as someone equally curious about how this technology worked.
 
-After one particularly visible project failure, rather than looking for accountability, I guided the team through a learning-focused retrospective. The insights from that session informed a second attempt that became one of our most successful initiatives. More importantly, the team's willingness to take smart risks increased dramatically.
+The project took a bit longer than it might have with outside experts, but something amazing happened - the entire team's confidence and capability grew exponentially. They owned the solution because they built it together.
 
-The data teams that innovate most effectively aren't those with the smartest individuals—they're those where people feel safe enough to propose imperfect ideas and learn from inevitable setbacks.
+The best leaders I know aren't the ones with the most expertise. They're the ones who create environments where everyone gets to discover and learn together.
 
 ---
 
-## **Final Thoughts: The Unexpected Leadership Curriculum**
+## Lesson 4: Make It Safe to Mess Up
 
-Parenthood offers a leadership masterclass if we're willing to see the lessons. My children have taught me that the most powerful leadership tools aren't technical expertise or strategic brilliance—they're human connection, curiosity, shared discovery, and psychological safety.
+My son built this elaborate castle out of magnetic tiles last week. Spent 30 minutes on it, was so proud. Then he accidentally knocked it over while reaching for something.
 
-The best data leaders I know:
+I was ready for a meltdown. Instead, he looked at the pieces and said, "Now I can build something even cooler!" and started over.
 
-✅ **Lead with empathy first, solutions second.** They understand before they solve.
+That resilience didn't happen overnight. It developed because we've always treated mistakes as learning opportunities, not disasters.
 
-✅ **Maintain childlike curiosity.** They ask fundamental questions that challenge basic assumptions.
+I realized my data teams needed that same psychological safety.
 
-✅ **Share in discovery.** They learn alongside their teams rather than always teaching from expertise.
+**I started being more open about my own mistakes:**
+- Sharing my "learning moments" in team meetings
+- Running "failure retrospectives" focused on what we learned, not who screwed up
+- Celebrating bold attempts, even when they didn't work out
 
-✅ **Create safety for imperfection.** They build environments where creativity can flourish through iteration and learning.
+After one particularly visible project failure, instead of looking for someone to blame, I guided the team through a learning-focused retrospective. The insights from that session informed our next attempt, which became one of our most successful initiatives.
 
-These principles aren't just nice-to-haves—they're competitive advantages. In a field where technical skills are increasingly commoditized, the ability to build truly human-centered teams is what separates good data organizations from great ones.
-
-So if you find your leadership approach needs refreshing, you might find your best teachers aren't in the boardroom or on the bestseller list. They might be building block towers and asking "why" for the hundredth time today.
+More importantly, people started proposing bolder ideas because they weren't afraid of being punished for trying something that might not work.
 
 ---
 
-*This post draws on my dual journey as a parent and data leader. The approaches outlined here have transformed how I build and lead teams, creating environments where both people and innovation can thrive.*
+## What Changed (And What It Actually Looks Like)
+
+### Before Kids (The "Expert" Approach)
+- Jump straight to solutions when people bring problems
+- Feel pressure to have all the answers
+- Focus on individual performance and expertise
+- Treat mistakes as problems to be avoided
+
+### After Kids (The "Human" Approach)
+- Listen first, understand the real problem, then solve
+- Comfortable saying "I don't know, let's learn together"
+- Focus on team learning and collective capability
+- Treat mistakes as opportunities to get better
+
+### The Practical Results
+
+**Employee satisfaction around "feeling heard" went up 42%** in six months after we implemented the "understand first" approach.
+
+**Innovation attempts increased significantly** after we created psychological safety around failure.
+
+**Team capability grew faster** when we learned new technologies together instead of always bringing in outside experts.
+
+**Better solutions** emerged when we actually understood problems before trying to fix them.
+
+---
+
+## The Uncomfortable Truth About Technical Leadership
+
+Here's what parenting taught me that all the leadership books missed: 
+
+**Technical expertise isn't what makes great leaders.** The ability to create environments where people feel understood, curious, and safe to try things - that's what makes great leaders.
+
+**The smartest person in the room isn't always the best leader.** Sometimes the best leader is the person asking the most basic questions or admitting they don't know something.
+
+**Innovation requires psychological safety.** People won't propose creative solutions if they're afraid of looking stupid or being blamed when things don't work perfectly.
+
+**Real empathy is work.** It means putting aside your own agenda and really trying to understand someone else's experience. It's harder than technical problem-solving, but it's what actually moves teams forward.
+
+---
+
+## What This Looks Like in Practice
+
+### Start Every Problem Conversation with Understanding
+Instead of: "Here's how we should fix this"
+Try: "Help me understand what you're experiencing"
+
+### Ask Fundamental Questions Regularly  
+Instead of: Accepting "that's how we've always done it"
+Try: "Why is this the best approach for what we're trying to achieve?"
+
+### Learn Alongside Your Team
+Instead of: "I'll bring in an expert to teach you"
+Try: "I don't know this either - let's figure it out together"
+
+### Make Failure Safe
+Instead of: "Who made this mistake?"
+Try: "What can we learn from this that will help us next time?"
+
+---
+
+## The Bottom Line
+
+My kids don't care about my technical credentials or management philosophy. They just want me to pay attention, be curious, and create a safe space for them to grow and explore.
+
+Turns out, that's exactly what data teams need too.
+
+The best technical leaders aren't the ones with the most expertise - they're the ones who can create environments where everyone feels heard, stays curious, and isn't afraid to try new things.
+
+So if your leadership approach feels stale, maybe the best teachers aren't in the boardroom or business books. Maybe they're the ones asking "why" for the hundredth time today while building something amazing out of blocks.
+
+---
+
+*Four years into this parenting and leadership journey, I'm convinced that the soft skills matter way more than the technical ones. My kids keep teaching me that every day.*

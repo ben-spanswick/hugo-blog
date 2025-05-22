@@ -6,132 +6,130 @@ tags: ["nextcloud", "services", "self-hosted"]
 draft: false
 ---
 
-# Building a Self-Hosted Nextcloud: Architecture, Setup, and Lessons Learned
+# My Nextcloud Architecture: What I Learned Building a Proper Self-Hosted Setup
 
-## Introduction: How We Designed This Setup
-When setting up Nextcloud, I wanted to **strike a balance between speed, scalability, and reliability** while keeping everything self-hosted. That meant carefully choosing **where to store each component** and how to optimize performance. Here's the structure I landed on:
-
-1. **Nextcloud app runs on an SSD**  
-   - The core application and web interface should be as fast as possible. Running Nextcloud on an LXC container stored on a local SSD ensures fast load times.
-  
-2. **PostgreSQL for database performance**  
-   - Instead of MariaDB, I went with PostgreSQL, which offers better scalability and performance, especially when dealing with metadata-heavy queries.
-   - The database is stored on an HDD pool, where I have plenty of storage but still decent IOPS for database operations.
-
-3. **Large file storage on a separate HDD pool**  
-   - Instead of storing everything on SSDs, I mounted an HDD-based ZFS pool for bulk file storage (videos, documents, backups). This keeps costs down while still being performant enough for Nextcloud’s use case.
-
-4. **Backups scheduled to the NAS**  
-   - In the near future, I plan to automate nightly rsync backups from the HDD pool to a separate NAS, ensuring redundancy and data safety.
-
-With this approach, I get fast UI response times, efficient database operations, scalable storage for large files, and a solid backup plan.  
-
-**Now, let's dive into how we built it.**
+*Designing for performance, scalability, and sanity*
 
 ---
 
-## Why Nextcloud?
-Nextcloud is an open-source cloud storage platform that gives you complete control over your data. Unlike Google Drive or Dropbox, you aren’t locked into a proprietary ecosystem, and there are no monthly fees.  
+After running a janky Nextcloud install for way too long, I finally sat down to build something proper. The old setup was slow, unstable, and honestly kind of embarrassing when I'd try to share files with people. Time for a complete rebuild.
 
-Beyond just storing files, Nextcloud offers:
-- **File synchronization across devices**
-- **Built-in sharing and collaboration**
-- **A growing ecosystem of apps** (e.g., calendar, tasks, media streaming)
-- **Advanced security features** (encryption, 2FA, remote wipe)
+I spent a lot of time thinking about the architecture before diving in. Most Nextcloud guides just throw everything on one machine and call it done, but I wanted something that would actually scale and perform well. Here's what I came up with and why.
 
-For a homelab or self-hosted setup, **it’s one of the best tools available.**
+## The Architecture: Splitting Things Up Smart
 
----
+### Fast App, Cheap Storage
 
-## How We Set It Up
+The core insight was realizing that not everything needs the same performance profile. The Nextcloud application itself - all that PHP code handling web requests - needs to be snappy. But the actual files? A vacation video from three years ago doesn't need NVMe speeds.
 
-### 1. Choosing TurnKey LXC for Simplicity
-Rather than manually installing Apache, PHP, and configuring everything from scratch, I opted for a **TurnKey Linux (TKL) LXC container**. The benefits:
-- Comes with **Nextcloud pre-installed**  
-- **Pre-configured Apache, PHP, and Redis**
-- **Automated security updates**  
+So I split things up:
 
-**Why an LXC instead of a VM?**  
-LXCs are **more lightweight and efficient** than a full virtual machine. Since they share the Proxmox kernel, they **use fewer system resources** while still maintaining isolation.
+**Nextcloud app lives on SSD** - The core application runs in an LXC container on local SSD storage. This keeps the web interface responsive and file operations quick.
 
-**Resources Allocated:**
-- **4 vCPUs** – To handle Nextcloud’s PHP and web requests efficiently.
-- **8GB RAM** – Since Nextcloud benefits from caching, more RAM helps.
-- **8GB SSD root disk** – Only the core OS and application live here.
+**PostgreSQL gets its own space** - Database runs separately with enough resources to handle concurrent users without choking. I went with PostgreSQL instead of the usual MySQL/MariaDB choice for reasons I'll get into.
 
----
+**Bulk storage on HDD pool** - All the actual user files live on a ZFS pool built from cheaper spinning disks. Still plenty fast for streaming videos or downloading documents, but way more cost-effective.
 
-### 2. Using PostgreSQL Instead of MariaDB
-Nextcloud supports **both MariaDB and PostgreSQL**, but PostgreSQL is **better for high-concurrency workloads** and provides **stronger ACID compliance**.
+**Backups go to the NAS** - Eventually. I'm still working on automating this part, but the plan is nightly snapshots to a separate machine.
 
-**Why PostgreSQL?**
-- **Handles concurrent users better** – More efficient transaction management.
-- **Better JSON & search performance** – Useful for Nextcloud's metadata queries.
-- **More robust scaling** – PostgreSQL handles larger datasets with ease.
+This approach gives me fast UI response times without breaking the bank on storage costs.
 
-#### Setting Up PostgreSQL
-We installed it in a **separate LXC container**:
+## Why Nextcloud Over Everything Else?
+
+I looked at a bunch of options - ownCloud, Seafile, even just running straight WebDAV. But Nextcloud hit the sweet spot of features vs complexity.
+
+The file sync works reliably across all my devices, the sharing features are actually usable, and there's a decent ecosystem of apps for calendars, tasks, and other stuff. Plus it's actively developed and has good community support.
+
+Most importantly, I own all my data. No more wondering if Google is going to kill another service or if Dropbox is going to change their pricing again.
+
+## The Technical Decisions
+
+### TurnKey LXC: Standing on Shoulders
+
+I could have built everything from scratch, but why reinvent the wheel? The TurnKey Linux Nextcloud template comes with everything pre-configured - Apache, PHP, Redis, security hardening, the works.
+
+LXC over VM was a no-brainer. Same isolation benefits but way less overhead. Why waste RAM on a full kernel when you don't need it?
+
+I gave it 4 vCPUs and 8GB of RAM. Might seem like overkill, but Nextcloud actually benefits from having resources available for caching and concurrent operations.
+
+### PostgreSQL: The Database Choice
+
+This one might be controversial. Most Nextcloud setups use MariaDB, and it works fine. But I went with PostgreSQL for a few reasons:
+
+**Better concurrency handling** - When multiple people are accessing files simultaneously, PostgreSQL's MVCC system handles it more gracefully.
+
+**JSON performance** - Nextcloud stores a lot of metadata, and PostgreSQL's JSON operations are genuinely faster.
+
+**Personal preference** - I've had fewer weird issues with PostgreSQL over the years. Call it superstition if you want.
+
+Setting it up was straightforward:
+
 ```bash
 apt install -y postgresql
 ```
-Then created a **Nextcloud-specific database**:
+
+Create the database:
+
 ```bash
 sudo -u postgres psql
 CREATE DATABASE nextcloud;
-CREATE USER user WITH PASSWORD 'supersecurepassword';
-ALTER DATABASE nextcloud OWNER TO mandrake;
+CREATE USER nextclouduser WITH PASSWORD 'your-secure-password';
+ALTER DATABASE nextcloud OWNER TO nextclouduser;
 ```
-Finally, we pointed Nextcloud to use the external database server at `192.168.xxx.xxx`.
 
----
+Point Nextcloud at the external database server and done.
 
-### 3. Separating File Storage: SSD for System, HDD for Data
-Storing Nextcloud’s **entire dataset on SSDs** is overkill—especially for **large media files** that don’t need instant access speeds.
+### Storage Strategy: SSD Where It Matters
 
-#### Our Storage Breakdown:
-- **SSD (local-zfs):** Hosts the LXC container and Nextcloud application.
-- **HDD Pool (r430pool):** Stores Nextcloud user files (documents, videos, etc.).
-- **NAS Backup (future upgrade):** Will hold nightly snapshots of the data.
+Here's where most people get it wrong. They either put everything on expensive SSD storage, or they put everything on cheap HDDs and wonder why their Nextcloud feels sluggish.
 
-This ensures the **UI stays fast**, while **bulk storage remains cost-effective**.
+The trick is being strategic about it:
 
-#### How We Mounted the HDD Pool in Nextcloud LXC
-First, we created a **ZFS dataset** for Nextcloud data:
+**SSD hosts the application** - All the PHP code, temporary files, and active caching live on fast local storage.
+
+**HDD pool for user data** - Documents, photos, videos - all the stuff that doesn't need millisecond access times but does need lots of space.
+
+Setting up the HDD mount was pretty standard ZFS stuff:
+
 ```bash
 zfs create -o mountpoint=/mnt/r430pool/nextcloud r430pool/nextcloud
 ```
-Then, we **mounted it inside the LXC container**:
+
+Then mount it in the LXC:
+
 ```bash
 nano /etc/pve/lxc/101.conf
 ```
-Added:
+
+Add:
 ```
 mp0: /mnt/r430pool/nextcloud,mp=/mnt/nextcloud
 ```
-Finally, we moved Nextcloud’s data:
+
+Move the data over:
+
 ```bash
 rsync -av /var/www/nextcloud/data/ /mnt/nextcloud/
 ```
 
----
+Update the config to point to the new location and restart. The performance difference is immediately noticeable.
 
-### 4. Caching for Performance: Redis & APCu
-Caching **reduces database queries** and **makes Nextcloud feel more responsive**.
+### Caching: Making It Actually Fast
 
-#### **What APCu Does**
-- **APCu (Alternative PHP Cache)** speeds up Nextcloud by **caching PHP objects and session data in memory**.
-- This prevents Nextcloud from constantly hitting the database for **frequently accessed metadata**.
+Default Nextcloud can feel pretty sluggish, especially with lots of files. The solution is proper caching at multiple levels.
 
-#### **What Redis Does**
-- **Redis is an in-memory key-value store** that Nextcloud uses for **file locking**.
-- Without Redis, Nextcloud relies on **database locks**, which slow things down.
-- Redis ensures **simultaneous users don’t interfere with each other’s file operations**.
+**APCu for local caching** - Keeps frequently accessed PHP objects in memory instead of hitting the database constantly.
 
-#### Installing Redis & APCu
+**Redis for file locking** - Prevents users from stepping on each other when accessing the same files. Way faster than database-based locks.
+
+Installation:
+
 ```bash
 apt install -y redis-server php-redis php-apcu
 ```
-Then, we updated `config.php`:
+
+Configuration in `config.php`:
+
 ```php
 'memcache.local' => '\OC\Memcache\APCu',
 'memcache.locking' => '\OC\Memcache\Redis',
@@ -141,23 +139,45 @@ Then, we updated `config.php`:
     'timeout' => 0.0,
 ),
 ```
-This dramatically **improves Nextcloud’s performance**.
+
+The difference is honestly dramatic. Operations that used to take 5-10 seconds now happen almost instantly.
+
+## What's Working Well
+
+After running this setup for several months, I'm pretty happy with the results:
+
+**Performance is solid** - Web interface is responsive, file operations are quick, multiple users don't slow each other down.
+
+**Storage scaling works** - I can add more HDDs to the pool without touching the application layer.
+
+**Maintenance is minimal** - The TurnKey base handles security updates automatically, and the modular design means I can update components independently.
+
+**Costs are reasonable** - Most of the storage is on cheap HDDs, with SSD only where it actually matters.
+
+## Still To Do
+
+**Automated backups** - I've got the basic rsync command figured out, just need to script it and set up monitoring:
+
+```bash
+rsync -av /mnt/nextcloud/ /mnt/nas/backups/nextcloud/
+```
+
+**SMTP integration** - Would be nice to get email notifications working for shares and password resets.
+
+**OnlyOffice maybe** - The built-in document editing is pretty basic. Might be worth setting up a proper office suite integration.
+
+## Lessons Learned
+
+**Architecture matters more than hardware** - Splitting components based on their performance needs gave me way better results than just throwing faster hardware at a monolithic setup.
+
+**Don't skimp on the database** - PostgreSQL in its own container with proper resources makes everything feel more responsive.
+
+**Caching is not optional** - Redis and APCu turned a sluggish system into something that actually feels professional.
+
+**Plan for growth** - The modular approach means I can easily add more storage, upgrade components, or even migrate to different hardware without rebuilding everything.
+
+The whole thing took longer to plan than to implement, but it was worth taking the time to think through the architecture first. Way better than my usual "build it and see what breaks" approach.
 
 ---
 
-## Next Steps & Future Improvements
-- **Automated Nightly Backups**
-  ```bash
-  rsync -av /mnt/nextcloud/ /mnt/nas/backups/nextcloud/
-  ```
-- **Setting Up an SMTP Server for Notifications**
-
----
-
-## Final Thoughts
-This setup gives us:
-- **Fast performance** (SSD for app, Redis caching)  
-- **Scalable storage** (HDD pool for bulk files)  
-- **Reliability** (PostgreSQL, separate DB & app containers)  
-
-Next steps? **Automating backups, adding SMTP email alerts, and possibly integrating OnlyOffice for document editing.**
+*Next project: figuring out why my backup script keeps failing at 3 AM. There's always something.*

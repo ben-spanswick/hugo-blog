@@ -7,55 +7,45 @@ tags: ["homelab", "self-hosting", "traefik", "cloudflared", "authelia", "docker"
 draft: false
 ---
 
-## Building a Robust Access Layer for Self-Hosted Services
+# Making My Self-Hosted Services Actually Accessible (Without Going Insane)
 
-If you’ve ever tried to securely expose a self-hosted service—especially something running on a different VLAN, host, or network segment—you’ll know it’s rarely as simple as “open a port and point a domain.” Security, authentication, and user experience all matter—especially if you want to make your setup both safe and maintainable.
+*How I finally got my recipe manager working from anywhere without poking holes in my firewall*
 
-Recently, I set out to unify remote access for my core services using a trio of modern open source tools:  
-**Cloudflared Tunnel** for secure remote access,  
-**Traefik** for reverse proxying and routing, and  
-**Authelia** for SSO and two-factor authentication.
-
-My test case? Getting [Tandoor Recipes](https://tandoor.dev/)—my favorite recipe manager—securely accessible from anywhere, while keeping everything modular, portable, and as “future-proof” as possible.
-
-Let’s break down how I approached the problem, what worked, where I struggled, and the lessons learned.
+Posted: May 14, 2025 | 6 min read
 
 ---
 
-## The Challenge: Security Meets Usability
+So here's the thing - I've been running services in my homelab for years, and every time I want to access something remotely, it turns into this whole ordeal. You know the drill: "just open a port," they say. "Point your domain at it," they say. Yeah, right. Tell that to my segmented VLANs and my paranoia about security.
 
-My self-hosted services live across a sprawling homelab network, segmented by VLANs for security. Tandoor, for example, is on a Docker host in its own VLAN. The proxy and auth stack are elsewhere. I wanted:
+Last month I finally had enough. My wife kept asking why she couldn't access our recipe collection (Tandoor Recipes) when she was out grocery shopping, and honestly, I was getting tired of VPN'ing in just to check if I had the ingredients for dinner. Time to build something proper.
 
-- **Remote access with minimal attack surface** (no open ports, no NAT headaches)
-    
-- **Central authentication** (not just for Tandoor, but for all future services)
-    
-- **User-friendly access** (SSO, 2FA, clean URLs, etc.)
-    
-- **Modularity** (each service and component should be replaceable and independently upgradable)
-    
-- **Easy migration to new hosts or VLANs**
-    
+After way too much research and probably more frustration than necessary, I ended up with a setup using Cloudflared tunnels, Traefik, and Authelia. Spoiler alert: it actually works really well now, but getting there was... an adventure.
 
-Off-the-shelf solutions (and default “expose to the world” settings) were simply not robust enough. So I turned to **Cloudflared Tunnel, Traefik, and Authelia**—a stack designed for this kind of composable, secure access.
+## The Problem (aka Why Simple Solutions Suck)
 
----
+My homelab isn't just one machine sitting in a closet. I've got services scattered across different VLANs because, you know, security. Tandoor lives on its own Docker host, the proxy stuff is somewhere else, and everything's firewalled to hell and back. 
 
-## The Architecture: How the Pieces Fit
+What I wanted was pretty reasonable, I thought:
+- Access my stuff from anywhere without opening ports
+- Stop managing separate logins for everything
+- Make it user-friendly enough that my family could actually use it
+- Keep it modular so I'm not locked into some monolithic solution
 
-**1. Cloudflared Tunnel**  
-This is the secret sauce for secure remote access—think of it as an outbound VPN tunnel that connects your homelab to Cloudflare’s edge, so you can access your services via custom domains (e.g., "service.website.com") with _zero_ inbound ports exposed.
+The "just use a VPN" crowd can save it - I wanted something that actually felt like using a normal website.
 
-**2. Traefik**  
-Acts as a reverse proxy and smart router. Handles SSL via Let’s Encrypt, routes requests to the right internal services, and integrates with authentication/authorization layers like Authelia.
+## How I Solved It (The Technical Bits)
 
-**3. Authelia**  
-Provides single sign-on (SSO) and two-factor authentication (2FA) for protected services. It sits in front of Traefik-proxied endpoints, enforcing access policies.
+### The Stack
 
-**4. Example Service: Tandoor**  
-A recipe manager running on a dedicated Docker host and VLAN, exposed internally on a non-standard port.
+I went with three main pieces:
 
-### Visual Diagram (Text)
+**Cloudflared Tunnel** - This thing is honestly brilliant. Instead of punching holes in your firewall, it creates an outbound connection to Cloudflare. Your services stay completely internal, but you can access them through proper domains.
+
+**Traefik** - Handles all the reverse proxy magic. Routes requests, manages SSL certificates, plays nice with Docker labels. Once you get the hang of it, adding new services is actually pretty painless.
+
+**Authelia** - The authentication layer. Single sign-on, 2FA, granular access controls. Makes everything feel professional instead of like a garage project.
+
+Here's how they fit together:
 
 ```
 Internet
@@ -71,29 +61,9 @@ Authelia Authentication
 Tandoor Service (on another VLAN)
 ```
 
----
+### Getting Cloudflared Working
 
-## Implementation Details
-
-### Step 1: Cloudflared Tunnel
-
-**What worked:**
-
-- Outbound-only connection—no open ports required
-    
-- Quick setup with Cloudflare dashboard and Docker
-    
-
-**What tripped me up:**
-
-- The tunnel token/credentials file _must_ be mapped correctly in Docker
-    
-- Internal DNS sometimes didn’t resolve as expected between VLANs
-    
-- Proxying WebSockets (for some apps) can require extra config
-    
-
-**Redacted Docker Compose Snippet:**
+The tunnel setup was actually the easiest part, which surprised me. Create a tunnel in the Cloudflare dashboard, grab the token, throw it in a Docker container:
 
 ```yaml
 services:
@@ -102,37 +72,18 @@ services:
     restart: unless-stopped
     command: tunnel run
     environment:
-      - TUNNEL_TOKEN=<REDACTED>
+      - TUNNEL_TOKEN=<your-token-here>
     volumes:
       - ./cloudflared:/etc/cloudflared
 ```
 
-- For detailed setup, see [Cloudflared Tunnel on GitHub](https://github.com/cloudflare/cloudflared)
-    
+The only gotcha I hit was making sure the credentials file was mounted properly. Oh, and if you're dealing with WebSocket apps, you might need some extra config - learned that one the hard way.
 
----
+### Traefik Configuration Hell (Then Heaven)
 
-### Step 2: Traefik as Reverse Proxy
+Traefik's great once it's working, but man, those labels are picky. Miss a capital letter or mess up the syntax and nothing works. No helpful error messages either - it just silently ignores your configuration.
 
-**What worked:**
-
-- Dynamic routing based on labels—great for multiple services
-    
-- Easy SSL with Let’s Encrypt (wildcard domains supported)
-    
-- Good integration with Docker, static files, and Cloudflare headers
-    
-
-**What tripped me up:**
-
-- Label syntax is _very_ particular (small mistakes break routing)
-    
-- Services on other VLANs/hosts: requires careful network and firewall rules
-    
-- Wildcard certificates only work if DNS challenge is set up
-    
-
-**Redacted Static Configuration:**
+My static config ended up looking like this:
 
 ```yaml
 # traefik.yml
@@ -149,47 +100,30 @@ providers:
 certificatesResolvers:
   cloudflare:
     acme:
-      email: "<REDACTED>"
+      email: "your-email@domain.com"
       storage: "/etc/traefik/acme.json"
       dnsChallenge:
         provider: cloudflare
-        delayBeforeCheck: 0
 ```
 
-**Service Label Example:**
+For services, the labels look like this:
 
 ```yaml
 labels:
   - "traefik.enable=true"
-  - "traefik.http.routers.tandoor.rule=Host(`service.website.com`)"
+  - "traefik.http.routers.tandoor.rule=Host(`recipes.yourdomain.com`)"
   - "traefik.http.routers.tandoor.entrypoints=websecure"
   - "traefik.http.routers.tandoor.tls.certresolver=cloudflare"
   - "traefik.http.routers.tandoor.middlewares=authelia@docker"
 ```
 
----
+Pro tip: Use a YAML linter. Seriously. Saved me hours of debugging.
 
-### Step 3: Authelia Authentication Layer
+### Authelia: Powerful but Intimidating
 
-**What worked:**
+Authelia's config file is... extensive. Like, really extensive. I probably spent more time on this than everything else combined, mostly because I kept overthinking it.
 
-- Easy to set up with file-based users for homelab use
-    
-- Supports 2FA out of the box
-    
-- Flexible access control rules by domain/path
-    
-
-**What tripped me up:**
-
-- Initial config can be overwhelming (lots of options; a single typo = silent failures)
-    
-- Network segmentation meant some cookies/auth flows didn’t cross VLANs until I tweaked CORS and cookie settings
-    
-- Need to mount configuration and secrets into the container
-    
-
-**Redacted Example `configuration.yml`:**
+Here's what worked for me (simplified):
 
 ```yaml
 host: 0.0.0.0
@@ -203,12 +137,12 @@ authentication_backend:
 access_control:
   default_policy: deny
   rules:
-    - domain: "service.website.com"
+    - domain: "recipes.yourdomain.com"
       policy: two_factor
 
 session:
   name: authelia_session
-  secret: <REDACTED>
+  secret: your-secret-here
   expiration: 1h
 
 storage:
@@ -220,96 +154,46 @@ notifier:
     filename: /config/notification.txt
 ```
 
----
+Start simple, get it working, then add complexity. Trust me on this one.
 
-### Step 4: Routing to Tandoor (On a Different VLAN/Host)
+### The VLAN Nightmare
 
-This was where _networking pain_ surfaced:
+Here's where things got interesting. Tandoor runs on a completely different network segment, so Traefik couldn't just magically find it. I had to:
 
-- **Challenge:** Tandoor runs on a separate VLAN and Docker host, so Traefik (on its own network) couldn’t access it by default.
-    
-- **Solution:**
-    
-    - Open specific firewall rules for Traefik’s host IP to Tandoor’s port
-        
-    - Add internal DNS/static mapping so `tandoor.internal.lab` (or direct IP) resolved from Traefik’s container
-        
-    - Adjust Traefik service definition to use the target IP:port
-        
+1. Open firewall rules between the Traefik host and Tandoor's host
+2. Set up proper DNS resolution (or just use IP addresses)
+3. Configure Traefik to route to the external service
 
-**Redacted Docker Compose Example (Tandoor Service):**
-
-```yaml
-services:
-  tandoor:
-    image: vabene1111/recipes
-    environment:
-      - ...
-    ports:
-      - "8085:8080"
-    networks:
-      - tandoor
-networks:
-  tandoor:
-    external: true
-```
-
-**Key Traefik dynamic config:**
+The key was adding this to Traefik:
 
 ```yaml
 - "traefik.http.services.tandoor.loadbalancer.server.url=http://192.168.100.100:8085"
 ```
 
-Or set a local DNS entry for `tandoor.internal.lab` and use:
+Took me way too long to figure out that one line.
 
-```yaml
-- "traefik.http.services.tandoor.loadbalancer.server.url=http://tandoor.internal.lab:8080"
-```
+## What I Learned (The Hard Way)
 
----
+**VLANs will humble you.** I thought I knew networking. I was wrong. Spend time getting your firewall rules right before you blame the software.
 
-## Lessons Learned (and What I’d Do Differently)
+**Start with the basics.** Don't try to set up everything at once. Get a simple HTTP service working first, then add authentication, then SSL, then complexity.
 
-**1. VLANs are powerful but unforgiving.**  
-Small misconfigurations in firewall rules or Docker network settings can break cross-VLAN service routing. Use granular allow rules and monitor logs early and often.
+**Documentation is your friend.** Especially for Authelia - that config file has about 50 different options and most of them aren't obvious.
 
-**2. Authelia config is verbose—but the docs are your friend.**  
-Start with the simplest possible working config, then layer in access rules, 2FA, and notifications one at a time.
+**Version control everything.** I keep all my configs in a private Git repo. When something breaks (and it will), you can actually figure out what changed.
 
-**3. Cloudflared Tunnel = peace of mind.**  
-Outbound-only tunnels are game-changing. No more open ports, no more sketchy port forwards.
+**Cloudflared is magic.** Seriously, the peace of mind of not having any open ports is worth the setup hassle.
 
-**4. Traefik labels: Get them right, or nothing works.**  
-Use YAML linting, double-check case sensitivity, and always test with a basic HTTP service before layering in Authelia or complex middlewares.
+## Was It Worth It?
 
-**5. Use Git for everything.**  
-All configs are in a private GitHub repo—if you make a mistake, you can always roll back. Plus, it’s much easier to track what changed when troubleshooting.
+Absolutely. My wife can now check recipes while shopping, I can access my services from anywhere, and I sleep better knowing I'm not running an open port festival. 
 
----
+The best part? Adding new services is actually easy now. Same pattern every time: add the Docker labels, create an Authelia rule, done. It scales really well once you have the foundation in place.
 
-## Configuration Reference
+If you're thinking about doing something similar, start small. Pick one service, get it working end-to-end, then expand. The modular approach means you're not locked into anything - if you hate Traefik tomorrow, you can swap it out without rebuilding everything.
 
-- **Full sample Docker Compose files and configs:**  
-    [My GitHub repo for this stack (redacted version)](https://github.com/yourusername/selfhosted-auth-stack)
-    
+And hey, if you get stuck, the homelab community is pretty helpful. Just don't ask them about VLANs unless you want a 3-hour discussion about network segmentation philosophy.
 
 ---
 
-## Final Thoughts
-
-The real win here isn’t any single technology, but how Cloudflared, Traefik, and Authelia can work together—especially for anyone juggling multiple hosts, VLANs, and services.
-
-This approach lets you:
-
-- **Expose new services with minimal friction**
-    
-- **Enforce central auth and 2FA everywhere**
-    
-- **Scale your setup—move services to new VLANs or hosts without rearchitecting everything**
-    
-
-If you’re just getting started, focus on a single service (like Tandoor), get that rock-solid, and then build out from there. The modular approach pays dividends—what works for one app can quickly protect your entire homelab.
-
----
-
-_If you want detailed, up-to-date configs or a deeper dive into VLAN firewall rules, check the GitHub link above.
+*All the config files and Docker Compose examples are in my GitHub repo if you want to see the full setup. Just search for my username and "homelab-access-stack" or something like that.*

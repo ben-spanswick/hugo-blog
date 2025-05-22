@@ -7,36 +7,43 @@ tags: ["homelab", "self-hosting", "torrenting", "automation", "gluetun", "qbitto
 draft: false
 ------------
 
-# From Torrent to Library: Automating TV, Movies, and Audiobooks with Gluetun, qBittorrent, and \*arr
+# Building My Perfect Media Automation Pipeline
 
-**Private torrenting pipeline behind a VPN, with automatic sorting and renaming**
-May 14, 2025
-\~11 minute read
+*How I stopped manually managing downloads and built a self-running media server*
 
----
-
-## The Problem: Secure, Hassle-Free Media Management
-
-Anyone who runs a self-hosted media server knows the pain of keeping everything organized, private, and automated. Torrents are great for grabbing content—but exposing your real IP, sorting files, or manually managing downloads? Not so great.
-
-My goal: Build a system where **TV shows, movies, and audiobooks** download automatically, sort themselves, are always behind a VPN (with a kill switch!), and end up right where Jellyfin or Audiobookshelf expect them—on my Unraid NAS.
-
-Here’s how I did it, the roadblocks I hit, and what I’d do differently.
+Posted: May 14, 2025 | ~11 minute read
 
 ---
 
-## The Stack: Overview
+I got tired of the constant dance. Download something, figure out where it went, rename it properly, move it to the right folder, update the media server. Rinse and repeat, dozens of times a week. There had to be a better way.
 
-* **Gluetun**: Containerized VPN with built-in kill switch for all torrent traffic
-* **qBittorrent**: The torrent client, running *inside* the Gluetun network for privacy
-* **Sonarr & Radarr**: TV/movie automation and renaming
-* **Audiobookshelf**: For managing and streaming audiobooks
-* **Unraid NAS**: Network storage for media libraries
-* **Docker Compose**: Orchestrating it all
+What I really wanted was dead simple: new episodes show up automatically, everything gets organized correctly, and most importantly, my ISP never sees what I'm actually downloading. After months of tinkering, I finally have a setup that just works.
 
----
+## What I Built
 
-## Architecture
+The core idea is a fully automated pipeline that handles everything from search to final organization, all running behind a VPN with proper kill switches. Here's what happens now:
+
+1. Sonarr/Radarr monitor for new releases
+2. They automatically grab torrents through qBittorrent
+3. Everything downloads through a VPN (Gluetun) with zero IP leaks
+4. Files get renamed and sorted automatically
+5. Media shows up in Jellyfin ready to stream
+
+No manual intervention required. It's honestly a bit magical when it works right.
+
+## The Technical Stack
+
+**Gluetun** - This is the secret sauce. It's a VPN container that other containers can route through. No VPN leaks, ever.
+
+**qBittorrent** - The actual torrent client, but locked inside Gluetun's network
+
+**Sonarr & Radarr** - The automation brains for TV and movies respectively
+
+**Audiobookshelf** - Because I got tired of Audible's limitations
+
+**Unraid NAS** - Where everything actually lives
+
+The architecture looks like this:
 
 ```
 [Internet]
@@ -50,20 +57,11 @@ Here’s how I did it, the roadblocks I hit, and what I’d do differently.
 [Unraid NAS SMB/NFS Shares]
 ```
 
----
+## The VPN Foundation: Gluetun
 
-## Implementation: Step by Step
+Most VPN setups are sketchy. They work until they don't, and then your real IP gets exposed while downloading the latest season of whatever. Gluetun solves this by creating a container that other services route through. If the VPN goes down, nothing gets through. Period.
 
-### 1. Gluetun: VPN and Kill Switch
-
-**Why Gluetun?**
-Traditional VPN clients can leak traffic or break when the connection drops. Gluetun is a Docker container that proxies *all* network traffic of connected containers—no IP leaks, ever.
-
-* VPN provider: Private Internet Access (PIA), NordVPN, etc.
-* Runs as its own service in Docker Compose
-* qBittorrent, Sonarr, and Radarr use Gluetun’s network stack for 100% traffic routing
-
-**Sample Compose Block:**
+I'm using Private Internet Access because their pricing is decent and they don't keep logs (allegedly). The setup looks like this:
 
 ```yaml
 services:
@@ -73,8 +71,8 @@ services:
       - NET_ADMIN
     environment:
       - VPN_SERVICE_PROVIDER=private internet access
-      - OPENVPN_USER=<REDACTED>
-      - OPENVPN_PASSWORD=<REDACTED>
+      - OPENVPN_USER=your-username
+      - OPENVPN_PASSWORD=your-password
       - SERVER_COUNTRIES=United States
     ports:
       - "8080:8080"  # qBittorrent Web UI
@@ -84,16 +82,11 @@ services:
       - ./gluetun:/gluetun
 ```
 
----
+The key insight is that all the web UI ports get mapped through the Gluetun container. This way, if the VPN is down, nothing is accessible.
 
-### 2. qBittorrent: The Engine
+## The Download Engine: qBittorrent
 
-* Runs in the same network as Gluetun (`network_mode: service:gluetun`)
-* Only accessible if VPN is up (kill switch)
-* Downloads split into separate folders for TV, Movies, and Audiobooks
-* Ports mapped through Gluetun (see above)
-
-**Compose Block:**
+qBittorrent runs inside Gluetun's network namespace, which means it literally cannot access the internet without the VPN being up. This is way more reliable than trying to configure a VPN client inside the container.
 
 ```yaml
   qbittorrent:
@@ -112,15 +105,13 @@ services:
     restart: unless-stopped
 ```
 
----
+The `network_mode: "service:gluetun"` line is crucial - that's what locks qBittorrent inside the VPN tunnel.
 
-### 3. Sonarr & Radarr: Automation & Renaming
+## The Automation Layer: Sonarr and Radarr
 
-* Monitor trackers for new TV episodes/movies
-* Add torrents to qBittorrent via API
-* Move and rename downloads to final folders (`/mnt/r430/media/tv`, `/mnt/r430/media/movies`)
+These are the tools that actually make everything automatic. They monitor RSS feeds and indexers for new releases, then tell qBittorrent what to download. Once something finishes downloading, they handle the renaming and moving to final folders.
 
-**Compose Blocks:**
+Sonarr handles TV shows:
 
 ```yaml
   sonarr:
@@ -135,7 +126,11 @@ services:
       - /mnt/r430/media/torrents:/downloads
       - ./sonarr/config:/config
     restart: unless-stopped
+```
 
+Radarr does the same thing for movies:
+
+```yaml
   radarr:
     image: linuxserver/radarr
     network_mode: "service:gluetun"
@@ -150,15 +145,11 @@ services:
     restart: unless-stopped
 ```
 
----
+Both also run through the VPN, though this is arguably overkill since they're just managing files locally.
 
-### 4. Audiobookshelf: Private Audible Alternative
+## Audiobooks: Breaking Free from Audible
 
-* Pointed directly to `/mnt/r430/media/audiobooks` and `/mnt/r430/media/ebooks`
-* Runs in its own Docker container (doesn’t need VPN)
-* Accessible via Traefik reverse proxy and secured with Authelia
-
-**Compose Block:**
+I got sick of Audible's limitations and DRM nonsense, so I added Audiobookshelf to the mix. It's like having your own private audiobook streaming service.
 
 ```yaml
   audiobookshelf:
@@ -176,45 +167,67 @@ services:
     restart: unless-stopped
 ```
 
+This one doesn't need the VPN since it's just serving files that are already local.
+
+## Storage: The Unraid Foundation
+
+Everything lives on my Unraid NAS, shared out via SMB. The Docker containers mount these shares directly:
+
+- `/mnt/r430/media/torrents` - Downloads staging area
+- `/mnt/r430/media/tv` - Final TV show library
+- `/mnt/r430/media/movies` - Final movie library  
+- `/mnt/r430/media/audiobooks` - Audiobook collection
+
+This keeps everything centralized and accessible to other services like Jellyfin.
+
+## What Goes Wrong (And How to Fix It)
+
+**VPN Connection Issues** - Your VPN provider matters. Some have terrible reliability or throttle torrent traffic. I've had good luck with PIA, but YMMV.
+
+**Permission Nightmares** - Make sure all containers run with the same PUID/PGID (1000/1000 in my case). Otherwise file moves between containers will fail spectacularly.
+
+**Network Complexity** - Docker networking plus VLANs plus VPNs can get weird. Keep it simple - only expose the ports you actually need.
+
+**Storage Explosion** - Automated downloads can fill up drives fast. Set up monitoring and maybe some cleanup scripts.
+
+**Quality Control** - Without good filters, you'll end up with terabytes of garbage. Spend time configuring quality profiles in Sonarr/Radarr.
+
+## Lessons from the Trenches
+
+**Test your kill switch** - Disconnect your VPN and make sure nothing leaks. I use https://ipleak.net from inside the qBittorrent container.
+
+**Version control your configs** - Keep your Docker Compose files in Git. When (not if) you break something, you can roll back easily.
+
+**Monitor disk space** - Automated downloads are great until they fill your array at 3 AM.
+
+**Good indexers matter** - The quality of your automation is only as good as your sources. Invest in decent private trackers if you can.
+
+**Backup your configs** - Losing your Sonarr/Radarr database means re-adding everything manually. Not fun.
+
+## The Results
+
+After running this for about six months, I'm genuinely happy with how it's working out. New episodes just appear in Jellyfin without me thinking about it. Movies I want to watch show up automatically. Audiobooks sync across all my devices.
+
+The privacy aspect gives me peace of mind - there's literally no way for downloads to happen without the VPN being active. Even if something goes wrong with the VPN connection, everything just stops rather than falling back to my real IP.
+
+Performance has been solid too. The VPN overhead is minimal, and having everything automated means the system stays busy during off-peak hours when bandwidth is cheap.
+
+## Worth the Complexity?
+
+For me, absolutely. The initial setup took a weekend of tinkering, but now I spend maybe 5 minutes a month managing the whole system. Compare that to the hours I used to spend manually downloading and organizing files.
+
+The main downside is complexity - there are a lot of moving parts, and troubleshooting can be tricky when something breaks. But the time savings and peace of mind make it worthwhile.
+
+If you're already comfortable with Docker and have a decent understanding of networking, this setup isn't too bad to replicate. If you're just getting started with self-hosting, maybe begin with something simpler and work your way up.
+
+## What's Next
+
+I'm considering adding Prowlarr to manage indexers more centrally, and maybe Bazarr for subtitle automation. The setup is modular enough that adding new components is pretty straightforward.
+
+I also want to improve the monitoring - knowing when things break before they affect the end user experience would be nice.
+
+Overall though, this has been one of my more successful homelab projects. It solves a real problem and actually stays working once you get it configured properly.
+
 ---
 
-### 5. Unraid NAS: The Central Media Hub
-
-* All media folders are network shares on Unraid (`/mnt/r430/media/...`)
-* Docker hosts mount these shares directly (CIFS/NFS)
-* Keeps everything available to Jellyfin, Audiobookshelf, Paperless, etc.
-
----
-
-## Troubles & Gotchas
-
-* **VPN Flakiness:** Make sure your credentials don’t expire and you choose reliable endpoints (test speed!).
-* **Permissions Hell:** All containers should run as the same user/group (PUID/PGID), or file moves will break.
-* **Network Segmentation:** VLANs and Docker networking can cause service discovery issues—map only the ports you need!
-* **Automation Gone Wild:** Use good indexers and filters in Sonarr/Radarr or you’ll wake up with terabytes of junk.
-* **Disk Space:** Monitor your NAS space—automated downloads fill up fast!
-
----
-
-## Lessons Learned
-
-* **All traffic must go through Gluetun.** Any port mapped directly to the host bypasses the VPN. Be careful with Docker Compose syntax.
-* **Use Unraid’s built-in share management** to keep file permissions sane and make it easy to back up or move libraries.
-* **Keep your Compose files in Git.** If you break something, you can always revert.
-* **Test restores, not just backups.**
-
----
-
-## Config Reference
-
-👉 For detailed, redacted Docker Compose and Unraid mount settings, check [my GitHub repo](https://github.com/yourusername/mediastack-example).
-
----
-
-## Final Thoughts
-
-This setup turned my media workflow from chaos into order. Now, *everything*—from the moment a show is released to when it appears in my media library—is automated, safe, and totally private.
-
-If you’re self-hosting and tired of manual downloads or worrying about privacy, this Gluetun-centric pipeline is a game-changer.
-
-*Questions or want a deep dive into Sonarr or permission setups? Drop a comment or check the GitHub!*
+*If you're curious about specific configuration details or run into issues setting this up, I've got the full Docker Compose files and notes in my GitHub repo. Just search for my username and "media-automation" or something similar.*
