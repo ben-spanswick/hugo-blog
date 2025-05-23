@@ -11,14 +11,12 @@
             "id": "2bbc976fdba69a2a",
             "type": "leaf",
             "state": {
-              "type": "markdown",
+              "type": "image",
               "state": {
-                "file": "content/projects/tunnel-setup.md",
-                "mode": "source",
-                "source": true
+                "file": "static/img/oneoff/authelia.png"
               },
-              "icon": "lucide-file",
-              "title": "tunnel-setup"
+              "icon": "lucide-image",
+              "title": "authelia"
             }
           }
         ]
@@ -179,11 +177,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2bbc976fdba69a2a",
+  "active": "cebf846469902fcc",
   "lastOpenFiles": [
+    "content/projects/tunnel-setup.md",
     "static/img/oneoff/authelia.png",
     "static/img/oneoff/5efd05e0-0539-4808-b218-264ab4111c1e.png",
-    "content/projects/tunnel-setup.md",
     "static/img/oneoff",
     "static/img/New folder",
     "template.md",
