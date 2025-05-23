@@ -70,7 +70,7 @@ Let me unpack that for you.
 - Claude Sonnet 3.5: 65.0%
 - Human PhD experts: ~69%
 
-![Claude 4 GPQA Performance](/images/claude4/gpqa-diamond-scores.png)
+![Claude 4 GPQA Performance](/img/claude4/performance.png)
 *Claude 4 now outperforms most PhD experts on graduate-level science questions*
 
 **Translation:** Claude 4 is now better than most PhD scientists at answering graduate-level questions in their own fields. That's... concerning in ways I'll get to.
@@ -79,7 +79,7 @@ Let me unpack that for you.
 
 ## The Safety Red Flag Everyone's Ignoring
 
-![ASL-3 Safety Framework](/images/claude4/asl.png)
+![ASL-3 Safety Framework](/img/claude4/asl.png)
 *Anthropic's AI Safety Level framework - Claude Opus 4 triggered ASL-3 protocols*
 
 ### ASL-3: When Your AI Gets Too Smart for Comfort
@@ -142,7 +142,7 @@ I've been testing Claude 4 for coding tasks, and the improvement over previous v
 
 ## The Real-World Impact
 
-![Claude 4 Capabilities Overview](/images/claude4/agent.gif)
+![Claude 4 Capabilities Overview](/img/claude4/agent.gif)
 *Claude 4's expanded agentic capabilities for complex, multi-step tasks*
 
 ### For Developers and Businesses
