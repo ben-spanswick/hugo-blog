@@ -11,12 +11,14 @@
             "id": "2bbc976fdba69a2a",
             "type": "leaf",
             "state": {
-              "type": "image",
+              "type": "markdown",
               "state": {
-                "file": "static/img/oneoff/authelia.png"
+                "file": "content/projects/tunnel-setup.md",
+                "mode": "source",
+                "source": true
               },
-              "icon": "lucide-image",
-              "title": "authelia"
+              "icon": "lucide-file",
+              "title": "tunnel-setup"
             }
           }
         ]
@@ -179,8 +181,9 @@
   },
   "active": "2bbc976fdba69a2a",
   "lastOpenFiles": [
-    "content/projects/tunnel-setup.md",
     "static/img/oneoff/authelia.png",
+    "static/img/oneoff/5efd05e0-0539-4808-b218-264ab4111c1e.png",
+    "content/projects/tunnel-setup.md",
     "static/img/oneoff",
     "static/img/New folder",
     "template.md",
