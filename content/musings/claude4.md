@@ -1,6 +1,6 @@
 ---
 title: "Claude 4: The AI That's So Smart It Scares Its Own Creators"
-date: 2025-01-14
+date: 2025-05-22
 description: "Anthropic's Claude 4 delivers impressive benchmarks but triggers unprecedented safety protocols. Why this breakthrough AI comes with uncomfortable warnings about weaponization risks."
 tags: [AI, Claude 4, Anthropic, AI Safety, Machine Learning, Technology]
 categories: [Technology, AI Trends, AI Safety]
