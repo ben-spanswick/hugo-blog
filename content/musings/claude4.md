@@ -27,9 +27,9 @@ Let me unpack that for you.
 ### Coding Performance That Actually Matters
 
 **SWE-Bench Verified scores:**
-- Claude Opus 4: 49.0%
-- Previous best (Claude Sonnet 3.5): 33.4%
-- GPT-4o: 28.4%
+- Claude Opus 4: 72.5% (79.4% with parallel test-time compute)
+- Anthropic Previous best (Claude Sonnet 3.7): 62.3% (70.3% with parallel test-time compute)
+- Industry Next Best OpenAI Codex-1: 72.1%
 
 **What this means in practice:** Claude 4 can solve nearly half of real-world software engineering problems from GitHub issues. That's not just impressive - it's getting into territory where AI could handle significant portions of actual development work.
 
@@ -66,8 +66,8 @@ Let me unpack that for you.
 ### Mathematical and Scientific Reasoning
 
 **GPQA Diamond (graduate-level science questions):**
-- Claude Opus 4: 71.7%
-- Claude Sonnet 3.5: 65.0%
+- Claude Opus 4: 83.3%
+- Claude Sonnet 3.7: 78.2 %
 - Human PhD experts: ~69%
 
 ![Claude 4 GPQA Performance](/img/claude4/performance.png)
