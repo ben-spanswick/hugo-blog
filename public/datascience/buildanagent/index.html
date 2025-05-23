@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Building a Quick and Dirty AI Agent">
+<title>I Built My Own AI Agent with GPT-4 (And You Can Too)</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/datascience/buildanagent/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="I Built My Own AI Agent with GPT-4 (And You Can Too)">
+<meta property='og:description' content="Building a Quick and Dirty AI Agent">
+<meta property='og:url' content='http://192.168.100.63:1313/datascience/buildanagent/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Datascience' /><meta property='article:tag' content='AI Agent' /><meta property='article:tag' content='AI' /><meta property='article:published_time' content='2025-03-29T02:59:30&#43;00:00'/><meta property='article:modified_time' content='2025-03-29T02:59:30&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="I Built My Own AI Agent with GPT-4 (And You Can Too)">
+<meta name="twitter:description" content="Building a Quick and Dirty AI Agent"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">💾</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/news/' >
+                
+                
+                
+                <span>News</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/datascience/' >
+                
+                
+                
+                <span>Data Strategy</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='Spanswick_Resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="main-article">
+    <header class="article-header">
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ai/" >
+                AI
+            </a>
+        
+            <a href="/categories/agenticai/" >
+                AgenticAI
+            </a>
+        
+            <a href="/categories/guide/" >
+                Guide
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/datascience/buildanagent/">I Built My Own AI Agent with GPT-4 (And You Can Too)</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Building a Quick and Dirty AI Agent
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Mar 29, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    5 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h1 id="build-your-first-ai-agent-that-actually-does-stuff"><a href="#build-your-first-ai-agent-that-actually-does-stuff" class="header-anchor"></a>Build Your First AI Agent That Actually Does Stuff
+</h1><p><em>From chatbot to digital assistant in 50 lines of Python</em></p>
+<hr>
+<p>I&rsquo;ve been messing around with AI agents for the past few weeks, and honestly, it&rsquo;s addictive. Started as curiosity about &ldquo;what&rsquo;s beyond ChatGPT&rdquo; and turned into building little digital helpers that can actually get work done.</p>
+<p>Most people think AI agents are either science fiction or require a PhD to build. Neither is true. You can create something genuinely useful in an afternoon with basic Python skills.</p>
+<hr>
+<h2 id="agent-vs-chatbot-the-difference-that-matters"><a href="#agent-vs-chatbot-the-difference-that-matters" class="header-anchor"></a>Agent vs Chatbot: The Difference That Matters
+</h2><p><strong>Regular chatbot:</strong> &ldquo;What&rsquo;s 2+2?&rdquo;<br>
+<em>&ldquo;It&rsquo;s 4!&rdquo;</em></p>
+<p><strong>AI agent:</strong> &ldquo;Help me budget for my vacation&rdquo;<br>
+<em>&ldquo;I&rsquo;ll calculate your available funds, research flight costs, suggest a daily budget, and can book the flights when you&rsquo;re ready.&rdquo;</em></p>
+<p>The agent I&rsquo;m about to show you:</p>
+<ul>
+<li>Takes your goal</li>
+<li>Makes a plan</li>
+<li>Uses actual tools to get things done</li>
+<li>Reports back with results</li>
+</ul>
+<p>Basic? Yes. But it follows the same pattern as those million-dollar enterprise systems.</p>
+<hr>
+<h2 id="what-you-need"><a href="#what-you-need" class="header-anchor"></a>What You Need
+</h2><ul>
+<li>Python 3.8+</li>
+<li>OpenAI API key (GPT-4 works best, 3.5 is okay)</li>
+<li>Two packages: <code>openai</code> and <code>rich</code></li>
+</ul>
+<p>That&rsquo;s it. No complicated frameworks or cloud deployments.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pip install openai rich
+</span></span></code></pre></div><hr>
+<h2 id="step-1-give-your-agent-some-hands"><a href="#step-1-give-your-agent-some-hands" class="header-anchor"></a>Step 1: Give Your Agent Some Hands
+</h2><p>An agent without tools is just an expensive chatbot. Let&rsquo;s start simple:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">search_todos</span>(query):
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e"># Fake database for demo</span>
+</span></span><span style="display:flex;"><span>    todos <span style="color:#f92672">=</span> [<span style="color:#e6db74">&#34;Buy milk&#34;</span>, <span style="color:#e6db74">&#34;Call mom&#34;</span>, <span style="color:#e6db74">&#34;Finish blog post&#34;</span>, <span style="color:#e6db74">&#34;Book dentist appointment&#34;</span>]
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> [todo <span style="color:#66d9ef">for</span> todo <span style="color:#f92672">in</span> todos <span style="color:#66d9ef">if</span> query<span style="color:#f92672">.</span>lower() <span style="color:#f92672">in</span> todo<span style="color:#f92672">.</span>lower()]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">simple_calculator</span>(expression):
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span>:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> str(eval(expression))  <span style="color:#75715e"># Don&#39;t do this in production!</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">except</span> <span style="color:#a6e22e">Exception</span> <span style="color:#66d9ef">as</span> e:
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Error: </span><span style="color:#e6db74">{</span>str(e)<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>
+</span></span></code></pre></div><p>Now register them:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span>TOOLS <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;search_todos&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;function&#34;</span>: search_todos,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Searches the to-do list. Input should be a keyword.&#34;</span>
+</span></span><span style="display:flex;"><span>    },
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;simple_calculator&#34;</span>: {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;function&#34;</span>: simple_calculator,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;description&#34;</span>: <span style="color:#e6db74">&#34;Evaluates math expressions.&#34;</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>}
+</span></span></code></pre></div><p><strong>Real talk:</strong> These are toy examples. In practice, you&rsquo;d connect to actual APIs, databases, or services.</p>
+<hr>
+<h2 id="step-2-the-agent-brain"><a href="#step-2-the-agent-brain" class="header-anchor"></a>Step 2: The Agent Brain
+</h2><p>Here&rsquo;s where it gets interesting. We create a loop where GPT-4 decides what to do, we execute it, and feed the results back:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#f92672">import</span> openai
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> rich <span style="color:#f92672">import</span> print
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">run_agent</span>(goal):
+</span></span><span style="display:flex;"><span>    messages <span style="color:#f92672">=</span> [
+</span></span><span style="display:flex;"><span>        {<span style="color:#e6db74">&#34;role&#34;</span>: <span style="color:#e6db74">&#34;system&#34;</span>, <span style="color:#e6db74">&#34;content&#34;</span>: <span style="color:#e6db74">&#34;You&#39;re an AI agent that completes tasks using tools. Think step-by-step.&#34;</span>},
+</span></span><span style="display:flex;"><span>        {<span style="color:#e6db74">&#34;role&#34;</span>: <span style="color:#e6db74">&#34;user&#34;</span>, <span style="color:#e6db74">&#34;content&#34;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;My goal: </span><span style="color:#e6db74">{</span>goal<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>}
+</span></span><span style="display:flex;"><span>    ]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">while</span> <span style="color:#66d9ef">True</span>:
+</span></span><span style="display:flex;"><span>        print(<span style="color:#e6db74">&#34;</span><span style="color:#ae81ff">\n</span><span style="color:#e6db74">[yellow]Thinking...[/yellow]&#34;</span>)
+</span></span><span style="display:flex;"><span>        
+</span></span><span style="display:flex;"><span>        response <span style="color:#f92672">=</span> openai<span style="color:#f92672">.</span>ChatCompletion<span style="color:#f92672">.</span>create(
+</span></span><span style="display:flex;"><span>            model<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;gpt-4&#34;</span>,
+</span></span><span style="display:flex;"><span>            messages<span style="color:#f92672">=</span>messages,
+</span></span><span style="display:flex;"><span>            functions<span style="color:#f92672">=</span>[
+</span></span><span style="display:flex;"><span>                {
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;name&#34;</span>: name,
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;description&#34;</span>: meta[<span style="color:#e6db74">&#34;description&#34;</span>],
+</span></span><span style="display:flex;"><span>                    <span style="color:#e6db74">&#34;parameters&#34;</span>: {
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;object&#34;</span>,
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">&#34;properties&#34;</span>: {
+</span></span><span style="display:flex;"><span>                            <span style="color:#e6db74">&#34;input&#34;</span>: {<span style="color:#e6db74">&#34;type&#34;</span>: <span style="color:#e6db74">&#34;string&#34;</span>}
+</span></span><span style="display:flex;"><span>                        },
+</span></span><span style="display:flex;"><span>                        <span style="color:#e6db74">&#34;required&#34;</span>: [<span style="color:#e6db74">&#34;input&#34;</span>]
+</span></span><span style="display:flex;"><span>                    }
+</span></span><span style="display:flex;"><span>                }
+</span></span><span style="display:flex;"><span>                <span style="color:#66d9ef">for</span> name, meta <span style="color:#f92672">in</span> TOOLS<span style="color:#f92672">.</span>items()
+</span></span><span style="display:flex;"><span>            ],
+</span></span><span style="display:flex;"><span>            function_call<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;auto&#34;</span>
+</span></span><span style="display:flex;"><span>        )
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        reply <span style="color:#f92672">=</span> response[<span style="color:#e6db74">&#39;choices&#39;</span>][<span style="color:#ae81ff">0</span>][<span style="color:#e6db74">&#39;message&#39;</span>]
+</span></span><span style="display:flex;"><span>        messages<span style="color:#f92672">.</span>append(reply)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> reply<span style="color:#f92672">.</span>get(<span style="color:#e6db74">&#34;function_call&#34;</span>):
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Agent chose to use a tool</span>
+</span></span><span style="display:flex;"><span>            tool_name <span style="color:#f92672">=</span> reply[<span style="color:#e6db74">&#34;function_call&#34;</span>][<span style="color:#e6db74">&#34;name&#34;</span>]
+</span></span><span style="display:flex;"><span>            tool_input <span style="color:#f92672">=</span> json<span style="color:#f92672">.</span>loads(reply[<span style="color:#e6db74">&#34;function_call&#34;</span>][<span style="color:#e6db74">&#34;arguments&#34;</span>])[<span style="color:#e6db74">&#34;input&#34;</span>]
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;[green]Using: </span><span style="color:#e6db74">{</span>tool_name<span style="color:#e6db74">}</span><span style="color:#e6db74">(&#39;</span><span style="color:#e6db74">{</span>tool_input<span style="color:#e6db74">}</span><span style="color:#e6db74">&#39;)[/green]&#34;</span>)
+</span></span><span style="display:flex;"><span>            result <span style="color:#f92672">=</span> TOOLS[tool_name][<span style="color:#e6db74">&#34;function&#34;</span>](tool_input)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Feed result back to agent</span>
+</span></span><span style="display:flex;"><span>            messages<span style="color:#f92672">.</span>append({
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;role&#34;</span>: <span style="color:#e6db74">&#34;function&#34;</span>,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;name&#34;</span>: tool_name,
+</span></span><span style="display:flex;"><span>                <span style="color:#e6db74">&#34;content&#34;</span>: result
+</span></span><span style="display:flex;"><span>            })
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">else</span>:
+</span></span><span style="display:flex;"><span>            <span style="color:#75715e"># Agent is done</span>
+</span></span><span style="display:flex;"><span>            print(<span style="color:#e6db74">&#34;[cyan]Result:[/cyan]&#34;</span>, reply[<span style="color:#e6db74">&#34;content&#34;</span>])
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">break</span>
+</span></span></code></pre></div><p><strong>What&rsquo;s happening:</strong> GPT-4 acts as the &ldquo;brain&rdquo; deciding what to do. Your Python functions are its &ldquo;hands&rdquo; that actually do things.</p>
+<hr>
+<h2 id="step-3-take-it-for-a-test-drive"><a href="#step-3-take-it-for-a-test-drive" class="header-anchor"></a>Step 3: Take It for a Test Drive
+</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#66d9ef">if</span> __name__ <span style="color:#f92672">==</span> <span style="color:#e6db74">&#34;__main__&#34;</span>:
+</span></span><span style="display:flex;"><span>    openai<span style="color:#f92672">.</span>api_key <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;your-api-key-here&#34;</span>  <span style="color:#75715e"># Use environment variables!</span>
+</span></span><span style="display:flex;"><span>    goal <span style="color:#f92672">=</span> input(<span style="color:#e6db74">&#34;What&#39;s your goal? &#34;</span>)
+</span></span><span style="display:flex;"><span>    run_agent(goal)
+</span></span></code></pre></div><p><strong>Try these:</strong></p>
+<ul>
+<li>&ldquo;What appointments do I have coming up?&rdquo;</li>
+<li>&ldquo;Calculate compound interest on $1000 at 5% for 3 years&rdquo;</li>
+<li>&ldquo;Find anything in my todos about family&rdquo;</li>
+</ul>
+<p><strong>Example run:</strong></p>
+<pre tabindex="0"><code>Goal: Search for any appointments in my todos
+Thinking...
+Using: search_todos(&#39;appointment&#39;)
+Result: I found 1 appointment-related item:
+- &#34;Book dentist appointment&#34;
+
+You should probably schedule that dentist visit!
+</code></pre><hr>
+<h2 id="why-this-is-actually-cool"><a href="#why-this-is-actually-cool" class="header-anchor"></a>Why This is Actually Cool
+</h2><h3 id="it-chains-actions"><a href="#it-chains-actions" class="header-anchor"></a>It Chains Actions
+</h3><p>Give it a complex goal and watch it break things down:</p>
+<p>&ldquo;Calculate my monthly budget and find related todos&rdquo; becomes:</p>
+<ol>
+<li>Use calculator for budget math</li>
+<li>Search todos for financial items</li>
+<li>Combine and present results</li>
+</ol>
+<h3 id="it-adapts"><a href="#it-adapts" class="header-anchor"></a>It Adapts
+</h3><p>If a tool returns unexpected results, the agent adjusts. No rigid scripting.</p>
+<h3 id="it-explains-itself"><a href="#it-explains-itself" class="header-anchor"></a>It Explains Itself
+</h3><p>You can see exactly what it&rsquo;s doing and why. Full transparency.</p>
+<hr>
+<h2 id="level-up-ideas"><a href="#level-up-ideas" class="header-anchor"></a>Level Up Ideas
+</h2><p><strong>Connect to real services:</strong></p>
+<ul>
+<li>Weather APIs</li>
+<li>Your calendar</li>
+<li>Email or Slack</li>
+<li>Smart home devices</li>
+</ul>
+<p><strong>Add memory:</strong></p>
+<ul>
+<li>Store past conversations</li>
+<li>Remember your preferences</li>
+<li>Build context over time</li>
+</ul>
+<p><strong>Go proactive:</strong></p>
+<ul>
+<li>Run on a schedule</li>
+<li>Send you daily summaries</li>
+<li>Alert about important changes</li>
+</ul>
+<p><strong>Get fancy:</strong></p>
+<ul>
+<li>Web interface with Flask/FastAPI</li>
+<li>Voice commands</li>
+<li>Mobile app integration</li>
+</ul>
+<hr>
+<h2 id="the-breakthrough-moment"><a href="#the-breakthrough-moment" class="header-anchor"></a>The Breakthrough Moment
+</h2><p>After playing with this for a few days, something clicked. This isn&rsquo;t just automation - it&rsquo;s delegation to something that can actually think through problems.</p>
+<p>I asked it to &ldquo;help me prep for my Monday meetings&rdquo; and watched it:</p>
+<ol>
+<li>Search my todos for meeting-related items</li>
+<li>Calculate how much time I had available</li>
+<li>Suggest a preparation schedule</li>
+<li>Offer to set reminders</li>
+</ol>
+<p>It felt less like using a tool and more like working with a really efficient intern.</p>
+<p><strong>That&rsquo;s the magic of agentic AI.</strong> You&rsquo;re not just getting answers - you&rsquo;re getting a thinking partner that can take action.</p>
+<hr>
+<h2 id="start-building"><a href="#start-building" class="header-anchor"></a>Start Building
+</h2><p>The code above is literally all you need to get started. Clone it, modify the tools, add your own functions.</p>
+<p>Most importantly: <strong>start simple.</strong> Don&rsquo;t try to build Jarvis on day one. Build something that solves one small problem really well, then expand from there.</p>
+<p>The future isn&rsquo;t about replacing humans with AI. It&rsquo;s about humans working with AI that can actually get stuff done.</p>
+<p>What will you build first?</p>
+<hr>
+<p><em>Pro tip: Keep your API costs low while experimenting by using GPT-3.5 for simple tasks and only upgrading to GPT-4 when you need the extra reasoning power.</em></p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ai-agent/">AI Agent</a>
+        
+            <a href="/tags/ai/">AI</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="">
+    <a href="/datascience/agenticai/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Agentic AI: The Mind-Blowing Future That&#39;s Already Here</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/musings/agi/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">AIG: The Dumb Smart Thing That Might Change Everything</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/musings/gemma3-ai/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Gemma 3: Google&#39;s Lean, Mean AI Machine Takes on DeepSeek V3</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/musings/gencast/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Google&#39;s GenCast: AI Weather Forecasting and the Future of Grid Resiliency</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="">
+    <a href="/musings/gpt5-future-ai/">
+        
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Reality Check of GPT-5: When AI Ambitions Meet Practical Constraints</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 My Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

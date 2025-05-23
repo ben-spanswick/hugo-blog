@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Guide on My Blog</title>
+        <link>http://192.168.100.63:1313/categories/guide/</link>
+        <description>Recent content in Guide on My Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sat, 29 Mar 2025 02:59:30 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/guide/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>I Built My Own AI Agent with GPT-4 (And You Can Too)</title>
+        <link>http://192.168.100.63:1313/datascience/buildanagent/</link>
+        <pubDate>Sat, 29 Mar 2025 02:59:30 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/datascience/buildanagent/</guid>
+        <description>&lt;h1 id=&#34;build-your-first-ai-agent-that-actually-does-stuff&#34;&gt;&lt;a href=&#34;#build-your-first-ai-agent-that-actually-does-stuff&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Build Your First AI Agent That Actually Does Stuff
+&lt;/h1&gt;&lt;p&gt;&lt;em&gt;From chatbot to digital assistant in 50 lines of Python&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;I&amp;rsquo;ve been messing around with AI agents for the past few weeks, and honestly, it&amp;rsquo;s addictive. Started as curiosity about &amp;ldquo;what&amp;rsquo;s beyond ChatGPT&amp;rdquo; and turned into building little digital helpers that can actually get work done.&lt;/p&gt;
+&lt;p&gt;Most people think AI agents are either science fiction or require a PhD to build. Neither is true. You can create something genuinely useful in an afternoon with basic Python skills.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;agent-vs-chatbot-the-difference-that-matters&#34;&gt;&lt;a href=&#34;#agent-vs-chatbot-the-difference-that-matters&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Agent vs Chatbot: The Difference That Matters
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Regular chatbot:&lt;/strong&gt; &amp;ldquo;What&amp;rsquo;s 2+2?&amp;rdquo;&lt;br&gt;
+&lt;em&gt;&amp;ldquo;It&amp;rsquo;s 4!&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AI agent:&lt;/strong&gt; &amp;ldquo;Help me budget for my vacation&amp;rdquo;&lt;br&gt;
+&lt;em&gt;&amp;ldquo;I&amp;rsquo;ll calculate your available funds, research flight costs, suggest a daily budget, and can book the flights when you&amp;rsquo;re ready.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The agent I&amp;rsquo;m about to show you:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Takes your goal&lt;/li&gt;
+&lt;li&gt;Makes a plan&lt;/li&gt;
+&lt;li&gt;Uses actual tools to get things done&lt;/li&gt;
+&lt;li&gt;Reports back with results&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Basic? Yes. But it follows the same pattern as those million-dollar enterprise systems.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-you-need&#34;&gt;&lt;a href=&#34;#what-you-need&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What You Need
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Python 3.8+&lt;/li&gt;
+&lt;li&gt;OpenAI API key (GPT-4 works best, 3.5 is okay)&lt;/li&gt;
+&lt;li&gt;Two packages: &lt;code&gt;openai&lt;/code&gt; and &lt;code&gt;rich&lt;/code&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;That&amp;rsquo;s it. No complicated frameworks or cloud deployments.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install openai rich
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h2 id=&#34;step-1-give-your-agent-some-hands&#34;&gt;&lt;a href=&#34;#step-1-give-your-agent-some-hands&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Step 1: Give Your Agent Some Hands
+&lt;/h2&gt;&lt;p&gt;An agent without tools is just an expensive chatbot. Let&amp;rsquo;s start simple:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;search_todos&lt;/span&gt;(query):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Fake database for demo&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    todos &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Buy milk&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Call mom&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Finish blog post&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Book dentist appointment&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; [todo &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; todo &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; todos &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; query&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;lower() &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; todo&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;lower()]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;simple_calculator&lt;/span&gt;(expression):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; str(eval(expression))  &lt;span style=&#34;color:#75715e&#34;&gt;# Don&amp;#39;t do this in production!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Exception&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; e:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Error: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;str(e)&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now register them:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TOOLS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;search_todos&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function&amp;#34;&lt;/span&gt;: search_todos,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Searches the to-do list. Input should be a keyword.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;simple_calculator&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function&amp;#34;&lt;/span&gt;: simple_calculator,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Evaluates math expressions.&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Real talk:&lt;/strong&gt; These are toy examples. In practice, you&amp;rsquo;d connect to actual APIs, databases, or services.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-2-the-agent-brain&#34;&gt;&lt;a href=&#34;#step-2-the-agent-brain&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Step 2: The Agent Brain
+&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s where it gets interesting. We create a loop where GPT-4 decides what to do, we execute it, and feed the results back:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; openai
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; json
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; rich &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; print
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;run_agent&lt;/span&gt;(goal):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    messages &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;system&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;You&amp;#39;re an AI agent that completes tasks using tools. Think step-by-step.&amp;#34;&lt;/span&gt;},
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;My goal: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;goal&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[yellow]Thinking...[/yellow]&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; openai&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ChatCompletion&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;create(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            model&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gpt-4&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            messages&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;messages,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            functions&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: name,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: meta[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;parameters&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        },
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; name, meta &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; TOOLS&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;items()
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            ],
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            function_call&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;auto&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        )
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        reply &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; response[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;choices&amp;#39;&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;][&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;message&amp;#39;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        messages&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(reply)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; reply&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function_call&amp;#34;&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;# Agent chose to use a tool&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            tool_name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; reply[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function_call&amp;#34;&lt;/span&gt;][&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            tool_input &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; json&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loads(reply[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function_call&amp;#34;&lt;/span&gt;][&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;arguments&amp;#34;&lt;/span&gt;])[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[green]Using: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;tool_name&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;tool_input&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;)[/green]&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; TOOLS[tool_name][&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function&amp;#34;&lt;/span&gt;](tool_input)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;# Feed result back to agent&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            messages&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append({
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: tool_name,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;: result
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            })
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;# Agent is done&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[cyan]Result:[/cyan]&amp;#34;&lt;/span&gt;, reply[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;])
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;What&amp;rsquo;s happening:&lt;/strong&gt; GPT-4 acts as the &amp;ldquo;brain&amp;rdquo; deciding what to do. Your Python functions are its &amp;ldquo;hands&amp;rdquo; that actually do things.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;step-3-take-it-for-a-test-drive&#34;&gt;&lt;a href=&#34;#step-3-take-it-for-a-test-drive&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Step 3: Take It for a Test Drive
+&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    openai&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;api_key &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;your-api-key-here&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# Use environment variables!&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    goal &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; input(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;What&amp;#39;s your goal? &amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    run_agent(goal)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Try these:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;What appointments do I have coming up?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Calculate compound interest on $1000 at 5% for 3 years&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Find anything in my todos about family&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Example run:&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Goal: Search for any appointments in my todos
+Thinking...
+Using: search_todos(&amp;#39;appointment&amp;#39;)
+Result: I found 1 appointment-related item:
+- &amp;#34;Book dentist appointment&amp;#34;
+
+You should probably schedule that dentist visit!
+&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
+&lt;h2 id=&#34;why-this-is-actually-cool&#34;&gt;&lt;a href=&#34;#why-this-is-actually-cool&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This is Actually Cool
+&lt;/h2&gt;&lt;h3 id=&#34;it-chains-actions&#34;&gt;&lt;a href=&#34;#it-chains-actions&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;It Chains Actions
+&lt;/h3&gt;&lt;p&gt;Give it a complex goal and watch it break things down:&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Calculate my monthly budget and find related todos&amp;rdquo; becomes:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Use calculator for budget math&lt;/li&gt;
+&lt;li&gt;Search todos for financial items&lt;/li&gt;
+&lt;li&gt;Combine and present results&lt;/li&gt;
+&lt;/ol&gt;
+&lt;h3 id=&#34;it-adapts&#34;&gt;&lt;a href=&#34;#it-adapts&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;It Adapts
+&lt;/h3&gt;&lt;p&gt;If a tool returns unexpected results, the agent adjusts. No rigid scripting.&lt;/p&gt;
+&lt;h3 id=&#34;it-explains-itself&#34;&gt;&lt;a href=&#34;#it-explains-itself&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;It Explains Itself
+&lt;/h3&gt;&lt;p&gt;You can see exactly what it&amp;rsquo;s doing and why. Full transparency.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;level-up-ideas&#34;&gt;&lt;a href=&#34;#level-up-ideas&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Level Up Ideas
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Connect to real services:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Weather APIs&lt;/li&gt;
+&lt;li&gt;Your calendar&lt;/li&gt;
+&lt;li&gt;Email or Slack&lt;/li&gt;
+&lt;li&gt;Smart home devices&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Add memory:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Store past conversations&lt;/li&gt;
+&lt;li&gt;Remember your preferences&lt;/li&gt;
+&lt;li&gt;Build context over time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Go proactive:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run on a schedule&lt;/li&gt;
+&lt;li&gt;Send you daily summaries&lt;/li&gt;
+&lt;li&gt;Alert about important changes&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Get fancy:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Web interface with Flask/FastAPI&lt;/li&gt;
+&lt;li&gt;Voice commands&lt;/li&gt;
+&lt;li&gt;Mobile app integration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-breakthrough-moment&#34;&gt;&lt;a href=&#34;#the-breakthrough-moment&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Breakthrough Moment
+&lt;/h2&gt;&lt;p&gt;After playing with this for a few days, something clicked. This isn&amp;rsquo;t just automation - it&amp;rsquo;s delegation to something that can actually think through problems.&lt;/p&gt;
+&lt;p&gt;I asked it to &amp;ldquo;help me prep for my Monday meetings&amp;rdquo; and watched it:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Search my todos for meeting-related items&lt;/li&gt;
+&lt;li&gt;Calculate how much time I had available&lt;/li&gt;
+&lt;li&gt;Suggest a preparation schedule&lt;/li&gt;
+&lt;li&gt;Offer to set reminders&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;It felt less like using a tool and more like working with a really efficient intern.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;That&amp;rsquo;s the magic of agentic AI.&lt;/strong&gt; You&amp;rsquo;re not just getting answers - you&amp;rsquo;re getting a thinking partner that can take action.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;start-building&#34;&gt;&lt;a href=&#34;#start-building&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Start Building
+&lt;/h2&gt;&lt;p&gt;The code above is literally all you need to get started. Clone it, modify the tools, add your own functions.&lt;/p&gt;
+&lt;p&gt;Most importantly: &lt;strong&gt;start simple.&lt;/strong&gt; Don&amp;rsquo;t try to build Jarvis on day one. Build something that solves one small problem really well, then expand from there.&lt;/p&gt;
+&lt;p&gt;The future isn&amp;rsquo;t about replacing humans with AI. It&amp;rsquo;s about humans working with AI that can actually get stuff done.&lt;/p&gt;
+&lt;p&gt;What will you build first?&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;Pro tip: Keep your API costs low while experimenting by using GPT-3.5 for simple tasks and only upgrading to GPT-4 when you need the extra reasoning power.&lt;/em&gt;&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

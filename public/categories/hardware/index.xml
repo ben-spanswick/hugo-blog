@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Hardware on My Blog</title>
+        <link>http://192.168.100.63:1313/categories/hardware/</link>
+        <description>Recent content in Hardware on My Blog</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Wed, 14 May 2025 15:00:00 -0400</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/hardware/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>First Homelab: Reflections, Diagram, and Stack</title>
+        <link>http://192.168.100.63:1313/projects/homelab/</link>
+        <pubDate>Wed, 14 May 2025 15:00:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/projects/homelab/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/HL.jpg" alt="Featured image of post First Homelab: Reflections, Diagram, and Stack" /&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/HL.jpg&#34;
+	
+	
+	
+	loading=&#34;lazy&#34;
+	
+		alt=&#34;Homelab Diagram&#34;
+	
+	
+&gt;&lt;/p&gt;
+&lt;h1 id=&#34;building-my-first-homelab-reflections-stack-and-next-steps&#34;&gt;&lt;a href=&#34;#building-my-first-homelab-reflections-stack-and-next-steps&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Building My First Homelab: Reflections, Stack, and Next Steps
+&lt;/h1&gt;&lt;p&gt;I&amp;rsquo;ve always admired the impressive homelab diagrams circulating on self-hosting forums. After years of lurking, tinkering, and gradually collecting hardware, I finally decided to document my own setup and journey.&lt;/p&gt;
+&lt;p&gt;This post summarizes what I&amp;rsquo;m running, what I&amp;rsquo;ve learned along the way, and how a casual experiment turned into a full-blown hobby.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;from-proxmox-curiosity-to-a-full-rack&#34;&gt;&lt;a href=&#34;#from-proxmox-curiosity-to-a-full-rack&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;From Proxmox Curiosity to a Full Rack
+&lt;/h2&gt;&lt;p&gt;The homelab journey began a couple of years ago, when I picked up a Lenovo m720q Tiny to run a Kali VM for some light pen-testing and CTF challenges. The spark was there, but life intervened, and the project was shelved.&lt;/p&gt;
+&lt;p&gt;Still, the curiosity stuck. After discovering the homelab and self-hosted communities, I took the plunge and bought two used servers—a Dell r730xd and an r430—right before the arrival of our second child. As you might expect, the servers went straight into storage.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;picking-up-the-project&#34;&gt;&lt;a href=&#34;#picking-up-the-project&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Picking Up the Project
+&lt;/h2&gt;&lt;p&gt;Earlier this year, with a bit more time and sleep, I finally assembled the rack, wired up switches, and started building out the network. What started as a few VMs quickly became a full stack: network segmentation, VLANs, containers, and a host of new services.&lt;/p&gt;
+&lt;p&gt;Recently, my attention has shifted toward AI experimentation. I built a dedicated AI rig, first with MI50 GPUs and now with 3090s and 3090Tis. Running local LLMs, experimenting with AI agents, and integrating custom tools has been a huge part of the learning curve.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;background&#34;&gt;&lt;a href=&#34;#background&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Background
+&lt;/h2&gt;&lt;p&gt;For context, I’m not a professional system administrator. My background is in tech leadership and data science for a large company, but the homelab is strictly a hobby. It’s a late-night project fueled by curiosity, trial-and-error, and a desire to truly understand the technology I use.&lt;/p&gt;
+&lt;p&gt;I enjoy exploring open-source services, experimenting with network architectures (sometimes to excess), and continually learning about security and automation in a hands-on way.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;current-stack&#34;&gt;&lt;a href=&#34;#current-stack&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Current Stack
+&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s what I have running today, organized by function.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Media &amp;amp; Entertainment&lt;/strong&gt;&lt;br&gt;
+Jellyfin, *arr suite (Readarr, Prowlarr, etc.), qBittorrent with Gluetun VPN, Audiobookshelf&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Lifestyle &amp;amp; Smart Home&lt;/strong&gt;&lt;br&gt;
+Tandoor (recipes), Bar Assistant, Plant It, FreshRSS, Home Assistant&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Productivity &amp;amp; Documentation&lt;/strong&gt;&lt;br&gt;
+Gitea (private Git), Nextcloud, PaperlessNGX, Draw.io, Filebrowser, n8n, Karakeep, Linkwarden, SANE Network Scanning, Kopia&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Databases&lt;/strong&gt;&lt;br&gt;
+MariaDB, PostgreSQL, InfluxDB&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Monitoring &amp;amp; Management&lt;/strong&gt;&lt;br&gt;
+Grafana, Uptime Kuma, Homepage dashboard, Portainer, Watchtower, Prometheus&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Security &amp;amp; Networking&lt;/strong&gt;&lt;br&gt;
+OPNSense, Fail2Ban, Authelia (SSO/2FA), Pi-hole, Traefik, MITMproxy, Tailscale, Cloudflared&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;AI Stack&lt;/strong&gt;&lt;br&gt;
+llama.cpp, AnythingLLM, PostgreSQL with pgvector, n8n for orchestration&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;upcoming-projects&#34;&gt;&lt;a href=&#34;#upcoming-projects&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Upcoming Projects
+&lt;/h2&gt;&lt;p&gt;Like most homelabbers, my &amp;ldquo;future plans&amp;rdquo; list is always growing. On the shortlist:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Changedetection, Dashy, Glance, Homarr&lt;/li&gt;
+&lt;li&gt;Revisit Matrix/Element setup&lt;/li&gt;
+&lt;li&gt;Firefly III (personal finance), Immich (photos), Joplin (notes)&lt;/li&gt;
+&lt;li&gt;Lube Logger, Monica, OnlyOffice, Open Meteo, Rocket.Chat, Syncthing, VSCode Server (currently running locally)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;lessons-learned&#34;&gt;&lt;a href=&#34;#lessons-learned&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Lessons Learned
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;Hardware is interesting, but the real power is in what you do with it. The software ecosystem is where experimentation pays off.&lt;/li&gt;
+&lt;li&gt;Network segmentation can be addictive. One VLAN for IoT leads to many more as complexity grows.&lt;/li&gt;
+&lt;li&gt;Backups matter. Tools like Kopia and PaperlessNGX have already proven invaluable for recovery and organization.&lt;/li&gt;
+&lt;li&gt;You do not need to be a sysadmin to run a homelab. Curiosity and persistence are more important than credentials.&lt;/li&gt;
+&lt;li&gt;There is always more to learn, and that&amp;rsquo;s what makes this hobby worth the investment.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;next-steps&#34;&gt;&lt;a href=&#34;#next-steps&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Next Steps
+&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;m planning a follow-up with hardware photos and a deep dive into the AI stack and automation workflows. If you have feedback, advice, or want to trade configs, let me know. I&amp;rsquo;m always looking for ways to improve or expand the lab.&lt;/p&gt;
+&lt;p&gt;Stay tuned for more, and happy self-hosting.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
