@@ -13,7 +13,7 @@ enableEmoji = true
   term = ["HTML", "RSS"]
 
 [params]
-  mainSections = ["datascience", "musings", "projects", "about"]  # Updated to reflect actual content folders
+  mainSections = ["news",  "datascience", "musings", "projects", "about"]  # Updated to reflect actual content folders
   featuredImageField = "image"
   rssFullContent = true
   favicon = "/favicon.ico"
@@ -96,21 +96,26 @@ enableEmoji = true
     weight = 2
 
   [[menu.main]]
+    name = "News"
+    url = "/news/"
+    weight = 3
+
+  [[menu.main]]
     name = "Musings"
     url = "/musings/"
-    weight = 3
+    weight = 4
 
   [[menu.main]]
     name = "Projects"
     url = "/projects/"
-    weight = 4
+    weight = 5
 
   [[menu.main]]
     name = "Data Strategy"
     url = "/datascience/"
-    weight = 5
+    weight = 6
 
   [[menu.main]]
     name = "Resume"
     url = "Spanswick_Resume2025.pdf"
-    weight = 6
+    weight = 7
