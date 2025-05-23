@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages Why Hugo? Hugo is one of the fastest static site generators available, making it ideal for self-hosted and low-maintenance deployments. I wanted a simple, efficient way to publish content without dealing with databases or complex CMS setups. The goal was to maintain full control over the blog while using a streamlined deployment process.\nThe Setup I started with a local Hugo installation, managed through an internal Gitea instance for private version control. The blog needed to be public, though, so I mirrored the repository to GitHub, allowing Cloudflare Pages to handle automatic deployments. This approach keeps the primary repo internal while using GitHub as an intermediary for seamless publishing.\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Getting My Blog Actually Working: Hugo + Gitea + GitHub + Cloudflare Pages Or: How I learned to stop worrying and love Git submodules (eventually)\nSo I finally got tired of not having a proper blog. You know how it is - you keep meaning to write stuff down, maybe share some of the things you&rsquo;ve figured out, but then you get stuck on the whole &ldquo;where do I even host this thing&rdquo; question for like six months.\n">
 <title>Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages</title>
 
 <link rel='canonical' href='http://192.168.100.63:1313/projects/hugo-blog-setup/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages">
-<meta property='og:description' content="Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages Why Hugo? Hugo is one of the fastest static site generators available, making it ideal for self-hosted and low-maintenance deployments. I wanted a simple, efficient way to publish content without dealing with databases or complex CMS setups. The goal was to maintain full control over the blog while using a streamlined deployment process.\nThe Setup I started with a local Hugo installation, managed through an internal Gitea instance for private version control. The blog needed to be public, though, so I mirrored the repository to GitHub, allowing Cloudflare Pages to handle automatic deployments. This approach keeps the primary repo internal while using GitHub as an intermediary for seamless publishing.\n">
+<meta property='og:description' content="Getting My Blog Actually Working: Hugo + Gitea + GitHub + Cloudflare Pages Or: How I learned to stop worrying and love Git submodules (eventually)\nSo I finally got tired of not having a proper blog. You know how it is - you keep meaning to write stuff down, maybe share some of the things you&rsquo;ve figured out, but then you get stuck on the whole &ldquo;where do I even host this thing&rdquo; question for like six months.\n">
 <meta property='og:url' content='http://192.168.100.63:1313/projects/hugo-blog-setup/'>
 <meta property='og:site_name' content='My Blog'>
 <meta property='og:type' content='article'><meta property='article:section' content='Projects' /><meta property='article:tag' content='Hugo' /><meta property='article:tag' content='Cloudflare Pages' /><meta property='article:tag' content='Gitea' /><meta property='article:tag' content='GitHub' /><meta property='article:tag' content='Self-Hosting' /><meta property='article:published_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
 <meta name="twitter:site" content="@@yourtwitter">
     <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages">
-<meta name="twitter:description" content="Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages Why Hugo? Hugo is one of the fastest static site generators available, making it ideal for self-hosted and low-maintenance deployments. I wanted a simple, efficient way to publish content without dealing with databases or complex CMS setups. The goal was to maintain full control over the blog while using a streamlined deployment process.\nThe Setup I started with a local Hugo installation, managed through an internal Gitea instance for private version control. The blog needed to be public, though, so I mirrored the repository to GitHub, allowing Cloudflare Pages to handle automatic deployments. This approach keeps the primary repo internal while using GitHub as an intermediary for seamless publishing.\n"><meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:description" content="Getting My Blog Actually Working: Hugo + Gitea + GitHub + Cloudflare Pages Or: How I learned to stop worrying and love Git submodules (eventually)\nSo I finally got tired of not having a proper blog. You know how it is - you keep meaning to write stuff down, maybe share some of the things you&rsquo;ve figured out, but then you get stuck on the whole &ldquo;where do I even host this thing&rdquo; question for like six months.\n"><meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
@@ -90,6 +90,16 @@
                 
                 
                 <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/news/' >
+                
+                
+                
+                <span>News</span>
             </a>
         </li>
         
@@ -222,7 +232,7 @@
 
 
                 <time class="article-time--reading">
-                    3 minute read
+                    5 minute read
                 </time>
             </div>
         
@@ -237,77 +247,98 @@
     <section class="article-content">
     
     
-    <h1 id="setting-up-hugo-with-gitea-github-and-cloudflare-pages"><a href="#setting-up-hugo-with-gitea-github-and-cloudflare-pages" class="header-anchor"></a>Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages
-</h1><h2 id="why-hugo"><a href="#why-hugo" class="header-anchor"></a>Why Hugo?
-</h2><p>Hugo is one of the fastest static site generators available, making it ideal for self-hosted and low-maintenance deployments. I wanted a simple, efficient way to publish content without dealing with databases or complex CMS setups. The goal was to maintain full control over the blog while using a streamlined deployment process.</p>
-<h2 id="the-setup"><a href="#the-setup" class="header-anchor"></a>The Setup
-</h2><p>I started with a local Hugo installation, managed through an internal <strong>Gitea</strong> instance for private version control. The blog needed to be public, though, so I mirrored the repository to <strong>GitHub</strong>, allowing <strong>Cloudflare Pages</strong> to handle automatic deployments. This approach keeps the primary repo internal while using GitHub as an intermediary for seamless publishing.</p>
-<h3 id="1-installing-hugo"><a href="#1-installing-hugo" class="header-anchor"></a><strong>1. Installing Hugo</strong>
-</h3><p>I installed Hugo directly on my server:</p>
+    <h1 id="getting-my-blog-actually-working-hugo--gitea--github--cloudflare-pages"><a href="#getting-my-blog-actually-working-hugo--gitea--github--cloudflare-pages" class="header-anchor"></a>Getting My Blog Actually Working: Hugo + Gitea + GitHub + Cloudflare Pages
+</h1><p><em>Or: How I learned to stop worrying and love Git submodules (eventually)</em></p>
+<hr>
+<p>So I finally got tired of not having a proper blog. You know how it is - you keep meaning to write stuff down, maybe share some of the things you&rsquo;ve figured out, but then you get stuck on the whole &ldquo;where do I even host this thing&rdquo; question for like six months.</p>
+<p>I&rsquo;d been running other services in my homelab, so naturally I wanted to keep control of my content while still making it easy to publish. After way too much research (and a few false starts), I ended up with Hugo feeding into a pretty slick deployment pipeline. Here&rsquo;s how it all came together.</p>
+<h2 id="why-hugo-though"><a href="#why-hugo-though" class="header-anchor"></a>Why Hugo Though?
+</h2><p>Honestly? Speed and simplicity. I&rsquo;ve dealt with WordPress before and while it&rsquo;s powerful, I really didn&rsquo;t want to babysit another database or worry about security updates for a CMS. Hugo just takes markdown files and spits out a static site that loads crazy fast.</p>
+<p>Plus, the whole &ldquo;write in markdown, commit to git, site updates automatically&rdquo; workflow really appealed to the developer side of my brain. No admin panels, no databases, just files and version control.</p>
+<h2 id="the-setup-spoiler-it-got-complicated"><a href="#the-setup-spoiler-it-got-complicated" class="header-anchor"></a>The Setup (Spoiler: It Got Complicated)
+</h2><p>My plan seemed reasonable enough:</p>
+<ul>
+<li>Keep the main repo in my internal Gitea instance (because I like having control)</li>
+<li>Mirror it to GitHub (because that&rsquo;s what Cloudflare Pages wants to see)</li>
+<li>Let Cloudflare handle the building and hosting (because why reinvent that wheel)</li>
+</ul>
+<p>Simple, right? <em>Narrator: It was not simple.</em></p>
+<h3 id="getting-hugo-running"><a href="#getting-hugo-running" class="header-anchor"></a>Getting Hugo Running
+</h3><p>The basic setup was actually painless. On my server:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install hugo
-</span></span></code></pre></div><p>Then, I created the site structure:</p>
+</span></span></code></pre></div><p>Create the site structure:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>hugo new site myblog
-</span></span></code></pre></div><h2 id="using-a-theme-submodule-issues-and-fixes"><a href="#using-a-theme-submodule-issues-and-fixes" class="header-anchor"></a><strong>Using a Theme: Submodule Issues and Fixes</strong>
-</h2><p>Hugo themes are typically managed as Git submodules, which caused some headaches when syncing between Gitea and GitHub.</p>
-<h3 id="the-submodule-problem"><a href="#the-submodule-problem" class="header-anchor"></a><strong>The Submodule Problem</strong>
-</h3><p>Initially, I added a theme as a submodule:</p>
+</span></span></code></pre></div><p>So far so good. Then I needed a theme, and that&rsquo;s where things got&hellip; interesting.</p>
+<h2 id="the-great-submodule-adventure"><a href="#the-great-submodule-adventure" class="header-anchor"></a>The Great Submodule Adventure
+</h2><p>Hugo themes are typically managed as Git submodules, which sounds great in theory. In practice? Well, let me tell you about my afternoon of increasingly creative swearing.</p>
+<h3 id="what-i-tried-first"><a href="#what-i-tried-first" class="header-anchor"></a>What I Tried First
+</h3><p>I found a theme I liked (hugo-theme-stack) and added it the &ldquo;normal&rdquo; way:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
-</span></span></code></pre></div><p>This worked locally, but Cloudflare Pages failed to build, throwing errors like:</p>
+</span></span></code></pre></div><p>Worked perfectly locally. Hugo was happy, the site looked good, everything was great. Then I pushed to GitHub and tried to deploy with Cloudflare Pages.</p>
 <pre tabindex="0"><code>fatal: No url found for submodule path &#39;themes/stack&#39; in .gitmodules
-</code></pre><p>This happened because GitHub wasn’t properly recognizing the submodule reference. Attempts to remove and re-add it using <code>git rm --cached</code> didn’t fully resolve the issue.</p>
-<h3 id="the-proper-fix"><a href="#the-proper-fix" class="header-anchor"></a><strong>The Proper Fix</strong>
-</h3><p>The cleanest way to handle submodules for a public build was:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Remove any broken references</span>
+</code></pre><p>Great. Just great.</p>
+<h3 id="the-rabbit-hole"><a href="#the-rabbit-hole" class="header-anchor"></a>The Rabbit Hole
+</h3><p>This is where I spent way too much time trying different variations of <code>git rm --cached</code> and <code>git submodule deinit</code> and generally making things worse. Turns out GitHub was getting confused about the submodule reference, and Cloudflare couldn&rsquo;t clone the theme during builds.</p>
+<p>I probably could have saved myself two hours by just reading the error message more carefully, but where&rsquo;s the fun in that?</p>
+<h3 id="what-actually-fixed-it"><a href="#what-actually-fixed-it" class="header-anchor"></a>What Actually Fixed It
+</h3><p>Eventually I just nuked the whole thing and started over:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Burn it all down</span>
 </span></span><span style="display:flex;"><span>git submodule deinit -f themes/stack
 </span></span><span style="display:flex;"><span>git rm --cached themes/stack
 </span></span><span style="display:flex;"><span>rm -rf .git/modules/themes/stack
 </span></span><span style="display:flex;"><span>rm -rf themes/stack
 </span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#75715e"># Re-add as a proper submodule</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Start fresh</span>
 </span></span><span style="display:flex;"><span>git submodule add https://github.com/CaiJimmy/hugo-theme-stack.git themes/stack
 </span></span><span style="display:flex;"><span>git submodule update --init --recursive
 </span></span><span style="display:flex;"><span>git commit -m <span style="color:#e6db74">&#34;Re-added Stack theme as a proper submodule&#34;</span>
 </span></span><span style="display:flex;"><span>git push origin main
-</span></span></code></pre></div><p>Once this was done, Cloudflare Pages could properly clone the theme during its build process.</p>
-<h2 id="configuring-cloudflare-pages"><a href="#configuring-cloudflare-pages" class="header-anchor"></a><strong>Configuring Cloudflare Pages</strong>
-</h2><p>With GitHub mirroring the repository, Cloudflare Pages handled automatic deployments.</p>
-<ol>
-<li><strong>Connected the GitHub repo</strong> to Cloudflare Pages.</li>
-<li>Set the <strong>build command</strong> to:
+</span></span></code></pre></div><p>This time it actually worked. Sometimes the nuclear option is the right option.</p>
+<h2 id="getting-cloudflare-pages-to-cooperate"><a href="#getting-cloudflare-pages-to-cooperate" class="header-anchor"></a>Getting Cloudflare Pages to Cooperate
+</h2><p>With the submodule situation sorted, setting up Cloudflare Pages should have been straightforward. Should have been.</p>
+<p>I connected my GitHub repo to Cloudflare and set the build command:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>git submodule update --init --recursive <span style="color:#f92672">&amp;&amp;</span> hugo --gc --minify
-</span></span></code></pre></div></li>
-<li><strong>Fixed Hugo Version Issues</strong> – Cloudflare was running an outdated Hugo version by default, causing errors like:
+</span></span></code></pre></div><p>First build attempt: failed. The error was something about field evaluation, which led me down another fun debugging path.</p>
+<h3 id="the-hugo-version-problem"><a href="#the-hugo-version-problem" class="header-anchor"></a>The Hugo Version Problem
+</h3><p>Turns out Cloudflare Pages was running some ancient version of Hugo by default. My theme needed newer features, so I was getting errors like:</p>
 <pre tabindex="0"><code>can&#39;t evaluate field Lastmod in type page.Site
-</code></pre>The fix was to <strong>specify the correct Hugo version</strong> in <code>package.json</code>:
+</code></pre><p>The fix was adding a <code>package.json</code> file to specify the Hugo version:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;engines&#34;</span>: {
 </span></span><span style="display:flex;"><span>        <span style="color:#f92672">&#34;hugo&#34;</span>: <span style="color:#e6db74">&#34;0.118.2&#34;</span>
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div>This ensured Cloudflare Pages used a compatible version.</li>
-</ol>
-<h2 id="adding-a-custom-domain"><a href="#adding-a-custom-domain" class="header-anchor"></a><strong>Adding a Custom Domain</strong>
-</h2><p>The final step was setting up a custom domain (<code>blog.spanswick.dev</code>).</p>
+</span></span></code></pre></div><p>Why this isn&rsquo;t documented more prominently, I have no idea. But once I added that, builds started working.</p>
+<h2 id="custom-domain-setup"><a href="#custom-domain-setup" class="header-anchor"></a>Custom Domain Setup
+</h2><p>The last piece was getting my custom domain (<code>blog.spanswick.dev</code>) working properly. This part was actually straightforward for once:</p>
 <ol>
-<li><strong>Added the domain in Cloudflare Pages</strong> under <code>Custom Domains</code>.</li>
-<li>Updated <strong>DNS settings</strong>:
-<ul>
-<li>Added a CNAME record pointing <code>blog.spanswick.dev</code> to <code>pages.dev</code>.</li>
-<li>Enabled <strong>proxied mode</strong> for better performance and security.</li>
-</ul>
-</li>
-<li>Enabled <strong>Full (Strict) SSL</strong> to ensure HTTPS worked correctly.</li>
+<li>Added the domain in Cloudflare Pages under Custom Domains</li>
+<li>Set up DNS with a CNAME record pointing to the pages.dev URL</li>
+<li>Enabled proxy mode for better performance</li>
+<li>Set SSL to Full (Strict) because why not</li>
 </ol>
-<h2 id="final-thoughts"><a href="#final-thoughts" class="header-anchor"></a><strong>Final Thoughts</strong>
-</h2><p>The final setup works smoothly:</p>
+<p>And&hellip; it worked. First try. I was almost disappointed by how easy it was after everything else.</p>
+<h2 id="what-i-learned"><a href="#what-i-learned" class="header-anchor"></a>What I Learned
+</h2><p>The final workflow is actually pretty nice:</p>
 <ul>
-<li><strong>Gitea</strong> for internal version control.</li>
-<li><strong>GitHub</strong> as a public mirror.</li>
-<li><strong>Cloudflare Pages</strong> for automatic deployments.</li>
-<li><strong>Custom domain</strong> for a professional look.</li>
+<li>I write posts in markdown and commit to my Gitea instance</li>
+<li>Push to GitHub (manual for now, but I might automate this)</li>
+<li>Cloudflare automatically builds and deploys</li>
+<li>Everything just works</li>
 </ul>
-<p>The biggest pain point was dealing with <strong>submodules</strong>—GitHub didn’t always handle them correctly, and Cloudflare’s default Hugo version was outdated. Once those were sorted, everything fell into place.</p>
-<p>Going forward, I might explore additional integrations like <strong>webhooks</strong> to automatically push from Gitea to GitHub, removing the need for manual mirroring.</p>
+<p>The main lessons:</p>
+<ul>
+<li><strong>Git submodules are finicky</strong> but they do work once you get them right</li>
+<li><strong>Version pinning matters</strong> - don&rsquo;t assume the build environment has what you need</li>
+<li><strong>Sometimes starting over is faster</strong> than trying to fix a broken git state</li>
+<li><strong>Read error messages carefully</strong> (I&rsquo;m still working on this one)</li>
+</ul>
+<h2 id="whats-next"><a href="#whats-next" class="header-anchor"></a>What&rsquo;s Next?
+</h2><p>I&rsquo;m pretty happy with how this turned out. The writing experience is smooth, deployment is automatic, and I don&rsquo;t have to worry about keeping a CMS updated.</p>
+<p>I might add webhooks to automatically sync from Gitea to GitHub, just to remove that manual step. But honestly, the current setup works well enough that I&rsquo;m not in a rush to complicate it further.</p>
+<p>Plus, now I actually have a place to write about all the other stuff I&rsquo;ve been tinkering with. Mission accomplished, I guess.</p>
+<hr>
+<p><em>If you&rsquo;re trying to do something similar and get stuck on the submodule thing, just remember: when in doubt, nuke it and start over. Sometimes that&rsquo;s genuinely the fastest path forward.</em></p>
 
 </section>
 

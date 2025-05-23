@@ -95,6 +95,16 @@
         
         
         <li >
+            <a href='/news/' >
+                
+                
+                
+                <span>News</span>
+            </a>
+        </li>
+        
+        
+        <li >
             <a href='/musings/' >
                 
                 
@@ -214,7 +224,7 @@
 
 
                 <time class="article-time--reading">
-                    2 minute read
+                    5 minute read
                 </time>
             </div>
         
@@ -229,43 +239,55 @@
     <section class="article-content">
     
     
-    <h1 id="nextcloud-lxc-setup-guide-step-by-step"><a href="#nextcloud-lxc-setup-guide-step-by-step" class="header-anchor"></a>Nextcloud LXC Setup Guide (Step-by-Step)
-</h1><h2 id="1-install-the-turnkey-nextcloud-lxc"><a href="#1-install-the-turnkey-nextcloud-lxc" class="header-anchor"></a>1. Install the TurnKey Nextcloud LXC
-</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pct create <span style="color:#ae81ff">101</span> local:vztmpl/turnkey-nextcloud-18.0-buster-amd64.tar.gz --storage local-zfs --hostname NextCloud --memory <span style="color:#ae81ff">8000</span> --cores <span style="color:#ae81ff">4</span>
+    <h1 id="building-a-proper-nextcloud-setup-in-proxmox-lxc"><a href="#building-a-proper-nextcloud-setup-in-proxmox-lxc" class="header-anchor"></a>Building a Proper Nextcloud Setup in Proxmox LXC
+</h1><p><em>How I got Nextcloud running smoothly without losing my mind (mostly)</em></p>
+<hr>
+<p>So I finally decided to bite the bullet and set up my own Nextcloud instance. I&rsquo;ve been putting this off for months, but I got tired of paying for three different cloud storage services while having zero control over my data. Time to bring everything home.</p>
+<p>I wanted something that would actually perform well and not feel sluggish like some Nextcloud instances I&rsquo;ve used before. That meant doing it right from the start: separate database, proper caching, and decent storage. Here&rsquo;s how it all came together.</p>
+<h2 id="starting-with-the-turnkey-template"><a href="#starting-with-the-turnkey-template" class="header-anchor"></a>Starting with the TurnKey Template
+</h2><p>Instead of building everything from scratch, I went with the TurnKey Nextcloud template. It&rsquo;s basically a pre-configured Nextcloud setup that saves you from dealing with all the initial Apache and PHP configuration headaches.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pct create <span style="color:#ae81ff">101</span> local:vztmpl/turnkey-nextcloud-18.0-buster-amd64.tar.gz --storage local-zfs --hostname NextCloud --memory <span style="color:#ae81ff">8000</span> --cores <span style="color:#ae81ff">4</span>
 </span></span><span style="display:flex;"><span>pct start <span style="color:#ae81ff">101</span>
-</span></span></code></pre></div><hr>
-<h2 id="2-install-postgresql-in-a-separate-lxc"><a href="#2-install-postgresql-in-a-separate-lxc" class="header-anchor"></a>2. Install PostgreSQL in a Separate LXC
-</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update <span style="color:#f92672">&amp;&amp;</span> apt install -y postgresql
+</span></span></code></pre></div><p>I gave it 8GB of RAM and 4 cores because I didn&rsquo;t want to be stingy and then regret it later. Storage performance matters way more for Nextcloud than most people realize.</p>
+<h2 id="database-dont-use-sqlite"><a href="#database-dont-use-sqlite" class="header-anchor"></a>Database: Don&rsquo;t Use SQLite
+</h2><p>This is where a lot of people go wrong. The default SQLite setup is fine for testing, but if you actually want decent performance, you need a proper database. I went with PostgreSQL in its own LXC container.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update <span style="color:#f92672">&amp;&amp;</span> apt install -y postgresql
 </span></span><span style="display:flex;"><span>systemctl enable --now postgresql
-</span></span></code></pre></div><h3 id="create-the-nextcloud-database"><a href="#create-the-nextcloud-database" class="header-anchor"></a>Create the Nextcloud Database
-</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -u postgres psql
+</span></span></code></pre></div><p>Then set up the database for Nextcloud:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -u postgres psql
 </span></span><span style="display:flex;"><span>CREATE DATABASE nextcloud;
-</span></span><span style="display:flex;"><span>CREATE USER nextclouduser WITH PASSWORD <span style="color:#e6db74">&#39;REDACTED&#39;</span>;
+</span></span><span style="display:flex;"><span>CREATE USER nextclouduser WITH PASSWORD <span style="color:#e6db74">&#39;your-secure-password-here&#39;</span>;
 </span></span><span style="display:flex;"><span>ALTER DATABASE nextcloud OWNER TO nextclouduser;
 </span></span><span style="display:flex;"><span><span style="color:#ae81ff">\q</span>
-</span></span></code></pre></div><hr>
-<h2 id="3-mount-hdd-pool-for-nextcloud-data"><a href="#3-mount-hdd-pool-for-nextcloud-data" class="header-anchor"></a>3. Mount HDD Pool for Nextcloud Data
-</h2><h3 id="on-proxmox-host"><a href="#on-proxmox-host" class="header-anchor"></a>On Proxmox Host:
-</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zfs create -o mountpoint<span style="color:#f92672">=</span>/mnt/r430pool/nextcloud r430pool/nextcloud
-</span></span></code></pre></div><h3 id="bind-to-lxc"><a href="#bind-to-lxc" class="header-anchor"></a>Bind to LXC:
-</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano /etc/pve/lxc/101.conf
-</span></span></code></pre></div><p>Add:</p>
+</span></span></code></pre></div><p>Yeah, I know MySQL is more common for this stuff, but PostgreSQL just feels more robust. Plus it handles concurrent connections better, which actually matters when you&rsquo;ve got multiple devices constantly syncing files.</p>
+<h2 id="storage-getting-the-data-off-the-boot-drive"><a href="#storage-getting-the-data-off-the-boot-drive" class="header-anchor"></a>Storage: Getting the Data Off the Boot Drive
+</h2><p>Here&rsquo;s something most guides don&rsquo;t emphasize enough - Nextcloud is going to store a <em>lot</em> of data, and you definitely don&rsquo;t want that filling up your main system drive. I&rsquo;ve got a separate HDD pool for bulk storage, so that&rsquo;s where the actual files need to live.</p>
+<h3 id="setting-up-the-zfs-dataset"><a href="#setting-up-the-zfs-dataset" class="header-anchor"></a>Setting Up the ZFS Dataset
+</h3><p>On the Proxmox host:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>zfs create -o mountpoint<span style="color:#f92672">=</span>/mnt/r430pool/nextcloud r430pool/nextcloud
+</span></span></code></pre></div><h3 id="mounting-in-the-lxc"><a href="#mounting-in-the-lxc" class="header-anchor"></a>Mounting in the LXC
+</h3><p>Edit the container config:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>nano /etc/pve/lxc/101.conf
+</span></span></code></pre></div><p>Add this line:</p>
 <pre tabindex="0"><code>mp0: /mnt/r430pool/nextcloud,mp=/mnt/nextcloud
-</code></pre><h3 id="fix-permissions"><a href="#fix-permissions" class="header-anchor"></a>Fix Permissions:
-</h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chown -R 101033:101033 /mnt/r430pool/nextcloud
-</span></span></code></pre></div><hr>
-<h2 id="4-move-nextcloud-data-to-hdd-storage"><a href="#4-move-nextcloud-data-to-hdd-storage" class="header-anchor"></a>4. Move Nextcloud Data to HDD Storage
-</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl stop apache2
+</code></pre><h3 id="the-permissions-dance"><a href="#the-permissions-dance" class="header-anchor"></a>The Permissions Dance
+</h3><p>This is where unprivileged LXC containers get annoying. The UIDs don&rsquo;t match up, so you have to manually fix permissions:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>chown -R 101033:101033 /mnt/r430pool/nextcloud
+</span></span></code></pre></div><p>That 101033 is the mapped UID for the www-data user inside the container. Took me way too long to figure that out the first time.</p>
+<h2 id="moving-nextclouds-data-directory"><a href="#moving-nextclouds-data-directory" class="header-anchor"></a>Moving Nextcloud&rsquo;s Data Directory
+</h2><p>With the storage mounted, I needed to actually move Nextcloud&rsquo;s data to the new location. This is one of those &ldquo;stop everything first&rdquo; operations:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl stop apache2
 </span></span><span style="display:flex;"><span>rsync -av /var/www/nextcloud/data/ /mnt/nextcloud/
-</span></span></code></pre></div><p>Update <code>config.php</code>:</p>
+</span></span></code></pre></div><p>Then update the config file (<code>/var/www/nextcloud/config/config.php</code>):</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#e6db74">&#39;datadirectory&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;/mnt/nextcloud&#39;</span>,
-</span></span></code></pre></div><p>Restart:</p>
+</span></span></code></pre></div><p>Start it back up:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl restart apache2
-</span></span></code></pre></div><hr>
-<h2 id="5-install-redis--apcu-for-caching"><a href="#5-install-redis--apcu-for-caching" class="header-anchor"></a>5. Install Redis &amp; APCu for Caching
-</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install -y redis-server php-redis php-apcu
+</span></span></code></pre></div><p>At this point I was crossing my fingers that I didn&rsquo;t break anything. Spoiler alert: it worked fine.</p>
+<h2 id="performance-caching-makes-everything-better"><a href="#performance-caching-makes-everything-better" class="header-anchor"></a>Performance: Caching Makes Everything Better
+</h2><p>Default Nextcloud can feel pretty sluggish, especially with lots of files. The solution is proper caching. I installed Redis for file locking and APCu for local caching:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install -y redis-server php-redis php-apcu
 </span></span><span style="display:flex;"><span>systemctl restart apache2
-</span></span></code></pre></div><p>Update <code>config.php</code>:</p>
+</span></span></code></pre></div><p>Then updated the config:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#e6db74">&#39;memcache.local&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;\OC\Memcache\APCu&#39;</span>,
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;memcache.locking&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;\OC\Memcache\Redis&#39;</span>,
 </span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;redis&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">array</span>(
@@ -273,21 +295,24 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;port&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">6379</span>,
 </span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;timeout&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0.0</span>,
 </span></span><span style="display:flex;"><span>),
-</span></span></code></pre></div><hr>
-<h2 id="6-verify--optimize-nextcloud-setup"><a href="#6-verify--optimize-nextcloud-setup" class="header-anchor"></a>6. Verify &amp; Optimize Nextcloud Setup
-</h2><h3 id="check-nextcloud-status"><a href="#check-nextcloud-status" class="header-anchor"></a>Check Nextcloud Status:
+</span></span></code></pre></div><p>The difference is night and day. File operations that used to take forever now happen almost instantly.</p>
+<h2 id="making-sure-everything-actually-works"><a href="#making-sure-everything-actually-works" class="header-anchor"></a>Making Sure Everything Actually Works
+</h2><p>After all this setup, I wanted to verify things were actually working properly:</p>
+<h3 id="check-the-status"><a href="#check-the-status" class="header-anchor"></a>Check the status:
 </h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su - www-data -s /bin/bash -c <span style="color:#e6db74">&#39;php /var/www/nextcloud/occ status&#39;</span>
-</span></span></code></pre></div><h3 id="scan-for-missing-files"><a href="#scan-for-missing-files" class="header-anchor"></a>Scan for Missing Files:
+</span></span></code></pre></div><h3 id="scan-for-any-missing-files"><a href="#scan-for-any-missing-files" class="header-anchor"></a>Scan for any missing files:
 </h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su - www-data -s /bin/bash -c <span style="color:#e6db74">&#39;php /var/www/nextcloud/occ files:scan --all&#39;</span>
-</span></span></code></pre></div><h3 id="optimize-database"><a href="#optimize-database" class="header-anchor"></a>Optimize Database:
+</span></span></code></pre></div><h3 id="optimize-the-database"><a href="#optimize-the-database" class="header-anchor"></a>Optimize the database:
 </h3><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>su - www-data -s /bin/bash -c <span style="color:#e6db74">&#39;php /var/www/nextcloud/occ db:add-missing-indices&#39;</span>
-</span></span></code></pre></div><hr>
-<h2 id="7-configure-backups-upcoming"><a href="#7-configure-backups-upcoming" class="header-anchor"></a>7. Configure Backups (Upcoming)
-</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync -av /mnt/nextcloud/ /mnt/nas/backups/nextcloud/
-</span></span></code></pre></div><hr>
-<h1 id="redacted-configuration-files"><a href="#redacted-configuration-files" class="header-anchor"></a>Redacted Configuration Files
-</h1><h2 id="etcpvelxc101conf"><a href="#etcpvelxc101conf" class="header-anchor"></a><code>/etc/pve/lxc/101.conf</code>
-</h2><pre tabindex="0"><code class="language-conf" data-lang="conf">arch: amd64
+</span></span></code></pre></div><p>That last one is important - Nextcloud sometimes misses database indices during setup, and they make a huge difference for performance.</p>
+<h2 id="backup-strategy-work-in-progress"><a href="#backup-strategy-work-in-progress" class="header-anchor"></a>Backup Strategy (Work in Progress)
+</h2><p>I&rsquo;m still working on a proper backup strategy, but the basic idea is:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>rsync -av /mnt/nextcloud/ /mnt/nas/backups/nextcloud/
+</span></span></code></pre></div><p>Obviously you need to backup the database and config files too, but that&rsquo;s the bulk of the data right there.</p>
+<h2 id="the-final-configuration"><a href="#the-final-configuration" class="header-anchor"></a>The Final Configuration
+</h2><p>Here&rsquo;s what my setup looks like now:</p>
+<p><strong>LXC Config</strong> (<code>/etc/pve/lxc/101.conf</code>):</p>
+<pre tabindex="0"><code class="language-conf" data-lang="conf">arch: amd64
 cores: 4
 features: nesting=1
 hostname: NextCloud
@@ -298,20 +323,20 @@ ostype: debian
 rootfs: local-zfs:subvol-101-disk-0,size=8G
 swap: 8000
 unprivileged: 1
-</code></pre><h2 id="varwwwnextcloudconfigconfigphp-redacted"><a href="#varwwwnextcloudconfigconfigphp-redacted" class="header-anchor"></a><code>/var/www/nextcloud/config/config.php</code> (Redacted)
-</h2><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
+</code></pre><p><strong>Nextcloud Config</strong> (the important bits):</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#f92672">&lt;?</span><span style="color:#a6e22e">php</span>
 </span></span><span style="display:flex;"><span>$CONFIG <span style="color:#f92672">=</span> <span style="color:#66d9ef">array</span> (
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;trusted_domains&#39;</span> <span style="color:#f92672">=&gt;</span> 
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;trusted_domains&#39;</span> <span style="color:#f92672">=&gt;</span>
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">array</span> (
 </span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">0</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;localhost&#39;</span>,
-</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;192.168.X.X&#39;</span>,
-</span></span><span style="display:flex;"><span>  ),
+</span></span><span style="display:flex;"><span>    <span style="color:#ae81ff">1</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;192.168.1.100&#39;</span>, <span style="color:#75715e">// your actual IP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  ),
 </span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;datadirectory&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;/mnt/nextcloud&#39;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;dbtype&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;pgsql&#39;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;dbname&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;nextcloud&#39;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;dbhost&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;192.168.X.X&#39;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;dbuser&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;REDACTED&#39;</span>,
-</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;dbpassword&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;REDACTED&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;dbhost&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;192.168.1.101&#39;</span>, <span style="color:#75715e">// database server IP
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#e6db74">&#39;dbuser&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;nextclouduser&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;dbpassword&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;your-secure-password&#39;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;installed&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">true</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;memcache.local&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;\OC\Memcache\APCu&#39;</span>,
 </span></span><span style="display:flex;"><span>  <span style="color:#e6db74">&#39;memcache.locking&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;\OC\Memcache\Redis&#39;</span>,
@@ -321,8 +346,13 @@ unprivileged: 1
 </span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#39;timeout&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0.0</span>,
 </span></span><span style="display:flex;"><span>  ),
 </span></span><span style="display:flex;"><span>);
-</span></span></code></pre></div><hr>
-<p>This guide covers the <strong>full Nextcloud LXC installation</strong>, database setup, performance tuning, and data storage migration to an HDD pool.</p>
+</span></span></code></pre></div><h2 id="how-its-working-out"><a href="#how-its-working-out" class="header-anchor"></a>How It&rsquo;s Working Out
+</h2><p>The whole setup has been running for a few months now and I&rsquo;m pretty happy with it. File sync is fast, the web interface is responsive, and I haven&rsquo;t had any data corruption issues.</p>
+<p>The separate database was definitely worth the extra complexity - queries that used to take forever now happen instantly. And having the data on proper storage means I&rsquo;m not worried about running out of space or wearing out an SSD.</p>
+<p>If I were doing it again, I might look into setting up the database as a cluster for redundancy, but for a home setup, this is working great.</p>
+<p>The main lesson learned? Don&rsquo;t skimp on the infrastructure. A little extra work upfront makes everything so much better in the long run.</p>
+<hr>
+<p><em>Next up: figuring out a proper automated backup strategy. Because nothing lasts forever, and I really don&rsquo;t want to lose all my photos again.</em></p>
 
 </section>
 

@@ -95,6 +95,16 @@
         
         
         <li >
+            <a href='/news/' >
+                
+                
+                
+                <span>News</span>
+            </a>
+        </li>
+        
+        
+        <li >
             <a href='/musings/' >
                 
                 
@@ -226,7 +236,7 @@
 
 
                 <time class="article-time--reading">
-                    5 minute read
+                    7 minute read
                 </time>
             </div>
         
@@ -241,107 +251,64 @@
     <section class="article-content">
     
     
-    <h1 id="the-8020-rule-of-data-science-focus-on-what-actually-moves-the-needle"><a href="#the-8020-rule-of-data-science-focus-on-what-actually-moves-the-needle" class="header-anchor"></a><strong>The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle</strong>
-</h1><p>One of the biggest mistakes data science teams make is <strong>spending too much time on the wrong things.</strong></p>
-<p>It’s easy to fall into the trap of optimizing a model for another 0.2% accuracy, building complex pipelines for edge cases, or experimenting endlessly without delivering real impact. But <strong>the harsh reality is that 80% of business impact comes from just 20% of the work.</strong></p>
-<p>Understanding what actually drives results—and what’s just <strong>intellectual busywork</strong>—is what separates high-performing data science teams from those stuck in the weeds.</p>
+    <h1 id="stop-optimizing-your-models-to-death-a-reality-check-on-data-science-priorities"><a href="#stop-optimizing-your-models-to-death-a-reality-check-on-data-science-priorities" class="header-anchor"></a>Stop Optimizing Your Models to Death: A Reality Check on Data Science Priorities
+</h1><p><em>Why your team might be working really hard on stuff that doesn&rsquo;t matter</em></p>
 <hr>
-<h2 id="whats-in-the-20-the-work-that-actually-drives-impact"><a href="#whats-in-the-20-the-work-that-actually-drives-impact" class="header-anchor"></a><strong>What’s in the 20%? The Work That Actually Drives Impact</strong>
-</h2><p>If you want to maximize the impact of data science in an organization, you have to focus on <strong>the core tasks that directly drive business value</strong>.</p>
-<p>Here’s what usually makes up the <strong>critical 20% of work</strong>:</p>
-<h3 id="1-simple-interpretable-models-over-over-engineered-complexity"><a href="#1-simple-interpretable-models-over-over-engineered-complexity" class="header-anchor"></a><strong>1. Simple, Interpretable Models Over Over-Engineered Complexity</strong>
-</h3><ul>
-<li>In most business cases, a well-tuned <strong>logistic regression, decision tree, or even basic SQL analytics</strong> can solve 80% of problems.</li>
-<li>Advanced deep learning models can sometimes provide an edge, but they come with <strong>higher maintenance costs, slower iteration cycles, and adoption challenges.</strong></li>
-<li>The real value is in <strong>actionable insights</strong>, not model sophistication.</li>
-</ul>
-<h3 id="2-well-defined-business-aligned-metrics"><a href="#2-well-defined-business-aligned-metrics" class="header-anchor"></a><strong>2. Well-Defined, Business-Aligned Metrics</strong>
-</h3><ul>
-<li>The best teams spend time <strong>defining success upfront</strong>: is the goal revenue growth, cost savings, churn reduction, or operational efficiency?</li>
-<li>If a project doesn’t have a <strong>clear, measurable business goal</strong>, it’s probably part of the 80% of wasted effort.</li>
-</ul>
-<h3 id="3-robust-reusable-data-pipelines"><a href="#3-robust-reusable-data-pipelines" class="header-anchor"></a><strong>3. Robust, Reusable Data Pipelines</strong>
-</h3><ul>
-<li><strong>Data engineering is often more valuable than model optimization.</strong> A 95% accurate model with a broken data pipeline is useless.</li>
-<li>Investing in <strong>clean, well-documented, and reproducible data pipelines</strong> makes every future project faster and more reliable.</li>
-</ul>
-<h3 id="4-stakeholder-alignment-and-change-management"><a href="#4-stakeholder-alignment-and-change-management" class="header-anchor"></a><strong>4. Stakeholder Alignment and Change Management</strong>
-</h3><ul>
-<li><strong>A great model that no one uses is worthless.</strong> Data science isn’t just about building models—it’s about driving adoption.</li>
-<li>The most impactful teams prioritize <strong>collaboration with business leaders</strong> to ensure insights translate into real decisions.</li>
-</ul>
-<h3 id="5-fast-prototyping-and-iteration"><a href="#5-fast-prototyping-and-iteration" class="header-anchor"></a><strong>5. Fast Prototyping and Iteration</strong>
-</h3><ul>
-<li>Instead of spending months perfecting a model, focus on <strong>quick iterations</strong> to validate assumptions early.</li>
-<li><strong>Rapid feedback loops</strong> (e.g., weekly check-ins, early MVPs, internal A/B testing) ensure that projects don’t spiral into wasted effort.</li>
-</ul>
+<p>I&rsquo;ve watched too many data science teams get completely lost in the weeds. They&rsquo;ll spend three weeks trying to squeeze another 0.3% accuracy out of a model that&rsquo;s already performing fine, or they&rsquo;ll build some incredibly sophisticated pipeline for a use case that gets looked at once a month.</p>
+<p>Meanwhile, the simple dashboard that actually helps people make decisions sits broken because &ldquo;it&rsquo;s not interesting enough&rdquo; to fix.</p>
+<p>This is backwards. After seeing this pattern repeat across multiple organizations, I&rsquo;m convinced that most data science effort gets wasted on work that sounds impressive but doesn&rsquo;t move the business forward.</p>
+<h2 id="what-actually-matters-the-20-that-drives-results"><a href="#what-actually-matters-the-20-that-drives-results" class="header-anchor"></a>What Actually Matters (The 20% That Drives Results)
+</h2><p>The uncomfortable truth is that most business problems don&rsquo;t require cutting-edge machine learning. They require good judgment about what&rsquo;s worth solving and the discipline to keep solutions simple.</p>
+<h3 id="simple-models-win-most-of-the-time"><a href="#simple-models-win-most-of-the-time" class="header-anchor"></a>Simple Models Win Most of the Time
+</h3><p>I can&rsquo;t count how many times I&rsquo;ve seen a basic logistic regression outperform some elaborate neural network setup - not just in accuracy, but in actual business impact. Simple models are easier to explain, faster to deploy, and way less likely to break in mysterious ways six months later.</p>
+<p>A decision tree that a business user can actually understand and trust will get used. A black-box model that requires a PhD to interpret will sit unused no matter how accurate it is.</p>
+<h3 id="clear-success-metrics-save-everything"><a href="#clear-success-metrics-save-everything" class="header-anchor"></a>Clear Success Metrics Save Everything
+</h3><p>The most successful projects I&rsquo;ve worked on started with a really clear answer to &ldquo;how will we know if this worked?&rdquo; Not &ldquo;improved model performance&rdquo; or &ldquo;better predictions,&rdquo; but actual business metrics like &ldquo;reduced customer churn by 15%&rdquo; or &ldquo;saved $50K in operational costs.&rdquo;</p>
+<p>If you can&rsquo;t articulate the business impact in a single sentence, you&rsquo;re probably not ready to start building anything.</p>
+<h3 id="data-engineering-is-your-secret-weapon"><a href="#data-engineering-is-your-secret-weapon" class="header-anchor"></a>Data Engineering Is Your Secret Weapon
+</h3><p>Here&rsquo;s something they don&rsquo;t teach in data science bootcamps: spending time on solid data pipelines will pay off way more than tweaking algorithms. A mediocre model with reliable, clean data will beat a sophisticated model with garbage inputs every single time.</p>
+<p>I&rsquo;ve seen teams waste months debugging model performance issues that turned out to be data quality problems. Build the infrastructure first, then worry about the fancy stuff.</p>
+<h3 id="getting-people-to-actually-use-your-work"><a href="#getting-people-to-actually-use-your-work" class="header-anchor"></a>Getting People to Actually Use Your Work
+</h3><p>The graveyard of data science is filled with brilliant models that nobody ever used. The difference between successful projects and academic exercises is usually stakeholder buy-in, not technical sophistication.</p>
+<p>This means spending time with business users, understanding their actual workflow, and building things that fit into how they already work. Revolutionary insights that require people to completely change their process rarely get adopted.</p>
+<h3 id="speed-beats-perfection"><a href="#speed-beats-perfection" class="header-anchor"></a>Speed Beats Perfection
+</h3><p>I&rsquo;d rather have a working prototype next week than a perfect solution next quarter. Fast iterations let you validate assumptions, get feedback, and course-correct before you&rsquo;ve invested months in the wrong direction.</p>
+<p>The best data science teams I&rsquo;ve worked with ship early and often. They&rsquo;re not afraid to put imperfect solutions in front of users because they know that real-world feedback is worth more than theoretical optimization.</p>
+<h2 id="the-time-wasters-the-80-that-feels-important-but-isnt"><a href="#the-time-wasters-the-80-that-feels-important-but-isnt" class="header-anchor"></a>The Time Wasters (The 80% That Feels Important But Isn&rsquo;t)
+</h2><h3 id="the-accuracy-trap"><a href="#the-accuracy-trap" class="header-anchor"></a>The Accuracy Trap
+</h3><p>Every data scientist has fallen into this one. You&rsquo;ve got a model that&rsquo;s working pretty well, but you&rsquo;re convinced you can make it just a little bit better. So you spend days or weeks tuning hyperparameters, trying different algorithms, engineering new features.</p>
+<p>But here&rsquo;s the thing - going from 89% to 91% accuracy rarely translates to meaningful business impact. And the time you spent on that marginal improvement could have been used to solve an entirely new problem.</p>
+<h3 id="mlops-theater"><a href="#mlops-theater" class="header-anchor"></a>MLOps Theater
+</h3><p>Don&rsquo;t get me wrong - good MLOps practices are valuable. But I&rsquo;ve seen teams spend months building elaborate CI/CD pipelines for models that get retrained once a quarter. The tooling becomes more complex than the actual problem being solved.</p>
+<p>Build automation where it saves real time and effort. Don&rsquo;t build it because it looks good in architecture diagrams.</p>
+<h3 id="notebook-sprawl"><a href="#notebook-sprawl" class="header-anchor"></a>Notebook Sprawl
+</h3><p>Every ad-hoc analysis that lives in a one-off Jupyter notebook is technical debt waiting to happen. Someone will need to reproduce that analysis in six months, but the notebook won&rsquo;t run because the environment has changed, or the data has moved, or the person who wrote it has left the company.</p>
+<p>Standardize your workflows. Build templates. Make things reproducible from day one, even if it feels like extra work upfront.</p>
+<h3 id="solutions-looking-for-problems"><a href="#solutions-looking-for-problems" class="header-anchor"></a>Solutions Looking for Problems
+</h3><p>This is probably the biggest trap in data science. You learn about some cool new technique or tool, and suddenly you&rsquo;re looking for places to apply it. But starting with the technology instead of the business problem almost always leads to wasted effort.</p>
+<p>The best projects start with pain points that people are already feeling, not with algorithmic innovations that might be useful someday.</p>
+<h2 id="how-to-tell-when-youre-off-track"><a href="#how-to-tell-when-youre-off-track" class="header-anchor"></a>How to Tell When You&rsquo;re Off Track
+</h2><p><strong>Your projects never seem to finish.</strong> If you&rsquo;re constantly finding new things to optimize or improve, you might be avoiding the harder work of actually deploying something useful.</p>
+<p><strong>Nobody uses your outputs.</strong> If your models and dashboards aren&rsquo;t changing how people make decisions, something is fundamentally wrong with your approach.</p>
+<p><strong>You spend more time talking about tools than outcomes.</strong> If team discussions focus more on technical architecture than business impact, you&rsquo;ve probably lost the plot.</p>
+<p><strong>Leadership keeps asking &ldquo;when will this be done?&rdquo;</strong> If you can&rsquo;t give clear timelines or milestones, you might be working on problems that are too vague or ambitious.</p>
+<h2 id="redirecting-leadership-energy"><a href="#redirecting-leadership-energy" class="header-anchor"></a>Redirecting Leadership Energy
+</h2><p>Part of the problem is that leadership often doesn&rsquo;t understand what&rsquo;s realistic or valuable in data science. They&rsquo;ll push for complex solutions because they sound more impressive, or they&rsquo;ll ask for unrealistic timelines without understanding the constraints.</p>
+<p><strong>Translate everything into business language.</strong> Instead of talking about model accuracy, talk about customer retention rates. Instead of discussing feature engineering, talk about operational efficiency gains.</p>
+<p><strong>Show quick wins early.</strong> Don&rsquo;t wait six months to demonstrate value. Find ways to deliver something useful quickly, even if it&rsquo;s not the final solution.</p>
+<p><strong>Be honest about complexity costs.</strong> Every additional layer of sophistication makes things harder to maintain, debug, and explain. Make sure leadership understands this trade-off.</p>
+<p><strong>Use concrete examples.</strong> When you see simple solutions driving real impact, document and share those stories. They&rsquo;re way more persuasive than theoretical arguments about best practices.</p>
+<h2 id="the-discipline-of-doing-less"><a href="#the-discipline-of-doing-less" class="header-anchor"></a>The Discipline of Doing Less
+</h2><p>The hardest part of effective data science isn&rsquo;t building complex models - it&rsquo;s having the discipline to stop when you&rsquo;ve solved the actual problem. This means saying no to interesting side quests, avoiding perfectionism, and focusing relentlessly on business outcomes.</p>
+<p>The most successful data scientists I know aren&rsquo;t necessarily the most technically sophisticated. They&rsquo;re the ones with good judgment about what&rsquo;s worth building and the communication skills to get their work adopted.</p>
+<p>They build simple things that work reliably. They ship early and iterate based on feedback. They spend as much time thinking about adoption as they do about algorithms.</p>
+<p>Most importantly, they recognize that their job isn&rsquo;t to build the most elegant technical solution - it&rsquo;s to help the business make better decisions with data.</p>
+<h2 id="the-bottom-line"><a href="#the-bottom-line" class="header-anchor"></a>The Bottom Line
+</h2><p>Data science teams that focus on simple, practical solutions consistently outperform those that chase technical sophistication for its own sake. This isn&rsquo;t about lowering standards or avoiding challenging problems - it&rsquo;s about being strategic with where you invest your limited time and energy.</p>
+<p>Before you start your next project, ask yourself: &ldquo;If this works perfectly, what specific business outcome will improve, and by how much?&rdquo; If you can&rsquo;t answer that clearly, you might be about to join the 80% of effort that doesn&rsquo;t move the needle.</p>
+<p>The goal isn&rsquo;t to build impressive models. It&rsquo;s to solve real problems in ways that people will actually use. Everything else is just interesting academic exercise.</p>
 <hr>
-<h2 id="whats-in-the-80-work-that-rarely-moves-the-needle"><a href="#whats-in-the-80-work-that-rarely-moves-the-needle" class="header-anchor"></a><strong>What’s in the 80%? Work That Rarely Moves the Needle</strong>
-</h2><h3 id="1-chasing-marginal-accuracy-gains"><a href="#1-chasing-marginal-accuracy-gains" class="header-anchor"></a><strong>1. Chasing Marginal Accuracy Gains</strong>
-</h3><ul>
-<li>Teams often waste weeks tweaking a model to <strong>improve accuracy from 91% to 91.5%</strong>, but the extra effort rarely justifies the business impact.</li>
-<li>If a model is <strong>&ldquo;good enough&rdquo; to drive the desired outcome</strong>, ship it and move on.</li>
-</ul>
-<h3 id="2-over-complicated-mlops-for-low-scale-needs"><a href="#2-over-complicated-mlops-for-low-scale-needs" class="header-anchor"></a><strong>2. Over-Complicated MLOps for Low-Scale Needs</strong>
-</h3><ul>
-<li>Building a <strong>full-blown CI/CD pipeline for a model that updates monthly</strong> is overkill.</li>
-<li>Focus on <strong>automation where it actually saves time</strong>, not where it looks good on a slide deck.</li>
-</ul>
-<h3 id="3-one-off-hard-to-maintain-solutions"><a href="#3-one-off-hard-to-maintain-solutions" class="header-anchor"></a><strong>3. One-Off, Hard-to-Maintain Solutions</strong>
-</h3><ul>
-<li>Every ad-hoc model, notebook, or dashboard that <strong>isn’t reproducible or scalable</strong> adds unnecessary complexity.</li>
-<li>Instead, invest in <strong>templates, automation, and standardized processes</strong> to prevent long-term tech debt.</li>
-</ul>
-<h3 id="4-solving-problems-that-dont-exist"><a href="#4-solving-problems-that-dont-exist" class="header-anchor"></a><strong>4. Solving Problems That Don’t Exist</strong>
-</h3><ul>
-<li>If a project doesn’t solve a <strong>clear business pain point</strong>, it’s probably just data science for data science’s sake.</li>
-<li>Validate that the problem is real <strong>before committing major resources.</strong></li>
-</ul>
-<hr>
-<h2 id="how-to-spot-when-youre-in-the-80-and-fix-it"><a href="#how-to-spot-when-youre-in-the-80-and-fix-it" class="header-anchor"></a><strong>How to Spot When You’re in the 80% (And Fix It)</strong>
-</h2><p>Here’s how to tell if you or your team is wasting time on low-impact work:</p>
-<p>✅ <strong>Projects drag on with no clear business outcome</strong> – If no one can articulate the expected ROI, it’s time to reassess.</p>
-<p>✅ <strong>Endless iterations without deployment</strong> – If a model has been tweaked 20 times but never used in production, something is wrong.</p>
-<p>✅ <strong>Low adoption from stakeholders</strong> – If no one is using the insights, the problem isn’t the model—it’s the integration.</p>
-<p>✅ <strong>More focus on &ldquo;cool tech&rdquo; than business needs</strong> – If your team is more excited about new tools than solving real problems, you’re in the 80%.</p>
-<hr>
-<h2 id="how-to-redirect-leadership-toward-the-20-that-matters"><a href="#how-to-redirect-leadership-toward-the-20-that-matters" class="header-anchor"></a><strong>How to Redirect Leadership Toward the 20% That Matters</strong>
-</h2><p>Leadership often pushes for overcomplicated, low-impact work because <strong>they don’t know what’s possible or practical</strong>. Here’s how to guide them toward <strong>high-value efforts</strong>:</p>
-<ol>
-<li>
-<p><strong>Frame everything in terms of business outcomes.</strong></p>
-<ul>
-<li>Instead of talking about data science models, <strong>talk about revenue, cost savings, efficiency, or customer satisfaction.</strong></li>
-</ul>
-</li>
-<li>
-<p><strong>Push for iterative delivery, not big-bang projects.</strong></p>
-<ul>
-<li>Avoid multi-month projects with no feedback loop—<strong>deliver something small early</strong> and refine from there.</li>
-</ul>
-</li>
-<li>
-<p><strong>Educate on the cost of complexity.</strong></p>
-<ul>
-<li>Make it clear that <strong>every additional layer of sophistication adds maintenance overhead, delays, and failure points.</strong></li>
-</ul>
-</li>
-<li>
-<p><strong>Show examples of simple solutions driving massive impact.</strong></p>
-<ul>
-<li>If a simple dashboard or basic model is <strong>already solving 80% of the problem, why add complexity?</strong></li>
-</ul>
-</li>
-</ol>
-<hr>
-<h2 id="final-thoughts-do-less-deliver-more"><a href="#final-thoughts-do-less-deliver-more" class="header-anchor"></a><strong>Final Thoughts: Do Less, Deliver More</strong>
-</h2><p>The best data science teams <strong>aren’t the ones that build the most complex models—they’re the ones that create the most business impact.</strong></p>
-<p>If you want to drive real value:<br>
-✅ <strong>Prioritize simple, interpretable models over marginal accuracy gains.</strong><br>
-✅ <strong>Invest in clean data pipelines and reproducibility.</strong><br>
-✅ <strong>Work closely with stakeholders to ensure adoption.</strong><br>
-✅ <strong>Stop chasing complexity for its own sake—focus on fast, practical solutions.</strong></p>
-<p>The difference between a <strong>high-performing</strong> data science team and a <strong>high-friction</strong> one isn’t intelligence or technical skill. It’s knowing <strong>what work actually matters—and having the discipline to ignore the rest.</strong></p>
+<p><em>The best data science isn&rsquo;t the most complex - it&rsquo;s the most useful. Focus on impact, not sophistication.</em></p>
 
 </section>
 

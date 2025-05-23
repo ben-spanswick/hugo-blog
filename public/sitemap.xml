@@ -2,31 +2,190 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>http://192.168.100.63:1313/projects/homelab/</loc>
+    <lastmod>2025-05-14T15:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/ai/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/ai-commentary/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/ai-safety/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/ai-tools/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/ai-weekly/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/anthropic/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/chatgpt/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/claude/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/claude-4/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/deepmind/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/gemini/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/google-i/o/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/industry-analysis/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/news/051925/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/machine-learning/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/microsoft/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/musings/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/news/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/productivity/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/productivity/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/technology/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/technology/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/musings/stability/</loc>
+    <lastmod>2025-05-23T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/ai-safety/</loc>
+    <lastmod>2025-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/ai-trends/</loc>
+    <lastmod>2025-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/musings/claude4/</loc>
+    <lastmod>2025-05-22T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/hardware/</loc>
+    <lastmod>2025-05-14T15:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/hardware/</loc>
+    <lastmod>2025-05-14T15:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/homelab/</loc>
+    <lastmod>2025-05-14T15:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/networking/</loc>
+    <lastmod>2025-05-14T15:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/projects/</loc>
+    <lastmod>2025-05-14T15:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/self-hosting/</loc>
+    <lastmod>2025-05-14T15:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/self-hosting/</loc>
+    <lastmod>2025-05-14T15:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/audiobookshelf/</loc>
+    <lastmod>2025-05-14T13:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/authelia/</loc>
+    <lastmod>2025-05-14T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/automation/</loc>
+    <lastmod>2025-05-14T13:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/projects/tunnel-setup/</loc>
+    <lastmod>2025-05-14T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/cloudflared/</loc>
+    <lastmod>2025-05-14T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/docker/</loc>
+    <lastmod>2025-05-14T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/projects/torrent-setup/</loc>
+    <lastmod>2025-05-14T13:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/gluetun/</loc>
+    <lastmod>2025-05-14T13:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/homelab/</loc>
+    <lastmod>2025-05-14T13:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/infrastucture/</loc>
+    <lastmod>2025-05-14T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/networking/</loc>
+    <lastmod>2025-05-14T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/privacy/</loc>
+    <lastmod>2025-05-14T13:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/qbittorrent/</loc>
+    <lastmod>2025-05-14T13:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/radarr/</loc>
+    <lastmod>2025-05-14T13:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/sonarr/</loc>
+    <lastmod>2025-05-14T13:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/torrenting/</loc>
+    <lastmod>2025-05-14T13:00:00-04:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/traefik/</loc>
+    <lastmod>2025-05-14T12:00:00-05:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/tags/unraid/</loc>
+    <lastmod>2025-05-14T13:00:00-04:00</lastmod>
+  </url><url>
     <loc>http://192.168.100.63:1313/datascience/agenticai/</loc>
+    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
+  </url><url>
+    <loc>http://192.168.100.63:1313/categories/agenticai/</loc>
     <lastmod>2025-03-29T02:59:30+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/categories/ai/</loc>
     <lastmod>2025-03-29T02:59:30+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/tags/ai/</loc>
-    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/tags/ai-agent/</loc>
-    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/categories/</loc>
     <lastmod>2025-03-29T02:59:30+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/datascience/</loc>
     <lastmod>2025-03-29T02:59:30+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/datascience/buildanagent2/</loc>
+    <loc>http://192.168.100.63:1313/categories/guide/</loc>
     <lastmod>2025-03-29T02:59:30+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/</loc>
-    <lastmod>2025-03-29T02:59:30+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/tags/</loc>
+    <loc>http://192.168.100.63:1313/datascience/buildanagent/</loc>
     <lastmod>2025-03-29T02:59:30+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/categories/artificial-intelligence/</loc>
@@ -167,9 +326,6 @@
     <loc>http://192.168.100.63:1313/tags/ai-strategy/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/categories/ai-trends/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/tags/aig/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -236,13 +392,7 @@
     <loc>http://192.168.100.63:1313/tags/hugo/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/tags/machine-learning/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/tags/microgrids/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/musings/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/national-security/</loc>
@@ -260,9 +410,6 @@
     <loc>http://192.168.100.63:1313/tags/privacy/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
-    <loc>http://192.168.100.63:1313/projects/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
     <loc>http://192.168.100.63:1313/tags/recipe-management/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
@@ -273,12 +420,6 @@
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/projects/tandoor-recipe-management/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/categories/self-hosting/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/tags/self-hosting/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/projects/hugo-blog-setup/</loc>
@@ -294,9 +435,6 @@
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/categories/tech/</loc>
-    <lastmod>2025-03-15T00:00:00+00:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/categories/technology/</loc>
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</loc>
@@ -321,9 +459,6 @@
     <lastmod>2025-03-15T00:00:00+00:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/projects/nextcloud-setup/</loc>
-    <lastmod>2025-03-13T12:00:00-05:00</lastmod>
-  </url><url>
-    <loc>http://192.168.100.63:1313/tags/homelab/</loc>
     <lastmod>2025-03-13T12:00:00-05:00</lastmod>
   </url><url>
     <loc>http://192.168.100.63:1313/tags/nextcloud/</loc>

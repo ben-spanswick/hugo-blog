@@ -12,25 +12,125 @@
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/musings/seu-risk-analysis/</guid>
-        <description>&lt;h2 id=&#34;ann-arbors-big-grid-experiment-a-glimpse-into-the-future-of-energy&#34;&gt;&lt;a href=&#34;#ann-arbors-big-grid-experiment-a-glimpse-into-the-future-of-energy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy
-&lt;/h2&gt;&lt;p&gt;If you work in energy like I do, the news coming out of Ann Arbor is &lt;strong&gt;pretty fascinating&lt;/strong&gt;—they&amp;rsquo;re building their own &lt;strong&gt;Sustainable Energy Utility (SEU)&lt;/strong&gt;. Instead of relying entirely on the traditional grid, they&amp;rsquo;re developing a localized system that uses &lt;strong&gt;solar, battery storage, and even geothermal&lt;/strong&gt; to power the city. The idea? More independence, more reliability, and more resilience against blackouts. (&lt;a class=&#34;link&#34; href=&#34;https://techxplore.com/news/2025-03-ann-arbor-sustainable-energy-aims.html&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
-    &gt;Read the full story&lt;/a&gt;)&lt;/p&gt;
-&lt;p&gt;For those of us knee-deep in grid infrastructure, this is &lt;strong&gt;huge&lt;/strong&gt;. The grid we have today was never built for decentralized, community-driven power solutions. In fact, it actively resists them. Which brings me to &lt;em&gt;The Grid&lt;/em&gt; by Gretchen Bakke—if you haven’t read it, it’s worth your time. Bakke makes the case that our electrical grid is old, overburdened, and &lt;strong&gt;fundamentally not designed for a world where renewables dominate&lt;/strong&gt;. She lays out why incorporating &lt;strong&gt;localized energy solutions&lt;/strong&gt; like what Ann Arbor is attempting is easier said than done.&lt;/p&gt;
-&lt;h3 id=&#34;why-this-matters&#34;&gt;&lt;a href=&#34;#why-this-matters&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This Matters
-&lt;/h3&gt;&lt;p&gt;The way we generate and distribute electricity is shifting—&lt;strong&gt;fast&lt;/strong&gt;. What Ann Arbor is doing is more than just a cool local project; it’s a preview of what other cities &lt;strong&gt;might&lt;/strong&gt; (and probably should) start doing.&lt;/p&gt;
-&lt;p&gt;Right now, utilities work on a top-down model: power plants generate electricity, send it through transmission lines, and eventually, it trickles down to homes and businesses. It’s centralized, efficient in some ways, but &lt;strong&gt;insanely vulnerable&lt;/strong&gt; to disruptions. One bad storm, one cyberattack, one aging transformer failure, and entire regions go dark. Ann Arbor’s plan flips that on its head. &lt;strong&gt;Instead of one big system, they’re thinking in microgrids.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;This means:&lt;/p&gt;
+        <description>&lt;h1 id=&#34;ann-arbor-is-trying-to-break-up-with-the-power-company&#34;&gt;&lt;a href=&#34;#ann-arbor-is-trying-to-break-up-with-the-power-company&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Ann Arbor is Trying to Break Up With the Power Company
+&lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why one city&amp;rsquo;s energy experiment could change everything&lt;/em&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;Ann Arbor is doing something that makes utilities nervous: they&amp;rsquo;re building their own power system.&lt;/p&gt;
+&lt;p&gt;Not just adding some solar panels or buying renewable energy credits. They&amp;rsquo;re creating a full-blown Sustainable Energy Utility that could make them significantly less dependent on the traditional electric grid.&lt;/p&gt;
+&lt;p&gt;As someone who works in energy infrastructure, this has my complete attention. Not because it&amp;rsquo;s guaranteed to work, but because it represents a fundamental shift in how we think about powering communities.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-ann-arbor-is-actually-building&#34;&gt;&lt;a href=&#34;#what-ann-arbor-is-actually-building&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Ann Arbor is Actually Building
+&lt;/h2&gt;&lt;h3 id=&#34;more-than-just-solar-panels&#34;&gt;&lt;a href=&#34;#more-than-just-solar-panels&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;More Than Just Solar Panels
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;The plan:&lt;/strong&gt; A localized energy system combining solar power, battery storage, and geothermal heating to serve city operations and eventually residents.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The goal:&lt;/strong&gt; Energy independence, grid resilience, and community control over power sources.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The reality:&lt;/strong&gt; They&amp;rsquo;re essentially creating a parallel power system that can operate independently of the main grid when needed.&lt;/p&gt;
+&lt;h3 id=&#34;why-this-matters-more-than-most-local-energy-projects&#34;&gt;&lt;a href=&#34;#why-this-matters-more-than-most-local-energy-projects&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This Matters More Than Most Local Energy Projects
+&lt;/h3&gt;&lt;p&gt;Most cities that want to &amp;ldquo;go renewable&amp;rdquo; end up buying green energy from their utility or installing some solar panels on municipal buildings. &lt;strong&gt;Ann Arbor is building infrastructure that could actually compete with their utility.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s a very different conversation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-problem-with-our-current-grid&#34;&gt;&lt;a href=&#34;#the-problem-with-our-current-grid&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Problem with Our Current Grid
+&lt;/h2&gt;&lt;h3 id=&#34;built-for-a-different-era&#34;&gt;&lt;a href=&#34;#built-for-a-different-era&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Built for a Different Era
+&lt;/h3&gt;&lt;p&gt;I recently read Gretchen Bakke&amp;rsquo;s book &amp;ldquo;The Grid,&amp;rdquo; and it perfectly captures why projects like Ann Arbor&amp;rsquo;s are both necessary and incredibly difficult.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Our electric grid was designed for:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Power stays local&lt;/strong&gt; – Generated and used within the community, cutting down on transmission losses.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;More resilience&lt;/strong&gt; – If the main grid goes down, parts of the city could still function.&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Community control&lt;/strong&gt; – Instead of being at the mercy of investor-owned utilities, residents have a say in their power source.&lt;/li&gt;
+&lt;li&gt;Large, centralized power plants&lt;/li&gt;
+&lt;li&gt;One-way power flow (from plant to consumer)&lt;/li&gt;
+&lt;li&gt;Predictable, controllable generation&lt;/li&gt;
+&lt;li&gt;Monopoly utility ownership&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;but-lets-be-realthis-wont-be-easy&#34;&gt;&lt;a href=&#34;#but-lets-be-realthis-wont-be-easy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;But Let’s Be Real—This Won’t Be Easy
-&lt;/h3&gt;&lt;p&gt;I love the idea of localized power, but I also know the massive headaches that come with integrating it. A city can’t just unplug from the existing grid and go full renewable overnight. There are regulatory hurdles, &lt;strong&gt;legacy infrastructure issues&lt;/strong&gt;, and the ever-persistent problem of intermittency (aka, what happens when the sun isn’t shining, and the wind isn’t blowing?).&lt;/p&gt;
-&lt;p&gt;Ann Arbor’s SEU is aiming to tackle these issues with &lt;strong&gt;battery storage and smart grid tech&lt;/strong&gt;, but that requires serious investment and long-term planning. And let’s be honest—utilities don’t always play nice when local governments try to carve out their own energy systems. We’ve seen plenty of legal battles over cities trying to establish public power utilities, and you can bet some big players aren’t thrilled about Ann Arbor’s plan.&lt;/p&gt;
-&lt;h3 id=&#34;the-future-more-cities-following-suit&#34;&gt;&lt;a href=&#34;#the-future-more-cities-following-suit&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Future: More Cities Following Suit?
-&lt;/h3&gt;&lt;p&gt;So, could this work elsewhere? Maybe. Maybe not. But Ann Arbor’s project is a &lt;strong&gt;bold experiment in how we rethink energy infrastructure&lt;/strong&gt;. If it succeeds, it could be a blueprint for cities looking to break free from aging, vulnerable grids. If it struggles? Well, that’s valuable too—because every failure teaches us something about what needs to change.&lt;/p&gt;
-&lt;p&gt;The big takeaway? We’re moving toward a more localized, resilient, and renewable-powered energy future. Ann Arbor is just ahead of the curve. The rest of us? We’d better start paying attention.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Modern energy reality:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Distributed generation (rooftop solar, small wind farms)&lt;/li&gt;
+&lt;li&gt;Two-way power flow (consumers selling power back to the grid)&lt;/li&gt;
+&lt;li&gt;Variable renewable sources&lt;/li&gt;
+&lt;li&gt;Communities wanting local control&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;These two realities don&amp;rsquo;t play well together.&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-vulnerability-problem&#34;&gt;&lt;a href=&#34;#the-vulnerability-problem&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Vulnerability Problem
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Current system weakness:&lt;/strong&gt; One bad storm, cyberattack, or equipment failure can knock out power for millions of people.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Example:&lt;/strong&gt; Texas&amp;rsquo;s winter storm crisis, California&amp;rsquo;s wildfire shutoffs, the Northeast blackout of 2003.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Ann Arbor&amp;rsquo;s approach:&lt;/strong&gt; If their local system works, they could maintain power even when the main grid fails.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-this-is-harder-than-it-sounds&#34;&gt;&lt;a href=&#34;#why-this-is-harder-than-it-sounds&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This is Harder Than It Sounds
+&lt;/h2&gt;&lt;h3 id=&#34;the-technical-challenges&#34;&gt;&lt;a href=&#34;#the-technical-challenges&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Technical Challenges
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Intermittency is real:&lt;/strong&gt; Solar doesn&amp;rsquo;t work at night, wind doesn&amp;rsquo;t blow consistently, batteries are expensive and have limited capacity.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Grid integration is complex:&lt;/strong&gt; You can&amp;rsquo;t just unplug from the existing system without causing problems for everyone else connected to it.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Backup planning is essential:&lt;/strong&gt; What happens during a week of cloudy weather in January?&lt;/p&gt;
+&lt;h3 id=&#34;the-political-and-economic-battles&#34;&gt;&lt;a href=&#34;#the-political-and-economic-battles&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Political and Economic Battles
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Utilities don&amp;rsquo;t like competition:&lt;/strong&gt; Investor-owned utilities have spent decades building monopolies and aren&amp;rsquo;t thrilled about cities going independent.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Regulatory complexity:&lt;/strong&gt; Energy systems are heavily regulated at state and federal levels, creating legal obstacles for local initiatives.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Financial reality:&lt;/strong&gt; Building parallel infrastructure is expensive, and the economics have to work for taxpayers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Historical precedent:&lt;/strong&gt; Cities that have tried to establish public utilities often face years of legal battles with existing utility companies.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-success-could-look-like&#34;&gt;&lt;a href=&#34;#what-success-could-look-like&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Success Could Look Like
+&lt;/h2&gt;&lt;h3 id=&#34;the-community-benefits&#34;&gt;&lt;a href=&#34;#the-community-benefits&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Community Benefits
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Lower costs:&lt;/strong&gt; Eliminating profit margins and transmission costs could reduce energy bills.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Local control:&lt;/strong&gt; Community decisions about energy sources instead of corporate boardroom choices.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Economic development:&lt;/strong&gt; Local energy jobs and investment staying in the community.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Resilience:&lt;/strong&gt; Power systems that can function independently during emergencies.&lt;/p&gt;
+&lt;h3 id=&#34;the-broader-impact&#34;&gt;&lt;a href=&#34;#the-broader-impact&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Broader Impact
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;If Ann Arbor succeeds, other cities will pay attention.&lt;/strong&gt; This could become a model for community energy independence.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;If they struggle, we&amp;rsquo;ll learn valuable lessons&lt;/strong&gt; about what needs to change to make local energy systems work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Either way, it pushes the conversation forward&lt;/strong&gt; about alternatives to the centralized utility model.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-real-stakes&#34;&gt;&lt;a href=&#34;#the-real-stakes&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Real Stakes
+&lt;/h2&gt;&lt;h3 id=&#34;this-is-about-more-than-energy&#34;&gt;&lt;a href=&#34;#this-is-about-more-than-energy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;This is About More Than Energy
+&lt;/h3&gt;&lt;p&gt;Ann Arbor&amp;rsquo;s project represents a broader question: &lt;strong&gt;Should energy infrastructure be controlled by distant corporations or local communities?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The corporate utility model:&lt;/strong&gt; Centralized control, guaranteed profit margins, resistance to change.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The community utility model:&lt;/strong&gt; Local accountability, reinvestment in the community, faster adaptation to new technologies.&lt;/p&gt;
+&lt;h3 id=&#34;climate-change-urgency&#34;&gt;&lt;a href=&#34;#climate-change-urgency&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Climate Change Urgency
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Traditional utilities move slowly&lt;/strong&gt; when it comes to renewable energy adoption, often because their business models depend on existing fossil fuel infrastructure.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Community-controlled systems can move faster&lt;/strong&gt; because they&amp;rsquo;re not constrained by the need to protect investments in old technology.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-im-watching-for&#34;&gt;&lt;a href=&#34;#what-im-watching-for&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What I&amp;rsquo;m Watching For
+&lt;/h2&gt;&lt;h3 id=&#34;technical-performance&#34;&gt;&lt;a href=&#34;#technical-performance&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Technical Performance
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;How well does the system handle seasonal variations in solar generation?&lt;/li&gt;
+&lt;li&gt;Can battery storage really provide reliable backup power?&lt;/li&gt;
+&lt;li&gt;Does the integration with existing grid infrastructure work smoothly?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;economic-viability&#34;&gt;&lt;a href=&#34;#economic-viability&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Economic Viability
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Do the costs actually work out to be competitive with traditional utility service?&lt;/li&gt;
+&lt;li&gt;Can the system scale to serve residential customers, not just city operations?&lt;/li&gt;
+&lt;li&gt;What happens to the economics when equipment needs replacement?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;political-sustainability&#34;&gt;&lt;a href=&#34;#political-sustainability&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Political Sustainability
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;How does the existing utility respond to competition?&lt;/li&gt;
+&lt;li&gt;Can the project survive changes in local political leadership?&lt;/li&gt;
+&lt;li&gt;Do state regulators support or hinder the initiative?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-bigger-picture&#34;&gt;&lt;a href=&#34;#the-bigger-picture&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bigger Picture
+&lt;/h2&gt;&lt;h3 id=&#34;energy-democracy-in-action&#34;&gt;&lt;a href=&#34;#energy-democracy-in-action&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Energy Democracy in Action
+&lt;/h3&gt;&lt;p&gt;Ann Arbor&amp;rsquo;s experiment is part of a larger movement toward &amp;ldquo;energy democracy&amp;rdquo; - the idea that communities should have more control over their power sources.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This isn&amp;rsquo;t just about technology&lt;/strong&gt; - it&amp;rsquo;s about who makes decisions about how we generate and distribute electricity.&lt;/p&gt;
+&lt;h3 id=&#34;a-blueprint-for-climate-action&#34;&gt;&lt;a href=&#34;#a-blueprint-for-climate-action&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;A Blueprint for Climate Action
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;If community energy systems work,&lt;/strong&gt; they could accelerate renewable energy adoption much faster than waiting for traditional utilities to change.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cities could become laboratories&lt;/strong&gt; for testing new approaches to clean energy infrastructure.&lt;/p&gt;
+&lt;h3 id=&#34;the-future-of-infrastructure&#34;&gt;&lt;a href=&#34;#the-future-of-infrastructure&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Future of Infrastructure
+&lt;/h3&gt;&lt;p&gt;This experiment touches on bigger questions about infrastructure ownership and control. &lt;strong&gt;Should critical systems like power, water, and internet be owned by communities or corporations?&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Ann Arbor&amp;rsquo;s energy project could influence how we answer that question.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;why-this-matters-even-if-you-dont-live-in-ann-arbor&#34;&gt;&lt;a href=&#34;#why-this-matters-even-if-you-dont-live-in-ann-arbor&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This Matters Even If You Don&amp;rsquo;t Live in Ann Arbor
+&lt;/h2&gt;&lt;h3 id=&#34;the-precedent-effect&#34;&gt;&lt;a href=&#34;#the-precedent-effect&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Precedent Effect
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Successful community energy projects&lt;/strong&gt; create political and economic momentum for similar initiatives elsewhere.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Technical lessons learned&lt;/strong&gt; in Ann Arbor could make it easier and cheaper for other communities to follow similar paths.&lt;/p&gt;
+&lt;h3 id=&#34;the-competition-effect&#34;&gt;&lt;a href=&#34;#the-competition-effect&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Competition Effect
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Even if most cities don&amp;rsquo;t build their own utilities,&lt;/strong&gt; the threat of competition could push traditional utilities to improve their service and accelerate renewable energy adoption.&lt;/p&gt;
+&lt;h3 id=&#34;the-resilience-model&#34;&gt;&lt;a href=&#34;#the-resilience-model&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Resilience Model
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;As extreme weather becomes more common,&lt;/strong&gt; having multiple models for energy resilience becomes increasingly important.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-bottom-line&#34;&gt;&lt;a href=&#34;#the-bottom-line&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bottom Line
+&lt;/h2&gt;&lt;p&gt;Ann Arbor isn&amp;rsquo;t just installing solar panels - they&amp;rsquo;re challenging the fundamental structure of how we power our communities.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This could work:&lt;/strong&gt; Community control, local renewable energy, and grid independence could provide better, cheaper, more resilient power.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;This could fail:&lt;/strong&gt; Technical challenges, political opposition, and economic realities could make the project unsustainable.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Either way, it&amp;rsquo;s important:&lt;/strong&gt; We need experiments like this to figure out how to transition to a cleaner, more resilient energy system.&lt;/p&gt;
+&lt;p&gt;The current grid worked great for the 20th century. But for the challenges of the 21st century - climate change, extreme weather, cybersecurity threats, and the need for rapid renewable energy adoption - we might need something different.&lt;/p&gt;
+&lt;p&gt;Ann Arbor is betting they can build that something different. &lt;strong&gt;The rest of us should be paying very close attention to how it works out.&lt;/strong&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;p&gt;&lt;em&gt;The most important infrastructure innovations often start at the local level. Ann Arbor&amp;rsquo;s energy experiment could be one of those innovations that changes how everyone thinks about power systems.&lt;/em&gt;&lt;/p&gt;
 </description>
         </item>
         

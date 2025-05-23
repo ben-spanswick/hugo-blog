@@ -12,92 +12,80 @@
         <pubDate>Fri, 21 Mar 2025 02:08:37 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/datascience/genaiframework/</guid>
-        <description>&lt;h1 id=&#34;building-a-modular-genai-framework-for-document-retrieval-and-interaction&#34;&gt;&lt;a href=&#34;#building-a-modular-genai-framework-for-document-retrieval-and-interaction&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Building a Modular GenAI Framework for Document Retrieval and Interaction&lt;/strong&gt;
-&lt;/h1&gt;&lt;p&gt;Without giving too much away, professionally, we&amp;rsquo;re working on a project that has us knee deep in legal documents—thousands upon thousands of pages of contracts, case law, and regulatory filings. Our team was tasked with building a system that could help attorneys quickly find relevant information across this massive corpus and generate accurate, properly cited responses to complex legal questions.&lt;/p&gt;
-&lt;p&gt;The challenge isn&amp;rsquo;t just the volume of documents. It&amp;rsquo;s the need for precision, attribution, and the ability to synthesize information across multiple sources. Traditional search approaches fell short, and off-the-shelf GenAI solutions can&amp;rsquo;t provide the reliability or citation tracking we needed.&lt;/p&gt;
-&lt;p&gt;The proposed apporach is a modular framework that combined the best of retrieval augmented generation (RAG), document summarization techniques like LexRank, and agentic models—all designed to be quickly repurposed for different document-heavy domains.&lt;/p&gt;
-&lt;p&gt;When we finally deployed this system, it should reduce research time for complex legal questions  while maintaining a high accuracy rate compared to expert-generated answers. The key isn&amp;rsquo;t any single technology—it  how we integrated multiple approaches into a cohesive, modular system.&lt;/p&gt;
-&lt;p&gt;Let&amp;rsquo;s dive into the framework for your own document-intensive use cases.&lt;/p&gt;
+        <description>&lt;h1 id=&#34;building-ai-that-actually-reads-documents-instead-of-just-pretending-to&#34;&gt;&lt;a href=&#34;#building-ai-that-actually-reads-documents-instead-of-just-pretending-to&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Building AI That Actually Reads Documents (Instead of Just Pretending To)
+&lt;/h1&gt;&lt;p&gt;&lt;em&gt;How we built a system that can handle thousands of legal docs without hallucinating&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;the-technology-stack-beyond-basic-rag&#34;&gt;&lt;a href=&#34;#the-technology-stack-beyond-basic-rag&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The Technology Stack: Beyond Basic RAG&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;Before we get into implementation details, let&amp;rsquo;s understand the core technologies that make this framework possible:&lt;/p&gt;
-&lt;h3 id=&#34;rag-the-foundation-not-the-destination&#34;&gt;&lt;a href=&#34;#rag-the-foundation-not-the-destination&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;RAG: The Foundation, Not the Destination&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Retrieval Augmented Generation has become the standard approach for grounding LLMs in external knowledge. But basic RAG implementations—which simply retrieve chunks of text based on vector similarity and feed them to an LLM—have significant limitations when dealing with complex document sets:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;They struggle with multi-hop reasoning across documents&lt;/li&gt;
-&lt;li&gt;They often miss important context that&amp;rsquo;s spread across multiple sections&lt;/li&gt;
-&lt;li&gt;They provide limited citation capabilities&lt;/li&gt;
-&lt;li&gt;They can&amp;rsquo;t effectively prioritize authoritative sources&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Our approach uses RAG as a foundation but extends it significantly with additional components.&lt;/p&gt;
-&lt;h3 id=&#34;lexrank-the-unsung-hero-of-document-summarization&#34;&gt;&lt;a href=&#34;#lexrank-the-unsung-hero-of-document-summarization&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;LexRank: The Unsung Hero of Document Summarization&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;While everyone talks about RAG, fewer people leverage LexRank—an algorithm that identifies the most representative sentences in a document or collection of documents.&lt;/p&gt;
-&lt;p&gt;LexRank works by:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Creating a graph where sentences are nodes&lt;/li&gt;
-&lt;li&gt;Connecting sentences based on similarity measures&lt;/li&gt;
-&lt;li&gt;Applying a PageRank-like algorithm to identify the most central sentences&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;What makes LexRank powerful for our use case is that it excels at extractive summarization—pulling out the most important sentences verbatim rather than generating new text. This is crucial for legal and technical domains where precise wording matters.&lt;/p&gt;
-&lt;h3 id=&#34;vector-databases-the-retrieval-engine&#34;&gt;&lt;a href=&#34;#vector-databases-the-retrieval-engine&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Vector Databases: The Retrieval Engine&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;The choice of vector database significantly impacts both performance and capabilities. We evaluated several options:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Pinecone:&lt;/strong&gt; Excellent performance but limited filtering capabilities&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Weaviate:&lt;/strong&gt; Strong hybrid search but more complex to set up&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Chroma:&lt;/strong&gt; Simple to use but less scalable for very large collections&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Azure AI Search:&lt;/strong&gt; Well-integrated with Azure ecosystem with strong vector search capabilities&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;For our implementation, we consider Weaviate due to its hybrid search capabilities, which allowes us to combine semantic search with metadata filtering—crucial for narrowing results by date, document type, jurisdiction, and other attributes.&lt;/p&gt;
-&lt;h3 id=&#34;chunking-strategies-the-art-of-document-segmentation&#34;&gt;&lt;a href=&#34;#chunking-strategies-the-art-of-document-segmentation&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Chunking Strategies: The Art of Document Segmentation&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;How you divide documents into chunks dramatically affects retrieval quality. Hierarchical chunking approaches typically work best:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Document-level embeddings:&lt;/strong&gt; For initial corpus filtering&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Section-level chunks:&lt;/strong&gt; For main retrieval (typically 500-1000 tokens)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Paragraph-level chunks:&lt;/strong&gt; For targeted information extraction&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sentence-level analysis:&lt;/strong&gt; For LexRank summarization&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This multi-level approach allows the system to zoom in and out as needed, maintaining both broad context and detailed information.&lt;/p&gt;
-&lt;h3 id=&#34;agentic-models-the-orchestrators&#34;&gt;&lt;a href=&#34;#agentic-models-the-orchestrators&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Agentic Models: The Orchestrators&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;The final piece is an agentic layer that orchestrates the entire process. This layer:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Interprets user queries&lt;/li&gt;
-&lt;li&gt;Determines the optimal retrieval strategy&lt;/li&gt;
-&lt;li&gt;Coordinates between retrieval and summarization components&lt;/li&gt;
-&lt;li&gt;Formulates responses with proper citations&lt;/li&gt;
-&lt;li&gt;Handles follow-up questions with context awareness&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;We can implement this using a combination of prompt engineering and tool-calling capabilities in models like GPT-4 and Claude 3.&lt;/p&gt;
+&lt;p&gt;We had a problem. A big one.&lt;/p&gt;
+&lt;p&gt;Our legal team was drowning in documents - contracts, case law, regulatory filings, thousands of pages of dense text that someone needed to actually understand. The usual approach of &amp;ldquo;hire more paralegals&amp;rdquo; wasn&amp;rsquo;t working, and basic search was like trying to find a needle in a haystack made of other needles.&lt;/p&gt;
+&lt;p&gt;ChatGPT? Great for writing emails, terrible for legal research. It would confidently cite cases that didn&amp;rsquo;t exist and misquote clauses from contracts. Not exactly what you want when accuracy matters.&lt;/p&gt;
+&lt;p&gt;So we built something better. A system that combines multiple AI approaches to actually understand documents, track its sources, and admit when it doesn&amp;rsquo;t know something.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s how we did it (and how you can adapt it for your own document nightmares).&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;building-the-document-processing-pipeline&#34;&gt;&lt;a href=&#34;#building-the-document-processing-pipeline&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Building the Document Processing Pipeline&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;With our technology stack defined, let&amp;rsquo;s look at how to build the document processing pipeline—the foundation of our framework.&lt;/p&gt;
-&lt;h3 id=&#34;document-ingestion-and-preprocessing&#34;&gt;&lt;a href=&#34;#document-ingestion-and-preprocessing&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Document Ingestion and Preprocessing&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;The quality of your document processing directly impacts everything downstream. Our pipeline includes:&lt;/p&gt;
+&lt;h2 id=&#34;why-basic-ai-solutions-dont-work-for-serious-documents&#34;&gt;&lt;a href=&#34;#why-basic-ai-solutions-dont-work-for-serious-documents&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why Basic AI Solutions Don&amp;rsquo;t Work for Serious Documents
+&lt;/h2&gt;&lt;h3 id=&#34;the-hallucination-problem&#34;&gt;&lt;a href=&#34;#the-hallucination-problem&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Hallucination Problem
+&lt;/h3&gt;&lt;p&gt;Ask ChatGPT about a specific contract clause, and it might give you a beautifully written answer that&amp;rsquo;s completely made up. For casual use? Maybe okay. For legal work? Career-ending.&lt;/p&gt;
+&lt;h3 id=&#34;the-context-problem&#34;&gt;&lt;a href=&#34;#the-context-problem&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Context Problem
+&lt;/h3&gt;&lt;p&gt;Most AI systems can only look at small chunks of text at once. But real questions often require understanding connections across multiple documents, sections, and time periods.&lt;/p&gt;
+&lt;h3 id=&#34;the-citation-problem&#34;&gt;&lt;a href=&#34;#the-citation-problem&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Citation Problem
+&lt;/h3&gt;&lt;p&gt;&amp;ldquo;The AI said so&amp;rdquo; isn&amp;rsquo;t a valid source. You need to know exactly where information comes from, with page numbers and direct quotes.&lt;/p&gt;
+&lt;h3 id=&#34;the-precision-problem&#34;&gt;&lt;a href=&#34;#the-precision-problem&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Precision Problem
+&lt;/h3&gt;&lt;p&gt;In domains like law or medicine, words matter. Paraphrasing can change meaning completely. Sometimes you need the exact original text, not an AI&amp;rsquo;s interpretation.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-stack-that-actually-works&#34;&gt;&lt;a href=&#34;#the-stack-that-actually-works&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Stack That Actually Works
+&lt;/h2&gt;&lt;h3 id=&#34;beyond-basic-rag&#34;&gt;&lt;a href=&#34;#beyond-basic-rag&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Beyond Basic RAG
+&lt;/h3&gt;&lt;p&gt;Everyone&amp;rsquo;s doing Retrieval Augmented Generation now - find relevant text chunks, feed them to an LLM, get an answer. It&amp;rsquo;s a start, but it has serious limitations:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Can&amp;rsquo;t reason across multiple documents&lt;/li&gt;
+&lt;li&gt;Misses context spread across sections&lt;/li&gt;
+&lt;li&gt;Terrible at citations&lt;/li&gt;
+&lt;li&gt;No way to prioritize authoritative sources&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;We use RAG as a foundation, then add several layers on top.&lt;/p&gt;
+&lt;h3 id=&#34;lexrank-the-summarization-secret-weapon&#34;&gt;&lt;a href=&#34;#lexrank-the-summarization-secret-weapon&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;LexRank: The Summarization Secret Weapon
+&lt;/h3&gt;&lt;p&gt;While everyone obsesses over RAG, fewer people know about LexRank. It&amp;rsquo;s an algorithm that finds the most important sentences in a document by treating them like a network and finding the most &amp;ldquo;central&amp;rdquo; ones.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Why it matters:&lt;/strong&gt; LexRank extracts actual sentences from documents instead of generating new text. When precise wording matters (like in legal or technical docs), this is huge.&lt;/p&gt;
+&lt;h3 id=&#34;vector-databases-choosing-your-retrieval-engine&#34;&gt;&lt;a href=&#34;#vector-databases-choosing-your-retrieval-engine&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Vector Databases: Choosing Your Retrieval Engine
+&lt;/h3&gt;&lt;p&gt;We tested several options:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Pinecone:&lt;/strong&gt; Fast but limited filtering&lt;br&gt;
+&lt;strong&gt;Weaviate:&lt;/strong&gt; Great hybrid search, more complex setup&lt;br&gt;
+&lt;strong&gt;Chroma:&lt;/strong&gt; Simple but doesn&amp;rsquo;t scale well&lt;br&gt;
+&lt;strong&gt;Azure AI Search:&lt;/strong&gt; Good all-around with strong enterprise features&lt;/p&gt;
+&lt;p&gt;We went with Weaviate for its hybrid search - combining semantic similarity with traditional keyword matching.&lt;/p&gt;
+&lt;h3 id=&#34;hierarchical-chunking&#34;&gt;&lt;a href=&#34;#hierarchical-chunking&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Hierarchical Chunking
+&lt;/h3&gt;&lt;p&gt;Instead of chopping documents into random pieces, we create multiple levels:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Format conversion:&lt;/strong&gt; Standardizing all documents to text-based formats&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Structure preservation:&lt;/strong&gt; Maintaining headings, lists, and paragraph breaks&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Metadata extraction:&lt;/strong&gt; Pulling out document dates, authors, titles, and other attributes&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Entity recognition:&lt;/strong&gt; Identifying key entities like organizations, people, and legal citations&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cross-reference detection:&lt;/strong&gt; Finding and normalizing references between documents&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Document-level&lt;/strong&gt; - for initial filtering&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Section-level&lt;/strong&gt; - for main retrieval&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Paragraph-level&lt;/strong&gt; - for detailed extraction&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Sentence-level&lt;/strong&gt; - for LexRank analysis&lt;/li&gt;
 &lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Implementation tip:&lt;/strong&gt; A combination of Apache Tika for initial conversion, custom Python scripts for structure preservation, and SpaCy for entity recognition. The key is creating a consistent intermediate format that preserves both content and structure.&lt;/p&gt;
-&lt;h3 id=&#34;implementing-hierarchical-chunking&#34;&gt;&lt;a href=&#34;#implementing-hierarchical-chunking&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Implementing Hierarchical Chunking&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Rather than using a one-size-fits-all chunking strategy, a hierarchical approach required multiple chunking passes:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;create_hierarchical_chunks&lt;/span&gt;(document):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Document-level embedding&lt;/span&gt;
+&lt;p&gt;This lets the system zoom in and out as needed.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;the-document-processing-pipeline&#34;&gt;&lt;a href=&#34;#the-document-processing-pipeline&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Document Processing Pipeline
+&lt;/h2&gt;&lt;h3 id=&#34;making-sense-of-messy-documents&#34;&gt;&lt;a href=&#34;#making-sense-of-messy-documents&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Making Sense of Messy Documents
+&lt;/h3&gt;&lt;p&gt;Most documents are a mess - scanned PDFs, weird formatting, inconsistent structure. The preprocessing stage is crucial:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Format conversion:&lt;/strong&gt; Get everything into clean text&lt;br&gt;
+&lt;strong&gt;Structure preservation:&lt;/strong&gt; Keep headings, lists, formatting&lt;br&gt;
+&lt;strong&gt;Metadata extraction:&lt;/strong&gt; Pull out dates, authors, document types&lt;br&gt;
+&lt;strong&gt;Entity recognition:&lt;/strong&gt; Find organizations, people, legal citations&lt;br&gt;
+&lt;strong&gt;Cross-reference detection:&lt;/strong&gt; Map connections between documents&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Pro tip: Spend time here. Garbage in, garbage out applies 10x to document AI.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;smart-chunking-strategy&#34;&gt;&lt;a href=&#34;#smart-chunking-strategy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Smart Chunking Strategy
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;create_hierarchical_chunks&lt;/span&gt;(document):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Document-level embedding for broad filtering&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    doc_embedding &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; embed_text(document&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;full_text)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Section-level chunks (based on headings)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Section-level chunks based on headings&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    sections &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; split_by_headings(document&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;full_text)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    section_chunks &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    section_chunks &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; section &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; sections:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        section_chunks&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append({
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: section,
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;embedding&amp;#34;&lt;/span&gt;: embed_text(section),
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;metadata&amp;#34;&lt;/span&gt;: document&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;metadata
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; section &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; sections
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        })
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Paragraph-level chunks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Paragraph-level for detailed retrieval&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    paragraph_chunks &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; section &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; sections:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        paragraphs &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; split_by_paragraphs(section)
@@ -105,424 +93,209 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            paragraph_chunks&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append({
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: paragraph,
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;embedding&amp;#34;&lt;/span&gt;: embed_text(paragraph),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;metadata&amp;#34;&lt;/span&gt;: document&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;metadata,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;parent_section&amp;#34;&lt;/span&gt;: section[:&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;]  &lt;span style=&#34;color:#75715e&#34;&gt;# Reference to parent&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;parent_section&amp;#34;&lt;/span&gt;: section[:&lt;span style=&#34;color:#ae81ff&#34;&gt;100&lt;/span&gt;]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            })
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Store all levels&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    store_chunks(document&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;id, {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: document&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;full_text, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;embedding&amp;#34;&lt;/span&gt;: doc_embedding},
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;document&amp;#34;&lt;/span&gt;: doc_embedding,
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sections&amp;#34;&lt;/span&gt;: section_chunks,
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;paragraphs&amp;#34;&lt;/span&gt;: paragraph_chunks
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    })
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This approach creates a hierarchical relationship between chunks, allowing the retrieval system to navigate up and down the hierarchy as needed.&lt;/p&gt;
-&lt;h3 id=&#34;data-vetting-and-quality-control&#34;&gt;&lt;a href=&#34;#data-vetting-and-quality-control&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Data Vetting and Quality Control&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Not all documents are created equal. The proposed implementation includes several data vetting mechanisms:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Duplicate detection:&lt;/strong&gt; Identifying and merging duplicate or near-duplicate content&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Contradiction detection:&lt;/strong&gt; Flagging conflicting information across documents&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Recency analysis:&lt;/strong&gt; Prioritizing more recent documents when information conflicts&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Authority scoring:&lt;/strong&gt; Weighting documents based on source authority&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Quality filtering:&lt;/strong&gt; Removing low-quality or irrelevant documents&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;strong&gt;Implementation tip:&lt;/strong&gt; Implement a quality scoring system that assigns each document a composite score based on these factors. This score is used both for filtering during ingestion and for ranking during retrieval.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;calculate_quality_score&lt;/span&gt;(document):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    scores &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;completeness&amp;#34;&lt;/span&gt;: assess_completeness(document),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;consistency&amp;#34;&lt;/span&gt;: check_internal_consistency(document),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;authority&amp;#34;&lt;/span&gt;: authority_score(document&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;metadata[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;source&amp;#34;&lt;/span&gt;]),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;recency&amp;#34;&lt;/span&gt;: recency_score(document&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;metadata[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;]),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;relevance&amp;#34;&lt;/span&gt;: domain_relevance_score(document)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Weighted average&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    weights &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;completeness&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;consistency&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;, 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;               &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;authority&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;recency&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;relevance&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; sum(scores[k] &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; weights[k] &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; k &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; scores)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;vector-embedding-approaches&#34;&gt;&lt;a href=&#34;#vector-embedding-approaches&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Vector Embedding Approaches&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;The choice of embedding model significantly impacts retrieval quality:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Domain-specific models outperform general models:&lt;/strong&gt; We fine-tuned embeddings on legal text&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Larger embedding dimensions improve precision:&lt;/strong&gt; We used 1536-dimensional embeddings&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hybrid models combining multiple embeddings perform best:&lt;/strong&gt; We ensemble multiple models&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;For legal documents specifically, the combination of a fine-tuned legal embedding model with a general-purpose model like OpenAI&amp;rsquo;s text-embedding-3-large provided the best results.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;quality-control-that-matters&#34;&gt;&lt;a href=&#34;#quality-control-that-matters&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Quality Control That Matters
+&lt;/h3&gt;&lt;p&gt;Not all documents are equal. We built scoring systems for:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Authority:&lt;/strong&gt; Government sources &amp;gt; company documents &amp;gt; random PDFs&lt;br&gt;
+&lt;strong&gt;Recency:&lt;/strong&gt; Newer regulations override older ones&lt;br&gt;
+&lt;strong&gt;Completeness:&lt;/strong&gt; Full documents &amp;gt; partial extracts&lt;br&gt;
+&lt;strong&gt;Consistency:&lt;/strong&gt; Flag contradictory information&lt;br&gt;
+&lt;strong&gt;Relevance:&lt;/strong&gt; Domain-specific relevance scoring&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;the-retrieval-engine-finding-the-needle-in-the-haystack&#34;&gt;&lt;a href=&#34;#the-retrieval-engine-finding-the-needle-in-the-haystack&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The Retrieval Engine: Finding the Needle in the Haystack&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;The next component is the retrieval engine—the system that finds relevant information based on user queries.&lt;/p&gt;
-&lt;h3 id=&#34;vector-database-configuration&#34;&gt;&lt;a href=&#34;#vector-database-configuration&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Vector Database Configuration&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;A possible Weaviate configuration includes:&lt;/p&gt;
+&lt;h2 id=&#34;the-retrieval-engine&#34;&gt;&lt;a href=&#34;#the-retrieval-engine&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Retrieval Engine
+&lt;/h2&gt;&lt;h3 id=&#34;multi-stage-retrieval-process&#34;&gt;&lt;a href=&#34;#multi-stage-retrieval-process&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Multi-Stage Retrieval Process
+&lt;/h3&gt;&lt;p&gt;Single-stage retrieval misses too much. Our process:&lt;/p&gt;
 &lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Multiple collections for different chunk sizes:&lt;/strong&gt; Document, section, and paragraph levels&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hybrid search configuration:&lt;/strong&gt; Combining vector search with BM25 text search&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Metadata filtering:&lt;/strong&gt; Enabling filtering by document attributes&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Cross-references:&lt;/strong&gt; Maintaining relationships between chunks&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Query analysis&lt;/strong&gt; - understand what type of info is needed&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Corpus filtering&lt;/strong&gt; - narrow search space using document-level embeddings&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Primary retrieval&lt;/strong&gt; - find most relevant sections&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Context expansion&lt;/strong&gt; - add related paragraphs for complete picture&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Re-ranking&lt;/strong&gt; - apply domain-specific relevance criteria&lt;/li&gt;
 &lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;class_obj &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;class&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Paragraph&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;vectorizer&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text2vec-openai&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;moduleConfig&amp;#34;&lt;/span&gt;: {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text2vec-openai&amp;#34;&lt;/span&gt;: {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;model&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text-embedding-3-large&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;modelVersion&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;latest&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    },
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dataType&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;]},
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;document_id&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dataType&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;]},
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;section_id&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dataType&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;]},
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;metadata&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dataType&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;]},
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;quality_score&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;dataType&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;number&amp;#34;&lt;/span&gt;]}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;multi-stage-retrieval-process&#34;&gt;&lt;a href=&#34;#multi-stage-retrieval-process&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Multi-Stage Retrieval Process&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Rather than a single retrieval step, we can implemented a multi-stage process:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Query analysis:&lt;/strong&gt; Understanding the type of information needed&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Corpus filtering:&lt;/strong&gt; Using document-level embeddings to narrow the search space&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Primary retrieval:&lt;/strong&gt; Finding the most relevant sections&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Contextual expansion:&lt;/strong&gt; Adding related paragraphs for context&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Re-ranking:&lt;/strong&gt; Applying additional relevance criteria&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This multi-stage approach significantly improves precision while maintaining recall.&lt;/p&gt;
-&lt;h3 id=&#34;relevance-scoring-beyond-vector-similarity&#34;&gt;&lt;a href=&#34;#relevance-scoring-beyond-vector-similarity&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Relevance Scoring Beyond Vector Similarity&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Vector similarity alone isn&amp;rsquo;t enough for complex queries:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Vector similarity:&lt;/strong&gt; Semantic relevance to the query&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Term overlap:&lt;/strong&gt; Keyword matching for precision&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Authority score:&lt;/strong&gt; Weighting by source reliability&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Recency:&lt;/strong&gt; Prioritizing newer information when appropriate&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Contextual relevance:&lt;/strong&gt; How well the chunk fits with other retrieved chunks&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;score_chunk&lt;/span&gt;(chunk, query, retrieved_chunks):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Base vector similarity&lt;/span&gt;
+&lt;h3 id=&#34;beyond-vector-similarity&#34;&gt;&lt;a href=&#34;#beyond-vector-similarity&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Beyond Vector Similarity
+&lt;/h3&gt;&lt;p&gt;Vector similarity alone isn&amp;rsquo;t enough. We combine:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Semantic similarity&lt;/strong&gt; - core vector search&lt;br&gt;
+&lt;strong&gt;Term overlap&lt;/strong&gt; - keyword matching for precision&lt;br&gt;
+&lt;strong&gt;Authority weighting&lt;/strong&gt; - prioritize reliable sources&lt;br&gt;
+&lt;strong&gt;Recency factors&lt;/strong&gt; - newer info when relevant&lt;br&gt;
+&lt;strong&gt;Context relevance&lt;/strong&gt; - how chunks fit together&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;score_chunk&lt;/span&gt;(chunk, query, other_chunks):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Base similarity&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    vector_score &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; vector_similarity(chunk&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;embedding, query_embedding)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Term overlap&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Keyword matching&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    term_score &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; calculate_term_overlap(chunk&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;text, query)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Authority from metadata&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Source authority&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    authority_score &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; get_authority_score(chunk&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;metadata)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Recency factor&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    recency_score &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; calculate_recency(chunk&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;metadata&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;date&amp;#34;&lt;/span&gt;))
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Contextual relevance to other retrieved chunks&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    context_score &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; calculate_contextual_relevance(chunk, retrieved_chunks)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# How well it fits with other results&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    context_score &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; calculate_context_fit(chunk, other_chunks)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Weighted combination&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    final_score &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; (vector_score &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                  term_score &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                  authority_score &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                  recency_score &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                  context_score &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.1&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; final_score
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;citation-tracking-and-source-attribution&#34;&gt;&lt;a href=&#34;#citation-tracking-and-source-attribution&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Citation Tracking and Source Attribution&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;For domains like legal research, proper citation is critical:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Source documents for all retrieved information&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Specific locations within documents (page, section, paragraph)&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Citation formatting based on domain standards&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Confidence scores for each piece of information&lt;/strong&gt;&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This enables the system to generate properly cited responses and allows users to verify information directly from source documents.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; (vector_score &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.4&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; term_score &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; 
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            authority_score &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;+&lt;/span&gt; context_score &lt;span style=&#34;color:#f92672&#34;&gt;*&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.2&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;citation-tracking-from-day-one&#34;&gt;&lt;a href=&#34;#citation-tracking-from-day-one&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Citation Tracking from Day One
+&lt;/h3&gt;&lt;p&gt;Every piece of information needs a paper trail:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Source document&lt;/strong&gt; with full metadata&lt;br&gt;
+&lt;strong&gt;Specific location&lt;/strong&gt; (page, section, paragraph)&lt;br&gt;
+&lt;strong&gt;Direct quotes&lt;/strong&gt; vs paraphrased content&lt;br&gt;
+&lt;strong&gt;Confidence scores&lt;/strong&gt; for each claim&lt;br&gt;
+&lt;strong&gt;Proper formatting&lt;/strong&gt; for domain standards&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;the-summarization-layer-from-retrieval-to-understanding&#34;&gt;&lt;a href=&#34;#the-summarization-layer-from-retrieval-to-understanding&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The Summarization Layer: From Retrieval to Understanding&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;Retrieving relevant chunks is only half the battle. The summarization layer transforms these chunks into coherent, comprehensive answers.&lt;/p&gt;
-&lt;h3 id=&#34;lexrank-implementation-for-extractive-summarization&#34;&gt;&lt;a href=&#34;#lexrank-implementation-for-extractive-summarization&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;LexRank Implementation for Extractive Summarization&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;LexRank implementation works in several stages:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Sentence segmentation:&lt;/strong&gt; Breaking retrieved chunks into individual sentences&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Similarity matrix construction:&lt;/strong&gt; Calculating pairwise similarities between sentences&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Graph creation:&lt;/strong&gt; Building a graph where sentences are nodes and similarities are edges&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Centrality calculation:&lt;/strong&gt; Applying a modified PageRank algorithm&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Sentence selection:&lt;/strong&gt; Extracting the most central sentences&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lexrank_summarize&lt;/span&gt;(chunks, query, num_sentences&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Extract all sentences from chunks&lt;/span&gt;
+&lt;h2 id=&#34;the-summarization-layer&#34;&gt;&lt;a href=&#34;#the-summarization-layer&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Summarization Layer
+&lt;/h2&gt;&lt;h3 id=&#34;lexrank-in-action&#34;&gt;&lt;a href=&#34;#lexrank-in-action&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;LexRank in Action
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;lexrank_summarize&lt;/span&gt;(chunks, num_sentences&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;5&lt;/span&gt;):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Extract all sentences&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    sentences &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; chunk &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; chunks:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        chunk_sentences &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; split_into_sentences(chunk&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;text)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; sentence &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; chunk_sentences:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            sentences&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append({
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: sentence,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;source&amp;#34;&lt;/span&gt;: chunk&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;metadata,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;chunk_id&amp;#34;&lt;/span&gt;: chunk&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;id
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            })
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        sentences&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;extend(chunk_sentences)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Create similarity matrix&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    embeddings &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [embed_text(s[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;]) &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; s &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; sentences]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Create similarity matrix between sentences&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    embeddings &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [embed_text(s) &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; s &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; sentences]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    similarity_matrix &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; cosine_similarity(embeddings)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Apply threshold to create graph&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    threshold &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(len(similarity_matrix)):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; j &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(len(similarity_matrix)):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; similarity_matrix[i][j] &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; threshold:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                similarity_matrix[i][j] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    similarity_matrix[similarity_matrix &lt;span style=&#34;color:#f92672&#34;&gt;&amp;lt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.3&lt;/span&gt;] &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Calculate LexRank scores&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Calculate centrality scores (like PageRank)&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    scores &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; calculate_lexrank_scores(similarity_matrix)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Select top sentences&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ranked_sentences &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [(sentences[i], scores[i]) 
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(len(sentences))]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ranked_sentences&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sort(key&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;lambda&lt;/span&gt; x: x[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;], reverse&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Return top sentences with their sources&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; [rs[&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;] &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; rs &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; ranked_sentences[:num_sentences]]
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The key advantage of LexRank is that it extracts actual sentences from the documents, preserving the original wording—critical for accuracy in technical and legal domains.&lt;/p&gt;
-&lt;h3 id=&#34;combining-rag-with-lexrank&#34;&gt;&lt;a href=&#34;#combining-rag-with-lexrank&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Combining RAG with LexRank&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;This framework combines RAG and LexRank in a complementary way:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;RAG retrieves relevant chunks&lt;/strong&gt; based on semantic similarity&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;LexRank identifies the most representative sentences&lt;/strong&gt; within those chunks&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;The LLM generates a coherent answer&lt;/strong&gt; using both the retrieved chunks and the LexRank summary&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Citations are maintained throughout&lt;/strong&gt; the process&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This hybrid approach leverages the strengths of both techniques—RAG&amp;rsquo;s ability to find relevant information and LexRank&amp;rsquo;s ability to identify the most important points.&lt;/p&gt;
-&lt;h3 id=&#34;maintaining-context-across-multiple-documents&#34;&gt;&lt;a href=&#34;#maintaining-context-across-multiple-documents&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Maintaining Context Across Multiple Documents&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;One challenge with complex queries is maintaining context across multiple documents:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Cross-document entity resolution:&lt;/strong&gt; Identifying when different documents refer to the same entities&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Temporal alignment:&lt;/strong&gt; Understanding the chronological relationship between documents&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Contradiction detection:&lt;/strong&gt; Identifying and resolving conflicting information&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Context graphs:&lt;/strong&gt; Building relationships between information across documents&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This allows the system to synthesize information coherently even when it&amp;rsquo;s spread across multiple sources.&lt;/p&gt;
-&lt;h3 id=&#34;ensuring-factual-accuracy&#34;&gt;&lt;a href=&#34;#ensuring-factual-accuracy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Ensuring Factual Accuracy&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;To maximize accuracy, this framework includes several verification mechanisms:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Fact verification:&lt;/strong&gt; Checking generated content against retrieved chunks&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Citation validation:&lt;/strong&gt; Ensuring citations actually support the claims&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Confidence scoring:&lt;/strong&gt; Indicating the system&amp;rsquo;s confidence in each part of the response&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Uncertainty highlighting:&lt;/strong&gt; Explicitly marking areas where information is ambiguous or conflicting&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;verify_response&lt;/span&gt;(generated_response, retrieved_chunks):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Extract claims from response&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    claims &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; extract_claims(generated_response)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ranked &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [(sentences[i], scores[i]) &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; i &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; range(len(sentences))]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ranked&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;sort(key&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;lambda&lt;/span&gt; x: x[&lt;span style=&#34;color:#ae81ff&#34;&gt;1&lt;/span&gt;], reverse&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Verify each claim against retrieved chunks&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; ranked[:num_sentences]
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;combining-rag--lexrank&#34;&gt;&lt;a href=&#34;#combining-rag--lexrank&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Combining RAG + LexRank
+&lt;/h3&gt;&lt;p&gt;The magic happens when you combine approaches:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;RAG finds relevant chunks&lt;/strong&gt; based on query&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LexRank identifies key sentences&lt;/strong&gt; within those chunks&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LLM synthesizes&lt;/strong&gt; both into coherent answer&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Citations preserved&lt;/strong&gt; throughout process&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;This gives you the breadth of RAG with the precision of extractive summarization.&lt;/p&gt;
+&lt;h3 id=&#34;fact-verification-pipeline&#34;&gt;&lt;a href=&#34;#fact-verification-pipeline&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Fact Verification Pipeline
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;verify_response&lt;/span&gt;(generated_text, source_chunks):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Extract specific claims from generated response&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    claims &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; extract_claims(generated_text)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Check each claim against source material&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    verification_results &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; []
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; claim &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; claims:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        support &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; find_supporting_evidence(claim, retrieved_chunks)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        contradictions &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; find_contradicting_evidence(claim, retrieved_chunks)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        supporting_evidence &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; find_support(claim, source_chunks)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        contradicting_evidence &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; find_contradictions(claim, source_chunks)
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        verification_results&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append({
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;claim&amp;#34;&lt;/span&gt;: claim,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;supported&amp;#34;&lt;/span&gt;: len(support) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;support_strength&amp;#34;&lt;/span&gt;: calculate_support_strength(support),
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;contradicted&amp;#34;&lt;/span&gt;: len(contradictions) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sources&amp;#34;&lt;/span&gt;: [s&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;metadata &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; s &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; support]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;supported&amp;#34;&lt;/span&gt;: len(supporting_evidence) &lt;span style=&#34;color:#f92672&#34;&gt;&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;confidence&amp;#34;&lt;/span&gt;: calculate_support_strength(supporting_evidence),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;sources&amp;#34;&lt;/span&gt;: [s&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;metadata &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; s &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; supporting_evidence]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        })
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Annotate response with verification results&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    annotated_response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; annotate_response(generated_response, verification_results)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; annotated_response
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; annotate_response(generated_text, verification_results)
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;the-interaction-layer-making-it-user-friendly&#34;&gt;&lt;a href=&#34;#the-interaction-layer-making-it-user-friendly&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The Interaction Layer: Making It User-Friendly&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;The final component is the interaction layer—the interface between users and the underlying system.&lt;/p&gt;
-&lt;h3 id=&#34;agentic-models-for-user-interaction&#34;&gt;&lt;a href=&#34;#agentic-models-for-user-interaction&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Agentic Models for User Interaction&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Implementation of an agentic approach where the model:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Interprets the user&amp;rsquo;s question&lt;/strong&gt; to understand intent&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Formulates a retrieval strategy&lt;/strong&gt; based on the question type&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Executes the appropriate retrieval and summarization steps&lt;/strong&gt;&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Generates a response&lt;/strong&gt; with appropriate citations&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Maintains conversation context&lt;/strong&gt; for follow-up questions&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This agent-based approach allows the system to adapt its strategy based on the specific question rather than using a one-size-fits-all approach.&lt;/p&gt;
-&lt;h3 id=&#34;query-understanding-and-refinement&#34;&gt;&lt;a href=&#34;#query-understanding-and-refinement&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Query Understanding and Refinement&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Not all user queries are well-formed:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Query classification:&lt;/strong&gt; Identifying the type of question (factual, analytical, comparative)&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Query expansion:&lt;/strong&gt; Adding relevant terms to improve retrieval&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Ambiguity resolution:&lt;/strong&gt; Identifying and clarifying ambiguous terms&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Decomposition:&lt;/strong&gt; Breaking complex questions into simpler sub-questions&lt;/li&gt;
-&lt;/ol&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;process_query&lt;/span&gt;(query, conversation_history&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;None&lt;/span&gt;):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Classify query type&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    query_type &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; classify_query(query)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Expand query based on type&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    expanded_query &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; expand_query(query, query_type)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Check for ambiguities&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ambiguities &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; detect_ambiguities(expanded_query)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; ambiguities &lt;span style=&#34;color:#f92672&#34;&gt;and&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;not&lt;/span&gt; conversation_history:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# If this is the first interaction, ask for clarification&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; generate_clarification_request(ambiguities)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# For complex queries, decompose into sub-questions&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; query_type &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;complex&amp;#34;&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        sub_questions &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; decompose_query(expanded_query)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        sub_answers &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [retrieve_and_generate(sq) &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; sq &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; sub_questions]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; synthesize_answers(sub_answers, query)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#75715e&#34;&gt;# Standard retrieval and generation&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; retrieve_and_generate(expanded_query)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;presenting-results-with-citations&#34;&gt;&lt;a href=&#34;#presenting-results-with-citations&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Presenting Results with Citations&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;The presentation of results is critical for usability:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Structures responses logically&lt;/strong&gt; with clear sections&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Includes inline citations&lt;/strong&gt; linked to source documents&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Provides confidence indicators&lt;/strong&gt; for different parts of the response&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Offers direct quotes from source documents&lt;/strong&gt; for key points&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Includes a summary of sources used&lt;/strong&gt; at the end&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;handling-follow-up-questions&#34;&gt;&lt;a href=&#34;#handling-follow-up-questions&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Handling Follow-up Questions&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;One of the most powerful features is the ability to handle follow-up questions with full context awareness:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Maintaining conversation history&lt;/strong&gt; across interactions&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Resolving references&lt;/strong&gt; to previous questions and answers&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Reusing relevant retrievals&lt;/strong&gt; from previous questions&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Tracking the user&amp;rsquo;s focus&lt;/strong&gt; as it shifts during conversation&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This creates a much more natural interaction pattern where users can drill down into topics of interest.&lt;/p&gt;
+&lt;h2 id=&#34;making-it-user-friendly&#34;&gt;&lt;a href=&#34;#making-it-user-friendly&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Making It User-Friendly
+&lt;/h2&gt;&lt;h3 id=&#34;the-agentic-layer&#34;&gt;&lt;a href=&#34;#the-agentic-layer&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Agentic Layer
+&lt;/h3&gt;&lt;p&gt;Instead of rigid workflows, we built an agent that:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Interprets queries&lt;/strong&gt; to understand intent&lt;br&gt;
+&lt;strong&gt;Plans retrieval strategy&lt;/strong&gt; based on question type&lt;br&gt;
+&lt;strong&gt;Adapts approach&lt;/strong&gt; based on results&lt;br&gt;
+&lt;strong&gt;Maintains context&lt;/strong&gt; across follow-up questions&lt;br&gt;
+&lt;strong&gt;Explains reasoning&lt;/strong&gt; throughout process&lt;/p&gt;
+&lt;h3 id=&#34;query-understanding&#34;&gt;&lt;a href=&#34;#query-understanding&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Query Understanding
+&lt;/h3&gt;&lt;p&gt;Users don&amp;rsquo;t always ask good questions. We help by:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Classifying question types&lt;/strong&gt; (factual, analytical, comparative)&lt;br&gt;
+&lt;strong&gt;Expanding queries&lt;/strong&gt; with relevant terms&lt;br&gt;
+&lt;strong&gt;Resolving ambiguities&lt;/strong&gt; through clarification&lt;br&gt;
+&lt;strong&gt;Decomposing complex questions&lt;/strong&gt; into manageable parts&lt;/p&gt;
+&lt;h3 id=&#34;result-presentation&#34;&gt;&lt;a href=&#34;#result-presentation&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Result Presentation
+&lt;/h3&gt;&lt;p&gt;The output format matters as much as the content:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Structured responses&lt;/strong&gt; with clear sections&lt;br&gt;
+&lt;strong&gt;Inline citations&lt;/strong&gt; linked to sources&lt;br&gt;
+&lt;strong&gt;Confidence indicators&lt;/strong&gt; for different claims&lt;br&gt;
+&lt;strong&gt;Direct quotes&lt;/strong&gt; for key points&lt;br&gt;
+&lt;strong&gt;Source summary&lt;/strong&gt; at the end&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;making-it-modular-and-scalable&#34;&gt;&lt;a href=&#34;#making-it-modular-and-scalable&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Making It Modular and Scalable&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;The key to making this framework reusable across different domains is its modular architecture.&lt;/p&gt;
-&lt;h3 id=&#34;component-based-architecture&#34;&gt;&lt;a href=&#34;#component-based-architecture&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Component-Based Architecture&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;This framework is built around clearly defined components:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Document Processor:&lt;/strong&gt; Handles ingestion and chunking&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Embedding Service:&lt;/strong&gt; Manages vector embeddings&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Retrieval Engine:&lt;/strong&gt; Finds relevant information&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Summarization Service:&lt;/strong&gt; Applies LexRank and other techniques&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Response Generator:&lt;/strong&gt; Creates the final output&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Interaction Manager:&lt;/strong&gt; Handles user queries and conversation&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;Each component has well-defined interfaces, allowing them to be replaced or modified independently.&lt;/p&gt;
-&lt;h3 id=&#34;separation-of-concerns&#34;&gt;&lt;a href=&#34;#separation-of-concerns&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Separation of Concerns&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;This modular approach enables clear separation of concerns:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Domain-specific knowledge&lt;/strong&gt; is contained in the document corpus&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Retrieval logic&lt;/strong&gt; is independent of document content&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Summarization techniques&lt;/strong&gt; can be swapped based on domain needs&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Interaction patterns&lt;/strong&gt; can be customized for different user types&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This makes the framework adaptable to different domains without rewriting core components.&lt;/p&gt;
-&lt;h3 id=&#34;configuration-driven-customization&#34;&gt;&lt;a href=&#34;#configuration-driven-customization&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Configuration-Driven Customization&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;Rather than hardcoding domain-specific logic, we can use configuration files to customize behavior:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;domain_config&lt;/span&gt;:
+&lt;h2 id=&#34;real-world-results-legal-research-case-study&#34;&gt;&lt;a href=&#34;#real-world-results-legal-research-case-study&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Real-World Results: Legal Research Case Study
+&lt;/h2&gt;&lt;h3 id=&#34;the-challenge&#34;&gt;&lt;a href=&#34;#the-challenge&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Challenge
+&lt;/h3&gt;&lt;p&gt;Law firm with thousands of contracts, case law, and regulatory docs needed to:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Find relevant precedents quickly&lt;/li&gt;
+&lt;li&gt;Extract key contract clauses&lt;/li&gt;
+&lt;li&gt;Track regulatory changes&lt;/li&gt;
+&lt;li&gt;Generate properly cited memos&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-we-built&#34;&gt;&lt;a href=&#34;#what-we-built&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What We Built
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Specialized legal parsers&lt;/strong&gt; for different document types&lt;br&gt;
+&lt;strong&gt;Authority-weighted retrieval&lt;/strong&gt; prioritizing official sources&lt;br&gt;
+&lt;strong&gt;Jurisdiction-based filtering&lt;/strong&gt; for relevant law&lt;br&gt;
+&lt;strong&gt;Citation graph analysis&lt;/strong&gt; for precedent relationships&lt;br&gt;
+&lt;strong&gt;Extractive summarization&lt;/strong&gt; preserving exact legal language&lt;/p&gt;
+&lt;h3 id=&#34;the-results&#34;&gt;&lt;a href=&#34;#the-results&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Results
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Research time reduced by 70%&lt;/strong&gt; for complex questions&lt;br&gt;
+&lt;strong&gt;95% accuracy rate&lt;/strong&gt; vs expert-generated answers&lt;br&gt;
+&lt;strong&gt;Zero hallucinated citations&lt;/strong&gt; (the big win)&lt;br&gt;
+&lt;strong&gt;Full audit trail&lt;/strong&gt; for every piece of information&lt;/p&gt;
+&lt;h3 id=&#34;what-we-learned&#34;&gt;&lt;a href=&#34;#what-we-learned&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What We Learned
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Domain-specific chunking is crucial&lt;/strong&gt; - legal docs have unique structure&lt;br&gt;
+&lt;strong&gt;Authority trumps recency&lt;/strong&gt; - older authoritative sources often win&lt;br&gt;
+&lt;strong&gt;Citation precision is non-negotiable&lt;/strong&gt; - even small errors kill trust&lt;br&gt;
+&lt;strong&gt;Explanation matters&lt;/strong&gt; - lawyers want to understand the reasoning&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;making-it-modular&#34;&gt;&lt;a href=&#34;#making-it-modular&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Making It Modular
+&lt;/h2&gt;&lt;h3 id=&#34;component-architecture&#34;&gt;&lt;a href=&#34;#component-architecture&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Component Architecture
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Document Processor&lt;/strong&gt; - handles ingestion and chunking&lt;br&gt;
+&lt;strong&gt;Embedding Service&lt;/strong&gt; - manages vector representations&lt;br&gt;
+&lt;strong&gt;Retrieval Engine&lt;/strong&gt; - finds relevant information&lt;br&gt;
+&lt;strong&gt;Summarization Service&lt;/strong&gt; - applies LexRank and other techniques&lt;br&gt;
+&lt;strong&gt;Response Generator&lt;/strong&gt; - creates final output&lt;br&gt;
+&lt;strong&gt;Interaction Manager&lt;/strong&gt; - handles user queries&lt;/p&gt;
+&lt;p&gt;Each component has clean interfaces and can be swapped independently.&lt;/p&gt;
+&lt;h3 id=&#34;configuration-driven-customization&#34;&gt;&lt;a href=&#34;#configuration-driven-customization&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Configuration-Driven Customization
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;domain_config&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;name&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;legal_research&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# Document processing&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;chunking&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;strategy&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;hierarchical&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;section_delimiters&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;##&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Section&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Article&amp;#34;&lt;/span&gt;]
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;max_chunk_size&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1000&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# Embedding&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;embedding&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;model&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text-embedding-3-large&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;dimensions&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1536&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# Retrieval&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;retrieval&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;vector_db&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;weaviate&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;top_k&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;25&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;reranking&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;filters&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;metadata_field&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;jurisdiction&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;required&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#f92672&#34;&gt;metadata_field&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;document_type&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#f92672&#34;&gt;required&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;false&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# Summarization&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;summarization&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;primary_method&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;lexrank&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;extractive_ratio&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;0.7&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;min_sentences&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;3&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# Response generation&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;response&lt;/span&gt;:
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;citation_format&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;bluebook&amp;#34;&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;include_confidence&lt;/span&gt;: &lt;span style=&#34;color:#66d9ef&#34;&gt;true&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;max_length&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;1000&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This configuration-driven approach allows quick adaptation to new domains without code changes.&lt;/p&gt;
-&lt;h3 id=&#34;deployment-patterns&#34;&gt;&lt;a href=&#34;#deployment-patterns&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Deployment Patterns&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;The framework supports several deployment patterns:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Standalone application:&lt;/strong&gt; For self-contained deployments&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Microservices architecture:&lt;/strong&gt; For scalable cloud deployments&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Hybrid deployment:&lt;/strong&gt; With sensitive components on-premises&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Serverless functions:&lt;/strong&gt; For cost-effective scaling&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;This framework can be deployed in both cloud and on-premises environments.&lt;/p&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This lets you adapt to new domains without code changes.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;implementation-case-study-legal-document-analysis&#34;&gt;&lt;a href=&#34;#implementation-case-study-legal-document-analysis&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Implementation Case Study: Legal Document Analysis&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;To illustrate the framework in action, let&amp;rsquo;s look at our implementation for a legal research application.&lt;/p&gt;
-&lt;h3 id=&#34;the-challenge&#34;&gt;&lt;a href=&#34;#the-challenge&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;The Challenge&lt;/strong&gt;
-&lt;/h3&gt;&lt;p&gt;A law firm needed to analyze thousands of contracts, case law documents, and regulatory filings to:&lt;/p&gt;
+&lt;h2 id=&#34;the-bottom-line&#34;&gt;&lt;a href=&#34;#the-bottom-line&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bottom Line
+&lt;/h2&gt;&lt;p&gt;Basic AI tools aren&amp;rsquo;t ready for serious document work. But combining multiple approaches - RAG for retrieval, LexRank for summarization, vector databases for search, and careful engineering for accuracy - can create something genuinely useful.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Key lessons:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Identify relevant precedents for specific legal questions&lt;/li&gt;
-&lt;li&gt;Extract key clauses and provisions from contracts&lt;/li&gt;
-&lt;li&gt;Track regulatory changes affecting client obligations&lt;/li&gt;
-&lt;li&gt;Generate properly cited legal memos&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Go beyond basic RAG&lt;/strong&gt; - combine multiple techniques&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Invest heavily in document processing&lt;/strong&gt; - garbage in, garbage out&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Make modularity a priority&lt;/strong&gt; - design for reuse from day one&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Focus on attribution&lt;/strong&gt; - citations build trust and enable verification&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Adapt to your domain&lt;/strong&gt; - one size doesn&amp;rsquo;t fit all&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;implementation-details&#34;&gt;&lt;a href=&#34;#implementation-details&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Implementation Details&lt;/strong&gt;
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Document Processing:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Specialized legal document parsers for different document types&lt;/li&gt;
-&lt;li&gt;Hierarchical chunking based on legal document structure&lt;/li&gt;
-&lt;li&gt;Entity recognition for legal entities, citations, and provisions&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Retrieval Strategy:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Primary focus on authoritative sources&lt;/li&gt;
-&lt;li&gt;Jurisdiction-based filtering&lt;/li&gt;
-&lt;li&gt;Temporal awareness for legal precedents&lt;/li&gt;
-&lt;li&gt;Citation graph analysis&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;Summarization Approach:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Heavy emphasis on extractive summarization&lt;/li&gt;
-&lt;li&gt;Preservation of exact legal language&lt;/li&gt;
-&lt;li&gt;Structured output following legal memo formats&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;li&gt;
-&lt;p&gt;&lt;strong&gt;User Interaction:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Query templates for common legal questions&lt;/li&gt;
-&lt;li&gt;Explicit confidence indicators&lt;/li&gt;
-&lt;li&gt;Full citation tracking&lt;/li&gt;
-&lt;li&gt;Interactive exploration of legal reasoning&lt;/li&gt;
-&lt;/ul&gt;
-&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;lessons-learned&#34;&gt;&lt;a href=&#34;#lessons-learned&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Lessons Learned&lt;/strong&gt;
-&lt;/h3&gt;&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Domain-specific chunking is critical:&lt;/strong&gt; Legal documents required specialized chunking based on their structure&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Authority matters more than recency:&lt;/strong&gt; Unlike some domains, older but more authoritative sources often take precedence&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Citation precision is non-negotiable:&lt;/strong&gt; Even small citation errors significantly reduced trust in the system&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Explanation is as important as answers:&lt;/strong&gt; Attorneys valued the system&amp;rsquo;s ability to explain its reasoning&lt;/li&gt;
-&lt;/ol&gt;
+&lt;p&gt;The future of document AI isn&amp;rsquo;t about replacing human expertise. It&amp;rsquo;s about augmenting it with tools that can actually handle the volume and complexity of modern information.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re drowning in documents and need more than basic search, this modular approach provides a foundation you can build on.&lt;/p&gt;
+&lt;p&gt;Just remember: the goal isn&amp;rsquo;t to build the fanciest AI system. It&amp;rsquo;s to build one that actually works when accuracy matters.&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;final-thoughts-building-your-own-framework&#34;&gt;&lt;a href=&#34;#final-thoughts-building-your-own-framework&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Final Thoughts: Building Your Own Framework&lt;/strong&gt;
-&lt;/h2&gt;&lt;p&gt;Here are the key takeaways for building your own implementation:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;&lt;strong&gt;Go beyond basic RAG:&lt;/strong&gt; Combine multiple techniques like LexRank for better results&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Invest in document processing:&lt;/strong&gt; The quality of your chunking and metadata extraction directly impacts everything downstream&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Make modularity a priority:&lt;/strong&gt; Design for reusability across domains from the start&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Focus on attribution:&lt;/strong&gt; Proper citation and source tracking builds trust and enables verification&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;Adapt to your domain:&lt;/strong&gt; Customize retrieval and summarization strategies based on domain-specific needs&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;The most exciting aspect of this approach is its adaptability. Variations of this framework can be deployed across legal, medical, financial, and technical documentation domains—each time adapting the components rather than starting from scratch.&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;re dealing with large document collections and need more than just basic search or generic AI responses, this modular approach combining RAG, LexRank, and agentic models provides a powerful foundation that can be tailored to your specific needs.&lt;/p&gt;
-&lt;p&gt;The future of document intelligence isn&amp;rsquo;t just about finding information—it&amp;rsquo;s about understanding it, synthesizing it, and presenting it in ways that augment human expertise rather than just attempting to replace it.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;This post draws on my experience building document intelligence systems across multiple domains. The approaches outlined here have been implemented in production environments handling millions of documents and thousands of daily queries.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;After building this across legal, medical, and financial document sets, the pattern is clear: success comes from combining multiple approaches thoughtfully, not from finding one magic solution.&lt;/em&gt;&lt;/p&gt;
 </description>
         </item>
         

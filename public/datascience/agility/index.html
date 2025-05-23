@@ -95,6 +95,16 @@
         
         
         <li >
+            <a href='/news/' >
+                
+                
+                
+                <span>News</span>
+            </a>
+        </li>
+        
+        
+        <li >
             <a href='/musings/' >
                 
                 
@@ -226,7 +236,7 @@
 
 
                 <time class="article-time--reading">
-                    9 minute read
+                    3 minute read
                 </time>
             </div>
         
@@ -241,148 +251,101 @@
     <section class="article-content">
     
     
-    <h1 id="how-to-scale-a-data-science-team-without-losing-agility"><a href="#how-to-scale-a-data-science-team-without-losing-agility" class="header-anchor"></a><strong>How to Scale a Data Science Team Without Losing Agility</strong>
-</h1><p>I&rsquo;ve watched dozens of data science teams follow the same painful trajectory.</p>
-<p>They start small—three or four talented individuals moving fast, shipping models, and delivering insights that make the business take notice. Leadership gets excited. Budgets expand. Headcount doubles, then doubles again.</p>
-<p>And then, somehow, everything grinds to a halt.</p>
-<p>The team that once deployed models in weeks now takes months. Projects that used to flow seamlessly now get bogged down in meetings and documentation. The scrappy, high-impact group has transformed into a sluggish bureaucracy that spends more time managing processes than delivering value.</p>
-<p>I&rsquo;ve lived this story from both sides—first as a data scientist watching my nimble team calcify as it grew, then as a leader tasked with scaling teams without sacrificing their speed. What I&rsquo;ve learned is that <strong>scaling a data science function isn&rsquo;t just about adding people—it&rsquo;s about evolving your operating model while preserving your core strengths.</strong></p>
-<p>When we finally got this right at my previous company, we grew from a team of 5 to a function of 50+ while actually decreasing our time-to-value by 30%. The secret wasn&rsquo;t working harder—it was working differently.</p>
-<p>Let&rsquo;s talk about how to scale without stalling.</p>
+    <h1 id="how-to-scale-your-data-science-team-without-everything-falling-apart"><a href="#how-to-scale-your-data-science-team-without-everything-falling-apart" class="header-anchor"></a>How to Scale Your Data Science Team Without Everything Falling Apart
+</h1><p><em>A survival guide for growing fast without dying slow</em></p>
 <hr>
-<h2 id="why-data-science-teams-lose-agility-as-they-scale"><a href="#why-data-science-teams-lose-agility-as-they-scale" class="header-anchor"></a><strong>Why Data Science Teams Lose Agility as They Scale</strong>
-</h2><p>Before we dive into solutions, let&rsquo;s understand why scaling so often kills agility in data science teams:</p>
-<h3 id="1-communication-overhead-explodes"><a href="#1-communication-overhead-explodes" class="header-anchor"></a><strong>1. Communication Overhead Explodes</strong>
-</h3><p>In a small team, everyone knows what everyone else is doing. Communication is constant and informal. As you add people, the number of potential connections between team members grows exponentially, not linearly.</p>
-<p>With 5 people, you have 10 potential one-to-one connections. With 15 people, that jumps to 105. With 50 people, you&rsquo;re looking at 1,225 possible connections. No wonder information stops flowing smoothly.</p>
-<h3 id="2-knowledge-becomes-siloed"><a href="#2-knowledge-becomes-siloed" class="header-anchor"></a><strong>2. Knowledge Becomes Siloed</strong>
-</h3><p>In the early days, everyone has context on most projects. As you scale, specialization naturally increases. The computer vision expert doesn&rsquo;t know what the NLP team is doing. The forecasting group is disconnected from the recommendation systems team.</p>
-<p>Without deliberate knowledge sharing, teams develop tunnel vision and lose the cross-pollination of ideas that drove early innovation.</p>
-<h3 id="3-technical-debt-compounds"><a href="#3-technical-debt-compounds" class="header-anchor"></a><strong>3. Technical Debt Compounds</strong>
-</h3><p>Small teams can get away with minimal documentation, ad-hoc processes, and quick-and-dirty solutions. As you scale, these shortcuts become increasingly costly. New team members struggle to understand existing systems. Maintenance burdens grow. Dependencies between projects create cascading failures.</p>
-<p>What was once acceptable technical debt becomes crippling.</p>
-<h3 id="4-decision-making-slows-down"><a href="#4-decision-making-slows-down" class="header-anchor"></a><strong>4. Decision-Making Slows Down</strong>
-</h3><p>Early-stage data science teams make decisions quickly, often based on gut feel and rapid experimentation. As the team grows, decision-making processes become more formal. More stakeholders get involved. Approvals multiply. Risk aversion increases.</p>
-<p>The ability to pivot quickly and try new approaches diminishes.</p>
-<h3 id="5-standardization-fights-innovation"><a href="#5-standardization-fights-innovation" class="header-anchor"></a><strong>5. Standardization Fights Innovation</strong>
-</h3><p>As teams scale, they naturally implement standards and best practices to maintain quality and consistency. But taken too far, standardization can stifle the creativity and experimentation that data science requires.</p>
-<p>When process becomes more important than outcomes, innovation suffers.</p>
-<p>I&rsquo;ve seen these dynamics play out repeatedly. One financial services client grew their data science team from 8 to 40 people in 18 months, only to see their model deployment rate drop by 60%. They were doing more work but delivering less value—the classic scaling trap.</p>
+<p><strong>The Curse of Success:</strong> You start with 4 badass data scientists crushing it in a cramped room. Leadership notices. Budget flows. You hire more people.</p>
+<p>18 months later? 30 people, 6-month deployment cycles, and meetings about meetings.</p>
+<p>I&rsquo;ve seen this horror movie. Here&rsquo;s how it ends differently.</p>
 <hr>
-<h2 id="the-blueprint-for-scaling-without-stalling"><a href="#the-blueprint-for-scaling-without-stalling" class="header-anchor"></a><strong>The Blueprint for Scaling Without Stalling</strong>
-</h2><p>Scaling a data science team without losing agility requires a deliberate approach that preserves what makes small teams effective while adding the structure needed to coordinate larger groups. Here&rsquo;s the blueprint that&rsquo;s worked for me:</p>
-<h3 id="1-implement-team-topologies-that-preserve-autonomy"><a href="#1-implement-team-topologies-that-preserve-autonomy" class="header-anchor"></a><strong>1. Implement Team Topologies That Preserve Autonomy</strong>
-</h3><p>The organizational structure of your data science function is the foundation for everything else. The wrong structure will fight against agility no matter what else you do.</p>
-<p><strong>Practical implementation:</strong></p>
-<ul>
-<li><strong>Adopt a &ldquo;squad&rdquo; model with 4-7 people per team.</strong> Each squad should have end-to-end capabilities (data engineering, modeling, deployment) and clear ownership of specific domains or products.</li>
-<li><strong>Create communities of practice across squads.</strong> While squads own products or domains, communities of practice connect specialists across the organization (e.g., all NLP experts, all data engineers).</li>
-<li><strong>Establish clear interfaces between teams.</strong> Define how teams share data, models, and infrastructure to minimize coordination overhead.</li>
-<li><strong>Limit management layers.</strong> Each additional layer of management adds communication overhead and decision latency. Keep it flat.</li>
-</ul>
-<p>When we reorganized one team from a functional structure (separate data engineering, modeling, and deployment teams) to a squad model, their deployment frequency increased by 200% within three months. The end-to-end ownership eliminated handoffs and dramatically reduced coordination costs.</p>
-<hr>
-<h3 id="2-build-platforms-not-just-models"><a href="#2-build-platforms-not-just-models" class="header-anchor"></a><strong>2. Build Platforms, Not Just Models</strong>
-</h3><p>As data science teams scale, the leverage point shifts from individual models to the platforms that enable model development and deployment.</p>
-<p><strong>Practical implementation:</strong></p>
-<ul>
-<li><strong>Invest in internal tooling that automates repetitive tasks.</strong> Build feature stores, model registries, and automated deployment pipelines.</li>
-<li><strong>Create self-service capabilities for common use cases.</strong> Enable business users to run analyses and get predictions without requiring data scientist involvement for every request.</li>
-<li><strong>Develop reusable components rather than one-off solutions.</strong> Build model architectures, data pipelines, and evaluation frameworks that can be reused across projects.</li>
-<li><strong>Implement &ldquo;paved roads&rdquo; for common workflows.</strong> Make it easier to do things the right way than to create custom solutions.</li>
-</ul>
-<p>One retail client invested six months in building a feature store and automated deployment pipeline before scaling their team. When they grew from 10 to 35 data scientists, their productivity per person actually increased by 40% because the platform eliminated so much repetitive work.</p>
-<hr>
-<h3 id="3-embrace-intentional-technical-debt"><a href="#3-embrace-intentional-technical-debt" class="header-anchor"></a><strong>3. Embrace Intentional Technical Debt</strong>
-</h3><p>The goal isn&rsquo;t to eliminate technical debt—it&rsquo;s to manage it strategically. Some technical debt is worth taking on for speed; other types will cripple you as you scale.</p>
-<p><strong>Practical implementation:</strong></p>
-<ul>
-<li><strong>Distinguish between &ldquo;deliberate&rdquo; and &ldquo;reckless&rdquo; technical debt.</strong> Deliberate debt is a conscious tradeoff for speed. Reckless debt comes from poor practices.</li>
-<li><strong>Create a technical debt registry.</strong> Track known issues, their impact, and the estimated cost to fix them.</li>
-<li><strong>Allocate 20% of capacity to debt reduction.</strong> Make paying down high-impact debt a regular part of your workflow, not a special project.</li>
-<li><strong>Establish &ldquo;quality gates&rdquo; for different project phases.</strong> Prototypes can have lower quality standards than production systems.</li>
-</ul>
-<p>When we implemented a technical debt registry and dedicated 20% of sprint capacity to debt reduction at one organization, we saw a 45% decrease in production incidents within six months. More importantly, the team&rsquo;s velocity on new features increased because they weren&rsquo;t constantly fighting fires.</p>
-<hr>
-<h3 id="4-implement-tiered-governance-based-on-risk"><a href="#4-implement-tiered-governance-based-on-risk" class="header-anchor"></a><strong>4. Implement Tiered Governance Based on Risk</strong>
-</h3><p>Not all data science work needs the same level of oversight. Applying heavy governance to low-risk projects kills agility; applying light governance to high-risk projects creates unacceptable risks.</p>
-<p><strong>Practical implementation:</strong></p>
-<ul>
-<li><strong>Create a risk assessment framework</strong> that considers factors like business impact, regulatory requirements, and technical complexity.</li>
-<li><strong>Implement tiered governance based on risk level.</strong> Low-risk projects should have minimal oversight; high-risk projects need more rigorous controls.</li>
-<li><strong>Automate compliance where possible.</strong> Build guardrails into your platforms rather than relying on manual checks.</li>
-<li><strong>Push decision-making authority as close to the work as possible.</strong> Teams should have clear autonomy within defined guardrails.</li>
-</ul>
-<p>One healthcare client implemented a three-tier governance model: Tier 1 (experimental/low risk) had minimal oversight, Tier 2 (production/medium risk) had standard controls, and Tier 3 (critical/high risk) had rigorous governance. This approach reduced approval times for low-risk projects by 70% while actually strengthening controls for high-risk work.</p>
-<hr>
-<h3 id="5-create-knowledge-sharing-systems-that-scale"><a href="#5-create-knowledge-sharing-systems-that-scale" class="header-anchor"></a><strong>5. Create Knowledge Sharing Systems That Scale</strong>
-</h3><p>As teams grow, knowledge sharing can&rsquo;t rely on informal conversations. You need systems that scale.</p>
-<p><strong>Practical implementation:</strong></p>
-<ul>
-<li><strong>Implement a central knowledge repository</strong> with standardized documentation for models, data sources, and infrastructure.</li>
-<li><strong>Create &ldquo;learning loops&rdquo; through regular retrospectives</strong> and knowledge-sharing sessions.</li>
-<li><strong>Develop an onboarding curriculum</strong> that gets new team members productive quickly.</li>
-<li><strong>Use internal open source practices</strong> like pull requests and code reviews to spread knowledge through the work itself.</li>
-<li><strong>Rotate people between teams periodically</strong> to cross-pollinate ideas and prevent silos.</li>
-</ul>
-<p>After implementing a comprehensive knowledge management system, one financial services team reduced onboarding time for new data scientists from 12 weeks to 4 weeks. The system didn&rsquo;t just document what they knew—it changed how they worked together.</p>
-<hr>
-<h2 id="the-scaling-journey-what-to-expect-at-each-stage"><a href="#the-scaling-journey-what-to-expect-at-each-stage" class="header-anchor"></a><strong>The Scaling Journey: What to Expect at Each Stage</strong>
-</h2><p>Scaling a data science team isn&rsquo;t a single transition—it&rsquo;s a series of evolutions, each with its own challenges and opportunities. Here&rsquo;s what to expect at each stage:</p>
-<h3 id="stage-1-the-founding-team-3-8-people"><a href="#stage-1-the-founding-team-3-8-people" class="header-anchor"></a><strong>Stage 1: The Founding Team (3-8 people)</strong>
+<h2 id="the-death-spiral-why-scaling-kills-teams"><a href="#the-death-spiral-why-scaling-kills-teams" class="header-anchor"></a>The Death Spiral (Why Scaling Kills Teams)
+</h2><h3 id="communication-math-is-brutal"><a href="#communication-math-is-brutal" class="header-anchor"></a>Communication Math is Brutal
 </h3><ul>
-<li><strong>Focus on:</strong> Proving value through quick wins</li>
-<li><strong>Key challenge:</strong> Building credibility with limited resources</li>
-<li><strong>Critical capability:</strong> End-to-end delivery by generalists</li>
+<li><strong>5 people</strong> = 10 possible connections</li>
+<li><strong>15 people</strong> = 105 connections</li>
+<li><strong>50 people</strong> = 1,225 potential relationships</li>
 </ul>
-<h3 id="stage-2-the-growth-team-8-20-people"><a href="#stage-2-the-growth-team-8-20-people" class="header-anchor"></a><strong>Stage 2: The Growth Team (8-20 people)</strong>
-</h3><ul>
-<li><strong>Focus on:</strong> Creating repeatable processes and foundational infrastructure</li>
-<li><strong>Key challenge:</strong> Maintaining speed while adding necessary structure</li>
-<li><strong>Critical capability:</strong> Knowledge sharing and technical debt management</li>
-</ul>
-<h3 id="stage-3-the-scaled-function-20-50-people"><a href="#stage-3-the-scaled-function-20-50-people" class="header-anchor"></a><strong>Stage 3: The Scaled Function (20-50+ people)</strong>
-</h3><ul>
-<li><strong>Focus on:</strong> Maximizing leverage through platforms and specialization</li>
-<li><strong>Key challenge:</strong> Coordinating multiple teams without creating silos</li>
-<li><strong>Critical capability:</strong> Governance that enables rather than restricts</li>
-</ul>
-<p>Each stage requires different leadership approaches, team structures, and processes. The mistake many organizations make is trying to skip stages or applying Stage 3 solutions to Stage 1 problems.</p>
-<p>When I took over a data science function that had grown chaotically from 5 to 25 people, we actually had to take a step back and implement Stage 2 capabilities before we could successfully scale further. It felt like slowing down, but it ultimately accelerated our growth.</p>
+<p><em>Good luck keeping everyone in the loop.</em></p>
+<h3 id="silos-build-themselves"><a href="#silos-build-themselves" class="header-anchor"></a>Silos Build Themselves
+</h3><p><strong>Small teams</strong> = everyone understands everything<br>
+<strong>Big teams</strong> = computer vision people speak Klingon to the NLP folks</p>
+<h3 id="technical-debt-compound-interest"><a href="#technical-debt-compound-interest" class="header-anchor"></a>Technical Debt Compound Interest
+</h3><p><strong>Year 1:</strong> &ldquo;We&rsquo;ll fix that later&rdquo;<br>
+<strong>Year 2:</strong> &ldquo;New people can&rsquo;t understand our code&rdquo;<br>
+<strong>Year 3:</strong> &ldquo;It takes 3 weeks to change a variable name&rdquo;</p>
+<h3 id="decision-paralysis"><a href="#decision-paralysis" class="header-anchor"></a>Decision Paralysis
+</h3><p><strong>Small team:</strong> Pivot Tuesday, deploy Friday<br>
+<strong>Big team:</strong> 3-week planning committee to choose a font</p>
 <hr>
-<h2 id="measuring-success-agility-metrics-for-scaled-teams"><a href="#measuring-success-agility-metrics-for-scaled-teams" class="header-anchor"></a><strong>Measuring Success: Agility Metrics for Scaled Teams</strong>
-</h2><p>How do you know if you&rsquo;re successfully maintaining agility as you scale? These metrics have proven valuable:</p>
+<h2 id="what-actually-works-the-antidote"><a href="#what-actually-works-the-antidote" class="header-anchor"></a>What Actually Works (The Antidote)
+</h2><h3 id="squad-structure"><a href="#squad-structure" class="header-anchor"></a>Squad Structure
+</h3><p><strong>Don&rsquo;t do this:</strong> Separate data engineering, modeling, and deployment teams<br>
+<strong>Do this:</strong> 4-7 person squads that own everything end-to-end</p>
+<p><em>One retail client saw 200% faster deployments after ditching functional silos.</em></p>
+<h3 id="build-platforms-not-just-models"><a href="#build-platforms-not-just-models" class="header-anchor"></a>Build Platforms, Not Just Models
+</h3><p><strong>The magic shift:</strong> Individual brilliance → Platform leverage</p>
+<p>Stop building one-off solutions. Build:</p>
 <ul>
-<li><strong>Time from idea to production:</strong> How long does it take to go from concept to deployed model? This should remain stable or decrease as you scale.</li>
-<li><strong>Deployment frequency:</strong> How often are you shipping new models or features? Higher is generally better.</li>
-<li><strong>Onboarding time to productivity:</strong> How quickly can new team members become productive contributors? This tests your knowledge sharing and platform capabilities.</li>
-<li><strong>Maintenance overhead percentage:</strong> What portion of your capacity goes to maintaining existing systems versus building new capabilities? This should remain manageable as you scale.</li>
-<li><strong>Cross-team collaboration rate:</strong> How often do people from different teams work together on projects? This measures your success in preventing silos.</li>
+<li>Feature stores that everyone uses</li>
+<li>One-click deployment pipelines</li>
+<li>Self-service analytics for business users</li>
 </ul>
-<p>One media company I worked with tracked these metrics religiously as they scaled from 12 to 60 data scientists over two years. The discipline paid off—they maintained their initial time-to-production while tripling their deployment frequency, a clear sign that their scaling approach was working.</p>
+<p><em>One team invested 6 months in platforms, then productivity per person increased 40% as they scaled.</em></p>
+<h3 id="strategic-technical-debt"><a href="#strategic-technical-debt" class="header-anchor"></a>Strategic Technical Debt
+</h3><p><strong>Hot take:</strong> Some technical debt is good debt.</p>
+<p>We track debt in a registry:</p>
+<ul>
+<li>What it is</li>
+<li>What it costs us</li>
+<li>What it takes to fix</li>
+</ul>
+<p>Then spend 20% of time paying down the expensive stuff.</p>
+<p><em>Result: 45% fewer production fires, faster feature velocity</em></p>
+<h3 id="tiered-governance"><a href="#tiered-governance" class="header-anchor"></a>Tiered Governance
+</h3><p><strong>Not everything needs the same red tape.</strong></p>
+<p><strong>Low risk experiments:</strong> Minimal oversight<br>
+<strong>Production systems:</strong> Standard controls<br>
+<strong>Critical infrastructure:</strong> Full governance</p>
+<p><em>70% faster approvals for experimental work, stronger controls where it matters</em></p>
 <hr>
-<h2 id="final-thoughts-the-paradox-of-scaling"><a href="#final-thoughts-the-paradox-of-scaling" class="header-anchor"></a><strong>Final Thoughts: The Paradox of Scaling</strong>
-</h2><p>The paradox of scaling data science teams is that the very things that make small teams effective—minimal process, generalist roles, informal communication—become liabilities as you grow. Yet simply adding bureaucracy isn&rsquo;t the answer.</p>
-<p>The teams that scale successfully find a middle path. They:</p>
+<h2 id="the-scaling-stages"><a href="#the-scaling-stages" class="header-anchor"></a>The Scaling Stages
+</h2><h3 id="stage-1-the-scrappy-team-3-8-people"><a href="#stage-1-the-scrappy-team-3-8-people" class="header-anchor"></a>Stage 1: The Scrappy Team (3-8 people)
+</h3><p><strong>Vibe:</strong> Everyone does everything, moves fast, proves value<br>
+<strong>Challenge:</strong> Limited resources, constant context switching</p>
+<h3 id="stage-2-growing-pains-8-20-people"><a href="#stage-2-growing-pains-8-20-people" class="header-anchor"></a>Stage 2: Growing Pains (8-20 people)
+</h3><p><strong>Vibe:</strong> Adding process without killing speed<br>
+<strong>Challenge:</strong> This is where most teams either figure it out or die</p>
+<h3 id="stage-3-scaled-function-20-50-people"><a href="#stage-3-scaled-function-20-50-people" class="header-anchor"></a>Stage 3: Scaled Function (20-50+ people)
+</h3><p><strong>Vibe:</strong> Platform thinking, real governance, coordination focus<br>
+<strong>Challenge:</strong> Innovation vs bureaucracy balance</p>
+<p><em>Pro tip: When I inherited a chaotic 25-person team, we had to step back to Stage 2 before scaling forward. Felt slow, accelerated everything.</em></p>
+<hr>
+<h2 id="success-metrics-that-matter"><a href="#success-metrics-that-matter" class="header-anchor"></a>Success Metrics That Matter
+</h2><p>Forget traditional metrics. Track these:</p>
+<p><strong>Time from idea to production</strong> → Should stay flat or improve<br>
+<strong>Deployment frequency</strong> → How often you ship<br>
+<strong>Onboarding time</strong> → How fast new people contribute<br>
+<strong>Maintenance overhead</strong> → % of time keeping things running vs building<br>
+<strong>Cross-team collaboration</strong> → Are people working together or hiding?</p>
+<hr>
+<h2 id="the-uncomfortable-truth"><a href="#the-uncomfortable-truth" class="header-anchor"></a>The Uncomfortable Truth
+</h2><p>The things that make small teams great become liabilities at scale:</p>
 <ul>
-<li>
-<p><strong>Add structure that enables rather than constrains.</strong> Their processes create leverage, not overhead.</p>
-</li>
-<li>
-<p><strong>Build platforms that amplify individual contributions.</strong> They invest in tools that make everyone more productive.</p>
-</li>
-<li>
-<p><strong>Create team structures that preserve autonomy and purpose.</strong> They organize for ownership and accountability, not control.</p>
-</li>
-<li>
-<p><strong>Manage technical debt strategically.</strong> They distinguish between debt that speeds them up and debt that slows them down.</p>
-</li>
-<li>
-<p><strong>Evolve their practices as they grow.</strong> They recognize that what works at 5 people won&rsquo;t work at 50.</p>
-</li>
+<li>❌ Minimal process</li>
+<li>❌ Informal communication</li>
+<li>❌ Everyone doing everything</li>
 </ul>
-<p>The most successful data science leaders I&rsquo;ve worked with understand that scaling isn&rsquo;t about preserving the exact practices that made small teams successful. It&rsquo;s about preserving the principles—speed, ownership, experimentation, impact—while evolving the practices to work at scale.</p>
-<p>Because at the end of the day, the goal isn&rsquo;t to be a perfectly agile small team or a perfectly structured large organization. The goal is to deliver maximum value through data science, at whatever scale your business requires.</p>
+<p>But the answer isn&rsquo;t bureaucracy. It&rsquo;s <strong>evolution.</strong></p>
+<p><strong>The principles stay the same:</strong> Speed, ownership, experimentation, impact<br>
+<strong>The implementation changes:</strong> Structure that enables, platforms that amplify, teams that preserve autonomy</p>
+<hr>
+<h2 id="bottom-line"><a href="#bottom-line" class="header-anchor"></a>Bottom Line
+</h2><p>Most data science teams that scale successfully don&rsquo;t preserve what they had—they evolve into what they need to become.</p>
+<p>The goal isn&rsquo;t staying small. It&rsquo;s staying effective at whatever size your business requires.</p>
+<p>Because the alternative is becoming one of those expensive teams that produces impressive PowerPoints and not much else.</p>
+<p>And nobody wants to be that team.</p>
+<hr>
+<p><em>Scaling isn&rsquo;t about doing more of the same. It&rsquo;s about doing different things that work at the new scale. The math doesn&rsquo;t lie—but neither does good strategy.</em></p>
 
 </section>
 

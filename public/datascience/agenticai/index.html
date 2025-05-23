@@ -95,6 +95,16 @@
         
         
         <li >
+            <a href='/news/' >
+                
+                
+                
+                <span>News</span>
+            </a>
+        </li>
+        
+        
+        <li >
             <a href='/musings/' >
                 
                 
@@ -176,6 +186,10 @@
                 AI
             </a>
         
+            <a href="/categories/agenticai/" >
+                AgenticAI
+            </a>
+        
     </header>
     
 
@@ -222,7 +236,7 @@
 
 
                 <time class="article-time--reading">
-                    5 minute read
+                    7 minute read
                 </time>
             </div>
         
@@ -237,129 +251,63 @@
     <section class="article-content">
     
     
-    <h1 id="agentic-ai-were-way-beyond-chatbots-now"><a href="#agentic-ai-were-way-beyond-chatbots-now" class="header-anchor"></a>Agentic AI: We&rsquo;re Way Beyond Chatbots Now
-</h1><p>I&rsquo;ve been deep-diving into this agentic AI space for months now, and I&rsquo;m genuinely amazed at what&rsquo;s happening. This isn&rsquo;t just ChatGPT answering your questions or some glorified Excel macro. We&rsquo;re talking about AI systems that are organizing themselves, negotiating with each other like they&rsquo;re at some digital marketplace, and developing advanced strategies.</p>
-<p>Meanwhile, most companies are still stuck in 2023, thinking &ldquo;agentic&rdquo; means a chatbot that can book your flight. They&rsquo;re missing the bigger picture.</p>
-<h2 id="the-real-mind-blowing-stuff-multi-agent-systems"><a href="#the-real-mind-blowing-stuff-multi-agent-systems" class="header-anchor"></a>The Real Mind-Blowing Stuff: Multi-Agent Systems
-</h2><h3 id="swarm-intelligence-digital-ant-colonies-that-get-sht-done"><a href="#swarm-intelligence-digital-ant-colonies-that-get-sht-done" class="header-anchor"></a>Swarm Intelligence: Digital Ant Colonies That Get Sh*t Done
-</h3><p>Remember watching ant colonies as a kid? How they&rsquo;d somehow build these complex structures without a &ldquo;boss ant&rdquo; giving orders? That&rsquo;s basically what NVIDIA is doing with chip design now.</p>
-<p>Their AI agents are like &ldquo;I&rsquo;ll take this section of the circuit,&rdquo; and another&rsquo;s like &ldquo;cool, I&rsquo;ll optimize this part,&rdquo; and they&rsquo;re using this token system to bid on tasks. It&rsquo;s cutting design time from MONTHS to DAYS.</p>
-<p>And Maersk? Their shipping agents are having actual arguments about routes:</p>
-<ul>
-<li>Agent A: &ldquo;This route saves 4% on fuel.&rdquo;</li>
-<li>Agent B: &ldquo;Yeah, but there&rsquo;s pirates there, Dave.&rdquo;</li>
-<li>Agent A: &ldquo;Good point. Rerouting.&rdquo;</li>
-</ul>
-<p>No humans needed. The craziest part is these systems find solutions humans wouldn&rsquo;t even think to try.</p>
-<h3 id="hybrid-brains-when-gpt-4-gets-a-logic-upgrade"><a href="#hybrid-brains-when-gpt-4-gets-a-logic-upgrade" class="header-anchor"></a>Hybrid Brains: When GPT-4 Gets a Logic Upgrade
-</h3><p>Pure LLMs make stuff up. We all know this. (GPT, please don&rsquo;t generate a fake Shakespeare quote to prove me wrong.) But symbolic AI is like that rigid teacher who only accepts answers word-for-word from the textbook.</p>
-<p>What&rsquo;s working now is jamming these approaches together:</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Insanely simplified but you get the idea</span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">make_decision</span>(situation):  
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> llm_thinks(situation)[<span style="color:#e6db74">&#34;seems_sketchy&#34;</span>] <span style="color:#f92672">&gt;</span> <span style="color:#ae81ff">0.7</span>:  
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> by_the_book_response(situation)  <span style="color:#75715e"># No creativity allowed</span>
-</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">else</span>:  
-</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> creative_llm_solution(situation)  <span style="color:#75715e"># Let&#39;s get wild</span>
-</span></span></code></pre></div><p>JPMorgan&rsquo;s using this to catch insider trading, and it&rsquo;s nabbing 15% more sketchy behavior than before. As someone who lost money in 2008, I&rsquo;m here for it.</p>
-<h3 id="self-improving-loops-the-stuff-that-keeps-me-up-at-night"><a href="#self-improving-loops-the-stuff-that-keeps-me-up-at-night" class="header-anchor"></a>Self-Improving Loops: The Stuff That Keeps Me Up at Night
-</h3><p>This is where it gets sci-fi. We now have agents that can:</p>
-<ol>
-<li>Notice they&rsquo;re sucking at something: &ldquo;Wow, my customer satisfaction dropped 12%.&rdquo;</li>
-<li>Come up with theories: &ldquo;Maybe I sound too robotic?&rdquo;</li>
-<li>Run their OWN experiments: &ldquo;Let&rsquo;s try being more casual with Group A.&rdquo;</li>
-<li>Implement the winner: &ldquo;Being casual worked! Updating my main code.&rdquo;</li>
-</ol>
-<p>DeepMind&rsquo;s already doing this in game environments. The enterprise applications are mind-boggling - imagine never having to manually A/B test again. The agent just&hellip;evolves.</p>
-<h2 id="how-not-to-get-fired-when-implementing-this-stuff"><a href="#how-not-to-get-fired-when-implementing-this-stuff" class="header-anchor"></a>How Not to Get Fired When Implementing This Stuff
-</h2><h3 id="the-tech-stack-you-actually-need"><a href="#the-tech-stack-you-actually-need" class="header-anchor"></a>The Tech Stack You Actually Need
-</h3><p>Here&rsquo;s what winning companies are using:</p>
-<div class="table-wrapper"><table>
-  <thead>
-      <tr>
-          <th>Layer</th>
-          <th>What It Does</th>
-          <th>Who&rsquo;s Crushing It</th>
-      </tr>
-  </thead>
-  <tbody>
-      <tr>
-          <td><strong>Orchestration</strong></td>
-          <td>Keeps the whole circus running</td>
-          <td>Tesla&rsquo;s factory systems</td>
-      </tr>
-      <tr>
-          <td><strong>Thinking Bits</strong></td>
-          <td>The actual brains (LLMs + logic)</td>
-          <td>Pfizer&rsquo;s drug agents</td>
-      </tr>
-      <tr>
-          <td><strong>Memory</strong></td>
-          <td>Where agents store what they learn</td>
-          <td>FedNow&rsquo;s audit system</td>
-      </tr>
-      <tr>
-          <td><strong>Action</strong></td>
-          <td>How they actually DO things</td>
-          <td>Boston Dynamics&rsquo; robots</td>
-      </tr>
-  </tbody>
-</table></div>
-<p><strong>Pro tip from someone who learned the hard way:</strong> Start with ONE boss agent that oversees everything. Otherwise, it&rsquo;s like having 50 interns with no manager. Siemens uses this approach to manage 50,000+ factory agents without total chaos.</p>
-<h3 id="the-4-rules-i-live-by-after-some-valuable-lessons"><a href="#the-4-rules-i-live-by-after-some-valuable-lessons" class="header-anchor"></a>The 4 Rules I Live By (After Some Valuable Lessons)
-</h3><ol>
-<li>
-<p><strong>No Black Box Algorithms:</strong> Every agent MUST provide explainable decision trails. MIT&rsquo;s Causal Influence Diagrams have proven particularly effective for this purpose.</p>
-</li>
-<li>
-<p><strong>Ethical Sandboxes:</strong> Always thoroughly test your agents in simulated environments before deployment. Lockheed Martin runs 10,000+ simulated cyberattack scenarios on their agents to ensure reliability.</p>
-</li>
-<li>
-<p><strong>Emergency Controls:</strong> Ensure you can freeze or roll back ANY agent in less than 50ms. This capability is essential, particularly for critical systems.</p>
-</li>
-<li>
-<p><strong>Agent Contracts:</strong> We&rsquo;ve now reached a point where legally binding agreements BETWEEN AGENTS exist. IBM&rsquo;s HR systems use smart contracts to enforce hiring policies—a fascinating development in this space.</p>
-</li>
-</ol>
-<h2 id="whats-coming-in-the-next-year-prepare-your-mind-to-be-blown"><a href="#whats-coming-in-the-next-year-prepare-your-mind-to-be-blown" class="header-anchor"></a>What&rsquo;s Coming in the Next Year (Prepare Your Mind to Be Blown)
-</h2><h3 id="quantum-powered-agents"><a href="#quantum-powered-agents" class="header-anchor"></a>Quantum-Powered Agents
-</h3><p>Rigetti and Zapata are building agents that tap into quantum computing to solve problems 100x faster. Lufthansa&rsquo;s already testing systems that can adjust prices across 10 MILLION routes in real-time. As someone who flies a lot, I&rsquo;m not sure how I feel about that.</p>
-<h3 id="evolution-on-digital-steroids"><a href="#evolution-on-digital-steroids" class="header-anchor"></a>Evolution on Digital Steroids
-</h3><p>BMW is creating agent &ldquo;populations&rdquo; that compete to design the best EV batteries. The winners pass their knowledge to the next generation. It&rsquo;s digital Darwinism, and it&rsquo;s wild.</p>
-<h3 id="the-regulation-thunderdome"><a href="#the-regulation-thunderdome" class="header-anchor"></a>The Regulation Thunderdome
-</h3><p>The EU&rsquo;s AI Act now has special rules for &ldquo;high-risk autonomous agents.&rdquo; Coming soon to a compliance department near you:</p>
-<ul>
-<li>AI &ldquo;birth certificates&rdquo; (complete backstory on every agent)</li>
-<li>Special insurance for autonomous decisions (my insurance friends are salivating)</li>
-<li>Federal registries of agents (like a robot DMV, I guess?)</li>
-</ul>
-<h2 id="how-to-start-without-crashing-and-burning"><a href="#how-to-start-without-crashing-and-burning" class="header-anchor"></a>How to Start Without Crashing and Burning
-</h2><ol>
-<li>
-<p><strong>Start with Low-Risk Wins</strong></p>
-<ul>
-<li>Try customer support triage (not life-or-death medical stuff)</li>
-<li>Maybe IT asset management (not your core security)</li>
-</ul>
-</li>
-<li>
-<p><strong>Metrics That Actually Matter</strong></p>
-<ul>
-<li>Track your &ldquo;Agent Efficiency Ratio&rdquo; - how often humans need to step in</li>
-<li>Monitor &ldquo;Swarm Coherence&rdquo; - are your agents working together or fighting?</li>
-</ul>
-</li>
-<li>
-<p><strong>Build a Dedicated Team</strong></p>
-<ul>
-<li>You need data engineers, ethics people, AND designers</li>
-<li>Get monitoring tools like Arize Phoenix or WhyLabs</li>
-</ul>
-</li>
-</ol>
+    <h1 id="this-ai-stuff-is-getting-weird-and-i-cant-look-away"><a href="#this-ai-stuff-is-getting-weird-and-i-cant-look-away" class="header-anchor"></a>This AI Stuff is Getting Weird (And I Can&rsquo;t Look Away)
+</h1><p><em>Why everything you think you know about AI is probably wrong</em></p>
 <hr>
-<p>The reality is that agentic AI isn&rsquo;t some far-off sci-fi concept anymore. It&rsquo;s here, it&rsquo;s transformative, and it&rsquo;s already reshaping entire industries. The real question isn&rsquo;t if you should adopt it - it&rsquo;s whether you&rsquo;ll be the one who figures out how to make these digital ecosystems work before your competitors do.</p>
-<p>Because the true risk isn&rsquo;t rogue AI. It&rsquo;s watching your industry get completely transformed while you&rsquo;re still debating whether to upgrade your chatbot.</p>
-<p>As for me, I&rsquo;m already exploring how my investment agent might coordinate with my calendar agent to optimize my work-life balance. The future is happening faster than most realize.</p>
+<p>Okay, so I&rsquo;ve been obsessing over this agentic AI thing for months now, and I&rsquo;m starting to feel like that guy who won&rsquo;t shut up about crypto in 2017. Except this time, I think I might actually be onto something real.</p>
+<p>Most people hear &ldquo;AI agents&rdquo; and think it&rsquo;s just ChatGPT with extra steps. Like, cool, your chatbot can now book flights. Big deal. But that&rsquo;s not what&rsquo;s happening here at all. What I&rsquo;m seeing is more like&hellip; digital organisms that are starting to behave in ways that genuinely surprise their creators.</p>
+<p>And honestly? It&rsquo;s making me question some fundamental assumptions about how work gets done.</p>
+<h2 id="the-weird-stuff-thats-actually-happening"><a href="#the-weird-stuff-thats-actually-happening" class="header-anchor"></a>The Weird Stuff That&rsquo;s Actually Happening
+</h2><h3 id="nvidias-chip-design-thing"><a href="#nvidias-chip-design-thing" class="header-anchor"></a>NVIDIA&rsquo;s Chip Design Thing
+</h3><p>So I was reading this case study about how NVIDIA designs their chips now, and it broke my brain a little. They&rsquo;ve got these AI agents that basically bid against each other for different parts of the design work. Like, Agent A is all &ldquo;I&rsquo;ll handle the power circuits for 50 computational tokens&rdquo; and Agent B jumps in with &ldquo;I&rsquo;ll do it for 45 tokens and throw in thermal management.&rdquo;</p>
+<p>It&rsquo;s like watching a bunch of really smart contractors negotiate, except they&rsquo;re algorithms and they&rsquo;re designing graphics cards. The kicker? They&rsquo;re finishing designs in days that used to take human teams months. And the solutions they come up with are often stuff that human engineers look at and go &ldquo;huh, why didn&rsquo;t we think of that?&rdquo;</p>
+<h3 id="maersks-shipping-drama"><a href="#maersks-shipping-drama" class="header-anchor"></a>Maersk&rsquo;s Shipping Drama
+</h3><p>This one&rsquo;s even weirder. Maersk has these shipping route agents that literally argue with each other. One agent pushes for the most fuel-efficient route, another one&rsquo;s like &ldquo;yeah but there&rsquo;s piracy risk in that area,&rdquo; and a third jumps in with weather data. They hash it out and come to decisions without any human input.</p>
+<p>I watched a demo where they were routing around a storm in real-time, and the agents were updating their strategies every few minutes based on new weather data. It was like watching a really boring reality show, except the contestants were spreadsheets and the prize was optimized logistics.</p>
+<h3 id="the-self-improvement-loop-that-keeps-me-up-at-night"><a href="#the-self-improvement-loop-that-keeps-me-up-at-night" class="header-anchor"></a>The Self-Improvement Loop That Keeps Me Up at Night
+</h3><p>Here&rsquo;s where it gets actually unsettling. We now have AI systems that notice when they&rsquo;re performing poorly, develop theories about why, run their own experiments to test those theories, and then implement the winning approach.</p>
+<p>DeepMind showed this off in some game environments, but it&rsquo;s already moving into business applications. Like, imagine your customer service system notices its satisfaction scores are dropping, develops three different communication styles, tests them on different customer segments without telling anyone, and then adopts whichever one works best.</p>
+<p>No human involved in that decision. The system just&hellip; evolved.</p>
+<h2 id="how-this-actually-works-the-boring-technical-bits"><a href="#how-this-actually-works-the-boring-technical-bits" class="header-anchor"></a>How This Actually Works (The Boring Technical Bits)
+</h2><h3 id="the-stack-nobody-talks-about"><a href="#the-stack-nobody-talks-about" class="header-anchor"></a>The Stack Nobody Talks About
+</h3><p>The companies actually making money from this aren&rsquo;t using some revolutionary new algorithm. They&rsquo;re just really good at orchestrating multiple AI systems that each do one thing well:</p>
+<p>You&rsquo;ve got your orchestration layer (basically traffic control for AI agents), your reasoning engines (the actual thinking parts), memory systems (so they remember what they&rsquo;ve learned), and execution layers (where they actually do stuff in the real world).</p>
+<p>Siemens figured out that you need one &ldquo;boss&rdquo; agent overseeing everything. Without that, multiple AI agents become like a Slack channel where everyone&rsquo;s talking and nobody&rsquo;s listening. They learned this the hard way when they had 50,000 factory agents and no coordination. Apparently it was chaos.</p>
+<h3 id="my-hard-learned-rules"><a href="#my-hard-learned-rules" class="header-anchor"></a>My Hard-Learned Rules
+</h3><p>I&rsquo;ve made some embarrassing mistakes with this stuff, so here&rsquo;s what I&rsquo;ve figured out:</p>
+<p><strong>Everything needs to be explainable.</strong> If an agent can&rsquo;t tell you why it made a decision, don&rsquo;t let it make important decisions. MIT has these causal influence diagrams that are becoming the standard for this. Basically, AI systems need to show their work like we&rsquo;re all still in high school math class.</p>
+<p><strong>Test everything in sandbox mode first.</strong> Lockheed Martin runs thousands of simulated cyberattacks on their security agents before deploying them. Because the failure modes of multi-agent systems are often completely unexpected and sometimes hilariously catastrophic.</p>
+<p><strong>Build actual kill switches.</strong> You need to be able to stop any agent in under 50 milliseconds. This isn&rsquo;t paranoia - I&rsquo;ve seen what happens when systems start making decisions faster than humans can intervene.</p>
+<p><strong>Get ready for AI contract law.</strong> This sounds insane, but IBM&rsquo;s HR systems now use smart contracts to govern how their recruiting agents interact with each other. We&rsquo;re literally writing laws for digital entities. My lawyer friends think this is either the future or complete madness.</p>
+<h2 id="whats-coming-and-why-im-both-excited-and-terrified"><a href="#whats-coming-and-why-im-both-excited-and-terrified" class="header-anchor"></a>What&rsquo;s Coming (And Why I&rsquo;m Both Excited and Terrified)
+</h2><h3 id="quantum-enhanced-agents"><a href="#quantum-enhanced-agents" class="header-anchor"></a>Quantum-Enhanced Agents
+</h3><p>Rigetti and Zapata are building agents that can tap into quantum computers for specific calculations. Lufthansa is testing pricing systems that can adjust rates across millions of flight combinations in real-time using quantum optimization.</p>
+<p>As someone who flies way too much for work, I&rsquo;m not sure how I feel about AI systems that can change ticket prices faster than I can complete a purchase.</p>
+<h3 id="digital-evolution-in-real-time"><a href="#digital-evolution-in-real-time" class="header-anchor"></a>Digital Evolution in Real Time
+</h3><p>BMW is doing something that&rsquo;s basically artificial natural selection for battery design. They create populations of AI design agents, let them compete on efficiency metrics, and the successful strategies get passed to the next generation.</p>
+<p>It&rsquo;s producing battery designs that human engineers look at and think &ldquo;that shouldn&rsquo;t work&rdquo; but then test them and find out they&rsquo;re actually better than conventional approaches. Evolution, but compressed into weeks instead of millennia.</p>
+<h3 id="the-regulation-avalanche"><a href="#the-regulation-avalanche" class="header-anchor"></a>The Regulation Avalanche
+</h3><p>The EU&rsquo;s AI Act now has specific rules for autonomous agent systems. The compliance requirements are getting real:</p>
+<ul>
+<li>Complete audit trails for every agent decision</li>
+<li>Mandatory insurance for systems that make autonomous choices</li>
+<li>Government registries for deployed agents (basically a DMV for AI)</li>
+</ul>
+<p>My friends in compliance are simultaneously panicking and excited about all the new job opportunities.</p>
+<h2 id="getting-started-without-everything-breaking"><a href="#getting-started-without-everything-breaking" class="header-anchor"></a>Getting Started Without Everything Breaking
+</h2><h3 id="start-small-fail-fast"><a href="#start-small-fail-fast" class="header-anchor"></a>Start Small, Fail Fast
+</h3><p>Pick something low-stakes where failure is educational rather than catastrophic. Customer service triage makes sense; medical diagnosis absolutely does not. IT asset management is good; core security systems are asking for trouble.</p>
+<h3 id="new-metrics-for-a-new-world"><a href="#new-metrics-for-a-new-world" class="header-anchor"></a>New Metrics for a New World
+</h3><p>Traditional AI metrics don&rsquo;t capture what matters in multi-agent systems. I track &ldquo;human intervention rate&rdquo; - how often people need to jump in and fix things. Also &ldquo;coordination efficiency&rdquo; - whether the agents are working together or accidentally sabotaging each other.</p>
+<h3 id="the-team-you-actually-need"><a href="#the-team-you-actually-need" class="header-anchor"></a>The Team You Actually Need
+</h3><p>This isn&rsquo;t just a data science problem anymore. You need distributed systems people, ethics folks, UX designers, and compliance experts. Tools like Arize Phoenix and WhyLabs have become essential for monitoring these complex interactions. The learning curve is steep, but so was the internet.</p>
+<h2 id="the-thing-nobody-wants-to-admit"><a href="#the-thing-nobody-wants-to-admit" class="header-anchor"></a>The Thing Nobody Wants to Admit
+</h2><p>Agentic AI isn&rsquo;t some far-off concept we can safely ignore while perfecting our chatbots. It&rsquo;s already reshaping manufacturing, finance, logistics, and drug discovery. The question isn&rsquo;t whether this will transform your industry - it&rsquo;s whether you&rsquo;ll figure it out before your competitors do.</p>
+<p>The real risk isn&rsquo;t rogue AI taking over the world. It&rsquo;s being the company still arguing about chatbot implementations while entire industries restructure around autonomous agent ecosystems.</p>
+<p>I&rsquo;m already experimenting with having my investment research agent coordinate with my calendar system. The integration possibilities are endless and honestly a bit overwhelming. Sometimes I feel like I&rsquo;m trying to drink from a fire hose while riding a unicycle.</p>
+<p>But here&rsquo;s the thing - this technology is advancing whether we&rsquo;re ready or not. The companies that figure out how to harness it are going to have massive advantages. The ones that don&rsquo;t&hellip; well, ask Blockbuster how that strategy worked out.</p>
+<hr>
+<p><em>We&rsquo;re not just building better tools anymore. We&rsquo;re creating digital ecosystems that think, learn, and evolve. It&rsquo;s exciting, terrifying, and absolutely fascinating. Welcome to the future.</em></p>
 
 </section>
 
@@ -430,7 +378,7 @@
             
                 
 <article class="">
-    <a href="/datascience/buildanagent2/">
+    <a href="/datascience/buildanagent/">
         
         
 

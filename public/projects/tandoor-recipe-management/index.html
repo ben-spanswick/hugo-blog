@@ -95,6 +95,16 @@
         
         
         <li >
+            <a href='/news/' >
+                
+                
+                
+                <span>News</span>
+            </a>
+        </li>
+        
+        
+        <li >
             <a href='/musings/' >
                 
                 
@@ -226,7 +236,7 @@
 
 
                 <time class="article-time--reading">
-                    4 minute read
+                    5 minute read
                 </time>
             </div>
         
@@ -241,29 +251,29 @@
     <section class="article-content">
     
     
-    <h1 id="self-hosting-tandoor-recipes-taking-control-of-your-recipe-collection"><a href="#self-hosting-tandoor-recipes-taking-control-of-your-recipe-collection" class="header-anchor"></a>Self-Hosting Tandoor Recipes: Taking Control of Your Recipe Collection
-</h1><p>If you&rsquo;re like me, you&rsquo;ve probably got recipes scattered everywhere—saved in browser bookmarks, tucked away in old notes, maybe even written down on random scraps of paper. It&rsquo;s a mess. I wanted a better way to organize everything, but I didn&rsquo;t want to rely on a third-party service. I wanted something <strong>self-hosted</strong>, something I controlled. That&rsquo;s where <strong>Tandoor Recipes</strong> comes in.</p>
-<p>Tandoor is an open-source recipe manager that lets you store, categorize, and search your recipes while giving you full control over your data. It’s basically a <strong>self-hosted, privacy-first alternative to something like Paprika or AnyList</strong>, but with even more customization. Since it runs in Docker, it’s easy to set up on any home server or VPS.</p>
-<h2 id="why-self-host-your-recipes"><a href="#why-self-host-your-recipes" class="header-anchor"></a>Why Self-Host Your Recipes?
-</h2><p>The idea of self-hosting recipes might sound a bit excessive at first. I mean, it’s just recipes, right? But once you start using a dedicated system, you realize how much of an upgrade it is. Here’s why I think Tandoor is worth the effort:</p>
-<ul>
-<li><strong>No data lock-in.</strong> Your recipes are yours. No cloud service decides to shut down and take your collection with it.</li>
-<li><strong>Privacy.</strong> No tracking, no ads, no creepy AI trying to &ldquo;enhance&rdquo; your cooking habits.</li>
-<li><strong>Full customization.</strong> You control the categories, tags, and even the UI themes.</li>
-<li><strong>Automatic ingredient scaling and meal planning.</strong> Helps with grocery shopping and weekly planning.</li>
-<li><strong>Built-in OCR for scanned recipes.</strong> Perfect for digitizing old family cookbooks.</li>
-</ul>
-<p>So yeah, it&rsquo;s a niche tool, but once you get it set up, it&rsquo;s pretty great.</p>
-<h2 id="setting-up-tandoor-recipes-with-docker"><a href="#setting-up-tandoor-recipes-with-docker" class="header-anchor"></a>Setting Up Tandoor Recipes with Docker
-</h2><p>I run Tandoor in Docker on my home server. Here’s how I set it up, along with my redacted configuration files so you can replicate it if you want.</p>
-<h3 id="folder-structure"><a href="#folder-structure" class="header-anchor"></a>Folder Structure
-</h3><p>I keep all my self-hosted apps organized under <code>/opt/docker/</code>, with persistent data stored on my NAS. Here’s the structure for Tandoor:</p>
-<pre tabindex="0"><code>/opt/docker/tandoor/          # Tandoor install location
-/mnt/r430/tandoor/recipes/    # Recipe data storage
-/mnt/r430/tandoor/mediafiles/ # Uploaded images
-/mnt/r430/tandoor/staticfiles/ # Static assets
-</code></pre><h3 id="docker-composeyml"><a href="#docker-composeyml" class="header-anchor"></a><code>docker-compose.yml</code>
-</h3><p>This is the main Docker Compose file for Tandoor. I’m using an <strong>external PostgreSQL database</strong> running on an LXC container, but you could run it in Docker if you prefer.</p>
+    <h1 id="finally-getting-my-recipe-chaos-under-control-with-tandoor"><a href="#finally-getting-my-recipe-chaos-under-control-with-tandoor" class="header-anchor"></a>Finally Getting My Recipe Chaos Under Control with Tandoor
+</h1><p><em>How I stopped losing track of great recipes and built my own digital cookbook</em></p>
+<hr>
+<p>I had a problem. Actually, multiple problems, all related to recipes. There were bookmarks scattered across three different browsers, screenshots buried in my photo library, handwritten notes shoved in kitchen drawers, and that one amazing pasta sauce recipe my friend texted me two years ago that I can never find when I actually need it.</p>
+<p>Sound familiar? I kept meaning to get organized, but every solution I looked at had some dealbreaker. Too expensive, too limited, required subscriptions, or worst of all - what happens when the service shuts down and takes all my carefully curated recipes with it?</p>
+<p>That&rsquo;s when I discovered Tandoor Recipes. It&rsquo;s open source, runs on my own hardware, and gives me complete control over my recipe collection. After using it for several months, I can honestly say it&rsquo;s been a game changer for meal planning and grocery shopping.</p>
+<h2 id="why-i-went-the-self-hosted-route"><a href="#why-i-went-the-self-hosted-route" class="header-anchor"></a>Why I Went the Self-Hosted Route
+</h2><p>Look, I get it. Setting up your own recipe manager sounds like overkill. There are plenty of apps out there that work fine. But here&rsquo;s what sold me on doing it myself:</p>
+<p><strong>My data stays mine.</strong> I&rsquo;ve been burned before by services shutting down or changing their business model. Remember Google Reader? Yeah, I&rsquo;m not doing that again with my recipe collection.</p>
+<p><strong>No algorithmic nonsense.</strong> I don&rsquo;t need an AI suggesting recipes based on my &ldquo;cooking personality&rdquo; or whatever. I just want to find that chicken tikka masala recipe without wading through ads.</p>
+<p><strong>Actual customization.</strong> I can organize things exactly how I want. Custom categories, tags that make sense to me, themes that don&rsquo;t hurt my eyes.</p>
+<p><strong>Built-in meal planning tools.</strong> The grocery list generation alone has saved me countless trips back to the store for forgotten ingredients.</p>
+<p><strong>OCR for old cookbooks.</strong> This feature is honestly magic. I can take a photo of a recipe from my grandmother&rsquo;s cookbook and it&rsquo;ll extract the text automatically.</p>
+<h2 id="getting-tandoor-up-and-running"><a href="#getting-tandoor-up-and-running" class="header-anchor"></a>Getting Tandoor Up and Running
+</h2><p>I run most of my self-hosted stuff in Docker on a home server, and Tandoor fits right into that setup. Here&rsquo;s how I got it working.</p>
+<h3 id="my-file-organization"><a href="#my-file-organization" class="header-anchor"></a>My File Organization
+</h3><p>I try to keep things organized, so everything lives under <code>/opt/docker/</code> with data stored on my NAS:</p>
+<pre tabindex="0"><code>/opt/docker/tandoor/          # Application files
+/mnt/r430/tandoor/recipes/    # Recipe database
+/mnt/r430/tandoor/mediafiles/ # Recipe photos
+/mnt/r430/tandoor/staticfiles/ # CSS, JS, etc.
+</code></pre><h3 id="the-docker-setup"><a href="#the-docker-setup" class="header-anchor"></a>The Docker Setup
+</h3><p>Here&rsquo;s my <code>docker-compose.yml</code>. I&rsquo;m using an external PostgreSQL database because I already had one running for other services, but you could easily run the database in Docker too:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3&#39;</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
@@ -279,59 +289,62 @@
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">env_file</span>:
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">.env</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
-</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8080:8000&#34;</span> <span style="color:#75715e"># Expose Tandoor on port 8080</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8080:8000&#34;</span>
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
 </span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">tandoor-net</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#f92672">networks</span>:
 </span></span><span style="display:flex;"><span>  <span style="color:#f92672">tandoor-net</span>:
 </span></span><span style="display:flex;"><span>    <span style="color:#f92672">driver</span>: <span style="color:#ae81ff">bridge</span>
-</span></span></code></pre></div><h3 id="env"><a href="#env" class="header-anchor"></a><code>.env</code>
-</h3><p>This contains the database credentials and general app settings. Make sure to set a strong <code>SECRET_KEY</code>.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#75715e"># Database settings</span>
+</span></span></code></pre></div><h3 id="environment-configuration"><a href="#environment-configuration" class="header-anchor"></a>Environment Configuration
+</h3><p>All the sensitive stuff goes in the <code>.env</code> file:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#75715e"># Database connection</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">POSTGRES_HOST</span><span style="color:#f92672">=</span><span style="color:#e6db74">192.168.100.52</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">POSTGRES_PORT</span><span style="color:#f92672">=</span><span style="color:#e6db74">5432</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">POSTGRES_USER</span><span style="color:#f92672">=</span><span style="color:#e6db74">tandoor</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">POSTGRES_PASSWORD</span><span style="color:#f92672">=</span><span style="color:#e6db74">your-secure-password</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">POSTGRES_PASSWORD</span><span style="color:#f92672">=</span><span style="color:#e6db74">your-secure-password-here</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">POSTGRES_DB</span><span style="color:#f92672">=</span><span style="color:#e6db74">tandoor</span>
 </span></span><span style="display:flex;"><span>
 </span></span><span style="display:flex;"><span><span style="color:#75715e"># Django settings</span>
-</span></span><span style="display:flex;"><span><span style="color:#a6e22e">SECRET_KEY</span><span style="color:#f92672">=</span><span style="color:#e6db74">your-random-secret-key</span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">SECRET_KEY</span><span style="color:#f92672">=</span><span style="color:#e6db74">generate-a-long-random-string-here</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">DEBUG</span><span style="color:#f92672">=</span><span style="color:#e6db74">0</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">ALLOWED_HOSTS</span><span style="color:#f92672">=</span><span style="color:#e6db74">*</span>
 </span></span><span style="display:flex;"><span><span style="color:#a6e22e">TZ</span><span style="color:#f92672">=</span><span style="color:#e6db74">America/New_York</span>
-</span></span></code></pre></div><h3 id="setting-up-postgresql-if-external"><a href="#setting-up-postgresql-if-external" class="header-anchor"></a>Setting Up PostgreSQL (If External)
-</h3><p>If you&rsquo;re running PostgreSQL in an LXC like I am, you need to set it up manually.</p>
-<ol>
-<li>SSH into the LXC container running PostgreSQL.</li>
-<li>Open the PostgreSQL shell:
+</span></span></code></pre></div><p>Make sure you generate a proper secret key - Django uses this for security stuff, so don&rsquo;t just use &ldquo;password123&rdquo; or something equally terrible.</p>
+<h3 id="database-setup-external-postgresql"><a href="#database-setup-external-postgresql" class="header-anchor"></a>Database Setup (External PostgreSQL)
+</h3><p>Since I&rsquo;m running PostgreSQL in a separate LXC container, I had to set up the database manually. If you&rsquo;re doing the same:</p>
+<p>SSH into your database server and create the Tandoor database:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo -u postgres psql
-</span></span></code></pre></div></li>
-<li>Create the database and user:
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> tandoor;
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> tandoor;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">USER</span> tandoor <span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">ENCRYPTED</span> PASSWORD <span style="color:#e6db74">&#39;your-secure-password&#39;</span>;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">PRIVILEGES</span> <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">DATABASE</span> tandoor <span style="color:#66d9ef">TO</span> tandoor;
 </span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">DATABASE</span> tandoor <span style="color:#66d9ef">OWNER</span> <span style="color:#66d9ef">TO</span> tandoor;
-</span></span></code></pre></div></li>
-<li>Allow remote connections by editing <code>postgresql.conf</code>:
+</span></span></code></pre></div><p>Then configure PostgreSQL to accept connections from your Docker host. Edit <code>postgresql.conf</code>:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-ini" data-lang="ini"><span style="display:flex;"><span><span style="color:#a6e22e">listen_addresses</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;*&#39;</span>
-</span></span></code></pre></div></li>
-<li>Update <code>pg_hba.conf</code> to allow connections from your Docker host:
+</span></span></code></pre></div><p>And update <code>pg_hba.conf</code> to allow your network:</p>
 <pre tabindex="0"><code>host    tandoor    tandoor    192.168.100.0/24    md5
-</code></pre></li>
-<li>Restart PostgreSQL:
+</code></pre><p>Restart PostgreSQL:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>sudo systemctl restart postgresql
-</span></span></code></pre></div></li>
-</ol>
-<h3 id="starting-tandoor"><a href="#starting-tandoor" class="header-anchor"></a>Starting Tandoor
-</h3><p>Once everything is configured, start the container:</p>
+</span></span></code></pre></div><h3 id="firing-it-up"><a href="#firing-it-up" class="header-anchor"></a>Firing It Up
+</h3><p>With everything configured, start the container:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker-compose up -d
-</span></span></code></pre></div><p>If you need to check logs:</p>
+</span></span></code></pre></div><p>Check the logs to make sure everything&rsquo;s working:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>docker logs -f tandoor_web
-</span></span></code></pre></div><p>Now, Tandoor should be available at <code>http://your-server-ip:8080</code>.</p>
-<h2 id="wrapping-up"><a href="#wrapping-up" class="header-anchor"></a>Wrapping Up
-</h2><p>Tandoor is a fantastic tool if you want full control over your recipes and meal planning. It takes a little effort to set up, but once it’s running, you get <strong>complete data freedom</strong>—no subscriptions, no forced updates, just a solid, reliable system for organizing your kitchen. If you’re into self-hosting and home automation, it fits right in with the whole ethos of controlling your own data.</p>
-<p>If you set it up, let me know how it works for you. I’d love to hear about any customizations or integrations you come up with. Also, if you have a killer recipe collection, I’m always open to swapping ideas.</p>
+</span></span></code></pre></div><p>If all goes well, Tandoor should be accessible at <code>http://your-server-ip:8080</code>.</p>
+<h2 id="living-with-tandoor"><a href="#living-with-tandoor" class="header-anchor"></a>Living With Tandoor
+</h2><p>After using this setup for months, I&rsquo;m genuinely happy with how it&rsquo;s working out. The web interface is clean and responsive, recipe import works well with most sites, and the meal planning features have actually changed how I approach grocery shopping.</p>
+<p>The OCR feature deserves special mention - I&rsquo;ve been slowly digitizing recipes from old family cookbooks, and it saves tons of typing. Not perfect, but way better than doing it all manually.</p>
+<p>Storage-wise, it&rsquo;s been pretty lightweight. Even with a couple hundred recipes and photos, it&rsquo;s using less than 2GB of space.</p>
+<h2 id="worth-the-effort"><a href="#worth-the-effort" class="header-anchor"></a>Worth the Effort?
+</h2><p>For me, absolutely. The peace of mind of having everything under my own control is worth the initial setup time. Plus, it&rsquo;s nice having a recipe system that actually works the way I want it to, not the way some product manager thinks I should want it to.</p>
+<p>If you&rsquo;re already running other self-hosted services, Tandoor fits right in. If this would be your first Docker container, it might be worth starting with something simpler, but it&rsquo;s not particularly complex to set up.</p>
+<p>The main downside is that it&rsquo;s not going to have all the social features of some commercial recipe apps. No sharing recipes with friends or browsing community collections. But honestly, I see that as a feature, not a bug.</p>
+<h2 id="next-steps"><a href="#next-steps" class="header-anchor"></a>Next Steps
+</h2><p>I&rsquo;m still tweaking the setup. Considering adding it to my reverse proxy setup so I can access it from outside my network, and I want to set up automated backups of the recipe database.</p>
+<p>There&rsquo;s also a mobile app in development, which would be handy for checking recipes while actually cooking. Right now I just use the web interface on my phone, which works fine but isn&rsquo;t quite as smooth as a native app.</p>
+<p>If you decide to give Tandoor a try, let me know how it goes. I&rsquo;m always curious to hear how other people organize their recipe collections and whether they run into any issues I haven&rsquo;t encountered yet.</p>
+<hr>
+<p><em>Now if only I could get as organized with actually using all these recipes I&rsquo;ve been collecting&hellip;</em></p>
 
 </section>
 
