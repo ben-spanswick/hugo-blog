@@ -101,8 +101,8 @@ enableEmoji = true
     weight = 3
 
   [[menu.main]]
-    name = "Musings"
-    url = "/musings/"
+    name = "AI"
+    url = "/AI/"
     weight = 4
 
   [[menu.main]]
