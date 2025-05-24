@@ -1,6 +1,6 @@
 ---
 title: "24 Hours with Claude 4: When the Hype Actually Delivers"
-date: 2025-05-24T10:25:00-04:00
+date: 2025-05-24
 tags: [AI, Claude, Anthropic, AI, Reviews]
 categories: [Technology, AI Trends]
 image: "/img/claude4/header.png"

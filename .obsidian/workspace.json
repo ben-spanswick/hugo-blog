@@ -179,10 +179,11 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "68e34c432ab11c6c",
+  "active": "2bbc976fdba69a2a",
   "lastOpenFiles": [
-    "template.md",
+    "content/AI/24h-with-claude4.md",
     "content/AI/Aurora.md",
+    "template.md",
     "static/img/headshot.png",
     "static/img/weather/performancevERA52021at6hlead.png",
     "static/img/weather/performancevERA52021at6hlead.png.crdownload",
@@ -193,7 +194,6 @@
     "static/img/weather/architecture.png.crdownload",
     "static/img/weather/ECMWF.png",
     "static/img/weather",
-    "content/AI/24h-with-claude4.md",
     "content/musings/claude4.md",
     "content/musings/agi.md",
     "content/musings/_index.md",

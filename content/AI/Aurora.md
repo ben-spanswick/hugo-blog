@@ -1,12 +1,13 @@
-+++
-title = "The 57-Second Forecast: How AI is Rewriting the Future of Weather"
-date = 2025-05-24T08:25:00-04:00
-description = "Microsoft's Aurora AI model can generate a 10-day global forecast in under a minute, outperforming traditional supercomputers and revolutionizing access to atmospheric science."
-tags = ["AI", "Meteorology", "Technology", "Foundation Models", "Microsoft", "Weather"]
-categories = ["Tech Analysis", "Science"]
-image = "/img/weather/header.png"
-draft = false
-+++
+---
+title: "The 57-Second Forecast: How AI is Rewriting the Future of Weather"
+description: "Microsoft's Aurora AI model delivers superior weather forecasts 5,000x faster than supercomputers, reshaping what's possible for weather-dependent industries."
+date: 2025-05-24
+tags: ["AI", "Meteorology", "Technology", "Foundation Models", "Microsoft", "Weather"]
+categories: ["Tech Analysis", "Science"]
+image:  "/img/weather/header.png"
+draft: false
+---
+
 
 ### AI Summary
 
