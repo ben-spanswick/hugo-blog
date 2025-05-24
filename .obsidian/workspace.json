@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/projects/tunnel-setup.md",
+                "file": "content/AI/Untitled.md",
                 "mode": "source",
-                "source": false
+                "source": true
               },
               "icon": "lucide-file",
-              "title": "tunnel-setup"
+              "title": "Untitled"
             }
           }
         ]
@@ -181,33 +181,44 @@
   },
   "active": "2bbc976fdba69a2a",
   "lastOpenFiles": [
+    "template.md",
+    "content/AI/Untitled.md",
+    "static/img/headshot.png",
+    "static/img/weather/performancevERA52021at6hlead.png",
+    "static/img/weather/performancevERA52021at6hlead.png.crdownload",
+    "static/img/weather/auroravsgraphcast.png",
+    "static/img/weather/auroravsgraphcast.png.crdownload",
+    "static/img/weather/header.png",
+    "static/img/weather/architecture.png",
+    "static/img/weather/architecture.png.crdownload",
+    "static/img/weather/ECMWF.png",
+    "static/img/weather",
+    "content/AI/24h-with-claude4.md",
+    "content/musings/claude4.md",
+    "content/musings/agi.md",
+    "content/musings/_index.md",
+    "content/musings/gencast.md",
+    "content/musings/cybersecurity-thoughts.md",
+    "search.md",
+    "public/avatar.png",
+    "public/headshot.jpg",
+    "public/Spanswick_Resume2025.pdf",
+    "2025-05-23.md",
+    "README.md",
+    "Welcome.md",
+    "content/projects/tunnel-setup.md",
+    "content/AI",
     "static/img/oneoff/authelia1.png",
     "content/datascience/agenticai.md",
     "content/datascience/_index.md",
     "static/img/tintinconfused.png",
-    "content/projects/tunnel-setup.md",
-    "static/img/oneoff/5efd05e0-0539-4808-b218-264ab4111c1e.png",
     "static/img/oneoff",
     "static/img/New folder",
-    "template.md",
-    "template.md",
-    "content/musings/claude4.md",
     "content/datascience/agility.md",
     "content/datascience/8020rule.md",
     "content/musings/stability.md",
-    "static/img/news/googleio.png",
     "static/img/news",
-    "static/img/claude4/swe.png",
-    "static/img/claude4/price.png",
-    "static/img/claude4/header.png",
-    "static/img/claude4/performance.png",
-    "static/img/claude4/asl.png",
-    "static/img/claude4/agent.gif",
     "static/img/claude4",
-    "content/news/051925.md",
-    "content/news",
-    "2025-05-23.md",
-    "Welcome.md",
-    "desktop.ini"
+    "content/news/051925.md"
   ]
 }
