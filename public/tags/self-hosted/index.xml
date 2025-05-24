@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Self-Hosted on My Blog</title>
-        <link>http://192.168.100.63/tags/self-hosted/</link>
+        <link>http://192.168.100.63:1313/tags/self-hosted/</link>
         <description>Recent content in Self-Hosted on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 13 Mar 2025 12:00:00 -0500</lastBuildDate><atom:link href="http://192.168.100.63/tags/self-hosted/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 13 Mar 2025 12:00:00 -0500</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/self-hosted/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Nextcloud Setup</title>
-        <link>http://192.168.100.63/projects/self-hosting-nextcloud/</link>
+        <link>http://192.168.100.63:1313/projects/self-hosting-nextcloud/</link>
         <pubDate>Thu, 13 Mar 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63/projects/self-hosting-nextcloud/</guid>
+        <guid>http://192.168.100.63:1313/projects/self-hosting-nextcloud/</guid>
         <description>&lt;h1 id=&#34;my-nextcloud-architecture-what-i-learned-building-a-proper-self-hosted-setup&#34;&gt;&lt;a href=&#34;#my-nextcloud-architecture-what-i-learned-building-a-proper-self-hosted-setup&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;My Nextcloud Architecture: What I Learned Building a Proper Self-Hosted Setup
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Designing for performance, scalability, and sanity&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

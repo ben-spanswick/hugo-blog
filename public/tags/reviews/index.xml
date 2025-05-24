@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Reviews on My Blog</title>
-        <link>http://192.168.100.63/tags/reviews/</link>
+        <link>http://192.168.100.63:1313/tags/reviews/</link>
         <description>Recent content in Reviews on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/tags/reviews/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/reviews/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>24 Hours with Claude 4: When the Hype Actually Delivers</title>
-        <link>http://192.168.100.63/ai/24h-with-claude4/</link>
+        <link>http://192.168.100.63:1313/ai/24h-with-claude4/</link>
         <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/ai/24h-with-claude4/</guid>
-        <description>&lt;img src="http://192.168.100.63/img/claude4/header.png" alt="Featured image of post 24 Hours with Claude 4: When the Hype Actually Delivers" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
+        <guid>http://192.168.100.63:1313/ai/24h-with-claude4/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/claude4/header.png" alt="Featured image of post 24 Hours with Claude 4: When the Hype Actually Delivers" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Superior Reasoning:&lt;/strong&gt; Claude 4 excels at complex coding and architectural tasks, significantly outperforming previous versions and competitors like GPT-4.1.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Debugging Weakness:&lt;/strong&gt; Its strength in providing definitive answers becomes a weakness in debugging. It offers solutions but doesn&amp;rsquo;t collaborate on troubleshooting like Claude 3.7.&lt;/li&gt;

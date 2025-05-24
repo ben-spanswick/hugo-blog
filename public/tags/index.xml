@@ -2,776 +2,776 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Tags on My Blog</title>
-        <link>http://192.168.100.63/tags/</link>
+        <link>http://192.168.100.63:1313/tags/</link>
         <description>Recent content in Tags on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/tags/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>AI</title>
-        <link>http://192.168.100.63/tags/ai/</link>
+        <link>http://192.168.100.63:1313/tags/ai/</link>
         <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/ai/</guid>
+        <guid>http://192.168.100.63:1313/tags/ai/</guid>
         <description></description>
         </item>
         <item>
         <title>Anthropic</title>
-        <link>http://192.168.100.63/tags/anthropic/</link>
+        <link>http://192.168.100.63:1313/tags/anthropic/</link>
         <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/anthropic/</guid>
+        <guid>http://192.168.100.63:1313/tags/anthropic/</guid>
         <description></description>
         </item>
         <item>
         <title>Claude</title>
-        <link>http://192.168.100.63/tags/claude/</link>
+        <link>http://192.168.100.63:1313/tags/claude/</link>
         <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/claude/</guid>
+        <guid>http://192.168.100.63:1313/tags/claude/</guid>
         <description></description>
         </item>
         <item>
         <title>Foundation Models</title>
-        <link>http://192.168.100.63/tags/foundation-models/</link>
+        <link>http://192.168.100.63:1313/tags/foundation-models/</link>
         <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/foundation-models/</guid>
+        <guid>http://192.168.100.63:1313/tags/foundation-models/</guid>
         <description></description>
         </item>
         <item>
         <title>Meteorology</title>
-        <link>http://192.168.100.63/tags/meteorology/</link>
+        <link>http://192.168.100.63:1313/tags/meteorology/</link>
         <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/meteorology/</guid>
+        <guid>http://192.168.100.63:1313/tags/meteorology/</guid>
         <description></description>
         </item>
         <item>
         <title>Microsoft</title>
-        <link>http://192.168.100.63/tags/microsoft/</link>
+        <link>http://192.168.100.63:1313/tags/microsoft/</link>
         <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/microsoft/</guid>
+        <guid>http://192.168.100.63:1313/tags/microsoft/</guid>
         <description></description>
         </item>
         <item>
         <title>Reviews</title>
-        <link>http://192.168.100.63/tags/reviews/</link>
+        <link>http://192.168.100.63:1313/tags/reviews/</link>
         <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/reviews/</guid>
+        <guid>http://192.168.100.63:1313/tags/reviews/</guid>
         <description></description>
         </item>
         <item>
         <title>Technology</title>
-        <link>http://192.168.100.63/tags/technology/</link>
+        <link>http://192.168.100.63:1313/tags/technology/</link>
         <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/technology/</guid>
+        <guid>http://192.168.100.63:1313/tags/technology/</guid>
         <description></description>
         </item>
         <item>
         <title>Weather</title>
-        <link>http://192.168.100.63/tags/weather/</link>
+        <link>http://192.168.100.63:1313/tags/weather/</link>
         <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/weather/</guid>
+        <guid>http://192.168.100.63:1313/tags/weather/</guid>
         <description></description>
         </item>
         <item>
         <title>AI Safety</title>
-        <link>http://192.168.100.63/tags/ai-safety/</link>
+        <link>http://192.168.100.63:1313/tags/ai-safety/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/ai-safety/</guid>
+        <guid>http://192.168.100.63:1313/tags/ai-safety/</guid>
         <description></description>
         </item>
         <item>
         <title>AI Tools</title>
-        <link>http://192.168.100.63/tags/ai-tools/</link>
+        <link>http://192.168.100.63:1313/tags/ai-tools/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/ai-tools/</guid>
+        <guid>http://192.168.100.63:1313/tags/ai-tools/</guid>
         <description></description>
         </item>
         <item>
         <title>ChatGPT</title>
-        <link>http://192.168.100.63/tags/chatgpt/</link>
+        <link>http://192.168.100.63:1313/tags/chatgpt/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/chatgpt/</guid>
+        <guid>http://192.168.100.63:1313/tags/chatgpt/</guid>
         <description></description>
         </item>
         <item>
         <title>Claude 4</title>
-        <link>http://192.168.100.63/tags/claude-4/</link>
+        <link>http://192.168.100.63:1313/tags/claude-4/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/claude-4/</guid>
+        <guid>http://192.168.100.63:1313/tags/claude-4/</guid>
         <description></description>
         </item>
         <item>
         <title>DeepMind</title>
-        <link>http://192.168.100.63/tags/deepmind/</link>
+        <link>http://192.168.100.63:1313/tags/deepmind/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/deepmind/</guid>
+        <guid>http://192.168.100.63:1313/tags/deepmind/</guid>
         <description></description>
         </item>
         <item>
         <title>Gemini</title>
-        <link>http://192.168.100.63/tags/gemini/</link>
+        <link>http://192.168.100.63:1313/tags/gemini/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/gemini/</guid>
+        <guid>http://192.168.100.63:1313/tags/gemini/</guid>
         <description></description>
         </item>
         <item>
         <title>Google I/O</title>
-        <link>http://192.168.100.63/tags/google-i/o/</link>
+        <link>http://192.168.100.63:1313/tags/google-i/o/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/google-i/o/</guid>
+        <guid>http://192.168.100.63:1313/tags/google-i/o/</guid>
         <description></description>
         </item>
         <item>
         <title>Machine Learning</title>
-        <link>http://192.168.100.63/tags/machine-learning/</link>
+        <link>http://192.168.100.63:1313/tags/machine-learning/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/machine-learning/</guid>
+        <guid>http://192.168.100.63:1313/tags/machine-learning/</guid>
         <description></description>
         </item>
         <item>
         <title>Productivity</title>
-        <link>http://192.168.100.63/tags/productivity/</link>
+        <link>http://192.168.100.63:1313/tags/productivity/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/productivity/</guid>
+        <guid>http://192.168.100.63:1313/tags/productivity/</guid>
         <description></description>
         </item>
         <item>
         <title>Hardware</title>
-        <link>http://192.168.100.63/tags/hardware/</link>
+        <link>http://192.168.100.63:1313/tags/hardware/</link>
         <pubDate>Wed, 14 May 2025 15:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/tags/hardware/</guid>
+        <guid>http://192.168.100.63:1313/tags/hardware/</guid>
         <description></description>
         </item>
         <item>
         <title>Homelab</title>
-        <link>http://192.168.100.63/tags/homelab/</link>
+        <link>http://192.168.100.63:1313/tags/homelab/</link>
         <pubDate>Wed, 14 May 2025 15:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/tags/homelab/</guid>
+        <guid>http://192.168.100.63:1313/tags/homelab/</guid>
         <description></description>
         </item>
         <item>
         <title>Networking</title>
-        <link>http://192.168.100.63/tags/networking/</link>
+        <link>http://192.168.100.63:1313/tags/networking/</link>
         <pubDate>Wed, 14 May 2025 15:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/tags/networking/</guid>
+        <guid>http://192.168.100.63:1313/tags/networking/</guid>
         <description></description>
         </item>
         <item>
         <title>Self-Hosting</title>
-        <link>http://192.168.100.63/tags/self-hosting/</link>
+        <link>http://192.168.100.63:1313/tags/self-hosting/</link>
         <pubDate>Wed, 14 May 2025 15:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/tags/self-hosting/</guid>
+        <guid>http://192.168.100.63:1313/tags/self-hosting/</guid>
         <description></description>
         </item>
         <item>
         <title>Audiobookshelf</title>
-        <link>http://192.168.100.63/tags/audiobookshelf/</link>
+        <link>http://192.168.100.63:1313/tags/audiobookshelf/</link>
         <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/tags/audiobookshelf/</guid>
+        <guid>http://192.168.100.63:1313/tags/audiobookshelf/</guid>
         <description></description>
         </item>
         <item>
         <title>Authelia</title>
-        <link>http://192.168.100.63/tags/authelia/</link>
+        <link>http://192.168.100.63:1313/tags/authelia/</link>
         <pubDate>Wed, 14 May 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63/tags/authelia/</guid>
+        <guid>http://192.168.100.63:1313/tags/authelia/</guid>
         <description></description>
         </item>
         <item>
         <title>Automation</title>
-        <link>http://192.168.100.63/tags/automation/</link>
+        <link>http://192.168.100.63:1313/tags/automation/</link>
         <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/tags/automation/</guid>
+        <guid>http://192.168.100.63:1313/tags/automation/</guid>
         <description></description>
         </item>
         <item>
         <title>Cloudflared</title>
-        <link>http://192.168.100.63/tags/cloudflared/</link>
+        <link>http://192.168.100.63:1313/tags/cloudflared/</link>
         <pubDate>Wed, 14 May 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63/tags/cloudflared/</guid>
+        <guid>http://192.168.100.63:1313/tags/cloudflared/</guid>
         <description></description>
         </item>
         <item>
         <title>Docker</title>
-        <link>http://192.168.100.63/tags/docker/</link>
+        <link>http://192.168.100.63:1313/tags/docker/</link>
         <pubDate>Wed, 14 May 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63/tags/docker/</guid>
+        <guid>http://192.168.100.63:1313/tags/docker/</guid>
         <description></description>
         </item>
         <item>
         <title>Gluetun</title>
-        <link>http://192.168.100.63/tags/gluetun/</link>
+        <link>http://192.168.100.63:1313/tags/gluetun/</link>
         <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/tags/gluetun/</guid>
+        <guid>http://192.168.100.63:1313/tags/gluetun/</guid>
         <description></description>
         </item>
         <item>
         <title>Qbittorrent</title>
-        <link>http://192.168.100.63/tags/qbittorrent/</link>
+        <link>http://192.168.100.63:1313/tags/qbittorrent/</link>
         <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/tags/qbittorrent/</guid>
+        <guid>http://192.168.100.63:1313/tags/qbittorrent/</guid>
         <description></description>
         </item>
         <item>
         <title>Radarr</title>
-        <link>http://192.168.100.63/tags/radarr/</link>
+        <link>http://192.168.100.63:1313/tags/radarr/</link>
         <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/tags/radarr/</guid>
+        <guid>http://192.168.100.63:1313/tags/radarr/</guid>
         <description></description>
         </item>
         <item>
         <title>Sonarr</title>
-        <link>http://192.168.100.63/tags/sonarr/</link>
+        <link>http://192.168.100.63:1313/tags/sonarr/</link>
         <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/tags/sonarr/</guid>
+        <guid>http://192.168.100.63:1313/tags/sonarr/</guid>
         <description></description>
         </item>
         <item>
         <title>Torrenting</title>
-        <link>http://192.168.100.63/tags/torrenting/</link>
+        <link>http://192.168.100.63:1313/tags/torrenting/</link>
         <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/tags/torrenting/</guid>
+        <guid>http://192.168.100.63:1313/tags/torrenting/</guid>
         <description></description>
         </item>
         <item>
         <title>Traefik</title>
-        <link>http://192.168.100.63/tags/traefik/</link>
+        <link>http://192.168.100.63:1313/tags/traefik/</link>
         <pubDate>Wed, 14 May 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63/tags/traefik/</guid>
+        <guid>http://192.168.100.63:1313/tags/traefik/</guid>
         <description></description>
         </item>
         <item>
         <title>Unraid</title>
-        <link>http://192.168.100.63/tags/unraid/</link>
+        <link>http://192.168.100.63:1313/tags/unraid/</link>
         <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/tags/unraid/</guid>
+        <guid>http://192.168.100.63:1313/tags/unraid/</guid>
         <description></description>
         </item>
         <item>
         <title>AI Agent</title>
-        <link>http://192.168.100.63/tags/ai-agent/</link>
+        <link>http://192.168.100.63:1313/tags/ai-agent/</link>
         <pubDate>Sat, 29 Mar 2025 02:59:30 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/ai-agent/</guid>
+        <guid>http://192.168.100.63:1313/tags/ai-agent/</guid>
         <description></description>
         </item>
         <item>
         <title>Document Retrieval</title>
-        <link>http://192.168.100.63/tags/document-retrieval/</link>
+        <link>http://192.168.100.63:1313/tags/document-retrieval/</link>
         <pubDate>Fri, 21 Mar 2025 02:08:37 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/document-retrieval/</guid>
+        <guid>http://192.168.100.63:1313/tags/document-retrieval/</guid>
         <description></description>
         </item>
         <item>
         <title>Generative AI</title>
-        <link>http://192.168.100.63/tags/generative-ai/</link>
+        <link>http://192.168.100.63:1313/tags/generative-ai/</link>
         <pubDate>Fri, 21 Mar 2025 02:08:37 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/generative-ai/</guid>
+        <guid>http://192.168.100.63:1313/tags/generative-ai/</guid>
         <description></description>
         </item>
         <item>
         <title>Legal Tech</title>
-        <link>http://192.168.100.63/tags/legal-tech/</link>
+        <link>http://192.168.100.63:1313/tags/legal-tech/</link>
         <pubDate>Fri, 21 Mar 2025 02:08:37 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/legal-tech/</guid>
+        <guid>http://192.168.100.63:1313/tags/legal-tech/</guid>
         <description></description>
         </item>
         <item>
         <title>LexRank</title>
-        <link>http://192.168.100.63/tags/lexrank/</link>
+        <link>http://192.168.100.63:1313/tags/lexrank/</link>
         <pubDate>Fri, 21 Mar 2025 02:08:37 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/lexrank/</guid>
+        <guid>http://192.168.100.63:1313/tags/lexrank/</guid>
         <description></description>
         </item>
         <item>
         <title>RAG</title>
-        <link>http://192.168.100.63/tags/rag/</link>
+        <link>http://192.168.100.63:1313/tags/rag/</link>
         <pubDate>Fri, 21 Mar 2025 02:08:37 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/rag/</guid>
+        <guid>http://192.168.100.63:1313/tags/rag/</guid>
         <description></description>
         </item>
         <item>
         <title>Vector Databases</title>
-        <link>http://192.168.100.63/tags/vector-databases/</link>
+        <link>http://192.168.100.63:1313/tags/vector-databases/</link>
         <pubDate>Fri, 21 Mar 2025 02:08:37 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/vector-databases/</guid>
+        <guid>http://192.168.100.63:1313/tags/vector-databases/</guid>
         <description></description>
         </item>
         <item>
         <title>Creativity</title>
-        <link>http://192.168.100.63/tags/creativity/</link>
+        <link>http://192.168.100.63:1313/tags/creativity/</link>
         <pubDate>Tue, 18 Mar 2025 13:37:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/creativity/</guid>
+        <guid>http://192.168.100.63:1313/tags/creativity/</guid>
         <description></description>
         </item>
         <item>
         <title>Data Teams</title>
-        <link>http://192.168.100.63/tags/data-teams/</link>
+        <link>http://192.168.100.63:1313/tags/data-teams/</link>
         <pubDate>Tue, 18 Mar 2025 13:37:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/data-teams/</guid>
+        <guid>http://192.168.100.63:1313/tags/data-teams/</guid>
         <description></description>
         </item>
         <item>
         <title>Empathy</title>
-        <link>http://192.168.100.63/tags/empathy/</link>
+        <link>http://192.168.100.63:1313/tags/empathy/</link>
         <pubDate>Tue, 18 Mar 2025 13:37:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/empathy/</guid>
+        <guid>http://192.168.100.63:1313/tags/empathy/</guid>
         <description></description>
         </item>
         <item>
         <title>Leadership</title>
-        <link>http://192.168.100.63/tags/leadership/</link>
+        <link>http://192.168.100.63:1313/tags/leadership/</link>
         <pubDate>Tue, 18 Mar 2025 13:37:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/leadership/</guid>
+        <guid>http://192.168.100.63:1313/tags/leadership/</guid>
         <description></description>
         </item>
         <item>
         <title>Parenting</title>
-        <link>http://192.168.100.63/tags/parenting/</link>
+        <link>http://192.168.100.63:1313/tags/parenting/</link>
         <pubDate>Tue, 18 Mar 2025 13:37:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/parenting/</guid>
+        <guid>http://192.168.100.63:1313/tags/parenting/</guid>
         <description></description>
         </item>
         <item>
         <title>Collaboration</title>
-        <link>http://192.168.100.63/tags/collaboration/</link>
+        <link>http://192.168.100.63:1313/tags/collaboration/</link>
         <pubDate>Mon, 17 Mar 2025 03:00:30 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/collaboration/</guid>
+        <guid>http://192.168.100.63:1313/tags/collaboration/</guid>
         <description></description>
         </item>
         <item>
         <title>Data Science</title>
-        <link>http://192.168.100.63/tags/data-science/</link>
+        <link>http://192.168.100.63:1313/tags/data-science/</link>
         <pubDate>Mon, 17 Mar 2025 03:00:30 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/data-science/</guid>
+        <guid>http://192.168.100.63:1313/tags/data-science/</guid>
         <description></description>
         </item>
         <item>
         <title>Team Culture</title>
-        <link>http://192.168.100.63/tags/team-culture/</link>
+        <link>http://192.168.100.63:1313/tags/team-culture/</link>
         <pubDate>Mon, 17 Mar 2025 03:00:30 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/team-culture/</guid>
+        <guid>http://192.168.100.63:1313/tags/team-culture/</guid>
         <description></description>
         </item>
         <item>
         <title>Agility</title>
-        <link>http://192.168.100.63/tags/agility/</link>
+        <link>http://192.168.100.63:1313/tags/agility/</link>
         <pubDate>Mon, 17 Mar 2025 02:59:30 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/agility/</guid>
+        <guid>http://192.168.100.63:1313/tags/agility/</guid>
         <description></description>
         </item>
         <item>
         <title>Scaling</title>
-        <link>http://192.168.100.63/tags/scaling/</link>
+        <link>http://192.168.100.63:1313/tags/scaling/</link>
         <pubDate>Mon, 17 Mar 2025 02:59:30 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/scaling/</guid>
+        <guid>http://192.168.100.63:1313/tags/scaling/</guid>
         <description></description>
         </item>
         <item>
         <title>Team Building</title>
-        <link>http://192.168.100.63/tags/team-building/</link>
+        <link>http://192.168.100.63:1313/tags/team-building/</link>
         <pubDate>Mon, 17 Mar 2025 02:59:30 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/team-building/</guid>
+        <guid>http://192.168.100.63:1313/tags/team-building/</guid>
         <description></description>
         </item>
         <item>
         <title>Business Strategy</title>
-        <link>http://192.168.100.63/tags/business-strategy/</link>
+        <link>http://192.168.100.63:1313/tags/business-strategy/</link>
         <pubDate>Mon, 17 Mar 2025 02:44:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/business-strategy/</guid>
+        <guid>http://192.168.100.63:1313/tags/business-strategy/</guid>
         <description></description>
         </item>
         <item>
         <title>Communication</title>
-        <link>http://192.168.100.63/tags/communication/</link>
+        <link>http://192.168.100.63:1313/tags/communication/</link>
         <pubDate>Mon, 17 Mar 2025 02:44:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/communication/</guid>
+        <guid>http://192.168.100.63:1313/tags/communication/</guid>
         <description></description>
         </item>
         <item>
         <title>Business Alignment</title>
-        <link>http://192.168.100.63/tags/business-alignment/</link>
+        <link>http://192.168.100.63:1313/tags/business-alignment/</link>
         <pubDate>Mon, 17 Mar 2025 02:36:40 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/business-alignment/</guid>
+        <guid>http://192.168.100.63:1313/tags/business-alignment/</guid>
         <description></description>
         </item>
         <item>
         <title>Strategy</title>
-        <link>http://192.168.100.63/tags/strategy/</link>
+        <link>http://192.168.100.63:1313/tags/strategy/</link>
         <pubDate>Mon, 17 Mar 2025 02:36:40 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/strategy/</guid>
+        <guid>http://192.168.100.63:1313/tags/strategy/</guid>
         <description></description>
         </item>
         <item>
         <title>Best Practices</title>
-        <link>http://192.168.100.63/tags/best-practices/</link>
+        <link>http://192.168.100.63:1313/tags/best-practices/</link>
         <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/best-practices/</guid>
+        <guid>http://192.168.100.63:1313/tags/best-practices/</guid>
         <description></description>
         </item>
         <item>
         <title>Business Impact</title>
-        <link>http://192.168.100.63/tags/business-impact/</link>
+        <link>http://192.168.100.63:1313/tags/business-impact/</link>
         <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/business-impact/</guid>
+        <guid>http://192.168.100.63:1313/tags/business-impact/</guid>
         <description></description>
         </item>
         <item>
         <title>Prioritization</title>
-        <link>http://192.168.100.63/tags/prioritization/</link>
+        <link>http://192.168.100.63:1313/tags/prioritization/</link>
         <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/prioritization/</guid>
+        <guid>http://192.168.100.63:1313/tags/prioritization/</guid>
         <description></description>
         </item>
         <item>
         <title>Software Engineering</title>
-        <link>http://192.168.100.63/tags/software-engineering/</link>
+        <link>http://192.168.100.63:1313/tags/software-engineering/</link>
         <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/software-engineering/</guid>
+        <guid>http://192.168.100.63:1313/tags/software-engineering/</guid>
         <description></description>
         </item>
         <item>
         <title>Tech Debt</title>
-        <link>http://192.168.100.63/tags/tech-debt/</link>
+        <link>http://192.168.100.63:1313/tags/tech-debt/</link>
         <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/tech-debt/</guid>
+        <guid>http://192.168.100.63:1313/tags/tech-debt/</guid>
         <description></description>
         </item>
         <item>
         <title>AI Strategy</title>
-        <link>http://192.168.100.63/tags/ai-strategy/</link>
+        <link>http://192.168.100.63:1313/tags/ai-strategy/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/ai-strategy/</guid>
+        <guid>http://192.168.100.63:1313/tags/ai-strategy/</guid>
         <description></description>
         </item>
         <item>
         <title>AIG</title>
-        <link>http://192.168.100.63/tags/aig/</link>
+        <link>http://192.168.100.63:1313/tags/aig/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/aig/</guid>
+        <guid>http://192.168.100.63:1313/tags/aig/</guid>
         <description></description>
         </item>
         <item>
         <title>Ann Arbor</title>
-        <link>http://192.168.100.63/tags/ann-arbor/</link>
+        <link>http://192.168.100.63:1313/tags/ann-arbor/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/ann-arbor/</guid>
+        <guid>http://192.168.100.63:1313/tags/ann-arbor/</guid>
         <description></description>
         </item>
         <item>
         <title>Cloudflare Pages</title>
-        <link>http://192.168.100.63/tags/cloudflare-pages/</link>
+        <link>http://192.168.100.63:1313/tags/cloudflare-pages/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/cloudflare-pages/</guid>
+        <guid>http://192.168.100.63:1313/tags/cloudflare-pages/</guid>
         <description></description>
         </item>
         <item>
         <title>Cybersecurity</title>
-        <link>http://192.168.100.63/tags/cybersecurity/</link>
+        <link>http://192.168.100.63:1313/tags/cybersecurity/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/cybersecurity/</guid>
+        <guid>http://192.168.100.63:1313/tags/cybersecurity/</guid>
         <description></description>
         </item>
         <item>
         <title>DeepSeek V3</title>
-        <link>http://192.168.100.63/tags/deepseek-v3/</link>
+        <link>http://192.168.100.63:1313/tags/deepseek-v3/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/deepseek-v3/</guid>
+        <guid>http://192.168.100.63:1313/tags/deepseek-v3/</guid>
         <description></description>
         </item>
         <item>
         <title>Futurology</title>
-        <link>http://192.168.100.63/tags/futurology/</link>
+        <link>http://192.168.100.63:1313/tags/futurology/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/futurology/</guid>
+        <guid>http://192.168.100.63:1313/tags/futurology/</guid>
         <description></description>
         </item>
         <item>
         <title>Gemma 3</title>
-        <link>http://192.168.100.63/tags/gemma-3/</link>
+        <link>http://192.168.100.63:1313/tags/gemma-3/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/gemma-3/</guid>
+        <guid>http://192.168.100.63:1313/tags/gemma-3/</guid>
         <description></description>
         </item>
         <item>
         <title>Geopolitics</title>
-        <link>http://192.168.100.63/tags/geopolitics/</link>
+        <link>http://192.168.100.63:1313/tags/geopolitics/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/geopolitics/</guid>
+        <guid>http://192.168.100.63:1313/tags/geopolitics/</guid>
         <description></description>
         </item>
         <item>
         <title>Gitea</title>
-        <link>http://192.168.100.63/tags/gitea/</link>
+        <link>http://192.168.100.63:1313/tags/gitea/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/gitea/</guid>
+        <guid>http://192.168.100.63:1313/tags/gitea/</guid>
         <description></description>
         </item>
         <item>
         <title>GitHub</title>
-        <link>http://192.168.100.63/tags/github/</link>
+        <link>http://192.168.100.63:1313/tags/github/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/github/</guid>
+        <guid>http://192.168.100.63:1313/tags/github/</guid>
         <description></description>
         </item>
         <item>
         <title>Google</title>
-        <link>http://192.168.100.63/tags/google/</link>
+        <link>http://192.168.100.63:1313/tags/google/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/google/</guid>
+        <guid>http://192.168.100.63:1313/tags/google/</guid>
         <description></description>
         </item>
         <item>
         <title>GPT-5</title>
-        <link>http://192.168.100.63/tags/gpt-5/</link>
+        <link>http://192.168.100.63:1313/tags/gpt-5/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/gpt-5/</guid>
+        <guid>http://192.168.100.63:1313/tags/gpt-5/</guid>
         <description></description>
         </item>
         <item>
         <title>GPU Efficiency</title>
-        <link>http://192.168.100.63/tags/gpu-efficiency/</link>
+        <link>http://192.168.100.63:1313/tags/gpu-efficiency/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/gpu-efficiency/</guid>
+        <guid>http://192.168.100.63:1313/tags/gpu-efficiency/</guid>
         <description></description>
         </item>
         <item>
         <title>Gretchen Bakke</title>
-        <link>http://192.168.100.63/tags/gretchen-bakke/</link>
+        <link>http://192.168.100.63:1313/tags/gretchen-bakke/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/gretchen-bakke/</guid>
+        <guid>http://192.168.100.63:1313/tags/gretchen-bakke/</guid>
         <description></description>
         </item>
         <item>
         <title>Grid Resiliency</title>
-        <link>http://192.168.100.63/tags/grid-resiliency/</link>
+        <link>http://192.168.100.63:1313/tags/grid-resiliency/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/grid-resiliency/</guid>
+        <guid>http://192.168.100.63:1313/tags/grid-resiliency/</guid>
         <description></description>
         </item>
         <item>
         <title>Hugo</title>
-        <link>http://192.168.100.63/tags/hugo/</link>
+        <link>http://192.168.100.63:1313/tags/hugo/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/hugo/</guid>
+        <guid>http://192.168.100.63:1313/tags/hugo/</guid>
         <description></description>
         </item>
         <item>
         <title>Microgrids</title>
-        <link>http://192.168.100.63/tags/microgrids/</link>
+        <link>http://192.168.100.63:1313/tags/microgrids/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/microgrids/</guid>
+        <guid>http://192.168.100.63:1313/tags/microgrids/</guid>
         <description></description>
         </item>
         <item>
         <title>National Security</title>
-        <link>http://192.168.100.63/tags/national-security/</link>
+        <link>http://192.168.100.63:1313/tags/national-security/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/national-security/</guid>
+        <guid>http://192.168.100.63:1313/tags/national-security/</guid>
         <description></description>
         </item>
         <item>
         <title>Open Source</title>
-        <link>http://192.168.100.63/tags/open-source/</link>
+        <link>http://192.168.100.63:1313/tags/open-source/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/open-source/</guid>
+        <guid>http://192.168.100.63:1313/tags/open-source/</guid>
         <description></description>
         </item>
         <item>
         <title>OpenAI</title>
-        <link>http://192.168.100.63/tags/openai/</link>
+        <link>http://192.168.100.63:1313/tags/openai/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/openai/</guid>
+        <guid>http://192.168.100.63:1313/tags/openai/</guid>
         <description></description>
         </item>
         <item>
         <title>Privacy</title>
-        <link>http://192.168.100.63/tags/privacy/</link>
+        <link>http://192.168.100.63:1313/tags/privacy/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/privacy/</guid>
+        <guid>http://192.168.100.63:1313/tags/privacy/</guid>
         <description></description>
         </item>
         <item>
         <title>Recipe Management</title>
-        <link>http://192.168.100.63/tags/recipe-management/</link>
+        <link>http://192.168.100.63:1313/tags/recipe-management/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/recipe-management/</guid>
+        <guid>http://192.168.100.63:1313/tags/recipe-management/</guid>
         <description></description>
         </item>
         <item>
         <title>Russia</title>
-        <link>http://192.168.100.63/tags/russia/</link>
+        <link>http://192.168.100.63:1313/tags/russia/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/russia/</guid>
+        <guid>http://192.168.100.63:1313/tags/russia/</guid>
         <description></description>
         </item>
         <item>
         <title>Sustainable Energy</title>
-        <link>http://192.168.100.63/tags/sustainable-energy/</link>
+        <link>http://192.168.100.63:1313/tags/sustainable-energy/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/sustainable-energy/</guid>
+        <guid>http://192.168.100.63:1313/tags/sustainable-energy/</guid>
         <description></description>
         </item>
         <item>
         <title>Tandoor</title>
-        <link>http://192.168.100.63/tags/tandoor/</link>
+        <link>http://192.168.100.63:1313/tags/tandoor/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/tandoor/</guid>
+        <guid>http://192.168.100.63:1313/tags/tandoor/</guid>
         <description></description>
         </item>
         <item>
         <title>The Grid</title>
-        <link>http://192.168.100.63/tags/the-grid/</link>
+        <link>http://192.168.100.63:1313/tags/the-grid/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/the-grid/</guid>
+        <guid>http://192.168.100.63:1313/tags/the-grid/</guid>
         <description></description>
         </item>
         <item>
         <title>UBI</title>
-        <link>http://192.168.100.63/tags/ubi/</link>
+        <link>http://192.168.100.63:1313/tags/ubi/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/ubi/</guid>
+        <guid>http://192.168.100.63:1313/tags/ubi/</guid>
         <description></description>
         </item>
         <item>
         <title>United States</title>
-        <link>http://192.168.100.63/tags/united-states/</link>
+        <link>http://192.168.100.63:1313/tags/united-states/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/united-states/</guid>
+        <guid>http://192.168.100.63:1313/tags/united-states/</guid>
         <description></description>
         </item>
         <item>
         <title>Utilities</title>
-        <link>http://192.168.100.63/tags/utilities/</link>
+        <link>http://192.168.100.63:1313/tags/utilities/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/utilities/</guid>
+        <guid>http://192.168.100.63:1313/tags/utilities/</guid>
         <description></description>
         </item>
         <item>
         <title>Weather Forecasting</title>
-        <link>http://192.168.100.63/tags/weather-forecasting/</link>
+        <link>http://192.168.100.63:1313/tags/weather-forecasting/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/tags/weather-forecasting/</guid>
+        <guid>http://192.168.100.63:1313/tags/weather-forecasting/</guid>
         <description></description>
         </item>
         <item>
         <title>Nextcloud</title>
-        <link>http://192.168.100.63/tags/nextcloud/</link>
+        <link>http://192.168.100.63:1313/tags/nextcloud/</link>
         <pubDate>Thu, 13 Mar 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63/tags/nextcloud/</guid>
+        <guid>http://192.168.100.63:1313/tags/nextcloud/</guid>
         <description></description>
         </item>
         <item>
         <title>Self-Hosted</title>
-        <link>http://192.168.100.63/tags/self-hosted/</link>
+        <link>http://192.168.100.63:1313/tags/self-hosted/</link>
         <pubDate>Thu, 13 Mar 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63/tags/self-hosted/</guid>
+        <guid>http://192.168.100.63:1313/tags/self-hosted/</guid>
         <description></description>
         </item>
         <item>
         <title>Services</title>
-        <link>http://192.168.100.63/tags/services/</link>
+        <link>http://192.168.100.63:1313/tags/services/</link>
         <pubDate>Thu, 13 Mar 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63/tags/services/</guid>
+        <guid>http://192.168.100.63:1313/tags/services/</guid>
         <description></description>
         </item>
         <item>
         <title>Storage</title>
-        <link>http://192.168.100.63/tags/storage/</link>
+        <link>http://192.168.100.63:1313/tags/storage/</link>
         <pubDate>Thu, 13 Mar 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63/tags/storage/</guid>
+        <guid>http://192.168.100.63:1313/tags/storage/</guid>
         <description></description>
         </item>
         

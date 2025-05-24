@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Grid Resiliency on My Blog</title>
-        <link>http://192.168.100.63/tags/grid-resiliency/</link>
+        <link>http://192.168.100.63:1313/tags/grid-resiliency/</link>
         <description>Recent content in Grid Resiliency on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/tags/grid-resiliency/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/grid-resiliency/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Google&#39;s GenCast: AI Weather Forecasting and the Future of Grid Resiliency</title>
-        <link>http://192.168.100.63/musings/gencast/</link>
+        <link>http://192.168.100.63:1313/musings/gencast/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/musings/gencast/</guid>
+        <guid>http://192.168.100.63:1313/musings/gencast/</guid>
         <description>&lt;h1 id=&#34;googles-weather-ai-could-save-your-lights-from-going-out&#34;&gt;&lt;a href=&#34;#googles-weather-ai-could-save-your-lights-from-going-out&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Google&amp;rsquo;s Weather AI Could Save Your Lights From Going Out
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why GenCast might be the grid reliability breakthrough utilities have been waiting for&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

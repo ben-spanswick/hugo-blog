@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>AI Trends on My Blog</title>
-        <link>http://192.168.100.63/categories/ai-trends/</link>
+        <link>http://192.168.100.63:1313/categories/ai-trends/</link>
         <description>Recent content in AI Trends on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/categories/ai-trends/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/ai-trends/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>24 Hours with Claude 4: When the Hype Actually Delivers</title>
-        <link>http://192.168.100.63/ai/24h-with-claude4/</link>
+        <link>http://192.168.100.63:1313/ai/24h-with-claude4/</link>
         <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/ai/24h-with-claude4/</guid>
-        <description>&lt;img src="http://192.168.100.63/img/claude4/header.png" alt="Featured image of post 24 Hours with Claude 4: When the Hype Actually Delivers" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
+        <guid>http://192.168.100.63:1313/ai/24h-with-claude4/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/claude4/header.png" alt="Featured image of post 24 Hours with Claude 4: When the Hype Actually Delivers" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
 &lt;/h3&gt;&lt;ul&gt;
 &lt;li&gt;&lt;strong&gt;Superior Reasoning:&lt;/strong&gt; Claude 4 excels at complex coding and architectural tasks, significantly outperforming previous versions and competitors like GPT-4.1.&lt;/li&gt;
 &lt;li&gt;&lt;strong&gt;Debugging Weakness:&lt;/strong&gt; Its strength in providing definitive answers becomes a weakness in debugging. It offers solutions but doesn&amp;rsquo;t collaborate on troubleshooting like Claude 3.7.&lt;/li&gt;
@@ -59,18 +59,18 @@
         </item>
         <item>
         <title>Claude 4: The AI That&#39;s So Smart It Scares Its Own Creators</title>
-        <link>http://192.168.100.63/musings/claude4/</link>
+        <link>http://192.168.100.63:1313/musings/claude4/</link>
         <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/musings/claude4/</guid>
-        <description>&lt;img src="http://192.168.100.63/img/claude4/header.png" alt="Featured image of post Claude 4: The AI That&#39;s So Smart It Scares Its Own Creators" /&gt;&lt;h1 id=&#34;claude-4-the-ai-thats-so-smart-it-scares-its-own-creators&#34;&gt;&lt;a href=&#34;#claude-4-the-ai-thats-so-smart-it-scares-its-own-creators&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Claude 4: The AI That&amp;rsquo;s So Smart It Scares Its Own Creators
+        <guid>http://192.168.100.63:1313/musings/claude4/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/claude4/header.png" alt="Featured image of post Claude 4: The AI That&#39;s So Smart It Scares Its Own Creators" /&gt;&lt;h1 id=&#34;claude-4-the-ai-thats-so-smart-it-scares-its-own-creators&#34;&gt;&lt;a href=&#34;#claude-4-the-ai-thats-so-smart-it-scares-its-own-creators&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Claude 4: The AI That&amp;rsquo;s So Smart It Scares Its Own Creators
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why Anthropic&amp;rsquo;s latest breakthrough comes with some uncomfortable safety warnings&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Anthropic just dropped Claude 4, and the benchmarks are genuinely impressive. But buried in the announcement is something that should make everyone pay attention: this AI is so capable that Anthropic had to activate their highest safety protocols to prevent it from accidentally helping someone build weapons of mass destruction.&lt;/p&gt;
 &lt;p&gt;Let me unpack that for you.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-benchmarks-tell-an-impressive-story&#34;&gt;&lt;a href=&#34;#the-benchmarks-tell-an-impressive-story&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Benchmarks Tell an Impressive Story
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/swe.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/swe.png&#34;
 	
 	
 	
@@ -98,7 +98,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Personal take:&lt;/strong&gt; This feels like the first AI that could actually replace junior developers on routine tasks, not just assist them.&lt;/p&gt;
 &lt;h3 id=&#34;technical-specifications-and-pricing&#34;&gt;&lt;a href=&#34;#technical-specifications-and-pricing&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Technical Specifications and Pricing
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/price.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/price.png&#34;
 	
 	
 	
@@ -132,7 +132,7 @@
 &lt;li&gt;Claude Sonnet 3.7: 78.2 %&lt;/li&gt;
 &lt;li&gt;Human PhD experts: ~69%&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/performance.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/performance.png&#34;
 	
 	
 	
@@ -146,7 +146,7 @@
 &lt;p&gt;&lt;strong&gt;Translation:&lt;/strong&gt; Claude 4 is now better than most PhD scientists at answering graduate-level questions in their own fields. That&amp;rsquo;s&amp;hellip; concerning in ways I&amp;rsquo;ll get to.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-safety-red-flag-everyones-ignoring&#34;&gt;&lt;a href=&#34;#the-safety-red-flag-everyones-ignoring&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Safety Red Flag Everyone&amp;rsquo;s Ignoring
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/asl.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/asl.png&#34;
 	
 	
 	
@@ -168,7 +168,7 @@
     &gt;Full technical details available in Anthropic&amp;rsquo;s safety evaluation report&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;what-asl-3-actually-involves&#34;&gt;&lt;a href=&#34;#what-asl-3-actually-involves&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What ASL-3 Actually Involves
-&lt;/h3&gt;&lt;figure&gt;&lt;img src=&#34;http://192.168.100.63/images/claude4/asl3-security-measures.png&#34;
+&lt;/h3&gt;&lt;figure&gt;&lt;img src=&#34;http://192.168.100.63:1313/images/claude4/asl3-security-measures.png&#34;
     alt=&#34;Diagram showing enhanced security measures for ASL-3 AI systems&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;ASL-3 Security Protocols&lt;/h4&gt;
     &lt;/figcaption&gt;
@@ -207,7 +207,7 @@
 &lt;p&gt;&lt;strong&gt;The math is simple:&lt;/strong&gt; The capabilities are advancing faster than our ability to safely deploy them.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-real-world-impact&#34;&gt;&lt;a href=&#34;#the-real-world-impact&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Real-World Impact
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/agent.gif&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/agent.gif&#34;
 	
 	
 	
@@ -277,10 +277,10 @@
         </item>
         <item>
         <title>AIG: The Dumb Smart Thing That Might Change Everything</title>
-        <link>http://192.168.100.63/musings/agi/</link>
+        <link>http://192.168.100.63:1313/musings/agi/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/musings/agi/</guid>
+        <guid>http://192.168.100.63:1313/musings/agi/</guid>
         <description>&lt;h1 id=&#34;agi-is-coming-and-im-not-sure-how-i-feel-about-it&#34;&gt;&lt;a href=&#34;#agi-is-coming-and-im-not-sure-how-i-feel-about-it&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AGI is Coming and I&amp;rsquo;m Not Sure How I Feel About It
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why the &amp;ldquo;thinking machine&amp;rdquo; might arrive sooner than we&amp;rsquo;re ready for&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -359,10 +359,10 @@ What happens when we create something smarter than us that doesn&amp;rsquo;t sha
         </item>
         <item>
         <title>Google&#39;s GenCast: AI Weather Forecasting and the Future of Grid Resiliency</title>
-        <link>http://192.168.100.63/musings/gencast/</link>
+        <link>http://192.168.100.63:1313/musings/gencast/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/musings/gencast/</guid>
+        <guid>http://192.168.100.63:1313/musings/gencast/</guid>
         <description>&lt;h1 id=&#34;googles-weather-ai-could-save-your-lights-from-going-out&#34;&gt;&lt;a href=&#34;#googles-weather-ai-could-save-your-lights-from-going-out&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Google&amp;rsquo;s Weather AI Could Save Your Lights From Going Out
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why GenCast might be the grid reliability breakthrough utilities have been waiting for&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -494,10 +494,10 @@ What happens when we create something smarter than us that doesn&amp;rsquo;t sha
         </item>
         <item>
         <title>The Reality Check of GPT-5: When AI Ambitions Meet Practical Constraints</title>
-        <link>http://192.168.100.63/musings/gpt5-future-ai/</link>
+        <link>http://192.168.100.63:1313/musings/gpt5-future-ai/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/musings/gpt5-future-ai/</guid>
+        <guid>http://192.168.100.63:1313/musings/gpt5-future-ai/</guid>
         <description>&lt;h1 id=&#34;gpt-5-is-struggling-and-thats-actually-good-news&#34;&gt;&lt;a href=&#34;#gpt-5-is-struggling-and-thats-actually-good-news&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;GPT-5 is Struggling and That&amp;rsquo;s Actually Good News
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why OpenAI&amp;rsquo;s challenges signal a healthier future for AI&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

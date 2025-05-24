@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Prioritization on My Blog</title>
-        <link>http://192.168.100.63/tags/prioritization/</link>
+        <link>http://192.168.100.63:1313/tags/prioritization/</link>
         <description>Recent content in Prioritization on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/tags/prioritization/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/prioritization/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle</title>
-        <link>http://192.168.100.63/datascience/8020rule/</link>
+        <link>http://192.168.100.63:1313/datascience/8020rule/</link>
         <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/datascience/8020rule/</guid>
+        <guid>http://192.168.100.63:1313/datascience/8020rule/</guid>
         <description>&lt;h1 id=&#34;stop-optimizing-your-models-to-death-a-reality-check-on-data-science-priorities&#34;&gt;&lt;a href=&#34;#stop-optimizing-your-models-to-death-a-reality-check-on-data-science-priorities&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Stop Optimizing Your Models to Death: A Reality Check on Data Science Priorities
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why your team might be working really hard on stuff that doesn&amp;rsquo;t matter&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

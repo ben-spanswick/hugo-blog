@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Nextcloud on My Blog</title>
-        <link>http://192.168.100.63/tags/nextcloud/</link>
+        <link>http://192.168.100.63:1313/tags/nextcloud/</link>
         <description>Recent content in Nextcloud on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Thu, 13 Mar 2025 12:00:00 -0500</lastBuildDate><atom:link href="http://192.168.100.63/tags/nextcloud/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 13 Mar 2025 12:00:00 -0500</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/nextcloud/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Building a Self-Hosted Nextcloud: Detailed Setup</title>
-        <link>http://192.168.100.63/projects/nextcloud-setup/</link>
+        <link>http://192.168.100.63:1313/projects/nextcloud-setup/</link>
         <pubDate>Thu, 13 Mar 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63/projects/nextcloud-setup/</guid>
+        <guid>http://192.168.100.63:1313/projects/nextcloud-setup/</guid>
         <description>&lt;h1 id=&#34;building-a-proper-nextcloud-setup-in-proxmox-lxc&#34;&gt;&lt;a href=&#34;#building-a-proper-nextcloud-setup-in-proxmox-lxc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Building a Proper Nextcloud Setup in Proxmox LXC
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;How I got Nextcloud running smoothly without losing my mind (mostly)&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -130,10 +130,10 @@ unprivileged: 1
         </item>
         <item>
         <title>Nextcloud Setup</title>
-        <link>http://192.168.100.63/projects/self-hosting-nextcloud/</link>
+        <link>http://192.168.100.63:1313/projects/self-hosting-nextcloud/</link>
         <pubDate>Thu, 13 Mar 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63/projects/self-hosting-nextcloud/</guid>
+        <guid>http://192.168.100.63:1313/projects/self-hosting-nextcloud/</guid>
         <description>&lt;h1 id=&#34;my-nextcloud-architecture-what-i-learned-building-a-proper-self-hosted-setup&#34;&gt;&lt;a href=&#34;#my-nextcloud-architecture-what-i-learned-building-a-proper-self-hosted-setup&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;My Nextcloud Architecture: What I Learned Building a Proper Self-Hosted Setup
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Designing for performance, scalability, and sanity&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

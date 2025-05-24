@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Guide on My Blog</title>
-        <link>http://192.168.100.63/categories/guide/</link>
+        <link>http://192.168.100.63:1313/categories/guide/</link>
         <description>Recent content in Guide on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 29 Mar 2025 02:59:30 +0000</lastBuildDate><atom:link href="http://192.168.100.63/categories/guide/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 29 Mar 2025 02:59:30 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/guide/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>I Built My Own AI Agent with GPT-4 (And You Can Too)</title>
-        <link>http://192.168.100.63/datascience/buildanagent/</link>
+        <link>http://192.168.100.63:1313/datascience/buildanagent/</link>
         <pubDate>Sat, 29 Mar 2025 02:59:30 +0000</pubDate>
         
-        <guid>http://192.168.100.63/datascience/buildanagent/</guid>
+        <guid>http://192.168.100.63:1313/datascience/buildanagent/</guid>
         <description>&lt;h1 id=&#34;build-your-first-ai-agent-that-actually-does-stuff&#34;&gt;&lt;a href=&#34;#build-your-first-ai-agent-that-actually-does-stuff&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Build Your First AI Agent That Actually Does Stuff
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;From chatbot to digital assistant in 50 lines of Python&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

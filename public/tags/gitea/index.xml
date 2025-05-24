@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Gitea on My Blog</title>
-        <link>http://192.168.100.63/tags/gitea/</link>
+        <link>http://192.168.100.63:1313/tags/gitea/</link>
         <description>Recent content in Gitea on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/tags/gitea/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/gitea/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Setting Up Hugo with Gitea, GitHub, and Cloudflare Pages</title>
-        <link>http://192.168.100.63/projects/hugo-blog-setup/</link>
+        <link>http://192.168.100.63:1313/projects/hugo-blog-setup/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/projects/hugo-blog-setup/</guid>
+        <guid>http://192.168.100.63:1313/projects/hugo-blog-setup/</guid>
         <description>&lt;h1 id=&#34;getting-my-blog-actually-working-hugo--gitea--github--cloudflare-pages&#34;&gt;&lt;a href=&#34;#getting-my-blog-actually-working-hugo--gitea--github--cloudflare-pages&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Getting My Blog Actually Working: Hugo + Gitea + GitHub + Cloudflare Pages
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Or: How I learned to stop worrying and love Git submodules (eventually)&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

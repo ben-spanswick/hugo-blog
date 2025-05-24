@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Infrastucture on My Blog</title>
-        <link>http://192.168.100.63/categories/infrastucture/</link>
+        <link>http://192.168.100.63:1313/categories/infrastucture/</link>
         <description>Recent content in Infrastucture on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 14 May 2025 12:00:00 -0500</lastBuildDate><atom:link href="http://192.168.100.63/categories/infrastucture/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 14 May 2025 12:00:00 -0500</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/infrastucture/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Building a Robust Access Layer for Self-Hosted Services</title>
-        <link>http://192.168.100.63/projects/tunnel-setup/</link>
+        <link>http://192.168.100.63:1313/projects/tunnel-setup/</link>
         <pubDate>Wed, 14 May 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63/projects/tunnel-setup/</guid>
-        <description>&lt;img src="http://192.168.100.63/img/oneoff/authelia1.png" alt="Featured image of post Building a Robust Access Layer for Self-Hosted Services" /&gt;&lt;h1 id=&#34;making-my-self-hosted-services-actually-accessible-without-going-insane&#34;&gt;&lt;a href=&#34;#making-my-self-hosted-services-actually-accessible-without-going-insane&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Making My Self-Hosted Services Actually Accessible (Without Going Insane)
+        <guid>http://192.168.100.63:1313/projects/tunnel-setup/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/oneoff/authelia1.png" alt="Featured image of post Building a Robust Access Layer for Self-Hosted Services" /&gt;&lt;h1 id=&#34;making-my-self-hosted-services-actually-accessible-without-going-insane&#34;&gt;&lt;a href=&#34;#making-my-self-hosted-services-actually-accessible-without-going-insane&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Making My Self-Hosted Services Actually Accessible (Without Going Insane)
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;How I finally got my recipe manager working from anywhere without poking holes in my firewall&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Posted: May 14, 2025 | 6 min read&lt;/p&gt;
 &lt;hr&gt;

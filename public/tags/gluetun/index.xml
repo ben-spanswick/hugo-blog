@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Gluetun on My Blog</title>
-        <link>http://192.168.100.63/tags/gluetun/</link>
+        <link>http://192.168.100.63:1313/tags/gluetun/</link>
         <description>Recent content in Gluetun on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 14 May 2025 13:00:00 -0400</lastBuildDate><atom:link href="http://192.168.100.63/tags/gluetun/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 14 May 2025 13:00:00 -0400</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/gluetun/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>From Torrent to Library: Automating TV, Movies, and Audiobooks with Gluetun, qBittorrent, and arr</title>
-        <link>http://192.168.100.63/projects/torrent-setup/</link>
+        <link>http://192.168.100.63:1313/projects/torrent-setup/</link>
         <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63/projects/torrent-setup/</guid>
+        <guid>http://192.168.100.63:1313/projects/torrent-setup/</guid>
         <description>&lt;hr&gt;
 &lt;h1 id=&#34;building-my-perfect-media-automation-pipeline&#34;&gt;&lt;a href=&#34;#building-my-perfect-media-automation-pipeline&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Building My Perfect Media Automation Pipeline
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;How I stopped manually managing downloads and built a self-running media server&lt;/em&gt;&lt;/p&gt;

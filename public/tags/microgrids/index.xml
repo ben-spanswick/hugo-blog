@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Microgrids on My Blog</title>
-        <link>http://192.168.100.63/tags/microgrids/</link>
+        <link>http://192.168.100.63:1313/tags/microgrids/</link>
         <description>Recent content in Microgrids on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/tags/microgrids/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/microgrids/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy</title>
-        <link>http://192.168.100.63/musings/seu-risk-analysis/</link>
+        <link>http://192.168.100.63:1313/musings/seu-risk-analysis/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63/musings/seu-risk-analysis/</guid>
+        <guid>http://192.168.100.63:1313/musings/seu-risk-analysis/</guid>
         <description>&lt;h1 id=&#34;ann-arbor-is-trying-to-break-up-with-the-power-company&#34;&gt;&lt;a href=&#34;#ann-arbor-is-trying-to-break-up-with-the-power-company&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Ann Arbor is Trying to Break Up With the Power Company
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why one city&amp;rsquo;s energy experiment could change everything&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
