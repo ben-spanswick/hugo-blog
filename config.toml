@@ -1,4 +1,5 @@
-baseURL = "http://192.168.100.63/"
+#baseURL = "http://192.168.100.63/"
+baseURL = "www.spanswick.dev"
 title = "My Blog"
 theme = "stack"
 enableRobotsTXT = true
@@ -13,11 +14,11 @@ enableEmoji = true
   term = ["HTML", "RSS"]
 
 [params]
-  mainSections = ["news", "AI",  "datascience", "musings", "projects", "about"]  # Updated to reflect actual content folders
+  mainSections = ["news", "AI", "datascience", "musings", "projects", "about"]  # Updated to reflect actual content folders
   featuredImageField = "image"
   rssFullContent = true
   favicon = "/favicon.ico"
-  lastmod = "2025-03-15T00:00:00Z"
+  lastmod = "2025-05-24T00:00:00Z"
 
   [params.footer]
     since = 2024
@@ -123,4 +124,4 @@ enableEmoji = true
   [[menu.main]]
     name = "Resume"
     url = "Spanswick_Resume2025.pdf"
-    weight = 7
+    weight = 8
