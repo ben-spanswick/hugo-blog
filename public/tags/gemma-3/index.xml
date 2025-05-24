@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Gemma 3 on My Blog</title>
-        <link>http://192.168.100.63:1313/tags/gemma-3/</link>
+        <link>http://192.168.100.63/tags/gemma-3/</link>
         <description>Recent content in Gemma 3 on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/gemma-3/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/tags/gemma-3/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Gemma 3: Google&#39;s Lean, Mean AI Machine Takes on DeepSeek V3</title>
-        <link>http://192.168.100.63:1313/musings/gemma3-ai/</link>
+        <link>http://192.168.100.63/musings/gemma3-ai/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/musings/gemma3-ai/</guid>
+        <guid>http://192.168.100.63/musings/gemma3-ai/</guid>
         <description>&lt;h1 id=&#34;google-just-made-ai-way-cheaper-to-run-and-thats-huge&#34;&gt;&lt;a href=&#34;#google-just-made-ai-way-cheaper-to-run-and-thats-huge&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Google Just Made AI Way Cheaper to Run (And That&amp;rsquo;s Huge)
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why Gemma 3 might change who gets to play in the AI game&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

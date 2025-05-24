@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Claude 4 on My Blog</title>
-        <link>http://192.168.100.63:1313/tags/claude-4/</link>
+        <link>http://192.168.100.63/tags/claude-4/</link>
         <description>Recent content in Claude 4 on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/claude-4/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/tags/claude-4/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Last Week in AI: 05/19/25-05/23/25: When Everyone Decided to Ship Everything at Once</title>
-        <link>http://192.168.100.63:1313/news/051925/</link>
+        <link>http://192.168.100.63/news/051925/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/news/051925/</guid>
-        <description>&lt;img src="http://192.168.100.63:1313/img/news/googleio.png" alt="Featured image of post Last Week in AI: 05/19/25-05/23/25: When Everyone Decided to Ship Everything at Once" /&gt;&lt;p&gt;I woke up Thursday morning to seventeen different AI announcements in my feed. By noon, my Slack was melting down with engineers arguing about benchmarks. By evening, I&amp;rsquo;d given up trying to process it all and just started drinking.&lt;/p&gt;
+        <guid>http://192.168.100.63/news/051925/</guid>
+        <description>&lt;img src="http://192.168.100.63/img/news/googleio.png" alt="Featured image of post Last Week in AI: 05/19/25-05/23/25: When Everyone Decided to Ship Everything at Once" /&gt;&lt;p&gt;I woke up Thursday morning to seventeen different AI announcements in my feed. By noon, my Slack was melting down with engineers arguing about benchmarks. By evening, I&amp;rsquo;d given up trying to process it all and just started drinking.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s what actually matters from this week&amp;rsquo;s AI avalanche.&lt;/p&gt;
 &lt;h3 id=&#34;anthropic-builds-something-that-scares-them&#34;&gt;&lt;a href=&#34;#anthropic-builds-something-that-scares-them&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Anthropic Builds Something That Scares Them
 &lt;/h3&gt;&lt;p&gt;Anthropic &lt;a class=&#34;link&#34; href=&#34;https://www.anthropic.com/news/claude-4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -59,18 +59,18 @@
         </item>
         <item>
         <title>Claude 4: The AI That&#39;s So Smart It Scares Its Own Creators</title>
-        <link>http://192.168.100.63:1313/musings/claude4/</link>
+        <link>http://192.168.100.63/musings/claude4/</link>
         <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/musings/claude4/</guid>
-        <description>&lt;img src="http://192.168.100.63:1313/img/claude4/header.png" alt="Featured image of post Claude 4: The AI That&#39;s So Smart It Scares Its Own Creators" /&gt;&lt;h1 id=&#34;claude-4-the-ai-thats-so-smart-it-scares-its-own-creators&#34;&gt;&lt;a href=&#34;#claude-4-the-ai-thats-so-smart-it-scares-its-own-creators&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Claude 4: The AI That&amp;rsquo;s So Smart It Scares Its Own Creators
+        <guid>http://192.168.100.63/musings/claude4/</guid>
+        <description>&lt;img src="http://192.168.100.63/img/claude4/header.png" alt="Featured image of post Claude 4: The AI That&#39;s So Smart It Scares Its Own Creators" /&gt;&lt;h1 id=&#34;claude-4-the-ai-thats-so-smart-it-scares-its-own-creators&#34;&gt;&lt;a href=&#34;#claude-4-the-ai-thats-so-smart-it-scares-its-own-creators&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Claude 4: The AI That&amp;rsquo;s So Smart It Scares Its Own Creators
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why Anthropic&amp;rsquo;s latest breakthrough comes with some uncomfortable safety warnings&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Anthropic just dropped Claude 4, and the benchmarks are genuinely impressive. But buried in the announcement is something that should make everyone pay attention: this AI is so capable that Anthropic had to activate their highest safety protocols to prevent it from accidentally helping someone build weapons of mass destruction.&lt;/p&gt;
 &lt;p&gt;Let me unpack that for you.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-benchmarks-tell-an-impressive-story&#34;&gt;&lt;a href=&#34;#the-benchmarks-tell-an-impressive-story&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Benchmarks Tell an Impressive Story
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/swe.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/swe.png&#34;
 	
 	
 	
@@ -98,7 +98,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Personal take:&lt;/strong&gt; This feels like the first AI that could actually replace junior developers on routine tasks, not just assist them.&lt;/p&gt;
 &lt;h3 id=&#34;technical-specifications-and-pricing&#34;&gt;&lt;a href=&#34;#technical-specifications-and-pricing&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Technical Specifications and Pricing
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/price.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/price.png&#34;
 	
 	
 	
@@ -132,7 +132,7 @@
 &lt;li&gt;Claude Sonnet 3.7: 78.2 %&lt;/li&gt;
 &lt;li&gt;Human PhD experts: ~69%&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/performance.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/performance.png&#34;
 	
 	
 	
@@ -146,7 +146,7 @@
 &lt;p&gt;&lt;strong&gt;Translation:&lt;/strong&gt; Claude 4 is now better than most PhD scientists at answering graduate-level questions in their own fields. That&amp;rsquo;s&amp;hellip; concerning in ways I&amp;rsquo;ll get to.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-safety-red-flag-everyones-ignoring&#34;&gt;&lt;a href=&#34;#the-safety-red-flag-everyones-ignoring&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Safety Red Flag Everyone&amp;rsquo;s Ignoring
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/asl.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/asl.png&#34;
 	
 	
 	
@@ -168,7 +168,7 @@
     &gt;Full technical details available in Anthropic&amp;rsquo;s safety evaluation report&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;what-asl-3-actually-involves&#34;&gt;&lt;a href=&#34;#what-asl-3-actually-involves&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What ASL-3 Actually Involves
-&lt;/h3&gt;&lt;figure&gt;&lt;img src=&#34;http://192.168.100.63:1313/images/claude4/asl3-security-measures.png&#34;
+&lt;/h3&gt;&lt;figure&gt;&lt;img src=&#34;http://192.168.100.63/images/claude4/asl3-security-measures.png&#34;
     alt=&#34;Diagram showing enhanced security measures for ASL-3 AI systems&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;ASL-3 Security Protocols&lt;/h4&gt;
     &lt;/figcaption&gt;
@@ -207,7 +207,7 @@
 &lt;p&gt;&lt;strong&gt;The math is simple:&lt;/strong&gt; The capabilities are advancing faster than our ability to safely deploy them.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-real-world-impact&#34;&gt;&lt;a href=&#34;#the-real-world-impact&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Real-World Impact
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/agent.gif&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/agent.gif&#34;
 	
 	
 	

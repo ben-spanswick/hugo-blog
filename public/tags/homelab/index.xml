@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Homelab on My Blog</title>
-        <link>http://192.168.100.63:1313/tags/homelab/</link>
+        <link>http://192.168.100.63/tags/homelab/</link>
         <description>Recent content in Homelab on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 14 May 2025 15:00:00 -0400</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/homelab/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 14 May 2025 15:00:00 -0400</lastBuildDate><atom:link href="http://192.168.100.63/tags/homelab/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>First Homelab: Reflections, Diagram, and Stack</title>
-        <link>http://192.168.100.63:1313/projects/homelab/</link>
+        <link>http://192.168.100.63/projects/homelab/</link>
         <pubDate>Wed, 14 May 2025 15:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63:1313/projects/homelab/</guid>
-        <description>&lt;img src="http://192.168.100.63:1313/img/HL.jpg" alt="Featured image of post First Homelab: Reflections, Diagram, and Stack" /&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/HL.jpg&#34;
+        <guid>http://192.168.100.63/projects/homelab/</guid>
+        <description>&lt;img src="http://192.168.100.63/img/HL.jpg" alt="Featured image of post First Homelab: Reflections, Diagram, and Stack" /&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/HL.jpg&#34;
 	
 	
 	
@@ -80,11 +80,11 @@ llama.cpp, AnythingLLM, PostgreSQL with pgvector, n8n for orchestration&lt;/p&gt
         </item>
         <item>
         <title>Building a Robust Access Layer for Self-Hosted Services</title>
-        <link>http://192.168.100.63:1313/projects/tunnel-setup/</link>
+        <link>http://192.168.100.63/projects/tunnel-setup/</link>
         <pubDate>Wed, 14 May 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63:1313/projects/tunnel-setup/</guid>
-        <description>&lt;img src="http://192.168.100.63:1313/img/oneoff/authelia.png" alt="Featured image of post Building a Robust Access Layer for Self-Hosted Services" /&gt;&lt;h1 id=&#34;making-my-self-hosted-services-actually-accessible-without-going-insane&#34;&gt;&lt;a href=&#34;#making-my-self-hosted-services-actually-accessible-without-going-insane&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Making My Self-Hosted Services Actually Accessible (Without Going Insane)
+        <guid>http://192.168.100.63/projects/tunnel-setup/</guid>
+        <description>&lt;img src="http://192.168.100.63/img/oneoff/authelia1.png" alt="Featured image of post Building a Robust Access Layer for Self-Hosted Services" /&gt;&lt;h1 id=&#34;making-my-self-hosted-services-actually-accessible-without-going-insane&#34;&gt;&lt;a href=&#34;#making-my-self-hosted-services-actually-accessible-without-going-insane&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Making My Self-Hosted Services Actually Accessible (Without Going Insane)
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;How I finally got my recipe manager working from anywhere without poking holes in my firewall&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Posted: May 14, 2025 | 6 min read&lt;/p&gt;
 &lt;hr&gt;
@@ -217,10 +217,10 @@ Tandoor Service (on another VLAN)
         </item>
         <item>
         <title>From Torrent to Library: Automating TV, Movies, and Audiobooks with Gluetun, qBittorrent, and arr</title>
-        <link>http://192.168.100.63:1313/projects/torrent-setup/</link>
+        <link>http://192.168.100.63/projects/torrent-setup/</link>
         <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63:1313/projects/torrent-setup/</guid>
+        <guid>http://192.168.100.63/projects/torrent-setup/</guid>
         <description>&lt;hr&gt;
 &lt;h1 id=&#34;building-my-perfect-media-automation-pipeline&#34;&gt;&lt;a href=&#34;#building-my-perfect-media-automation-pipeline&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Building My Perfect Media Automation Pipeline
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;How I stopped manually managing downloads and built a self-running media server&lt;/em&gt;&lt;/p&gt;
@@ -376,10 +376,10 @@ Tandoor Service (on another VLAN)
         </item>
         <item>
         <title>Building a Self-Hosted Nextcloud: Detailed Setup</title>
-        <link>http://192.168.100.63:1313/projects/nextcloud-setup/</link>
+        <link>http://192.168.100.63/projects/nextcloud-setup/</link>
         <pubDate>Thu, 13 Mar 2025 12:00:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63:1313/projects/nextcloud-setup/</guid>
+        <guid>http://192.168.100.63/projects/nextcloud-setup/</guid>
         <description>&lt;h1 id=&#34;building-a-proper-nextcloud-setup-in-proxmox-lxc&#34;&gt;&lt;a href=&#34;#building-a-proper-nextcloud-setup-in-proxmox-lxc&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Building a Proper Nextcloud Setup in Proxmox LXC
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;How I got Nextcloud running smoothly without losing my mind (mostly)&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

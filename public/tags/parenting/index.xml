@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Parenting on My Blog</title>
-        <link>http://192.168.100.63:1313/tags/parenting/</link>
+        <link>http://192.168.100.63/tags/parenting/</link>
         <description>Recent content in Parenting on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 18 Mar 2025 13:37:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/parenting/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 18 Mar 2025 13:37:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/tags/parenting/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>What My 1 and 4-Year-Olds Taught Me About Leading Data Teams</title>
-        <link>http://192.168.100.63:1313/datascience/kids/</link>
+        <link>http://192.168.100.63/datascience/kids/</link>
         <pubDate>Tue, 18 Mar 2025 13:37:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/datascience/kids/</guid>
+        <guid>http://192.168.100.63/datascience/kids/</guid>
         <description>&lt;h1 id=&#34;my-kids-accidentally-made-me-a-better-data-leader&#34;&gt;&lt;a href=&#34;#my-kids-accidentally-made-me-a-better-data-leader&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;My Kids Accidentally Made Me a Better Data Leader
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;What a 1-year-old and 4-year-old taught me about managing teams&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

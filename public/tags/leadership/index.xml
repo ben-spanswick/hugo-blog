@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Leadership on My Blog</title>
-        <link>http://192.168.100.63:1313/tags/leadership/</link>
+        <link>http://192.168.100.63/tags/leadership/</link>
         <description>Recent content in Leadership on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Tue, 18 Mar 2025 13:37:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/leadership/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Tue, 18 Mar 2025 13:37:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/tags/leadership/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>What My 1 and 4-Year-Olds Taught Me About Leading Data Teams</title>
-        <link>http://192.168.100.63:1313/datascience/kids/</link>
+        <link>http://192.168.100.63/datascience/kids/</link>
         <pubDate>Tue, 18 Mar 2025 13:37:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/datascience/kids/</guid>
+        <guid>http://192.168.100.63/datascience/kids/</guid>
         <description>&lt;h1 id=&#34;my-kids-accidentally-made-me-a-better-data-leader&#34;&gt;&lt;a href=&#34;#my-kids-accidentally-made-me-a-better-data-leader&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;My Kids Accidentally Made Me a Better Data Leader
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;What a 1-year-old and 4-year-old taught me about managing teams&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -129,10 +129,10 @@ Try: &amp;ldquo;What can we learn from this that will help us next time?&amp;rdq
         </item>
         <item>
         <title>Why &#39;The Smartest Person in the Room&#39; is Killing Your Data Science Team</title>
-        <link>http://192.168.100.63:1313/datascience/genius/</link>
+        <link>http://192.168.100.63/datascience/genius/</link>
         <pubDate>Mon, 17 Mar 2025 03:00:30 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/datascience/genius/</guid>
+        <guid>http://192.168.100.63/datascience/genius/</guid>
         <description>&lt;h1 id=&#34;your-star-data-scientist-is-accidentally-sabotaging-your-team&#34;&gt;&lt;a href=&#34;#your-star-data-scientist-is-accidentally-sabotaging-your-team&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Your Star Data Scientist is Accidentally Sabotaging Your Team
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why the &amp;ldquo;genius in the room&amp;rdquo; might be your biggest problem&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -295,10 +295,10 @@ Make knowledge sharing and mentorship part of their value proposition.&lt;/p&gt;
         </item>
         <item>
         <title>How to Scale a Data Science Team Without Losing Agility</title>
-        <link>http://192.168.100.63:1313/datascience/agility/</link>
+        <link>http://192.168.100.63/datascience/agility/</link>
         <pubDate>Mon, 17 Mar 2025 02:59:30 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/datascience/agility/</guid>
+        <guid>http://192.168.100.63/datascience/agility/</guid>
         <description>&lt;h1 id=&#34;how-to-scale-your-data-science-team-without-everything-falling-apart&#34;&gt;&lt;a href=&#34;#how-to-scale-your-data-science-team-without-everything-falling-apart&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;How to Scale Your Data Science Team Without Everything Falling Apart
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;A survival guide for growing fast without dying slow&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -398,10 +398,10 @@ Make knowledge sharing and mentorship part of their value proposition.&lt;/p&gt;
         </item>
         <item>
         <title>What Business Leaders Get Wrong About Data Science (And How to Educate Them)</title>
-        <link>http://192.168.100.63:1313/datascience/leaders/</link>
+        <link>http://192.168.100.63/datascience/leaders/</link>
         <pubDate>Mon, 17 Mar 2025 02:44:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/datascience/leaders/</guid>
+        <guid>http://192.168.100.63/datascience/leaders/</guid>
         <description>&lt;h1 id=&#34;your-executives-think-data-science-is-magic-and-its-killing-your-projects&#34;&gt;&lt;a href=&#34;#your-executives-think-data-science-is-magic-and-its-killing-your-projects&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Your Executives Think Data Science is Magic (And It&amp;rsquo;s Killing Your Projects)
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;How to educate leadership without crushing their dreams&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -528,10 +528,10 @@ Make knowledge sharing and mentorship part of their value proposition.&lt;/p&gt;
         </item>
         <item>
         <title>How to Align Data Science with Business Strategy (And Stop Being a Science Project Team)</title>
-        <link>http://192.168.100.63:1313/datascience/businessstrategy/</link>
+        <link>http://192.168.100.63/datascience/businessstrategy/</link>
         <pubDate>Mon, 17 Mar 2025 02:36:40 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/datascience/businessstrategy/</guid>
+        <guid>http://192.168.100.63/datascience/businessstrategy/</guid>
         <description>&lt;h1 id=&#34;stop-being-the-cool-data-team-nobody-actually-uses&#34;&gt;&lt;a href=&#34;#stop-being-the-cool-data-team-nobody-actually-uses&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Stop Being the &amp;ldquo;Cool Data Team&amp;rdquo; Nobody Actually Uses
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;How to transform from science project to business asset&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -682,10 +682,10 @@ Make knowledge sharing and mentorship part of their value proposition.&lt;/p&gt;
         </item>
         <item>
         <title>Building High Impact Data Science Teams</title>
-        <link>http://192.168.100.63:1313/datascience/foundations/</link>
+        <link>http://192.168.100.63/datascience/foundations/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/datascience/foundations/</guid>
+        <guid>http://192.168.100.63/datascience/foundations/</guid>
         <description>&lt;h1 id=&#34;your-data-science-team-is-probably-expensive-and-useless&#34;&gt;&lt;a href=&#34;#your-data-science-team-is-probably-expensive-and-useless&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Your Data Science Team is Probably Expensive and Useless
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;How to build teams that actually move the business forward&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Engineering Leadership on My Blog</title>
-        <link>http://192.168.100.63:1313/categories/engineering-leadership/</link>
+        <link>http://192.168.100.63/categories/engineering-leadership/</link>
         <description>Recent content in Engineering Leadership on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/engineering-leadership/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/categories/engineering-leadership/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale</title>
-        <link>http://192.168.100.63:1313/datascience/techdebt/</link>
+        <link>http://192.168.100.63/datascience/techdebt/</link>
         <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/datascience/techdebt/</guid>
+        <guid>http://192.168.100.63/datascience/techdebt/</guid>
         <description>&lt;h1 id=&#34;your-tech-debt-is-secretly-destroying-your-team&#34;&gt;&lt;a href=&#34;#your-tech-debt-is-secretly-destroying-your-team&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Your Tech Debt is Secretly Destroying Your Team
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;How to stop paying compound interest on bad code decisions&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

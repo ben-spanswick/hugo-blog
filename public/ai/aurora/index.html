@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Microsoft's Aurora AI model delivers superior weather forecasts 5,000x faster than supercomputers, reshaping what's possible for weather-dependent industries.">
+<title>The 57-Second Forecast: How AI is Rewriting the Future of Weather</title>
+
+<link rel='canonical' href='http://192.168.100.63/ai/aurora/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="The 57-Second Forecast: How AI is Rewriting the Future of Weather">
+<meta property='og:description' content="Microsoft's Aurora AI model delivers superior weather forecasts 5,000x faster than supercomputers, reshaping what's possible for weather-dependent industries.">
+<meta property='og:url' content='http://192.168.100.63/ai/aurora/'>
+<meta property='og:site_name' content='My Blog'>
+<meta property='og:type' content='article'><meta property='article:section' content='Ai' /><meta property='article:tag' content='AI' /><meta property='article:tag' content='Meteorology' /><meta property='article:tag' content='Technology' /><meta property='article:tag' content='Foundation Models' /><meta property='article:tag' content='Microsoft' /><meta property='article:tag' content='Weather' /><meta property='article:published_time' content='2025-05-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-05-24T00:00:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63/img/weather/header.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="The 57-Second Forecast: How AI is Rewriting the Future of Weather">
+<meta name="twitter:description" content="Microsoft's Aurora AI model delivers superior weather forecasts 5,000x faster than supercomputers, reshaping what's possible for weather-dependent industries."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63/img/weather/header.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">💾</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">My Blog</a></h1>
+            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/news/' >
+                
+                
+                
+                <span>News</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/ai/' >
+                
+                
+                
+                <span>AI</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/datascience/' >
+                
+                
+                
+                <span>Data Strategy</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='Spanswick_Resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/ai/aurora/">
+                
+                    <img src="/img/weather/header.png" loading="lazy" alt="Featured image of post The 57-Second Forecast: How AI is Rewriting the Future of Weather" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/tech-analysis/" >
+                Tech Analysis
+            </a>
+        
+            <a href="/categories/science/" >
+                Science
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/ai/aurora/">The 57-Second Forecast: How AI is Rewriting the Future of Weather</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Microsoft&#39;s Aurora AI model delivers superior weather forecasts 5,000x faster than supercomputers, reshaping what&#39;s possible for weather-dependent industries.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 24, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    7 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h3 id="ai-summary"><a href="#ai-summary" class="header-anchor"></a>AI Summary
+</h3><ul>
+<li>Microsoft&rsquo;s Aurora AI generates a 10-day global forecast in 57 seconds, a ~5,000x speedup over traditional models, while outperforming both the ECMWF and Google&rsquo;s GraphCast on key metrics.</li>
+<li>Its foundation model architecture excels at forecasting extreme weather, air quality, and GHG concentrations, offering transformative operational advantages for industries like utilities and power generation.</li>
+<li>By running on commodity hardware, Aurora democratizes access to elite forecasting, though its &ldquo;black box&rdquo; nature highlights the need for hybrid systems that blend AI speed with physical interpretability.</li>
+</ul>
+<hr>
+<p>I explored Aurora last week and watched it spit out a ten-day global weather forecast in fifty-seven seconds. On my local PC. While <a class="link" href="https://www.ecmwf.int/en/forecasts/documentation-and-support"  target="_blank" rel="noopener"
+    >ECMWF&rsquo;s operational model</a> was still grinding through hour two of its usual four-hour computational slog.</p>
+<p>That&rsquo;s the kind of performance gap that makes you do a double-take at your monitor.</p>
+<h3 id="the-architecture-that-actually-works"><a href="#the-architecture-that-actually-works" class="header-anchor"></a>The Architecture That Actually Works
+</h3><p><a class="link" href="https://www.microsoft.com/en-us/research/project/aurora-forecasting/"  target="_blank" rel="noopener"
+    >Aurora</a> represents Microsoft&rsquo;s shot at building a foundation model for Earth systems, and unlike most AI projects hunting for relevance, this one tackles a genuine computational nightmare.</p>
+<p>Traditional weather prediction works like this: chop the atmosphere into millions of grid cells, solve physics equations at each point, repeat until your supercomputer overheats or the forecast completes—whichever comes first. Aurora learned atmospheric patterns directly from over a million hours of real geophysical data instead.</p>
+<p>The 1.3 billion parameter model uses a flexible <strong>3D Swin Transformer</strong> with <strong>Perceiver-based encoders and decoders</strong> that handle the multi-scale chaos making weather computationally expensive. Storm systems nest inside each other like Russian dolls—local thunderstorms emerge from continental temperature gradients, jet streams mess with precipitation patterns thousands of miles away. Traditional models struggle with these nested interactions. Aurora&rsquo;s attention mechanisms track everything simultaneously, from molecular processes to planetary circulation.</p>
+<p><img src="/img/weather/architecture.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Diagram showing the 3D Swin Transformer and Perceiver-based architecture of the Aurora model."
+	
+	
+></p>
+<p>The training approach deserves attention too. Aurora pretrains on heterogeneous datasets with different resolutions, variables, and pressure levels, then fine-tunes in two stages: short-lead time adjustments of pretrained weights, followed by long-lead time rollout fine-tuning using Low Rank Adaptation. This lets Aurora digest messy real-world data—satellite imagery, radar sweeps, surface observations—without the usual preprocessing gymnastics.</p>
+<h3 id="performance-that-actually-matters"><a href="#performance-that-actually-matters" class="header-anchor"></a>Performance That Actually Matters
+</h3><p>Aurora outperformed ECMWF&rsquo;s high-resolution model on <a class="link" href="https://www.nature.com/articles/s41586-025-09005-y"  target="_blank" rel="noopener"
+    >90% of tested variables</a>. When compared directly against GraphCast—Google&rsquo;s previous state-of-the-art AI weather model—Aurora matched or exceeded performance on 94% of targets. The biggest gains showed up in the upper atmosphere, where GraphCast performance notoriously struggles, with improvements reaching 40%.</p>
+<p><img src="/img/weather/auroravsgraphcast.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Chart comparing Aurora’s performance against GraphCast across different atmospheric levels."
+	
+	
+></p>
+<p>Storm Ciarán provided a real-world stress test. When this low-pressure system battered northwestern Europe in November 2023, it set new intensity records for England and caught existing weather models off guard. The rapid intensification and peak wind speeds exposed limitations in current prediction systems—exactly the kind of extreme event where Aurora&rsquo;s pattern recognition capabilities could prove invaluable.</p>
+<p><img src="/img/weather/ECMWF.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Satellite image or weather map snapshot of Storm Ciarán over Europe."
+	
+	
+></p>
+<p>The speed differential feels almost unfair. Microsoft estimates Aurora delivers roughly 5,000x computational speedup over the Integrated Forecasting System. Traditional numerical weather prediction resembles computational archaeology—teams nursing finite difference equations through supercomputer clusters. Aurora runs inference on commodity hardware faster than most people stream Netflix.</p>
+<h3 id="aurora-vs-gencast-different-tools-for-different-jobs"><a href="#aurora-vs-gencast-different-tools-for-different-jobs" class="header-anchor"></a>Aurora vs. GenCast: Different Tools for Different Jobs
+</h3><p>Google&rsquo;s <a class="link" href="https://deepmind.google/discover/blog/gencast-predicts-weather-and-the-risks-of-extreme-conditions-with-sota-accuracy/"  target="_blank" rel="noopener"
+    >GenCast</a>, which I covered previously, takes a fundamentally different approach. Aurora focuses on deterministic predictions with blazing speed. GenCast emphasizes probabilistic ensembles that capture forecast uncertainty.</p>
+<ul>
+<li><strong>Aurora tells you:</strong> &ldquo;Hurricane makes landfall Tuesday morning at these coordinates.&rdquo;</li>
+<li><strong>GenCast provides:</strong> &ldquo;65% chance of landfall between Monday evening and Wednesday noon, with this spatial uncertainty envelope.&rdquo;</li>
+</ul>
+<p>Both approaches serve different needs. Emergency managers often want decisive guidance for evacuation decisions—Aurora&rsquo;s deterministic clarity works well there. Climate researchers analyzing long-term scenarios benefit more from GenCast&rsquo;s probabilistic richness.</p>
+<p>AI weather modeling is fragmenting into specialized tools rather than converging on a single approach. Different problems demand different computational strategies.</p>
+<h3 id="beyond-weather-the-versatility-factor"><a href="#beyond-weather-the-versatility-factor" class="header-anchor"></a>Beyond Weather: The Versatility Factor
+</h3><p>Aurora&rsquo;s foundation model architecture generalizes across environmental prediction tasks beautifully. The model can forecast atmospheric variables from temperature and wind speed to air pollution levels and greenhouse gas concentrations.</p>
+<p>Air quality forecasting provides a compelling example. Aurora produces accurate five-day global air pollution forecasts at 0.4° spatial resolution, outperforming the Copernicus Atmosphere Monitoring Service on 74% of targets. Predicting atmospheric gases like nitrogen dioxide is notoriously difficult due to their spatially heterogeneous nature and complex diurnal cycles—sunlight reduces background levels through photolysis, while densely populated areas show emission spikes. Aurora captures both the extremes and background levels accurately.</p>
+<p><img src="/img/weather/performancevERA52021at6hlead.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Graph showing Aurora’s performance vs ERA5 reanalysis data for a specific variable."
+	
+	
+></p>
+<p>This versatility distinguishes Aurora from traditional numerical models, which typically specialize in narrow domains. The same architecture predicting hurricane tracks can forecast agricultural growing seasons or urban heat effects. It&rsquo;s like having a meteorological Swiss Army knife.</p>
+<h3 id="the-access-revolution"><a href="#the-access-revolution" class="header-anchor"></a>The Access Revolution
+</h3><p>Aurora&rsquo;s computational efficiency has serious implications for global weather prediction access. Small nations and regional authorities can now access forecast quality previously reserved for meteorological superpowers. The barrier drops from supercomputer-class infrastructure to workstation-class hardware.</p>
+<p>Bangladesh doesn&rsquo;t need ECMWF-equivalent infrastructure for ECMWF-quality cyclone predictions anymore. They need a decent GPU and reliable internet. This could prove transformative for disaster preparedness in regions where accurate forecasting saves lives.</p>
+<p>The foundation model approach particularly benefits data-sparse regions. Aurora&rsquo;s diverse pretraining corpus enables it to excel even with limited fine-tuning data for specific tasks—exactly what developing nations and polar regions need for localized forecasting capabilities. You can learn more about its <a class="link" href="https://microsoft.github.io/aurora/intro.html"  target="_blank" rel="noopener"
+    >open-source availability here</a>.</p>
+<h3 id="the-interpretability-problem"><a href="#the-interpretability-problem" class="header-anchor"></a>The Interpretability Problem
+</h3><p>Aurora suffers from standard deep learning opacity. When it predicts rapid hurricane intensification, the reasoning disappears into transformer attention weights and embedding spaces. Traditional models at least show their work through differential equations and thermodynamic principles.</p>
+<p>This matters in operational meteorology. Emergency management officials need confidence intervals and failure modes, not just point predictions. &ldquo;The AI recommends evacuation&rdquo; doesn&rsquo;t inspire the same institutional trust as &ldquo;pressure gradients indicate rapid intensification based on established physics.&rdquo;</p>
+<p>Hybrid approaches probably make the most sense—combine Aurora&rsquo;s computational efficiency with traditional models&rsquo; physical interpretability. Let AI handle pattern recognition and rapid inference while physics-based models provide sanity checks and explainable backups.</p>
+<h3 id="why-i-actually-care-about-this"><a href="#why-i-actually-care-about-this" class="header-anchor"></a>Why I Actually Care About This
+</h3><p>Six years of weather-dependent work has turned me into an accidental meteorologist. I understand more about ensemble spreads, convective parameterization, and model bias correction than I ever wanted to. When you&rsquo;re responsible for decisions that hinge on whether the GFS or NAM handles lake-effect snow better, you develop opinions about atmospheric modeling fast.</p>
+<p>Aurora represents something fundamentally different from GenCast&rsquo;s probabilistic approach. For industries like utilities and power generation that live or die by weather accuracy, Aurora&rsquo;s combination of speed and precision could reshape how they consume meteorological data entirely.</p>
+<p>Think about utility load forecasting. Right now, operators blend multiple weather models with complex bias corrections, waiting hours for updated forecasts while demand patterns shift in real-time. Aurora could deliver superior predictions in under a minute, enabling reactive load management that currently isn&rsquo;t computationally feasible.</p>
+<p>Power generation scheduling faces similar constraints. Wind and solar forecasting relies on numerical weather models that update every six hours with multi-hour computational delays. Aurora&rsquo;s rapid refresh capability could enable minute-by-minute generation adjustments based on atmospheric conditions that traditional models miss entirely.</p>
+<p>The air quality forecasting capabilities add another dimension. Industrial facilities could adjust operations in real-time based on atmospheric dispersion predictions, optimizing both environmental compliance and operational efficiency in ways that current systems can&rsquo;t support.</p>
+<p>This feels like a genuine step change rather than incremental improvement. Industries that have spent decades working around weather model limitations suddenly have access to forecasting capabilities that eliminate many of those constraints. That&rsquo;s the kind of technological shift that transforms entire operational approaches.</p>
+<h3 id="whats-coming-next"><a href="#whats-coming-next" class="header-anchor"></a>What&rsquo;s Coming Next
+</h3><p>Aurora represents meteorology&rsquo;s first serious encounter with foundation model capabilities. The performance gaps are too substantial to ignore, efficiency improvements too dramatic to dismiss. This will accelerate AI adoption across atmospheric sciences faster than incremental progress ever could.</p>
+<p>The research demonstrates clear scaling benefits—bigger models achieve lower validation losses, with roughly 5% improvement for every doubling of model size. Combined with the proven advantages of diverse pretraining data, this suggests Aurora represents just the beginning of what foundation models can achieve in Earth system modeling.</p>
+<p>Expect next-generation operational forecasting systems to embrace aggressive hybridization. Physics-informed neural networks embedding thermodynamic constraints directly into loss functions. Ensemble methods blending AI predictions with traditional numerical approaches. Uncertainty quantification frameworks providing confidence bounds around deep learning forecasts.</p>
+<p>The weather prediction revolution just moved from academic curiosity to operational necessity. Aurora proved foundation models can master atmospheric physics well enough to outperform decades of supercomputing refinement. The rest of meteorology will spend considerable time figuring out what that means for everything else.</p>
+<p>Those sub-minute global forecasts still feel slightly surreal—a desktop computer peering ten days into atmospheric chaos with better accuracy than humanity&rsquo;s most sophisticated weather machines. The future of meteorology arrived faster than most predicted, which feels appropriately ironic for the field.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ai/">AI</a>
+        
+            <a href="/tags/meteorology/">Meteorology</a>
+        
+            <a href="/tags/technology/">Technology</a>
+        
+            <a href="/tags/foundation-models/">Foundation Models</a>
+        
+            <a href="/tags/microsoft/">Microsoft</a>
+        
+            <a href="/tags/weather/">Weather</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/ai/24h-with-claude4/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/claude4/header.png" loading="lazy" data-key="" data-hash="/img/claude4/header.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">24 Hours with Claude 4: When the Hype Actually Delivers</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/news/051925/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/news/googleio.png" loading="lazy" data-key="" data-hash="/img/news/googleio.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Last Week in AI: 05/19/25-05/23/25: When Everyone Decided to Ship Everything at Once</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/musings/stability/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/tintinconfused.png" loading="lazy" data-key="" data-hash="/img/tintinconfused.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Real Problem with AI Today? Nobody Knows What Works Tomorrow</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/musings/claude4/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/claude4/header.png" loading="lazy" data-key="" data-hash="/img/claude4/header.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Claude 4: The AI That&#39;s So Smart It Scares Its Own Creators</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/projects/homelab/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/HL.jpg" loading="lazy" data-key="" data-hash="/img/HL.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">First Homelab: Reflections, Diagram, and Stack</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 My Blog
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.1e9a3bafd846ced4c345d084b355fb8c7bae75701c338f8a1f8a82c780137826.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

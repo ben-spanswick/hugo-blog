@@ -2,17 +2,68 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Technology on My Blog</title>
-        <link>http://192.168.100.63:1313/categories/technology/</link>
+        <link>http://192.168.100.63/categories/technology/</link>
         <description>Recent content in Technology on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/technology/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/categories/technology/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>24 Hours with Claude 4: When the Hype Actually Delivers</title>
+        <link>http://192.168.100.63/ai/24h-with-claude4/</link>
+        <pubDate>Sat, 24 May 2025 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63/ai/24h-with-claude4/</guid>
+        <description>&lt;img src="http://192.168.100.63/img/claude4/header.png" alt="Featured image of post 24 Hours with Claude 4: When the Hype Actually Delivers" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Superior Reasoning:&lt;/strong&gt; Claude 4 excels at complex coding and architectural tasks, significantly outperforming previous versions and competitors like GPT-4.1.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Debugging Weakness:&lt;/strong&gt; Its strength in providing definitive answers becomes a weakness in debugging. It offers solutions but doesn&amp;rsquo;t collaborate on troubleshooting like Claude 3.7.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Creative Depth:&lt;/strong&gt; The model demonstrates a deeper level of creative rewriting, reconstructing content from the ground up rather than making superficial changes.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Optimal Workflow:&lt;/strong&gt; The best approach involves a multi-tool setup: Claude 4 for core development, Claude 3.7 for collaborative debugging, and GPT-4o for casual brainstorming.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Last night, I fed Claude 4 a bug that had been mocking me for three weeks. The kind of feature that works perfectly until it doesn&amp;rsquo;t, then breaks in ways that make you question your life choices. Claude 3.7 had poked at it like a confused mechanic, suggesting the same fixes in different orders.&lt;/p&gt;
+&lt;p&gt;Claude 4 dissected it in two minutes. Clean. Surgical. Done.&lt;/p&gt;
+&lt;p&gt;That moment crystallized something I&amp;rsquo;d been sensing all day: this isn&amp;rsquo;t just another version bump with marketing copy about &amp;ldquo;enhanced capabilities.&amp;rdquo; We&amp;rsquo;re talking about a genuine architectural shift in how these systems think.&lt;/p&gt;
+&lt;h3 id=&#34;the-max-plan-laboratory&#34;&gt;&lt;a href=&#34;#the-max-plan-laboratory&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Max Plan Laboratory
+&lt;/h3&gt;&lt;p&gt;I&amp;rsquo;ve been running both engines—Opus through Claude Code for the heavy lifting, Sonnet in the web interface for everything else. I&amp;rsquo;m a Max plan subscriber with three AI subscriptions running in parallel because, apparently, I enjoy paying for the privilege of comparing chatbots like wine vintages.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Claude 4 makes o3 feel sluggish by comparison. Against GPT-4.1, it demolishes complex reasoning tasks and multi-step coding challenges.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;I still grab GPT-4o for casual conversations—it has that easy rapport thing nailed - but when the work gets serious, Claude 4 owns the room.&lt;/p&gt;
+&lt;p&gt;The coding improvements aren&amp;rsquo;t subtle. With 3.7, I&amp;rsquo;d feed it a problem and watch it think out loud, trying different approaches, sometimes circling back to earlier mistakes. Claude 4 operates more like that senior developer who&amp;rsquo;s seen this exact problem seventeen times before. No theatrics. Just solutions.&lt;/p&gt;
+&lt;h3 id=&#34;binary-thinking-blues&#34;&gt;&lt;a href=&#34;#binary-thinking-blues&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Binary Thinking Blues
+&lt;/h3&gt;&lt;p&gt;But experience has taught me to poke at the edges, to find where the magic breaks down. Claude 4&amp;rsquo;s strength becomes its weakness in debugging scenarios. It either knows the answer or it doesn&amp;rsquo;t. Binary. Definitive. Sometimes unhelpfully final.&lt;/p&gt;
+&lt;p&gt;3.7 would troubleshoot with you. It would break problems down, try variations, and explore dead ends until something clicked. That collaborative debugging energy made it feel like a persistent partner rather than an oracle. Claude 4 delivers more accurate answers when it has them, but when it hits a wall, it just&amp;hellip; stops. No alternatives. No exploration. Conversation over.&lt;/p&gt;
+&lt;p&gt;For core architecture work, this decisiveness is perfect. For those 2 AM debugging sessions when nothing makes sense and you need someone to think through the impossible with you? &lt;em&gt;Keep 3.7 bookmarked.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;creative-surgery&#34;&gt;&lt;a href=&#34;#creative-surgery&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Creative Surgery
+&lt;/h3&gt;&lt;p&gt;The creative writing changes caught me sideways. It&amp;rsquo;s not just better output - it&amp;rsquo;s a fundamentally different response to feedback.&lt;/p&gt;
+&lt;p&gt;Tell 3.7 to &amp;ldquo;make this less casual,&amp;rdquo; and you&amp;rsquo;d get surface-level adjustments. Same structure underneath, different word choices on top. It was like spray-painting over rust instead of replacing the metal. Claude 4 actually reconstructs. Ask for tone changes, and it reconsiders the entire approach, rebuilding from different foundations.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;3.7 course-corrects while walking. Claude 4 stops, consults the map, and chooses a completely different route.&lt;/em&gt; This same architectural thinking that makes debugging feel abrupt makes creative iteration feel genuinely collaborative.&lt;/p&gt;
+&lt;h3 id=&#34;context-window-wizardry&#34;&gt;&lt;a href=&#34;#context-window-wizardry&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Context Window Wizardry
+&lt;/h3&gt;&lt;p&gt;Everyone&amp;rsquo;s obsessing over the 200k token context window. &amp;ldquo;How can you compete with million-token windows?&amp;rdquo; they ask, brandishing their context length like a measuring contest at a developer conference. But working with Claude 4, that limitation feels&amp;hellip; irrelevant.&lt;/p&gt;
+&lt;p&gt;Something sophisticated is happening under the hood. The system handles complex, multi-part conversations without the typical degradation you&amp;rsquo;d expect from a smaller window. Either they&amp;rsquo;ve cracked some impressive compression techniques or they&amp;rsquo;re doing something clever with attention mechanisms that makes every token count double.&lt;/p&gt;
+&lt;p&gt;Whatever the architecture, it works. I haven&amp;rsquo;t hit the ceiling in practical use, even during extended coding sessions with massive codebases.&lt;/p&gt;
+&lt;h3 id=&#34;skip-the-omni-features&#34;&gt;&lt;a href=&#34;#skip-the-omni-features&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Skip the Omni Features
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Quick sidebar:&lt;/strong&gt; the multimodal capabilities are forgettable. If you need vision or voice interactions, stick with GPT-4o. Claude 4&amp;rsquo;s strength lives in text-based reasoning and code generation. Don&amp;rsquo;t get distracted by the omni features - they feel tacked on rather than thoughtfully integrated.&lt;/p&gt;
+&lt;h3 id=&#34;workflow-archaeology&#34;&gt;&lt;a href=&#34;#workflow-archaeology&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Workflow Archaeology
+&lt;/h3&gt;&lt;p&gt;After cycling through dozens of AI tools, I&amp;rsquo;m settling into something that feels sustainable.&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Claude 4:&lt;/strong&gt; Handles the foundational work - system design, complex implementations, anything requiring sustained reasoning.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Claude 3.7:&lt;/strong&gt; My go-to for collaborative debugging when the path forward is unclear.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;GPT-4o:&lt;/strong&gt; Stays in the rotation for quick brainstorming and casual interactions.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;It&amp;rsquo;s not the streamlined, single-tool future we were promised, but complexity often demands specialized solutions. The Linux world figured this out decades ago: use the best tool for each job and compose them intelligently.&lt;/p&gt;
+&lt;h3 id=&#34;actually-worth-the-upgrade&#34;&gt;&lt;a href=&#34;#actually-worth-the-upgrade&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Actually Worth the Upgrade
+&lt;/h3&gt;&lt;p&gt;Claude 4 represents something I haven&amp;rsquo;t seen in AI development lately: genuine capability expansion rather than just parameter optimization. It&amp;rsquo;s solving categories of problems that previously required workarounds or multiple tools.&lt;/p&gt;
+&lt;p&gt;The binary thinking limitation is real, but understanding it transforms frustration into strategic tool selection. Know when to switch. Know what each system does best. Work with the grain of the technology instead of against it.&lt;/p&gt;
+&lt;p&gt;Twenty-four hours in, and I&amp;rsquo;m convinced this isn&amp;rsquo;t just iterative improvement. Something fundamental shifted in how these systems process and respond to complex requirements. The upgrade path finally feels worth taking.&lt;/p&gt;
+</description>
+        </item>
+        <item>
         <title>Last Week in AI: 05/19/25-05/23/25: When Everyone Decided to Ship Everything at Once</title>
-        <link>http://192.168.100.63:1313/news/051925/</link>
+        <link>http://192.168.100.63/news/051925/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/news/051925/</guid>
-        <description>&lt;img src="http://192.168.100.63:1313/img/news/googleio.png" alt="Featured image of post Last Week in AI: 05/19/25-05/23/25: When Everyone Decided to Ship Everything at Once" /&gt;&lt;p&gt;I woke up Thursday morning to seventeen different AI announcements in my feed. By noon, my Slack was melting down with engineers arguing about benchmarks. By evening, I&amp;rsquo;d given up trying to process it all and just started drinking.&lt;/p&gt;
+        <guid>http://192.168.100.63/news/051925/</guid>
+        <description>&lt;img src="http://192.168.100.63/img/news/googleio.png" alt="Featured image of post Last Week in AI: 05/19/25-05/23/25: When Everyone Decided to Ship Everything at Once" /&gt;&lt;p&gt;I woke up Thursday morning to seventeen different AI announcements in my feed. By noon, my Slack was melting down with engineers arguing about benchmarks. By evening, I&amp;rsquo;d given up trying to process it all and just started drinking.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s what actually matters from this week&amp;rsquo;s AI avalanche.&lt;/p&gt;
 &lt;h3 id=&#34;anthropic-builds-something-that-scares-them&#34;&gt;&lt;a href=&#34;#anthropic-builds-something-that-scares-them&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Anthropic Builds Something That Scares Them
 &lt;/h3&gt;&lt;p&gt;Anthropic &lt;a class=&#34;link&#34; href=&#34;https://www.anthropic.com/news/claude-4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
@@ -59,11 +110,11 @@
         </item>
         <item>
         <title>The Real Problem with AI Today? Nobody Knows What Works Tomorrow</title>
-        <link>http://192.168.100.63:1313/musings/stability/</link>
+        <link>http://192.168.100.63/musings/stability/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/musings/stability/</guid>
-        <description>&lt;img src="http://192.168.100.63:1313/img/tintinconfused.png" alt="Featured image of post The Real Problem with AI Today? Nobody Knows What Works Tomorrow" /&gt;&lt;h1 id=&#34;the-real-problem-with-ai-today-nobody-knows-what-works-tomorrow&#34;&gt;&lt;a href=&#34;#the-real-problem-with-ai-today-nobody-knows-what-works-tomorrow&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Real Problem with AI Today? Nobody Knows What Works Tomorrow
+        <guid>http://192.168.100.63/musings/stability/</guid>
+        <description>&lt;img src="http://192.168.100.63/img/tintinconfused.png" alt="Featured image of post The Real Problem with AI Today? Nobody Knows What Works Tomorrow" /&gt;&lt;h1 id=&#34;the-real-problem-with-ai-today-nobody-knows-what-works-tomorrow&#34;&gt;&lt;a href=&#34;#the-real-problem-with-ai-today-nobody-knows-what-works-tomorrow&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Real Problem with AI Today? Nobody Knows What Works Tomorrow
 &lt;/h1&gt;&lt;p&gt;I&amp;rsquo;ve been living in AI tools for the past year. Multiple subscriptions, endless experiments, daily workflows built around these systems. And I&amp;rsquo;m starting to think we&amp;rsquo;re all participating in the world&amp;rsquo;s most expensive beta test.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s how my mornings go: Yesterday&amp;rsquo;s perfectly functioning ChatGPT woke up stupid. The code that was flowing like water twelve hours ago now reads like it was written by someone who just discovered what a semicolon is. So I jump to Claude – except artifacts decided to take a vacation. Fine, Gemini it is. Works brilliantly. For exactly one day.&lt;/p&gt;
 &lt;p&gt;Then we reset the whole circus.&lt;/p&gt;
@@ -112,18 +163,18 @@
         </item>
         <item>
         <title>Claude 4: The AI That&#39;s So Smart It Scares Its Own Creators</title>
-        <link>http://192.168.100.63:1313/musings/claude4/</link>
+        <link>http://192.168.100.63/musings/claude4/</link>
         <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/musings/claude4/</guid>
-        <description>&lt;img src="http://192.168.100.63:1313/img/claude4/header.png" alt="Featured image of post Claude 4: The AI That&#39;s So Smart It Scares Its Own Creators" /&gt;&lt;h1 id=&#34;claude-4-the-ai-thats-so-smart-it-scares-its-own-creators&#34;&gt;&lt;a href=&#34;#claude-4-the-ai-thats-so-smart-it-scares-its-own-creators&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Claude 4: The AI That&amp;rsquo;s So Smart It Scares Its Own Creators
+        <guid>http://192.168.100.63/musings/claude4/</guid>
+        <description>&lt;img src="http://192.168.100.63/img/claude4/header.png" alt="Featured image of post Claude 4: The AI That&#39;s So Smart It Scares Its Own Creators" /&gt;&lt;h1 id=&#34;claude-4-the-ai-thats-so-smart-it-scares-its-own-creators&#34;&gt;&lt;a href=&#34;#claude-4-the-ai-thats-so-smart-it-scares-its-own-creators&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Claude 4: The AI That&amp;rsquo;s So Smart It Scares Its Own Creators
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why Anthropic&amp;rsquo;s latest breakthrough comes with some uncomfortable safety warnings&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;Anthropic just dropped Claude 4, and the benchmarks are genuinely impressive. But buried in the announcement is something that should make everyone pay attention: this AI is so capable that Anthropic had to activate their highest safety protocols to prevent it from accidentally helping someone build weapons of mass destruction.&lt;/p&gt;
 &lt;p&gt;Let me unpack that for you.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-benchmarks-tell-an-impressive-story&#34;&gt;&lt;a href=&#34;#the-benchmarks-tell-an-impressive-story&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Benchmarks Tell an Impressive Story
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/swe.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/swe.png&#34;
 	
 	
 	
@@ -151,7 +202,7 @@
 &lt;/ul&gt;
 &lt;p&gt;&lt;strong&gt;Personal take:&lt;/strong&gt; This feels like the first AI that could actually replace junior developers on routine tasks, not just assist them.&lt;/p&gt;
 &lt;h3 id=&#34;technical-specifications-and-pricing&#34;&gt;&lt;a href=&#34;#technical-specifications-and-pricing&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Technical Specifications and Pricing
-&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/price.png&#34;
+&lt;/h3&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/price.png&#34;
 	
 	
 	
@@ -185,7 +236,7 @@
 &lt;li&gt;Claude Sonnet 3.7: 78.2 %&lt;/li&gt;
 &lt;li&gt;Human PhD experts: ~69%&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/performance.png&#34;
+&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/performance.png&#34;
 	
 	
 	
@@ -199,7 +250,7 @@
 &lt;p&gt;&lt;strong&gt;Translation:&lt;/strong&gt; Claude 4 is now better than most PhD scientists at answering graduate-level questions in their own fields. That&amp;rsquo;s&amp;hellip; concerning in ways I&amp;rsquo;ll get to.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-safety-red-flag-everyones-ignoring&#34;&gt;&lt;a href=&#34;#the-safety-red-flag-everyones-ignoring&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Safety Red Flag Everyone&amp;rsquo;s Ignoring
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/asl.png&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/asl.png&#34;
 	
 	
 	
@@ -221,7 +272,7 @@
     &gt;Full technical details available in Anthropic&amp;rsquo;s safety evaluation report&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 &lt;h3 id=&#34;what-asl-3-actually-involves&#34;&gt;&lt;a href=&#34;#what-asl-3-actually-involves&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What ASL-3 Actually Involves
-&lt;/h3&gt;&lt;figure&gt;&lt;img src=&#34;http://192.168.100.63:1313/images/claude4/asl3-security-measures.png&#34;
+&lt;/h3&gt;&lt;figure&gt;&lt;img src=&#34;http://192.168.100.63/images/claude4/asl3-security-measures.png&#34;
     alt=&#34;Diagram showing enhanced security measures for ASL-3 AI systems&#34;&gt;&lt;figcaption&gt;
       &lt;h4&gt;ASL-3 Security Protocols&lt;/h4&gt;
     &lt;/figcaption&gt;
@@ -260,7 +311,7 @@
 &lt;p&gt;&lt;strong&gt;The math is simple:&lt;/strong&gt; The capabilities are advancing faster than our ability to safely deploy them.&lt;/p&gt;
 &lt;hr&gt;
 &lt;h2 id=&#34;the-real-world-impact&#34;&gt;&lt;a href=&#34;#the-real-world-impact&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Real-World Impact
-&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63:1313/img/claude4/agent.gif&#34;
+&lt;/h2&gt;&lt;p&gt;&lt;img src=&#34;http://192.168.100.63/img/claude4/agent.gif&#34;
 	
 	
 	
@@ -330,10 +381,10 @@
         </item>
         <item>
         <title>AIG: The Dumb Smart Thing That Might Change Everything</title>
-        <link>http://192.168.100.63:1313/musings/agi/</link>
+        <link>http://192.168.100.63/musings/agi/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/musings/agi/</guid>
+        <guid>http://192.168.100.63/musings/agi/</guid>
         <description>&lt;h1 id=&#34;agi-is-coming-and-im-not-sure-how-i-feel-about-it&#34;&gt;&lt;a href=&#34;#agi-is-coming-and-im-not-sure-how-i-feel-about-it&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AGI is Coming and I&amp;rsquo;m Not Sure How I Feel About It
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why the &amp;ldquo;thinking machine&amp;rdquo; might arrive sooner than we&amp;rsquo;re ready for&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -412,10 +463,10 @@ What happens when we create something smarter than us that doesn&amp;rsquo;t sha
         </item>
         <item>
         <title>Ann Arbor’s Big Grid Experiment: A Glimpse into the Future of Energy</title>
-        <link>http://192.168.100.63:1313/musings/seu-risk-analysis/</link>
+        <link>http://192.168.100.63/musings/seu-risk-analysis/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/musings/seu-risk-analysis/</guid>
+        <guid>http://192.168.100.63/musings/seu-risk-analysis/</guid>
         <description>&lt;h1 id=&#34;ann-arbor-is-trying-to-break-up-with-the-power-company&#34;&gt;&lt;a href=&#34;#ann-arbor-is-trying-to-break-up-with-the-power-company&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Ann Arbor is Trying to Break Up With the Power Company
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why one city&amp;rsquo;s energy experiment could change everything&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -539,10 +590,10 @@ What happens when we create something smarter than us that doesn&amp;rsquo;t sha
         </item>
         <item>
         <title>Gemma 3: Google&#39;s Lean, Mean AI Machine Takes on DeepSeek V3</title>
-        <link>http://192.168.100.63:1313/musings/gemma3-ai/</link>
+        <link>http://192.168.100.63/musings/gemma3-ai/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/musings/gemma3-ai/</guid>
+        <guid>http://192.168.100.63/musings/gemma3-ai/</guid>
         <description>&lt;h1 id=&#34;google-just-made-ai-way-cheaper-to-run-and-thats-huge&#34;&gt;&lt;a href=&#34;#google-just-made-ai-way-cheaper-to-run-and-thats-huge&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Google Just Made AI Way Cheaper to Run (And That&amp;rsquo;s Huge)
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why Gemma 3 might change who gets to play in the AI game&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -648,10 +699,10 @@ What happens when we create something smarter than us that doesn&amp;rsquo;t sha
         </item>
         <item>
         <title>Google&#39;s GenCast: AI Weather Forecasting and the Future of Grid Resiliency</title>
-        <link>http://192.168.100.63:1313/musings/gencast/</link>
+        <link>http://192.168.100.63/musings/gencast/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/musings/gencast/</guid>
+        <guid>http://192.168.100.63/musings/gencast/</guid>
         <description>&lt;h1 id=&#34;googles-weather-ai-could-save-your-lights-from-going-out&#34;&gt;&lt;a href=&#34;#googles-weather-ai-could-save-your-lights-from-going-out&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Google&amp;rsquo;s Weather AI Could Save Your Lights From Going Out
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why GenCast might be the grid reliability breakthrough utilities have been waiting for&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -783,10 +834,10 @@ What happens when we create something smarter than us that doesn&amp;rsquo;t sha
         </item>
         <item>
         <title>Self-Hosted Series: Tandoor</title>
-        <link>http://192.168.100.63:1313/projects/tandoor-recipe-management/</link>
+        <link>http://192.168.100.63/projects/tandoor-recipe-management/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/projects/tandoor-recipe-management/</guid>
+        <guid>http://192.168.100.63/projects/tandoor-recipe-management/</guid>
         <description>&lt;h1 id=&#34;finally-getting-my-recipe-chaos-under-control-with-tandoor&#34;&gt;&lt;a href=&#34;#finally-getting-my-recipe-chaos-under-control-with-tandoor&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Finally Getting My Recipe Chaos Under Control with Tandoor
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;How I stopped losing track of great recipes and built my own digital cookbook&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -885,10 +936,10 @@ What happens when we create something smarter than us that doesn&amp;rsquo;t sha
         </item>
         <item>
         <title>The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move</title>
-        <link>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</link>
+        <link>http://192.168.100.63/musings/cybersecurity-thoughts/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</guid>
+        <guid>http://192.168.100.63/musings/cybersecurity-thoughts/</guid>
         <description>&lt;h1 id=&#34;we-just-stopped-watching-russia-and-thats-terrifying&#34;&gt;&lt;a href=&#34;#we-just-stopped-watching-russia-and-thats-terrifying&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;We Just Stopped Watching Russia and That&amp;rsquo;s Terrifying
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why treating cybersecurity like a popularity contest is incredibly dangerous&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
@@ -976,10 +1027,10 @@ Work with allies who may have different threat priorities to maintain coverage.&
         </item>
         <item>
         <title>The Reality Check of GPT-5: When AI Ambitions Meet Practical Constraints</title>
-        <link>http://192.168.100.63:1313/musings/gpt5-future-ai/</link>
+        <link>http://192.168.100.63/musings/gpt5-future-ai/</link>
         <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/musings/gpt5-future-ai/</guid>
+        <guid>http://192.168.100.63/musings/gpt5-future-ai/</guid>
         <description>&lt;h1 id=&#34;gpt-5-is-struggling-and-thats-actually-good-news&#34;&gt;&lt;a href=&#34;#gpt-5-is-struggling-and-thats-actually-good-news&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;GPT-5 is Struggling and That&amp;rsquo;s Actually Good News
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why OpenAI&amp;rsquo;s challenges signal a healthier future for AI&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;

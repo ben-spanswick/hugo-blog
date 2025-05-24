@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>AI Commentary on My Blog</title>
-        <link>http://192.168.100.63:1313/categories/ai-commentary/</link>
+        <link>http://192.168.100.63/categories/ai-commentary/</link>
         <description>Recent content in AI Commentary on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/ai-commentary/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/categories/ai-commentary/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>The Real Problem with AI Today? Nobody Knows What Works Tomorrow</title>
-        <link>http://192.168.100.63:1313/musings/stability/</link>
+        <link>http://192.168.100.63/musings/stability/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/musings/stability/</guid>
-        <description>&lt;img src="http://192.168.100.63:1313/img/tintinconfused.png" alt="Featured image of post The Real Problem with AI Today? Nobody Knows What Works Tomorrow" /&gt;&lt;h1 id=&#34;the-real-problem-with-ai-today-nobody-knows-what-works-tomorrow&#34;&gt;&lt;a href=&#34;#the-real-problem-with-ai-today-nobody-knows-what-works-tomorrow&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Real Problem with AI Today? Nobody Knows What Works Tomorrow
+        <guid>http://192.168.100.63/musings/stability/</guid>
+        <description>&lt;img src="http://192.168.100.63/img/tintinconfused.png" alt="Featured image of post The Real Problem with AI Today? Nobody Knows What Works Tomorrow" /&gt;&lt;h1 id=&#34;the-real-problem-with-ai-today-nobody-knows-what-works-tomorrow&#34;&gt;&lt;a href=&#34;#the-real-problem-with-ai-today-nobody-knows-what-works-tomorrow&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Real Problem with AI Today? Nobody Knows What Works Tomorrow
 &lt;/h1&gt;&lt;p&gt;I&amp;rsquo;ve been living in AI tools for the past year. Multiple subscriptions, endless experiments, daily workflows built around these systems. And I&amp;rsquo;m starting to think we&amp;rsquo;re all participating in the world&amp;rsquo;s most expensive beta test.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s how my mornings go: Yesterday&amp;rsquo;s perfectly functioning ChatGPT woke up stupid. The code that was flowing like water twelve hours ago now reads like it was written by someone who just discovered what a semicolon is. So I jump to Claude – except artifacts decided to take a vacation. Fine, Gemini it is. Works brilliantly. For exactly one day.&lt;/p&gt;
 &lt;p&gt;Then we reset the whole circus.&lt;/p&gt;

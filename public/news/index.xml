@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>News on My Blog</title>
-        <link>http://192.168.100.63:1313/news/</link>
+        <link>http://192.168.100.63/news/</link>
         <description>Recent content in News on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Fri, 23 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/news/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Fri, 23 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63/news/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Last Week in AI: 05/19/25-05/23/25: When Everyone Decided to Ship Everything at Once</title>
-        <link>http://192.168.100.63:1313/news/051925/</link>
+        <link>http://192.168.100.63/news/051925/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/news/051925/</guid>
-        <description>&lt;img src="http://192.168.100.63:1313/img/news/googleio.png" alt="Featured image of post Last Week in AI: 05/19/25-05/23/25: When Everyone Decided to Ship Everything at Once" /&gt;&lt;p&gt;I woke up Thursday morning to seventeen different AI announcements in my feed. By noon, my Slack was melting down with engineers arguing about benchmarks. By evening, I&amp;rsquo;d given up trying to process it all and just started drinking.&lt;/p&gt;
+        <guid>http://192.168.100.63/news/051925/</guid>
+        <description>&lt;img src="http://192.168.100.63/img/news/googleio.png" alt="Featured image of post Last Week in AI: 05/19/25-05/23/25: When Everyone Decided to Ship Everything at Once" /&gt;&lt;p&gt;I woke up Thursday morning to seventeen different AI announcements in my feed. By noon, my Slack was melting down with engineers arguing about benchmarks. By evening, I&amp;rsquo;d given up trying to process it all and just started drinking.&lt;/p&gt;
 &lt;p&gt;Here&amp;rsquo;s what actually matters from this week&amp;rsquo;s AI avalanche.&lt;/p&gt;
 &lt;h3 id=&#34;anthropic-builds-something-that-scares-them&#34;&gt;&lt;a href=&#34;#anthropic-builds-something-that-scares-them&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Anthropic Builds Something That Scares Them
 &lt;/h3&gt;&lt;p&gt;Anthropic &lt;a class=&#34;link&#34; href=&#34;https://www.anthropic.com/news/claude-4&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;

@@ -2,16 +2,16 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
         <title>Team Culture on My Blog</title>
-        <link>http://192.168.100.63:1313/tags/team-culture/</link>
+        <link>http://192.168.100.63/tags/team-culture/</link>
         <description>Recent content in Team Culture on My Blog</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 17 Mar 2025 03:00:30 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/team-culture/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Mon, 17 Mar 2025 03:00:30 +0000</lastBuildDate><atom:link href="http://192.168.100.63/tags/team-culture/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Why &#39;The Smartest Person in the Room&#39; is Killing Your Data Science Team</title>
-        <link>http://192.168.100.63:1313/datascience/genius/</link>
+        <link>http://192.168.100.63/datascience/genius/</link>
         <pubDate>Mon, 17 Mar 2025 03:00:30 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/datascience/genius/</guid>
+        <guid>http://192.168.100.63/datascience/genius/</guid>
         <description>&lt;h1 id=&#34;your-star-data-scientist-is-accidentally-sabotaging-your-team&#34;&gt;&lt;a href=&#34;#your-star-data-scientist-is-accidentally-sabotaging-your-team&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Your Star Data Scientist is Accidentally Sabotaging Your Team
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why the &amp;ldquo;genius in the room&amp;rdquo; might be your biggest problem&lt;/em&gt;&lt;/p&gt;
 &lt;hr&gt;
