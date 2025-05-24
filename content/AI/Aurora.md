@@ -8,7 +8,6 @@ image:  "/img/weather/header.png"
 draft: false
 ---
 
-
 ### AI Summary
 
 * Microsoft's Aurora AI generates a 10-day global forecast in 57 seconds, a ~5,000x speedup over traditional models, while outperforming both the ECMWF and Google's GraphCast on key metrics.
