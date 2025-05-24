@@ -4,7 +4,7 @@ date = 2025-05-24T08:25:00-04:00
 description = "Microsoft's Aurora AI model can generate a 10-day global forecast in under a minute, outperforming traditional supercomputers and revolutionizing access to atmospheric science."
 tags = ["AI", "Meteorology", "Technology", "Foundation Models", "Microsoft", "Weather"]
 categories = ["Tech Analysis", "Science"]
-image: "/img/weather/header.png"
+image = "/img/weather/header.png"
 draft = false
 +++
 
