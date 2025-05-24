@@ -1,5 +1,6 @@
 ---
 title: "24 Hours with Claude 4: When the Hype Actually Delivers"
+description: " hands-on evaluation of Claude 4's capabilities after 24 hours of use, comparing its superior reasoning and coding performance against Claude 3.7 and GPT-4, while uncovering its debugging limitations and optimal use cases for different AI models."
 date: 2025-05-24
 tags: [AI, Claude, Anthropic, AI, Reviews]
 categories: [Technology, AI Trends]
