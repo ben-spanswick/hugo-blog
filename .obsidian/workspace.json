@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/AI/Aurora.md",
+                "file": "content/musings/stability.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Aurora"
+              "title": "stability"
             }
           }
         ]
