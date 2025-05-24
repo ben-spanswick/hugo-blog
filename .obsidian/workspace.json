@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "content/AI/Untitled.md",
+                "file": "content/AI/Aurora.md",
                 "mode": "source",
                 "source": true
               },
               "icon": "lucide-file",
-              "title": "Untitled"
+              "title": "Aurora"
             }
           }
         ]
@@ -179,10 +179,10 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2bbc976fdba69a2a",
+  "active": "68e34c432ab11c6c",
   "lastOpenFiles": [
     "template.md",
-    "content/AI/Untitled.md",
+    "content/AI/Aurora.md",
     "static/img/headshot.png",
     "static/img/weather/performancevERA52021at6hlead.png",
     "static/img/weather/performancevERA52021at6hlead.png.crdownload",
