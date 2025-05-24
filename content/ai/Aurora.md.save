@@ -1,7 +1,7 @@
 ---
 title: "The 57-Second Forecast: How AI is Rewriting the Future of Weather"
 description: "Microsoft's Aurora AI model delivers superior weather forecasts 5,000x faster than supercomputers, reshaping what's possible for weather-dependent industries."
-date: 2025-05-23
+date: 2025-05-24
 tags: ["AI", "Meteorology", "Technology", "Foundation Models", "Microsoft", "Weather"]
 categories: ["Tech Analysis", "Science"]
 image: "/img/weather/header.png"
@@ -36,9 +36,9 @@ The training approach deserves attention too. Aurora pretrains on heterogeneous 
 
 Aurora outperformed ECMWF's high-resolution model on [90% of tested variables](https://www.nature.com/articles/s41586-025-09005-y). When compared directly against GraphCast—Google's previous state-of-the-art AI weather model—Aurora matched or exceeded performance on 94% of targets. The biggest gains showed up in the upper atmosphere, where GraphCast performance notoriously struggles, with improvements reaching 40%.
 
-Storm Ciarán provided a real-world stress test. When this low-pressure system battered northwestern Europe in November 2023, it set new intensity records for England and caught existing weather models off guard. The rapid intensification and peak wind speeds exposed limitations in current prediction systems—exactly the kind of extreme event where Aurora's pattern recognition capabilities could prove invaluable.
+![Chart comparing Aurora's performance against GraphCast across different atmospheric levels.](/img/weather/auroravsgraphcast.png)
 
-![Satellite image or weather map snapshot of Storm Ciarán over Europe.](/img/weather/ECMWF.png)
+Storm Ciarán provided a real-world stress test. When this low-pressure system battered northwestern Europe in November 2023, it set new intensity records for England and caught existing weather models off guard. The rapid intensification and peak wind speeds exposed limitations in current prediction systems—exactly the kind of extreme event where Aurora's pattern recognition capabilities could prove invaluable.
 
 The speed differential feels almost unfair. Microsoft estimates Aurora delivers roughly 5,000x computational speedup over the Integrated Forecasting System. Traditional numerical weather prediction resembles computational archaeology—teams nursing finite difference equations through supercomputer clusters. Aurora runs inference on commodity hardware faster than most people stream Netflix.
 
@@ -61,7 +61,7 @@ Aurora's foundation model architecture generalizes across environmental predicti
 
 Air quality forecasting provides a compelling example. Aurora produces accurate five-day global air pollution forecasts at 0.4° spatial resolution, outperforming the Copernicus Atmosphere Monitoring Service on 74% of targets. Predicting atmospheric gases like nitrogen dioxide is notoriously difficult due to their spatially heterogeneous nature and complex diurnal cycles—sunlight reduces background levels through photolysis, while densely populated areas show emission spikes. Aurora captures both the extremes and background levels accurately.
 
-![Graph showing Aurora's performance vs ERA5 reanalysis data for ERA5 at 6h lead.](/img/weather/performancevERA52021at6hlead.png)
+![Graph showing Aurora's performance vs ERA5 reanalysis data for a specific variable.](/img/weather/performancevERA52021at6hlead.png)
 
 This versatility distinguishes Aurora from traditional numerical models, which typically specialize in narrow domains. The same architecture predicting hurricane tracks can forecast agricultural growing seasons or urban heat effects. It's like having a meteorological Swiss Army knife.
 
