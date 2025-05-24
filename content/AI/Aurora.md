@@ -4,7 +4,7 @@ description: "Microsoft's Aurora AI model delivers superior weather forecasts 5,
 date: 2025-05-23
 tags: ["AI", "Meteorology", "Technology", "Foundation Models", "Microsoft", "Weather"]
 categories: ["Tech Analysis", "Science"]
-image:  "/img/weather/header.png"
+image: "/img/weather/header.png"
 draft: false
 ---
 
