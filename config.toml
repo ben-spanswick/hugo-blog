@@ -13,7 +13,7 @@ enableEmoji = true
   term = ["HTML", "RSS"]
 
 [params]
-  mainSections = ["news", "AI", "datascience", "musings", "projects", "about"]  # Updated to reflect actual content folders
+  mainSections = ["news", "ai", "datascience", "musings", "projects", "about"]  # Updated to reflect actual content folders
   featuredImageField = "image"
   rssFullContent = true
   favicon = "/favicon.ico"
@@ -102,7 +102,7 @@ enableEmoji = true
 
   [[menu.main]]
     name = "AI"
-    url = "/AI/"
+    url = "/ai/"
     weight = 4
 
   [[menu.main]]
