@@ -5,7 +5,7 @@ date: 2025-02-01T14:30:00-04:00
 draft: false
 tags: ["cybersecurity", "russia", "china", "threat-intelligence", "national-security"]
 categories: ["Cybersecurity", "Think-Piece"]
-image: "/img/head/cyber.png"
+image: "/img/head/russia.png"
 ---
 
 ### AI Summary
