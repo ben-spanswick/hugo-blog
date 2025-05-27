@@ -1,7 +1,7 @@
 ---
 title: "I Built My Own AI Agent with GPT-4o (And You Can Too)"
 description: "From chatbot to digital assistant in 50 lines of Python - a practical guide to building your first AI agent that actually gets things done."
-date: 2025-05-26T14:30:00-04:00
+date: 2025-03-26T14:30:00-04:00
 draft: false
 tags: ["AI", "Python", "Automation", "GPT-4o", "Agents"]
 categories: [Technology, AI, Agents]

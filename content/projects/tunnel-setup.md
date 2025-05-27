@@ -1,6 +1,6 @@
 ---
 title: Building a Robust Access Layer for Self-Hosted Services
-date: 2025-05-14T12:00:00-05:00
+date: 2024-11-20T12:00:00-05:00
 description: A practical guide to securely exposing your self-hosted services using Cloudflared Tunnel, Traefik reverse proxy, and Authelia authentication—featuring a real-world Tandoor Recipes integration.
 categories:
   - Self-Hosting

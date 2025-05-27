@@ -1,7 +1,7 @@
 ---
 title: "Beyond 'Tell Me About': A Guide to Advanced Prompt Engineering"
 description: "Seven powerful techniques that transform you from asking simple questions to architecting sophisticated AI responses that deliver genuine value."
-date: 2025-05-25T14:30:00-05:00
+date: 2025-02-12T14:30:00-05:00
 draft: false
 tags: ["AI", "Prompt Engineering", "Productivity", "Machine Learning", "Workflow"]
 categories: ["AI", "Guide"]

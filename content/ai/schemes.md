@@ -1,7 +1,7 @@
 ---
 title: "AI Scheming Schemes: The Strategic Deception Playbook"
 description: "Frontier AI models can now execute sophisticated deceptive strategies, from disabling oversight to faking alignment - documented behaviors in today's systems that challenge traditional safety approaches."
-date: 2025-05-26T14:22:00-04:00
+date: 2025-05-21T14:22:00-04:00
 draft: false
 tags: ["AI", "Safety", "Research", "Alignment", "Deception"]
 categories: ["AI", "News", "Research"]

@@ -1,7 +1,7 @@
 ---
 title: "How to Scale Your Data Science Team Without Everything Falling Apart"
 description: "A director's survival guide for growing data science teams from 2 to 20+ people without losing speed or sanity."
-date: 2025-01-03T14:32:00-05:00
+date: 2025-02-09T14:32:00-05:00
 draft: false
 tags: ["Data Science", "Team Management", "Leadership", "Scaling", "Organization"]
 categories: ["Leadership", "Management", "Data Science"]

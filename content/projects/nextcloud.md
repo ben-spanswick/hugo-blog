@@ -1,7 +1,7 @@
 ---
 title: "Building a Production-Ready Nextcloud Setup: From LXC to AI Integration"
 description: "A complete guide to deploying Nextcloud on Proxmox with proper architecture, performance optimization, and AI-powered document processing integration."
-date: 2024-10-01T10:45:00-04:00
+date: 2024-10-07T10:45:00-04:00
 draft: false
 tags: ["Nextcloud", "Proxmox", "LXC", "PostgreSQL", "AI", "Homelab", "Self-Hosted"]
 categories: ["Homelab", "Self-Hosted", "Guides"]

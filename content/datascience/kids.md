@@ -1,6 +1,6 @@
 ---
 title: "What My 1 and 4-Year-Olds Taught Me About Leading Data Teams"
-date: 2025-02-06T13:37:00Z
+date: 2025-03-18T13:37:00Z
 draft: false
 categories: ["Leadership", "Data Science"]
 tags: ["Leadership", "Parenting", "Data teams", "Empathy", "Creativity"]

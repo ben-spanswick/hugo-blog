@@ -1,7 +1,7 @@
 ---
 title: "What Business Leaders Get Wrong About Data Science (And How to Educate Them)"
 description: "Bridge the gap between executive expectations and data science reality through direct communication and practical demonstrations."
-date: 2024-11-12T14:45:00-05:00
+date: 2025-01-02T14:45:00-05:00
 draft: false
 tags: ["Data Science", "Leadership", "Business Strategy", "Analytics", "Management"]
 categories: ["Data Science", "Leadership"]

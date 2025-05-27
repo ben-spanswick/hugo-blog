@@ -1,7 +1,7 @@
 ---
 title: "The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move"
 description: "The U.S. deprioritizing Russia as a cyber threat might seem like a strategic shift, but treating cybersecurity like a zero-sum game ignores how threat actors actually operate."
-date: 2025-05-27T14:30:00-04:00
+date: 2025-02-01T14:30:00-04:00
 draft: false
 tags: ["cybersecurity", "russia", "china", "threat-intelligence", "national-security"]
 categories: ["Cybersecurity", "Think-Piece"]

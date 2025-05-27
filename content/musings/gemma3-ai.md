@@ -1,7 +1,7 @@
 ---
 title: "The Efficiency Revolution: When Smaller AI Models Start Outpunching Their Weight Class"
 description: "Google's Gemma and DeepSeek-Coder are proving that top-tier AI performance no longer requires data center-scale hardware, fundamentally reshaping who gets to play in the AI game."
-date: 2025-05-27T14:30:00-04:00
+date: 2025-05-15T14:30:00-04:00
 draft: false
 tags: ["AI", "Machine Learning", "Open Source", "Hardware", "Efficiency"]
 categories: ["AI", "Think Piece"]

@@ -1,7 +1,7 @@
 ---
 title: "Google's AI Weather Forecasters: The Future of Grid Resiliency?"
 description: "Google's GraphCast and GenCast AI models promise faster, more accurate weather forecasting - but can they truly revolutionize how utilities protect the power grid?"
-date: 2025-03-27T14:30:00-04:00
+date: 2025-01-30T14:30:00-04:00
 draft: false
 tags: ["AI", "Weather", "GridResiliency", "DeepMind", "MachineLearning", "Utilities"]
 categories: ["AI", "News"]

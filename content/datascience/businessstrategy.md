@@ -1,7 +1,7 @@
 ---
 title: "How to Align Data Science with Business Strategy (And Stop Being a Science Project Team)"
 description: "A blueprint for transforming data science teams from technical curiosities into business-critical assets that executives fight to keep funded."
-date: 2025-05-26T14:30:00-04:00
+date: 2025-03-16T14:30:00-04:00
 draft: false
 tags: ["Data Science", "Business Strategy", "Leadership", "Utilities", "AI"]
 categories: ["Data Science", "Leadership"]

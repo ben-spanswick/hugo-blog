@@ -1,7 +1,7 @@
 ---
 title: "Self-Hosted Series: Tandoor"
 description: "How I finally got my recipe chaos under control with a self-hosted solution that actually works"
-date: 2025-05-27T14:30:00-04:00
+date: 2024-10-28T14:30:00-04:00
 draft: false
 tags: ["Self-Hosted", "Docker", "Recipes", "Homelab", "Proxmox"]
 categories: ["Self-Hosted", "Homelab", "Guide"]

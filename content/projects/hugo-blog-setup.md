@@ -1,7 +1,7 @@
 ---
 title: "Getting My Blog Actually Working: Hugo + Gitea + GitHub + Cloudflare Pages"
 description: "A real-world walkthrough of setting up Hugo with Git submodules, including all the frustrating parts they don't tell you about."
-date: 2024-09-02T14:30:00-04:00
+date: 2024-09-30T14:30:00-04:00
 draft: false
 tags: ["Hugo", "DevOps", "Blogging", "Git", "Cloudflare"]
 categories: ["Guides", "Self-Hosting"]

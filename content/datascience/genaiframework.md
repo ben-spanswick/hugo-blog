@@ -1,7 +1,7 @@
 ---
 title: "Building a Production-Ready GenAI Framework for Document Intelligence"
 description: "A comprehensive technical guide to building scalable, accurate document AI systems that actually work in enterprise environments - no hallucinations, full citations, real code."
-date: 2025-04-02T14:30:00-04:00
+date: 2024-12-23T14:30:00-04:00
 draft: false
 tags: ["AI", "RAG", "Document Processing", "Python", "Enterprise", "Tutorial"]
 categories: ["Development", "Machine Learning", "Enterprise AI"]

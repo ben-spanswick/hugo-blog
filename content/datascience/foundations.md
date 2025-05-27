@@ -1,7 +1,7 @@
 ---
 title: "Building High Impact Data Science Teams"
 description: "Lessons learned and pitfalls to avoid from over a decade of building data science teams that actually move the business forward."
-date: 2025-10-18T14:30:00-04:00
+date: 2024-12-13T14:30:00-04:00
 draft: false
 tags: ["Data Science", "Leadership", "Team Building", "AI Strategy", "Business Impact"]
 categories: ["Data Science", "Strategy", "Leadership"]

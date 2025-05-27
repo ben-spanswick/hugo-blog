@@ -1,7 +1,7 @@
 ---
 title: "AGI: The Dumb Smart Thing That Might Change Everything"
 description: "A pragmatic look at why AGI isn't as close as the hype suggests, and why that's probably a good thing."
-date: 2025-01-27T10:45:00-05:00
+date: 2024-12-27T10:45:00-05:00
 draft: false
 tags: ["AI", "AGI", "GenAI", "Machine Learning", "Future"]
 content: ["AI", "Technology"]

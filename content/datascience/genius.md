@@ -1,7 +1,7 @@
 ---
 title: "Why Hiring Only Senior Data Scientists Will Destroy Your Team"
 description: "The hidden costs of over-indexing on technical brilliance and why diversity of experience levels creates stronger data science teams."
-date: "2024-12-26T14:30:00-04:00"
+date: "2024-11-20T14:30:00-04:00"
 draft: false
 categories: ["Data Science", "Management"]
 tags: ["Data Science", "Team Building", "Leadership", "Hiring"]
