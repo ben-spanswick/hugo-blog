@@ -5,7 +5,7 @@ date: 2025-03-06T14:30:00-04:00
 draft: false
 tags: ["AI", "Automation", "Agentic AI", "Machine Learning", "Technology"]
 categories: [AI Trends, Agentic AI]
-image: "/img/head/agenticaiheader.png"
+image: "/img/head/agenticai.png"
 ---
 
 ### AI Summary
