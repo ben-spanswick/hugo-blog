@@ -1,217 +1,149 @@
 ---
-title: "Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale"
-date: 2025-03-16
-tags: ["tech debt", "data science", "software engineering", "best practices"]
-categories: ["Data Science", "Engineering Leadership"]
-description: "Tech debt is inevitable, but letting it spiral out of control is a choice. Learn how to actively manage and reduce tech debt so your team can scale efficiently."
+title: "How to Scale Your Data Science Team Without Everything Falling Apart"
+description: "A director's survival guide for growing data science teams from 2 to 20+ people without losing speed or sanity."
+date: 2025-01-03T14:32:00-05:00
 draft: false
+tags: ["Data Science", "Team Management", "Leadership", "Scaling", "Organization"]
+categories: ["Leadership", "Management", "Data Science"]
+image: "/img/head/techdebt.png"
 ---
 
-# Your Tech Debt is Secretly Destroying Your Team
+### AI Summary
 
-*How to stop paying compound interest on bad code decisions*
-
----
-
-Here's the thing about tech debt: it's like credit card debt for your codebase. You barely notice it at first, then suddenly you're spending more time paying interest than building new features.
-
-I've watched brilliant teams grind to a halt because they ignored tech debt for too long. New hires couldn't understand the systems. Models broke mysteriously. Simple changes took weeks because everything was held together with digital duct tape.
-
-The wake-up call usually comes when someone asks, "How long to add this feature?" and the answer is "Six months, but first we need to rebuild everything."
-
-Here's how to avoid that nightmare.
+- Communication complexity explodes exponentially as teams grow, creating coordination nightmares that kill productivity
+- Traditional functional silos (separate data engineering, modeling, deployment teams) create bottlenecks that slow everything down
+- End-to-end squad structures and platform thinking are the antidotes to scaling chaos
+- Strategic technical debt management and tiered governance prevent bureaucracy from strangling innovation
 
 ---
 
-## When Tech Debt Goes Bad (The Warning Signs)
+### The Curse of Success
 
-### Your Team Spends More Time Fighting Code Than Writing It
+You start with 2 analysts crushing it in whatever corner of the office they can find. Leadership notices the impact. Budget flows. You hire more people.
 
-**Red flag:** Every new feature requires fixing three old things first
+Two years later? You're managing 20+ data scientists across two teams, and somehow everything takes longer than when you had that scrappy duo.
 
-**What it looks like:**
-- "I can't add this feature because our data pipeline is too fragile"
-- "The model works on my laptop but breaks in production"  
-- "Nobody knows why this code works, so we're afraid to touch it"
+I've lived this nightmare twice - once scaling a cross-functional intelligence team that mixed analysts, data scientists, and case officers, and most recently taking my current utility from those original 2 analysts to two teams totaling 20+ data scientists.
 
-### New People Take Forever to Become Productive
+The math is unforgiving, but the strategy can save you.
 
-**Red flag:** Onboarding takes months instead of weeks
+### The Death Spiral Mathematics
 
-**What it looks like:**
-- No documentation exists for critical systems
-- Every project uses different tools and approaches
-- New hires spend weeks just figuring out how to run existing code
+The brutal reality of team growth isn't just about headcount - it's about connections.
 
-### Everything is a Special Snowflake
+5 people create 10 possible communication pathways. Manageable.
 
-**Red flag:** Every project reinvents the wheel
+15 people create 105 connections. Getting complicated.
 
-**What it looks like:**
-- Five different ways of processing the same type of data
-- Custom solutions for problems that standard tools solve
-- Models that only their creator can maintain or deploy
+20 people create 190 potential relationships. This is where good teams start to strain.
 
----
+What kills you isn't the people - it's the exponential complexity of keeping everyone aligned. In the intelligence community, we had the added complexity of different clearance levels creating natural silos. In utilities, it's the technical specializations that create understanding gaps between teams.
 
-## The Real Cost of Ignoring Tech Debt
+### Where Traditional Scaling Goes Wrong
 
-### It's Not Just Slower Development
+**Functional Silos Build Themselves**
 
-**Before we tackled tech debt systematically:**
-- Simple model updates took 3-4 weeks
-- New team members needed 2-3 months to contribute meaningfully
-- We spent 60% of our time maintaining existing systems vs building new ones
+The natural instinct is to organize by skill: data engineers here, modelers there, deployment specialists over there. Clean org chart, clear responsibilities, total disaster for delivery speed.
 
-**After implementing debt reduction strategies:**
-- Model updates became 2-3 day efforts
-- New hires were productive within 2-3 weeks  
-- We flipped the ratio - 60% building new features, 40% maintenance
+My first attempt at scaling followed this playbook. Six months later, a simple model deployment required coordinating across three teams, two managers, and a project manager just to get everyone in the same room.
 
-### The Hidden Costs Add Up Fast
+**Technical Debt Compound Interest**
 
-**Direct costs:** Developer time spent on workarounds instead of features
-**Opportunity costs:** Features not built because the team is fighting fires
-**Talent costs:** Good people leave when they spend all day wrestling with bad systems
-**Business costs:** Slower time-to-market and reduced competitiveness
+Year 1: "We'll refactor this when we have time"
 
----
+Year 2: "New hires can't understand our legacy code"
 
-## How to Get Out of Tech Debt Hell
+Year 3: "It takes two sprints to add a single feature because nothing connects properly"
 
-### Standardize Before You Scale
+This isn't theoretical - I've inherited codebases where changing a single parameter required touching 15 different files because nobody had time to build proper abstractions.
 
-**The problem:** Everyone doing things their own way creates exponential complexity.
+### What Actually Works
 
-**The solution:** Pick one way to do common tasks and stick to it.
+**Squad Structure Over Functional Teams**
 
-**For data science teams:**
-- Use cookiecutter templates for all new projects
-- Standardize on one ML framework per use case
-- Make reproducible environments non-negotiable
+The pivot that changed everything: 4-7 person squads that own problems end-to-end rather than handoffs between specialized teams.
 
-**For software teams:**  
-- Infrastructure as code for all deployments
-- Standardized toolchains across projects
-- Consistent coding standards with automated enforcement
+Each squad includes the full stack - someone who understands data engineering, modeling, deployment, and business context. Not everyone needs to be expert in everything, but someone in the squad needs to understand each piece.
 
-*Pro tip: The best standard is the one your team will actually follow. Pick something good enough and enforce it consistently rather than debating the perfect solution forever.*
+The difference in deployment speed was immediate and dramatic.
 
-### Build Systems, Not One-Off Solutions
+**Platform Thinking Changes the Game**
 
-**Ask yourself:** "Will we need to do this again in six months?"
+Individual brilliance doesn't scale. Platform leverage does.
 
-If yes, build it properly the first time.
+Instead of every data scientist building their own infrastructure, we invested heavily in:
 
-**Instead of:** A custom script that processes this month's data
-**Build:** A configurable pipeline that handles any similar data
+- Feature stores that everyone uses
+- One-click deployment pipelines that handle 90% of common use cases  
+- Self-service analytics tools that reduce ad-hoc requests
 
-**Instead of:** A model that works on your laptop  
-**Build:** A model that deploys and monitors itself
+Six months of platform investment unlocked productivity gains that compounded as we added more people. New hires became productive in weeks instead of months because the infrastructure already existed.
 
-**Instead of:** A dashboard for this specific request
-**Build:** A dashboard framework that handles similar requests
+**Strategic Technical Debt Management**
 
-### Make Tech Debt Visible to Leadership
+Not all technical debt is created equal. We maintain a debt registry that tracks:
 
-Leadership won't fund tech debt reduction if they can't see the problem.
+- What the debt is
+- What it costs us in velocity
+- What it would take to fix
+- Business impact if left alone
 
-**Track the pain:**
-- How much time gets spent on rework vs new features?
-- How often do production systems break?
-- How long does it take to onboard new team members?
+Then we allocate 20% of sprint capacity to paying down the expensive stuff first.
 
-**Translate into business impact:**
-- "Bad data pipelines cost us 40 hours of engineering time per month"
-- "Our deployment process delays feature releases by an average of 2 weeks"
-- "Model maintenance overhead prevents us from building 3 new features per quarter"
+This approach cut our production incidents by nearly half while actually increasing feature velocity.
 
-### The "Tech Debt Tax" Strategy
+### The Scaling Stages I've Observed
 
-**Allocate 15-20% of every sprint to debt reduction.**
+**Stage 1: The Scrappy Team (2-8 people)**
 
-This approach works because:
-- It's small enough that leadership doesn't panic
-- It's consistent enough to make real progress
-- It prevents debt from accumulating faster than you pay it down
+Everyone does everything. Context switching is constant but manageable. Proving value is the primary objective.
 
-**How to implement:**
-- Track your biggest pain points weekly
-- Dedicate every Friday afternoon to fixing one small thing
-- Celebrate when annoying problems disappear forever
+This stage feels chaotic but moves fast. Don't try to over-optimize here.
 
-### Set "Unacceptable Debt" Thresholds
+**Stage 2: Growing Pains (8-20 people)**
 
-**Example thresholds:**
-- "If any system requires more than 2 hours of manual work per week, we automate it"
-- "If any process takes more than 30 minutes to explain to a new person, we document it"
-- "If any deployment takes more than 30 minutes, we streamline it"
+This is where most teams either figure it out or die slowly. You need process without killing speed.
 
-When systems cross these thresholds, fixing them becomes an immediate priority.
+The key insight: You can't preserve what made the small team great - you have to evolve into what works at the new scale.
 
----
+**Stage 3: Scaled Function (20+ people)**
 
-## What Good Tech Debt Management Looks Like
+Platform thinking becomes essential. Real governance matters. Coordination becomes a skill unto itself.
 
-### Before (Tech Debt Chaos)
-- Every project uses different tools and approaches
-- Simple changes require touching multiple fragile systems
-- Team velocity decreases as the codebase grows
-- New features often break existing functionality
+Building my current utility team from 2 to 20+ across two specialized teams, I had to consciously introduce Stage 2 processes at the right inflection points. It felt like slowing down to speed up, but it prevented the chaos I'd seen derail other scaling efforts.
 
-### After (Managed Tech Debt)
-- Consistent patterns and tools across projects
-- Well-documented systems that new people can understand
-- Team velocity stays steady or improves over time
-- New features build on solid foundations
+### Metrics That Actually Matter
 
----
+Traditional metrics miss the point. Track these instead:
 
-## The Psychology of Tech Debt
+**Time from idea to production** - Should stay flat or improve as you scale
 
-### Why Teams Accumulate It
+**Deployment frequency** - How often you actually ship working solutions
 
-**Time pressure:** "We'll clean this up later" (spoiler: later never comes)
-**Perfectionism:** "This quick solution is beneath us" (then you build 10 quick solutions)  
-**Overconfidence:** "We'll remember how this works" (narrator: they did not)
+**Onboarding time** - How fast new people become productive contributors
 
-### Why Teams Don't Fix It
+**Maintenance overhead** - Percentage of time keeping things running versus building new capability
 
-**Invisible impact:** Tech debt hurts gradually, not all at once
-**Boring work:** Refactoring doesn't feel as rewarding as building new features
-**No immediate payoff:** The benefits show up weeks or months later
+**Cross-team collaboration** - Are people working together or retreating into silos?
 
-### Making Debt Reduction Rewarding
+### The Uncomfortable Evolution
 
-**Celebrate small wins:** When you eliminate an annoying manual process, make a big deal about it
-**Track saved time:** "This automation will save us 5 hours per week going forward"
-**Share success stories:** "Remember when deployments used to take all day?"
+The things that make small teams effective become liabilities at scale:
 
----
+Minimal process becomes coordination chaos. Informal communication becomes information silos. Everyone doing everything becomes nobody owning anything.
 
-## Bottom Line: Pay Down Your Technical Credit Cards
+But the answer isn't bureaucracy - it's intentional evolution.
 
-Tech debt is like compound interest working against you. The longer you wait to address it, the more expensive it becomes to fix.
+The principles stay constant: speed, ownership, experimentation, measurable impact. The implementation changes: structure that enables rather than constrains, platforms that amplify individual contributions, teams that preserve autonomy within aligned direction.
 
-**The best time to tackle tech debt was six months ago.**  
-**The second best time is now.**
+### The Real Challenge
 
-**Good teams manage tech debt proactively:**
-- They standardize early and consistently
-- They build reusable systems instead of one-off solutions  
-- They make debt visible and track its impact
-- They dedicate regular time to cleanup
+Most data science teams that scale successfully don't preserve what they had - they evolve into what they need to become.
 
-**Great teams treat debt reduction as a competitive advantage:**
-- They move faster because their systems are reliable
-- They scale better because their foundations are solid
-- They attract better talent because their code is maintainable
-- They deliver more value because they spend less time fighting fires
+The goal isn't staying small. It's staying effective at whatever size your business demands.
 
-Your choice: Keep paying compound interest on bad decisions, or invest in systems that compound in your favor.
+Because the alternative is becoming one of those expensive teams that produces impressive slide decks and minimal business impact.
 
-The math is pretty clear.
+After scaling teams in both intelligence and utility contexts, the pattern is clear: scaling isn't about doing more of the same thing. It's about doing fundamentally different things that work at the new scale.
 
----
-
-*The most productive teams aren't those that write perfect code from day one - they're the ones that consistently invest in making their imperfect code better over time.*
+The math doesn't lie - but neither does intentional strategy.
