@@ -1,5 +1,5 @@
 baseURL = "https://www.spanswick.dev/"
-title = "My Blog"
+title = "The Patch Panel"
 theme = "stack"
 enableRobotsTXT = true
 defaultContentLanguage = "en"
