@@ -1,100 +1,79 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Russia on My Blog</title>
+        <title>Russia on The Patch Panel</title>
         <link>http://192.168.100.63:1313/tags/russia/</link>
-        <description>Recent content in Russia on My Blog</description>
+        <description>Recent content in Russia on The Patch Panel</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/russia/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Sat, 01 Feb 2025 14:30:00 -0400</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/russia/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move</title>
         <link>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        <pubDate>Sat, 01 Feb 2025 14:30:00 -0400</pubDate>
         
         <guid>http://192.168.100.63:1313/musings/cybersecurity-thoughts/</guid>
-        <description>&lt;h1 id=&#34;we-just-stopped-watching-russia-and-thats-terrifying&#34;&gt;&lt;a href=&#34;#we-just-stopped-watching-russia-and-thats-terrifying&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;We Just Stopped Watching Russia and That&amp;rsquo;s Terrifying
-&lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why treating cybersecurity like a popularity contest is incredibly dangerous&lt;/em&gt;&lt;/p&gt;
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/cyber.png" alt="Featured image of post The Cybersecurity Misdirection: Why Ignoring Russia is a Risky Move" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;The U.S. shift to deprioritize Russian cyber threats in favor of focusing on China creates dangerous blind spots in national defense&lt;/li&gt;
+&lt;li&gt;Cyber threats operate simultaneously, not sequentially - threat actors don&amp;rsquo;t pause operations based on U.S. policy priorities&lt;/li&gt;
+&lt;li&gt;Historical precedent shows that underestimating or ignoring active adversaries leads to successful attacks on critical infrastructure&lt;/li&gt;
+&lt;li&gt;Effective cybersecurity requires comprehensive, multi-threat defense strategies rather than reactive focus shifts&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;So apparently the U.S. has decided that Russia just isn&amp;rsquo;t that interesting anymore from a cybersecurity perspective. The new plan is to focus on China instead, because apparently we can only worry about one major cyber threat at a time.&lt;/p&gt;
-&lt;p&gt;This feels like deciding to ignore one armed robber because you spotted another one across the street.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;the-logic-that-makes-no-sense&#34;&gt;&lt;a href=&#34;#the-logic-that-makes-no-sense&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Logic That Makes No Sense
-&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s the thinking: China is becoming the bigger cyber threat, so let&amp;rsquo;s shift our attention there and deprioritize Russia.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;On paper, this might sound reasonable.&lt;/strong&gt; China is definitely expanding their cyber capabilities. They&amp;rsquo;re stealing intellectual property, conducting espionage, and building sophisticated attack infrastructure.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;In reality, this is incredibly naive.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Cyber threats don&amp;rsquo;t work like a video game where you can pause one boss fight to handle another. Russia didn&amp;rsquo;t suddenly become harmless because China got more attention.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;russia-didnt-get-the-memo&#34;&gt;&lt;a href=&#34;#russia-didnt-get-the-memo&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Russia Didn&amp;rsquo;t Get the Memo
-&lt;/h2&gt;&lt;p&gt;Let&amp;rsquo;s talk about Russia&amp;rsquo;s greatest hits:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;SolarWinds hack&lt;/strong&gt; - Compromised 18,000 organizations including multiple government agencies
-&lt;strong&gt;NotPetya attacks&lt;/strong&gt; - Caused billions in damage to global infrastructure&lt;br&gt;
-&lt;strong&gt;Election interference&lt;/strong&gt; - Ongoing operations targeting democratic processes
-&lt;strong&gt;Colonial Pipeline&lt;/strong&gt; - Shut down critical energy infrastructure&lt;/p&gt;
-&lt;p&gt;These weren&amp;rsquo;t pranks or amateur hour operations. They were sophisticated, coordinated attacks that had real consequences for national security and the economy.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;And here&amp;rsquo;s the kicker:&lt;/strong&gt; None of this stopped when we decided China was more important.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;the-burglar-analogy&#34;&gt;&lt;a href=&#34;#the-burglar-analogy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Burglar Analogy
-&lt;/h2&gt;&lt;p&gt;Imagine you know someone&amp;rsquo;s been trying to break into your house for years. They&amp;rsquo;ve already gotten in a few times, stolen things, left nasty surprises. You&amp;rsquo;ve seen them casing the place, testing your locks, learning your routines.&lt;/p&gt;
-&lt;p&gt;Then you hear about break-ins happening across town by a different group.&lt;/p&gt;
-&lt;p&gt;Do you:
-A) Stop locking your doors because the other group seems more active lately
-B) Secure your house against both threats&lt;/p&gt;
-&lt;p&gt;Apparently, U.S. cybersecurity policy chose option A.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;what-could-go-wrong-spoiler-everything&#34;&gt;&lt;a href=&#34;#what-could-go-wrong-spoiler-everything&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Could Go Wrong (Spoiler: Everything)
-&lt;/h2&gt;&lt;h3 id=&#34;more-unchecked-russian-activity&#34;&gt;&lt;a href=&#34;#more-unchecked-russian-activity&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;More Unchecked Russian Activity
-&lt;/h3&gt;&lt;p&gt;When you stop actively monitoring and deterring a threat, that threat doesn&amp;rsquo;t disappear. It gets bolder.&lt;/p&gt;
-&lt;p&gt;Russia&amp;rsquo;s cyber units are still operational, still funded, still looking for opportunities. Less attention from the U.S. means more room for them to operate.&lt;/p&gt;
-&lt;h3 id=&#34;coordinated-attacks&#34;&gt;&lt;a href=&#34;#coordinated-attacks&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Coordinated Attacks
-&lt;/h3&gt;&lt;p&gt;Russia and China don&amp;rsquo;t need to be best friends to find common ground in weakening U.S. infrastructure.&lt;/p&gt;
-&lt;p&gt;What happens when they decide to coordinate attacks? While we&amp;rsquo;re focused on defending against Chinese espionage, Russian hackers could be setting up infrastructure attacks. Or vice versa.&lt;/p&gt;
-&lt;h3 id=&#34;reactive-instead-of-proactive-defense&#34;&gt;&lt;a href=&#34;#reactive-instead-of-proactive-defense&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Reactive Instead of Proactive Defense
-&lt;/h3&gt;&lt;p&gt;Instead of preventing attacks, we&amp;rsquo;ll be responding to them after the damage is done.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Scenario:&lt;/strong&gt; Russian hackers target power grids while everyone&amp;rsquo;s focused on Chinese intellectual property theft. By the time we realize what&amp;rsquo;s happening, the lights are already out.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;the-internet-doesnt-care-about-our-priorities&#34;&gt;&lt;a href=&#34;#the-internet-doesnt-care-about-our-priorities&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Internet Doesn&amp;rsquo;t Care About Our Priorities
-&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s what cybersecurity experts understand that policymakers apparently don&amp;rsquo;t:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Cyber threats are simultaneous, not sequential.&lt;/strong&gt; You can&amp;rsquo;t pause one while dealing with another.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Attack infrastructure stays active regardless of political focus.&lt;/strong&gt; Russian hacker groups didn&amp;rsquo;t shut down their operations when the U.S. shifted priorities.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Deterrence requires consistent attention.&lt;/strong&gt; The moment you signal that a threat isn&amp;rsquo;t a priority, you invite escalation.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Defense requires comprehensive coverage.&lt;/strong&gt; You can&amp;rsquo;t just defend against the threat you&amp;rsquo;re most worried about this week.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;what-this-really-means&#34;&gt;&lt;a href=&#34;#what-this-really-means&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What This Really Means
-&lt;/h2&gt;&lt;h3 id=&#34;for-government-systems&#34;&gt;&lt;a href=&#34;#for-government-systems&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;For Government Systems
-&lt;/h3&gt;&lt;p&gt;Critical infrastructure becomes more vulnerable to Russian attacks while defenses focus elsewhere.&lt;/p&gt;
-&lt;h3 id=&#34;for-private-companies&#34;&gt;&lt;a href=&#34;#for-private-companies&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;For Private Companies
-&lt;/h3&gt;&lt;p&gt;Businesses may deprioritize Russian threat intelligence, leaving them exposed to attacks they&amp;rsquo;re not monitoring.&lt;/p&gt;
-&lt;h3 id=&#34;for-national-security&#34;&gt;&lt;a href=&#34;#for-national-security&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;For National Security
-&lt;/h3&gt;&lt;p&gt;We&amp;rsquo;re essentially telling Russia that they have more room to operate as long as they stay out of the spotlight.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;the-smarter-approach&#34;&gt;&lt;a href=&#34;#the-smarter-approach&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Smarter Approach
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Recognize that both threats are active simultaneously&lt;/strong&gt;
-China and Russia aren&amp;rsquo;t taking turns attacking U.S. systems. They&amp;rsquo;re both active all the time.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Invest in comprehensive defense capabilities&lt;/strong&gt;
-Build systems that can detect and respond to multiple threat actors simultaneously.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Maintain intelligence operations on all major adversaries&lt;/strong&gt;
-Just because one threat seems more pressing doesn&amp;rsquo;t mean you stop watching the others.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Coordinate international responses&lt;/strong&gt;
-Work with allies who may have different threat priorities to maintain coverage.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;why-this-feels-personal&#34;&gt;&lt;a href=&#34;#why-this-feels-personal&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This Feels Personal
-&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;ve watched cybersecurity evolve from an IT afterthought to a national security priority. The progress has been slow but real.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;This decision feels like a step backward.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;It&amp;rsquo;s the kind of thinking that led to major breaches in the past - assuming that threats are predictable, manageable, and mutually exclusive.&lt;/p&gt;
-&lt;p&gt;The reality is messier. Cyber warfare doesn&amp;rsquo;t follow neat rules or take turns. Multiple adversaries operate simultaneously, often exploiting exactly the kind of attention gaps we&amp;rsquo;re creating.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;the-bottom-line&#34;&gt;&lt;a href=&#34;#the-bottom-line&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bottom Line
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Cybersecurity isn&amp;rsquo;t a zero-sum game.&lt;/strong&gt; Focusing on China doesn&amp;rsquo;t require ignoring Russia.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Threat actors don&amp;rsquo;t respect our priority lists.&lt;/strong&gt; Russia&amp;rsquo;s capabilities didn&amp;rsquo;t diminish just because we decided China was more important.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Defense requires comprehensive coverage.&lt;/strong&gt; You can&amp;rsquo;t just defend against this week&amp;rsquo;s favorite threat.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;History suggests this will backfire.&lt;/strong&gt; Every time we&amp;rsquo;ve underestimated or deprioritized a cyber adversary, we&amp;rsquo;ve paid for it later.&lt;/p&gt;
-&lt;p&gt;The internet has no borders, and cyber warfare doesn&amp;rsquo;t operate on a ranking system. Treating national cybersecurity like we can only handle one major threat at a time is dangerously naive.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;China is absolutely a serious cyber threat that deserves attention and resources.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;So is Russia.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;We need to be capable of handling both simultaneously.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;Because I guarantee you, they&amp;rsquo;re both planning to handle us simultaneously.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;In cybersecurity, the cost of getting it wrong isn&amp;rsquo;t just embarrassment or lost data - it&amp;rsquo;s national security. We can&amp;rsquo;t afford to play favorites with threats that don&amp;rsquo;t play by our rules.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;we-just-stopped-watching-russia-and-thats-terrifying&#34;&gt;&lt;a href=&#34;#we-just-stopped-watching-russia-and-thats-terrifying&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;We Just Stopped Watching Russia and That&amp;rsquo;s Terrifying
+&lt;/h3&gt;&lt;p&gt;So the U.S. has apparently decided Russia isn&amp;rsquo;t worth worrying about anymore from a cybersecurity standpoint. The new plan focuses on China as the primary cyber adversary, which means Russian threat actors just got bumped way down the priority list.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s like ignoring one burglar because you noticed another one casing your neighbor&amp;rsquo;s house.&lt;/p&gt;
+&lt;p&gt;Anyone who&amp;rsquo;s spent serious time tracking threat actors knows this approach is backwards. Cyber warfare doesn&amp;rsquo;t work like a neat corporate org chart where everyone takes turns. Multiple bad actors hit the same targets from different angles, often at the same time.&lt;/p&gt;
+&lt;h3 id=&#34;the-backwards-logic&#34;&gt;&lt;a href=&#34;#the-backwards-logic&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Backwards Logic
+&lt;/h3&gt;&lt;p&gt;Here&amp;rsquo;s what we&amp;rsquo;re supposed to buy: China has become the bigger, badder cyber threat with their fancy persistent threat groups and massive IP theft operations. So naturally, we should pivot all our attention there while Russian activities slide to the back burner.&lt;/p&gt;
+&lt;p&gt;Sure, China&amp;rsquo;s cyber game has gotten scary good. Groups like APT1 and APT40 are pulling off some seriously sophisticated espionage campaigns. The &lt;a class=&#34;link&#34; href=&#34;https://www.microsoft.com/en-us/security/blog/2021/03/02/hafnium-targeting-exchange-servers/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2021 Microsoft Exchange Server attacks&lt;/a&gt; showed they can operate at absolutely massive scale.&lt;/p&gt;
+&lt;p&gt;But here&amp;rsquo;s the thing - cyber adversaries don&amp;rsquo;t give a damn about our policy priorities. They hit targets when they see openings, not when it&amp;rsquo;s convenient for our strategic planning sessions.&lt;/p&gt;
+&lt;h3 id=&#34;russias-greatest-hits&#34;&gt;&lt;a href=&#34;#russias-greatest-hits&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Russia&amp;rsquo;s Greatest Hits
+&lt;/h3&gt;&lt;p&gt;Let me refresh everyone&amp;rsquo;s memory on what Russia&amp;rsquo;s been up to lately:&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://www.cisa.gov/news-events/news/joint-statement-federal-bureau-investigation-fbi-cybersecurity-and-infrastructure-security&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;SolarWinds hack&lt;/a&gt; took down about 18,000 organizations, including a bunch of federal agencies. This wasn&amp;rsquo;t some quick smash-and-grab job - it was methodical, patient, and devastatingly effective.&lt;/p&gt;
+&lt;p&gt;&lt;a class=&#34;link&#34; href=&#34;https://www.wired.com/story/notpetya-cyberattack-ukraine-russia-code-crashed-the-world/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;NotPetya in 2017&lt;/a&gt; racked up over $10 billion in damage worldwide. Started as targeted hits on Ukrainian infrastructure, then spread like wildfire to shipping companies, hospitals, you name it.&lt;/p&gt;
+&lt;p&gt;The &lt;a class=&#34;link&#34; href=&#34;https://www.cisa.gov/news-events/news/joint-cybersecurity-advisory-darkside-ransomware&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Colonial Pipeline attack&lt;/a&gt; shut down critical energy infrastructure for days. Gas shortages up and down the East Coast because ransomware took out a pipeline.&lt;/p&gt;
+&lt;p&gt;These weren&amp;rsquo;t lucky shots or amateur hour stuff. Each one showed careful planning, smart target selection, and a clear understanding of how to maximize damage.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;And guess what? None of this magically stopped when we decided China was more important.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;how-threat-actors-actually-work&#34;&gt;&lt;a href=&#34;#how-threat-actors-actually-work&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;How Threat Actors Actually Work
+&lt;/h3&gt;&lt;p&gt;After tracking these groups for years, some patterns become pretty obvious:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;They Don&amp;rsquo;t Take Breaks&lt;/strong&gt;: Russian cybercriminal groups and state teams keep their infrastructure running 24/7, regardless of what Washington decides to focus on this week. &lt;a class=&#34;link&#34; href=&#34;https://www.crowdstrike.com/adversaries/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Cozy Bear and Fancy Bear&lt;/a&gt; didn&amp;rsquo;t pack up and go home when the policy focus shifted.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;They Hit When They Can&lt;/strong&gt;: Bad actors exploit vulnerabilities the moment they find them. They&amp;rsquo;re not checking our threat assessment reports before launching attacks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;They Overlap&lt;/strong&gt;: Different threat groups often target the same organizations within months of each other. I&amp;rsquo;ve seen cases where Chinese espionage groups and Russian ransomware teams both hit the same network in the same quarter.&lt;/p&gt;
+&lt;h3 id=&#34;what-goes-wrong-when-we-stop-paying-attention&#34;&gt;&lt;a href=&#34;#what-goes-wrong-when-we-stop-paying-attention&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Goes Wrong When We Stop Paying Attention
+&lt;/h3&gt;&lt;p&gt;Deprioritizing active threats creates some very predictable problems:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;We Miss Stuff&lt;/strong&gt;: Fewer resources tracking Russian movements means bigger intelligence gaps. Harder to figure out who did what and how to respond.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Deterrence Breaks Down&lt;/strong&gt;: Consistent attention keeps bad actors cautious. When they think we&amp;rsquo;re not watching, they get bolder.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Coordination Gets Easier&lt;/strong&gt;: Russia and China don&amp;rsquo;t need to be best friends to both benefit from hitting U.S. infrastructure while we&amp;rsquo;re distracted elsewhere.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The dumbest thing you can assume in cybersecurity is that threats will politely wait their turn.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;infrastructure-doesnt-care-about-policy-priorities&#34;&gt;&lt;a href=&#34;#infrastructure-doesnt-care-about-policy-priorities&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Infrastructure Doesn&amp;rsquo;t Care About Policy Priorities
+&lt;/h3&gt;&lt;p&gt;Power grids, water systems, financial networks - they&amp;rsquo;re all just as vulnerable to Russian attacks as Chinese ones.&lt;/p&gt;
+&lt;p&gt;Picture this: Russian groups go after energy infrastructure while Chinese ops target telecom. Both succeed because we concentrated defenses on just one threat. The combined impact is way worse than either attack alone.&lt;/p&gt;
+&lt;p&gt;This isn&amp;rsquo;t some far-fetched scenario. We&amp;rsquo;ve seen coordinated timing before, where multiple threat actors exploit the same vulnerability windows or run similar social engineering campaigns.&lt;/p&gt;
+&lt;h3 id=&#34;what-real-defense-looks-like&#34;&gt;&lt;a href=&#34;#what-real-defense-looks-like&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Real Defense Looks Like
+&lt;/h3&gt;&lt;p&gt;Actual cybersecurity works on a simple principle: all active threats get the attention they deserve.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Watch Everything&lt;/strong&gt;: Threat intelligence needs to cover all active adversaries, not just this month&amp;rsquo;s priority. Keep tracking Russian operations while expanding Chinese monitoring.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Build for Multiple Attacks&lt;/strong&gt;: Infrastructure defense should assume you&amp;rsquo;re getting hit from multiple directions simultaneously. That means redundant monitoring and response capabilities that can handle several incidents at once.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Coordinate Internationally&lt;/strong&gt;: Different allies worry about different threats based on their geography and economics. Share intelligence so everyone&amp;rsquo;s covered even when individual countries focus on specific adversaries.&lt;/p&gt;
+&lt;h3 id=&#34;the-same-mistake-over-and-over&#34;&gt;&lt;a href=&#34;#the-same-mistake-over-and-over&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Same Mistake, Over and Over
+&lt;/h3&gt;&lt;p&gt;Every major cybersecurity screwup follows the same playbook: underestimate active threats while looking somewhere else.&lt;/p&gt;
+&lt;p&gt;The 2014 &lt;a class=&#34;link&#34; href=&#34;https://www.fbi.gov/news/press-releases/update-on-sony-investigation&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Sony Pictures attack&lt;/a&gt; worked partly because everyone underestimated North Korean cyber capabilities. The &lt;a class=&#34;link&#34; href=&#34;https://www.nerc.com/pa/CI/ESISAC/Documents/E-ISAC_SANS_Ukraine_DUC_5.pdf&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;2015 Ukrainian power grid attacks&lt;/a&gt; caught people off guard even though Russian capabilities were well-documented.&lt;/p&gt;
+&lt;p&gt;Same pattern every time: known threat actors, documented capabilities, but attention focused elsewhere when the attack happened.&lt;/p&gt;
+&lt;h3 id=&#34;the-actual-solution&#34;&gt;&lt;a href=&#34;#the-actual-solution&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Actual Solution
+&lt;/h3&gt;&lt;p&gt;Don&amp;rsquo;t pick between China and Russia as cyber priorities. Build defense capabilities that handle both at the same time.&lt;/p&gt;
+&lt;p&gt;That means accepting that cybersecurity works in a multi-threat world where bad actors don&amp;rsquo;t coordinate with our policy calendars. It means investing in comprehensive monitoring, resilient infrastructure, and response capabilities that scale across different types of incidents.&lt;/p&gt;
+&lt;p&gt;The internet doesn&amp;rsquo;t recognize our org charts or budget meetings. Cyber threats run continuously, simultaneously, and often work together whether they plan to or not.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;Treating national cybersecurity like we can only handle one major problem at a time is dangerously naive.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Both China and Russia are active, sophisticated threats to U.S. infrastructure and national security. Both deserve serious attention, sustained intelligence work, and robust defenses.&lt;/p&gt;
+&lt;p&gt;Getting this balance wrong doesn&amp;rsquo;t just mean policy embarrassment. It means successful attacks on critical systems that millions of Americans use every single day.&lt;/p&gt;
 </description>
         </item>
         

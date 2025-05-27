@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="How I finally got my recipe chaos under control with a self-hosted solution that actually works">
+<title>Self-Hosted Series: Tandoor</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/projects/tandoor/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Self-Hosted Series: Tandoor">
+<meta property='og:description' content="How I finally got my recipe chaos under control with a self-hosted solution that actually works">
+<meta property='og:url' content='http://192.168.100.63:1313/projects/tandoor/'>
+<meta property='og:site_name' content='The Patch Panel'>
+<meta property='og:type' content='article'><meta property='article:section' content='Projects' /><meta property='article:tag' content='Self-Hosted' /><meta property='article:tag' content='Docker' /><meta property='article:tag' content='Recipes' /><meta property='article:tag' content='Homelab' /><meta property='article:tag' content='Proxmox' /><meta property='article:published_time' content='2024-10-28T14:30:00-04:00'/><meta property='article:modified_time' content='2024-10-28T14:30:00-04:00'/><meta property='og:image' content='http://192.168.100.63:1313/img/head/tandoor.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Self-Hosted Series: Tandoor">
+<meta name="twitter:description" content="How I finally got my recipe chaos under control with a self-hosted solution that actually works"><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/img/head/tandoor.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/headshot2.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">💾</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">The Patch Panel</a></h1>
+            <h2 class="site-description">Exploring AI, Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/news/' >
+                
+                
+                
+                <span>News</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/ai/' >
+                
+                
+                
+                <span>AI</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/datascience/' >
+                
+                
+                
+                <span>Data Strategy</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='Spanswick_Resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/projects/tandoor/">
+                
+                    <img src="/img/head/tandoor.png" loading="lazy" alt="Featured image of post Self-Hosted Series: Tandoor" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/self-hosted/" >
+                Self-Hosted
+            </a>
+        
+            <a href="/categories/homelab/" >
+                Homelab
+            </a>
+        
+            <a href="/categories/guide/" >
+                Guide
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/projects/tandoor/">Self-Hosted Series: Tandoor</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            How I finally got my recipe chaos under control with a self-hosted solution that actually works
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 28, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    6 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h3 id="ai-summary"><a href="#ai-summary" class="header-anchor"></a>AI Summary
+</h3><ul>
+<li>Tandoor Recipes is an open-source, self-hosted recipe manager that solves the scattered bookmark problem</li>
+<li>Features include OCR for digitizing old cookbooks, meal planning tools, and automatic grocery list generation</li>
+<li>Docker deployment on Proxmox with external PostgreSQL provides a robust, backup-friendly architecture</li>
+<li>After months of use, it&rsquo;s genuinely transformed meal planning and grocery shopping workflows</li>
+</ul>
+<hr>
+<h3 id="finally-getting-my-recipe-chaos-under-control"><a href="#finally-getting-my-recipe-chaos-under-control" class="header-anchor"></a>Finally Getting My Recipe Chaos Under Control
+</h3><p>The last time I tried to find that incredible pasta sauce recipe my friend shared, I spent twenty minutes digging through browser bookmarks, photo albums, and random text files. That moment of frustration was the final straw in my ongoing battle with recipe organization chaos.</p>
+<p>My kitchen strategy had devolved into a digital disaster zone. Screenshots buried three layers deep in my camera roll, bookmarks scattered across browsers, handwritten notes shoved in drawers, and the occasional recipe texted to me that vanished into message history. Every attempt at organization failed because the solutions were either too expensive, too limiting, or - my biggest fear - destined to disappear when the company pivoted or shut down.</p>
+<p>That&rsquo;s when I discovered Tandoor Recipes, and it&rsquo;s been a genuine revelation.</p>
+<h3 id="why-self-hosting-makes-sense-here"><a href="#why-self-hosting-makes-sense-here" class="header-anchor"></a>Why Self-Hosting Makes Sense Here
+</h3><p>The conventional wisdom says just use whatever recipe app has the best reviews. But after wrestling with this problem across multiple failed attempts, I realized the fundamental issue wasn&rsquo;t the interface - it was control.</p>
+<p><strong>My data stays exactly where I want it.</strong> I&rsquo;ve been through the Google Reader shutdown, the endless parade of acquired startups, and the slow feature creep of subscription models. Not happening again with something as personal as my recipe collection.</p>
+<p><strong>Zero algorithmic interference.</strong> I don&rsquo;t need machine learning suggesting recipes based on my &ldquo;cooking personality profile.&rdquo; I need to find my go-to chicken tikka masala when I&rsquo;m standing in the grocery store at 6 PM on a Wednesday.</p>
+<p><strong>Real customization that actually works.</strong> Custom categories that map to how I actually cook. Tags that make sense to my workflow. A interface that doesn&rsquo;t assume I want to scroll through food photography when I just need the ingredient list.</p>
+<p>The built-in meal planning and grocery list generation turned out to be the killer features I didn&rsquo;t know I needed. But the OCR capability for digitizing old cookbook pages? That&rsquo;s pure magic.</p>
+<h3 id="the-technical-setup-that-actually-works"><a href="#the-technical-setup-that-actually-works" class="header-anchor"></a>The Technical Setup That Actually Works
+</h3><p>My homelab runs on a Proxmox cluster, with most applications deployed in a dedicated Docker VM that has plenty of resources allocated. PostgreSQL lives in its own LXC container because centralized database management makes backups and maintenance infinitely easier.</p>
+<p>This architecture has proven rock-solid for Tandoor. The separation means database maintenance doesn&rsquo;t impact the application, and I can snapshot the entire setup independently.</p>
+<p>Here&rsquo;s the structure that&rsquo;s been working flawlessly:</p>
+<pre tabindex="0"><code>/opt/docker/tandoor/          # Application files
+/mnt/r430/tandoor/recipes/    # Recipe database
+/mnt/r430/tandoor/mediafiles/ # Recipe photos
+/mnt/r430/tandoor/staticfiles/ # Static assets
+</code></pre><p>The Docker configuration is straightforward but robust:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-yaml" data-lang="yaml"><span style="display:flex;"><span><span style="color:#f92672">version</span>: <span style="color:#e6db74">&#39;3&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">services</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">web</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">image</span>: <span style="color:#ae81ff">vabene1111/recipes:latest</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">container_name</span>: <span style="color:#ae81ff">tandoor_web</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">restart</span>: <span style="color:#ae81ff">unless-stopped</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">volumes</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/mnt/r430/tandoor/recipes:/opt/recipes</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/mnt/r430/tandoor/mediafiles:/opt/recipes/mediafiles</span>
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">/mnt/r430/tandoor/staticfiles:/opt/recipes/staticfiles</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">env_file</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">.env</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">ports</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#e6db74">&#34;8080:8000&#34;</span>
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>      - <span style="color:#ae81ff">tandoor-net</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">networks</span>:
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">tandoor-net</span>:
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">driver</span>: <span style="color:#ae81ff">bridge</span>
+</span></span></code></pre></div><p>Environment configuration handles the database connection and Django security settings:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Database connection</span>
+</span></span><span style="display:flex;"><span>POSTGRES_HOST<span style="color:#f92672">=</span>your-postgres-ip
+</span></span><span style="display:flex;"><span>POSTGRES_PORT<span style="color:#f92672">=</span>your-port
+</span></span><span style="display:flex;"><span>POSTGRES_USER<span style="color:#f92672">=</span>your-username
+</span></span><span style="display:flex;"><span>POSTGRES_PASSWORD<span style="color:#f92672">=</span>your-secure-password
+</span></span><span style="display:flex;"><span>POSTGRES_DB<span style="color:#f92672">=</span>your-postgres-db
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Django settings</span>
+</span></span><span style="display:flex;"><span>SECRET_KEY<span style="color:#f92672">=</span>generate-a-proper-secret-key
+</span></span><span style="display:flex;"><span>DEBUG<span style="color:#f92672">=</span><span style="color:#ae81ff">0</span>
+</span></span><span style="display:flex;"><span>ALLOWED_HOSTS<span style="color:#f92672">=</span>*
+</span></span><span style="display:flex;"><span>TZ<span style="color:#f92672">=</span>America/New_York
+</span></span></code></pre></div><p><em>Pro tip: Actually generate a real secret key. Django&rsquo;s security depends on it, and &ldquo;password123&rdquo; isn&rsquo;t going to cut it.</em></p>
+<p>Database setup in the PostgreSQL LXC is clean and minimal:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">DATABASE</span> dbname;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">CREATE</span> <span style="color:#66d9ef">USER</span> tandoor <span style="color:#66d9ef">WITH</span> <span style="color:#66d9ef">ENCRYPTED</span> PASSWORD <span style="color:#e6db74">&#39;your-secure-password&#39;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">GRANT</span> <span style="color:#66d9ef">ALL</span> <span style="color:#66d9ef">PRIVILEGES</span> <span style="color:#66d9ef">ON</span> <span style="color:#66d9ef">DATABASE</span> dbname <span style="color:#66d9ef">TO</span> username;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">ALTER</span> <span style="color:#66d9ef">DATABASE</span> dbname <span style="color:#66d9ef">OWNER</span> <span style="color:#66d9ef">TO</span> username;
+</span></span></code></pre></div><p>Configure PostgreSQL to accept connections from the Docker host network, restart the service, and you&rsquo;re ready to deploy.</p>
+<h3 id="living-with-tandoor-day-to-day"><a href="#living-with-tandoor-day-to-day" class="header-anchor"></a>Living With Tandoor Day-to-Day
+</h3><p>After months of actual use, this setup has fundamentally changed how I approach cooking and meal planning. The web interface is responsive and intuitive - I can quickly add recipes, organize them into logical categories, and actually find things when I need them.</p>
+<p>Recipe import works seamlessly with most cooking websites. Copy the URL, paste it into Tandoor, and it automatically extracts ingredients, instructions, and photos. The parsing accuracy is impressive, though I occasionally need to clean up formatting quirks from particularly complex recipe sites.</p>
+<p><strong>The OCR feature deserves special recognition.</strong> I&rsquo;ve been systematically digitizing recipes from family cookbooks that have been collecting dust for years. Take a photo of the page, and Tandoor extracts the text with remarkable accuracy. It&rsquo;s not perfect, but it beats manually typing every ingredient and instruction.</p>
+<p>Meal planning integration has genuinely improved my grocery shopping efficiency. Plan out the week&rsquo;s dinners, and Tandoor automatically generates a consolidated shopping list organized by ingredient type. No more wandering the aisles trying to remember if I already have cumin at home.</p>
+<p><strong>Storage footprint remains surprisingly light.</strong> Even with several hundred recipes and associated photos, the entire setup uses less than 2GB of space. Database backups are quick, and the whole system restarts in seconds during maintenance windows.</p>
+<h3 id="why-this-actually-matters"><a href="#why-this-actually-matters" class="header-anchor"></a>Why This Actually Matters
+</h3><p>The real test of any self-hosted solution isn&rsquo;t the initial setup excitement - it&rsquo;s whether you&rsquo;re still using it six months later. Tandoor has passed that test definitively.</p>
+<p><em>It works the way I think about cooking</em>, not the way some product manager imagined I should think about cooking. Custom categories map to my actual meal rotation. Tags reflect ingredients I commonly substitute or dietary restrictions that matter to my household. The interface gets out of the way and lets me focus on the recipes themselves.</p>
+<p>The peace of mind factor can&rsquo;t be overstated. My recipe collection is backed up alongside my other important data, version controlled, and completely under my control. No subscription fees, no feature deprecation, no sudden policy changes that break my workflow.</p>
+<p>Sure, there are no social features for sharing recipes with friends or browsing community collections. But honestly, that feels like a benefit rather than a limitation. I wanted a tool, not a social network.</p>
+<h3 id="the-path-forward"><a href="#the-path-forward" class="header-anchor"></a>The Path Forward
+</h3><p>I&rsquo;m still refining the deployment. Adding it to my reverse proxy setup for external access is on the roadmap, and I want to implement automated database backups as part of my broader infrastructure maintenance.</p>
+<p>The mobile app development looks promising for those moments when you&rsquo;re actually standing in the kitchen with flour on your hands trying to remember if the recipe called for one teaspoon or one tablespoon of vanilla.</p>
+<p>For now, the web interface works perfectly on mobile browsers, though a native app would provide a smoother experience for recipe viewing while cooking.</p>
+<h3 id="worth-the-investment"><a href="#worth-the-investment" class="header-anchor"></a>Worth the Investment?
+</h3><p>If you&rsquo;re already running a homelab with Docker capability, Tandoor integrates seamlessly into your existing infrastructure. The initial setup investment pays dividends immediately through improved meal planning efficiency and the genuine satisfaction of having a recipe management system that works exactly how you want it to.</p>
+<p>The bigger question is whether self-hosting makes sense for your particular situation. If you&rsquo;re comfortable with the technical requirements and value data ownership over convenience features, Tandoor represents exactly the kind of thoughtful, well-executed open source project that makes self-hosting worthwhile.</p>
+<p>My recipe chaos is officially under control. Now I just need to work on actually cooking all these recipes I&rsquo;ve been meticulously organizing.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/self-hosted/">Self-Hosted</a>
+        
+            <a href="/tags/docker/">Docker</a>
+        
+            <a href="/tags/recipes/">Recipes</a>
+        
+            <a href="/tags/homelab/">Homelab</a>
+        
+            <a href="/tags/proxmox/">Proxmox</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/projects/nextcloud/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/head/Nextcloud.png" loading="lazy" data-key="" data-hash="/img/head/Nextcloud.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Building a Production-Ready Nextcloud Setup: From LXC to AI Integration</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 The Patch Panel
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

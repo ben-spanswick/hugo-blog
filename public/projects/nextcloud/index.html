@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="A complete guide to deploying Nextcloud on Proxmox with proper architecture, performance optimization, and AI-powered document processing integration.">
+<title>Building a Production-Ready Nextcloud Setup: From LXC to AI Integration</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/projects/nextcloud/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Building a Production-Ready Nextcloud Setup: From LXC to AI Integration">
+<meta property='og:description' content="A complete guide to deploying Nextcloud on Proxmox with proper architecture, performance optimization, and AI-powered document processing integration.">
+<meta property='og:url' content='http://192.168.100.63:1313/projects/nextcloud/'>
+<meta property='og:site_name' content='The Patch Panel'>
+<meta property='og:type' content='article'><meta property='article:section' content='Projects' /><meta property='article:tag' content='Nextcloud' /><meta property='article:tag' content='Proxmox' /><meta property='article:tag' content='LXC' /><meta property='article:tag' content='PostgreSQL' /><meta property='article:tag' content='AI' /><meta property='article:tag' content='Homelab' /><meta property='article:tag' content='Self-Hosted' /><meta property='article:published_time' content='2024-10-07T10:45:00-04:00'/><meta property='article:modified_time' content='2024-10-07T10:45:00-04:00'/><meta property='og:image' content='http://192.168.100.63:1313/img/head/Nextcloud.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Building a Production-Ready Nextcloud Setup: From LXC to AI Integration">
+<meta name="twitter:description" content="A complete guide to deploying Nextcloud on Proxmox with proper architecture, performance optimization, and AI-powered document processing integration."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/img/head/Nextcloud.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/headshot2.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">💾</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">The Patch Panel</a></h1>
+            <h2 class="site-description">Exploring AI, Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/news/' >
+                
+                
+                
+                <span>News</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/ai/' >
+                
+                
+                
+                <span>AI</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/datascience/' >
+                
+                
+                
+                <span>Data Strategy</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='Spanswick_Resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/projects/nextcloud/">
+                
+                    <img src="/img/head/Nextcloud.png" loading="lazy" alt="Featured image of post Building a Production-Ready Nextcloud Setup: From LXC to AI Integration" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/homelab/" >
+                Homelab
+            </a>
+        
+            <a href="/categories/self-hosted/" >
+                Self-Hosted
+            </a>
+        
+            <a href="/categories/guides/" >
+                Guides
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/projects/nextcloud/">Building a Production-Ready Nextcloud Setup: From LXC to AI Integration</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            A complete guide to deploying Nextcloud on Proxmox with proper architecture, performance optimization, and AI-powered document processing integration.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">Oct 07, 2024</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    8 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h3 id="ai-summary"><a href="#ai-summary" class="header-anchor"></a>AI Summary
+</h3><ul>
+<li>Split Nextcloud architecture across multiple containers for better performance and scalability</li>
+<li>Use PostgreSQL over SQLite/MySQL for better concurrent handling and JSON performance</li>
+<li>Implement proper caching with Redis and APCu to dramatically improve response times</li>
+<li>Integrate with AI document processing pipeline using Paperless-NGX and local LLM infrastructure</li>
+<li>Navigate LXC permission mapping and storage mounting for reliable operation</li>
+</ul>
+<hr>
+<h3 id="the-problem-with-most-nextcloud-setups"><a href="#the-problem-with-most-nextcloud-setups" class="header-anchor"></a>The Problem with Most Nextcloud Setups
+</h3><p>After running a janky Nextcloud install for way too long, I finally sat down to build something that wouldn&rsquo;t embarrass me when sharing files. Most guides throw everything on one machine, use SQLite, and wonder why performance is terrible.</p>
+<p>Time for a complete rebuild - one that would scale, perform well, and integrate with my broader AI document processing workflow.</p>
+<h3 id="architecture-splitting-components-smart"><a href="#architecture-splitting-components-smart" class="header-anchor"></a>Architecture: Splitting Components Smart
+</h3><p>The core insight was realizing that different components have completely different performance profiles. The Nextcloud application itself needs to be snappy for web requests. The database needs to handle concurrent operations without choking. But bulk file storage? A vacation video from three years ago doesn&rsquo;t need NVMe speeds.</p>
+<p><strong>My R430 Proxmox setup handles this with separation:</strong></p>
+<ul>
+<li><strong>Nextcloud app lives on SSD</strong> - Core application in LXC container on local storage for responsive UI</li>
+<li><strong>PostgreSQL gets its own container</strong> - Dedicated database server with proper resources</li>
+<li><strong>Bulk storage on the R730XD</strong> - User files live on Unraid NAS via NFS mounts</li>
+<li><strong>Caching layer in Redis</strong> - File locking and performance optimization</li>
+</ul>
+<p>This approach gives me fast UI response times without breaking the bank on storage costs, while setting up integration points for my AI processing pipeline.</p>
+<h3 id="the-lxc-foundation"><a href="#the-lxc-foundation" class="header-anchor"></a>The LXC Foundation
+</h3><p>Instead of building everything from scratch, I started with the TurnKey Nextcloud template. It comes pre-configured with Apache, PHP, Redis, and security hardening - no point reinventing the wheel.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>pct create <span style="color:#ae81ff">101</span> local:vztmpl/turnkey-nextcloud-18.0-buster-amd64.tar.gz <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --storage local-zfs <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --hostname NextCloud <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --memory <span style="color:#ae81ff">8000</span> <span style="color:#ae81ff">\
+</span></span></span><span style="display:flex;"><span><span style="color:#ae81ff"></span>  --cores <span style="color:#ae81ff">4</span>
+</span></span><span style="display:flex;"><span>pct start <span style="color:#ae81ff">101</span>
+</span></span></code></pre></div><p>I gave it 8GB RAM and 4 cores because Nextcloud actually benefits from having resources available for caching and concurrent operations. Storage performance matters more than most people realize.</p>
+<h3 id="database-postgresql-over-everything"><a href="#database-postgresql-over-everything" class="header-anchor"></a>Database: PostgreSQL Over Everything
+</h3><p>This is where most setups go wrong. SQLite is fine for testing, but if you want decent performance with multiple devices syncing, you need a proper database server.</p>
+<p>I went with PostgreSQL in its own LXC container for several reasons:</p>
+<ul>
+<li><strong>Better concurrency handling</strong> - MVCC system handles simultaneous file operations more gracefully</li>
+<li><strong>Superior JSON performance</strong> - Nextcloud stores tons of metadata, and PostgreSQL&rsquo;s JSON operations are genuinely faster</li>
+<li><strong>Personal reliability</strong> - I&rsquo;ve had fewer weird issues with PostgreSQL over the years</li>
+</ul>
+<p>Setting up the database server:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt update <span style="color:#f92672">&amp;&amp;</span> apt install -y postgresql
+</span></span><span style="display:flex;"><span>systemctl enable --now postgresql
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>sudo -u postgres psql
+</span></span><span style="display:flex;"><span>CREATE DATABASE nextcloud;
+</span></span><span style="display:flex;"><span>CREATE USER nextclouduser WITH PASSWORD <span style="color:#e6db74">&#39;your-secure-password&#39;</span>;
+</span></span><span style="display:flex;"><span>ALTER DATABASE nextcloud OWNER TO nextclouduser;
+</span></span><span style="display:flex;"><span><span style="color:#ae81ff">\q</span>
+</span></span></code></pre></div><h3 id="storage-strategy-nfs-integration-with-unraid"><a href="#storage-strategy-nfs-integration-with-unraid" class="header-anchor"></a>Storage Strategy: NFS Integration with Unraid
+</h3><p>Here&rsquo;s where the R730XD Unraid server comes into play. Instead of local storage eating up the Proxmox node, I mount NFS shares from the main NAS.</p>
+<p><strong>On the Unraid side:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Create dedicated share for Nextcloud data</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Export via NFS with proper permissions</span>
+</span></span></code></pre></div><p><strong>Mounting in the LXC container:</strong></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Edit container config</span>
+</span></span><span style="display:flex;"><span>nano /etc/pve/lxc/101.conf
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add NFS mount</span>
+</span></span><span style="display:flex;"><span>mp0: /mnt/unraid-nextcloud,mp<span style="color:#f92672">=</span>/mnt/nextcloud
+</span></span></code></pre></div><h3 id="the-permissions-dance-lxc-reality-check"><a href="#the-permissions-dance-lxc-reality-check" class="header-anchor"></a>The Permissions Dance (LXC Reality Check)
+</h3><p>This is where unprivileged LXC containers get annoying. The UIDs don&rsquo;t match between host and container, so you have to manually map permissions.</p>
+<p>The magic numbers for unprivileged containers:</p>
+<ul>
+<li>Container UID 33 (www-data) maps to host UID 101033</li>
+<li>Container GID 33 (www-data) maps to host GID 101033</li>
+</ul>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># On Proxmox host</span>
+</span></span><span style="display:flex;"><span>chown -R 101033:101033 /mnt/unraid-nextcloud
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Verify the mapping worked</span>
+</span></span><span style="display:flex;"><span>ls -la /mnt/unraid-nextcloud/
+</span></span></code></pre></div><p>This took me way too long to figure out the first time. The container starts, everything looks fine, then you get permission errors when Nextcloud tries to write files.</p>
+<h3 id="performance-caching-is-not-optional"><a href="#performance-caching-is-not-optional" class="header-anchor"></a>Performance: Caching Is Not Optional
+</h3><p>Default Nextcloud feels sluggish because it hits the database constantly. The solution is proper caching at multiple levels:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>apt install -y redis-server php-redis php-apcu
+</span></span><span style="display:flex;"><span>systemctl restart apache2
+</span></span></code></pre></div><p>Configuration in <code>/var/www/nextcloud/config/config.php</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-php" data-lang="php"><span style="display:flex;"><span><span style="color:#e6db74">&#39;memcache.local&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;\OC\Memcache\APCu&#39;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;memcache.locking&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;\OC\Memcache\Redis&#39;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;redis&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#66d9ef">array</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;host&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#e6db74">&#39;localhost&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;port&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">6379</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#39;timeout&#39;</span> <span style="color:#f92672">=&gt;</span> <span style="color:#ae81ff">0.0</span>,
+</span></span><span style="display:flex;"><span>),
+</span></span></code></pre></div><p>The difference is honestly dramatic. File operations that used to take 5-10 seconds now happen almost instantly. This is the pivot point where the whole system transforms from &ldquo;usable&rdquo; to &ldquo;professional.&rdquo;</p>
+<h3 id="moving-data-and-final-configuration"><a href="#moving-data-and-final-configuration" class="header-anchor"></a>Moving Data and Final Configuration
+</h3><p>With storage mounted and permissions sorted, time to migrate the data directory:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>systemctl stop apache2
+</span></span><span style="display:flex;"><span>rsync -av /var/www/nextcloud/data/ /mnt/nextcloud/
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Update config.php</span>
+</span></span><span style="display:flex;"><span><span style="color:#e6db74">&#39;datadirectory&#39;</span> <span style="color:#f92672">=</span>&gt; <span style="color:#e6db74">&#39;/mnt/nextcloud&#39;</span>,
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>systemctl restart apache2
+</span></span></code></pre></div><p>Final LXC configuration:</p>
+<pre tabindex="0"><code>arch: amd64
+cores: 4
+features: nesting=1
+hostname: NextCloud
+memory: 8000
+mp0: /mnt/unraid-nextcloud,mp=/mnt/nextcloud
+net0: name=eth0,bridge=vmbr0,firewall=1,ip=192.168.1.100/24,type=veth
+ostype: debian
+rootfs: local-zfs:subvol-101-disk-0,size=8G
+swap: 8000
+unprivileged: 1
+</code></pre><h3 id="verification-and-optimization"><a href="#verification-and-optimization" class="header-anchor"></a>Verification and Optimization
+</h3><p>After setup, verify everything is working properly:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Check status</span>
+</span></span><span style="display:flex;"><span>su - www-data -s /bin/bash -c <span style="color:#e6db74">&#39;php /var/www/nextcloud/occ status&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Scan for missing files</span>
+</span></span><span style="display:flex;"><span>su - www-data -s /bin/bash -c <span style="color:#e6db74">&#39;php /var/www/nextcloud/occ files:scan --all&#39;</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Add missing database indices (crucial for performance)</span>
+</span></span><span style="display:flex;"><span>su - www-data -s /bin/bash -c <span style="color:#e6db74">&#39;php /var/www/nextcloud/occ db:add-missing-indices&#39;</span>
+</span></span></code></pre></div><p>That last command is critical - Nextcloud sometimes misses database indices during setup, and they make a huge difference for query performance.</p>
+<h3 id="integration-with-ai-document-processing-pipeline"><a href="#integration-with-ai-document-processing-pipeline" class="header-anchor"></a>Integration with AI Document Processing Pipeline
+</h3><p>This is where things get interesting. The Nextcloud setup I just described isn&rsquo;t just file storage - it&rsquo;s part of a larger AI-powered document processing workflow.</p>
+<p><strong>The broader architecture includes:</strong></p>
+<ul>
+<li><strong>Dual RTX 3090 AI box</strong> running <code>llama.cpp</code> for local LLM inference</li>
+<li><strong>Paperless-NGX</strong> for document OCR and metadata extraction</li>
+<li><strong>Vector databases</strong> on the R430 for RAG pipelines</li>
+<li><strong>LibreChat</strong> as frontend for AI interactions</li>
+</ul>
+<h3 id="document-processing-workflow"><a href="#document-processing-workflow" class="header-anchor"></a>Document Processing Workflow
+</h3><p>Documents flow through this pipeline:</p>
+<ol>
+<li><strong>Upload to Nextcloud</strong> - Files arrive via web interface or sync clients</li>
+<li><strong>Auto-detection</strong> - Paperless-NGX monitors Nextcloud directories via inotify</li>
+<li><strong>OCR Processing</strong> - Documents get OCR&rsquo;d and full-text indexed</li>
+<li><strong>AI Metadata Extraction</strong> - Local LLMs extract structured metadata, tags, and summaries</li>
+<li><strong>Storage Integration</strong> - Processed documents return to Nextcloud with enriched metadata</li>
+</ol>
+<p>The technical implementation uses shared storage between containers:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Paperless-NGX container mounts same NFS shares</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Shared directory structure:</span>
+</span></span><span style="display:flex;"><span>/mnt/nextcloud/
+</span></span><span style="display:flex;"><span>├── documents/
+</span></span><span style="display:flex;"><span>│   ├── incoming/     <span style="color:#75715e"># Paperless monitors this</span>
+</span></span><span style="display:flex;"><span>│   ├── processed/    <span style="color:#75715e"># AI-enriched documents</span>
+</span></span><span style="display:flex;"><span>│   └── archive/      <span style="color:#75715e"># Long-term storage</span>
+</span></span></code></pre></div><h3 id="ai-processing-configuration"><a href="#ai-processing-configuration" class="header-anchor"></a>AI Processing Configuration
+</h3><p>The LLM inference happens on the dual RTX 3090 box, with models accessed via API:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Example AI metadata extraction</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> requests
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">extract_metadata</span>(document_path):
+</span></span><span style="display:flex;"><span>    payload <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;model&#34;</span>: <span style="color:#e6db74">&#34;llama-3.1-8b&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;prompt&#34;</span>: <span style="color:#e6db74">f</span><span style="color:#e6db74">&#34;Extract key metadata from: </span><span style="color:#e6db74">{</span>document_text<span style="color:#e6db74">}</span><span style="color:#e6db74">&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;max_tokens&#34;</span>: <span style="color:#ae81ff">500</span>
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    response <span style="color:#f92672">=</span> requests<span style="color:#f92672">.</span>post(<span style="color:#e6db74">&#34;http://ai-box:8080/v1/completions&#34;</span>, json<span style="color:#f92672">=</span>payload)
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> response<span style="color:#f92672">.</span>json()
+</span></span></code></pre></div><p>The extracted metadata gets written back to Nextcloud as extended attributes and indexed for search.</p>
+<h3 id="vector-database-integration"><a href="#vector-database-integration" class="header-anchor"></a>Vector Database Integration
+</h3><p>For RAG capabilities, documents get embedded and stored in a vector database running on the R430:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-python" data-lang="python"><span style="display:flex;"><span><span style="color:#75715e"># Document embedding pipeline</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">from</span> sentence_transformers <span style="color:#f92672">import</span> SentenceTransformer
+</span></span><span style="display:flex;"><span><span style="color:#f92672">import</span> qdrant_client
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>model <span style="color:#f92672">=</span> SentenceTransformer(<span style="color:#e6db74">&#39;all-MiniLM-L6-v2&#39;</span>)
+</span></span><span style="display:flex;"><span>client <span style="color:#f92672">=</span> qdrant_client<span style="color:#f92672">.</span>QdrantClient(host<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;r430-vector-db&#34;</span>)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">def</span> <span style="color:#a6e22e">embed_document</span>(doc_text, doc_id):
+</span></span><span style="display:flex;"><span>    embedding <span style="color:#f92672">=</span> model<span style="color:#f92672">.</span>encode(doc_text)
+</span></span><span style="display:flex;"><span>    client<span style="color:#f92672">.</span>upsert(
+</span></span><span style="display:flex;"><span>        collection_name<span style="color:#f92672">=</span><span style="color:#e6db74">&#34;documents&#34;</span>,
+</span></span><span style="display:flex;"><span>        points<span style="color:#f92672">=</span>[{
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;id&#34;</span>: doc_id,
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;vector&#34;</span>: embedding<span style="color:#f92672">.</span>tolist(),
+</span></span><span style="display:flex;"><span>            <span style="color:#e6db74">&#34;payload&#34;</span>: {<span style="color:#e6db74">&#34;text&#34;</span>: doc_text, <span style="color:#e6db74">&#34;nextcloud_path&#34;</span>: doc_path}
+</span></span><span style="display:flex;"><span>        }]
+</span></span><span style="display:flex;"><span>    )
+</span></span></code></pre></div><p>This enables semantic search across all documents via LibreChat or custom interfaces.</p>
+<h3 id="network-integration-and-security"><a href="#network-integration-and-security" class="header-anchor"></a>Network Integration and Security
+</h3><p>The whole setup operates within my VLAN-segmented network:</p>
+<ul>
+<li><strong>Work VLAN</strong> - Nextcloud accessible from work devices</li>
+<li><strong>Personal VLAN</strong> - Home devices and mobile sync</li>
+<li><strong>Dirty/Test VLAN</strong> - AI processing and development work</li>
+<li><strong>DMZ</strong> - External access via Cloudflare tunnels</li>
+</ul>
+<p>Traffic routing through OPNsense with proper firewall rules between VLANs. The Brocade ICX6450 handles Layer 2 switching with 10GbE uplinks between critical services.</p>
+<h3 id="backup-strategy"><a href="#backup-strategy" class="header-anchor"></a>Backup Strategy
+</h3><p>With this much integration, backup becomes critical:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Automated backup script</span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#!/bin/bash</span>
+</span></span><span style="display:flex;"><span>rsync -av /mnt/nextcloud/ /mnt/r730-backup/nextcloud/
+</span></span><span style="display:flex;"><span>pg_dump -h postgres-server nextcloud | gzip &gt; /mnt/r730-backup/nextcloud-db-<span style="color:#66d9ef">$(</span>date +%Y%m%d<span style="color:#66d9ef">)</span>.sql.gz
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Vector database backup</span>
+</span></span><span style="display:flex;"><span>docker exec qdrant-container /qdrant/backup.sh
+</span></span></code></pre></div><p>Kopia handles the actual backup execution with custom repository paths across the infrastructure.</p>
+<h3 id="performance-results"><a href="#performance-results" class="header-anchor"></a>Performance Results
+</h3><p>After several months of operation, the numbers speak for themselves:</p>
+<ul>
+<li><strong>Web interface response</strong> - Sub-second page loads</li>
+<li><strong>File sync performance</strong> - 50MB+ files transfer smoothly</li>
+<li><strong>Concurrent users</strong> - Multiple devices syncing without conflicts</li>
+<li><strong>AI processing</strong> - Documents processed and metadata extracted within minutes of upload</li>
+<li><strong>Search performance</strong> - Semantic search across 10k+ documents in under 200ms</li>
+</ul>
+<h3 id="what-id-change"><a href="#what-id-change" class="header-anchor"></a>What I&rsquo;d Change
+</h3><p>If I were starting over, a few things I&rsquo;d do differently:</p>
+<p><strong>Database clustering</strong> - PostgreSQL works great, but for redundancy I&rsquo;d set up a primary/replica configuration across multiple LXC containers.</p>
+<p><strong>Dedicated AI processing queue</strong> - Instead of direct monitoring, I&rsquo;d implement a proper job queue (Redis/Celery) for document processing tasks.</p>
+<p><strong>Object storage backend</strong> - Consider MinIO or similar for the bulk storage layer instead of NFS mounts.</p>
+<h3 id="the-bigger-picture"><a href="#the-bigger-picture" class="header-anchor"></a>The Bigger Picture
+</h3><p>This isn&rsquo;t just about running Nextcloud - it&rsquo;s about building a foundation for AI-augmented personal data management. The combination of reliable file storage, local AI processing, and semantic search creates something genuinely useful.</p>
+<p>The technical complexity is higher than a basic Nextcloud install, but the capabilities justify the effort. When you can upload a document and immediately search across all your files using natural language queries, or have AI automatically tag and categorize everything - that&rsquo;s when self-hosting becomes genuinely superior to commercial alternatives.</p>
+<p>My hope is that this provides a new lens for your own infrastructure projects. The conversation doesn&rsquo;t end here - I&rsquo;m keen to hear how others are integrating AI capabilities into their self-hosted setups.</p>
+
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/nextcloud/">Nextcloud</a>
+        
+            <a href="/tags/proxmox/">Proxmox</a>
+        
+            <a href="/tags/lxc/">LXC</a>
+        
+            <a href="/tags/postgresql/">PostgreSQL</a>
+        
+            <a href="/tags/ai/">AI</a>
+        
+            <a href="/tags/homelab/">Homelab</a>
+        
+            <a href="/tags/self-hosted/">Self-Hosted</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 The Patch Panel
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

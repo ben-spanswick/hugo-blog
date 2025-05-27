@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Analytics on The Patch Panel</title>
+        <link>http://192.168.100.63:1313/tags/analytics/</link>
+        <description>Recent content in Analytics on The Patch Panel</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Thu, 02 Jan 2025 14:45:00 -0500</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/analytics/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>What Business Leaders Get Wrong About Data Science (And How to Educate Them)</title>
+        <link>http://192.168.100.63:1313/datascience/leaders/</link>
+        <pubDate>Thu, 02 Jan 2025 14:45:00 -0500</pubDate>
+        
+        <guid>http://192.168.100.63:1313/datascience/leaders/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/leaders.png" alt="Featured image of post What Business Leaders Get Wrong About Data Science (And How to Educate Them)" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Business leaders often treat data science like magic, expecting perfect predictions from inherently uncertain systems&lt;/li&gt;
+&lt;li&gt;The biggest project failures stem from misaligned expectations, not technical limitations&lt;/li&gt;
+&lt;li&gt;Most data science work involves stakeholder collaboration and data preparation, not just modeling&lt;/li&gt;
+&lt;li&gt;Direct, pragmatic communication can shift executive thinking from fantasy to realistic optimism&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;your-executives-think-data-science-is-magic-and-its-killing-your-projects&#34;&gt;&lt;a href=&#34;#your-executives-think-data-science-is-magic-and-its-killing-your-projects&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Your Executives Think Data Science is Magic (And It&amp;rsquo;s Killing Your Projects)
+&lt;/h3&gt;&lt;p&gt;&amp;ldquo;Can&amp;rsquo;t we just use AI to predict exactly how many customers will lose power during the storm?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve fielded this question in boardrooms more times than I can count. The executive asking is genuinely excited about possibilities, completely sincere about leveraging data better, and absolutely clueless about what they&amp;rsquo;re actually requesting.&lt;/p&gt;
+&lt;p&gt;The enthusiasm is fantastic. The expectations? Pure fantasy.&lt;/p&gt;
+&lt;p&gt;After watching brilliant data science teams crash into unrealistic business expectations repeatedly, I&amp;rsquo;ve learned that our biggest obstacle isn&amp;rsquo;t technical complexity. It&amp;rsquo;s the chasm between what executives think data science can do and what it actually delivers.&lt;/p&gt;
+&lt;p&gt;The uncomfortable truth: most business leaders think data science is magic. Until we fix that misconception, we&amp;rsquo;ll keep building amazing solutions that nobody uses.&lt;/p&gt;
+&lt;h3 id=&#34;the-top-5-fantasies-business-leaders-harbor-about-data-science&#34;&gt;&lt;a href=&#34;#the-top-5-fantasies-business-leaders-harbor-about-data-science&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Top 5 Fantasies Business Leaders Harbor About Data Science
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Fantasy #1: &amp;ldquo;It&amp;rsquo;s All About Sophisticated AI Algorithms&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What they think: Data scientists spend their days crafting elegant AI models that solve business problems automatically.&lt;/p&gt;
+&lt;p&gt;The reality: About 5% of data science is actual modeling. The rest breaks down to roughly 50% working with stakeholders and 40% wrestling with messy data.&lt;/p&gt;
+&lt;p&gt;We&amp;rsquo;ve all watched companies burn through millions on &amp;ldquo;AI initiatives&amp;rdquo; before realizing their foundational data was scattered across incompatible systems with inconsistent formats. They would have been infinitely better off spending that first investment on basic data integration.&lt;/p&gt;
+&lt;p&gt;This matters because when executives fixate on algorithms instead of data infrastructure and stakeholder alignment, they set impossible timelines and get frustrated when teams spend months on &amp;ldquo;boring&amp;rdquo; foundational work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fantasy #2: &amp;ldquo;More Data Equals Better Results&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What they think: The path to insights involves collecting every conceivable piece of information.&lt;/p&gt;
+&lt;p&gt;The reality: Most companies are drowning in irrelevant data while missing the information they actually need.&lt;/p&gt;
+&lt;p&gt;Take our advanced metering infrastructure data - we were storing millions of records per hour when only a few unique flags were really necessary for decision making. The computational overhead was killing our processing efficiency, making even simple analyses take far longer than they should.&lt;/p&gt;
+&lt;p&gt;This matters because data hoarding creates expensive storage costs, analysis paralysis, and performance bottlenecks without delivering any measurable value.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fantasy #3: &amp;ldquo;We&amp;rsquo;ll See ROI Immediately&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What they think: Data science projects should deliver clear returns within a quarter, like purchasing new software.&lt;/p&gt;
+&lt;p&gt;The reality: There&amp;rsquo;s a healthy balance between immediate tactical wins and longer-term strategic value. We&amp;rsquo;ve built models where executives expected immediate returns, but the real value played out over the course of years, not months.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fantasy #4: &amp;ldquo;Any Competent Data Scientist Can Solve Any Problem&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What they think: Data scientists are universal problem solvers who can tackle anything with sufficient data.&lt;/p&gt;
+&lt;p&gt;The reality: Data science is incredibly specialized. A recommendation system expert might struggle with time series forecasting. A statistics expert might know nothing about deep learning.&lt;/p&gt;
+&lt;p&gt;When we organized our team around domains of expertise instead of treating everyone as interchangeable, projects finished much faster and had fewer failures. But most importantly, they achieved better adoption because we could communicate effectively with the people who would be using the solutions.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Fantasy #5: &amp;ldquo;Data Science Provides Definitive Answers&amp;rdquo;&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;What they think: Models will tell us exactly what will happen and exactly what actions to take.&lt;/p&gt;
+&lt;p&gt;The reality: Most data science is statistics under the hood, which generally involves probability, not certainties. A model might indicate a customer has a 70% chance of experiencing an outage - it can&amp;rsquo;t guarantee they will.&lt;/p&gt;
+&lt;p&gt;The most challenging resistance I&amp;rsquo;ve encountered was around a weather prediction model designed to forecast power outages. Weather is inherently variable, making precise outage predictions nearly impossible. Some executives felt our model should achieve much higher accuracy than physics actually allows. It required extensive pragmatic discussions and retrospective analysis to demonstrate what was genuinely feasible versus what they wished was possible.&lt;/p&gt;
+&lt;h3 id=&#34;how-to-bridge-the-gap-without-crushing-their-dreams&#34;&gt;&lt;a href=&#34;#how-to-bridge-the-gap-without-crushing-their-dreams&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;How to Bridge the Gap (Without Crushing Their Dreams)
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Speak Business, Not Technical&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t say: &amp;ldquo;We improved model accuracy by 12%&amp;rdquo;
+Say: &amp;ldquo;We reduced customer acquisition costs by identifying better prospects&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Don&amp;rsquo;t say: &amp;ldquo;We need to address data quality issues&amp;rdquo;
+Say: &amp;ldquo;Poor data is adding months to every project timeline&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;When you translate technical work into business outcomes, executive engagement transforms. They weren&amp;rsquo;t less interested before - they just couldn&amp;rsquo;t connect the work to things they cared about.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Show Them, Don&amp;rsquo;t Tell Them&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Abstract explanations don&amp;rsquo;t change minds. Real experiences do.&lt;/p&gt;
+&lt;p&gt;Try this: Run a &amp;ldquo;Data Science Reality&amp;rdquo; workshop where executives manually clean a small dataset, then attempt to draw conclusions. The frustration they experience firsthand teaches them more than any presentation.&lt;/p&gt;
+&lt;p&gt;Or this: Create an interactive demo showing how changing data quality affects business outcomes. Let them see what happens when you feed good versus bad data into identical models.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Start Small and Demonstrate Value&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Instead of trying to correct every misconception simultaneously, pick focused wins that prove your point.&lt;/p&gt;
+&lt;p&gt;I once had a conversation with our COO about a circuit breaker model we&amp;rsquo;d built. Rather than trying to prove the exact failure probability, we focused on explaining how the model could help restructure a business process around maintenance scheduling. That shift from the original request ultimately proved far more efficient and effective than what was initially asked for.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Make Them Part of the Process&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Business leaders who participate in data science projects develop far more realistic expectations than those who just receive results.&lt;/p&gt;
+&lt;p&gt;Create steering committees with business representation. Involve executives in problem definition and feature selection. Hold regular open houses where they can observe work in progress. Let them spend time with the data team to understand the actual workflow.&lt;/p&gt;
+&lt;h3 id=&#34;make-the-hidden-costs-visible&#34;&gt;&lt;a href=&#34;#make-the-hidden-costs-visible&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Make the Hidden Costs Visible
+&lt;/h3&gt;&lt;p&gt;Business leaders undervalue data preparation because they don&amp;rsquo;t see its cost.&lt;/p&gt;
+&lt;p&gt;Track and report time spent on data prep versus modeling. Quantify the cost of poor data quality in delayed projects and missed opportunities. Create &amp;ldquo;data readiness assessments&amp;rdquo; before starting projects.&lt;/p&gt;
+&lt;p&gt;Document how computational inefficiency from poor data architecture affects project timelines. Make the connection between data infrastructure investments and project delivery speed explicit.&lt;/p&gt;
+&lt;h3 id=&#34;the-90-day-executive-education-program&#34;&gt;&lt;a href=&#34;#the-90-day-executive-education-program&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The 90-Day Executive Education Program
+&lt;/h3&gt;&lt;p&gt;If you&amp;rsquo;re serious about fixing the expectations problem, you need a structured approach:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Month 1: Reality Check&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Survey executives to identify specific misconceptions&lt;/li&gt;
+&lt;li&gt;Create a &amp;ldquo;data science reality&amp;rdquo; guide for your organization&lt;/li&gt;
+&lt;li&gt;Document the full process of one successful project - including all the messy parts&lt;/li&gt;
+&lt;li&gt;Identify focused opportunities to demonstrate value&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Month 2: Experience Building&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Run the &amp;ldquo;Data Science Reality&amp;rdquo; workshop for leadership&lt;/li&gt;
+&lt;li&gt;Start regular steering committee meetings&lt;/li&gt;
+&lt;li&gt;Launch at least one project with heavy executive involvement&lt;/li&gt;
+&lt;li&gt;Create visibility into how data scientists actually spend their time&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Month 3: New Systems&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Share results from initial projects, emphasizing process as much as outcomes&lt;/li&gt;
+&lt;li&gt;Implement data readiness requirements for new projects&lt;/li&gt;
+&lt;li&gt;Create an executive resource center with case studies and practical guides&lt;/li&gt;
+&lt;li&gt;Establish regular reviews that address expectations versus reality&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-success-actually-looks-like&#34;&gt;&lt;a href=&#34;#what-success-actually-looks-like&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Success Actually Looks Like
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Before Education:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;What does the data science team actually do all day?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Projects get killed when they don&amp;rsquo;t show immediate results&lt;/li&gt;
+&lt;li&gt;Unrealistic timelines based on algorithm complexity, not data reality&lt;/li&gt;
+&lt;li&gt;Frustration when &amp;ldquo;AI&amp;rdquo; doesn&amp;rsquo;t solve every problem instantly&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;After Education:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Executives advocating for data science resources because they understand the value&lt;/li&gt;
+&lt;li&gt;Realistic project timelines that account for data preparation and stakeholder alignment&lt;/li&gt;
+&lt;li&gt;Investment in data infrastructure alongside analytics capabilities&lt;/li&gt;
+&lt;li&gt;Patience for experimentation and iteration&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;the-goal-realistic-data-optimism&#34;&gt;&lt;a href=&#34;#the-goal-realistic-data-optimism&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Goal: Realistic Data Optimism
+&lt;/h3&gt;&lt;p&gt;The point isn&amp;rsquo;t to crush executive enthusiasm for data science. It&amp;rsquo;s to channel that enthusiasm in productive directions.&lt;/p&gt;
+&lt;p&gt;The most effective organizations maintain &amp;ldquo;realistic data optimism&amp;rdquo; - genuine excitement about data science potential combined with clear-eyed understanding of what it takes to achieve it.&lt;/p&gt;
+&lt;p&gt;They understand that data science requires ongoing investment and patience. Data quality and stakeholder alignment matter as much as analytical sophistication. Not every problem needs advanced AI - sometimes simple analytics deliver more value. Data scientists are partners, not magicians, who need context and reasonable expectations.&lt;/p&gt;
+&lt;h3 id=&#34;the-real-competitive-advantage&#34;&gt;&lt;a href=&#34;#the-real-competitive-advantage&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Real Competitive Advantage
+&lt;/h3&gt;&lt;p&gt;Companies that extract the most value from data science aren&amp;rsquo;t necessarily those with the biggest teams or fanciest technology. They&amp;rsquo;re the ones where business and data leaders share a realistic understanding of what&amp;rsquo;s possible.&lt;/p&gt;
+&lt;p&gt;The biggest advantage isn&amp;rsquo;t having superior algorithms - it&amp;rsquo;s having better alignment between your data capabilities and your business strategy.&lt;/p&gt;
+&lt;h3 id=&#34;the-essential-insight&#34;&gt;&lt;a href=&#34;#the-essential-insight&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Essential Insight
+&lt;/h3&gt;&lt;p&gt;Your executives&amp;rsquo; enthusiasm for data science is an asset, not a problem. But enthusiasm without understanding leads to failed projects, wasted money, and frustrated teams.&lt;/p&gt;
+&lt;p&gt;The solution isn&amp;rsquo;t to lower expectations - it&amp;rsquo;s to educate leadership about what realistic success looks like. When business leaders understand both the potential and the process of data science, something remarkable happens.&lt;/p&gt;
+&lt;p&gt;Not the fantasy magic they initially imagined, but something better: sustainable, scalable business impact driven by data.&lt;/p&gt;
+&lt;p&gt;And that&amp;rsquo;s worth infinitely more than any algorithm.&lt;/p&gt;
+&lt;p&gt;The most successful data science organizations aren&amp;rsquo;t those with the most advanced technology - they&amp;rsquo;re those with the most effective communication between business and technical teams. Start there.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

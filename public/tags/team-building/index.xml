@@ -1,251 +1,319 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Team Building on My Blog</title>
+        <title>Team Building on The Patch Panel</title>
         <link>http://192.168.100.63:1313/tags/team-building/</link>
-        <description>Recent content in Team Building on My Blog</description>
+        <description>Recent content in Team Building on The Patch Panel</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Mon, 17 Mar 2025 02:59:30 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/team-building/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Thu, 30 Jan 2025 14:30:00 -0400</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/team-building/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>How to Scale a Data Science Team Without Losing Agility</title>
         <link>http://192.168.100.63:1313/datascience/agility/</link>
-        <pubDate>Mon, 17 Mar 2025 02:59:30 +0000</pubDate>
+        <pubDate>Thu, 30 Jan 2025 14:30:00 -0400</pubDate>
         
         <guid>http://192.168.100.63:1313/datascience/agility/</guid>
-        <description>&lt;h1 id=&#34;how-to-scale-your-data-science-team-without-everything-falling-apart&#34;&gt;&lt;a href=&#34;#how-to-scale-your-data-science-team-without-everything-falling-apart&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;How to Scale Your Data Science Team Without Everything Falling Apart
-&lt;/h1&gt;&lt;p&gt;&lt;em&gt;A survival guide for growing fast without dying slow&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;strong&gt;The Curse of Success:&lt;/strong&gt; You start with 4 badass data scientists crushing it in a cramped room. Leadership notices. Budget flows. You hire more people.&lt;/p&gt;
-&lt;p&gt;18 months later? 30 people, 6-month deployment cycles, and meetings about meetings.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ve seen this horror movie. Here&amp;rsquo;s how it ends differently.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;the-death-spiral-why-scaling-kills-teams&#34;&gt;&lt;a href=&#34;#the-death-spiral-why-scaling-kills-teams&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Death Spiral (Why Scaling Kills Teams)
-&lt;/h2&gt;&lt;h3 id=&#34;communication-math-is-brutal&#34;&gt;&lt;a href=&#34;#communication-math-is-brutal&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Communication Math is Brutal
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/agile.png" alt="Featured image of post How to Scale a Data Science Team Without Losing Agility" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
 &lt;/h3&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;5 people&lt;/strong&gt; = 10 possible connections&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;15 people&lt;/strong&gt; = 105 connections&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;50 people&lt;/strong&gt; = 1,225 potential relationships&lt;/li&gt;
+&lt;li&gt;Scaling from 2 analysts to 20+ data scientists requires evolving from scrappy execution to structured operations while preserving speed&lt;/li&gt;
+&lt;li&gt;Infrastructure dependencies become the primary scaling constraint in most enterprise environments&lt;/li&gt;
+&lt;li&gt;Rigorous best practices early on actually accelerate agility as teams grow - you pay yourself back later&lt;/li&gt;
+&lt;li&gt;Formalization becomes mandatory as you grow, but it should enable faster execution, not slow it down&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;Good luck keeping everyone in the loop.&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;silos-build-themselves&#34;&gt;&lt;a href=&#34;#silos-build-themselves&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Silos Build Themselves
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Small teams&lt;/strong&gt; = everyone understands everything&lt;br&gt;
-&lt;strong&gt;Big teams&lt;/strong&gt; = computer vision people speak Klingon to the NLP folks&lt;/p&gt;
-&lt;h3 id=&#34;technical-debt-compound-interest&#34;&gt;&lt;a href=&#34;#technical-debt-compound-interest&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Technical Debt Compound Interest
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Year 1:&lt;/strong&gt; &amp;ldquo;We&amp;rsquo;ll fix that later&amp;rdquo;&lt;br&gt;
-&lt;strong&gt;Year 2:&lt;/strong&gt; &amp;ldquo;New people can&amp;rsquo;t understand our code&amp;rdquo;&lt;br&gt;
-&lt;strong&gt;Year 3:&lt;/strong&gt; &amp;ldquo;It takes 3 weeks to change a variable name&amp;rdquo;&lt;/p&gt;
-&lt;h3 id=&#34;decision-paralysis&#34;&gt;&lt;a href=&#34;#decision-paralysis&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Decision Paralysis
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Small team:&lt;/strong&gt; Pivot Tuesday, deploy Friday&lt;br&gt;
-&lt;strong&gt;Big team:&lt;/strong&gt; 3-week planning committee to choose a font&lt;/p&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;what-actually-works-the-antidote&#34;&gt;&lt;a href=&#34;#what-actually-works-the-antidote&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Actually Works (The Antidote)
-&lt;/h2&gt;&lt;h3 id=&#34;squad-structure&#34;&gt;&lt;a href=&#34;#squad-structure&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Squad Structure
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Don&amp;rsquo;t do this:&lt;/strong&gt; Separate data engineering, modeling, and deployment teams&lt;br&gt;
-&lt;strong&gt;Do this:&lt;/strong&gt; 4-7 person squads that own everything end-to-end&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;One retail client saw 200% faster deployments after ditching functional silos.&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;build-platforms-not-just-models&#34;&gt;&lt;a href=&#34;#build-platforms-not-just-models&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Build Platforms, Not Just Models
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;The magic shift:&lt;/strong&gt; Individual brilliance → Platform leverage&lt;/p&gt;
-&lt;p&gt;Stop building one-off solutions. Build:&lt;/p&gt;
+&lt;h3 id=&#34;the-reality-check-nobody-talks-about&#34;&gt;&lt;a href=&#34;#the-reality-check-nobody-talks-about&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Reality Check Nobody Talks About
+&lt;/h3&gt;&lt;p&gt;Six years ago, I walked into a room with two analysts and a mandate to build something bigger. Today, I&amp;rsquo;m running a 20+ person data science organization spanning multiple business units, covering everything from operational optimization to customer experience modeling.&lt;/p&gt;
+&lt;p&gt;The conventional scaling wisdom - squads, agile methodologies, minimal process - isn&amp;rsquo;t wrong. But it&amp;rsquo;s incomplete when you&amp;rsquo;re operating in any enterprise environment where your biggest constraint isn&amp;rsquo;t team dynamics or technical debt. It&amp;rsquo;s waiting months for infrastructure teams to align with your growth trajectory.&lt;/p&gt;
+&lt;p&gt;Let me walk you through what actually happens when you scale a data science team in the real world, not the startup fantasy version.&lt;/p&gt;
+&lt;h3 id=&#34;the-infrastructure-chokepoint&#34;&gt;&lt;a href=&#34;#the-infrastructure-chokepoint&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Infrastructure Chokepoint
+&lt;/h3&gt;&lt;p&gt;The first hard lesson: your technical infrastructure will become your primary scaling bottleneck before you hit any of the sexy organizational challenges everyone writes about.&lt;/p&gt;
+&lt;p&gt;Enterprise IT organizations have their own priorities, their own timelines, and their own risk tolerance. When you need new environments, tools, or access provisioned, you&amp;rsquo;re not just asking for resources - you&amp;rsquo;re asking them to deviate from their carefully orchestrated roadmap.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The three-month delay for a single workspace deployment taught me more about enterprise scaling than any management book ever could.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This reality forces a different kind of strategic thinking. You can&amp;rsquo;t just hire more people and expect linear productivity gains. You have to sequence your growth around infrastructure availability, which means getting really good at forecasting your technical needs 6-12 months ahead of your hiring plans.&lt;/p&gt;
+&lt;p&gt;The practical solution: build relationships with infrastructure teams early, understand their constraints, and align your scaling timeline with their capacity. It&amp;rsquo;s not glamorous, but it&amp;rsquo;s the difference between a team that grows smoothly and one that spends half its time waiting for access to tools.&lt;/p&gt;
+&lt;h3 id=&#34;the-production-ready-paradox&#34;&gt;&lt;a href=&#34;#the-production-ready-paradox&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Production-Ready Paradox
+&lt;/h3&gt;&lt;p&gt;Here&amp;rsquo;s where most data science scaling advice falls apart: it assumes you have the luxury of iterative improvement from prototype to production. In most enterprise environments with real business impact, that&amp;rsquo;s not sustainable.&lt;/p&gt;
+&lt;p&gt;My team produces more models than our deployment pipeline can handle. The bottleneck isn&amp;rsquo;t ideation or experimentation - it&amp;rsquo;s getting things into production. The solution isn&amp;rsquo;t hiring more deployment engineers; it&amp;rsquo;s changing how data scientists operate.&lt;/p&gt;
+&lt;p&gt;Now, I understand that not every team can require full production-grade code from day one. Your MLOps maturity, tooling, and business context all factor into what&amp;rsquo;s realistic. But here&amp;rsquo;s what I&amp;rsquo;ve learned: &lt;strong&gt;implementing rigorous best practices early, while it seems to stifle agility, actually accelerates it as you scale.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;You pay yourself back later.&lt;/p&gt;
+&lt;p&gt;When data scientists write clean, documented, testable code from the start - even if it&amp;rsquo;s not fully production-ready - the compound benefits are massive:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Feature stores that everyone uses&lt;/li&gt;
-&lt;li&gt;One-click deployment pipelines&lt;/li&gt;
-&lt;li&gt;Self-service analytics for business users&lt;/li&gt;
+&lt;li&gt;Faster code reviews and collaboration&lt;/li&gt;
+&lt;li&gt;Easier debugging and maintenance&lt;/li&gt;
+&lt;li&gt;Smoother handoffs to deployment teams&lt;/li&gt;
+&lt;li&gt;Reduced technical debt that would otherwise cripple velocity&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;em&gt;One team invested 6 months in platforms, then productivity per person increased 40% as they scaled.&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;strategic-technical-debt&#34;&gt;&lt;a href=&#34;#strategic-technical-debt&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Strategic Technical Debt
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Hot take:&lt;/strong&gt; Some technical debt is good debt.&lt;/p&gt;
-&lt;p&gt;We track debt in a registry:&lt;/p&gt;
+&lt;p&gt;The mindset shift is crucial: &lt;em&gt;we&amp;rsquo;re not researchers exploring possibilities; we&amp;rsquo;re engineers building systems that solve business problems.&lt;/em&gt; The rigor isn&amp;rsquo;t about crushing creativity - it&amp;rsquo;s about making creativity sustainable at scale.&lt;/p&gt;
+&lt;h3 id=&#34;when-to-put-away-childish-things&#34;&gt;&lt;a href=&#34;#when-to-put-away-childish-things&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;When to Put Away Childish Things
+&lt;/h3&gt;&lt;p&gt;There&amp;rsquo;s a moment in every scaling journey where informal processes stop working. You can feel it coming - decisions take longer, coordination becomes painful, and new team members struggle to understand how things actually get done.&lt;/p&gt;
+&lt;p&gt;This is where the startup mentality has to evolve. Not abandoned - evolved.&lt;/p&gt;
+&lt;p&gt;The early scrappy approach that got you from 2 to 8 people will kill you at 20. But the solution isn&amp;rsquo;t to swing completely into bureaucracy. It&amp;rsquo;s about formalizing the things that enable speed, not the things that slow you down.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What we formalized:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;What it is&lt;/li&gt;
-&lt;li&gt;What it costs us&lt;/li&gt;
-&lt;li&gt;What it takes to fix&lt;/li&gt;
+&lt;li&gt;Code standards and review processes&lt;/li&gt;
+&lt;li&gt;Model governance and risk assessment&lt;/li&gt;
+&lt;li&gt;Value capture documentation and ROI tracking&lt;/li&gt;
+&lt;li&gt;Cross-functional collaboration protocols&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Then spend 20% of time paying down the expensive stuff.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Result: 45% fewer production fires, faster feature velocity&lt;/em&gt;&lt;/p&gt;
-&lt;h3 id=&#34;tiered-governance&#34;&gt;&lt;a href=&#34;#tiered-governance&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Tiered Governance
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Not everything needs the same red tape.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Low risk experiments:&lt;/strong&gt; Minimal oversight&lt;br&gt;
-&lt;strong&gt;Production systems:&lt;/strong&gt; Standard controls&lt;br&gt;
-&lt;strong&gt;Critical infrastructure:&lt;/strong&gt; Full governance&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;70% faster approvals for experimental work, stronger controls where it matters&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;the-scaling-stages&#34;&gt;&lt;a href=&#34;#the-scaling-stages&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Scaling Stages
-&lt;/h2&gt;&lt;h3 id=&#34;stage-1-the-scrappy-team-3-8-people&#34;&gt;&lt;a href=&#34;#stage-1-the-scrappy-team-3-8-people&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Stage 1: The Scrappy Team (3-8 people)
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Vibe:&lt;/strong&gt; Everyone does everything, moves fast, proves value&lt;br&gt;
-&lt;strong&gt;Challenge:&lt;/strong&gt; Limited resources, constant context switching&lt;/p&gt;
-&lt;h3 id=&#34;stage-2-growing-pains-8-20-people&#34;&gt;&lt;a href=&#34;#stage-2-growing-pains-8-20-people&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Stage 2: Growing Pains (8-20 people)
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Vibe:&lt;/strong&gt; Adding process without killing speed&lt;br&gt;
-&lt;strong&gt;Challenge:&lt;/strong&gt; This is where most teams either figure it out or die&lt;/p&gt;
-&lt;h3 id=&#34;stage-3-scaled-function-20-50-people&#34;&gt;&lt;a href=&#34;#stage-3-scaled-function-20-50-people&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Stage 3: Scaled Function (20-50+ people)
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Vibe:&lt;/strong&gt; Platform thinking, real governance, coordination focus&lt;br&gt;
-&lt;strong&gt;Challenge:&lt;/strong&gt; Innovation vs bureaucracy balance&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Pro tip: When I inherited a chaotic 25-person team, we had to step back to Stage 2 before scaling forward. Felt slow, accelerated everything.&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;success-metrics-that-matter&#34;&gt;&lt;a href=&#34;#success-metrics-that-matter&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Success Metrics That Matter
-&lt;/h2&gt;&lt;p&gt;Forget traditional metrics. Track these:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Time from idea to production&lt;/strong&gt; → Should stay flat or improve&lt;br&gt;
-&lt;strong&gt;Deployment frequency&lt;/strong&gt; → How often you ship&lt;br&gt;
-&lt;strong&gt;Onboarding time&lt;/strong&gt; → How fast new people contribute&lt;br&gt;
-&lt;strong&gt;Maintenance overhead&lt;/strong&gt; → % of time keeping things running vs building&lt;br&gt;
-&lt;strong&gt;Cross-team collaboration&lt;/strong&gt; → Are people working together or hiding?&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;the-uncomfortable-truth&#34;&gt;&lt;a href=&#34;#the-uncomfortable-truth&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Uncomfortable Truth
-&lt;/h2&gt;&lt;p&gt;The things that make small teams great become liabilities at scale:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What we kept informal:&lt;/strong&gt;&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;❌ Minimal process&lt;/li&gt;
-&lt;li&gt;❌ Informal communication&lt;/li&gt;
-&lt;li&gt;❌ Everyone doing everything&lt;/li&gt;
+&lt;li&gt;Experimental project approval&lt;/li&gt;
+&lt;li&gt;Individual learning and development paths&lt;/li&gt;
+&lt;li&gt;Day-to-day team coordination&lt;/li&gt;
+&lt;li&gt;Technical architecture decisions within established patterns&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;But the answer isn&amp;rsquo;t bureaucracy. It&amp;rsquo;s &lt;strong&gt;evolution.&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The principles stay the same:&lt;/strong&gt; Speed, ownership, experimentation, impact&lt;br&gt;
-&lt;strong&gt;The implementation changes:&lt;/strong&gt; Structure that enables, platforms that amplify, teams that preserve autonomy&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;bottom-line&#34;&gt;&lt;a href=&#34;#bottom-line&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Bottom Line
-&lt;/h2&gt;&lt;p&gt;Most data science teams that scale successfully don&amp;rsquo;t preserve what they had—they evolve into what they need to become.&lt;/p&gt;
-&lt;p&gt;The goal isn&amp;rsquo;t staying small. It&amp;rsquo;s staying effective at whatever size your business requires.&lt;/p&gt;
-&lt;p&gt;Because the alternative is becoming one of those expensive teams that produces impressive PowerPoints and not much else.&lt;/p&gt;
-&lt;p&gt;And nobody wants to be that team.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;Scaling isn&amp;rsquo;t about doing more of the same. It&amp;rsquo;s about doing different things that work at the new scale. The math doesn&amp;rsquo;t lie—but neither does good strategy.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;The key insight: formalization should accelerate decision-making for routine work, preserving the informal speed for the work that actually requires creativity and judgment.&lt;/p&gt;
+&lt;h3 id=&#34;the-multi-business-unit-complexity-layer&#34;&gt;&lt;a href=&#34;#the-multi-business-unit-complexity-layer&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Multi-Business Unit Complexity Layer
+&lt;/h3&gt;&lt;p&gt;Scaling across multiple business units adds a dimension that most scaling advice ignores entirely. You&amp;rsquo;re not just managing team growth - you&amp;rsquo;re managing different stakeholder expectations, varying technical maturity levels, and competing priorities that may not align.&lt;/p&gt;
+&lt;p&gt;Each business unit has its own definition of success, its own timeline pressures, and its own tolerance for experimentation. What works for supply chain optimization in one area might be completely inappropriate for customer analytics in another.&lt;/p&gt;
+&lt;p&gt;The solution isn&amp;rsquo;t trying to force standardization everywhere. It&amp;rsquo;s about building &lt;em&gt;platforms&lt;/em&gt; that can accommodate different use cases while maintaining consistency in governance and quality standards.&lt;/p&gt;
+&lt;p&gt;We built shared infrastructure - feature stores, deployment pipelines, monitoring systems - but allowed flexibility in how each business unit applied the capabilities to their specific challenges.&lt;/p&gt;
+&lt;h3 id=&#34;value-capture-as-a-scaling-strategy&#34;&gt;&lt;a href=&#34;#value-capture-as-a-scaling-strategy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Value Capture as a Scaling Strategy
+&lt;/h3&gt;&lt;p&gt;As your team grows, the pressure to demonstrate ROI becomes exponentially more intense. A two-person analytics team can fly under the radar. A 20-person organization with a multi-million-dollar budget cannot.&lt;/p&gt;
+&lt;p&gt;This is where many data science teams fail. They treat value capture as an afterthought, something to document after the fact for reporting purposes. But at scale, value capture becomes a core competency that determines whether you continue to grow or get budget-cut into irrelevance.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Our approach:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Every project starts with a business case and success metrics&lt;/li&gt;
+&lt;li&gt;We track not just technical performance but business impact&lt;/li&gt;
+&lt;li&gt;Quarterly reviews focus on outcomes, not outputs&lt;/li&gt;
+&lt;li&gt;We proactively communicate wins and learnings to stakeholders&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The uncomfortable truth: at scale, your technical excellence matters less than your ability to articulate and capture business value. Teams that can&amp;rsquo;t make this transition don&amp;rsquo;t survive budget cycles.&lt;/p&gt;
+&lt;h3 id=&#34;the-rigor-dividend&#34;&gt;&lt;a href=&#34;#the-rigor-dividend&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Rigor Dividend
+&lt;/h3&gt;&lt;p&gt;The biggest misconception about scaling data science teams is that more process means less agility. In my experience, the opposite is true - but only if you implement the right kind of rigor.&lt;/p&gt;
+&lt;p&gt;Rigorous code standards feel slow when you&amp;rsquo;re starting out. But six months later, when you can onboard new team members in days instead of weeks, when debugging takes minutes instead of hours, when models can be updated and deployed without archaeology projects to understand the original code - that&amp;rsquo;s when you realize you&amp;rsquo;ve been paying yourself back.&lt;/p&gt;
+&lt;p&gt;The teams that maintain agility at scale aren&amp;rsquo;t the ones that avoid process. They&amp;rsquo;re the ones that implement process strategically, focusing on the practices that create compound returns on productivity.&lt;/p&gt;
+&lt;h3 id=&#34;the-evolution-mindset&#34;&gt;&lt;a href=&#34;#the-evolution-mindset&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Evolution Mindset
+&lt;/h3&gt;&lt;p&gt;The biggest mistake I see in scaling data science teams is trying to preserve what made the early team successful instead of evolving into what the scaled team needs to become.&lt;/p&gt;
+&lt;p&gt;The principles stay constant: speed, ownership, experimentation, impact. But the implementation has to change completely.&lt;/p&gt;
+&lt;p&gt;A 20-person team can&amp;rsquo;t operate like a 5-person team any more than a 5-person team should operate like a 20-person team. The magic is in evolving the structure to support the principles at whatever scale your business requires.&lt;/p&gt;
+&lt;p&gt;Because the alternative - becoming one of those expensive teams that produces impressive PowerPoints and minimal business impact - isn&amp;rsquo;t just a failure of process. It&amp;rsquo;s a failure to recognize that scaling is fundamentally about evolution, not preservation.&lt;/p&gt;
+&lt;p&gt;The math of team growth is unforgiving, but so is the market for data science value. Teams that figure out how to evolve while staying effective don&amp;rsquo;t just survive scaling - they become indispensable.&lt;/p&gt;
+&lt;p&gt;And in a world where data science budgets are under constant scrutiny, indispensable is exactly where you want to be.&lt;/p&gt;
 </description>
         </item>
         <item>
         <title>Building High Impact Data Science Teams</title>
         <link>http://192.168.100.63:1313/datascience/foundations/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        <pubDate>Fri, 13 Dec 2024 14:30:00 -0400</pubDate>
         
         <guid>http://192.168.100.63:1313/datascience/foundations/</guid>
-        <description>&lt;h1 id=&#34;your-data-science-team-is-probably-expensive-and-useless&#34;&gt;&lt;a href=&#34;#your-data-science-team-is-probably-expensive-and-useless&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Your Data Science Team is Probably Expensive and Useless
-&lt;/h1&gt;&lt;p&gt;&lt;em&gt;How to build teams that actually move the business forward&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;Let me guess. You hired a bunch of brilliant data scientists, gave them access to all your data, and expected magic to happen.&lt;/p&gt;
-&lt;p&gt;Six months later, you&amp;rsquo;ve got impressive demos, excited PowerPoints, and zero impact on the bottom line.&lt;/p&gt;
-&lt;p&gt;Welcome to the club. Most companies end up with data science teams that look great on paper but accomplish nothing meaningful. They burn through budget building models nobody uses while the business keeps making decisions with gut instinct and Excel.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ve seen this disaster play out dozens of times. The good news? The fix isn&amp;rsquo;t complicated.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;stop-trying-to-impress-your-peers&#34;&gt;&lt;a href=&#34;#stop-trying-to-impress-your-peers&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Stop Trying to Impress Your Peers
-&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s the uncomfortable truth: &lt;strong&gt;most business problems don&amp;rsquo;t need deep learning&lt;/strong&gt;.&lt;/p&gt;
-&lt;p&gt;If a simple linear regression solves the problem, use it. If a basic dashboard gives people what they need, build that. The goal is business impact, not algorithmic sophistication.&lt;/p&gt;
-&lt;p&gt;I watched one team spend four months building a complex neural network for demand forecasting. Accuracy was incredible. Implementation was a nightmare. Meanwhile, their competitor was using basic moving averages and capturing market share.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Before building anything, answer these:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;What specific business decision does this improve?&lt;/li&gt;
-&lt;li&gt;How will people&amp;rsquo;s daily work change?&lt;/li&gt;
-&lt;li&gt;What&amp;rsquo;s the simplest solution that works?&lt;/li&gt;
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/highimpact.png" alt="Featured image of post Building High Impact Data Science Teams" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;AI Summary&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Most data science teams fail because they optimize for algorithmic sophistication instead of business impact.&lt;/li&gt;
+&lt;li&gt;Simple solutions that people actually use beat complex models that gather dust.&lt;/li&gt;
+&lt;li&gt;Building balanced teams with business sense and operational thinking matters more than hiring only technical geniuses.&lt;/li&gt;
+&lt;li&gt;Success requires focusing on adoption and change management, not just model accuracy.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;Can&amp;rsquo;t answer clearly? You&amp;rsquo;re solving the wrong problem.&lt;/p&gt;
 &lt;hr&gt;
+&lt;h2 id=&#34;your-data-science-team-is-probably-expensive-and-useless&#34;&gt;&lt;a href=&#34;#your-data-science-team-is-probably-expensive-and-useless&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Your Data Science Team is Probably Expensive and Useless
+&lt;/h2&gt;&lt;p&gt;Let me guess. You hired a bunch of brilliant data scientists, gave them access to all your data, and expected magic to happen.&lt;/p&gt;
+&lt;p&gt;Six months later, you&amp;rsquo;ve got impressive demos, excited PowerPoints, and &lt;strong&gt;zero impact on the bottom line.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Welcome to the club. Most companies end up with data science teams that look great on paper but accomplish nothing meaningful. They burn through budget building models nobody uses while the business keeps making decisions with gut instinct and Excel.&lt;/p&gt;
+&lt;p&gt;After building data science organizations from scratch across multiple contexts - from federal agencies to major utilities - I&amp;rsquo;ve watched this disaster play out dozens of times. The good news? The fix isn&amp;rsquo;t complicated, but it requires abandoning some deeply held assumptions about what makes data science teams successful.&lt;/p&gt;
+&lt;h2 id=&#34;stop-trying-to-impress-your-peers&#34;&gt;&lt;a href=&#34;#stop-trying-to-impress-your-peers&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Stop Trying to Impress Your Peers
+&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s the uncomfortable truth that took me years to fully accept: &lt;strong&gt;most business problems don&amp;rsquo;t need deep learning.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Our COO once asked for a retrospective analysis of how our vegetation management program was performing under weather-normalized conditions. Simple request, right?&lt;/p&gt;
+&lt;p&gt;Not when you&amp;rsquo;re a team that spends most of its time doing deep weather analytics work. We dive into storm impact modeling, complex outage correlations, sophisticated vegetation management algorithms. Our default mode is finding the most technically robust solution to every problem.&lt;/p&gt;
+&lt;p&gt;So naturally, when tasked with this retrospective, our gut reaction was to build something complex. Zero hour actuals, fine-grain resolution, multi-layered weather normalization models. The kind of analysis that would make meteorologists proud.&lt;/p&gt;
+&lt;p&gt;The team was already sketching out approaches that would take months to implement properly.&lt;/p&gt;
+&lt;p&gt;Then our summer intern spoke up.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;What if we just pulled all the weather station data at 5-minute intervals and applied a transformation that aligns with the Beaufort scale?&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The room went quiet. Not because it was wrong, but because it was so obviously right that none of us had thought of it. We&amp;rsquo;d been so conditioned to solve complex problems with complex solutions that we&amp;rsquo;d missed the straightforward approach sitting right there.&lt;/p&gt;
+&lt;p&gt;Her method worked perfectly for what we actually needed to deliver.&lt;/p&gt;
+&lt;p&gt;This moment crystallized something I&amp;rsquo;d been noticing throughout my decade of building and leading data science teams: our obsession with hiring only the most technically advanced people was creating more problems than it solved.&lt;/p&gt;
+&lt;p&gt;Before building anything, answer these three questions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;What specific business decision does this improve?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How will people&amp;rsquo;s daily work change?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;What&amp;rsquo;s the simplest solution that works?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Can&amp;rsquo;t answer clearly? You&amp;rsquo;re solving the wrong problem.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;h2 id=&#34;the-people-problem-hint-its-not-about-finding-geniuses&#34;&gt;&lt;a href=&#34;#the-people-problem-hint-its-not-about-finding-geniuses&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The People Problem (Hint: It&amp;rsquo;s Not About Finding Geniuses)
 &lt;/h2&gt;&lt;p&gt;Most companies hire data science teams backwards. They chase the smartest person in the room instead of building balanced teams that can actually execute.&lt;/p&gt;
-&lt;h3 id=&#34;what-actually-works&#34;&gt;&lt;a href=&#34;#what-actually-works&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Actually Works
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Mix of skills, not just PhDs:&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;When I built our AI and Data Science Center of Excellence from the ground up, I quickly learned that getting buy-in across three operating companies meant every executive had their own take on what was important. The technical brilliance that impressed one division head meant nothing to another who just wanted his call center metrics to improve.&lt;/p&gt;
+&lt;h4 id=&#34;what-actually-works&#34;&gt;&lt;a href=&#34;#what-actually-works&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;What Actually Works:&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;A mix of skills, not just PhDs:&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;Technical depth (someone who can build models)&lt;/li&gt;
-&lt;li&gt;Business sense (someone who understands the company)&lt;/li&gt;
-&lt;li&gt;Product thinking (someone who can scale solutions)&lt;/li&gt;
-&lt;li&gt;Change management (someone who can drive adoption)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Technical depth&lt;/strong&gt; (someone who can build models)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Business sense&lt;/strong&gt; (someone who understands the company)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Product thinking&lt;/strong&gt; (someone who can scale solutions)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Change management&lt;/strong&gt; (someone who can drive adoption)&lt;/li&gt;
 &lt;/ul&gt;
-&lt;h3 id=&#34;what-fails-every-time&#34;&gt;&lt;a href=&#34;#what-fails-every-time&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Fails Every Time
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;The genius trap:&lt;/strong&gt; Hiring one superstar who builds incredible models that nobody else can maintain or understand.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Academia mindset:&lt;/strong&gt; Teams that optimize for publication-worthy work instead of business-ready solutions.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;No operational thinking:&lt;/strong&gt; Building solutions that require completely rewriting how people work.&lt;/p&gt;
-&lt;p&gt;&lt;em&gt;Real talk: I&amp;rsquo;d rather have a decent data scientist who understands the business than a brilliant one who works in isolation.&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
+&lt;h4 id=&#34;what-fails-every-time&#34;&gt;&lt;a href=&#34;#what-fails-every-time&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;What Fails Every Time:&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;The genius trap:&lt;/strong&gt; Hiring one superstar who builds incredible models that nobody else can maintain or understand.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Academia mindset:&lt;/strong&gt; Teams that optimize for publication-worthy work instead of business-ready solutions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No operational thinking:&lt;/strong&gt; Building solutions that require completely rewriting how people work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Real talk: I&amp;rsquo;d rather have a decent data scientist who understands the business than a brilliant one who works in isolation. The former will build something like our GenAI Call Center Agent Assist that actually gets adopted and stays in production. The latter will build impressive demos that executives nod at and then forget about.&lt;/p&gt;
 &lt;h2 id=&#34;the-tech-debt-death-spiral&#34;&gt;&lt;a href=&#34;#the-tech-debt-death-spiral&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Tech Debt Death Spiral
 &lt;/h2&gt;&lt;p&gt;This is how most data science teams die:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Month 1:&lt;/strong&gt; Build amazing proof-of-concept&lt;br&gt;
-&lt;strong&gt;Month 3:&lt;/strong&gt; Business wants more, so you hack together another model&lt;br&gt;
-&lt;strong&gt;Month 6:&lt;/strong&gt; Everything&amp;rsquo;s held together with digital duct tape&lt;br&gt;
-&lt;strong&gt;Month 12:&lt;/strong&gt; Takes three weeks to change a simple parameter&lt;br&gt;
-&lt;strong&gt;Month 18:&lt;/strong&gt; Business loses faith in data science entirely&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Month 1:&lt;/strong&gt; Build amazing proof-of-concept&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Month 3:&lt;/strong&gt; Business wants more, so you hack together another model&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Month 6:&lt;/strong&gt; Everything&amp;rsquo;s held together with digital duct tape&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Month 12:&lt;/strong&gt; Takes three weeks to change a simple parameter&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Month 18:&lt;/strong&gt; Business loses faith in data science entirely&lt;/li&gt;
+&lt;/ul&gt;
 &lt;p&gt;Sound familiar?&lt;/p&gt;
-&lt;h3 id=&#34;how-to-avoid-the-trap&#34;&gt;&lt;a href=&#34;#how-to-avoid-the-trap&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;How to Avoid the Trap
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Build like an engineer, not a researcher:&lt;/strong&gt;&lt;/p&gt;
+&lt;h4 id=&#34;how-to-avoid-the-trap&#34;&gt;&lt;a href=&#34;#how-to-avoid-the-trap&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;How to Avoid the Trap:&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;Build like an engineer, not a researcher:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;Reproducible code from day one&lt;/li&gt;
 &lt;li&gt;Standardized data pipelines&lt;/li&gt;
 &lt;li&gt;Documentation that makes sense&lt;/li&gt;
 &lt;li&gt;Monitoring for when things break&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Simple rule:&lt;/strong&gt; If you need a PhD to understand your model, it&amp;rsquo;s too complex to scale.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Simple rule:&lt;/strong&gt; If you need a PhD to understand your model, it&amp;rsquo;s too complex to scale.&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;The best teams build boring, reliable solutions that work for years. Not flashy demos that break after a week.&lt;/p&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;what-impact-actually-means&#34;&gt;&lt;a href=&#34;#what-impact-actually-means&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What &amp;ldquo;Impact&amp;rdquo; Actually Means
-&lt;/h2&gt;&lt;p&gt;Stop measuring success by number of models built. Start measuring business outcomes.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Good metrics:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
+&lt;/h2&gt;&lt;p&gt;Stop measuring success by the number of models built. Start measuring business outcomes.&lt;/p&gt;
+&lt;p&gt;In utilities, this meant tracking whether our storm restoration optimization models actually reduced customer outage minutes during the next major weather event. Whether our customer segmentation drove measurable improvements in satisfaction scores. Whether our vegetation risk forecasting led to fewer tree-related outages.&lt;/p&gt;
+&lt;h4 id=&#34;good-metrics&#34;&gt;&lt;a href=&#34;#good-metrics&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Good Metrics:&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Revenue increased by X%&lt;/li&gt;
 &lt;li&gt;Costs reduced by $Y&lt;/li&gt;
 &lt;li&gt;Customer satisfaction up Z points&lt;/li&gt;
 &lt;li&gt;Manual processes eliminated&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Vanity metrics:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;vanity-metrics&#34;&gt;&lt;a href=&#34;#vanity-metrics&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Vanity Metrics:&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Model accuracy improved&lt;/li&gt;
-&lt;li&gt;Interesting insights discovered&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Interesting insights&amp;rdquo; discovered&lt;/li&gt;
 &lt;li&gt;Papers published&lt;/li&gt;
 &lt;li&gt;Conference talks given&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;The business doesn&amp;rsquo;t care how smart your algorithm is. They care if it makes them more money or saves them time.&lt;/p&gt;
-&lt;hr&gt;
 &lt;h2 id=&#34;team-structure-that-works&#34;&gt;&lt;a href=&#34;#team-structure-that-works&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Team Structure That Works
-&lt;/h2&gt;&lt;p&gt;There&amp;rsquo;s no perfect org chart, but here&amp;rsquo;s what I&amp;rsquo;ve learned:&lt;/p&gt;
-&lt;h3 id=&#34;for-small-companies-starting-out&#34;&gt;&lt;a href=&#34;#for-small-companies-starting-out&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;For Small Companies (Starting Out)
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Centralized team&lt;/strong&gt; of 3-5 people who do everything. Focus on proving value before worrying about structure.&lt;/p&gt;
-&lt;h3 id=&#34;for-growing-companies&#34;&gt;&lt;a href=&#34;#for-growing-companies&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;For Growing Companies
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Hub-and-spoke model:&lt;/strong&gt; Central team for standards and tools, embedded people in business units. Best of both worlds.&lt;/p&gt;
-&lt;h3 id=&#34;for-large-companies&#34;&gt;&lt;a href=&#34;#for-large-companies&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;For Large Companies
-&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Federated approach:&lt;/strong&gt; Data scientists directly in business teams, with communities of practice for knowledge sharing.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;The key:&lt;/strong&gt; Data scientists need to be close to decision-makers, not isolated in some analytics department.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;the-uncomfortable-realities&#34;&gt;&lt;a href=&#34;#the-uncomfortable-realities&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Uncomfortable Realities
-&lt;/h2&gt;&lt;h3 id=&#34;most-data-science-work-isnt-sexy&#34;&gt;&lt;a href=&#34;#most-data-science-work-isnt-sexy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Most Data Science Work Isn&amp;rsquo;t Sexy
-&lt;/h3&gt;&lt;p&gt;You&amp;rsquo;ll spend more time cleaning data and building dashboards than training neural networks. Embrace it.&lt;/p&gt;
-&lt;h3 id=&#34;change-management-is-half-the-job&#34;&gt;&lt;a href=&#34;#change-management-is-half-the-job&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Change Management is Half the Job
-&lt;/h3&gt;&lt;p&gt;The best model in the world is worthless if people don&amp;rsquo;t change how they work. Plan for adoption from day one.&lt;/p&gt;
-&lt;h3 id=&#34;simple-solutions-often-win&#34;&gt;&lt;a href=&#34;#simple-solutions-often-win&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Simple Solutions Often Win
-&lt;/h3&gt;&lt;p&gt;That basic rule-based system might outperform your machine learning model when you factor in maintenance and explainability.&lt;/p&gt;
-&lt;h3 id=&#34;technical-debt-kills-teams&#34;&gt;&lt;a href=&#34;#technical-debt-kills-teams&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Technical Debt Kills Teams
-&lt;/h3&gt;&lt;p&gt;I&amp;rsquo;ve seen brilliant teams become completely ineffective because they couldn&amp;rsquo;t maintain their own work.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;what-success-looks-like&#34;&gt;&lt;a href=&#34;#what-success-looks-like&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Success Looks Like
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Before transformation:&lt;/strong&gt;&lt;/p&gt;
+&lt;/h2&gt;&lt;p&gt;There&amp;rsquo;s no perfect org chart, but here&amp;rsquo;s what I&amp;rsquo;ve learned works in practice:&lt;/p&gt;
 &lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;For Small Companies (Starting Out):&lt;/strong&gt;
+A centralized team of 3-5 people who do everything. Focus on proving value before worrying about structure.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;For Growing Companies:&lt;/strong&gt;
+A hub-and-spoke model: A central team for standards and tools, with embedded people in business units. This offers the best of both worlds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;For Large Companies:&lt;/strong&gt;
+A federated approach: Data scientists are placed directly in business teams, with communities of practice for knowledge sharing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The key insight: &lt;strong&gt;Data scientists need to be close to decision-makers,&lt;/strong&gt; not isolated in some analytics department. When I had to navigate compliance with PUC and NERC standards while building AI governance frameworks, that proximity to the actual business constraints was everything.&lt;/p&gt;
+&lt;h2 id=&#34;the-uncomfortable-realities&#34;&gt;&lt;a href=&#34;#the-uncomfortable-realities&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Uncomfortable Realities
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Most Data Science Work Isn&amp;rsquo;t Sexy:&lt;/strong&gt; You&amp;rsquo;ll spend more time cleaning data and building dashboards than training neural networks. Embrace it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Change Management is Half the Job:&lt;/strong&gt; The best model in the world is worthless if people don&amp;rsquo;t change how they work. Plan for adoption from day one.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Simple Solutions Often Win:&lt;/strong&gt; That basic rule-based system might outperform your machine learning model when you factor in maintenance and explainability.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Technical Debt Kills Teams:&lt;/strong&gt; I&amp;rsquo;ve seen brilliant teams become completely ineffective because they couldn&amp;rsquo;t maintain their own work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-success-actually-looks-like&#34;&gt;&lt;a href=&#34;#what-success-actually-looks-like&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Success Actually Looks Like
+&lt;/h2&gt;&lt;h4 id=&#34;before-transformation&#34;&gt;&lt;a href=&#34;#before-transformation&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Before Transformation:&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Impressive technical work gathering dust&lt;/li&gt;
 &lt;li&gt;Business making decisions without data team input&lt;/li&gt;
-&lt;li&gt;Executives asking &amp;ldquo;what does the data science team actually do?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Executives asking &amp;ldquo;what does the data science team &lt;em&gt;actually&lt;/em&gt; do?&amp;rdquo;&lt;/li&gt;
 &lt;li&gt;Constant budget justification&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;After transformation:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
+&lt;h4 id=&#34;after-transformation&#34;&gt;&lt;a href=&#34;#after-transformation&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;After Transformation:&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
 &lt;li&gt;Models in production driving daily decisions&lt;/li&gt;
 &lt;li&gt;Business leaders fighting for data science resources&lt;/li&gt;
 &lt;li&gt;Clear ROI on every major project&lt;/li&gt;
 &lt;li&gt;Data science informing company strategy&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;the-bottom-line&#34;&gt;&lt;a href=&#34;#the-bottom-line&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bottom Line
-&lt;/h2&gt;&lt;p&gt;High-impact data science teams don&amp;rsquo;t just build models - they change how businesses operate.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Focus on:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Business problems worth solving&lt;/li&gt;
-&lt;li&gt;Simple solutions that scale&lt;/li&gt;
-&lt;li&gt;Teams that can execute, not just research&lt;/li&gt;
-&lt;li&gt;Adoption and change management&lt;/li&gt;
-&lt;li&gt;Measurable business outcomes&lt;/li&gt;
+&lt;h3 id=&#34;the-core-principle-to-carry-forward&#34;&gt;&lt;a href=&#34;#the-core-principle-to-carry-forward&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Core Principle to Carry Forward
+&lt;/h3&gt;&lt;p&gt;High-impact data science teams don&amp;rsquo;t just build models - &lt;strong&gt;they change how businesses operate.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Focus on business problems worth solving, simple solutions that scale, teams that can execute rather than just research, and measurable business outcomes. Avoid complexity for complexity&amp;rsquo;s sake, technical debt accumulation, working in isolation from the business, and vanity metrics.&lt;/p&gt;
+&lt;p&gt;The difference between successful and failed data science investments usually comes down to &lt;strong&gt;execution, not intelligence.&lt;/strong&gt; Build teams that ship useful solutions, not impressive science projects.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Reality check:&lt;/strong&gt; If your data science team has been around for over a year and executives still don&amp;rsquo;t understand their value, the problem isn&amp;rsquo;t communication - it&amp;rsquo;s alignment.&lt;/p&gt;&lt;/blockquote&gt;
+</description>
+        </item>
+        <item>
+        <title>Why Hiring Only Senior Data Scientists Will Destroy Your Team</title>
+        <link>http://192.168.100.63:1313/datascience/genius/</link>
+        <pubDate>Wed, 20 Nov 2024 14:30:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/datascience/genius/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/genius.png" alt="Featured image of post Why Hiring Only Senior Data Scientists Will Destroy Your Team" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Teams stacked with only senior-level talent often prioritize technical complexity over practical solutions&lt;/li&gt;
+&lt;li&gt;Junior team members and interns frequently approach problems without the constraints of &amp;ldquo;how it&amp;rsquo;s always been done&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;The cost/value tradeoff of senior-heavy teams creates budget constraints that limit team growth and experimentation&lt;/li&gt;
+&lt;li&gt;Ego-driven technical discussions can overshadow actual problem-solving when everyone feels they need to prove their expertise&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Avoid:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Complexity for complexity&amp;rsquo;s sake&lt;/li&gt;
-&lt;li&gt;Technical debt accumulation&lt;/li&gt;
-&lt;li&gt;Working in isolation from the business&lt;/li&gt;
-&lt;li&gt;Vanity metrics and conference-driven development&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;The difference between successful and failed data science investments usually comes down to execution, not intelligence.&lt;/p&gt;
-&lt;p&gt;Build teams that ship useful solutions, not impressive science projects.&lt;/p&gt;
-&lt;p&gt;Your business depends on it.&lt;/p&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;Reality check: If your data science team has been around for over a year and executives still don&amp;rsquo;t understand their value, the problem isn&amp;rsquo;t communication - it&amp;rsquo;s alignment.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-vegetation-management-analysis-that-taught-me-everything&#34;&gt;&lt;a href=&#34;#the-vegetation-management-analysis-that-taught-me-everything&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Vegetation Management Analysis That Taught Me Everything
+&lt;/h3&gt;&lt;p&gt;Our COO asked for a retrospective analysis of how our vegetation management program was performing under weather-normalized conditions. Simple request, right?&lt;/p&gt;
+&lt;p&gt;Not when you&amp;rsquo;re a team that spends most of its time doing deep weather analytics work. We dive into storm impact modeling, complex outage correlations, sophisticated vegetation management algorithms. Our default mode is finding the most technically robust solution to every problem.&lt;/p&gt;
+&lt;p&gt;So naturally, when tasked with this retrospective, our gut reaction was to build something complex. Zero hour actuals, fine-grain resolution, multi-layered weather normalization models. The kind of analysis that would make meteorologists proud.&lt;/p&gt;
+&lt;p&gt;The team was already sketching out approaches that would take months to implement properly.&lt;/p&gt;
+&lt;p&gt;Then our summer intern spoke up.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;What if we just pulled all the weather station data at 5-minute intervals and applied a transformation that aligns with the Beaufort scale?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;The room went quiet. Not because it was wrong, but because it was so obviously right that none of us had thought of it. We&amp;rsquo;d been so conditioned to solve complex problems with complex solutions that we&amp;rsquo;d missed the straightforward approach sitting right there.&lt;/p&gt;
+&lt;p&gt;Her method worked perfectly for what we actually needed to deliver.&lt;/p&gt;
+&lt;p&gt;This moment crystallized something I&amp;rsquo;d been noticing throughout my decade of building and leading data science teams: our obsession with hiring only the most technically advanced people was creating more problems than it solved.&lt;/p&gt;
+&lt;h3 id=&#34;the-senior-trap-thats-bankrupting-your-budget&#34;&gt;&lt;a href=&#34;#the-senior-trap-thats-bankrupting-your-budget&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Senior Trap That&amp;rsquo;s Bankrupting Your Budget
+&lt;/h3&gt;&lt;p&gt;Here&amp;rsquo;s the uncomfortable math that most data science leaders don&amp;rsquo;t want to face: a team of five senior data scientists costs roughly the same as a team of twelve mixed-level contributors. But which team actually delivers more value?&lt;/p&gt;
+&lt;p&gt;After leading teams through both configurations, the answer surprised me.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The All-Senior Team Reality&lt;/strong&gt;
+Every problem becomes a technical showcase. Simple analyses get over-engineered because everyone needs to demonstrate their expertise. What should be a straightforward regression becomes an ensemble of gradient boosting models with hyperparameter optimization and cross-validation schemes that would make academic reviewers weep with joy.&lt;/p&gt;
+&lt;p&gt;Meanwhile, you&amp;rsquo;re burning through budget at an alarming rate while moving slowly on basic deliverables.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Mixed-Level Team Advantage&lt;/strong&gt;
+Junior people ask &amp;ldquo;why are we doing it this way?&amp;rdquo; Senior people know how to execute when complexity is actually needed. Mid-level contributors bridge the gap and keep projects moving.&lt;/p&gt;
+&lt;p&gt;The result? Faster iteration, more practical solutions, and budget left over for the tools and infrastructure that actually matter.&lt;/p&gt;
+&lt;h3 id=&#34;when-ego-kills-solutions&#34;&gt;&lt;a href=&#34;#when-ego-kills-solutions&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;When Ego Kills Solutions
+&lt;/h3&gt;&lt;p&gt;Early in my career, I made the mistake of building a team where everyone felt they needed to prove they belonged in the room. PhD vs. industry experience. Deep learning vs. traditional statistics. Python vs. R debates that consumed entire meetings.&lt;/p&gt;
+&lt;p&gt;The technical discussions weren&amp;rsquo;t about finding the best solution - they were about demonstrating individual expertise. Everyone was so busy puffing out their chest that we lost sight of what we were actually trying to accomplish.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The moment your team meetings become intellectual competitions instead of collaborative problem-solving sessions, you&amp;rsquo;ve lost the plot.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;I learned this lesson when we spent three weeks debating the optimal architecture for a recommendation system while our business stakeholders were getting frustrated with basic reporting delays. We had brilliant people solving the wrong problems in the most complex ways possible.&lt;/p&gt;
+&lt;h3 id=&#34;the-fresh-eyes-factor&#34;&gt;&lt;a href=&#34;#the-fresh-eyes-factor&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Fresh Eyes Factor
+&lt;/h3&gt;&lt;p&gt;There&amp;rsquo;s something powerful about approaching a problem without the accumulated assumptions of experience. Junior team members haven&amp;rsquo;t learned what&amp;rsquo;s &amp;ldquo;impossible&amp;rdquo; yet. They haven&amp;rsquo;t internalized the industry conventional wisdom that might be outdated.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Pattern I Keep Seeing&lt;/strong&gt;
+Senior person: &amp;ldquo;This is how we&amp;rsquo;ve always handled time series forecasting in utilities&amp;hellip;&amp;rdquo;
+Junior person: &amp;ldquo;What if we treated this like a recommendation problem instead?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Sometimes the junior person is wrong. But sometimes they&amp;rsquo;re seeing something the rest of us missed because we were too focused on the &amp;ldquo;right&amp;rdquo; way to do things.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Questions That Change Everything&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&amp;ldquo;Why can&amp;rsquo;t we just use the existing weather data?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;What if we simplified this model instead of making it more complex?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Do we actually need real-time predictions, or would daily be sufficient?&amp;rdquo;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;These aren&amp;rsquo;t questions that come from inexperience. They come from not being constrained by how things have always been done.&lt;/p&gt;
+&lt;h3 id=&#34;the-hidden-costs-of-senior-heavy-teams&#34;&gt;&lt;a href=&#34;#the-hidden-costs-of-senior-heavy-teams&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Hidden Costs of Senior-Heavy Teams
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Budget Reality Check&lt;/strong&gt;
+Five senior data scientists at market rate: $1.2M+ annually in salary alone
+Mixed team of two seniors, four mid-level, six juniors: roughly the same cost with double the capacity&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Innovation Bottleneck&lt;/strong&gt;
+When everyone on the team is a domain expert, you get groupthink. Everyone approaches problems from similar angles because they&amp;rsquo;ve all learned the same &amp;ldquo;best practices.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Knowledge Transfer Problem&lt;/strong&gt;
+Senior-heavy teams often struggle with documentation and knowledge sharing because everyone assumes everyone else already knows the fundamentals.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Client Interface Issues&lt;/strong&gt;
+Sometimes you need someone who can explain technical concepts to non-technical stakeholders without drowning them in jargon. Junior team members are often better at this because they remember what it was like to not understand these concepts.&lt;/p&gt;
+&lt;h3 id=&#34;building-teams-that-actually-work&#34;&gt;&lt;a href=&#34;#building-teams-that-actually-work&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Building Teams That Actually Work
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;The 40-40-20 Rule&lt;/strong&gt;
+Roughly 40% mid-level contributors who can execute reliably, 40% junior talent who bring fresh perspectives and handle routine work, 20% senior experts who tackle the genuinely complex problems and provide technical leadership.&lt;/p&gt;
+&lt;p&gt;This isn&amp;rsquo;t about cutting costs - it&amp;rsquo;s about optimizing for actual output.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Psychological Safety Over Technical Prowess&lt;/strong&gt;
+The best data science teams I&amp;rsquo;ve built prioritize asking good questions over having all the answers. When junior team members feel safe proposing simple solutions, you often discover that simple solutions work.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Project Rotation Strategy&lt;/strong&gt;
+Give junior people ownership of complete problems, not just implementation tasks. Let them propose approaches, even if you know a more sophisticated method exists. Sometimes their approach works better. When it doesn&amp;rsquo;t, the learning experience is valuable for everyone.&lt;/p&gt;
+&lt;h3 id=&#34;the-transformation-that-actually-matters&#34;&gt;&lt;a href=&#34;#the-transformation-that-actually-matters&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Transformation That Actually Matters
+&lt;/h3&gt;&lt;p&gt;After restructuring my teams with this mixed-level approach, something interesting happened. The senior people started enjoying their work more. Instead of being pulled into every routine analysis, they could focus on genuinely challenging problems. Instead of proving their expertise in meetings, they were mentoring and enabling others.&lt;/p&gt;
+&lt;p&gt;The junior people grew faster because they had real ownership and could see the impact of their work. The mid-level contributors became force multipliers who could translate between technical depth and practical execution.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;What Success Looks Like&lt;/strong&gt;
+Projects move faster because not everything needs to be technically perfect. Budget goes further because you&amp;rsquo;re not paying senior rates for routine work. Innovation increases because diverse perspectives challenge assumptions.&lt;/p&gt;
+&lt;p&gt;Most importantly, solutions get simpler and more maintainable because you have people asking &amp;ldquo;do we really need all this complexity?&amp;rdquo;&lt;/p&gt;
+&lt;h3 id=&#34;the-leadership-shift&#34;&gt;&lt;a href=&#34;#the-leadership-shift&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Leadership Shift
+&lt;/h3&gt;&lt;p&gt;Leading a mixed-level data science team requires different skills than managing a group of senior experts. You&amp;rsquo;re not just coordinating technical work - you&amp;rsquo;re developing talent, managing different learning curves, and creating an environment where diverse experience levels can contribute effectively.&lt;/p&gt;
+&lt;p&gt;The payoff is teams that are more resilient, more innovative, and more sustainable than groups built purely on technical credentials.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The Question That Changes Everything&lt;/strong&gt;
+Instead of asking &amp;ldquo;who&amp;rsquo;s the smartest person we can hire?&amp;rdquo; start asking &amp;ldquo;what mix of perspectives and experience levels will solve problems most effectively?&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Your budget, your timelines, and your actual business outcomes will thank you.&lt;/p&gt;
+&lt;p&gt;The goal isn&amp;rsquo;t to avoid hiring brilliant people. It&amp;rsquo;s to build teams where brilliance can flourish alongside fresh thinking, practical execution, and sustainable growth.&lt;/p&gt;
+&lt;p&gt;Sometimes the best solution comes from the person who doesn&amp;rsquo;t know enough to realize it shouldn&amp;rsquo;t work.&lt;/p&gt;
 </description>
         </item>
         

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Categories on My Blog</title>
+        <title>Categories on The Patch Panel</title>
         <link>http://192.168.100.63:1313/categories/</link>
-        <description>Recent content in Categories on My Blog</description>
+        <description>Recent content in Categories on The Patch Panel</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
         <lastBuildDate>Sat, 24 May 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/index.xml" rel="self" type="application/rss+xml" /><item>
@@ -39,14 +39,6 @@
         <description></description>
         </item>
         <item>
-        <title>AI Commentary</title>
-        <link>http://192.168.100.63:1313/categories/ai-commentary/</link>
-        <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/ai-commentary/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>AI Weekly</title>
         <link>http://192.168.100.63:1313/categories/ai-weekly/</link>
         <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
@@ -63,14 +55,6 @@
         <description></description>
         </item>
         <item>
-        <title>Productivity</title>
-        <link>http://192.168.100.63:1313/categories/productivity/</link>
-        <pubDate>Fri, 23 May 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/productivity/</guid>
-        <description></description>
-        </item>
-        <item>
         <title>AI Safety</title>
         <link>http://192.168.100.63:1313/categories/ai-safety/</link>
         <pubDate>Thu, 22 May 2025 00:00:00 +0000</pubDate>
@@ -79,9 +63,41 @@
         <description></description>
         </item>
         <item>
+        <title>AI</title>
+        <link>http://192.168.100.63:1313/categories/ai/</link>
+        <pubDate>Wed, 21 May 2025 14:22:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/ai/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>News</title>
+        <link>http://192.168.100.63:1313/categories/news/</link>
+        <pubDate>Wed, 21 May 2025 14:22:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/news/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Research</title>
+        <link>http://192.168.100.63:1313/categories/research/</link>
+        <pubDate>Wed, 21 May 2025 14:22:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/research/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Think Piece</title>
+        <link>http://192.168.100.63:1313/categories/think-piece/</link>
+        <pubDate>Thu, 15 May 2025 14:30:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/think-piece/</guid>
+        <description></description>
+        </item>
+        <item>
         <title>Hardware</title>
         <link>http://192.168.100.63:1313/categories/hardware/</link>
-        <pubDate>Wed, 14 May 2025 15:00:00 -0400</pubDate>
+        <pubDate>Thu, 01 May 2025 15:00:00 -0400</pubDate>
         
         <guid>http://192.168.100.63:1313/categories/hardware/</guid>
         <description></description>
@@ -89,81 +105,17 @@
         <item>
         <title>Self-Hosting</title>
         <link>http://192.168.100.63:1313/categories/self-hosting/</link>
-        <pubDate>Wed, 14 May 2025 15:00:00 -0400</pubDate>
+        <pubDate>Thu, 01 May 2025 15:00:00 -0400</pubDate>
         
         <guid>http://192.168.100.63:1313/categories/self-hosting/</guid>
         <description></description>
         </item>
         <item>
-        <title>Homelab</title>
-        <link>http://192.168.100.63:1313/categories/homelab/</link>
-        <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
+        <title>Agents</title>
+        <link>http://192.168.100.63:1313/categories/agents/</link>
+        <pubDate>Wed, 26 Mar 2025 14:30:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63:1313/categories/homelab/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Infrastucture</title>
-        <link>http://192.168.100.63:1313/categories/infrastucture/</link>
-        <pubDate>Wed, 14 May 2025 12:00:00 -0500</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/infrastucture/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Networking</title>
-        <link>http://192.168.100.63:1313/categories/networking/</link>
-        <pubDate>Wed, 14 May 2025 12:00:00 -0500</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/networking/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Privacy</title>
-        <link>http://192.168.100.63:1313/categories/privacy/</link>
-        <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/privacy/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>AgenticAI</title>
-        <link>http://192.168.100.63:1313/categories/agenticai/</link>
-        <pubDate>Sat, 29 Mar 2025 02:59:30 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/agenticai/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>AI</title>
-        <link>http://192.168.100.63:1313/categories/ai/</link>
-        <pubDate>Sat, 29 Mar 2025 02:59:30 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/ai/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Guide</title>
-        <link>http://192.168.100.63:1313/categories/guide/</link>
-        <pubDate>Sat, 29 Mar 2025 02:59:30 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/guide/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Artificial Intelligence</title>
-        <link>http://192.168.100.63:1313/categories/artificial-intelligence/</link>
-        <pubDate>Fri, 21 Mar 2025 02:08:37 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/artificial-intelligence/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Document Processing</title>
-        <link>http://192.168.100.63:1313/categories/document-processing/</link>
-        <pubDate>Fri, 21 Mar 2025 02:08:37 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/document-processing/</guid>
+        <guid>http://192.168.100.63:1313/categories/agents/</guid>
         <description></description>
         </item>
         <item>
@@ -183,91 +135,155 @@
         <description></description>
         </item>
         <item>
-        <title>Team Management</title>
-        <link>http://192.168.100.63:1313/categories/team-management/</link>
-        <pubDate>Mon, 17 Mar 2025 03:00:30 +0000</pubDate>
+        <title>Agentic AI</title>
+        <link>http://192.168.100.63:1313/categories/agentic-ai/</link>
+        <pubDate>Thu, 06 Mar 2025 14:30:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63:1313/categories/team-management/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Business Leadership</title>
-        <link>http://192.168.100.63:1313/categories/business-leadership/</link>
-        <pubDate>Mon, 17 Mar 2025 02:44:00 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/business-leadership/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Business Strategy</title>
-        <link>http://192.168.100.63:1313/categories/business-strategy/</link>
-        <pubDate>Mon, 17 Mar 2025 02:36:40 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/business-strategy/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Engineering Leadership</title>
-        <link>http://192.168.100.63:1313/categories/engineering-leadership/</link>
-        <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/engineering-leadership/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>Strategy</title>
-        <link>http://192.168.100.63:1313/categories/strategy/</link>
-        <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/strategy/</guid>
-        <description></description>
-        </item>
-        <item>
-        <title>AI Developments</title>
-        <link>http://192.168.100.63:1313/categories/ai-developments/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
-        
-        <guid>http://192.168.100.63:1313/categories/ai-developments/</guid>
+        <guid>http://192.168.100.63:1313/categories/agentic-ai/</guid>
         <description></description>
         </item>
         <item>
         <title>Energy</title>
         <link>http://192.168.100.63:1313/categories/energy/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
         
         <guid>http://192.168.100.63:1313/categories/energy/</guid>
         <description></description>
         </item>
         <item>
-        <title>Politics</title>
-        <link>http://192.168.100.63:1313/categories/politics/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        <title>New</title>
+        <link>http://192.168.100.63:1313/categories/new/</link>
+        <pubDate>Thu, 20 Feb 2025 00:00:00 +0000</pubDate>
         
-        <guid>http://192.168.100.63:1313/categories/politics/</guid>
+        <guid>http://192.168.100.63:1313/categories/new/</guid>
         <description></description>
         </item>
         <item>
-        <title>Security</title>
-        <link>http://192.168.100.63:1313/categories/security/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        <title>Guide</title>
+        <link>http://192.168.100.63:1313/categories/guide/</link>
+        <pubDate>Wed, 12 Feb 2025 14:30:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63:1313/categories/security/</guid>
+        <guid>http://192.168.100.63:1313/categories/guide/</guid>
         <description></description>
         </item>
         <item>
-        <title>Sustainability</title>
-        <link>http://192.168.100.63:1313/categories/sustainability/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        <title>Management</title>
+        <link>http://192.168.100.63:1313/categories/management/</link>
+        <pubDate>Sun, 09 Feb 2025 14:32:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63:1313/categories/sustainability/</guid>
+        <guid>http://192.168.100.63:1313/categories/management/</guid>
         <description></description>
         </item>
         <item>
-        <title>Tech</title>
-        <link>http://192.168.100.63:1313/categories/tech/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        <title>Cybersecurity</title>
+        <link>http://192.168.100.63:1313/categories/cybersecurity/</link>
+        <pubDate>Sat, 01 Feb 2025 14:30:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63:1313/categories/tech/</guid>
+        <guid>http://192.168.100.63:1313/categories/cybersecurity/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Leadership&#34;</title>
+        <link>http://192.168.100.63:1313/categories/leadership/</link>
+        <pubDate>Thu, 30 Jan 2025 14:30:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/leadership/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>AI Commentary</title>
+        <link>http://192.168.100.63:1313/categories/ai-commentary/</link>
+        <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/ai-commentary/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Productivity</title>
+        <link>http://192.168.100.63:1313/categories/productivity/</link>
+        <pubDate>Tue, 24 Dec 2024 00:00:00 +0000</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/productivity/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Development</title>
+        <link>http://192.168.100.63:1313/categories/development/</link>
+        <pubDate>Mon, 23 Dec 2024 14:30:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/development/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Enterprise AI</title>
+        <link>http://192.168.100.63:1313/categories/enterprise-ai/</link>
+        <pubDate>Mon, 23 Dec 2024 14:30:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/enterprise-ai/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Machine Learning</title>
+        <link>http://192.168.100.63:1313/categories/machine-learning/</link>
+        <pubDate>Mon, 23 Dec 2024 14:30:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/machine-learning/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Strategy</title>
+        <link>http://192.168.100.63:1313/categories/strategy/</link>
+        <pubDate>Fri, 13 Dec 2024 14:30:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/strategy/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Homelab</title>
+        <link>http://192.168.100.63:1313/categories/homelab/</link>
+        <pubDate>Wed, 20 Nov 2024 12:00:00 -0500</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/homelab/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Infrastucture</title>
+        <link>http://192.168.100.63:1313/categories/infrastucture/</link>
+        <pubDate>Wed, 20 Nov 2024 12:00:00 -0500</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/infrastucture/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Networking</title>
+        <link>http://192.168.100.63:1313/categories/networking/</link>
+        <pubDate>Wed, 20 Nov 2024 12:00:00 -0500</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/networking/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Privacy</title>
+        <link>http://192.168.100.63:1313/categories/privacy/</link>
+        <pubDate>Tue, 19 Nov 2024 13:00:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/privacy/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Self-Hosted</title>
+        <link>http://192.168.100.63:1313/categories/self-hosted/</link>
+        <pubDate>Mon, 28 Oct 2024 14:30:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/self-hosted/</guid>
+        <description></description>
+        </item>
+        <item>
+        <title>Guides</title>
+        <link>http://192.168.100.63:1313/categories/guides/</link>
+        <pubDate>Mon, 07 Oct 2024 10:45:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/categories/guides/</guid>
         <description></description>
         </item>
         

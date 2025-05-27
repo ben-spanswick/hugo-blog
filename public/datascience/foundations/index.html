@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Lessons learned and pitfalls to avoid from over a decade of building data science teams.">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Lessons learned and pitfalls to avoid from over a decade of building data science teams that actually move the business forward.">
 <title>Building High Impact Data Science Teams</title>
 
 <link rel='canonical' href='http://192.168.100.63:1313/datascience/foundations/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="Building High Impact Data Science Teams">
-<meta property='og:description' content="Lessons learned and pitfalls to avoid from over a decade of building data science teams.">
+<meta property='og:description' content="Lessons learned and pitfalls to avoid from over a decade of building data science teams that actually move the business forward.">
 <meta property='og:url' content='http://192.168.100.63:1313/datascience/foundations/'>
-<meta property='og:site_name' content='My Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Datascience' /><meta property='article:tag' content='Data Science' /><meta property='article:tag' content='Team Building' /><meta property='article:tag' content='Strategy' /><meta property='article:tag' content='Leadership' /><meta property='article:published_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-03-15T00:00:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta property='og:site_name' content='The Patch Panel'>
+<meta property='og:type' content='article'><meta property='article:section' content='Datascience' /><meta property='article:tag' content='Data Science' /><meta property='article:tag' content='Leadership' /><meta property='article:tag' content='Team Building' /><meta property='article:tag' content='AI Strategy' /><meta property='article:tag' content='Business Impact' /><meta property='article:published_time' content='2024-12-13T14:30:00-04:00'/><meta property='article:modified_time' content='2024-12-13T14:30:00-04:00'/><meta property='og:image' content='http://192.168.100.63:1313/img/head/highimpact.png' />
 <meta name="twitter:site" content="@@yourtwitter">
     <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="Building High Impact Data Science Teams">
-<meta name="twitter:description" content="Lessons learned and pitfalls to avoid from over a decade of building data science teams."><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:description" content="Lessons learned and pitfalls to avoid from over a decade of building data science teams that actually move the business forward."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/img/head/highimpact.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -56,7 +56,7 @@
             <figure class="site-avatar">
                 <a href="/">
                 
-                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    <img src="/img/headshot2.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
                 
                 </a>
                 
@@ -67,8 +67,8 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">My Blog</a></h1>
-            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+            <h1 class="site-name"><a href="/">The Patch Panel</a></h1>
+            <h2 class="site-description">Exploring AI, Tech, Homelabs, &amp; Self-Hosting</h2>
         </div>
     </header><ol class="menu" id="main-menu">
         
@@ -185,8 +185,16 @@
     
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/datascience/foundations/">
+                
+                    <img src="/img/head/highimpact.png" loading="lazy" alt="Featured image of post Building High Impact Data Science Teams" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
@@ -200,6 +208,10 @@
                 Strategy
             </a>
         
+            <a href="/categories/leadership/" >
+                Leadership
+            </a>
+        
     </header>
     
 
@@ -210,7 +222,7 @@
     
         
         <h3 class="article-subtitle">
-            Lessons learned and pitfalls to avoid from over a decade of building data science teams.
+            Lessons learned and pitfalls to avoid from over a decade of building data science teams that actually move the business forward.
         </h3>
         
     </div>
@@ -231,7 +243,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 15, 2025</time>
+                <time class="article-time--published">Dec 13, 2024</time>
             </div>
         
 
@@ -246,7 +258,7 @@
 
 
                 <time class="article-time--reading">
-                    5 minute read
+                    7 minute read
                 </time>
             </div>
         
@@ -261,137 +273,136 @@
     <section class="article-content">
     
     
-    <h1 id="your-data-science-team-is-probably-expensive-and-useless"><a href="#your-data-science-team-is-probably-expensive-and-useless" class="header-anchor"></a>Your Data Science Team is Probably Expensive and Useless
-</h1><p><em>How to build teams that actually move the business forward</em></p>
-<hr>
-<p>Let me guess. You hired a bunch of brilliant data scientists, gave them access to all your data, and expected magic to happen.</p>
-<p>Six months later, you&rsquo;ve got impressive demos, excited PowerPoints, and zero impact on the bottom line.</p>
-<p>Welcome to the club. Most companies end up with data science teams that look great on paper but accomplish nothing meaningful. They burn through budget building models nobody uses while the business keeps making decisions with gut instinct and Excel.</p>
-<p>I&rsquo;ve seen this disaster play out dozens of times. The good news? The fix isn&rsquo;t complicated.</p>
-<hr>
-<h2 id="stop-trying-to-impress-your-peers"><a href="#stop-trying-to-impress-your-peers" class="header-anchor"></a>Stop Trying to Impress Your Peers
-</h2><p>Here&rsquo;s the uncomfortable truth: <strong>most business problems don&rsquo;t need deep learning</strong>.</p>
-<p>If a simple linear regression solves the problem, use it. If a basic dashboard gives people what they need, build that. The goal is business impact, not algorithmic sophistication.</p>
-<p>I watched one team spend four months building a complex neural network for demand forecasting. Accuracy was incredible. Implementation was a nightmare. Meanwhile, their competitor was using basic moving averages and capturing market share.</p>
-<p><strong>Before building anything, answer these:</strong></p>
-<ul>
-<li>What specific business decision does this improve?</li>
-<li>How will people&rsquo;s daily work change?</li>
-<li>What&rsquo;s the simplest solution that works?</li>
+    <h3 id="ai-summary"><a href="#ai-summary" class="header-anchor"></a><strong>AI Summary</strong>
+</h3><ul>
+<li>Most data science teams fail because they optimize for algorithmic sophistication instead of business impact.</li>
+<li>Simple solutions that people actually use beat complex models that gather dust.</li>
+<li>Building balanced teams with business sense and operational thinking matters more than hiring only technical geniuses.</li>
+<li>Success requires focusing on adoption and change management, not just model accuracy.</li>
 </ul>
-<p>Can&rsquo;t answer clearly? You&rsquo;re solving the wrong problem.</p>
 <hr>
+<h2 id="your-data-science-team-is-probably-expensive-and-useless"><a href="#your-data-science-team-is-probably-expensive-and-useless" class="header-anchor"></a>Your Data Science Team is Probably Expensive and Useless
+</h2><p>Let me guess. You hired a bunch of brilliant data scientists, gave them access to all your data, and expected magic to happen.</p>
+<p>Six months later, you&rsquo;ve got impressive demos, excited PowerPoints, and <strong>zero impact on the bottom line.</strong></p>
+<p>Welcome to the club. Most companies end up with data science teams that look great on paper but accomplish nothing meaningful. They burn through budget building models nobody uses while the business keeps making decisions with gut instinct and Excel.</p>
+<p>After building data science organizations from scratch across multiple contexts - from federal agencies to major utilities - I&rsquo;ve watched this disaster play out dozens of times. The good news? The fix isn&rsquo;t complicated, but it requires abandoning some deeply held assumptions about what makes data science teams successful.</p>
+<h2 id="stop-trying-to-impress-your-peers"><a href="#stop-trying-to-impress-your-peers" class="header-anchor"></a>Stop Trying to Impress Your Peers
+</h2><p>Here&rsquo;s the uncomfortable truth that took me years to fully accept: <strong>most business problems don&rsquo;t need deep learning.</strong></p>
+<p>Our COO once asked for a retrospective analysis of how our vegetation management program was performing under weather-normalized conditions. Simple request, right?</p>
+<p>Not when you&rsquo;re a team that spends most of its time doing deep weather analytics work. We dive into storm impact modeling, complex outage correlations, sophisticated vegetation management algorithms. Our default mode is finding the most technically robust solution to every problem.</p>
+<p>So naturally, when tasked with this retrospective, our gut reaction was to build something complex. Zero hour actuals, fine-grain resolution, multi-layered weather normalization models. The kind of analysis that would make meteorologists proud.</p>
+<p>The team was already sketching out approaches that would take months to implement properly.</p>
+<p>Then our summer intern spoke up.</p>
+<blockquote>
+<p><em>&ldquo;What if we just pulled all the weather station data at 5-minute intervals and applied a transformation that aligns with the Beaufort scale?&rdquo;</em></p></blockquote>
+<p>The room went quiet. Not because it was wrong, but because it was so obviously right that none of us had thought of it. We&rsquo;d been so conditioned to solve complex problems with complex solutions that we&rsquo;d missed the straightforward approach sitting right there.</p>
+<p>Her method worked perfectly for what we actually needed to deliver.</p>
+<p>This moment crystallized something I&rsquo;d been noticing throughout my decade of building and leading data science teams: our obsession with hiring only the most technically advanced people was creating more problems than it solved.</p>
+<p>Before building anything, answer these three questions:</p>
+<ol>
+<li><strong>What specific business decision does this improve?</strong></li>
+<li><strong>How will people&rsquo;s daily work change?</strong></li>
+<li><strong>What&rsquo;s the simplest solution that works?</strong></li>
+</ol>
+<blockquote>
+<p>Can&rsquo;t answer clearly? You&rsquo;re solving the wrong problem.</p></blockquote>
 <h2 id="the-people-problem-hint-its-not-about-finding-geniuses"><a href="#the-people-problem-hint-its-not-about-finding-geniuses" class="header-anchor"></a>The People Problem (Hint: It&rsquo;s Not About Finding Geniuses)
 </h2><p>Most companies hire data science teams backwards. They chase the smartest person in the room instead of building balanced teams that can actually execute.</p>
-<h3 id="what-actually-works"><a href="#what-actually-works" class="header-anchor"></a>What Actually Works
-</h3><p><strong>Mix of skills, not just PhDs:</strong></p>
+<p>When I built our AI and Data Science Center of Excellence from the ground up, I quickly learned that getting buy-in across three operating companies meant every executive had their own take on what was important. The technical brilliance that impressed one division head meant nothing to another who just wanted his call center metrics to improve.</p>
+<h4 id="what-actually-works"><a href="#what-actually-works" class="header-anchor"></a><strong>What Actually Works:</strong>
+</h4><p>A mix of skills, not just PhDs:</p>
 <ul>
-<li>Technical depth (someone who can build models)</li>
-<li>Business sense (someone who understands the company)</li>
-<li>Product thinking (someone who can scale solutions)</li>
-<li>Change management (someone who can drive adoption)</li>
+<li><strong>Technical depth</strong> (someone who can build models)</li>
+<li><strong>Business sense</strong> (someone who understands the company)</li>
+<li><strong>Product thinking</strong> (someone who can scale solutions)</li>
+<li><strong>Change management</strong> (someone who can drive adoption)</li>
 </ul>
-<h3 id="what-fails-every-time"><a href="#what-fails-every-time" class="header-anchor"></a>What Fails Every Time
-</h3><p><strong>The genius trap:</strong> Hiring one superstar who builds incredible models that nobody else can maintain or understand.</p>
-<p><strong>Academia mindset:</strong> Teams that optimize for publication-worthy work instead of business-ready solutions.</p>
-<p><strong>No operational thinking:</strong> Building solutions that require completely rewriting how people work.</p>
-<p><em>Real talk: I&rsquo;d rather have a decent data scientist who understands the business than a brilliant one who works in isolation.</em></p>
-<hr>
+<h4 id="what-fails-every-time"><a href="#what-fails-every-time" class="header-anchor"></a><strong>What Fails Every Time:</strong>
+</h4><ul>
+<li><strong>The genius trap:</strong> Hiring one superstar who builds incredible models that nobody else can maintain or understand.</li>
+<li><strong>Academia mindset:</strong> Teams that optimize for publication-worthy work instead of business-ready solutions.</li>
+<li><strong>No operational thinking:</strong> Building solutions that require completely rewriting how people work.</li>
+</ul>
+<p>Real talk: I&rsquo;d rather have a decent data scientist who understands the business than a brilliant one who works in isolation. The former will build something like our GenAI Call Center Agent Assist that actually gets adopted and stays in production. The latter will build impressive demos that executives nod at and then forget about.</p>
 <h2 id="the-tech-debt-death-spiral"><a href="#the-tech-debt-death-spiral" class="header-anchor"></a>The Tech Debt Death Spiral
 </h2><p>This is how most data science teams die:</p>
-<p><strong>Month 1:</strong> Build amazing proof-of-concept<br>
-<strong>Month 3:</strong> Business wants more, so you hack together another model<br>
-<strong>Month 6:</strong> Everything&rsquo;s held together with digital duct tape<br>
-<strong>Month 12:</strong> Takes three weeks to change a simple parameter<br>
-<strong>Month 18:</strong> Business loses faith in data science entirely</p>
+<ul>
+<li><strong>Month 1:</strong> Build amazing proof-of-concept</li>
+<li><strong>Month 3:</strong> Business wants more, so you hack together another model</li>
+<li><strong>Month 6:</strong> Everything&rsquo;s held together with digital duct tape</li>
+<li><strong>Month 12:</strong> Takes three weeks to change a simple parameter</li>
+<li><strong>Month 18:</strong> Business loses faith in data science entirely</li>
+</ul>
 <p>Sound familiar?</p>
-<h3 id="how-to-avoid-the-trap"><a href="#how-to-avoid-the-trap" class="header-anchor"></a>How to Avoid the Trap
-</h3><p><strong>Build like an engineer, not a researcher:</strong></p>
+<h4 id="how-to-avoid-the-trap"><a href="#how-to-avoid-the-trap" class="header-anchor"></a><strong>How to Avoid the Trap:</strong>
+</h4><p>Build like an engineer, not a researcher:</p>
 <ul>
 <li>Reproducible code from day one</li>
 <li>Standardized data pipelines</li>
 <li>Documentation that makes sense</li>
 <li>Monitoring for when things break</li>
 </ul>
-<p><strong>Simple rule:</strong> If you need a PhD to understand your model, it&rsquo;s too complex to scale.</p>
+<blockquote>
+<p><strong>Simple rule:</strong> If you need a PhD to understand your model, it&rsquo;s too complex to scale.</p></blockquote>
 <p>The best teams build boring, reliable solutions that work for years. Not flashy demos that break after a week.</p>
-<hr>
 <h2 id="what-impact-actually-means"><a href="#what-impact-actually-means" class="header-anchor"></a>What &ldquo;Impact&rdquo; Actually Means
-</h2><p>Stop measuring success by number of models built. Start measuring business outcomes.</p>
-<p><strong>Good metrics:</strong></p>
-<ul>
+</h2><p>Stop measuring success by the number of models built. Start measuring business outcomes.</p>
+<p>In utilities, this meant tracking whether our storm restoration optimization models actually reduced customer outage minutes during the next major weather event. Whether our customer segmentation drove measurable improvements in satisfaction scores. Whether our vegetation risk forecasting led to fewer tree-related outages.</p>
+<h4 id="good-metrics"><a href="#good-metrics" class="header-anchor"></a><strong>Good Metrics:</strong>
+</h4><ul>
 <li>Revenue increased by X%</li>
 <li>Costs reduced by $Y</li>
 <li>Customer satisfaction up Z points</li>
 <li>Manual processes eliminated</li>
 </ul>
-<p><strong>Vanity metrics:</strong></p>
-<ul>
+<h4 id="vanity-metrics"><a href="#vanity-metrics" class="header-anchor"></a><strong>Vanity Metrics:</strong>
+</h4><ul>
 <li>Model accuracy improved</li>
-<li>Interesting insights discovered</li>
+<li>&ldquo;Interesting insights&rdquo; discovered</li>
 <li>Papers published</li>
 <li>Conference talks given</li>
 </ul>
 <p>The business doesn&rsquo;t care how smart your algorithm is. They care if it makes them more money or saves them time.</p>
-<hr>
 <h2 id="team-structure-that-works"><a href="#team-structure-that-works" class="header-anchor"></a>Team Structure That Works
-</h2><p>There&rsquo;s no perfect org chart, but here&rsquo;s what I&rsquo;ve learned:</p>
-<h3 id="for-small-companies-starting-out"><a href="#for-small-companies-starting-out" class="header-anchor"></a>For Small Companies (Starting Out)
-</h3><p><strong>Centralized team</strong> of 3-5 people who do everything. Focus on proving value before worrying about structure.</p>
-<h3 id="for-growing-companies"><a href="#for-growing-companies" class="header-anchor"></a>For Growing Companies
-</h3><p><strong>Hub-and-spoke model:</strong> Central team for standards and tools, embedded people in business units. Best of both worlds.</p>
-<h3 id="for-large-companies"><a href="#for-large-companies" class="header-anchor"></a>For Large Companies
-</h3><p><strong>Federated approach:</strong> Data scientists directly in business teams, with communities of practice for knowledge sharing.</p>
-<p><strong>The key:</strong> Data scientists need to be close to decision-makers, not isolated in some analytics department.</p>
-<hr>
-<h2 id="the-uncomfortable-realities"><a href="#the-uncomfortable-realities" class="header-anchor"></a>The Uncomfortable Realities
-</h2><h3 id="most-data-science-work-isnt-sexy"><a href="#most-data-science-work-isnt-sexy" class="header-anchor"></a>Most Data Science Work Isn&rsquo;t Sexy
-</h3><p>You&rsquo;ll spend more time cleaning data and building dashboards than training neural networks. Embrace it.</p>
-<h3 id="change-management-is-half-the-job"><a href="#change-management-is-half-the-job" class="header-anchor"></a>Change Management is Half the Job
-</h3><p>The best model in the world is worthless if people don&rsquo;t change how they work. Plan for adoption from day one.</p>
-<h3 id="simple-solutions-often-win"><a href="#simple-solutions-often-win" class="header-anchor"></a>Simple Solutions Often Win
-</h3><p>That basic rule-based system might outperform your machine learning model when you factor in maintenance and explainability.</p>
-<h3 id="technical-debt-kills-teams"><a href="#technical-debt-kills-teams" class="header-anchor"></a>Technical Debt Kills Teams
-</h3><p>I&rsquo;ve seen brilliant teams become completely ineffective because they couldn&rsquo;t maintain their own work.</p>
-<hr>
-<h2 id="what-success-looks-like"><a href="#what-success-looks-like" class="header-anchor"></a>What Success Looks Like
-</h2><p><strong>Before transformation:</strong></p>
+</h2><p>There&rsquo;s no perfect org chart, but here&rsquo;s what I&rsquo;ve learned works in practice:</p>
 <ul>
+<li><strong>For Small Companies (Starting Out):</strong>
+A centralized team of 3-5 people who do everything. Focus on proving value before worrying about structure.</li>
+<li><strong>For Growing Companies:</strong>
+A hub-and-spoke model: A central team for standards and tools, with embedded people in business units. This offers the best of both worlds.</li>
+<li><strong>For Large Companies:</strong>
+A federated approach: Data scientists are placed directly in business teams, with communities of practice for knowledge sharing.</li>
+</ul>
+<p>The key insight: <strong>Data scientists need to be close to decision-makers,</strong> not isolated in some analytics department. When I had to navigate compliance with PUC and NERC standards while building AI governance frameworks, that proximity to the actual business constraints was everything.</p>
+<h2 id="the-uncomfortable-realities"><a href="#the-uncomfortable-realities" class="header-anchor"></a>The Uncomfortable Realities
+</h2><ul>
+<li><strong>Most Data Science Work Isn&rsquo;t Sexy:</strong> You&rsquo;ll spend more time cleaning data and building dashboards than training neural networks. Embrace it.</li>
+<li><strong>Change Management is Half the Job:</strong> The best model in the world is worthless if people don&rsquo;t change how they work. Plan for adoption from day one.</li>
+<li><strong>Simple Solutions Often Win:</strong> That basic rule-based system might outperform your machine learning model when you factor in maintenance and explainability.</li>
+<li><strong>Technical Debt Kills Teams:</strong> I&rsquo;ve seen brilliant teams become completely ineffective because they couldn&rsquo;t maintain their own work.</li>
+</ul>
+<h2 id="what-success-actually-looks-like"><a href="#what-success-actually-looks-like" class="header-anchor"></a>What Success Actually Looks Like
+</h2><h4 id="before-transformation"><a href="#before-transformation" class="header-anchor"></a><strong>Before Transformation:</strong>
+</h4><ul>
 <li>Impressive technical work gathering dust</li>
 <li>Business making decisions without data team input</li>
-<li>Executives asking &ldquo;what does the data science team actually do?&rdquo;</li>
+<li>Executives asking &ldquo;what does the data science team <em>actually</em> do?&rdquo;</li>
 <li>Constant budget justification</li>
 </ul>
-<p><strong>After transformation:</strong></p>
-<ul>
+<h4 id="after-transformation"><a href="#after-transformation" class="header-anchor"></a><strong>After Transformation:</strong>
+</h4><ul>
 <li>Models in production driving daily decisions</li>
 <li>Business leaders fighting for data science resources</li>
 <li>Clear ROI on every major project</li>
 <li>Data science informing company strategy</li>
 </ul>
 <hr>
-<h2 id="the-bottom-line"><a href="#the-bottom-line" class="header-anchor"></a>The Bottom Line
-</h2><p>High-impact data science teams don&rsquo;t just build models - they change how businesses operate.</p>
-<p><strong>Focus on:</strong></p>
-<ul>
-<li>Business problems worth solving</li>
-<li>Simple solutions that scale</li>
-<li>Teams that can execute, not just research</li>
-<li>Adoption and change management</li>
-<li>Measurable business outcomes</li>
-</ul>
-<p><strong>Avoid:</strong></p>
-<ul>
-<li>Complexity for complexity&rsquo;s sake</li>
-<li>Technical debt accumulation</li>
-<li>Working in isolation from the business</li>
-<li>Vanity metrics and conference-driven development</li>
-</ul>
-<p>The difference between successful and failed data science investments usually comes down to execution, not intelligence.</p>
-<p>Build teams that ship useful solutions, not impressive science projects.</p>
-<p>Your business depends on it.</p>
-<hr>
-<p><em>Reality check: If your data science team has been around for over a year and executives still don&rsquo;t understand their value, the problem isn&rsquo;t communication - it&rsquo;s alignment.</em></p>
+<h3 id="the-core-principle-to-carry-forward"><a href="#the-core-principle-to-carry-forward" class="header-anchor"></a>The Core Principle to Carry Forward
+</h3><p>High-impact data science teams don&rsquo;t just build models - <strong>they change how businesses operate.</strong></p>
+<p>Focus on business problems worth solving, simple solutions that scale, teams that can execute rather than just research, and measurable business outcomes. Avoid complexity for complexity&rsquo;s sake, technical debt accumulation, working in isolation from the business, and vanity metrics.</p>
+<p>The difference between successful and failed data science investments usually comes down to <strong>execution, not intelligence.</strong> Build teams that ship useful solutions, not impressive science projects.</p>
+<blockquote>
+<p><strong>Reality check:</strong> If your data science team has been around for over a year and executives still don&rsquo;t understand their value, the problem isn&rsquo;t communication - it&rsquo;s alignment.</p></blockquote>
 
 </section>
 
@@ -402,11 +413,13 @@
         
             <a href="/tags/data-science/">Data Science</a>
         
+            <a href="/tags/leadership/">Leadership</a>
+        
             <a href="/tags/team-building/">Team Building</a>
         
-            <a href="/tags/strategy/">Strategy</a>
+            <a href="/tags/ai-strategy/">AI Strategy</a>
         
-            <a href="/tags/leadership/">Leadership</a>
+            <a href="/tags/business-impact/">Business Impact</a>
         
     </section>
 
@@ -459,6 +472,34 @@
 
     
 
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/datascience/genius/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/head/genius.png" loading="lazy" data-key="" data-hash="/img/head/genius.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Why Hiring Only Senior Data Scientists Will Destroy Your Team</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
      
     
         
@@ -470,7 +511,7 @@
         
             2024 - 
         
-        2025 My Blog
+        2025 The Patch Panel
     </section>
     
     <section class="powerby">

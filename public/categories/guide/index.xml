@@ -1,209 +1,173 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Guide on My Blog</title>
+        <title>Guide on The Patch Panel</title>
         <link>http://192.168.100.63:1313/categories/guide/</link>
-        <description>Recent content in Guide on My Blog</description>
+        <description>Recent content in Guide on The Patch Panel</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 29 Mar 2025 02:59:30 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/guide/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>I Built My Own AI Agent with GPT-4 (And You Can Too)</title>
-        <link>http://192.168.100.63:1313/datascience/buildanagent/</link>
-        <pubDate>Sat, 29 Mar 2025 02:59:30 +0000</pubDate>
+        <lastBuildDate>Wed, 12 Feb 2025 14:30:00 -0500</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/guide/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Beyond &#39;Tell Me About&#39;: A Guide to Advanced Prompt Engineering</title>
+        <link>http://192.168.100.63:1313/ai/prompting/</link>
+        <pubDate>Wed, 12 Feb 2025 14:30:00 -0500</pubDate>
         
-        <guid>http://192.168.100.63:1313/datascience/buildanagent/</guid>
-        <description>&lt;h1 id=&#34;build-your-first-ai-agent-that-actually-does-stuff&#34;&gt;&lt;a href=&#34;#build-your-first-ai-agent-that-actually-does-stuff&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Build Your First AI Agent That Actually Does Stuff
-&lt;/h1&gt;&lt;p&gt;&lt;em&gt;From chatbot to digital assistant in 50 lines of Python&lt;/em&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;I&amp;rsquo;ve been messing around with AI agents for the past few weeks, and honestly, it&amp;rsquo;s addictive. Started as curiosity about &amp;ldquo;what&amp;rsquo;s beyond ChatGPT&amp;rdquo; and turned into building little digital helpers that can actually get work done.&lt;/p&gt;
-&lt;p&gt;Most people think AI agents are either science fiction or require a PhD to build. Neither is true. You can create something genuinely useful in an afternoon with basic Python skills.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;agent-vs-chatbot-the-difference-that-matters&#34;&gt;&lt;a href=&#34;#agent-vs-chatbot-the-difference-that-matters&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Agent vs Chatbot: The Difference That Matters
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Regular chatbot:&lt;/strong&gt; &amp;ldquo;What&amp;rsquo;s 2+2?&amp;rdquo;&lt;br&gt;
-&lt;em&gt;&amp;ldquo;It&amp;rsquo;s 4!&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;AI agent:&lt;/strong&gt; &amp;ldquo;Help me budget for my vacation&amp;rdquo;&lt;br&gt;
-&lt;em&gt;&amp;ldquo;I&amp;rsquo;ll calculate your available funds, research flight costs, suggest a daily budget, and can book the flights when you&amp;rsquo;re ready.&amp;rdquo;&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;The agent I&amp;rsquo;m about to show you:&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Takes your goal&lt;/li&gt;
-&lt;li&gt;Makes a plan&lt;/li&gt;
-&lt;li&gt;Uses actual tools to get things done&lt;/li&gt;
-&lt;li&gt;Reports back with results&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Basic? Yes. But it follows the same pattern as those million-dollar enterprise systems.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;what-you-need&#34;&gt;&lt;a href=&#34;#what-you-need&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What You Need
-&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;Python 3.8+&lt;/li&gt;
-&lt;li&gt;OpenAI API key (GPT-4 works best, 3.5 is okay)&lt;/li&gt;
-&lt;li&gt;Two packages: &lt;code&gt;openai&lt;/code&gt; and &lt;code&gt;rich&lt;/code&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;That&amp;rsquo;s it. No complicated frameworks or cloud deployments.&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pip install openai rich
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
-&lt;h2 id=&#34;step-1-give-your-agent-some-hands&#34;&gt;&lt;a href=&#34;#step-1-give-your-agent-some-hands&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Step 1: Give Your Agent Some Hands
-&lt;/h2&gt;&lt;p&gt;An agent without tools is just an expensive chatbot. Let&amp;rsquo;s start simple:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;search_todos&lt;/span&gt;(query):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#75715e&#34;&gt;# Fake database for demo&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    todos &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Buy milk&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Call mom&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Finish blog post&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Book dentist appointment&amp;#34;&lt;/span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; [todo &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; todo &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; todos &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; query&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;lower() &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; todo&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;lower()]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;simple_calculator&lt;/span&gt;(expression):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;try&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; str(eval(expression))  &lt;span style=&#34;color:#75715e&#34;&gt;# Don&amp;#39;t do this in production!&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;except&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;Exception&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;as&lt;/span&gt; e:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Error: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;str(e)&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Now register them:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TOOLS &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;search_todos&amp;#34;&lt;/span&gt;: {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function&amp;#34;&lt;/span&gt;: search_todos,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Searches the to-do list. Input should be a keyword.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    },
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;simple_calculator&amp;#34;&lt;/span&gt;: {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function&amp;#34;&lt;/span&gt;: simple_calculator,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Evaluates math expressions.&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Real talk:&lt;/strong&gt; These are toy examples. In practice, you&amp;rsquo;d connect to actual APIs, databases, or services.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;step-2-the-agent-brain&#34;&gt;&lt;a href=&#34;#step-2-the-agent-brain&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Step 2: The Agent Brain
-&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s where it gets interesting. We create a loop where GPT-4 decides what to do, we execute it, and feed the results back:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; openai
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; json
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; rich &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; print
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;run_agent&lt;/span&gt;(goal):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    messages &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; [
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;system&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;You&amp;#39;re an AI agent that completes tasks using tools. Think step-by-step.&amp;#34;&lt;/span&gt;},
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;user&amp;#34;&lt;/span&gt;, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;My goal: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;goal&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    ]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;while&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;True&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\n&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;[yellow]Thinking...[/yellow]&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; openai&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;ChatCompletion&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;create(
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            model&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;gpt-4&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            messages&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;messages,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            functions&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: name,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;: meta[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;description&amp;#34;&lt;/span&gt;],
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;parameters&amp;#34;&lt;/span&gt;: {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;object&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;properties&amp;#34;&lt;/span&gt;: {
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;type&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;string&amp;#34;&lt;/span&gt;}
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        },
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;required&amp;#34;&lt;/span&gt;: [&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                    }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                }
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#66d9ef&#34;&gt;for&lt;/span&gt; name, meta &lt;span style=&#34;color:#f92672&#34;&gt;in&lt;/span&gt; TOOLS&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;items()
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            ],
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            function_call&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;auto&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        )
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        reply &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; response[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;choices&amp;#39;&lt;/span&gt;][&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;][&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;message&amp;#39;&lt;/span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        messages&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append(reply)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; reply&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;get(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function_call&amp;#34;&lt;/span&gt;):
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;# Agent chose to use a tool&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            tool_name &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; reply[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function_call&amp;#34;&lt;/span&gt;][&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            tool_input &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; json&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;loads(reply[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function_call&amp;#34;&lt;/span&gt;][&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;arguments&amp;#34;&lt;/span&gt;])[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;input&amp;#34;&lt;/span&gt;]
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            print(&lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[green]Using: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;tool_name&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;(&amp;#39;&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;tool_input&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;)[/green]&amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            result &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; TOOLS[tool_name][&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function&amp;#34;&lt;/span&gt;](tool_input)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;# Feed result back to agent&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            messages&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;append({
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;role&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;function&amp;#34;&lt;/span&gt;,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;name&amp;#34;&lt;/span&gt;: tool_name,
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;                &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;: result
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            })
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#66d9ef&#34;&gt;else&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#75715e&#34;&gt;# Agent is done&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            print(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;[cyan]Result:[/cyan]&amp;#34;&lt;/span&gt;, reply[&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;content&amp;#34;&lt;/span&gt;])
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#66d9ef&#34;&gt;break&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;What&amp;rsquo;s happening:&lt;/strong&gt; GPT-4 acts as the &amp;ldquo;brain&amp;rdquo; deciding what to do. Your Python functions are its &amp;ldquo;hands&amp;rdquo; that actually do things.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;step-3-take-it-for-a-test-drive&#34;&gt;&lt;a href=&#34;#step-3-take-it-for-a-test-drive&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Step 3: Take It for a Test Drive
-&lt;/h2&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;if&lt;/span&gt; __name__ &lt;span style=&#34;color:#f92672&#34;&gt;==&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;__main__&amp;#34;&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    openai&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;api_key &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;your-api-key-here&amp;#34;&lt;/span&gt;  &lt;span style=&#34;color:#75715e&#34;&gt;# Use environment variables!&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    goal &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; input(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;What&amp;#39;s your goal? &amp;#34;&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    run_agent(goal)
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Try these:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&amp;ldquo;What appointments do I have coming up?&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;Calculate compound interest on $1000 at 5% for 3 years&amp;rdquo;&lt;/li&gt;
-&lt;li&gt;&amp;ldquo;Find anything in my todos about family&amp;rdquo;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Example run:&lt;/strong&gt;&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;Goal: Search for any appointments in my todos
-Thinking...
-Using: search_todos(&amp;#39;appointment&amp;#39;)
-Result: I found 1 appointment-related item:
-- &amp;#34;Book dentist appointment&amp;#34;
-
-You should probably schedule that dentist visit!
-&lt;/code&gt;&lt;/pre&gt;&lt;hr&gt;
-&lt;h2 id=&#34;why-this-is-actually-cool&#34;&gt;&lt;a href=&#34;#why-this-is-actually-cool&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This is Actually Cool
-&lt;/h2&gt;&lt;h3 id=&#34;it-chains-actions&#34;&gt;&lt;a href=&#34;#it-chains-actions&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;It Chains Actions
-&lt;/h3&gt;&lt;p&gt;Give it a complex goal and watch it break things down:&lt;/p&gt;
-&lt;p&gt;&amp;ldquo;Calculate my monthly budget and find related todos&amp;rdquo; becomes:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Use calculator for budget math&lt;/li&gt;
-&lt;li&gt;Search todos for financial items&lt;/li&gt;
-&lt;li&gt;Combine and present results&lt;/li&gt;
-&lt;/ol&gt;
-&lt;h3 id=&#34;it-adapts&#34;&gt;&lt;a href=&#34;#it-adapts&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;It Adapts
-&lt;/h3&gt;&lt;p&gt;If a tool returns unexpected results, the agent adjusts. No rigid scripting.&lt;/p&gt;
-&lt;h3 id=&#34;it-explains-itself&#34;&gt;&lt;a href=&#34;#it-explains-itself&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;It Explains Itself
-&lt;/h3&gt;&lt;p&gt;You can see exactly what it&amp;rsquo;s doing and why. Full transparency.&lt;/p&gt;
-&lt;hr&gt;
-&lt;h2 id=&#34;level-up-ideas&#34;&gt;&lt;a href=&#34;#level-up-ideas&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Level Up Ideas
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Connect to real services:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Weather APIs&lt;/li&gt;
-&lt;li&gt;Your calendar&lt;/li&gt;
-&lt;li&gt;Email or Slack&lt;/li&gt;
-&lt;li&gt;Smart home devices&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Add memory:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Store past conversations&lt;/li&gt;
-&lt;li&gt;Remember your preferences&lt;/li&gt;
-&lt;li&gt;Build context over time&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Go proactive:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Run on a schedule&lt;/li&gt;
-&lt;li&gt;Send you daily summaries&lt;/li&gt;
-&lt;li&gt;Alert about important changes&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;&lt;strong&gt;Get fancy:&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;Web interface with Flask/FastAPI&lt;/li&gt;
-&lt;li&gt;Voice commands&lt;/li&gt;
-&lt;li&gt;Mobile app integration&lt;/li&gt;
+        <guid>http://192.168.100.63:1313/ai/prompting/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/prompting.png" alt="Featured image of post Beyond &#39;Tell Me About&#39;: A Guide to Advanced Prompt Engineering" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Chain-of-thought prompting forces AI to show its reasoning process step-by-step, dramatically improving accuracy on complex problems&lt;/li&gt;
+&lt;li&gt;Prompt chaining breaks large projects into focused workflows where each AI response feeds into the next prompt&lt;/li&gt;
+&lt;li&gt;Structured output formats like JSON or Markdown tables make AI responses immediately usable in other applications&lt;/li&gt;
+&lt;li&gt;The &amp;ldquo;committee of experts&amp;rdquo; technique simulates multi-perspective debates to uncover nuanced insights and balanced analysis&lt;/li&gt;
 &lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;the-breakthrough-moment&#34;&gt;&lt;a href=&#34;#the-breakthrough-moment&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Breakthrough Moment
-&lt;/h2&gt;&lt;p&gt;After playing with this for a few days, something clicked. This isn&amp;rsquo;t just automation - it&amp;rsquo;s delegation to something that can actually think through problems.&lt;/p&gt;
-&lt;p&gt;I asked it to &amp;ldquo;help me prep for my Monday meetings&amp;rdquo; and watched it:&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;Search my todos for meeting-related items&lt;/li&gt;
-&lt;li&gt;Calculate how much time I had available&lt;/li&gt;
-&lt;li&gt;Suggest a preparation schedule&lt;/li&gt;
-&lt;li&gt;Offer to set reminders&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;It felt less like using a tool and more like working with a really efficient intern.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;That&amp;rsquo;s the magic of agentic AI.&lt;/strong&gt; You&amp;rsquo;re not just getting answers - you&amp;rsquo;re getting a thinking partner that can take action.&lt;/p&gt;
+&lt;h3 id=&#34;the-architects-advantage&#34;&gt;&lt;a href=&#34;#the-architects-advantage&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Architect&amp;rsquo;s Advantage
+&lt;/h3&gt;&lt;p&gt;The last time I watched someone struggle with AI, they were firing off question after question, getting increasingly frustrated with the lukewarm responses. &amp;ldquo;Write me a marketing plan,&amp;rdquo; they&amp;rsquo;d say, then frown at the generic bullet points that came back. They knew &lt;em&gt;something&lt;/em&gt; was missing, but couldn&amp;rsquo;t put their finger on what.&lt;/p&gt;
+&lt;p&gt;This is the pivot point where casual AI users and true power users diverge. The difference isn&amp;rsquo;t in the complexity of the questions - it&amp;rsquo;s in understanding that you&amp;rsquo;re not just asking for answers. You&amp;rsquo;re designing the AI&amp;rsquo;s thought process itself.&lt;/p&gt;
+&lt;p&gt;After wrestling with this problem across dozens of projects, a pattern emerged. The most valuable AI interactions happen when you stop being a questioner and start being an architect. You&amp;rsquo;re not just extracting information; you&amp;rsquo;re constructing a framework for how the AI should think, reason, and respond.&lt;/p&gt;
+&lt;h3 id=&#34;chain-of-thought-making-the-invisible-visible&#34;&gt;&lt;a href=&#34;#chain-of-thought-making-the-invisible-visible&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Chain-of-Thought: Making the Invisible Visible
+&lt;/h3&gt;&lt;p&gt;The conventional wisdom about AI accuracy is starting to show its cracks. We&amp;rsquo;ve been taught that these systems are either right or wrong, but the reality is more nuanced. The quality of reasoning matters as much as the final answer.&lt;/p&gt;
+&lt;p&gt;Chain-of-thought prompting forces the AI to externalize its reasoning process. Instead of jumping to conclusions, it must show its work. This isn&amp;rsquo;t just pedagogical theater - it fundamentally changes how the AI approaches problems.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;A farmer has 15 animals (chickens and pigs) with a total of 44 legs. How many of each does he have? Let&amp;rsquo;s think step by step.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The magic happens in that final phrase. By demanding step-by-step reasoning, you&amp;rsquo;re not just getting a more accurate answer - you&amp;rsquo;re getting insight into the problem-solving process itself. This approach renders the old way of asking math questions obsolete.&lt;/p&gt;
+&lt;p&gt;My perspective on this was permanently altered after watching it solve a logistics problem that had stumped our team for weeks. The AI didn&amp;rsquo;t just give us the right answer; it showed us three different approaches we hadn&amp;rsquo;t considered.&lt;/p&gt;
+&lt;h3 id=&#34;prompt-chaining-building-workflows-that-scale&#34;&gt;&lt;a href=&#34;#prompt-chaining-building-workflows-that-scale&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Prompt Chaining: Building Workflows That Scale
+&lt;/h3&gt;&lt;p&gt;This is where the theoretical meets the practical. Single prompts have their limits, but chaining creates something more powerful - a structured workflow where each response becomes the foundation for the next question.&lt;/p&gt;
+&lt;p&gt;The essential insight to grasp is that complex projects aren&amp;rsquo;t just big questions. They&amp;rsquo;re sequences of smaller, focused questions where context builds progressively. Instead of asking for a complete marketing strategy, you architect a process:&lt;/p&gt;
+&lt;p&gt;First prompt: &amp;ldquo;Brainstorm five marketing angles for a new eco-friendly coffee cup.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Second prompt: &amp;ldquo;Great. Using angle #2, &amp;lsquo;Style That Sustains,&amp;rsquo; write three distinct Instagram post concepts, including captions and visuals.&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Each step is digestible, focused, and feeds naturally into the next. This approach overturns the conventional wisdom about how we should structure our requests.&lt;/p&gt;
+&lt;h3 id=&#34;structured-output-data-ready-for-action&#34;&gt;&lt;a href=&#34;#structured-output-data-ready-for-action&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Structured Output: Data Ready for Action
+&lt;/h3&gt;&lt;p&gt;Let my trial and error be your shortcut here. The most frustrating part of early AI work wasn&amp;rsquo;t getting bad answers - it was getting good answers in unusable formats. You&amp;rsquo;d spend as much time reformatting the response as you did crafting the original prompt.&lt;/p&gt;
+&lt;p&gt;The solution is deceptively simple: explicitly specify the output format you need. JSON for data processing, Markdown tables for documentation, XML for system integration. The AI can handle these formats natively, but only if you ask.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Compare the top three flagship smartphones. Present the info in a Markdown table with columns for: Model, Key Features, and Starting Price.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;To distill it down to its core: structured output transforms AI responses from interesting reads into actionable data. It&amp;rsquo;s the difference between getting information and getting results you can immediately use.&lt;/p&gt;
+&lt;h3 id=&#34;the-committee-of-experts-simulating-real-debate&#34;&gt;&lt;a href=&#34;#the-committee-of-experts-simulating-real-debate&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Committee of Experts: Simulating Real Debate
+&lt;/h3&gt;&lt;p&gt;What if we&amp;rsquo;ve been looking at AI perspective all wrong? Instead of treating it as a single voice, you can orchestrate multiple viewpoints within a single conversation.&lt;/p&gt;
+&lt;p&gt;The committee approach forces the AI to inhabit different roles and present conflicting perspectives. This isn&amp;rsquo;t just creative writing - it&amp;rsquo;s a systematic way to uncover blind spots and explore the full spectrum of an issue.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Analyze the impact of a 4-day work week by simulating a brief discussion between a CEO, an economist, and an employee wellness expert. Summarize each one&amp;rsquo;s main point.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This technique will completely reshape how you approach complex analysis. Instead of getting one perspective (which might be biased toward the AI&amp;rsquo;s training data), you get a structured debate that reveals tensions and trade-offs you might not have considered.&lt;/p&gt;
+&lt;h3 id=&#34;self-critique-the-internal-feedback-loop&#34;&gt;&lt;a href=&#34;#self-critique-the-internal-feedback-loop&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Self-Critique: The Internal Feedback Loop
+&lt;/h3&gt;&lt;p&gt;This realization introduces a new layer of sophistication to AI interaction. You can turn the AI into its own editor, creating a feedback loop that improves output quality without requiring multiple different tools.&lt;/p&gt;
+&lt;p&gt;The process is elegantly simple: generate, critique, revise. First, get an initial response. Then ask the AI to evaluate its own work against specific criteria - tone, clarity, persuasiveness, accuracy. Finally, have it rewrite based on its own critique.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;First prompt: &amp;ldquo;Write a short, unenthusiastic business email asking a client for a testimonial.&amp;rdquo;
+Follow-up: &amp;ldquo;Now, critique that email for being too passive and uninspiring. Then, rewrite it to be more persuasive and cheerful.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The scars from early encounters with generic AI output taught me to never settle for the first draft. Self-critique transforms AI from a one-shot tool into a collaborative partner that can iterate and improve.&lt;/p&gt;
+&lt;h3 id=&#34;templated-prompting-consistency-at-scale&#34;&gt;&lt;a href=&#34;#templated-prompting-consistency-at-scale&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Templated Prompting: Consistency at Scale
+&lt;/h3&gt;&lt;p&gt;After wrestling with recurring tasks across multiple projects, it became clear that efficiency demanded systematization. Templated prompting creates reusable frameworks that ensure consistency while maintaining quality.&lt;/p&gt;
+&lt;p&gt;The core principle is straightforward: create detailed templates with placeholders, then fill them with specific data for each use case. This is particularly powerful for weekly reports, client communications, or content creation where structure matters.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;Use my weekly report template. Subject: Project Update: [Project Name]. Body: Accomplishments: [List of accomplishments]. Challenges: [List of challenges]. Next Steps: [List of next steps]. Now, fill it out with the following details&amp;hellip;&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This approach renders ad-hoc prompting obsolete for repetitive tasks. You&amp;rsquo;re not just saving time; you&amp;rsquo;re ensuring that your communication maintains a consistent professional standard.&lt;/p&gt;
+&lt;h3 id=&#34;iterative-refinement-the-art-of-the-follow-up&#34;&gt;&lt;a href=&#34;#iterative-refinement-the-art-of-the-follow-up&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Iterative Refinement: The Art of the Follow-Up
+&lt;/h3&gt;&lt;p&gt;The ultimate takeaway from years of AI interaction is this: perfection is a conversation, not a command. The most valuable results come from treating AI interaction as an iterative process rather than a single exchange.&lt;/p&gt;
+&lt;p&gt;Start broad, then narrow. Get an initial response, analyze what works and what doesn&amp;rsquo;t, then provide specific feedback for improvement. This isn&amp;rsquo;t just about getting better answers - it&amp;rsquo;s about training yourself to think more precisely about what you actually want.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Initial: &amp;ldquo;Write an intro for a blog post about productivity.&amp;rdquo;
+Refinement: &amp;ldquo;That&amp;rsquo;s a bit bland. Can you rewrite it to be more dynamic? Start with a relatable scenario about the &amp;lsquo;Sunday Scaries&amp;rsquo; and use a more motivational tone.&amp;rdquo;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;This isn&amp;rsquo;t just theory; this is from the front lines of practical AI work. The willingness to iterate separates good results from genuinely valuable ones.&lt;/p&gt;
+&lt;h3 id=&#34;the-new-paradigm&#34;&gt;&lt;a href=&#34;#the-new-paradigm&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The New Paradigm
+&lt;/h3&gt;&lt;p&gt;So, where do we go from here? These techniques aren&amp;rsquo;t just improvements to your AI toolkit - they represent a complete reconceptualization of human-AI collaboration. You&amp;rsquo;re no longer a user asking questions; you&amp;rsquo;re an architect designing thought processes.&lt;/p&gt;
+&lt;p&gt;The conversation doesn&amp;rsquo;t end here; the real test is applying these frameworks to your own work. Each technique becomes more powerful when combined with others, creating sophisticated workflows that would be impossible with traditional tools.&lt;/p&gt;
+&lt;p&gt;My hope is that this provides a new lens for understanding what&amp;rsquo;s possible when you move beyond simple prompting to intentional AI architecture. The tools are ready. The question is whether you&amp;rsquo;re ready to use them.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Self-Hosted Series: Tandoor</title>
+        <link>http://192.168.100.63:1313/projects/tandoor/</link>
+        <pubDate>Mon, 28 Oct 2024 14:30:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/projects/tandoor/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/tandoor.png" alt="Featured image of post Self-Hosted Series: Tandoor" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Tandoor Recipes is an open-source, self-hosted recipe manager that solves the scattered bookmark problem&lt;/li&gt;
+&lt;li&gt;Features include OCR for digitizing old cookbooks, meal planning tools, and automatic grocery list generation&lt;/li&gt;
+&lt;li&gt;Docker deployment on Proxmox with external PostgreSQL provides a robust, backup-friendly architecture&lt;/li&gt;
+&lt;li&gt;After months of use, it&amp;rsquo;s genuinely transformed meal planning and grocery shopping workflows&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
-&lt;h2 id=&#34;start-building&#34;&gt;&lt;a href=&#34;#start-building&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Start Building
-&lt;/h2&gt;&lt;p&gt;The code above is literally all you need to get started. Clone it, modify the tools, add your own functions.&lt;/p&gt;
-&lt;p&gt;Most importantly: &lt;strong&gt;start simple.&lt;/strong&gt; Don&amp;rsquo;t try to build Jarvis on day one. Build something that solves one small problem really well, then expand from there.&lt;/p&gt;
-&lt;p&gt;The future isn&amp;rsquo;t about replacing humans with AI. It&amp;rsquo;s about humans working with AI that can actually get stuff done.&lt;/p&gt;
-&lt;p&gt;What will you build first?&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;Pro tip: Keep your API costs low while experimenting by using GPT-3.5 for simple tasks and only upgrading to GPT-4 when you need the extra reasoning power.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;finally-getting-my-recipe-chaos-under-control&#34;&gt;&lt;a href=&#34;#finally-getting-my-recipe-chaos-under-control&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Finally Getting My Recipe Chaos Under Control
+&lt;/h3&gt;&lt;p&gt;The last time I tried to find that incredible pasta sauce recipe my friend shared, I spent twenty minutes digging through browser bookmarks, photo albums, and random text files. That moment of frustration was the final straw in my ongoing battle with recipe organization chaos.&lt;/p&gt;
+&lt;p&gt;My kitchen strategy had devolved into a digital disaster zone. Screenshots buried three layers deep in my camera roll, bookmarks scattered across browsers, handwritten notes shoved in drawers, and the occasional recipe texted to me that vanished into message history. Every attempt at organization failed because the solutions were either too expensive, too limiting, or - my biggest fear - destined to disappear when the company pivoted or shut down.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s when I discovered Tandoor Recipes, and it&amp;rsquo;s been a genuine revelation.&lt;/p&gt;
+&lt;h3 id=&#34;why-self-hosting-makes-sense-here&#34;&gt;&lt;a href=&#34;#why-self-hosting-makes-sense-here&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why Self-Hosting Makes Sense Here
+&lt;/h3&gt;&lt;p&gt;The conventional wisdom says just use whatever recipe app has the best reviews. But after wrestling with this problem across multiple failed attempts, I realized the fundamental issue wasn&amp;rsquo;t the interface - it was control.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;My data stays exactly where I want it.&lt;/strong&gt; I&amp;rsquo;ve been through the Google Reader shutdown, the endless parade of acquired startups, and the slow feature creep of subscription models. Not happening again with something as personal as my recipe collection.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Zero algorithmic interference.&lt;/strong&gt; I don&amp;rsquo;t need machine learning suggesting recipes based on my &amp;ldquo;cooking personality profile.&amp;rdquo; I need to find my go-to chicken tikka masala when I&amp;rsquo;m standing in the grocery store at 6 PM on a Wednesday.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Real customization that actually works.&lt;/strong&gt; Custom categories that map to how I actually cook. Tags that make sense to my workflow. A interface that doesn&amp;rsquo;t assume I want to scroll through food photography when I just need the ingredient list.&lt;/p&gt;
+&lt;p&gt;The built-in meal planning and grocery list generation turned out to be the killer features I didn&amp;rsquo;t know I needed. But the OCR capability for digitizing old cookbook pages? That&amp;rsquo;s pure magic.&lt;/p&gt;
+&lt;h3 id=&#34;the-technical-setup-that-actually-works&#34;&gt;&lt;a href=&#34;#the-technical-setup-that-actually-works&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Technical Setup That Actually Works
+&lt;/h3&gt;&lt;p&gt;My homelab runs on a Proxmox cluster, with most applications deployed in a dedicated Docker VM that has plenty of resources allocated. PostgreSQL lives in its own LXC container because centralized database management makes backups and maintenance infinitely easier.&lt;/p&gt;
+&lt;p&gt;This architecture has proven rock-solid for Tandoor. The separation means database maintenance doesn&amp;rsquo;t impact the application, and I can snapshot the entire setup independently.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the structure that&amp;rsquo;s been working flawlessly:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/opt/docker/tandoor/          # Application files
+/mnt/r430/tandoor/recipes/    # Recipe database
+/mnt/r430/tandoor/mediafiles/ # Recipe photos
+/mnt/r430/tandoor/staticfiles/ # Static assets
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The Docker configuration is straightforward but robust:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;web&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;vabene1111/recipes:latest&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;container_name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;tandoor_web&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;restart&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;unless-stopped&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;volumes&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/recipes:/opt/recipes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/mediafiles:/opt/recipes/mediafiles&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/staticfiles:/opt/recipes/staticfiles&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;env_file&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;.env&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;8080:8000&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;networks&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;tandoor-net&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;networks&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;tandoor-net&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;driver&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;bridge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Environment configuration handles the database connection and Django security settings:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Database connection&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;POSTGRES_HOST&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;your-postgres-ip
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;POSTGRES_PORT&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;your-port
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;POSTGRES_USER&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;your-username
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;POSTGRES_PASSWORD&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;your-secure-password
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;POSTGRES_DB&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;your-postgres-db
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Django settings&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;SECRET_KEY&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;generate-a-proper-secret-key
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;DEBUG&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ALLOWED_HOSTS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;*
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TZ&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;America/New_York
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Pro tip: Actually generate a real secret key. Django&amp;rsquo;s security depends on it, and &amp;ldquo;password123&amp;rdquo; isn&amp;rsquo;t going to cut it.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Database setup in the PostgreSQL LXC is clean and minimal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; dbname;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;USER&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;WITH&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ENCRYPTED&lt;/span&gt; PASSWORD &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;your-secure-password&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ALL&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIVILEGES&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; dbname &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; username;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; dbname &lt;span style=&#34;color:#66d9ef&#34;&gt;OWNER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; username;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Configure PostgreSQL to accept connections from the Docker host network, restart the service, and you&amp;rsquo;re ready to deploy.&lt;/p&gt;
+&lt;h3 id=&#34;living-with-tandoor-day-to-day&#34;&gt;&lt;a href=&#34;#living-with-tandoor-day-to-day&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Living With Tandoor Day-to-Day
+&lt;/h3&gt;&lt;p&gt;After months of actual use, this setup has fundamentally changed how I approach cooking and meal planning. The web interface is responsive and intuitive - I can quickly add recipes, organize them into logical categories, and actually find things when I need them.&lt;/p&gt;
+&lt;p&gt;Recipe import works seamlessly with most cooking websites. Copy the URL, paste it into Tandoor, and it automatically extracts ingredients, instructions, and photos. The parsing accuracy is impressive, though I occasionally need to clean up formatting quirks from particularly complex recipe sites.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The OCR feature deserves special recognition.&lt;/strong&gt; I&amp;rsquo;ve been systematically digitizing recipes from family cookbooks that have been collecting dust for years. Take a photo of the page, and Tandoor extracts the text with remarkable accuracy. It&amp;rsquo;s not perfect, but it beats manually typing every ingredient and instruction.&lt;/p&gt;
+&lt;p&gt;Meal planning integration has genuinely improved my grocery shopping efficiency. Plan out the week&amp;rsquo;s dinners, and Tandoor automatically generates a consolidated shopping list organized by ingredient type. No more wandering the aisles trying to remember if I already have cumin at home.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Storage footprint remains surprisingly light.&lt;/strong&gt; Even with several hundred recipes and associated photos, the entire setup uses less than 2GB of space. Database backups are quick, and the whole system restarts in seconds during maintenance windows.&lt;/p&gt;
+&lt;h3 id=&#34;why-this-actually-matters&#34;&gt;&lt;a href=&#34;#why-this-actually-matters&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This Actually Matters
+&lt;/h3&gt;&lt;p&gt;The real test of any self-hosted solution isn&amp;rsquo;t the initial setup excitement - it&amp;rsquo;s whether you&amp;rsquo;re still using it six months later. Tandoor has passed that test definitively.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;It works the way I think about cooking&lt;/em&gt;, not the way some product manager imagined I should think about cooking. Custom categories map to my actual meal rotation. Tags reflect ingredients I commonly substitute or dietary restrictions that matter to my household. The interface gets out of the way and lets me focus on the recipes themselves.&lt;/p&gt;
+&lt;p&gt;The peace of mind factor can&amp;rsquo;t be overstated. My recipe collection is backed up alongside my other important data, version controlled, and completely under my control. No subscription fees, no feature deprecation, no sudden policy changes that break my workflow.&lt;/p&gt;
+&lt;p&gt;Sure, there are no social features for sharing recipes with friends or browsing community collections. But honestly, that feels like a benefit rather than a limitation. I wanted a tool, not a social network.&lt;/p&gt;
+&lt;h3 id=&#34;the-path-forward&#34;&gt;&lt;a href=&#34;#the-path-forward&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Path Forward
+&lt;/h3&gt;&lt;p&gt;I&amp;rsquo;m still refining the deployment. Adding it to my reverse proxy setup for external access is on the roadmap, and I want to implement automated database backups as part of my broader infrastructure maintenance.&lt;/p&gt;
+&lt;p&gt;The mobile app development looks promising for those moments when you&amp;rsquo;re actually standing in the kitchen with flour on your hands trying to remember if the recipe called for one teaspoon or one tablespoon of vanilla.&lt;/p&gt;
+&lt;p&gt;For now, the web interface works perfectly on mobile browsers, though a native app would provide a smoother experience for recipe viewing while cooking.&lt;/p&gt;
+&lt;h3 id=&#34;worth-the-investment&#34;&gt;&lt;a href=&#34;#worth-the-investment&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Worth the Investment?
+&lt;/h3&gt;&lt;p&gt;If you&amp;rsquo;re already running a homelab with Docker capability, Tandoor integrates seamlessly into your existing infrastructure. The initial setup investment pays dividends immediately through improved meal planning efficiency and the genuine satisfaction of having a recipe management system that works exactly how you want it to.&lt;/p&gt;
+&lt;p&gt;The bigger question is whether self-hosting makes sense for your particular situation. If you&amp;rsquo;re comfortable with the technical requirements and value data ownership over convenience features, Tandoor represents exactly the kind of thoughtful, well-executed open source project that makes self-hosting worthwhile.&lt;/p&gt;
+&lt;p&gt;My recipe chaos is officially under control. Now I just need to work on actually cooking all these recipes I&amp;rsquo;ve been meticulously organizing.&lt;/p&gt;
 </description>
         </item>
         

@@ -1,75 +1,147 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Business Impact on My Blog</title>
+        <title>Business Impact on The Patch Panel</title>
         <link>http://192.168.100.63:1313/tags/business-impact/</link>
-        <description>Recent content in Business Impact on My Blog</description>
+        <description>Recent content in Business Impact on The Patch Panel</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sun, 16 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/business-impact/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle</title>
-        <link>http://192.168.100.63:1313/datascience/8020rule/</link>
-        <pubDate>Sun, 16 Mar 2025 00:00:00 +0000</pubDate>
+        <lastBuildDate>Fri, 13 Dec 2024 14:30:00 -0400</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/business-impact/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>Building High Impact Data Science Teams</title>
+        <link>http://192.168.100.63:1313/datascience/foundations/</link>
+        <pubDate>Fri, 13 Dec 2024 14:30:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63:1313/datascience/8020rule/</guid>
-        <description>&lt;h1 id=&#34;stop-optimizing-your-models-to-death-a-reality-check-on-data-science-priorities&#34;&gt;&lt;a href=&#34;#stop-optimizing-your-models-to-death-a-reality-check-on-data-science-priorities&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Stop Optimizing Your Models to Death: A Reality Check on Data Science Priorities
-&lt;/h1&gt;&lt;p&gt;&lt;em&gt;Why your team might be working really hard on stuff that doesn&amp;rsquo;t matter&lt;/em&gt;&lt;/p&gt;
+        <guid>http://192.168.100.63:1313/datascience/foundations/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/highimpact.png" alt="Featured image of post Building High Impact Data Science Teams" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;AI Summary&lt;/strong&gt;
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Most data science teams fail because they optimize for algorithmic sophistication instead of business impact.&lt;/li&gt;
+&lt;li&gt;Simple solutions that people actually use beat complex models that gather dust.&lt;/li&gt;
+&lt;li&gt;Building balanced teams with business sense and operational thinking matters more than hiring only technical geniuses.&lt;/li&gt;
+&lt;li&gt;Success requires focusing on adoption and change management, not just model accuracy.&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;I&amp;rsquo;ve watched too many data science teams get completely lost in the weeds. They&amp;rsquo;ll spend three weeks trying to squeeze another 0.3% accuracy out of a model that&amp;rsquo;s already performing fine, or they&amp;rsquo;ll build some incredibly sophisticated pipeline for a use case that gets looked at once a month.&lt;/p&gt;
-&lt;p&gt;Meanwhile, the simple dashboard that actually helps people make decisions sits broken because &amp;ldquo;it&amp;rsquo;s not interesting enough&amp;rdquo; to fix.&lt;/p&gt;
-&lt;p&gt;This is backwards. After seeing this pattern repeat across multiple organizations, I&amp;rsquo;m convinced that most data science effort gets wasted on work that sounds impressive but doesn&amp;rsquo;t move the business forward.&lt;/p&gt;
-&lt;h2 id=&#34;what-actually-matters-the-20-that-drives-results&#34;&gt;&lt;a href=&#34;#what-actually-matters-the-20-that-drives-results&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Actually Matters (The 20% That Drives Results)
-&lt;/h2&gt;&lt;p&gt;The uncomfortable truth is that most business problems don&amp;rsquo;t require cutting-edge machine learning. They require good judgment about what&amp;rsquo;s worth solving and the discipline to keep solutions simple.&lt;/p&gt;
-&lt;h3 id=&#34;simple-models-win-most-of-the-time&#34;&gt;&lt;a href=&#34;#simple-models-win-most-of-the-time&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Simple Models Win Most of the Time
-&lt;/h3&gt;&lt;p&gt;I can&amp;rsquo;t count how many times I&amp;rsquo;ve seen a basic logistic regression outperform some elaborate neural network setup - not just in accuracy, but in actual business impact. Simple models are easier to explain, faster to deploy, and way less likely to break in mysterious ways six months later.&lt;/p&gt;
-&lt;p&gt;A decision tree that a business user can actually understand and trust will get used. A black-box model that requires a PhD to interpret will sit unused no matter how accurate it is.&lt;/p&gt;
-&lt;h3 id=&#34;clear-success-metrics-save-everything&#34;&gt;&lt;a href=&#34;#clear-success-metrics-save-everything&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Clear Success Metrics Save Everything
-&lt;/h3&gt;&lt;p&gt;The most successful projects I&amp;rsquo;ve worked on started with a really clear answer to &amp;ldquo;how will we know if this worked?&amp;rdquo; Not &amp;ldquo;improved model performance&amp;rdquo; or &amp;ldquo;better predictions,&amp;rdquo; but actual business metrics like &amp;ldquo;reduced customer churn by 15%&amp;rdquo; or &amp;ldquo;saved $50K in operational costs.&amp;rdquo;&lt;/p&gt;
-&lt;p&gt;If you can&amp;rsquo;t articulate the business impact in a single sentence, you&amp;rsquo;re probably not ready to start building anything.&lt;/p&gt;
-&lt;h3 id=&#34;data-engineering-is-your-secret-weapon&#34;&gt;&lt;a href=&#34;#data-engineering-is-your-secret-weapon&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Data Engineering Is Your Secret Weapon
-&lt;/h3&gt;&lt;p&gt;Here&amp;rsquo;s something they don&amp;rsquo;t teach in data science bootcamps: spending time on solid data pipelines will pay off way more than tweaking algorithms. A mediocre model with reliable, clean data will beat a sophisticated model with garbage inputs every single time.&lt;/p&gt;
-&lt;p&gt;I&amp;rsquo;ve seen teams waste months debugging model performance issues that turned out to be data quality problems. Build the infrastructure first, then worry about the fancy stuff.&lt;/p&gt;
-&lt;h3 id=&#34;getting-people-to-actually-use-your-work&#34;&gt;&lt;a href=&#34;#getting-people-to-actually-use-your-work&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Getting People to Actually Use Your Work
-&lt;/h3&gt;&lt;p&gt;The graveyard of data science is filled with brilliant models that nobody ever used. The difference between successful projects and academic exercises is usually stakeholder buy-in, not technical sophistication.&lt;/p&gt;
-&lt;p&gt;This means spending time with business users, understanding their actual workflow, and building things that fit into how they already work. Revolutionary insights that require people to completely change their process rarely get adopted.&lt;/p&gt;
-&lt;h3 id=&#34;speed-beats-perfection&#34;&gt;&lt;a href=&#34;#speed-beats-perfection&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Speed Beats Perfection
-&lt;/h3&gt;&lt;p&gt;I&amp;rsquo;d rather have a working prototype next week than a perfect solution next quarter. Fast iterations let you validate assumptions, get feedback, and course-correct before you&amp;rsquo;ve invested months in the wrong direction.&lt;/p&gt;
-&lt;p&gt;The best data science teams I&amp;rsquo;ve worked with ship early and often. They&amp;rsquo;re not afraid to put imperfect solutions in front of users because they know that real-world feedback is worth more than theoretical optimization.&lt;/p&gt;
-&lt;h2 id=&#34;the-time-wasters-the-80-that-feels-important-but-isnt&#34;&gt;&lt;a href=&#34;#the-time-wasters-the-80-that-feels-important-but-isnt&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Time Wasters (The 80% That Feels Important But Isn&amp;rsquo;t)
-&lt;/h2&gt;&lt;h3 id=&#34;the-accuracy-trap&#34;&gt;&lt;a href=&#34;#the-accuracy-trap&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Accuracy Trap
-&lt;/h3&gt;&lt;p&gt;Every data scientist has fallen into this one. You&amp;rsquo;ve got a model that&amp;rsquo;s working pretty well, but you&amp;rsquo;re convinced you can make it just a little bit better. So you spend days or weeks tuning hyperparameters, trying different algorithms, engineering new features.&lt;/p&gt;
-&lt;p&gt;But here&amp;rsquo;s the thing - going from 89% to 91% accuracy rarely translates to meaningful business impact. And the time you spent on that marginal improvement could have been used to solve an entirely new problem.&lt;/p&gt;
-&lt;h3 id=&#34;mlops-theater&#34;&gt;&lt;a href=&#34;#mlops-theater&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;MLOps Theater
-&lt;/h3&gt;&lt;p&gt;Don&amp;rsquo;t get me wrong - good MLOps practices are valuable. But I&amp;rsquo;ve seen teams spend months building elaborate CI/CD pipelines for models that get retrained once a quarter. The tooling becomes more complex than the actual problem being solved.&lt;/p&gt;
-&lt;p&gt;Build automation where it saves real time and effort. Don&amp;rsquo;t build it because it looks good in architecture diagrams.&lt;/p&gt;
-&lt;h3 id=&#34;notebook-sprawl&#34;&gt;&lt;a href=&#34;#notebook-sprawl&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Notebook Sprawl
-&lt;/h3&gt;&lt;p&gt;Every ad-hoc analysis that lives in a one-off Jupyter notebook is technical debt waiting to happen. Someone will need to reproduce that analysis in six months, but the notebook won&amp;rsquo;t run because the environment has changed, or the data has moved, or the person who wrote it has left the company.&lt;/p&gt;
-&lt;p&gt;Standardize your workflows. Build templates. Make things reproducible from day one, even if it feels like extra work upfront.&lt;/p&gt;
-&lt;h3 id=&#34;solutions-looking-for-problems&#34;&gt;&lt;a href=&#34;#solutions-looking-for-problems&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Solutions Looking for Problems
-&lt;/h3&gt;&lt;p&gt;This is probably the biggest trap in data science. You learn about some cool new technique or tool, and suddenly you&amp;rsquo;re looking for places to apply it. But starting with the technology instead of the business problem almost always leads to wasted effort.&lt;/p&gt;
-&lt;p&gt;The best projects start with pain points that people are already feeling, not with algorithmic innovations that might be useful someday.&lt;/p&gt;
-&lt;h2 id=&#34;how-to-tell-when-youre-off-track&#34;&gt;&lt;a href=&#34;#how-to-tell-when-youre-off-track&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;How to Tell When You&amp;rsquo;re Off Track
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;Your projects never seem to finish.&lt;/strong&gt; If you&amp;rsquo;re constantly finding new things to optimize or improve, you might be avoiding the harder work of actually deploying something useful.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Nobody uses your outputs.&lt;/strong&gt; If your models and dashboards aren&amp;rsquo;t changing how people make decisions, something is fundamentally wrong with your approach.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;You spend more time talking about tools than outcomes.&lt;/strong&gt; If team discussions focus more on technical architecture than business impact, you&amp;rsquo;ve probably lost the plot.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Leadership keeps asking &amp;ldquo;when will this be done?&amp;rdquo;&lt;/strong&gt; If you can&amp;rsquo;t give clear timelines or milestones, you might be working on problems that are too vague or ambitious.&lt;/p&gt;
-&lt;h2 id=&#34;redirecting-leadership-energy&#34;&gt;&lt;a href=&#34;#redirecting-leadership-energy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Redirecting Leadership Energy
-&lt;/h2&gt;&lt;p&gt;Part of the problem is that leadership often doesn&amp;rsquo;t understand what&amp;rsquo;s realistic or valuable in data science. They&amp;rsquo;ll push for complex solutions because they sound more impressive, or they&amp;rsquo;ll ask for unrealistic timelines without understanding the constraints.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Translate everything into business language.&lt;/strong&gt; Instead of talking about model accuracy, talk about customer retention rates. Instead of discussing feature engineering, talk about operational efficiency gains.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Show quick wins early.&lt;/strong&gt; Don&amp;rsquo;t wait six months to demonstrate value. Find ways to deliver something useful quickly, even if it&amp;rsquo;s not the final solution.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Be honest about complexity costs.&lt;/strong&gt; Every additional layer of sophistication makes things harder to maintain, debug, and explain. Make sure leadership understands this trade-off.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Use concrete examples.&lt;/strong&gt; When you see simple solutions driving real impact, document and share those stories. They&amp;rsquo;re way more persuasive than theoretical arguments about best practices.&lt;/p&gt;
-&lt;h2 id=&#34;the-discipline-of-doing-less&#34;&gt;&lt;a href=&#34;#the-discipline-of-doing-less&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Discipline of Doing Less
-&lt;/h2&gt;&lt;p&gt;The hardest part of effective data science isn&amp;rsquo;t building complex models - it&amp;rsquo;s having the discipline to stop when you&amp;rsquo;ve solved the actual problem. This means saying no to interesting side quests, avoiding perfectionism, and focusing relentlessly on business outcomes.&lt;/p&gt;
-&lt;p&gt;The most successful data scientists I know aren&amp;rsquo;t necessarily the most technically sophisticated. They&amp;rsquo;re the ones with good judgment about what&amp;rsquo;s worth building and the communication skills to get their work adopted.&lt;/p&gt;
-&lt;p&gt;They build simple things that work reliably. They ship early and iterate based on feedback. They spend as much time thinking about adoption as they do about algorithms.&lt;/p&gt;
-&lt;p&gt;Most importantly, they recognize that their job isn&amp;rsquo;t to build the most elegant technical solution - it&amp;rsquo;s to help the business make better decisions with data.&lt;/p&gt;
-&lt;h2 id=&#34;the-bottom-line&#34;&gt;&lt;a href=&#34;#the-bottom-line&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bottom Line
-&lt;/h2&gt;&lt;p&gt;Data science teams that focus on simple, practical solutions consistently outperform those that chase technical sophistication for its own sake. This isn&amp;rsquo;t about lowering standards or avoiding challenging problems - it&amp;rsquo;s about being strategic with where you invest your limited time and energy.&lt;/p&gt;
-&lt;p&gt;Before you start your next project, ask yourself: &amp;ldquo;If this works perfectly, what specific business outcome will improve, and by how much?&amp;rdquo; If you can&amp;rsquo;t answer that clearly, you might be about to join the 80% of effort that doesn&amp;rsquo;t move the needle.&lt;/p&gt;
-&lt;p&gt;The goal isn&amp;rsquo;t to build impressive models. It&amp;rsquo;s to solve real problems in ways that people will actually use. Everything else is just interesting academic exercise.&lt;/p&gt;
+&lt;h2 id=&#34;your-data-science-team-is-probably-expensive-and-useless&#34;&gt;&lt;a href=&#34;#your-data-science-team-is-probably-expensive-and-useless&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Your Data Science Team is Probably Expensive and Useless
+&lt;/h2&gt;&lt;p&gt;Let me guess. You hired a bunch of brilliant data scientists, gave them access to all your data, and expected magic to happen.&lt;/p&gt;
+&lt;p&gt;Six months later, you&amp;rsquo;ve got impressive demos, excited PowerPoints, and &lt;strong&gt;zero impact on the bottom line.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Welcome to the club. Most companies end up with data science teams that look great on paper but accomplish nothing meaningful. They burn through budget building models nobody uses while the business keeps making decisions with gut instinct and Excel.&lt;/p&gt;
+&lt;p&gt;After building data science organizations from scratch across multiple contexts - from federal agencies to major utilities - I&amp;rsquo;ve watched this disaster play out dozens of times. The good news? The fix isn&amp;rsquo;t complicated, but it requires abandoning some deeply held assumptions about what makes data science teams successful.&lt;/p&gt;
+&lt;h2 id=&#34;stop-trying-to-impress-your-peers&#34;&gt;&lt;a href=&#34;#stop-trying-to-impress-your-peers&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Stop Trying to Impress Your Peers
+&lt;/h2&gt;&lt;p&gt;Here&amp;rsquo;s the uncomfortable truth that took me years to fully accept: &lt;strong&gt;most business problems don&amp;rsquo;t need deep learning.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Our COO once asked for a retrospective analysis of how our vegetation management program was performing under weather-normalized conditions. Simple request, right?&lt;/p&gt;
+&lt;p&gt;Not when you&amp;rsquo;re a team that spends most of its time doing deep weather analytics work. We dive into storm impact modeling, complex outage correlations, sophisticated vegetation management algorithms. Our default mode is finding the most technically robust solution to every problem.&lt;/p&gt;
+&lt;p&gt;So naturally, when tasked with this retrospective, our gut reaction was to build something complex. Zero hour actuals, fine-grain resolution, multi-layered weather normalization models. The kind of analysis that would make meteorologists proud.&lt;/p&gt;
+&lt;p&gt;The team was already sketching out approaches that would take months to implement properly.&lt;/p&gt;
+&lt;p&gt;Then our summer intern spoke up.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;&amp;ldquo;What if we just pulled all the weather station data at 5-minute intervals and applied a transformation that aligns with the Beaufort scale?&amp;rdquo;&lt;/em&gt;&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The room went quiet. Not because it was wrong, but because it was so obviously right that none of us had thought of it. We&amp;rsquo;d been so conditioned to solve complex problems with complex solutions that we&amp;rsquo;d missed the straightforward approach sitting right there.&lt;/p&gt;
+&lt;p&gt;Her method worked perfectly for what we actually needed to deliver.&lt;/p&gt;
+&lt;p&gt;This moment crystallized something I&amp;rsquo;d been noticing throughout my decade of building and leading data science teams: our obsession with hiring only the most technically advanced people was creating more problems than it solved.&lt;/p&gt;
+&lt;p&gt;Before building anything, answer these three questions:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;What specific business decision does this improve?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;How will people&amp;rsquo;s daily work change?&lt;/strong&gt;&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;What&amp;rsquo;s the simplest solution that works?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Can&amp;rsquo;t answer clearly? You&amp;rsquo;re solving the wrong problem.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h2 id=&#34;the-people-problem-hint-its-not-about-finding-geniuses&#34;&gt;&lt;a href=&#34;#the-people-problem-hint-its-not-about-finding-geniuses&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The People Problem (Hint: It&amp;rsquo;s Not About Finding Geniuses)
+&lt;/h2&gt;&lt;p&gt;Most companies hire data science teams backwards. They chase the smartest person in the room instead of building balanced teams that can actually execute.&lt;/p&gt;
+&lt;p&gt;When I built our AI and Data Science Center of Excellence from the ground up, I quickly learned that getting buy-in across three operating companies meant every executive had their own take on what was important. The technical brilliance that impressed one division head meant nothing to another who just wanted his call center metrics to improve.&lt;/p&gt;
+&lt;h4 id=&#34;what-actually-works&#34;&gt;&lt;a href=&#34;#what-actually-works&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;What Actually Works:&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;A mix of skills, not just PhDs:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Technical depth&lt;/strong&gt; (someone who can build models)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Business sense&lt;/strong&gt; (someone who understands the company)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Product thinking&lt;/strong&gt; (someone who can scale solutions)&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Change management&lt;/strong&gt; (someone who can drive adoption)&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;what-fails-every-time&#34;&gt;&lt;a href=&#34;#what-fails-every-time&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;What Fails Every Time:&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;The genius trap:&lt;/strong&gt; Hiring one superstar who builds incredible models that nobody else can maintain or understand.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Academia mindset:&lt;/strong&gt; Teams that optimize for publication-worthy work instead of business-ready solutions.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;No operational thinking:&lt;/strong&gt; Building solutions that require completely rewriting how people work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Real talk: I&amp;rsquo;d rather have a decent data scientist who understands the business than a brilliant one who works in isolation. The former will build something like our GenAI Call Center Agent Assist that actually gets adopted and stays in production. The latter will build impressive demos that executives nod at and then forget about.&lt;/p&gt;
+&lt;h2 id=&#34;the-tech-debt-death-spiral&#34;&gt;&lt;a href=&#34;#the-tech-debt-death-spiral&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Tech Debt Death Spiral
+&lt;/h2&gt;&lt;p&gt;This is how most data science teams die:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Month 1:&lt;/strong&gt; Build amazing proof-of-concept&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Month 3:&lt;/strong&gt; Business wants more, so you hack together another model&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Month 6:&lt;/strong&gt; Everything&amp;rsquo;s held together with digital duct tape&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Month 12:&lt;/strong&gt; Takes three weeks to change a simple parameter&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Month 18:&lt;/strong&gt; Business loses faith in data science entirely&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Sound familiar?&lt;/p&gt;
+&lt;h4 id=&#34;how-to-avoid-the-trap&#34;&gt;&lt;a href=&#34;#how-to-avoid-the-trap&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;How to Avoid the Trap:&lt;/strong&gt;
+&lt;/h4&gt;&lt;p&gt;Build like an engineer, not a researcher:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Reproducible code from day one&lt;/li&gt;
+&lt;li&gt;Standardized data pipelines&lt;/li&gt;
+&lt;li&gt;Documentation that makes sense&lt;/li&gt;
+&lt;li&gt;Monitoring for when things break&lt;/li&gt;
+&lt;/ul&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Simple rule:&lt;/strong&gt; If you need a PhD to understand your model, it&amp;rsquo;s too complex to scale.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The best teams build boring, reliable solutions that work for years. Not flashy demos that break after a week.&lt;/p&gt;
+&lt;h2 id=&#34;what-impact-actually-means&#34;&gt;&lt;a href=&#34;#what-impact-actually-means&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What &amp;ldquo;Impact&amp;rdquo; Actually Means
+&lt;/h2&gt;&lt;p&gt;Stop measuring success by the number of models built. Start measuring business outcomes.&lt;/p&gt;
+&lt;p&gt;In utilities, this meant tracking whether our storm restoration optimization models actually reduced customer outage minutes during the next major weather event. Whether our customer segmentation drove measurable improvements in satisfaction scores. Whether our vegetation risk forecasting led to fewer tree-related outages.&lt;/p&gt;
+&lt;h4 id=&#34;good-metrics&#34;&gt;&lt;a href=&#34;#good-metrics&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Good Metrics:&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Revenue increased by X%&lt;/li&gt;
+&lt;li&gt;Costs reduced by $Y&lt;/li&gt;
+&lt;li&gt;Customer satisfaction up Z points&lt;/li&gt;
+&lt;li&gt;Manual processes eliminated&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;vanity-metrics&#34;&gt;&lt;a href=&#34;#vanity-metrics&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Vanity Metrics:&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Model accuracy improved&lt;/li&gt;
+&lt;li&gt;&amp;ldquo;Interesting insights&amp;rdquo; discovered&lt;/li&gt;
+&lt;li&gt;Papers published&lt;/li&gt;
+&lt;li&gt;Conference talks given&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The business doesn&amp;rsquo;t care how smart your algorithm is. They care if it makes them more money or saves them time.&lt;/p&gt;
+&lt;h2 id=&#34;team-structure-that-works&#34;&gt;&lt;a href=&#34;#team-structure-that-works&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Team Structure That Works
+&lt;/h2&gt;&lt;p&gt;There&amp;rsquo;s no perfect org chart, but here&amp;rsquo;s what I&amp;rsquo;ve learned works in practice:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;For Small Companies (Starting Out):&lt;/strong&gt;
+A centralized team of 3-5 people who do everything. Focus on proving value before worrying about structure.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;For Growing Companies:&lt;/strong&gt;
+A hub-and-spoke model: A central team for standards and tools, with embedded people in business units. This offers the best of both worlds.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;For Large Companies:&lt;/strong&gt;
+A federated approach: Data scientists are placed directly in business teams, with communities of practice for knowledge sharing.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The key insight: &lt;strong&gt;Data scientists need to be close to decision-makers,&lt;/strong&gt; not isolated in some analytics department. When I had to navigate compliance with PUC and NERC standards while building AI governance frameworks, that proximity to the actual business constraints was everything.&lt;/p&gt;
+&lt;h2 id=&#34;the-uncomfortable-realities&#34;&gt;&lt;a href=&#34;#the-uncomfortable-realities&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Uncomfortable Realities
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Most Data Science Work Isn&amp;rsquo;t Sexy:&lt;/strong&gt; You&amp;rsquo;ll spend more time cleaning data and building dashboards than training neural networks. Embrace it.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Change Management is Half the Job:&lt;/strong&gt; The best model in the world is worthless if people don&amp;rsquo;t change how they work. Plan for adoption from day one.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Simple Solutions Often Win:&lt;/strong&gt; That basic rule-based system might outperform your machine learning model when you factor in maintenance and explainability.&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Technical Debt Kills Teams:&lt;/strong&gt; I&amp;rsquo;ve seen brilliant teams become completely ineffective because they couldn&amp;rsquo;t maintain their own work.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;what-success-actually-looks-like&#34;&gt;&lt;a href=&#34;#what-success-actually-looks-like&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Success Actually Looks Like
+&lt;/h2&gt;&lt;h4 id=&#34;before-transformation&#34;&gt;&lt;a href=&#34;#before-transformation&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;Before Transformation:&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Impressive technical work gathering dust&lt;/li&gt;
+&lt;li&gt;Business making decisions without data team input&lt;/li&gt;
+&lt;li&gt;Executives asking &amp;ldquo;what does the data science team &lt;em&gt;actually&lt;/em&gt; do?&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Constant budget justification&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;after-transformation&#34;&gt;&lt;a href=&#34;#after-transformation&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;After Transformation:&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Models in production driving daily decisions&lt;/li&gt;
+&lt;li&gt;Business leaders fighting for data science resources&lt;/li&gt;
+&lt;li&gt;Clear ROI on every major project&lt;/li&gt;
+&lt;li&gt;Data science informing company strategy&lt;/li&gt;
+&lt;/ul&gt;
 &lt;hr&gt;
-&lt;p&gt;&lt;em&gt;The best data science isn&amp;rsquo;t the most complex - it&amp;rsquo;s the most useful. Focus on impact, not sophistication.&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-core-principle-to-carry-forward&#34;&gt;&lt;a href=&#34;#the-core-principle-to-carry-forward&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Core Principle to Carry Forward
+&lt;/h3&gt;&lt;p&gt;High-impact data science teams don&amp;rsquo;t just build models - &lt;strong&gt;they change how businesses operate.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Focus on business problems worth solving, simple solutions that scale, teams that can execute rather than just research, and measurable business outcomes. Avoid complexity for complexity&amp;rsquo;s sake, technical debt accumulation, working in isolation from the business, and vanity metrics.&lt;/p&gt;
+&lt;p&gt;The difference between successful and failed data science investments usually comes down to &lt;strong&gt;execution, not intelligence.&lt;/strong&gt; Build teams that ship useful solutions, not impressive science projects.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;strong&gt;Reality check:&lt;/strong&gt; If your data science team has been around for over a year and executives still don&amp;rsquo;t understand their value, the problem isn&amp;rsquo;t communication - it&amp;rsquo;s alignment.&lt;/p&gt;&lt;/blockquote&gt;
 </description>
         </item>
         

@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Homelab on My Blog</title>
+        <title>Homelab on The Patch Panel</title>
         <link>http://192.168.100.63:1313/categories/homelab/</link>
-        <description>Recent content in Homelab on My Blog</description>
+        <description>Recent content in Homelab on The Patch Panel</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Wed, 14 May 2025 13:00:00 -0400</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/homelab/index.xml" rel="self" type="application/rss+xml" /><item>
+        <lastBuildDate>Wed, 20 Nov 2024 12:00:00 -0500</lastBuildDate><atom:link href="http://192.168.100.63:1313/categories/homelab/index.xml" rel="self" type="application/rss+xml" /><item>
         <title>Building a Robust Access Layer for Self-Hosted Services</title>
         <link>http://192.168.100.63:1313/projects/tunnel-setup/</link>
-        <pubDate>Wed, 14 May 2025 12:00:00 -0500</pubDate>
+        <pubDate>Wed, 20 Nov 2024 12:00:00 -0500</pubDate>
         
         <guid>http://192.168.100.63:1313/projects/tunnel-setup/</guid>
         <description>&lt;img src="http://192.168.100.63:1313/img/oneoff/authelia1.png" alt="Featured image of post Building a Robust Access Layer for Self-Hosted Services" /&gt;&lt;h1 id=&#34;making-my-self-hosted-services-actually-accessible-without-going-insane&#34;&gt;&lt;a href=&#34;#making-my-self-hosted-services-actually-accessible-without-going-insane&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Making My Self-Hosted Services Actually Accessible (Without Going Insane)
@@ -146,10 +146,10 @@ Tandoor Service (on another VLAN)
         <item>
         <title>From Torrent to Library: Automating TV, Movies, and Audiobooks with Gluetun, qBittorrent, and arr</title>
         <link>http://192.168.100.63:1313/projects/torrent-setup/</link>
-        <pubDate>Wed, 14 May 2025 13:00:00 -0400</pubDate>
+        <pubDate>Tue, 19 Nov 2024 13:00:00 -0400</pubDate>
         
         <guid>http://192.168.100.63:1313/projects/torrent-setup/</guid>
-        <description>&lt;hr&gt;
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/arr.png" alt="Featured image of post From Torrent to Library: Automating TV, Movies, and Audiobooks with Gluetun, qBittorrent, and arr" /&gt;&lt;hr&gt;
 &lt;h1 id=&#34;building-my-perfect-media-automation-pipeline&#34;&gt;&lt;a href=&#34;#building-my-perfect-media-automation-pipeline&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Building My Perfect Media Automation Pipeline
 &lt;/h1&gt;&lt;p&gt;&lt;em&gt;How I stopped manually managing downloads and built a self-running media server&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;Posted: May 14, 2025 | ~11 minute read&lt;/p&gt;
@@ -300,6 +300,324 @@ Tandoor Service (on another VLAN)
 &lt;p&gt;Overall though, this has been one of my more successful homelab projects. It solves a real problem and actually stays working once you get it configured properly.&lt;/p&gt;
 &lt;hr&gt;
 &lt;p&gt;&lt;em&gt;If you&amp;rsquo;re curious about specific configuration details or run into issues setting this up, I&amp;rsquo;ve got the full Docker Compose files and notes in my GitHub repo. Just search for my username and &amp;ldquo;media-automation&amp;rdquo; or something similar.&lt;/em&gt;&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Self-Hosted Series: Tandoor</title>
+        <link>http://192.168.100.63:1313/projects/tandoor/</link>
+        <pubDate>Mon, 28 Oct 2024 14:30:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/projects/tandoor/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/tandoor.png" alt="Featured image of post Self-Hosted Series: Tandoor" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Tandoor Recipes is an open-source, self-hosted recipe manager that solves the scattered bookmark problem&lt;/li&gt;
+&lt;li&gt;Features include OCR for digitizing old cookbooks, meal planning tools, and automatic grocery list generation&lt;/li&gt;
+&lt;li&gt;Docker deployment on Proxmox with external PostgreSQL provides a robust, backup-friendly architecture&lt;/li&gt;
+&lt;li&gt;After months of use, it&amp;rsquo;s genuinely transformed meal planning and grocery shopping workflows&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;finally-getting-my-recipe-chaos-under-control&#34;&gt;&lt;a href=&#34;#finally-getting-my-recipe-chaos-under-control&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Finally Getting My Recipe Chaos Under Control
+&lt;/h3&gt;&lt;p&gt;The last time I tried to find that incredible pasta sauce recipe my friend shared, I spent twenty minutes digging through browser bookmarks, photo albums, and random text files. That moment of frustration was the final straw in my ongoing battle with recipe organization chaos.&lt;/p&gt;
+&lt;p&gt;My kitchen strategy had devolved into a digital disaster zone. Screenshots buried three layers deep in my camera roll, bookmarks scattered across browsers, handwritten notes shoved in drawers, and the occasional recipe texted to me that vanished into message history. Every attempt at organization failed because the solutions were either too expensive, too limiting, or - my biggest fear - destined to disappear when the company pivoted or shut down.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s when I discovered Tandoor Recipes, and it&amp;rsquo;s been a genuine revelation.&lt;/p&gt;
+&lt;h3 id=&#34;why-self-hosting-makes-sense-here&#34;&gt;&lt;a href=&#34;#why-self-hosting-makes-sense-here&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why Self-Hosting Makes Sense Here
+&lt;/h3&gt;&lt;p&gt;The conventional wisdom says just use whatever recipe app has the best reviews. But after wrestling with this problem across multiple failed attempts, I realized the fundamental issue wasn&amp;rsquo;t the interface - it was control.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;My data stays exactly where I want it.&lt;/strong&gt; I&amp;rsquo;ve been through the Google Reader shutdown, the endless parade of acquired startups, and the slow feature creep of subscription models. Not happening again with something as personal as my recipe collection.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Zero algorithmic interference.&lt;/strong&gt; I don&amp;rsquo;t need machine learning suggesting recipes based on my &amp;ldquo;cooking personality profile.&amp;rdquo; I need to find my go-to chicken tikka masala when I&amp;rsquo;m standing in the grocery store at 6 PM on a Wednesday.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Real customization that actually works.&lt;/strong&gt; Custom categories that map to how I actually cook. Tags that make sense to my workflow. A interface that doesn&amp;rsquo;t assume I want to scroll through food photography when I just need the ingredient list.&lt;/p&gt;
+&lt;p&gt;The built-in meal planning and grocery list generation turned out to be the killer features I didn&amp;rsquo;t know I needed. But the OCR capability for digitizing old cookbook pages? That&amp;rsquo;s pure magic.&lt;/p&gt;
+&lt;h3 id=&#34;the-technical-setup-that-actually-works&#34;&gt;&lt;a href=&#34;#the-technical-setup-that-actually-works&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Technical Setup That Actually Works
+&lt;/h3&gt;&lt;p&gt;My homelab runs on a Proxmox cluster, with most applications deployed in a dedicated Docker VM that has plenty of resources allocated. PostgreSQL lives in its own LXC container because centralized database management makes backups and maintenance infinitely easier.&lt;/p&gt;
+&lt;p&gt;This architecture has proven rock-solid for Tandoor. The separation means database maintenance doesn&amp;rsquo;t impact the application, and I can snapshot the entire setup independently.&lt;/p&gt;
+&lt;p&gt;Here&amp;rsquo;s the structure that&amp;rsquo;s been working flawlessly:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/opt/docker/tandoor/          # Application files
+/mnt/r430/tandoor/recipes/    # Recipe database
+/mnt/r430/tandoor/mediafiles/ # Recipe photos
+/mnt/r430/tandoor/staticfiles/ # Static assets
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;The Docker configuration is straightforward but robust:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;web&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;vabene1111/recipes:latest&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;container_name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;tandoor_web&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;restart&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;unless-stopped&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;volumes&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/recipes:/opt/recipes&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/mediafiles:/opt/recipes/mediafiles&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/staticfiles:/opt/recipes/staticfiles&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;env_file&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;.env&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;8080:8000&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;networks&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;tandoor-net&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;networks&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;tandoor-net&lt;/span&gt;:
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;driver&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;bridge&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Environment configuration handles the database connection and Django security settings:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Database connection&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;POSTGRES_HOST&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;your-postgres-ip
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;POSTGRES_PORT&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;your-port
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;POSTGRES_USER&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;your-username
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;POSTGRES_PASSWORD&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;your-secure-password
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;POSTGRES_DB&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;your-postgres-db
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Django settings&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;SECRET_KEY&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;generate-a-proper-secret-key
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;DEBUG&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;0&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ALLOWED_HOSTS&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;*
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;TZ&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;America/New_York
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;em&gt;Pro tip: Actually generate a real secret key. Django&amp;rsquo;s security depends on it, and &amp;ldquo;password123&amp;rdquo; isn&amp;rsquo;t going to cut it.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Database setup in the PostgreSQL LXC is clean and minimal:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; dbname;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;USER&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;WITH&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ENCRYPTED&lt;/span&gt; PASSWORD &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;your-secure-password&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ALL&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIVILEGES&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; dbname &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; username;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; dbname &lt;span style=&#34;color:#66d9ef&#34;&gt;OWNER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; username;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Configure PostgreSQL to accept connections from the Docker host network, restart the service, and you&amp;rsquo;re ready to deploy.&lt;/p&gt;
+&lt;h3 id=&#34;living-with-tandoor-day-to-day&#34;&gt;&lt;a href=&#34;#living-with-tandoor-day-to-day&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Living With Tandoor Day-to-Day
+&lt;/h3&gt;&lt;p&gt;After months of actual use, this setup has fundamentally changed how I approach cooking and meal planning. The web interface is responsive and intuitive - I can quickly add recipes, organize them into logical categories, and actually find things when I need them.&lt;/p&gt;
+&lt;p&gt;Recipe import works seamlessly with most cooking websites. Copy the URL, paste it into Tandoor, and it automatically extracts ingredients, instructions, and photos. The parsing accuracy is impressive, though I occasionally need to clean up formatting quirks from particularly complex recipe sites.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The OCR feature deserves special recognition.&lt;/strong&gt; I&amp;rsquo;ve been systematically digitizing recipes from family cookbooks that have been collecting dust for years. Take a photo of the page, and Tandoor extracts the text with remarkable accuracy. It&amp;rsquo;s not perfect, but it beats manually typing every ingredient and instruction.&lt;/p&gt;
+&lt;p&gt;Meal planning integration has genuinely improved my grocery shopping efficiency. Plan out the week&amp;rsquo;s dinners, and Tandoor automatically generates a consolidated shopping list organized by ingredient type. No more wandering the aisles trying to remember if I already have cumin at home.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Storage footprint remains surprisingly light.&lt;/strong&gt; Even with several hundred recipes and associated photos, the entire setup uses less than 2GB of space. Database backups are quick, and the whole system restarts in seconds during maintenance windows.&lt;/p&gt;
+&lt;h3 id=&#34;why-this-actually-matters&#34;&gt;&lt;a href=&#34;#why-this-actually-matters&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This Actually Matters
+&lt;/h3&gt;&lt;p&gt;The real test of any self-hosted solution isn&amp;rsquo;t the initial setup excitement - it&amp;rsquo;s whether you&amp;rsquo;re still using it six months later. Tandoor has passed that test definitively.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;It works the way I think about cooking&lt;/em&gt;, not the way some product manager imagined I should think about cooking. Custom categories map to my actual meal rotation. Tags reflect ingredients I commonly substitute or dietary restrictions that matter to my household. The interface gets out of the way and lets me focus on the recipes themselves.&lt;/p&gt;
+&lt;p&gt;The peace of mind factor can&amp;rsquo;t be overstated. My recipe collection is backed up alongside my other important data, version controlled, and completely under my control. No subscription fees, no feature deprecation, no sudden policy changes that break my workflow.&lt;/p&gt;
+&lt;p&gt;Sure, there are no social features for sharing recipes with friends or browsing community collections. But honestly, that feels like a benefit rather than a limitation. I wanted a tool, not a social network.&lt;/p&gt;
+&lt;h3 id=&#34;the-path-forward&#34;&gt;&lt;a href=&#34;#the-path-forward&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Path Forward
+&lt;/h3&gt;&lt;p&gt;I&amp;rsquo;m still refining the deployment. Adding it to my reverse proxy setup for external access is on the roadmap, and I want to implement automated database backups as part of my broader infrastructure maintenance.&lt;/p&gt;
+&lt;p&gt;The mobile app development looks promising for those moments when you&amp;rsquo;re actually standing in the kitchen with flour on your hands trying to remember if the recipe called for one teaspoon or one tablespoon of vanilla.&lt;/p&gt;
+&lt;p&gt;For now, the web interface works perfectly on mobile browsers, though a native app would provide a smoother experience for recipe viewing while cooking.&lt;/p&gt;
+&lt;h3 id=&#34;worth-the-investment&#34;&gt;&lt;a href=&#34;#worth-the-investment&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Worth the Investment?
+&lt;/h3&gt;&lt;p&gt;If you&amp;rsquo;re already running a homelab with Docker capability, Tandoor integrates seamlessly into your existing infrastructure. The initial setup investment pays dividends immediately through improved meal planning efficiency and the genuine satisfaction of having a recipe management system that works exactly how you want it to.&lt;/p&gt;
+&lt;p&gt;The bigger question is whether self-hosting makes sense for your particular situation. If you&amp;rsquo;re comfortable with the technical requirements and value data ownership over convenience features, Tandoor represents exactly the kind of thoughtful, well-executed open source project that makes self-hosting worthwhile.&lt;/p&gt;
+&lt;p&gt;My recipe chaos is officially under control. Now I just need to work on actually cooking all these recipes I&amp;rsquo;ve been meticulously organizing.&lt;/p&gt;
+</description>
+        </item>
+        <item>
+        <title>Building a Production-Ready Nextcloud Setup: From LXC to AI Integration</title>
+        <link>http://192.168.100.63:1313/projects/nextcloud/</link>
+        <pubDate>Mon, 07 Oct 2024 10:45:00 -0400</pubDate>
+        
+        <guid>http://192.168.100.63:1313/projects/nextcloud/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/Nextcloud.png" alt="Featured image of post Building a Production-Ready Nextcloud Setup: From LXC to AI Integration" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Split Nextcloud architecture across multiple containers for better performance and scalability&lt;/li&gt;
+&lt;li&gt;Use PostgreSQL over SQLite/MySQL for better concurrent handling and JSON performance&lt;/li&gt;
+&lt;li&gt;Implement proper caching with Redis and APCu to dramatically improve response times&lt;/li&gt;
+&lt;li&gt;Integrate with AI document processing pipeline using Paperless-NGX and local LLM infrastructure&lt;/li&gt;
+&lt;li&gt;Navigate LXC permission mapping and storage mounting for reliable operation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-problem-with-most-nextcloud-setups&#34;&gt;&lt;a href=&#34;#the-problem-with-most-nextcloud-setups&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Problem with Most Nextcloud Setups
+&lt;/h3&gt;&lt;p&gt;After running a janky Nextcloud install for way too long, I finally sat down to build something that wouldn&amp;rsquo;t embarrass me when sharing files. Most guides throw everything on one machine, use SQLite, and wonder why performance is terrible.&lt;/p&gt;
+&lt;p&gt;Time for a complete rebuild - one that would scale, perform well, and integrate with my broader AI document processing workflow.&lt;/p&gt;
+&lt;h3 id=&#34;architecture-splitting-components-smart&#34;&gt;&lt;a href=&#34;#architecture-splitting-components-smart&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Architecture: Splitting Components Smart
+&lt;/h3&gt;&lt;p&gt;The core insight was realizing that different components have completely different performance profiles. The Nextcloud application itself needs to be snappy for web requests. The database needs to handle concurrent operations without choking. But bulk file storage? A vacation video from three years ago doesn&amp;rsquo;t need NVMe speeds.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;My R430 Proxmox setup handles this with separation:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Nextcloud app lives on SSD&lt;/strong&gt; - Core application in LXC container on local storage for responsive UI&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;PostgreSQL gets its own container&lt;/strong&gt; - Dedicated database server with proper resources&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Bulk storage on the R730XD&lt;/strong&gt; - User files live on Unraid NAS via NFS mounts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Caching layer in Redis&lt;/strong&gt; - File locking and performance optimization&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This approach gives me fast UI response times without breaking the bank on storage costs, while setting up integration points for my AI processing pipeline.&lt;/p&gt;
+&lt;h3 id=&#34;the-lxc-foundation&#34;&gt;&lt;a href=&#34;#the-lxc-foundation&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The LXC Foundation
+&lt;/h3&gt;&lt;p&gt;Instead of building everything from scratch, I started with the TurnKey Nextcloud template. It comes pre-configured with Apache, PHP, Redis, and security hardening - no point reinventing the wheel.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pct create &lt;span style=&#34;color:#ae81ff&#34;&gt;101&lt;/span&gt; local:vztmpl/turnkey-nextcloud-18.0-buster-amd64.tar.gz &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  --storage local-zfs &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  --hostname NextCloud &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  --memory &lt;span style=&#34;color:#ae81ff&#34;&gt;8000&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;\
+&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;&lt;/span&gt;  --cores &lt;span style=&#34;color:#ae81ff&#34;&gt;4&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pct start &lt;span style=&#34;color:#ae81ff&#34;&gt;101&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;I gave it 8GB RAM and 4 cores because Nextcloud actually benefits from having resources available for caching and concurrent operations. Storage performance matters more than most people realize.&lt;/p&gt;
+&lt;h3 id=&#34;database-postgresql-over-everything&#34;&gt;&lt;a href=&#34;#database-postgresql-over-everything&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Database: PostgreSQL Over Everything
+&lt;/h3&gt;&lt;p&gt;This is where most setups go wrong. SQLite is fine for testing, but if you want decent performance with multiple devices syncing, you need a proper database server.&lt;/p&gt;
+&lt;p&gt;I went with PostgreSQL in its own LXC container for several reasons:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Better concurrency handling&lt;/strong&gt; - MVCC system handles simultaneous file operations more gracefully&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Superior JSON performance&lt;/strong&gt; - Nextcloud stores tons of metadata, and PostgreSQL&amp;rsquo;s JSON operations are genuinely faster&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Personal reliability&lt;/strong&gt; - I&amp;rsquo;ve had fewer weird issues with PostgreSQL over the years&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Setting up the database server:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt update &lt;span style=&#34;color:#f92672&#34;&gt;&amp;amp;&amp;amp;&lt;/span&gt; apt install -y postgresql
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl enable --now postgresql
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo -u postgres psql
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CREATE DATABASE nextcloud;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;CREATE USER nextclouduser WITH PASSWORD &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;your-secure-password&amp;#39;&lt;/span&gt;;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ALTER DATABASE nextcloud OWNER TO nextclouduser;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#ae81ff&#34;&gt;\q&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;storage-strategy-nfs-integration-with-unraid&#34;&gt;&lt;a href=&#34;#storage-strategy-nfs-integration-with-unraid&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Storage Strategy: NFS Integration with Unraid
+&lt;/h3&gt;&lt;p&gt;Here&amp;rsquo;s where the R730XD Unraid server comes into play. Instead of local storage eating up the Proxmox node, I mount NFS shares from the main NAS.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;On the Unraid side:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Create dedicated share for Nextcloud data&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Export via NFS with proper permissions&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;&lt;strong&gt;Mounting in the LXC container:&lt;/strong&gt;&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Edit container config&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;nano /etc/pve/lxc/101.conf
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Add NFS mount&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;mp0: /mnt/unraid-nextcloud,mp&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;/mnt/nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;the-permissions-dance-lxc-reality-check&#34;&gt;&lt;a href=&#34;#the-permissions-dance-lxc-reality-check&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Permissions Dance (LXC Reality Check)
+&lt;/h3&gt;&lt;p&gt;This is where unprivileged LXC containers get annoying. The UIDs don&amp;rsquo;t match between host and container, so you have to manually map permissions.&lt;/p&gt;
+&lt;p&gt;The magic numbers for unprivileged containers:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Container UID 33 (www-data) maps to host UID 101033&lt;/li&gt;
+&lt;li&gt;Container GID 33 (www-data) maps to host GID 101033&lt;/li&gt;
+&lt;/ul&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# On Proxmox host&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;chown -R 101033:101033 /mnt/unraid-nextcloud
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Verify the mapping worked&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;ls -la /mnt/unraid-nextcloud/
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This took me way too long to figure out the first time. The container starts, everything looks fine, then you get permission errors when Nextcloud tries to write files.&lt;/p&gt;
+&lt;h3 id=&#34;performance-caching-is-not-optional&#34;&gt;&lt;a href=&#34;#performance-caching-is-not-optional&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Performance: Caching Is Not Optional
+&lt;/h3&gt;&lt;p&gt;Default Nextcloud feels sluggish because it hits the database constantly. The solution is proper caching at multiple levels:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;apt install -y redis-server php-redis php-apcu
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl restart apache2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Configuration in &lt;code&gt;/var/www/nextcloud/config/config.php&lt;/code&gt;:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-php&#34; data-lang=&#34;php&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;memcache.local&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\OC\Memcache\APCu&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;memcache.locking&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;\OC\Memcache\Redis&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;redis&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;array&lt;/span&gt;(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;host&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;localhost&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;port&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;6379&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;timeout&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&amp;gt;&lt;/span&gt; &lt;span style=&#34;color:#ae81ff&#34;&gt;0.0&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;),
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The difference is honestly dramatic. File operations that used to take 5-10 seconds now happen almost instantly. This is the pivot point where the whole system transforms from &amp;ldquo;usable&amp;rdquo; to &amp;ldquo;professional.&amp;rdquo;&lt;/p&gt;
+&lt;h3 id=&#34;moving-data-and-final-configuration&#34;&gt;&lt;a href=&#34;#moving-data-and-final-configuration&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Moving Data and Final Configuration
+&lt;/h3&gt;&lt;p&gt;With storage mounted and permissions sorted, time to migrate the data directory:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl stop apache2
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rsync -av /var/www/nextcloud/data/ /mnt/nextcloud/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Update config.php&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;datadirectory&amp;#39;&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&amp;gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;/mnt/nextcloud&amp;#39;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;systemctl restart apache2
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Final LXC configuration:&lt;/p&gt;
+&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;arch: amd64
+cores: 4
+features: nesting=1
+hostname: NextCloud
+memory: 8000
+mp0: /mnt/unraid-nextcloud,mp=/mnt/nextcloud
+net0: name=eth0,bridge=vmbr0,firewall=1,ip=192.168.1.100/24,type=veth
+ostype: debian
+rootfs: local-zfs:subvol-101-disk-0,size=8G
+swap: 8000
+unprivileged: 1
+&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;verification-and-optimization&#34;&gt;&lt;a href=&#34;#verification-and-optimization&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Verification and Optimization
+&lt;/h3&gt;&lt;p&gt;After setup, verify everything is working properly:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Check status&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;su - www-data -s /bin/bash -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;php /var/www/nextcloud/occ status&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Scan for missing files&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;su - www-data -s /bin/bash -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;php /var/www/nextcloud/occ files:scan --all&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Add missing database indices (crucial for performance)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;su - www-data -s /bin/bash -c &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;php /var/www/nextcloud/occ db:add-missing-indices&amp;#39;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;That last command is critical - Nextcloud sometimes misses database indices during setup, and they make a huge difference for query performance.&lt;/p&gt;
+&lt;h3 id=&#34;integration-with-ai-document-processing-pipeline&#34;&gt;&lt;a href=&#34;#integration-with-ai-document-processing-pipeline&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Integration with AI Document Processing Pipeline
+&lt;/h3&gt;&lt;p&gt;This is where things get interesting. The Nextcloud setup I just described isn&amp;rsquo;t just file storage - it&amp;rsquo;s part of a larger AI-powered document processing workflow.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;The broader architecture includes:&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Dual RTX 3090 AI box&lt;/strong&gt; running &lt;code&gt;llama.cpp&lt;/code&gt; for local LLM inference&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Paperless-NGX&lt;/strong&gt; for document OCR and metadata extraction&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Vector databases&lt;/strong&gt; on the R430 for RAG pipelines&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;LibreChat&lt;/strong&gt; as frontend for AI interactions&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;document-processing-workflow&#34;&gt;&lt;a href=&#34;#document-processing-workflow&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Document Processing Workflow
+&lt;/h3&gt;&lt;p&gt;Documents flow through this pipeline:&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;strong&gt;Upload to Nextcloud&lt;/strong&gt; - Files arrive via web interface or sync clients&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Auto-detection&lt;/strong&gt; - Paperless-NGX monitors Nextcloud directories via inotify&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;OCR Processing&lt;/strong&gt; - Documents get OCR&amp;rsquo;d and full-text indexed&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI Metadata Extraction&lt;/strong&gt; - Local LLMs extract structured metadata, tags, and summaries&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Storage Integration&lt;/strong&gt; - Processed documents return to Nextcloud with enriched metadata&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;The technical implementation uses shared storage between containers:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Paperless-NGX container mounts same NFS shares&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Shared directory structure:&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;/mnt/nextcloud/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;├── documents/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── incoming/     &lt;span style=&#34;color:#75715e&#34;&gt;# Paperless monitors this&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   ├── processed/    &lt;span style=&#34;color:#75715e&#34;&gt;# AI-enriched documents&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;│   └── archive/      &lt;span style=&#34;color:#75715e&#34;&gt;# Long-term storage&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;ai-processing-configuration&#34;&gt;&lt;a href=&#34;#ai-processing-configuration&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Processing Configuration
+&lt;/h3&gt;&lt;p&gt;The LLM inference happens on the dual RTX 3090 box, with models accessed via API:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Example AI metadata extraction&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; requests
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;extract_metadata&lt;/span&gt;(document_path):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    payload &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; {
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;model&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;llama-3.1-8b&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;prompt&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;f&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;Extract key metadata from: &lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;{&lt;/span&gt;document_text&lt;span style=&#34;color:#e6db74&#34;&gt;}&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;max_tokens&amp;#34;&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;500&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    }
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    response &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; requests&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;post(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;http://ai-box:8080/v1/completions&amp;#34;&lt;/span&gt;, json&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;payload)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#66d9ef&#34;&gt;return&lt;/span&gt; response&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;json()
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;The extracted metadata gets written back to Nextcloud as extended attributes and indexed for search.&lt;/p&gt;
+&lt;h3 id=&#34;vector-database-integration&#34;&gt;&lt;a href=&#34;#vector-database-integration&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Vector Database Integration
+&lt;/h3&gt;&lt;p&gt;For RAG capabilities, documents get embedded and stored in a vector database running on the R430:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-python&#34; data-lang=&#34;python&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Document embedding pipeline&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;from&lt;/span&gt; sentence_transformers &lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; SentenceTransformer
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;import&lt;/span&gt; qdrant_client
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;model &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; SentenceTransformer(&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;all-MiniLM-L6-v2&amp;#39;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;client &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; qdrant_client&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;QdrantClient(host&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;r430-vector-db&amp;#34;&lt;/span&gt;)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;def&lt;/span&gt; &lt;span style=&#34;color:#a6e22e&#34;&gt;embed_document&lt;/span&gt;(doc_text, doc_id):
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    embedding &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; model&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;encode(doc_text)
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    client&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;upsert(
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        collection_name&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;documents&amp;#34;&lt;/span&gt;,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        points&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;[{
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;id&amp;#34;&lt;/span&gt;: doc_id,
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;vector&amp;#34;&lt;/span&gt;: embedding&lt;span style=&#34;color:#f92672&#34;&gt;.&lt;/span&gt;tolist(),
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;            &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;payload&amp;#34;&lt;/span&gt;: {&lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;text&amp;#34;&lt;/span&gt;: doc_text, &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;nextcloud_path&amp;#34;&lt;/span&gt;: doc_path}
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;        }]
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    )
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;This enables semantic search across all documents via LibreChat or custom interfaces.&lt;/p&gt;
+&lt;h3 id=&#34;network-integration-and-security&#34;&gt;&lt;a href=&#34;#network-integration-and-security&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Network Integration and Security
+&lt;/h3&gt;&lt;p&gt;The whole setup operates within my VLAN-segmented network:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Work VLAN&lt;/strong&gt; - Nextcloud accessible from work devices&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Personal VLAN&lt;/strong&gt; - Home devices and mobile sync&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Dirty/Test VLAN&lt;/strong&gt; - AI processing and development work&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;DMZ&lt;/strong&gt; - External access via Cloudflare tunnels&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Traffic routing through OPNsense with proper firewall rules between VLANs. The Brocade ICX6450 handles Layer 2 switching with 10GbE uplinks between critical services.&lt;/p&gt;
+&lt;h3 id=&#34;backup-strategy&#34;&gt;&lt;a href=&#34;#backup-strategy&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Backup Strategy
+&lt;/h3&gt;&lt;p&gt;With this much integration, backup becomes critical:&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Automated backup script&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;#!/bin/bash&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;rsync -av /mnt/nextcloud/ /mnt/r730-backup/nextcloud/
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;pg_dump -h postgres-server nextcloud | gzip &amp;gt; /mnt/r730-backup/nextcloud-db-&lt;span style=&#34;color:#66d9ef&#34;&gt;$(&lt;/span&gt;date +%Y%m%d&lt;span style=&#34;color:#66d9ef&#34;&gt;)&lt;/span&gt;.sql.gz
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Vector database backup&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker exec qdrant-container /qdrant/backup.sh
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Kopia handles the actual backup execution with custom repository paths across the infrastructure.&lt;/p&gt;
+&lt;h3 id=&#34;performance-results&#34;&gt;&lt;a href=&#34;#performance-results&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Performance Results
+&lt;/h3&gt;&lt;p&gt;After several months of operation, the numbers speak for themselves:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;Web interface response&lt;/strong&gt; - Sub-second page loads&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;File sync performance&lt;/strong&gt; - 50MB+ files transfer smoothly&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Concurrent users&lt;/strong&gt; - Multiple devices syncing without conflicts&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;AI processing&lt;/strong&gt; - Documents processed and metadata extracted within minutes of upload&lt;/li&gt;
+&lt;li&gt;&lt;strong&gt;Search performance&lt;/strong&gt; - Semantic search across 10k+ documents in under 200ms&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id=&#34;what-id-change&#34;&gt;&lt;a href=&#34;#what-id-change&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What I&amp;rsquo;d Change
+&lt;/h3&gt;&lt;p&gt;If I were starting over, a few things I&amp;rsquo;d do differently:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Database clustering&lt;/strong&gt; - PostgreSQL works great, but for redundancy I&amp;rsquo;d set up a primary/replica configuration across multiple LXC containers.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Dedicated AI processing queue&lt;/strong&gt; - Instead of direct monitoring, I&amp;rsquo;d implement a proper job queue (Redis/Celery) for document processing tasks.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Object storage backend&lt;/strong&gt; - Consider MinIO or similar for the bulk storage layer instead of NFS mounts.&lt;/p&gt;
+&lt;h3 id=&#34;the-bigger-picture&#34;&gt;&lt;a href=&#34;#the-bigger-picture&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bigger Picture
+&lt;/h3&gt;&lt;p&gt;This isn&amp;rsquo;t just about running Nextcloud - it&amp;rsquo;s about building a foundation for AI-augmented personal data management. The combination of reliable file storage, local AI processing, and semantic search creates something genuinely useful.&lt;/p&gt;
+&lt;p&gt;The technical complexity is higher than a basic Nextcloud install, but the capabilities justify the effort. When you can upload a document and immediately search across all your files using natural language queries, or have AI automatically tag and categorize everything - that&amp;rsquo;s when self-hosting becomes genuinely superior to commercial alternatives.&lt;/p&gt;
+&lt;p&gt;My hope is that this provides a new lens for your own infrastructure projects. The conversation doesn&amp;rsquo;t end here - I&amp;rsquo;m keen to hear how others are integrating AI capabilities into their self-hosted setups.&lt;/p&gt;
 </description>
         </item>
         

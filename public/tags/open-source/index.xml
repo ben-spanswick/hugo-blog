@@ -1,111 +1,76 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-        <title>Open Source on My Blog</title>
+        <title>Open Source on The Patch Panel</title>
         <link>http://192.168.100.63:1313/tags/open-source/</link>
-        <description>Recent content in Open Source on My Blog</description>
+        <description>Recent content in Open Source on The Patch Panel</description>
         <generator>Hugo -- gohugo.io</generator>
         <language>en-us</language>
-        <lastBuildDate>Sat, 15 Mar 2025 00:00:00 +0000</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/open-source/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Self-Hosted Series: Tandoor</title>
-        <link>http://192.168.100.63:1313/projects/tandoor-recipe-management/</link>
-        <pubDate>Sat, 15 Mar 2025 00:00:00 +0000</pubDate>
+        <lastBuildDate>Thu, 15 May 2025 14:30:00 -0400</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/open-source/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>The Efficiency Revolution: When Smaller AI Models Start Outpunching Their Weight Class</title>
+        <link>http://192.168.100.63:1313/musings/gemma3-ai/</link>
+        <pubDate>Thu, 15 May 2025 14:30:00 -0400</pubDate>
         
-        <guid>http://192.168.100.63:1313/projects/tandoor-recipe-management/</guid>
-        <description>&lt;h1 id=&#34;finally-getting-my-recipe-chaos-under-control-with-tandoor&#34;&gt;&lt;a href=&#34;#finally-getting-my-recipe-chaos-under-control-with-tandoor&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Finally Getting My Recipe Chaos Under Control with Tandoor
-&lt;/h1&gt;&lt;p&gt;&lt;em&gt;How I stopped losing track of great recipes and built my own digital cookbook&lt;/em&gt;&lt;/p&gt;
+        <guid>http://192.168.100.63:1313/musings/gemma3-ai/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/gemma.png" alt="Featured image of post The Efficiency Revolution: When Smaller AI Models Start Outpunching Their Weight Class" /&gt;&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;h4 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;&lt;strong&gt;AI Summary&lt;/strong&gt;
+&lt;/h4&gt;&lt;ul&gt;
+&lt;li&gt;Small, efficient AI models like &lt;a class=&#34;link&#34; href=&#34;https://ai.google.dev/gemma/docs&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Google&amp;rsquo;s Gemma&lt;/a&gt; and &lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepSeek-Coder-V2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DeepSeek-Coder-V2&lt;/a&gt; are delivering performance that rivals much larger systems.&lt;/li&gt;
+&lt;li&gt;This efficiency breakthrough dramatically lowers the barrier to entry for AI development, making powerful models accessible to smaller teams and individual developers.&lt;/li&gt;
+&lt;li&gt;The shift could trigger a fundamental change in AI competition—from raw parameter count to performance-per-watt optimization.&lt;/li&gt;
+&lt;li&gt;Real-world adoption and production reliability will ultimately determine if this trend reshapes the entire AI landscape.&lt;/li&gt;
+&lt;/ul&gt;&lt;/blockquote&gt;
 &lt;hr&gt;
-&lt;p&gt;I had a problem. Actually, multiple problems, all related to recipes. There were bookmarks scattered across three different browsers, screenshots buried in my photo library, handwritten notes shoved in kitchen drawers, and that one amazing pasta sauce recipe my friend texted me two years ago that I can never find when I actually need it.&lt;/p&gt;
-&lt;p&gt;Sound familiar? I kept meaning to get organized, but every solution I looked at had some dealbreaker. Too expensive, too limited, required subscriptions, or worst of all - what happens when the service shuts down and takes all my carefully curated recipes with it?&lt;/p&gt;
-&lt;p&gt;That&amp;rsquo;s when I discovered Tandoor Recipes. It&amp;rsquo;s open source, runs on my own hardware, and gives me complete control over my recipe collection. After using it for several months, I can honestly say it&amp;rsquo;s been a game changer for meal planning and grocery shopping.&lt;/p&gt;
-&lt;h2 id=&#34;why-i-went-the-self-hosted-route&#34;&gt;&lt;a href=&#34;#why-i-went-the-self-hosted-route&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why I Went the Self-Hosted Route
-&lt;/h2&gt;&lt;p&gt;Look, I get it. Setting up your own recipe manager sounds like overkill. There are plenty of apps out there that work fine. But here&amp;rsquo;s what sold me on doing it myself:&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;My data stays mine.&lt;/strong&gt; I&amp;rsquo;ve been burned before by services shutting down or changing their business model. Remember Google Reader? Yeah, I&amp;rsquo;m not doing that again with my recipe collection.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;No algorithmic nonsense.&lt;/strong&gt; I don&amp;rsquo;t need an AI suggesting recipes based on my &amp;ldquo;cooking personality&amp;rdquo; or whatever. I just want to find that chicken tikka masala recipe without wading through ads.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Actual customization.&lt;/strong&gt; I can organize things exactly how I want. Custom categories, tags that make sense to me, themes that don&amp;rsquo;t hurt my eyes.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;Built-in meal planning tools.&lt;/strong&gt; The grocery list generation alone has saved me countless trips back to the store for forgotten ingredients.&lt;/p&gt;
-&lt;p&gt;&lt;strong&gt;OCR for old cookbooks.&lt;/strong&gt; This feature is honestly magic. I can take a photo of a recipe from my grandmother&amp;rsquo;s cookbook and it&amp;rsquo;ll extract the text automatically.&lt;/p&gt;
-&lt;h2 id=&#34;getting-tandoor-up-and-running&#34;&gt;&lt;a href=&#34;#getting-tandoor-up-and-running&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Getting Tandoor Up and Running
-&lt;/h2&gt;&lt;p&gt;I run most of my self-hosted stuff in Docker on a home server, and Tandoor fits right into that setup. Here&amp;rsquo;s how I got it working.&lt;/p&gt;
-&lt;h3 id=&#34;my-file-organization&#34;&gt;&lt;a href=&#34;#my-file-organization&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;My File Organization
-&lt;/h3&gt;&lt;p&gt;I try to keep things organized, so everything lives under &lt;code&gt;/opt/docker/&lt;/code&gt; with data stored on my NAS:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;/opt/docker/tandoor/          # Application files
-/mnt/r430/tandoor/recipes/    # Recipe database
-/mnt/r430/tandoor/mediafiles/ # Recipe photos
-/mnt/r430/tandoor/staticfiles/ # CSS, JS, etc.
-&lt;/code&gt;&lt;/pre&gt;&lt;h3 id=&#34;the-docker-setup&#34;&gt;&lt;a href=&#34;#the-docker-setup&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Docker Setup
-&lt;/h3&gt;&lt;p&gt;Here&amp;rsquo;s my &lt;code&gt;docker-compose.yml&lt;/code&gt;. I&amp;rsquo;m using an external PostgreSQL database because I already had one running for other services, but you could easily run the database in Docker too:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-yaml&#34; data-lang=&#34;yaml&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;version&lt;/span&gt;: &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;3&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;services&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;web&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;image&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;vabene1111/recipes:latest&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;container_name&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;tandoor_web&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;restart&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;unless-stopped&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;depends_on&lt;/span&gt;: []
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;volumes&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/recipes:/opt/recipes&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/mediafiles:/opt/recipes/mediafiles&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;/mnt/r430/tandoor/staticfiles:/opt/recipes/staticfiles&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;env_file&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;.env&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;ports&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#34;8080:8000&amp;#34;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;networks&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;      - &lt;span style=&#34;color:#ae81ff&#34;&gt;tandoor-net&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;networks&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;  &lt;span style=&#34;color:#f92672&#34;&gt;tandoor-net&lt;/span&gt;:
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;    &lt;span style=&#34;color:#f92672&#34;&gt;driver&lt;/span&gt;: &lt;span style=&#34;color:#ae81ff&#34;&gt;bridge&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;environment-configuration&#34;&gt;&lt;a href=&#34;#environment-configuration&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Environment Configuration
-&lt;/h3&gt;&lt;p&gt;All the sensitive stuff goes in the &lt;code&gt;.env&lt;/code&gt; file:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Database connection&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_HOST&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;192.168.100.52&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_PORT&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;5432&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_USER&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tandoor&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_PASSWORD&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;your-secure-password-here&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;POSTGRES_DB&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;tandoor&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#75715e&#34;&gt;# Django settings&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;SECRET_KEY&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;generate-a-long-random-string-here&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;DEBUG&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;0&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;ALLOWED_HOSTS&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;*&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;TZ&lt;/span&gt;&lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt;&lt;span style=&#34;color:#e6db74&#34;&gt;America/New_York&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Make sure you generate a proper secret key - Django uses this for security stuff, so don&amp;rsquo;t just use &amp;ldquo;password123&amp;rdquo; or something equally terrible.&lt;/p&gt;
-&lt;h3 id=&#34;database-setup-external-postgresql&#34;&gt;&lt;a href=&#34;#database-setup-external-postgresql&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Database Setup (External PostgreSQL)
-&lt;/h3&gt;&lt;p&gt;Since I&amp;rsquo;m running PostgreSQL in a separate LXC container, I had to set up the database manually. If you&amp;rsquo;re doing the same:&lt;/p&gt;
-&lt;p&gt;SSH into your database server and create the Tandoor database:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo -u postgres psql
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-sql&#34; data-lang=&#34;sql&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; tandoor;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;CREATE&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;USER&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;WITH&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ENCRYPTED&lt;/span&gt; PASSWORD &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;your-secure-password&amp;#39;&lt;/span&gt;;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;GRANT&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ALL&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;PRIVILEGES&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;ON&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; tandoor;
-&lt;/span&gt;&lt;/span&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#66d9ef&#34;&gt;ALTER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;DATABASE&lt;/span&gt; tandoor &lt;span style=&#34;color:#66d9ef&#34;&gt;OWNER&lt;/span&gt; &lt;span style=&#34;color:#66d9ef&#34;&gt;TO&lt;/span&gt; tandoor;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Then configure PostgreSQL to accept connections from your Docker host. Edit &lt;code&gt;postgresql.conf&lt;/code&gt;:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-ini&#34; data-lang=&#34;ini&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;&lt;span style=&#34;color:#a6e22e&#34;&gt;listen_addresses&lt;/span&gt; &lt;span style=&#34;color:#f92672&#34;&gt;=&lt;/span&gt; &lt;span style=&#34;color:#e6db74&#34;&gt;&amp;#39;*&amp;#39;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And update &lt;code&gt;pg_hba.conf&lt;/code&gt; to allow your network:&lt;/p&gt;
-&lt;pre tabindex=&#34;0&#34;&gt;&lt;code&gt;host    tandoor    tandoor    192.168.100.0/24    md5
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;Restart PostgreSQL:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;sudo systemctl restart postgresql
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h3 id=&#34;firing-it-up&#34;&gt;&lt;a href=&#34;#firing-it-up&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Firing It Up
-&lt;/h3&gt;&lt;p&gt;With everything configured, start the container:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker-compose up -d
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Check the logs to make sure everything&amp;rsquo;s working:&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; style=&#34;color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span style=&#34;display:flex;&#34;&gt;&lt;span&gt;docker logs -f tandoor_web
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;If all goes well, Tandoor should be accessible at &lt;code&gt;http://your-server-ip:8080&lt;/code&gt;.&lt;/p&gt;
-&lt;h2 id=&#34;living-with-tandoor&#34;&gt;&lt;a href=&#34;#living-with-tandoor&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Living With Tandoor
-&lt;/h2&gt;&lt;p&gt;After using this setup for months, I&amp;rsquo;m genuinely happy with how it&amp;rsquo;s working out. The web interface is clean and responsive, recipe import works well with most sites, and the meal planning features have actually changed how I approach grocery shopping.&lt;/p&gt;
-&lt;p&gt;The OCR feature deserves special mention - I&amp;rsquo;ve been slowly digitizing recipes from old family cookbooks, and it saves tons of typing. Not perfect, but way better than doing it all manually.&lt;/p&gt;
-&lt;p&gt;Storage-wise, it&amp;rsquo;s been pretty lightweight. Even with a couple hundred recipes and photos, it&amp;rsquo;s using less than 2GB of space.&lt;/p&gt;
-&lt;h2 id=&#34;worth-the-effort&#34;&gt;&lt;a href=&#34;#worth-the-effort&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Worth the Effort?
-&lt;/h2&gt;&lt;p&gt;For me, absolutely. The peace of mind of having everything under my own control is worth the initial setup time. Plus, it&amp;rsquo;s nice having a recipe system that actually works the way I want it to, not the way some product manager thinks I should want it to.&lt;/p&gt;
-&lt;p&gt;If you&amp;rsquo;re already running other self-hosted services, Tandoor fits right in. If this would be your first Docker container, it might be worth starting with something simpler, but it&amp;rsquo;s not particularly complex to set up.&lt;/p&gt;
-&lt;p&gt;The main downside is that it&amp;rsquo;s not going to have all the social features of some commercial recipe apps. No sharing recipes with friends or browsing community collections. But honestly, I see that as a feature, not a bug.&lt;/p&gt;
-&lt;h2 id=&#34;next-steps&#34;&gt;&lt;a href=&#34;#next-steps&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Next Steps
-&lt;/h2&gt;&lt;p&gt;I&amp;rsquo;m still tweaking the setup. Considering adding it to my reverse proxy setup so I can access it from outside my network, and I want to set up automated backups of the recipe database.&lt;/p&gt;
-&lt;p&gt;There&amp;rsquo;s also a mobile app in development, which would be handy for checking recipes while actually cooking. Right now I just use the web interface on my phone, which works fine but isn&amp;rsquo;t quite as smooth as a native app.&lt;/p&gt;
-&lt;p&gt;If you decide to give Tandoor a try, let me know how it goes. I&amp;rsquo;m always curious to hear how other people organize their recipe collections and whether they run into any issues I haven&amp;rsquo;t encountered yet.&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;&lt;em&gt;Now if only I could get as organized with actually using all these recipes I&amp;rsquo;ve been collecting&amp;hellip;&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;the-david-vs-goliath-moment-weve-been-waiting-for&#34;&gt;&lt;a href=&#34;#the-david-vs-goliath-moment-weve-been-waiting-for&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The David vs. Goliath Moment We&amp;rsquo;ve Been Waiting For
+&lt;/h3&gt;&lt;p&gt;An industry whisper has crystallized into something undeniable: the era of &amp;ldquo;bigger is always better&amp;rdquo; for AI is hitting a wall. The latest wave of efficient models isn&amp;rsquo;t just incrementally better—they&amp;rsquo;re rewriting the rules entirely.&lt;/p&gt;
+&lt;p&gt;Take &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://github.com/deepseek-ai/DeepSeek-Coder-V2&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;DeepSeek-Coder-V2&lt;/a&gt;&lt;/strong&gt;, which I&amp;rsquo;ve been running locally. This thing has 236 billion total parameters but only activates 21 billion during inference thanks to its &lt;a class=&#34;link&#34; href=&#34;https://arxiv.org/abs/1701.06538&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Mixture-of-Experts (MoE)&lt;/a&gt; architecture. It&amp;rsquo;s a genuinely impressive piece of engineering that delivers serious coding capabilities without requiring a small power plant to run.&lt;/p&gt;
+&lt;p&gt;Then Google drops &lt;strong&gt;&lt;a class=&#34;link&#34; href=&#34;https://ai.google.dev/gemma/docs/core&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;Gemma 3&lt;/a&gt;&lt;/strong&gt;, and suddenly the conversation shifts. Here&amp;rsquo;s a (up to) 27-billion parameter model that&amp;rsquo;s going toe-to-toe with systems many times its size. On benchmarks like MATH, it&amp;rsquo;s not just competitive—it&amp;rsquo;s demonstrating that architectural cleverness can trump raw scale.&lt;/p&gt;
+&lt;p&gt;This isn&amp;rsquo;t about a compact car somehow beating a semi-truck. It&amp;rsquo;s about discovering that the race we thought we were running might have been the wrong race entirely.&lt;/p&gt;
+&lt;h3 id=&#34;why-this-breakthrough-actually-changes-everything&#34;&gt;&lt;a href=&#34;#why-this-breakthrough-actually-changes-everything&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Why This Breakthrough Actually Changes Everything
+&lt;/h3&gt;&lt;h4 id=&#34;the-economics-are-about-to-flip&#34;&gt;&lt;a href=&#34;#the-economics-are-about-to-flip&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Economics Are About to Flip
+&lt;/h4&gt;&lt;p&gt;Until now, serious AI development meant accepting staggering costs. Training something like GPT-4 reportedly cost &lt;a class=&#34;link&#34; href=&#34;https://www.visualcapitalist.com/the-surging-cost-of-training-ai-models/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;over $78 million&lt;/a&gt;, and that&amp;rsquo;s before you factor in the operational nightmare of keeping it running on clusters of high-end hardware.&lt;/p&gt;
+&lt;p&gt;This created an obvious problem: only a handful of companies could afford to play at the cutting edge. The rest of us were relegated to using their APIs and hoping their priorities aligned with ours.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The promise of efficient models isn&amp;rsquo;t just better performance-per-dollar—it&amp;rsquo;s about fundamentally changing who gets to participate in AI development.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;DeepSeek-Coder runs beautifully on a single consumer GPU. Gemma 2 9B can deliver impressive results on hardware that&amp;rsquo;s within reach of university labs, smaller companies, and individual developers who know what they&amp;rsquo;re doing.&lt;/p&gt;
+&lt;h4 id=&#34;the-environmental-reality-check&#34;&gt;&lt;a href=&#34;#the-environmental-reality-check&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Environmental Reality Check
+&lt;/h4&gt;&lt;p&gt;The energy consumption story around AI has been getting uncomfortable. Data centers dedicated to AI are on track to consume electricity &lt;a class=&#34;link&#34; href=&#34;https://www.reuters.com/business/energy/us-utilities-grapple-with-big-techs-massive-power-demands-data-centers-2025-04-07/&#34;  target=&#34;_blank&#34; rel=&#34;noopener&#34;
+    &gt;equivalent to entire countries&lt;/a&gt;. When you&amp;rsquo;re running models locally and seeing what&amp;rsquo;s possible with a fraction of the power draw, the wastefulness of the current approach becomes obvious.&lt;/p&gt;
+&lt;p&gt;Achieving comparable performance with dramatically less hardware isn&amp;rsquo;t just cost-effective—it&amp;rsquo;s the only sustainable path forward. The alternative is an AI industry that burns through resources at an unconscionable rate.&lt;/p&gt;
+&lt;h3 id=&#34;what-gets-unlocked&#34;&gt;&lt;a href=&#34;#what-gets-unlocked&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Gets Unlocked
+&lt;/h3&gt;&lt;p&gt;The democratization effect here could be profound:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Smaller companies can finally compete instead of being permanently relegated to API consumers.&lt;/li&gt;
+&lt;li&gt;Individual developers gain access to state-of-the-art capabilities on their own hardware.&lt;/li&gt;
+&lt;li&gt;Global innovation becomes possible for institutions that couldn&amp;rsquo;t previously justify the infrastructure costs.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The real excitement isn&amp;rsquo;t just technical—it&amp;rsquo;s about what happens when powerful AI tools escape the confines of big tech and start showing up in unexpected places.&lt;/p&gt;
+&lt;h3 id=&#34;the-necessary-skepticism&#34;&gt;&lt;a href=&#34;#the-necessary-skepticism&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Necessary Skepticism
+&lt;/h3&gt;&lt;p&gt;Impressive benchmark numbers don&amp;rsquo;t automatically translate to production reliability. The gap between a model performing well on a benchmark like HumanEval and actually being useful for day-to-day development work can be significant.&lt;/p&gt;
+&lt;p&gt;The integration challenge is real too. Adopting new model architectures requires developers to adapt workflows, learn new tools, and solve compatibility issues. Technical superiority doesn&amp;rsquo;t guarantee adoption.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;The true test isn&amp;rsquo;t whether these models can hit impressive numbers on standardized benchmarks—it&amp;rsquo;s whether they can deliver consistent value in messy, real-world applications.&lt;/p&gt;&lt;/blockquote&gt;
+&lt;p&gt;The success of these efficient models will ultimately depend on community adoption. The open-source nature of both Gemma and DeepSeek is crucial here—it enables the kind of collaborative ecosystem that made Linux successful.&lt;/p&gt;
+&lt;h3 id=&#34;the-bigger-transformation&#34;&gt;&lt;a href=&#34;#the-bigger-transformation&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Bigger Transformation
+&lt;/h3&gt;&lt;p&gt;If this efficiency trend holds, we&amp;rsquo;re looking at a fundamental shift in how the AI industry operates.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Competition is about to get more interesting.&lt;/strong&gt; The focus could pivot from brute-force parameter scaling to sophisticated optimization. Performance-per-watt and performance-per-dollar become the metrics that matter.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Hardware demand patterns will change.&lt;/strong&gt; The insatiable appetite for ever-larger GPU clusters might give way to demand for more specialized, efficient processors. This could reshape entire market dynamics.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Open source gains serious leverage.&lt;/strong&gt; When powerful, efficient models are freely available, the value proposition of closed, proprietary systems becomes harder to justify.&lt;/p&gt;
+&lt;h3 id=&#34;what-to-watch&#34;&gt;&lt;a href=&#34;#what-to-watch&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What to Watch
+&lt;/h3&gt;&lt;p&gt;The next few months will reveal whether this is a lasting transformation or just an interesting moment.&lt;/p&gt;
+&lt;p&gt;Keep an eye on independent validation from researchers who aren&amp;rsquo;t affiliated with the model creators. Track adoption metrics—how quickly do these efficient models get incorporated into major projects and commercial applications?&lt;/p&gt;
+&lt;p&gt;Most importantly, watch how the major players respond. Will they double down on scale or pivot toward efficiency? The competitive response will tell us everything about where this is heading.&lt;/p&gt;
+&lt;h3 id=&#34;the-core-insight&#34;&gt;&lt;a href=&#34;#the-core-insight&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Core Insight
+&lt;/h3&gt;&lt;p&gt;The raw power of massive AI models is undeniably impressive. But the real revolution might come from making that power accessible to everyone who has something interesting to build with it.&lt;/p&gt;
+&lt;p&gt;If models like Gemma and DeepSeek have genuinely cracked the code on delivering premium AI performance at an economical price point, they&amp;rsquo;re not just advancing the technology—they&amp;rsquo;re opening the door for a more diverse, innovative, and sustainable AI future.&lt;/p&gt;
+&lt;p&gt;That&amp;rsquo;s the kind of shift that changes everything.&lt;/p&gt;
 </description>
         </item>
         

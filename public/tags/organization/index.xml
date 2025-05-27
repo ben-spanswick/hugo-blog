@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Organization on The Patch Panel</title>
+        <link>http://192.168.100.63:1313/tags/organization/</link>
+        <description>Recent content in Organization on The Patch Panel</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>en-us</language>
+        <lastBuildDate>Sun, 09 Feb 2025 14:32:00 -0500</lastBuildDate><atom:link href="http://192.168.100.63:1313/tags/organization/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>How to Scale Your Data Science Team Without Everything Falling Apart</title>
+        <link>http://192.168.100.63:1313/datascience/techdebt/</link>
+        <pubDate>Sun, 09 Feb 2025 14:32:00 -0500</pubDate>
+        
+        <guid>http://192.168.100.63:1313/datascience/techdebt/</guid>
+        <description>&lt;img src="http://192.168.100.63:1313/img/head/techdebt.png" alt="Featured image of post How to Scale Your Data Science Team Without Everything Falling Apart" /&gt;&lt;h3 id=&#34;ai-summary&#34;&gt;&lt;a href=&#34;#ai-summary&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;AI Summary
+&lt;/h3&gt;&lt;ul&gt;
+&lt;li&gt;Communication complexity explodes exponentially as teams grow, creating coordination nightmares that kill productivity&lt;/li&gt;
+&lt;li&gt;Traditional functional silos (separate data engineering, modeling, deployment teams) create bottlenecks that slow everything down&lt;/li&gt;
+&lt;li&gt;End-to-end squad structures and platform thinking are the antidotes to scaling chaos&lt;/li&gt;
+&lt;li&gt;Strategic technical debt management and tiered governance prevent bureaucracy from strangling innovation&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;the-curse-of-success&#34;&gt;&lt;a href=&#34;#the-curse-of-success&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Curse of Success
+&lt;/h3&gt;&lt;p&gt;You start with 2 analysts crushing it in whatever corner of the office they can find. Leadership notices the impact. Budget flows. You hire more people.&lt;/p&gt;
+&lt;p&gt;Two years later? You&amp;rsquo;re managing 20+ data scientists across two teams, and somehow everything takes longer than when you had that scrappy duo.&lt;/p&gt;
+&lt;p&gt;I&amp;rsquo;ve lived this nightmare twice - once scaling a cross-functional intelligence team that mixed analysts, data scientists, and case officers, and most recently taking my current utility from those original 2 analysts to two teams totaling 20+ data scientists.&lt;/p&gt;
+&lt;p&gt;The math is unforgiving, but the strategy can save you.&lt;/p&gt;
+&lt;h3 id=&#34;the-death-spiral-mathematics&#34;&gt;&lt;a href=&#34;#the-death-spiral-mathematics&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Death Spiral Mathematics
+&lt;/h3&gt;&lt;p&gt;The brutal reality of team growth isn&amp;rsquo;t just about headcount - it&amp;rsquo;s about connections.&lt;/p&gt;
+&lt;p&gt;5 people create 10 possible communication pathways. Manageable.&lt;/p&gt;
+&lt;p&gt;15 people create 105 connections. Getting complicated.&lt;/p&gt;
+&lt;p&gt;20 people create 190 potential relationships. This is where good teams start to strain.&lt;/p&gt;
+&lt;p&gt;What kills you isn&amp;rsquo;t the people - it&amp;rsquo;s the exponential complexity of keeping everyone aligned. In the intelligence community, we had the added complexity of different clearance levels creating natural silos. In utilities, it&amp;rsquo;s the technical specializations that create understanding gaps between teams.&lt;/p&gt;
+&lt;h3 id=&#34;where-traditional-scaling-goes-wrong&#34;&gt;&lt;a href=&#34;#where-traditional-scaling-goes-wrong&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Where Traditional Scaling Goes Wrong
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Functional Silos Build Themselves&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The natural instinct is to organize by skill: data engineers here, modelers there, deployment specialists over there. Clean org chart, clear responsibilities, total disaster for delivery speed.&lt;/p&gt;
+&lt;p&gt;My first attempt at scaling followed this playbook. Six months later, a simple model deployment required coordinating across three teams, two managers, and a project manager just to get everyone in the same room.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Technical Debt Compound Interest&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Year 1: &amp;ldquo;We&amp;rsquo;ll refactor this when we have time&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Year 2: &amp;ldquo;New hires can&amp;rsquo;t understand our legacy code&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;Year 3: &amp;ldquo;It takes two sprints to add a single feature because nothing connects properly&amp;rdquo;&lt;/p&gt;
+&lt;p&gt;This isn&amp;rsquo;t theoretical - I&amp;rsquo;ve inherited codebases where changing a single parameter required touching 15 different files because nobody had time to build proper abstractions.&lt;/p&gt;
+&lt;h3 id=&#34;what-actually-works&#34;&gt;&lt;a href=&#34;#what-actually-works&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;What Actually Works
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Squad Structure Over Functional Teams&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The pivot that changed everything: 4-7 person squads that own problems end-to-end rather than handoffs between specialized teams.&lt;/p&gt;
+&lt;p&gt;Each squad includes the full stack - someone who understands data engineering, modeling, deployment, and business context. Not everyone needs to be expert in everything, but someone in the squad needs to understand each piece.&lt;/p&gt;
+&lt;p&gt;The difference in deployment speed was immediate and dramatic.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Platform Thinking Changes the Game&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Individual brilliance doesn&amp;rsquo;t scale. Platform leverage does.&lt;/p&gt;
+&lt;p&gt;Instead of every data scientist building their own infrastructure, we invested heavily in:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Feature stores that everyone uses&lt;/li&gt;
+&lt;li&gt;One-click deployment pipelines that handle 90% of common use cases&lt;/li&gt;
+&lt;li&gt;Self-service analytics tools that reduce ad-hoc requests&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Six months of platform investment unlocked productivity gains that compounded as we added more people. New hires became productive in weeks instead of months because the infrastructure already existed.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Strategic Technical Debt Management&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Not all technical debt is created equal. We maintain a debt registry that tracks:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;What the debt is&lt;/li&gt;
+&lt;li&gt;What it costs us in velocity&lt;/li&gt;
+&lt;li&gt;What it would take to fix&lt;/li&gt;
+&lt;li&gt;Business impact if left alone&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Then we allocate 20% of sprint capacity to paying down the expensive stuff first.&lt;/p&gt;
+&lt;p&gt;This approach cut our production incidents by nearly half while actually increasing feature velocity.&lt;/p&gt;
+&lt;h3 id=&#34;the-scaling-stages-ive-observed&#34;&gt;&lt;a href=&#34;#the-scaling-stages-ive-observed&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Scaling Stages I&amp;rsquo;ve Observed
+&lt;/h3&gt;&lt;p&gt;&lt;strong&gt;Stage 1: The Scrappy Team (2-8 people)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Everyone does everything. Context switching is constant but manageable. Proving value is the primary objective.&lt;/p&gt;
+&lt;p&gt;This stage feels chaotic but moves fast. Don&amp;rsquo;t try to over-optimize here.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stage 2: Growing Pains (8-20 people)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;This is where most teams either figure it out or die slowly. You need process without killing speed.&lt;/p&gt;
+&lt;p&gt;The key insight: You can&amp;rsquo;t preserve what made the small team great - you have to evolve into what works at the new scale.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Stage 3: Scaled Function (20+ people)&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Platform thinking becomes essential. Real governance matters. Coordination becomes a skill unto itself.&lt;/p&gt;
+&lt;p&gt;Building my current utility team from 2 to 20+ across two specialized teams, I had to consciously introduce Stage 2 processes at the right inflection points. It felt like slowing down to speed up, but it prevented the chaos I&amp;rsquo;d seen derail other scaling efforts.&lt;/p&gt;
+&lt;h3 id=&#34;metrics-that-actually-matter&#34;&gt;&lt;a href=&#34;#metrics-that-actually-matter&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;Metrics That Actually Matter
+&lt;/h3&gt;&lt;p&gt;Traditional metrics miss the point. Track these instead:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Time from idea to production&lt;/strong&gt; - Should stay flat or improve as you scale&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Deployment frequency&lt;/strong&gt; - How often you actually ship working solutions&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Onboarding time&lt;/strong&gt; - How fast new people become productive contributors&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Maintenance overhead&lt;/strong&gt; - Percentage of time keeping things running versus building new capability&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Cross-team collaboration&lt;/strong&gt; - Are people working together or retreating into silos?&lt;/p&gt;
+&lt;h3 id=&#34;the-uncomfortable-evolution&#34;&gt;&lt;a href=&#34;#the-uncomfortable-evolution&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Uncomfortable Evolution
+&lt;/h3&gt;&lt;p&gt;The things that make small teams effective become liabilities at scale:&lt;/p&gt;
+&lt;p&gt;Minimal process becomes coordination chaos. Informal communication becomes information silos. Everyone doing everything becomes nobody owning anything.&lt;/p&gt;
+&lt;p&gt;But the answer isn&amp;rsquo;t bureaucracy - it&amp;rsquo;s intentional evolution.&lt;/p&gt;
+&lt;p&gt;The principles stay constant: speed, ownership, experimentation, measurable impact. The implementation changes: structure that enables rather than constrains, platforms that amplify individual contributions, teams that preserve autonomy within aligned direction.&lt;/p&gt;
+&lt;h3 id=&#34;the-real-challenge&#34;&gt;&lt;a href=&#34;#the-real-challenge&#34; class=&#34;header-anchor&#34;&gt;&lt;/a&gt;The Real Challenge
+&lt;/h3&gt;&lt;p&gt;Most data science teams that scale successfully don&amp;rsquo;t preserve what they had - they evolve into what they need to become.&lt;/p&gt;
+&lt;p&gt;The goal isn&amp;rsquo;t staying small. It&amp;rsquo;s staying effective at whatever size your business demands.&lt;/p&gt;
+&lt;p&gt;Because the alternative is becoming one of those expensive teams that produces impressive slide decks and minimal business impact.&lt;/p&gt;
+&lt;p&gt;After scaling teams in both intelligence and utility contexts, the pattern is clear: scaling isn&amp;rsquo;t about doing more of the same thing. It&amp;rsquo;s about doing fundamentally different things that work at the new scale.&lt;/p&gt;
+&lt;p&gt;The math doesn&amp;rsquo;t lie - but neither does intentional strategy.&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>

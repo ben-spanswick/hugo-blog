@@ -9,8 +9,8 @@
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="The 57-Second Forecast: How AI is Rewriting the Future of Weather">
 <meta property='og:description' content="Microsoft's Aurora AI model delivers superior weather forecasts 5,000x faster than supercomputers, reshaping what's possible for weather-dependent industries.">
 <meta property='og:url' content='http://192.168.100.63:1313/ai/aurora/'>
-<meta property='og:site_name' content='My Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Ai' /><meta property='article:tag' content='AI' /><meta property='article:tag' content='Meteorology' /><meta property='article:tag' content='Technology' /><meta property='article:tag' content='Foundation Models' /><meta property='article:tag' content='Microsoft' /><meta property='article:tag' content='Weather' /><meta property='article:published_time' content='2025-05-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-05-24T00:00:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/img/weather/header.png' />
+<meta property='og:site_name' content='The Patch Panel'>
+<meta property='og:type' content='article'><meta property='article:section' content='Ai' /><meta property='article:tag' content='AI' /><meta property='article:tag' content='Meteorology' /><meta property='article:tag' content='Technology' /><meta property='article:tag' content='Foundation Models' /><meta property='article:tag' content='Microsoft' /><meta property='article:tag' content='Weather' /><meta property='article:tag' content='GraphCast' /><meta property='article:published_time' content='2025-05-24T00:00:00&#43;00:00'/><meta property='article:modified_time' content='2025-05-24T00:00:00&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/img/weather/header.png' />
 <meta name="twitter:site" content="@@yourtwitter">
     <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="The 57-Second Forecast: How AI is Rewriting the Future of Weather">
 <meta name="twitter:description" content="Microsoft's Aurora AI model delivers superior weather forecasts 5,000x faster than supercomputers, reshaping what's possible for weather-dependent industries."><meta name="twitter:card" content="summary_large_image">
@@ -56,7 +56,7 @@
             <figure class="site-avatar">
                 <a href="/">
                 
-                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    <img src="/img/headshot2.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
                 
                 </a>
                 
@@ -67,8 +67,8 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">My Blog</a></h1>
-            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+            <h1 class="site-name"><a href="/">The Patch Panel</a></h1>
+            <h2 class="site-description">Exploring AI, Tech, Homelabs, &amp; Self-Hosting</h2>
         </div>
     </header><ol class="menu" id="main-menu">
         
@@ -254,7 +254,7 @@
 
 
                 <time class="article-time--reading">
-                    7 minute read
+                    8 minute read
                 </time>
             </div>
         
@@ -293,21 +293,13 @@
 		alt="Diagram showing the 3D Swin Transformer and Perceiver-based architecture of the Aurora model."
 	
 	
-></p>
+>
+<em>Aurora is a 1.3 billion parameter foundation model for high-resolution forecasting of weather and atmospheric processes. Aurora is a flexible 3D Swin Transformer with 3D Perceiver-based encoders and decoders. At pretraining time, Aurora is optimized to minimize a loss on multiple heterogeneous datasets with different resolutions, variables, and pressure levels. The model is then fine-tuned in two stages: (1) short-lead time fine-tuning of the pretrained weights and (2) long-lead time (rollout) fine-tuning using Low Rank Adaptation (LoRA). The fine-tuned models are then deployed to tackle a diverse collection of operational forecasting scenarios at different resolutions.</em></p>
 <p>The training approach deserves attention too. Aurora pretrains on heterogeneous datasets with different resolutions, variables, and pressure levels, then fine-tunes in two stages: short-lead time adjustments of pretrained weights, followed by long-lead time rollout fine-tuning using Low Rank Adaptation. This lets Aurora digest messy real-world data—satellite imagery, radar sweeps, surface observations—without the usual preprocessing gymnastics.</p>
 <h3 id="performance-that-actually-matters"><a href="#performance-that-actually-matters" class="header-anchor"></a>Performance That Actually Matters
 </h3><p>Aurora outperformed ECMWF&rsquo;s high-resolution model on <a class="link" href="https://www.nature.com/articles/s41586-025-09005-y"  target="_blank" rel="noopener"
-    >90% of tested variables</a>. When compared directly against GraphCast—Google&rsquo;s previous state-of-the-art AI weather model—Aurora matched or exceeded performance on 94% of targets. The biggest gains showed up in the upper atmosphere, where GraphCast performance notoriously struggles, with improvements reaching 40%.</p>
-<p><img src="/img/weather/auroravsgraphcast.png"
-	
-	
-	
-	loading="lazy"
-	
-		alt="Chart comparing Aurora’s performance against GraphCast across different atmospheric levels."
-	
-	
-></p>
+    >90% of tested variables</a>. When compared directly against <a class="link" href="https://deepmind.google/discover/blog/graphcast-ai-model-for-faster-and-more-accurate-weather-forecasting/"  target="_blank" rel="noopener"
+    >GraphCast</a>—Google&rsquo;s previous state-of-the-art AI weather model—Aurora matched or exceeded performance on 94% of targets. The biggest gains showed up in the upper atmosphere, where GraphCast performance notoriously struggles, with improvements reaching 40%.</p>
 <p>Storm Ciarán provided a real-world stress test. When this low-pressure system battered northwestern Europe in November 2023, it set new intensity records for England and caught existing weather models off guard. The rapid intensification and peak wind speeds exposed limitations in current prediction systems—exactly the kind of extreme event where Aurora&rsquo;s pattern recognition capabilities could prove invaluable.</p>
 <p><img src="/img/weather/ECMWF.png"
 	
@@ -318,17 +310,24 @@
 		alt="Satellite image or weather map snapshot of Storm Ciarán over Europe."
 	
 	
-></p>
+>
+<em>ECMWF of storm Ciarán over NW Europe</em></p>
 <p>The speed differential feels almost unfair. Microsoft estimates Aurora delivers roughly 5,000x computational speedup over the Integrated Forecasting System. Traditional numerical weather prediction resembles computational archaeology—teams nursing finite difference equations through supercomputer clusters. Aurora runs inference on commodity hardware faster than most people stream Netflix.</p>
-<h3 id="aurora-vs-gencast-different-tools-for-different-jobs"><a href="#aurora-vs-gencast-different-tools-for-different-jobs" class="header-anchor"></a>Aurora vs. GenCast: Different Tools for Different Jobs
-</h3><p>Google&rsquo;s <a class="link" href="https://deepmind.google/discover/blog/gencast-predicts-weather-and-the-risks-of-extreme-conditions-with-sota-accuracy/"  target="_blank" rel="noopener"
-    >GenCast</a>, which I covered previously, takes a fundamentally different approach. Aurora focuses on deterministic predictions with blazing speed. GenCast emphasizes probabilistic ensembles that capture forecast uncertainty.</p>
-<ul>
-<li><strong>Aurora tells you:</strong> &ldquo;Hurricane makes landfall Tuesday morning at these coordinates.&rdquo;</li>
-<li><strong>GenCast provides:</strong> &ldquo;65% chance of landfall between Monday evening and Wednesday noon, with this spatial uncertainty envelope.&rdquo;</li>
-</ul>
-<p>Both approaches serve different needs. Emergency managers often want decisive guidance for evacuation decisions—Aurora&rsquo;s deterministic clarity works well there. Climate researchers analyzing long-term scenarios benefit more from GenCast&rsquo;s probabilistic richness.</p>
-<p>AI weather modeling is fragmenting into specialized tools rather than converging on a single approach. Different problems demand different computational strategies.</p>
+<h3 id="aurora-vs-graphcast-a-battle-of-titans"><a href="#aurora-vs-graphcast-a-battle-of-titans" class="header-anchor"></a>Aurora vs. GraphCast: A Battle of Titans
+</h3><p><img src="/img/weather/auroravsgraphcast.png"
+	
+	
+	
+	loading="lazy"
+	
+		alt="Chart comparing Aurora’s performance against GraphCast across different atmospheric levels."
+	
+	
+>
+<em>Aurora beats out Google Deepmind&rsquo;s GraphCast in various performance metrics.</em></p>
+<p>The showdown between Microsoft&rsquo;s Aurora and Google&rsquo;s GraphCast isn&rsquo;t about different jobs, but who can do the <em>same</em> job better. Both are deterministic models aiming for the single most accurate forecast possible. The rivalry pushes the boundaries of AI in meteorology.</p>
+<p>While both models deliver state-of-the-art performance, their architectures differ. GraphCast uses a Graph Neural Network to process the world as a mesh of interconnected nodes. Aurora employs a 3D Swin Transformer, an approach that excels at capturing complex, multi-scale spatial relationships in three dimensions.</p>
+<p>As performance benchmarks show, Aurora&rsquo;s architecture currently gives it an edge, particularly in the upper atmosphere. This direct competition is rapidly accelerating progress, with each new model leapfrogging the last in a race for atmospheric prediction supremacy.</p>
 <h3 id="beyond-weather-the-versatility-factor"><a href="#beyond-weather-the-versatility-factor" class="header-anchor"></a>Beyond Weather: The Versatility Factor
 </h3><p>Aurora&rsquo;s foundation model architecture generalizes across environmental prediction tasks beautifully. The model can forecast atmospheric variables from temperature and wind speed to air pollution levels and greenhouse gas concentrations.</p>
 <p>Air quality forecasting provides a compelling example. Aurora produces accurate five-day global air pollution forecasts at 0.4° spatial resolution, outperforming the Copernicus Atmosphere Monitoring Service on 74% of targets. Predicting atmospheric gases like nitrogen dioxide is notoriously difficult due to their spatially heterogeneous nature and complex diurnal cycles—sunlight reduces background levels through photolysis, while densely populated areas show emission spikes. Aurora captures both the extremes and background levels accurately.</p>
@@ -338,10 +337,11 @@
 	
 	loading="lazy"
 	
-		alt="Graph showing Aurora’s performance vs ERA5 reanalysis data for a specific variable."
+		alt="Graph showing Aurora’s performance vs ERA5 reanalysis data."
 	
 	
-></p>
+>
+<em>Impressive performance vs ERA5 reanalysis data for ERA5 at 6h lead</em></p>
 <p>This versatility distinguishes Aurora from traditional numerical models, which typically specialize in narrow domains. The same architecture predicting hurricane tracks can forecast agricultural growing seasons or urban heat effects. It&rsquo;s like having a meteorological Swiss Army knife.</p>
 <h3 id="the-access-revolution"><a href="#the-access-revolution" class="header-anchor"></a>The Access Revolution
 </h3><p>Aurora&rsquo;s computational efficiency has serious implications for global weather prediction access. Small nations and regional authorities can now access forecast quality previously reserved for meteorological superpowers. The barrier drops from supercomputer-class infrastructure to workstation-class hardware.</p>
@@ -354,7 +354,7 @@
 <p>Hybrid approaches probably make the most sense—combine Aurora&rsquo;s computational efficiency with traditional models&rsquo; physical interpretability. Let AI handle pattern recognition and rapid inference while physics-based models provide sanity checks and explainable backups.</p>
 <h3 id="why-i-actually-care-about-this"><a href="#why-i-actually-care-about-this" class="header-anchor"></a>Why I Actually Care About This
 </h3><p>Six years of weather-dependent work has turned me into an accidental meteorologist. I understand more about ensemble spreads, convective parameterization, and model bias correction than I ever wanted to. When you&rsquo;re responsible for decisions that hinge on whether the GFS or NAM handles lake-effect snow better, you develop opinions about atmospheric modeling fast.</p>
-<p>Aurora represents something fundamentally different from GenCast&rsquo;s probabilistic approach. For industries like utilities and power generation that live or die by weather accuracy, Aurora&rsquo;s combination of speed and precision could reshape how they consume meteorological data entirely.</p>
+<p>Aurora represents something fundamentally different. For industries like utilities and power generation that live or die by weather accuracy, Aurora&rsquo;s combination of speed and precision could reshape how they consume meteorological data entirely.</p>
 <p>Think about utility load forecasting. Right now, operators blend multiple weather models with complex bias corrections, waiting hours for updated forecasts while demand patterns shift in real-time. Aurora could deliver superior predictions in under a minute, enabling reactive load management that currently isn&rsquo;t computationally feasible.</p>
 <p>Power generation scheduling faces similar constraints. Wind and solar forecasting relies on numerical weather models that update every six hours with multi-hour computational delays. Aurora&rsquo;s rapid refresh capability could enable minute-by-minute generation adjustments based on atmospheric conditions that traditional models miss entirely.</p>
 <p>The air quality forecasting capabilities add another dimension. Industrial facilities could adjust operations in real-time based on atmospheric dispersion predictions, optimizing both environmental compliance and operational efficiency in ways that current systems can&rsquo;t support.</p>
@@ -384,6 +384,8 @@
             <a href="/tags/microsoft/">Microsoft</a>
         
             <a href="/tags/weather/">Weather</a>
+        
+            <a href="/tags/graphcast/">GraphCast</a>
         
     </section>
 
@@ -481,25 +483,6 @@
             
                 
 <article class="has-image">
-    <a href="/musings/stability/">
-        
-        
-            <div class="article-image">
-                
-                    <img src="/img/tintinconfused.png" loading="lazy" data-key="" data-hash="/img/tintinconfused.png"/>
-                
-            </div>
-        
-
-        <div class="article-details">
-            <h2 class="article-title">The Real Problem with AI Today? Nobody Knows What Works Tomorrow</h2>
-        </div>
-    </a>
-</article>
-
-            
-                
-<article class="has-image">
     <a href="/musings/claude4/">
         
         
@@ -519,18 +502,37 @@
             
                 
 <article class="has-image">
-    <a href="/projects/homelab/">
+    <a href="/datascience/agenticai/">
         
         
             <div class="article-image">
                 
-                    <img src="/img/HL.jpg" loading="lazy" data-key="" data-hash="/img/HL.jpg"/>
+                    <img src="/img/head/agenticai.png" loading="lazy" data-key="" data-hash="/img/head/agenticai.png"/>
                 
             </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">First Homelab: Reflections, Diagram, and Stack</h2>
+            <h2 class="article-title">When AI Agents Start Talking to Each Other: The Agentic Revolution That&#39;s Already Here</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/musings/gencast/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/head/gencast.png" loading="lazy" data-key="" data-hash="/img/head/gencast.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Google&#39;s AI Weather Forecasters: The Future of Grid Resiliency?</h2>
         </div>
     </a>
 </article>
@@ -551,7 +553,7 @@
         
             2024 - 
         
-        2025 My Blog
+        2025 The Patch Panel
     </section>
     
     <section class="powerby">

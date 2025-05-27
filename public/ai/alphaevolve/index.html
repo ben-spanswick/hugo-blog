@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="en-us" dir="ltr">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Google DeepMind's evolutionary coding agent discovers breakthrough algorithms, improves its own training efficiency, and solves 56-year-old mathematical problems.">
+<title>AlphaEvolve - When AI Becomes Its Own Code Optimizer</title>
+
+<link rel='canonical' href='http://192.168.100.63:1313/ai/alphaevolve/'>
+
+<link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="AlphaEvolve - When AI Becomes Its Own Code Optimizer">
+<meta property='og:description' content="Google DeepMind's evolutionary coding agent discovers breakthrough algorithms, improves its own training efficiency, and solves 56-year-old mathematical problems.">
+<meta property='og:url' content='http://192.168.100.63:1313/ai/alphaevolve/'>
+<meta property='og:site_name' content='The Patch Panel'>
+<meta property='og:type' content='article'><meta property='article:section' content='Ai' /><meta property='article:tag' content='AI' /><meta property='article:tag' content='Machine Learning' /><meta property='article:tag' content='Algorithmic Discovery' /><meta property='article:tag' content='Google DeepMind' /><meta property='article:tag' content='Evolutionary Computing' /><meta property='article:tag' content='Matrix Multiplication' /><meta property='article:tag' content='Code Optimization' /><meta property='article:published_time' content='2025-05-15T08:31:56-04:00'/><meta property='article:modified_time' content='2025-05-15T08:31:56-04:00'/><meta property='og:image' content='http://192.168.100.63:1313/img/head/alphaevolve.png' />
+<meta name="twitter:site" content="@@yourtwitter">
+    <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="AlphaEvolve - When AI Becomes Its Own Code Optimizer">
+<meta name="twitter:description" content="Google DeepMind's evolutionary coding agent discovers breakthrough algorithms, improves its own training efficiency, and solves 56-year-old mathematical problems."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/img/head/alphaevolve.png' />
+    <link rel="shortcut icon" href="/favicon.ico" />
+
+    </head>
+    <body class="
+    article-page
+    ">
+    <script>
+        (function() {
+            const colorSchemeKey = 'StackColorScheme';
+            if(!localStorage.getItem(colorSchemeKey)){
+                localStorage.setItem(colorSchemeKey, "dark");
+            }
+        })();
+    </script><script>
+    (function() {
+        const colorSchemeKey = 'StackColorScheme';
+        const colorSchemeItem = localStorage.getItem(colorSchemeKey);
+        const supportDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches === true;
+
+        if (colorSchemeItem == 'dark' || colorSchemeItem === 'auto' && supportDarkMode) {
+            
+
+            document.documentElement.dataset.scheme = 'dark';
+        } else {
+            document.documentElement.dataset.scheme = 'light';
+        }
+    })();
+</script>
+<div class="container main-container flex on-phone--column extended"><aside class="sidebar left-sidebar sticky ">
+    <button class="hamburger hamburger--spin" type="button" id="toggle-menu" aria-label="Toggle Menu">
+        <span class="hamburger-box">
+            <span class="hamburger-inner"></span>
+        </span>
+    </button>
+
+    <header>
+        
+            
+            <figure class="site-avatar">
+                <a href="/">
+                
+                    <img src="/img/headshot2.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                
+                </a>
+                
+                    <span class="emoji">💾</span>
+                
+            </figure>
+            
+        
+        
+        <div class="site-meta">
+            <h1 class="site-name"><a href="/">The Patch Panel</a></h1>
+            <h2 class="site-description">Exploring AI, Tech, Homelabs, &amp; Self-Hosting</h2>
+        </div>
+    </header><ol class="menu" id="main-menu">
+        
+        
+        
+        <li >
+            <a href='/' >
+                
+                
+                
+                <span>Home</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/about/' >
+                
+                
+                
+                <span>About Me</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/news/' >
+                
+                
+                
+                <span>News</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/ai/' >
+                
+                
+                
+                <span>AI</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/musings/' >
+                
+                
+                
+                <span>Musings</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/projects/' >
+                
+                
+                
+                <span>Projects</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='/datascience/' >
+                
+                
+                
+                <span>Data Strategy</span>
+            </a>
+        </li>
+        
+        
+        <li >
+            <a href='Spanswick_Resume2025.pdf' >
+                
+                
+                
+                <span>Resume</span>
+            </a>
+        </li>
+        
+        <li class="menu-bottom-section">
+            <ol class="menu">
+
+                
+                    <li id="dark-mode-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-left" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="8" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-toggle-right" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="16" cy="12" r="2" />
+  <rect x="2" y="6" width="20" height="12" rx="6" />
+</svg>
+
+
+
+                        <span>Dark Mode</span>
+                    </li>
+                
+            </ol>
+        </li>
+    </ol>
+</aside>
+
+    
+
+            <main class="main full-width">
+    <article class="has-image main-article">
+    <header class="article-header">
+        <div class="article-image">
+            <a href="/ai/alphaevolve/">
+                
+                    <img src="/img/head/alphaevolve.png" loading="lazy" alt="Featured image of post AlphaEvolve - When AI Becomes Its Own Code Optimizer" />
+                
+            </a>
+        </div>
+    
+
+    <div class="article-details">
+    
+    <header class="article-category">
+        
+            <a href="/categories/ai/" >
+                AI
+            </a>
+        
+            <a href="/categories/news/" >
+                News
+            </a>
+        
+            <a href="/categories/technology/" >
+                Technology
+            </a>
+        
+    </header>
+    
+
+    <div class="article-title-wrapper">
+        <h2 class="article-title">
+            <a href="/ai/alphaevolve/">AlphaEvolve - When AI Becomes Its Own Code Optimizer</a>
+        </h2>
+    
+        
+        <h3 class="article-subtitle">
+            Google DeepMind&#39;s evolutionary coding agent discovers breakthrough algorithms, improves its own training efficiency, and solves 56-year-old mathematical problems.
+        </h3>
+        
+    </div>
+
+    
+    
+    
+    
+    <footer class="article-time">
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-calendar-time" width="56" height="56" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <path d="M11.795 21h-6.795a2 2 0 0 1 -2 -2v-12a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4" />
+  <circle cx="18" cy="18" r="4" />
+  <path d="M15 3v4" />
+  <path d="M7 3v4" />
+  <path d="M3 11h16" />
+  <path d="M18 16.496v1.504l1 1" />
+</svg>
+                <time class="article-time--published">May 15, 2025</time>
+            </div>
+        
+
+        
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-clock" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <polyline points="12 7 12 12 15 15" />
+</svg>
+
+
+
+                <time class="article-time--reading">
+                    6 minute read
+                </time>
+            </div>
+        
+    </footer>
+    
+
+    
+</div>
+
+</header>
+
+    <section class="article-content">
+    
+    
+    <h3 id="ai-summary"><a href="#ai-summary" class="header-anchor"></a>AI Summary
+</h3><ul>
+<li>AlphaEvolve represents a new class of AI system that autonomously improves algorithms through evolutionary code generation, making discoveries that have eluded researchers for decades</li>
+<li>The system broke a 56-year mathematical barrier by discovering a matrix multiplication algorithm using 48 multiplications instead of Strassen&rsquo;s 49, and improved Google&rsquo;s data center efficiency by 0.7%</li>
+<li>Unlike previous approaches, AlphaEvolve can evolve entire codebases across multiple programming languages while optimizing for multiple objectives simultaneously</li>
+<li>The technology has already optimized its own training process and Google&rsquo;s production infrastructure, demonstrating real-world impact beyond academic benchmarks</li>
+</ul>
+<hr>
+<h3 id="the-self-improving-machine-arrives"><a href="#the-self-improving-machine-arrives" class="header-anchor"></a>The Self-Improving Machine Arrives
+</h3><p>What if we&rsquo;ve been looking at AI development all wrong? While the industry obsesses over larger models and more parameters, Google DeepMind quietly built something that might be more transformative: an AI that can rewrite its own code to make itself better.</p>
+<p><a class="link" href="https://storage.googleapis.com/deepmind-media/DeepMind.com/Blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/AlphaEvolve.pdf"  target="_blank" rel="noopener"
+    >AlphaEvolve</a> isn&rsquo;t just another large language model playing coding games. This system represents a fundamentally different approach to algorithmic discovery - one where machines don&rsquo;t just generate code, but autonomously evolve it toward solutions that humans haven&rsquo;t found in decades of trying.</p>
+<p>The results speak louder than the hype. After 56 years, someone finally improved on Strassen&rsquo;s legendary matrix multiplication algorithm. That someone wasn&rsquo;t a mathematician working late nights with coffee and chalkboards. It was AlphaEvolve, quietly iterating through thousands of code variations until it found something better.</p>
+<h3 id="beyond-funsearch---evolution-at-scale"><a href="#beyond-funsearch---evolution-at-scale" class="header-anchor"></a>Beyond FunSearch - Evolution at Scale
+</h3><p>The foundation here builds on <a class="link" href="https://deepmind.google/discover/blog/funsearch-making-new-discoveries-in-mathematical-sciences-using-large-language-models/"  target="_blank" rel="noopener"
+    >FunSearch</a>, but the leap forward is substantial enough to represent a different category entirely. While FunSearch evolved single Python functions with maybe 10-20 lines of code, AlphaEvolve tackles entire files spanning hundreds of lines across any programming language.</p>
+<blockquote>
+<p>This realization introduces a new layer of complexity: we&rsquo;re not just automating coding anymore - we&rsquo;re automating the discovery of entirely new algorithmic approaches.</p></blockquote>
+<p>The technical architecture combines evolutionary computation with state-of-the-art language models in a way that feels almost biological. A program database stores the genetic material - successful code variants that have proven their worth through automated evaluation. Prompt samplers craft rich contexts that help language models understand not just what code exists, but why certain approaches work better than others.</p>
+<p>Each iteration proposes modifications through a structured diff format that maintains precision while allowing for creative leaps. The system can simultaneously optimize multiple objectives, creating solutions that balance competing demands rather than narrowly optimizing single metrics.</p>
+<h3 id="mathematical-breakthroughs-that-actually-matter"><a href="#mathematical-breakthroughs-that-actually-matter" class="header-anchor"></a>Mathematical Breakthroughs That Actually Matter
+</h3><p>The matrix multiplication discovery deserves special attention because it demonstrates something remarkable about how mathematical progress might actually happen in an AI-driven world.</p>
+<p>Strassen&rsquo;s 1969 algorithm showed that multiplying two matrices doesn&rsquo;t require the obvious cubic number of operations. His approach used 7 multiplications instead of 8 for 2x2 matrices, and this insight scaled up to larger matrices through recursive application. For 4x4 matrices, this meant 49 multiplications instead of the naive 64.</p>
+<p>Various researchers improved specific cases over the decades, but the general problem remained stubbornly difficult. The challenge isn&rsquo;t just finding a working algorithm - it&rsquo;s finding one that can be mathematically proven correct while using fewer operations than the current best approach.</p>
+<p>AlphaEvolve approached this by evolving not just the algorithm itself, but the entire optimization pipeline used to discover matrix multiplication schemes. The system developed sophisticated techniques like cyclical annealing for clipping thresholds, discretization losses to encourage integer solutions, and hallucination mechanisms to explore beyond local optima.</p>
+<p>You can explore the <a class="link" href="https://github.com/google-deepmind/alphaevolve_results"  target="_blank" rel="noopener"
+    >complete mathematical results</a> in Google DeepMind&rsquo;s published repository, which includes interactive notebooks demonstrating each breakthrough.</p>
+<blockquote>
+<p>The ultimate takeaway is this: when machines can evolve the tools used to make discoveries, they can transcend the limitations that human intuition imposes on problem-solving approaches.</p></blockquote>
+<h3 id="optimizing-the-infrastructure-that-runs-everything"><a href="#optimizing-the-infrastructure-that-runs-everything" class="header-anchor"></a>Optimizing the Infrastructure That Runs Everything
+</h3><p>Perhaps more immediately impactful than mathematical discoveries are AlphaEvolve&rsquo;s improvements to Google&rsquo;s computing infrastructure. These aren&rsquo;t academic exercises - they&rsquo;re optimizations running on production systems that handle significant portions of global internet traffic.</p>
+<p>The data center scheduling improvement recovers 0.7% of Google&rsquo;s fleet-wide compute resources that would otherwise be stranded. This might sound modest, but at Google&rsquo;s scale, 0.7% represents enormous computational capacity and energy savings. The evolved heuristic function is remarkably simple - just a few lines of code that outperform complex hand-crafted scheduling algorithms.</p>
+<p>For <a class="link" href="https://jax.readthedocs.io/en/latest/pallas/quickstart.html"  target="_blank" rel="noopener"
+    >Gemini kernel optimization</a>, AlphaEvolve achieved a 23% average speedup across matrix multiplication kernels, translating to 1% faster training for Gemini itself. This creates a fascinating feedback loop where the AI system optimizes its own training infrastructure.</p>
+<p>The TPU circuit design contribution might be the most intriguing. AlphaEvolve identified unnecessary bits in already highly optimized Verilog implementations, suggesting optimizations that hardware engineers could validate and deploy. While this specific optimization was also caught by downstream synthesis tools, the implications are significant - AI systems that can contribute to their own hardware design represent a new form of technological self-improvement.</p>
+<h3 id="the-evolutionary-advantage"><a href="#the-evolutionary-advantage" class="header-anchor"></a>The Evolutionary Advantage
+</h3><p>What makes AlphaEvolve particularly effective compared to other automated programming approaches? The evolutionary framework provides several key advantages that become apparent when examining the system&rsquo;s ablation studies.</p>
+<p>Traditional approaches often get trapped in local optima or fail to explore sufficiently diverse solution spaces. AlphaEvolve&rsquo;s evolutionary database maintains a diverse population of solutions while continuously building on the best discoveries. This isn&rsquo;t just random mutation - the language models bring world knowledge and coding expertise to guide mutations in promising directions.</p>
+<p>The use of multiple evaluation metrics proves crucial for discovering solutions that generalize well. Even when optimizing for a single primary objective, the system benefits from optimizing additional metrics that encourage different structural properties in solutions.</p>
+<p>Full-file evolution capabilities allow the system to make coordinated changes across multiple functions and components. Many algorithmic improvements require simultaneous modifications to data structures, optimization routines, and evaluation logic - changes that are difficult to coordinate when evolving individual functions in isolation.</p>
+<h3 id="where-the-boundaries-lie"><a href="#where-the-boundaries-lie" class="header-anchor"></a>Where the Boundaries Lie
+</h3><p>AlphaEvolve&rsquo;s current limitation is its dependence on automated evaluation metrics. The system excels at problems where solutions can be programmatically verified - mathematical constructions, algorithmic efficiency, system performance optimization.</p>
+<p>This constraint explains why the system has found success in mathematics, computer science, and infrastructure optimization while remaining inapplicable to domains requiring human judgment or physical experimentation.</p>
+<p>However, this limitation might be less restrictive than it initially appears. Many important problems in science and engineering can be formulated with automated evaluation criteria, even if the final validation requires human expertise.</p>
+<h3 id="the-meta-learning-trajectory"><a href="#the-meta-learning-trajectory" class="header-anchor"></a>The Meta-Learning Trajectory
+</h3><p>The most intriguing aspect of AlphaEvolve might be its capacity for meta-improvement. The system has already optimized components of its own training pipeline and infrastructure. As these improvements compound, they potentially accelerate the discovery of further improvements.</p>
+<p>This creates a positive feedback loop that could lead to rapid capability advancement. Each optimization to training efficiency, evaluation speed, or algorithmic discovery increases the system&rsquo;s capacity to find additional optimizations.</p>
+<p>Google DeepMind is currently <a class="link" href="https://venturebeat.com/ai/meet-alphaevolve-the-google-ai-that-writes-its-own-code-and-just-saved-millions-in-computing-costs/"  target="_blank" rel="noopener"
+    >developing a user interface</a> and planning an Early Access Program for selected academic researchers, with broader availability being explored.</p>
+<h2 id="my-hope-is-that-this-provides-a-new-lens-for-your-own-work-in-algorithmic-optimization-and-automated-discovery-the-conversation-doesnt-end-here-im-keen-to-hear-your-perspective-on-how-evolutionary-approaches-might-apply-to-your-specific-domain-challenges"><a href="#my-hope-is-that-this-provides-a-new-lens-for-your-own-work-in-algorithmic-optimization-and-automated-discovery-the-conversation-doesnt-end-here-im-keen-to-hear-your-perspective-on-how-evolutionary-approaches-might-apply-to-your-specific-domain-challenges" class="header-anchor"></a>My hope is that this provides a new lens for your own work in algorithmic optimization and automated discovery. The conversation doesn&rsquo;t end here; I&rsquo;m keen to hear your perspective on how evolutionary approaches might apply to your specific domain challenges&hellip;
+</h2>
+</section>
+
+
+    <footer class="article-footer">
+    
+    <section class="article-tags">
+        
+            <a href="/tags/ai/">AI</a>
+        
+            <a href="/tags/machine-learning/">Machine Learning</a>
+        
+            <a href="/tags/algorithmic-discovery/">Algorithmic Discovery</a>
+        
+            <a href="/tags/google-deepmind/">Google DeepMind</a>
+        
+            <a href="/tags/evolutionary-computing/">Evolutionary Computing</a>
+        
+            <a href="/tags/matrix-multiplication/">Matrix Multiplication</a>
+        
+            <a href="/tags/code-optimization/">Code Optimization</a>
+        
+    </section>
+
+
+    
+    <section class="article-copyright">
+        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-copyright" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <path stroke="none" d="M0 0h24v24H0z"/>
+  <circle cx="12" cy="12" r="9" />
+  <path d="M14.5 9a3.5 4 0 1 0 0 6" />
+</svg>
+
+
+
+        <span>Licensed under CC BY-NC-SA 4.0</span>
+    </section>
+    </footer>
+
+
+    
+        <link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css"integrity="sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI&#43;WdtXRGWt2kTvGFasHpSy3SV"crossorigin="anonymous"
+            ><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js"integrity="sha384-XjKyOOlGwcjNTAIQHIpgOno0Hl1YQqzUOEleOLALmuqehneUG&#43;vnGctmUb0ZY0l8"crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js"integrity="sha384-&#43;VBxd3r6XgURycqtZ117nYw44OOcIax56Z4dCRWbxyPt0Koah1uHoK0o4&#43;/RRE05"crossorigin="anonymous"
+                defer
+                >
+            </script><script>
+    window.addEventListener("DOMContentLoaded", () => {
+	const mainArticleElement = document.querySelector(".main-article");
+        renderMathInElement(mainArticleElement, {
+            delimiters: [
+                { left: "$$", right: "$$", display: true },
+                { left: "$", right: "$", display: false },
+                { left: "\\(", right: "\\)", display: false },
+                { left: "\\[", right: "\\]", display: true }
+            ],
+            ignoredClasses: ["gist"]
+        });})
+</script>
+
+    
+</article>
+
+    
+
+    
+
+<aside class="related-content--wrapper">
+    <h2 class="section-title">Related content</h2>
+    <div class="related-content">
+        <div class="flex article-list--tile">
+            
+                
+<article class="has-image">
+    <a href="/musings/gpt5-future-ai/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/head/gpt5.png" loading="lazy" data-key="" data-hash="/img/head/gpt5.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">The Reality Check of GPT-5: When AI Ambitions Meet Practical Constraints</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/datascience/agenticai/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/head/agenticai.png" loading="lazy" data-key="" data-hash="/img/head/agenticai.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">When AI Agents Start Talking to Each Other: The Agentic Revolution That&#39;s Already Here</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/ai/prompting/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/head/prompting.png" loading="lazy" data-key="" data-hash="/img/head/prompting.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Beyond &#39;Tell Me About&#39;: A Guide to Advanced Prompt Engineering</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/musings/agi/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/head/agi.png" loading="lazy" data-key="" data-hash="/img/head/agi.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">AGI: The Dumb Smart Thing That Might Change Everything</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/projects/homelab/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/HL.jpg" loading="lazy" data-key="" data-hash="/img/HL.jpg"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">First Homelab: Reflections, Diagram, and Stack</h2>
+        </div>
+    </a>
+</article>
+
+            
+        </div>
+    </div>
+</aside>
+
+     
+    
+        
+    
+
+    <footer class="site-footer">
+    <section class="copyright">
+        &copy; 
+        
+            2024 - 
+        
+        2025 The Patch Panel
+    </section>
+    
+    <section class="powerby">
+        
+            Powered by Hugo & Stack Theme <br/>
+        Built with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> <br />
+        Theme <b><a href="https://github.com/CaiJimmy/hugo-theme-stack" target="_blank" rel="noopener" data-version="3.30.0">Stack</a></b> designed by <a href="https://jimmycai.com" target="_blank" rel="noopener">Jimmy</a>
+    </section>
+</footer>
+
+
+    
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    
+    <div class="pswp__bg"></div>
+
+    
+    <div class="pswp__scroll-wrap">
+
+        
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                
+                
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                        <div class="pswp__preloader__cut">
+                            <div class="pswp__preloader__donut"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div>
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.js"integrity="sha256-ePwmChbbvXbsO02lbM3HoHbSHTHFAeChekF1xKJdleo="crossorigin="anonymous"
+                defer
+                >
+            </script><script 
+                src="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe-ui-default.min.js"integrity="sha256-UKkzOn/w1mBxRmLLGrSeyB4e1xbrp4xylgAWb3M42pU="crossorigin="anonymous"
+                defer
+                >
+            </script><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/default-skin/default-skin.min.css"crossorigin="anonymous"
+            ><link 
+                rel="stylesheet" 
+                href="https://cdn.jsdelivr.net/npm/photoswipe@4.1.3/dist/photoswipe.min.css"crossorigin="anonymous"
+            >
+
+            </main>
+        </div>
+        <script 
+                src="https://cdn.jsdelivr.net/npm/node-vibrant@3.1.6/dist/vibrant.min.js"integrity="sha256-awcR2jno4kI5X0zL8ex0vi2z&#43;KMkF24hUW8WePSA9HM="crossorigin="anonymous"
+                
+                >
+            </script><script type="text/javascript" src="/ts/main.e883e6023173a5f2064dd4f1b815b183117171d494589e9fcd415ca52e0f3298.js" defer></script>
+<script>
+    (function () {
+        const customFont = document.createElement('link');
+        customFont.href = "https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap";
+
+        customFont.type = "text/css";
+        customFont.rel = "stylesheet";
+
+        document.head.appendChild(customFont);
+    }());
+</script>
+
+    </body>
+</html>

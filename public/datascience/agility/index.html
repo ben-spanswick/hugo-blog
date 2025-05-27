@@ -1,20 +1,20 @@
 <!DOCTYPE html>
 <html lang="en-us" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Balancing rapid iteration with long-term sustainability">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="Real lessons from building a data science organization from 2 analysts to 20+ people across multiple business units in six years.">
 <title>How to Scale a Data Science Team Without Losing Agility</title>
 
 <link rel='canonical' href='http://192.168.100.63:1313/datascience/agility/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="How to Scale a Data Science Team Without Losing Agility">
-<meta property='og:description' content="Balancing rapid iteration with long-term sustainability">
+<meta property='og:description' content="Real lessons from building a data science organization from 2 analysts to 20+ people across multiple business units in six years.">
 <meta property='og:url' content='http://192.168.100.63:1313/datascience/agility/'>
-<meta property='og:site_name' content='My Blog'>
-<meta property='og:type' content='article'><meta property='article:section' content='Datascience' /><meta property='article:tag' content='data science' /><meta property='article:tag' content='scaling' /><meta property='article:tag' content='agility' /><meta property='article:tag' content='team building' /><meta property='article:tag' content='leadership' /><meta property='article:published_time' content='2025-03-17T02:59:30&#43;00:00'/><meta property='article:modified_time' content='2025-03-17T02:59:30&#43;00:00'/><meta property='og:image' content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta property='og:site_name' content='The Patch Panel'>
+<meta property='og:type' content='article'><meta property='article:section' content='Datascience' /><meta property='article:tag' content='Data Science' /><meta property='article:tag' content='Team Building' /><meta property='article:tag' content='Leadership' /><meta property='article:tag' content='Scaling' /><meta property='article:tag' content='Enterprise' /><meta property='article:published_time' content='2025-01-30T14:30:00-04:00'/><meta property='article:modified_time' content='2025-01-30T14:30:00-04:00'/><meta property='og:image' content='http://192.168.100.63:1313/img/head/agile.png' />
 <meta name="twitter:site" content="@@yourtwitter">
     <meta name="twitter:creator" content="@@yourtwitter"><meta name="twitter:title" content="How to Scale a Data Science Team Without Losing Agility">
-<meta name="twitter:description" content="Balancing rapid iteration with long-term sustainability"><meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:image" content='http://192.168.100.63:1313/images/default-thumbnail.png' />
+<meta name="twitter:description" content="Real lessons from building a data science organization from 2 analysts to 20+ people across multiple business units in six years."><meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:image" content='http://192.168.100.63:1313/img/head/agile.png' />
     <link rel="shortcut icon" href="/favicon.ico" />
 
     </head>
@@ -56,7 +56,7 @@
             <figure class="site-avatar">
                 <a href="/">
                 
-                    <img src="/img/headshot.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
+                    <img src="/img/headshot2.png" width="300" height="300" class="site-logo" loading="lazy" alt="Avatar">
                 
                 </a>
                 
@@ -67,8 +67,8 @@
         
         
         <div class="site-meta">
-            <h1 class="site-name"><a href="/">My Blog</a></h1>
-            <h2 class="site-description">Exploring Tech, Homelabs, &amp; Self-Hosting</h2>
+            <h1 class="site-name"><a href="/">The Patch Panel</a></h1>
+            <h2 class="site-description">Exploring AI, Tech, Homelabs, &amp; Self-Hosting</h2>
         </div>
     </header><ol class="menu" id="main-menu">
         
@@ -185,8 +185,16 @@
     
 
             <main class="main full-width">
-    <article class="main-article">
+    <article class="has-image main-article">
     <header class="article-header">
+        <div class="article-image">
+            <a href="/datascience/agility/">
+                
+                    <img src="/img/head/agile.png" loading="lazy" alt="Featured image of post How to Scale a Data Science Team Without Losing Agility" />
+                
+            </a>
+        </div>
+    
 
     <div class="article-details">
     
@@ -196,8 +204,8 @@
                 Data Science
             </a>
         
-            <a href="/categories/team-management/" >
-                Team Management
+            <a href="/categories/leadership/" >
+                Leadership&#34;
             </a>
         
     </header>
@@ -210,7 +218,7 @@
     
         
         <h3 class="article-subtitle">
-            Balancing rapid iteration with long-term sustainability
+            Real lessons from building a data science organization from 2 analysts to 20&#43; people across multiple business units in six years.
         </h3>
         
     </div>
@@ -231,7 +239,7 @@
   <path d="M3 11h16" />
   <path d="M18 16.496v1.504l1 1" />
 </svg>
-                <time class="article-time--published">Mar 17, 2025</time>
+                <time class="article-time--published">Jan 30, 2025</time>
             </div>
         
 
@@ -246,7 +254,7 @@
 
 
                 <time class="article-time--reading">
-                    3 minute read
+                    7 minute read
                 </time>
             </div>
         
@@ -261,101 +269,84 @@
     <section class="article-content">
     
     
-    <h1 id="how-to-scale-your-data-science-team-without-everything-falling-apart"><a href="#how-to-scale-your-data-science-team-without-everything-falling-apart" class="header-anchor"></a>How to Scale Your Data Science Team Without Everything Falling Apart
-</h1><p><em>A survival guide for growing fast without dying slow</em></p>
-<hr>
-<p><strong>The Curse of Success:</strong> You start with 4 badass data scientists crushing it in a cramped room. Leadership notices. Budget flows. You hire more people.</p>
-<p>18 months later? 30 people, 6-month deployment cycles, and meetings about meetings.</p>
-<p>I&rsquo;ve seen this horror movie. Here&rsquo;s how it ends differently.</p>
-<hr>
-<h2 id="the-death-spiral-why-scaling-kills-teams"><a href="#the-death-spiral-why-scaling-kills-teams" class="header-anchor"></a>The Death Spiral (Why Scaling Kills Teams)
-</h2><h3 id="communication-math-is-brutal"><a href="#communication-math-is-brutal" class="header-anchor"></a>Communication Math is Brutal
+    <h3 id="ai-summary"><a href="#ai-summary" class="header-anchor"></a>AI Summary
 </h3><ul>
-<li><strong>5 people</strong> = 10 possible connections</li>
-<li><strong>15 people</strong> = 105 connections</li>
-<li><strong>50 people</strong> = 1,225 potential relationships</li>
+<li>Scaling from 2 analysts to 20+ data scientists requires evolving from scrappy execution to structured operations while preserving speed</li>
+<li>Infrastructure dependencies become the primary scaling constraint in most enterprise environments</li>
+<li>Rigorous best practices early on actually accelerate agility as teams grow - you pay yourself back later</li>
+<li>Formalization becomes mandatory as you grow, but it should enable faster execution, not slow it down</li>
 </ul>
-<p><em>Good luck keeping everyone in the loop.</em></p>
-<h3 id="silos-build-themselves"><a href="#silos-build-themselves" class="header-anchor"></a>Silos Build Themselves
-</h3><p><strong>Small teams</strong> = everyone understands everything<br>
-<strong>Big teams</strong> = computer vision people speak Klingon to the NLP folks</p>
-<h3 id="technical-debt-compound-interest"><a href="#technical-debt-compound-interest" class="header-anchor"></a>Technical Debt Compound Interest
-</h3><p><strong>Year 1:</strong> &ldquo;We&rsquo;ll fix that later&rdquo;<br>
-<strong>Year 2:</strong> &ldquo;New people can&rsquo;t understand our code&rdquo;<br>
-<strong>Year 3:</strong> &ldquo;It takes 3 weeks to change a variable name&rdquo;</p>
-<h3 id="decision-paralysis"><a href="#decision-paralysis" class="header-anchor"></a>Decision Paralysis
-</h3><p><strong>Small team:</strong> Pivot Tuesday, deploy Friday<br>
-<strong>Big team:</strong> 3-week planning committee to choose a font</p>
 <hr>
-<h2 id="what-actually-works-the-antidote"><a href="#what-actually-works-the-antidote" class="header-anchor"></a>What Actually Works (The Antidote)
-</h2><h3 id="squad-structure"><a href="#squad-structure" class="header-anchor"></a>Squad Structure
-</h3><p><strong>Don&rsquo;t do this:</strong> Separate data engineering, modeling, and deployment teams<br>
-<strong>Do this:</strong> 4-7 person squads that own everything end-to-end</p>
-<p><em>One retail client saw 200% faster deployments after ditching functional silos.</em></p>
-<h3 id="build-platforms-not-just-models"><a href="#build-platforms-not-just-models" class="header-anchor"></a>Build Platforms, Not Just Models
-</h3><p><strong>The magic shift:</strong> Individual brilliance → Platform leverage</p>
-<p>Stop building one-off solutions. Build:</p>
+<h3 id="the-reality-check-nobody-talks-about"><a href="#the-reality-check-nobody-talks-about" class="header-anchor"></a>The Reality Check Nobody Talks About
+</h3><p>Six years ago, I walked into a room with two analysts and a mandate to build something bigger. Today, I&rsquo;m running a 20+ person data science organization spanning multiple business units, covering everything from operational optimization to customer experience modeling.</p>
+<p>The conventional scaling wisdom - squads, agile methodologies, minimal process - isn&rsquo;t wrong. But it&rsquo;s incomplete when you&rsquo;re operating in any enterprise environment where your biggest constraint isn&rsquo;t team dynamics or technical debt. It&rsquo;s waiting months for infrastructure teams to align with your growth trajectory.</p>
+<p>Let me walk you through what actually happens when you scale a data science team in the real world, not the startup fantasy version.</p>
+<h3 id="the-infrastructure-chokepoint"><a href="#the-infrastructure-chokepoint" class="header-anchor"></a>The Infrastructure Chokepoint
+</h3><p>The first hard lesson: your technical infrastructure will become your primary scaling bottleneck before you hit any of the sexy organizational challenges everyone writes about.</p>
+<p>Enterprise IT organizations have their own priorities, their own timelines, and their own risk tolerance. When you need new environments, tools, or access provisioned, you&rsquo;re not just asking for resources - you&rsquo;re asking them to deviate from their carefully orchestrated roadmap.</p>
+<blockquote>
+<p>The three-month delay for a single workspace deployment taught me more about enterprise scaling than any management book ever could.</p></blockquote>
+<p>This reality forces a different kind of strategic thinking. You can&rsquo;t just hire more people and expect linear productivity gains. You have to sequence your growth around infrastructure availability, which means getting really good at forecasting your technical needs 6-12 months ahead of your hiring plans.</p>
+<p>The practical solution: build relationships with infrastructure teams early, understand their constraints, and align your scaling timeline with their capacity. It&rsquo;s not glamorous, but it&rsquo;s the difference between a team that grows smoothly and one that spends half its time waiting for access to tools.</p>
+<h3 id="the-production-ready-paradox"><a href="#the-production-ready-paradox" class="header-anchor"></a>The Production-Ready Paradox
+</h3><p>Here&rsquo;s where most data science scaling advice falls apart: it assumes you have the luxury of iterative improvement from prototype to production. In most enterprise environments with real business impact, that&rsquo;s not sustainable.</p>
+<p>My team produces more models than our deployment pipeline can handle. The bottleneck isn&rsquo;t ideation or experimentation - it&rsquo;s getting things into production. The solution isn&rsquo;t hiring more deployment engineers; it&rsquo;s changing how data scientists operate.</p>
+<p>Now, I understand that not every team can require full production-grade code from day one. Your MLOps maturity, tooling, and business context all factor into what&rsquo;s realistic. But here&rsquo;s what I&rsquo;ve learned: <strong>implementing rigorous best practices early, while it seems to stifle agility, actually accelerates it as you scale.</strong></p>
+<p>You pay yourself back later.</p>
+<p>When data scientists write clean, documented, testable code from the start - even if it&rsquo;s not fully production-ready - the compound benefits are massive:</p>
 <ul>
-<li>Feature stores that everyone uses</li>
-<li>One-click deployment pipelines</li>
-<li>Self-service analytics for business users</li>
+<li>Faster code reviews and collaboration</li>
+<li>Easier debugging and maintenance</li>
+<li>Smoother handoffs to deployment teams</li>
+<li>Reduced technical debt that would otherwise cripple velocity</li>
 </ul>
-<p><em>One team invested 6 months in platforms, then productivity per person increased 40% as they scaled.</em></p>
-<h3 id="strategic-technical-debt"><a href="#strategic-technical-debt" class="header-anchor"></a>Strategic Technical Debt
-</h3><p><strong>Hot take:</strong> Some technical debt is good debt.</p>
-<p>We track debt in a registry:</p>
+<p>The mindset shift is crucial: <em>we&rsquo;re not researchers exploring possibilities; we&rsquo;re engineers building systems that solve business problems.</em> The rigor isn&rsquo;t about crushing creativity - it&rsquo;s about making creativity sustainable at scale.</p>
+<h3 id="when-to-put-away-childish-things"><a href="#when-to-put-away-childish-things" class="header-anchor"></a>When to Put Away Childish Things
+</h3><p>There&rsquo;s a moment in every scaling journey where informal processes stop working. You can feel it coming - decisions take longer, coordination becomes painful, and new team members struggle to understand how things actually get done.</p>
+<p>This is where the startup mentality has to evolve. Not abandoned - evolved.</p>
+<p>The early scrappy approach that got you from 2 to 8 people will kill you at 20. But the solution isn&rsquo;t to swing completely into bureaucracy. It&rsquo;s about formalizing the things that enable speed, not the things that slow you down.</p>
+<p><strong>What we formalized:</strong></p>
 <ul>
-<li>What it is</li>
-<li>What it costs us</li>
-<li>What it takes to fix</li>
+<li>Code standards and review processes</li>
+<li>Model governance and risk assessment</li>
+<li>Value capture documentation and ROI tracking</li>
+<li>Cross-functional collaboration protocols</li>
 </ul>
-<p>Then spend 20% of time paying down the expensive stuff.</p>
-<p><em>Result: 45% fewer production fires, faster feature velocity</em></p>
-<h3 id="tiered-governance"><a href="#tiered-governance" class="header-anchor"></a>Tiered Governance
-</h3><p><strong>Not everything needs the same red tape.</strong></p>
-<p><strong>Low risk experiments:</strong> Minimal oversight<br>
-<strong>Production systems:</strong> Standard controls<br>
-<strong>Critical infrastructure:</strong> Full governance</p>
-<p><em>70% faster approvals for experimental work, stronger controls where it matters</em></p>
-<hr>
-<h2 id="the-scaling-stages"><a href="#the-scaling-stages" class="header-anchor"></a>The Scaling Stages
-</h2><h3 id="stage-1-the-scrappy-team-3-8-people"><a href="#stage-1-the-scrappy-team-3-8-people" class="header-anchor"></a>Stage 1: The Scrappy Team (3-8 people)
-</h3><p><strong>Vibe:</strong> Everyone does everything, moves fast, proves value<br>
-<strong>Challenge:</strong> Limited resources, constant context switching</p>
-<h3 id="stage-2-growing-pains-8-20-people"><a href="#stage-2-growing-pains-8-20-people" class="header-anchor"></a>Stage 2: Growing Pains (8-20 people)
-</h3><p><strong>Vibe:</strong> Adding process without killing speed<br>
-<strong>Challenge:</strong> This is where most teams either figure it out or die</p>
-<h3 id="stage-3-scaled-function-20-50-people"><a href="#stage-3-scaled-function-20-50-people" class="header-anchor"></a>Stage 3: Scaled Function (20-50+ people)
-</h3><p><strong>Vibe:</strong> Platform thinking, real governance, coordination focus<br>
-<strong>Challenge:</strong> Innovation vs bureaucracy balance</p>
-<p><em>Pro tip: When I inherited a chaotic 25-person team, we had to step back to Stage 2 before scaling forward. Felt slow, accelerated everything.</em></p>
-<hr>
-<h2 id="success-metrics-that-matter"><a href="#success-metrics-that-matter" class="header-anchor"></a>Success Metrics That Matter
-</h2><p>Forget traditional metrics. Track these:</p>
-<p><strong>Time from idea to production</strong> → Should stay flat or improve<br>
-<strong>Deployment frequency</strong> → How often you ship<br>
-<strong>Onboarding time</strong> → How fast new people contribute<br>
-<strong>Maintenance overhead</strong> → % of time keeping things running vs building<br>
-<strong>Cross-team collaboration</strong> → Are people working together or hiding?</p>
-<hr>
-<h2 id="the-uncomfortable-truth"><a href="#the-uncomfortable-truth" class="header-anchor"></a>The Uncomfortable Truth
-</h2><p>The things that make small teams great become liabilities at scale:</p>
+<p><strong>What we kept informal:</strong></p>
 <ul>
-<li>❌ Minimal process</li>
-<li>❌ Informal communication</li>
-<li>❌ Everyone doing everything</li>
+<li>Experimental project approval</li>
+<li>Individual learning and development paths</li>
+<li>Day-to-day team coordination</li>
+<li>Technical architecture decisions within established patterns</li>
 </ul>
-<p>But the answer isn&rsquo;t bureaucracy. It&rsquo;s <strong>evolution.</strong></p>
-<p><strong>The principles stay the same:</strong> Speed, ownership, experimentation, impact<br>
-<strong>The implementation changes:</strong> Structure that enables, platforms that amplify, teams that preserve autonomy</p>
-<hr>
-<h2 id="bottom-line"><a href="#bottom-line" class="header-anchor"></a>Bottom Line
-</h2><p>Most data science teams that scale successfully don&rsquo;t preserve what they had—they evolve into what they need to become.</p>
-<p>The goal isn&rsquo;t staying small. It&rsquo;s staying effective at whatever size your business requires.</p>
-<p>Because the alternative is becoming one of those expensive teams that produces impressive PowerPoints and not much else.</p>
-<p>And nobody wants to be that team.</p>
-<hr>
-<p><em>Scaling isn&rsquo;t about doing more of the same. It&rsquo;s about doing different things that work at the new scale. The math doesn&rsquo;t lie—but neither does good strategy.</em></p>
+<p>The key insight: formalization should accelerate decision-making for routine work, preserving the informal speed for the work that actually requires creativity and judgment.</p>
+<h3 id="the-multi-business-unit-complexity-layer"><a href="#the-multi-business-unit-complexity-layer" class="header-anchor"></a>The Multi-Business Unit Complexity Layer
+</h3><p>Scaling across multiple business units adds a dimension that most scaling advice ignores entirely. You&rsquo;re not just managing team growth - you&rsquo;re managing different stakeholder expectations, varying technical maturity levels, and competing priorities that may not align.</p>
+<p>Each business unit has its own definition of success, its own timeline pressures, and its own tolerance for experimentation. What works for supply chain optimization in one area might be completely inappropriate for customer analytics in another.</p>
+<p>The solution isn&rsquo;t trying to force standardization everywhere. It&rsquo;s about building <em>platforms</em> that can accommodate different use cases while maintaining consistency in governance and quality standards.</p>
+<p>We built shared infrastructure - feature stores, deployment pipelines, monitoring systems - but allowed flexibility in how each business unit applied the capabilities to their specific challenges.</p>
+<h3 id="value-capture-as-a-scaling-strategy"><a href="#value-capture-as-a-scaling-strategy" class="header-anchor"></a>Value Capture as a Scaling Strategy
+</h3><p>As your team grows, the pressure to demonstrate ROI becomes exponentially more intense. A two-person analytics team can fly under the radar. A 20-person organization with a multi-million-dollar budget cannot.</p>
+<p>This is where many data science teams fail. They treat value capture as an afterthought, something to document after the fact for reporting purposes. But at scale, value capture becomes a core competency that determines whether you continue to grow or get budget-cut into irrelevance.</p>
+<p><strong>Our approach:</strong></p>
+<ul>
+<li>Every project starts with a business case and success metrics</li>
+<li>We track not just technical performance but business impact</li>
+<li>Quarterly reviews focus on outcomes, not outputs</li>
+<li>We proactively communicate wins and learnings to stakeholders</li>
+</ul>
+<p>The uncomfortable truth: at scale, your technical excellence matters less than your ability to articulate and capture business value. Teams that can&rsquo;t make this transition don&rsquo;t survive budget cycles.</p>
+<h3 id="the-rigor-dividend"><a href="#the-rigor-dividend" class="header-anchor"></a>The Rigor Dividend
+</h3><p>The biggest misconception about scaling data science teams is that more process means less agility. In my experience, the opposite is true - but only if you implement the right kind of rigor.</p>
+<p>Rigorous code standards feel slow when you&rsquo;re starting out. But six months later, when you can onboard new team members in days instead of weeks, when debugging takes minutes instead of hours, when models can be updated and deployed without archaeology projects to understand the original code - that&rsquo;s when you realize you&rsquo;ve been paying yourself back.</p>
+<p>The teams that maintain agility at scale aren&rsquo;t the ones that avoid process. They&rsquo;re the ones that implement process strategically, focusing on the practices that create compound returns on productivity.</p>
+<h3 id="the-evolution-mindset"><a href="#the-evolution-mindset" class="header-anchor"></a>The Evolution Mindset
+</h3><p>The biggest mistake I see in scaling data science teams is trying to preserve what made the early team successful instead of evolving into what the scaled team needs to become.</p>
+<p>The principles stay constant: speed, ownership, experimentation, impact. But the implementation has to change completely.</p>
+<p>A 20-person team can&rsquo;t operate like a 5-person team any more than a 5-person team should operate like a 20-person team. The magic is in evolving the structure to support the principles at whatever scale your business requires.</p>
+<p>Because the alternative - becoming one of those expensive teams that produces impressive PowerPoints and minimal business impact - isn&rsquo;t just a failure of process. It&rsquo;s a failure to recognize that scaling is fundamentally about evolution, not preservation.</p>
+<p>The math of team growth is unforgiving, but so is the market for data science value. Teams that figure out how to evolve while staying effective don&rsquo;t just survive scaling - they become indispensable.</p>
+<p>And in a world where data science budgets are under constant scrutiny, indispensable is exactly where you want to be.</p>
 
 </section>
 
@@ -366,13 +357,13 @@
         
             <a href="/tags/data-science/">Data Science</a>
         
-            <a href="/tags/scaling/">Scaling</a>
-        
-            <a href="/tags/agility/">Agility</a>
-        
             <a href="/tags/team-building/">Team Building</a>
         
             <a href="/tags/leadership/">Leadership</a>
+        
+            <a href="/tags/scaling/">Scaling</a>
+        
+            <a href="/tags/enterprise/">Enterprise</a>
         
     </section>
 
@@ -431,9 +422,53 @@
         <div class="flex article-list--tile">
             
                 
-<article class="">
+<article class="has-image">
+    <a href="/datascience/foundations/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/head/highimpact.png" loading="lazy" data-key="" data-hash="/img/head/highimpact.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Building High Impact Data Science Teams</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
+    <a href="/datascience/genius/">
+        
+        
+            <div class="article-image">
+                
+                    <img src="/img/head/genius.png" loading="lazy" data-key="" data-hash="/img/head/genius.png"/>
+                
+            </div>
+        
+
+        <div class="article-details">
+            <h2 class="article-title">Why Hiring Only Senior Data Scientists Will Destroy Your Team</h2>
+        </div>
+    </a>
+</article>
+
+            
+                
+<article class="has-image">
     <a href="/datascience/leaders/">
         
+        
+            <div class="article-image">
+                
+                    <img src="/img/head/leaders.png" loading="lazy" data-key="" data-hash="/img/head/leaders.png"/>
+                
+            </div>
         
 
         <div class="article-details">
@@ -444,39 +479,19 @@
 
             
                 
-<article class="">
-    <a href="/datascience/businessstrategy/">
+<article class="has-image">
+    <a href="/datascience/genaiframework/">
         
         
-
-        <div class="article-details">
-            <h2 class="article-title">How to Align Data Science with Business Strategy (And Stop Being a Science Project Team)</h2>
-        </div>
-    </a>
-</article>
-
-            
+            <div class="article-image">
                 
-<article class="">
-    <a href="/datascience/techdebt/">
-        
-        
-
-        <div class="article-details">
-            <h2 class="article-title">Managing Tech Debt: How to Stop Paying the Interest and Start Building for Scale</h2>
-        </div>
-    </a>
-</article>
-
-            
+                    <img src="/img/head/genaiframework.png" loading="lazy" data-key="" data-hash="/img/head/genaiframework.png"/>
                 
-<article class="">
-    <a href="/datascience/8020rule/">
-        
+            </div>
         
 
         <div class="article-details">
-            <h2 class="article-title">The 80/20 Rule of Data Science: Focus on What Actually Moves the Needle</h2>
+            <h2 class="article-title">Building a Production-Ready GenAI Framework for Document Intelligence</h2>
         </div>
     </a>
 </article>
@@ -497,7 +512,7 @@
         
             2024 - 
         
-        2025 My Blog
+        2025 The Patch Panel
     </section>
     
     <section class="powerby">
