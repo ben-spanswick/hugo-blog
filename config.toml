@@ -122,5 +122,5 @@ enableEmoji = true
 
   [[menu.main]]
     name = "Resume"
-    url = "/Spanswick_Resume2025.pdf/"
+    url = "/Spanswick_Resume2025.pdf"
     weight = 8
