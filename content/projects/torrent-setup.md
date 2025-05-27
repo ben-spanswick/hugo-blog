@@ -4,6 +4,7 @@ date: 2025-05-14T13:00:00-04:00
 description: "How I built a private, automated media pipeline with bulletproof VPN, container orchestration, and seamless syncing to Unraid."
 categories: ["homelab", "self-hosting", "privacy"]
 tags: ["homelab", "self-hosting", "torrenting", "automation", "gluetun", "qbittorrent", "sonarr", "radarr", "audiobookshelf", "unraid"]
+image: "/img/head/arr.png"
 draft: false
 ------------
 

@@ -85,6 +85,6 @@ This creates a positive feedback loop that could lead to rapid capability advanc
 
 Google DeepMind is currently [developing a user interface](https://venturebeat.com/ai/meet-alphaevolve-the-google-ai-that-writes-its-own-code-and-just-saved-millions-in-computing-costs/) and planning an Early Access Program for selected academic researchers, with broader availability being explored.
 
-My hope is that this provides a new lens for your own work in algorithmic optimization and automated discovery. The conversation doesn't end here; I'm keen to hear your perspective on how evolutionary approaches might apply to your specific domain challenges..png"
+My hope is that this provides a new lens for your own work in algorithmic optimization and automated discovery. The conversation doesn't end here; I'm keen to hear your perspective on how evolutionary approaches might apply to your specific domain challenges...
 ---
 
