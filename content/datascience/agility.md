@@ -1,145 +1,124 @@
 ---
 title: "How to Scale a Data Science Team Without Losing Agility"
-date: 2025-03-17T02:59:30Z
+description: "Real lessons from building a data science organization from 2 analysts to 20+ people across multiple business units in six years."
+date: 2025-01-30T14:30:00-04:00
 draft: false
-categories: ["Data Science", "Team Management"]
-tags: ["data science", "scaling", "agility", "team building", "leadership"]
-description: "Balancing rapid iteration with long-term sustainability"
+tags: ["Data Science", "Team Building", "Leadership", "Scaling", "Enterprise"]
+categories: ["Data Science", Leadership"]
+image: "/img/head/agile.png"
 ---
 
-# How to Scale Your Data Science Team Without Everything Falling Apart
+### AI Summary
 
-*A survival guide for growing fast without dying slow*
-
----
-
-**The Curse of Success:** You start with 4 badass data scientists crushing it in a cramped room. Leadership notices. Budget flows. You hire more people.
-
-18 months later? 30 people, 6-month deployment cycles, and meetings about meetings.
-
-I've seen this horror movie. Here's how it ends differently.
+- Scaling from 2 analysts to 20+ data scientists requires evolving from scrappy execution to structured operations while preserving speed
+- Infrastructure dependencies become the primary scaling constraint in most enterprise environments
+- Rigorous best practices early on actually accelerate agility as teams grow - you pay yourself back later
+- Formalization becomes mandatory as you grow, but it should enable faster execution, not slow it down
 
 ---
 
-## The Death Spiral (Why Scaling Kills Teams)
+### The Reality Check Nobody Talks About
 
-### Communication Math is Brutal
-- **5 people** = 10 possible connections
-- **15 people** = 105 connections  
-- **50 people** = 1,225 potential relationships
+Six years ago, I walked into a room with two analysts and a mandate to build something bigger. Today, I'm running a 20+ person data science organization spanning multiple business units, covering everything from operational optimization to customer experience modeling.
 
-*Good luck keeping everyone in the loop.*
+The conventional scaling wisdom - squads, agile methodologies, minimal process - isn't wrong. But it's incomplete when you're operating in any enterprise environment where your biggest constraint isn't team dynamics or technical debt. It's waiting months for infrastructure teams to align with your growth trajectory.
 
-### Silos Build Themselves
-**Small teams** = everyone understands everything  
-**Big teams** = computer vision people speak Klingon to the NLP folks
+Let me walk you through what actually happens when you scale a data science team in the real world, not the startup fantasy version.
 
-### Technical Debt Compound Interest
-**Year 1:** "We'll fix that later"  
-**Year 2:** "New people can't understand our code"  
-**Year 3:** "It takes 3 weeks to change a variable name"
+### The Infrastructure Chokepoint
 
-### Decision Paralysis
-**Small team:** Pivot Tuesday, deploy Friday  
-**Big team:** 3-week planning committee to choose a font
+The first hard lesson: your technical infrastructure will become your primary scaling bottleneck before you hit any of the sexy organizational challenges everyone writes about.
 
----
+Enterprise IT organizations have their own priorities, their own timelines, and their own risk tolerance. When you need new environments, tools, or access provisioned, you're not just asking for resources - you're asking them to deviate from their carefully orchestrated roadmap.
 
-## What Actually Works (The Antidote)
+> The three-month delay for a single workspace deployment taught me more about enterprise scaling than any management book ever could.
 
-### Squad Structure
-**Don't do this:** Separate data engineering, modeling, and deployment teams  
-**Do this:** 4-7 person squads that own everything end-to-end
+This reality forces a different kind of strategic thinking. You can't just hire more people and expect linear productivity gains. You have to sequence your growth around infrastructure availability, which means getting really good at forecasting your technical needs 6-12 months ahead of your hiring plans.
 
-*One retail client saw 200% faster deployments after ditching functional silos.*
+The practical solution: build relationships with infrastructure teams early, understand their constraints, and align your scaling timeline with their capacity. It's not glamorous, but it's the difference between a team that grows smoothly and one that spends half its time waiting for access to tools.
 
-### Build Platforms, Not Just Models
-**The magic shift:** Individual brilliance → Platform leverage
+### The Production-Ready Paradox
 
-Stop building one-off solutions. Build:
-- Feature stores that everyone uses
-- One-click deployment pipelines  
-- Self-service analytics for business users
+Here's where most data science scaling advice falls apart: it assumes you have the luxury of iterative improvement from prototype to production. In most enterprise environments with real business impact, that's not sustainable.
 
-*One team invested 6 months in platforms, then productivity per person increased 40% as they scaled.*
+My team produces more models than our deployment pipeline can handle. The bottleneck isn't ideation or experimentation - it's getting things into production. The solution isn't hiring more deployment engineers; it's changing how data scientists operate.
 
-### Strategic Technical Debt
-**Hot take:** Some technical debt is good debt.
+Now, I understand that not every team can require full production-grade code from day one. Your MLOps maturity, tooling, and business context all factor into what's realistic. But here's what I've learned: **implementing rigorous best practices early, while it seems to stifle agility, actually accelerates it as you scale.**
 
-We track debt in a registry:
-- What it is
-- What it costs us  
-- What it takes to fix
+You pay yourself back later.
 
-Then spend 20% of time paying down the expensive stuff.
+When data scientists write clean, documented, testable code from the start - even if it's not fully production-ready - the compound benefits are massive:
+- Faster code reviews and collaboration
+- Easier debugging and maintenance
+- Smoother handoffs to deployment teams  
+- Reduced technical debt that would otherwise cripple velocity
 
-*Result: 45% fewer production fires, faster feature velocity*
+The mindset shift is crucial: *we're not researchers exploring possibilities; we're engineers building systems that solve business problems.* The rigor isn't about crushing creativity - it's about making creativity sustainable at scale.
 
-### Tiered Governance
-**Not everything needs the same red tape.**
+### When to Put Away Childish Things
 
-**Low risk experiments:** Minimal oversight  
-**Production systems:** Standard controls  
-**Critical infrastructure:** Full governance
+There's a moment in every scaling journey where informal processes stop working. You can feel it coming - decisions take longer, coordination becomes painful, and new team members struggle to understand how things actually get done.
 
-*70% faster approvals for experimental work, stronger controls where it matters*
+This is where the startup mentality has to evolve. Not abandoned - evolved.
 
----
+The early scrappy approach that got you from 2 to 8 people will kill you at 20. But the solution isn't to swing completely into bureaucracy. It's about formalizing the things that enable speed, not the things that slow you down.
 
-## The Scaling Stages
+**What we formalized:**
+- Code standards and review processes
+- Model governance and risk assessment
+- Value capture documentation and ROI tracking
+- Cross-functional collaboration protocols
 
-### Stage 1: The Scrappy Team (3-8 people)
-**Vibe:** Everyone does everything, moves fast, proves value  
-**Challenge:** Limited resources, constant context switching
+**What we kept informal:**
+- Experimental project approval
+- Individual learning and development paths
+- Day-to-day team coordination
+- Technical architecture decisions within established patterns
 
-### Stage 2: Growing Pains (8-20 people)  
-**Vibe:** Adding process without killing speed  
-**Challenge:** This is where most teams either figure it out or die
+The key insight: formalization should accelerate decision-making for routine work, preserving the informal speed for the work that actually requires creativity and judgment.
 
-### Stage 3: Scaled Function (20-50+ people)
-**Vibe:** Platform thinking, real governance, coordination focus  
-**Challenge:** Innovation vs bureaucracy balance
+### The Multi-Business Unit Complexity Layer
 
-*Pro tip: When I inherited a chaotic 25-person team, we had to step back to Stage 2 before scaling forward. Felt slow, accelerated everything.*
+Scaling across multiple business units adds a dimension that most scaling advice ignores entirely. You're not just managing team growth - you're managing different stakeholder expectations, varying technical maturity levels, and competing priorities that may not align.
 
----
+Each business unit has its own definition of success, its own timeline pressures, and its own tolerance for experimentation. What works for supply chain optimization in one area might be completely inappropriate for customer analytics in another.
 
-## Success Metrics That Matter
+The solution isn't trying to force standardization everywhere. It's about building *platforms* that can accommodate different use cases while maintaining consistency in governance and quality standards.
 
-Forget traditional metrics. Track these:
+We built shared infrastructure - feature stores, deployment pipelines, monitoring systems - but allowed flexibility in how each business unit applied the capabilities to their specific challenges.
 
-**Time from idea to production** → Should stay flat or improve  
-**Deployment frequency** → How often you ship  
-**Onboarding time** → How fast new people contribute  
-**Maintenance overhead** → % of time keeping things running vs building  
-**Cross-team collaboration** → Are people working together or hiding?
+### Value Capture as a Scaling Strategy
 
----
+As your team grows, the pressure to demonstrate ROI becomes exponentially more intense. A two-person analytics team can fly under the radar. A 20-person organization with a multi-million-dollar budget cannot.
 
-## The Uncomfortable Truth
+This is where many data science teams fail. They treat value capture as an afterthought, something to document after the fact for reporting purposes. But at scale, value capture becomes a core competency that determines whether you continue to grow or get budget-cut into irrelevance.
 
-The things that make small teams great become liabilities at scale:
-- ❌ Minimal process
-- ❌ Informal communication  
-- ❌ Everyone doing everything
+**Our approach:**
+- Every project starts with a business case and success metrics
+- We track not just technical performance but business impact
+- Quarterly reviews focus on outcomes, not outputs
+- We proactively communicate wins and learnings to stakeholders
 
-But the answer isn't bureaucracy. It's **evolution.**
+The uncomfortable truth: at scale, your technical excellence matters less than your ability to articulate and capture business value. Teams that can't make this transition don't survive budget cycles.
 
-**The principles stay the same:** Speed, ownership, experimentation, impact  
-**The implementation changes:** Structure that enables, platforms that amplify, teams that preserve autonomy
+### The Rigor Dividend
 
----
+The biggest misconception about scaling data science teams is that more process means less agility. In my experience, the opposite is true - but only if you implement the right kind of rigor.
 
-## Bottom Line
+Rigorous code standards feel slow when you're starting out. But six months later, when you can onboard new team members in days instead of weeks, when debugging takes minutes instead of hours, when models can be updated and deployed without archaeology projects to understand the original code - that's when you realize you've been paying yourself back.
 
-Most data science teams that scale successfully don't preserve what they had—they evolve into what they need to become.
+The teams that maintain agility at scale aren't the ones that avoid process. They're the ones that implement process strategically, focusing on the practices that create compound returns on productivity.
 
-The goal isn't staying small. It's staying effective at whatever size your business requires.
+### The Evolution Mindset
 
-Because the alternative is becoming one of those expensive teams that produces impressive PowerPoints and not much else.
+The biggest mistake I see in scaling data science teams is trying to preserve what made the early team successful instead of evolving into what the scaled team needs to become.
 
-And nobody wants to be that team.
+The principles stay constant: speed, ownership, experimentation, impact. But the implementation has to change completely.
 
----
+A 20-person team can't operate like a 5-person team any more than a 5-person team should operate like a 20-person team. The magic is in evolving the structure to support the principles at whatever scale your business requires.
 
-*Scaling isn't about doing more of the same. It's about doing different things that work at the new scale. The math doesn't lie—but neither does good strategy.*
+Because the alternative - becoming one of those expensive teams that produces impressive PowerPoints and minimal business impact - isn't just a failure of process. It's a failure to recognize that scaling is fundamentally about evolution, not preservation.
+
+The math of team growth is unforgiving, but so is the market for data science value. Teams that figure out how to evolve while staying effective don't just survive scaling - they become indispensable.
+
+And in a world where data science budgets are under constant scrutiny, indispensable is exactly where you want to be.
