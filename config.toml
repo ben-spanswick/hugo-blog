@@ -30,7 +30,7 @@ enableEmoji = true
   [params.sidebar]
     compact = false
     emoji = "💾"
-    subtitle = "Exploring Tech, Homelabs, & Self-Hosting"
+    subtitle = "Exploring AI, Tech, Homelabs, & Self-Hosting"
 
     [params.sidebar.avatar]
       enabled = true
