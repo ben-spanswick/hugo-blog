@@ -8,7 +8,6 @@ categories: ["AI", "News"]
 image: "/img/head/gencast.png"
 ---
 
-----
 
 ### AI Summary
 
@@ -17,7 +16,7 @@ image: "/img/head/gencast.png"
 - For utilities, better weather prediction could transform storm response from reactive damage control to proactive grid hardening and crew positioning
 - Integration challenges remain significant, including system compatibility, operator training, and building trust in AI-generated forecasts
 
-----
+---
 
 ### The Old Guard: Physics vs. Reality
 
