@@ -1,7 +1,7 @@
 ---
 title: "Ann Arbor's Energy Revolution: The Real Challenge Nobody's Talking About"
 description: "While everyone focuses on the tech, Ann Arbor's sustainable energy utility faces a capital problem that could make or break the entire experiment."
-date: 2025-02-20yT14:30:00-04:00
+date: 2025-02-20
 draft: false
 tags: ["energy", "microgrids", "utilities", "infrastructure", "financing"]
 categories: ["Energy", "Technology", "New"]
