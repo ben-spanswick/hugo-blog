@@ -35,7 +35,7 @@ enableEmoji = true
     [params.sidebar.avatar]
       enabled = true
       local = false
-      src = "/img/headshot.png"  # Updated path (must be inside /static/)
+      src = "/img/headshot2.png"  # Updated path (must be inside /static/)
 
 [params.article]
     headingAnchor = true
