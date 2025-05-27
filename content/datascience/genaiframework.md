@@ -1,387 +1,247 @@
 ---
-title: "Building a Modular GenAI Framework for Document Retrieval and Interaction"
-date: 2025-03-21T02:08:37Z
+title: "Building a Production-Ready GenAI Framework for Document Intelligence"
+description: "A comprehensive technical guide to building scalable, accurate document AI systems that actually work in enterprise environments - no hallucinations, full citations, real code."
+date: 2025-04-02T14:30:00-04:00
 draft: false
-categories: ["Artificial Intelligence", "Document Processing"]
-tags: ["generative AI", "RAG", "LexRank", "vector databases", "document retrieval", "legal tech"]
-description: "A practical guide to building a scalable framework for retrieving and interacting with information from thousands of documents"
+tags: ["AI", "RAG", "Document Processing", "Python", "Enterprise", "Tutorial"]
+categories: ["Development", "Machine Learning", "Enterprise AI"]
+image: "/img/head/genaiframework.png"
 ---
 
-# Building AI That Actually Reads Documents (Instead of Just Pretending To)
+### AI Summary
 
-*How we built a system that can handle thousands of legal docs without hallucinating*
-
----
-
-We had a problem. A big one.
-
-Our legal team was drowning in documents - contracts, case law, regulatory filings, thousands of pages of dense text that someone needed to actually understand. The usual approach of "hire more paralegals" wasn't working, and basic search was like trying to find a needle in a haystack made of other needles.
-
-ChatGPT? Great for writing emails, terrible for legal research. It would confidently cite cases that didn't exist and misquote clauses from contracts. Not exactly what you want when accuracy matters.
-
-So we built something better. A system that combines multiple AI approaches to actually understand documents, track its sources, and admit when it doesn't know something.
-
-Here's how we did it (and how you can adapt it for your own document nightmares).
+- Details how to build a multi-layered document AI system that combines RAG, LexRank, and vector databases for accurate information retrieval
+- Provides complete Python implementations for hierarchical chunking, citation tracking, and fact verification
+- Explains why basic AI solutions fail for serious document work and how to engineer around those limitations
+- Introduces workflow orchestration concepts and hints at upcoming n8n pipeline integration for enterprise deployment
 
 ---
 
-## Why Basic AI Solutions Don't Work for Serious Documents
+### When Copilot Meets Reality (And Reality Wins)
 
-### The Hallucination Problem
-Ask ChatGPT about a specific contract clause, and it might give you a beautifully written answer that's completely made up. For casual use? Maybe okay. For legal work? Career-ending.
+Recently, a team of data architects tackled thousands of regulatory documents for a rate case using GitHub Copilot and some basic RAG techniques. The idea was solid - use AI to extract key information from decades of PUC filings, case law, and regulatory precedents. The execution? Let's just say we had to provide significant support to help them build a more robust solution.
 
-### The Context Problem  
-Most AI systems can only look at small chunks of text at once. But real questions often require understanding connections across multiple documents, sections, and time periods.
+The problem wasn't the ambition. It was the approach. Copilot excels at generating boilerplate code, but building document intelligence systems requires understanding the subtle interplay between retrieval strategies, summarization techniques, and domain-specific accuracy requirements. You can't just prompt your way to production-ready infrastructure.
 
-### The Citation Problem
-"The AI said so" isn't a valid source. You need to know exactly where information comes from, with page numbers and direct quotes.
+I don't get to put my fingers on the keys much at work anymore, so I wanted to take a stab at solving this problem properly in my personal time. This is the approach I came up with - a modular, robust framework that handles real enterprise document complexity without the hallucinations and citation disasters that plague most AI document tools.
 
-### The Precision Problem
-In domains like law or medicine, words matter. Paraphrasing can change meaning completely. Sometimes you need the exact original text, not an AI's interpretation.
+Here's the complete technical implementation, along with some thoughts on where workflow orchestration tools like n8n fit into this picture.
 
----
+### Why Standard RAG Falls Apart Under Pressure
 
-## The Stack That Actually Works
+Before diving into the solution, let's be clear about why simple Retrieval Augmented Generation doesn't cut it for serious document work:
 
-### Beyond Basic RAG
-Everyone's doing Retrieval Augmented Generation now - find relevant text chunks, feed them to an LLM, get an answer. It's a start, but it has serious limitations:
+**The Citation Nightmare**: Basic RAG systems lose track of sources during the retrieval-generation process. When a regulatory attorney asks where specific information came from, "the AI said so" isn't an acceptable answer.
 
-- Can't reason across multiple documents
-- Misses context spread across sections  
-- Terrible at citations
-- No way to prioritize authoritative sources
+**Context Fragmentation**: Real questions often require synthesizing information across multiple documents, sections, and time periods. Standard chunking strategies miss these connections entirely.
 
-We use RAG as a foundation, then add several layers on top.
+**Authority Blind Spots**: Not all documents carry equal weight. A Federal Register entry should override a random industry blog post, but vanilla vector similarity doesn't understand that hierarchy.
 
-### LexRank: The Summarization Secret Weapon
-While everyone obsesses over RAG, fewer people know about LexRank. It's an algorithm that finds the most important sentences in a document by treating them like a network and finding the most "central" ones.
+**Precision vs. Paraphrasing**: In domains like utilities regulation, exact wording matters. AI-generated summaries can subtly change meaning in ways that create compliance issues.
 
-**Why it matters:** LexRank extracts actual sentences from documents instead of generating new text. When precise wording matters (like in legal or technical docs), this is huge.
+The solution isn't abandoning AI - it's engineering systems that handle these complexities systematically.
 
-### Vector Databases: Choosing Your Retrieval Engine
-We tested several options:
+### Core Architecture: Beyond Simple RAG
 
-**Pinecone:** Fast but limited filtering  
-**Weaviate:** Great hybrid search, more complex setup  
-**Chroma:** Simple but doesn't scale well  
-**Azure AI Search:** Good all-around with strong enterprise features
+The foundation of any robust document AI system starts with how you structure and process the content. Most implementations get this wrong by treating all text chunks equally and losing critical context in the process.
 
-We went with Weaviate for its hybrid search - combining semantic similarity with traditional keyword matching.
+The hierarchical processing approach preserves document structure through multi-level chunking:
 
-### Hierarchical Chunking
-Instead of chopping documents into random pieces, we create multiple levels:
-
-1. **Document-level** - for initial filtering
-2. **Section-level** - for main retrieval  
-3. **Paragraph-level** - for detailed extraction
-4. **Sentence-level** - for LexRank analysis
-
-This lets the system zoom in and out as needed.
-
----
-
-## The Document Processing Pipeline
-
-### Making Sense of Messy Documents
-
-Most documents are a mess - scanned PDFs, weird formatting, inconsistent structure. The preprocessing stage is crucial:
-
-**Format conversion:** Get everything into clean text  
-**Structure preservation:** Keep headings, lists, formatting  
-**Metadata extraction:** Pull out dates, authors, document types  
-**Entity recognition:** Find organizations, people, legal citations  
-**Cross-reference detection:** Map connections between documents
-
-*Pro tip: Spend time here. Garbage in, garbage out applies 10x to document AI.*
-
-### Smart Chunking Strategy
+> **Key Innovation**: Instead of chopping documents into random pieces, create multiple levels - document, section, paragraph, and sentence. This lets the system zoom in and out as needed while maintaining proper attribution.
 
 ```python
-def create_hierarchical_chunks(document):
-    # Document-level embedding for broad filtering
-    doc_embedding = embed_text(document.full_text)
-    
-    # Section-level chunks based on headings
-    sections = split_by_headings(document.full_text)
-    section_chunks = []
-    for section in sections:
-        section_chunks.append({
-            "text": section,
-            "embedding": embed_text(section),
-            "metadata": document.metadata
-        })
-    
-    # Paragraph-level for detailed retrieval
-    paragraph_chunks = []
-    for section in sections:
-        paragraphs = split_by_paragraphs(section)
-        for paragraph in paragraphs:
-            paragraph_chunks.append({
-                "text": paragraph,
-                "embedding": embed_text(paragraph),
-                "parent_section": section[:100]
-            })
-    
-    return {
-        "document": doc_embedding,
-        "sections": section_chunks,
-        "paragraphs": paragraph_chunks
+@dataclass
+class DocumentChunk:
+    text: str
+    embedding: np.ndarray
+    document_id: str
+    chunk_id: str
+    chunk_type: str  # 'document', 'section', 'paragraph'
+    metadata: Dict
+    parent_chunk_id: Optional[str] = None
+    authority_score: float = 0.0
+```
+
+The authority scoring is crucial here. Not all documents carry equal weight:
+
+```python
+authority_weights = {
+    'federal_register': 1.0,
+    'puc_filing': 0.9,
+    'court_decision': 0.85,
+    'regulatory_guidance': 0.8,
+    'industry_standard': 0.6,
+    'company_document': 0.4,
+    'blog_post': 0.1
+}
+```
+
+This simple weighting system means a Federal Register entry will always outrank a blog post, even if the blog post has higher semantic similarity to the query.
+
+### Multi-Stage Retrieval: Where the Magic Happens
+
+Simple vector similarity isn't enough for enterprise document work. You need a retrieval system that understands authority, context, and the nuances of how information connects across documents.
+
+The multi-stage approach works like this:
+
+1. **Query Expansion**: Add domain-specific terms automatically
+2. **Initial Retrieval**: Vector similarity across all chunks  
+3. **Authority Weighting**: Boost results from reliable sources
+4. **Multi-Signal Re-ranking**: Combine similarity, keyword overlap, and context coherence
+5. **Context Expansion**: Add parent sections for complete picture
+
+Here's the interesting part - the authority weighting:
+
+```python
+# Authority-weighted score
+authority_boost = 0.7 + 0.3 * chunk.authority_score
+boosted_score = similarity_score * authority_boost
+```
+
+This means a Federal Register document (authority score 1.0) gets a 100% boost to its similarity score, while a blog post (authority score 0.1) gets only a 73% boost. The math ensures authoritative sources rise to the top even when semantic similarity is close.
+
+The re-ranking stage combines multiple signals:
+
+```python
+final_score = (
+    authority_weighted_score * 0.6 +
+    keyword_overlap_score * 0.3 +
+    context_coherence_score * 0.1
+)
+```
+
+**Context coherence** is subtle but powerful - it gives preference to chunks that come from the same document as other high-scoring results. This helps maintain topical consistency in the final answer.
+
+### LexRank: The Secret Weapon for Precise Summarization
+
+One of the biggest problems with generated summaries is that they can subtly change meaning, especially in regulatory contexts where precise wording matters. LexRank solves this by extracting actual sentences from documents rather than generating new text.
+
+The algorithm treats sentences like a network graph, finding the most "central" ones that best represent the core information:
+
+```python
+# Create similarity matrix between sentences
+similarity_matrix = cosine_similarity(sentence_embeddings)
+
+# Apply threshold to create graph structure  
+similarity_matrix[similarity_matrix < threshold] = 0
+
+# Calculate LexRank scores (like PageRank for sentences)
+scores = calculate_lexrank_scores(similarity_matrix)
+```
+
+**Why this matters**: Instead of paraphrasing "utilities shall calculate depreciation using the straight-line method," LexRank extracts that exact sentence. In regulated industries, the difference between "shall" and "should" can be legally significant.
+
+The power iteration method finds sentences that are:
+- Similar to many other sentences (high connectivity)
+- Connected to other important sentences (centrality)
+- Representative of the document's core themes
+
+This gives you the most important information in the exact words from the source documents.
+
+### Fact Verification: The Trust-But-Verify Layer
+
+The final critical piece is verification. In regulated industries, you can't just trust that the AI got it right. Every claim needs to be traceable back to source material, and contradictions need to be flagged immediately.
+
+The verification engine extracts factual claims and cross-references them against source chunks:
+
+```python
+def _is_factual_claim(self, sentence: str) -> bool:
+    factual_indicators = [
+        'according to', 'states that', 'requires', 'specifies',
+        'shall', 'must', 'defined as', 'means', 'includes'
+    ]
+    return any(indicator in sentence.lower() for indicator in factual_indicators)
+```
+
+For each claim, it:
+1. Finds the most similar source chunks
+2. Checks for supporting evidence through keyword overlap
+3. Flags potential contradictions using negation patterns
+4. Calculates confidence scores based on evidence quality
+
+**The killer feature**: Contradiction detection. If the system finds phrases like "however," "but," "except," or explicit negations near similar content, it flags the response for human review.
+
+This creates an audit trail that regulatory teams actually need:
+
+```python
+return {
+    'claim': "Electric utilities shall calculate depreciation...",
+    'supported': True,
+    'confidence': 0.92,
+    'supporting_sources': ['puc_order_2024_001_sec_1_para_0'],
+    'contradicting_sources': []
+}
+```
+
+Any response with contradictions gets a confidence score near zero, regardless of how good the retrieval was.
+
+### Putting It All Together: Production Architecture
+
+The complete system orchestrates all these components through clean interfaces. Here's what makes it production-ready:
+
+**Modular Design**: Each component can be swapped independently. Want to try a different embedding model? Change one line. Need custom citation formats? Modify just the citation generator.
+
+**Comprehensive Output**: Every query returns not just an answer, but confidence scores, source summaries, citation maps, and verification results:
+
+```python
+{
+    'query': "What are the depreciation requirements?",
+    'system_confidence': 0.87,
+    'key_findings': [
+        {
+            'text': "Electric utilities shall calculate depreciation using the straight-line method",
+            'confidence': 0.94,
+            'source_id': 'puc_order_2024_001_sec_1_para_0'
+        }
+    ],
+    'source_summary': [...],
+    'detailed_citations': {...},
+    'verification': {
+        'overall_confidence': 0.89,
+        'flags': []
     }
+}
 ```
 
-### Quality Control That Matters
+**Authority-First Design**: The system prioritizes reliable sources over semantic similarity, which is crucial for regulatory compliance.
 
-Not all documents are equal. We built scoring systems for:
+**Full Audit Trail**: Every piece of information can be traced back to its exact source with proper citations.
 
-**Authority:** Government sources > company documents > random PDFs  
-**Recency:** Newer regulations override older ones  
-**Completeness:** Full documents > partial extracts  
-**Consistency:** Flag contradictory information  
-**Relevance:** Domain-specific relevance scoring
+The [complete implementation is available on GitHub](https://github.com/your-repo) with examples, documentation, and customization guides for different domains.
 
----
+### Looking Ahead: Workflow Orchestration with n8n
 
-## The Retrieval Engine
+While this system handles the core document intelligence capabilities beautifully, enterprise deployment requires thinking beyond just the AI components. That's where workflow orchestration becomes critical, and it's why I've been diving deep into n8n lately.
 
-### Multi-Stage Retrieval Process
+The potential for integrating document AI pipelines into broader automation workflows is compelling. Imagine triggering document processing automatically when new regulatory filings appear in an SFTP directory, routing different document types through specialized processing pipelines based on their metadata, and automatically notifying stakeholders when high-confidence answers are found for standing regulatory queries.
 
-Single-stage retrieval misses too much. Our process:
+The modular architecture I've outlined here integrates perfectly with n8n's node-based workflow design. Each component - document ingestion, hierarchical chunking, multi-stage retrieval, LexRank summarization - can become a custom node in a larger automation ecosystem.
 
-1. **Query analysis** - understand what type of info is needed
-2. **Corpus filtering** - narrow search space using document-level embeddings  
-3. **Primary retrieval** - find most relevant sections
-4. **Context expansion** - add related paragraphs for complete picture
-5. **Re-ranking** - apply domain-specific relevance criteria
+**Some workflow patterns I'm exploring:**
 
-### Beyond Vector Similarity
+- **Document intake automation**: Monitor multiple sources (email attachments, SFTP, SharePoint) and route documents through appropriate processing pipelines
+- **Continuous monitoring**: Set up standing queries that automatically process new documents as they arrive, flagging significant changes in regulatory guidance
+- **Quality assurance workflows**: Automatically route low-confidence responses to human reviewers while letting high-confidence answers flow directly to requestors
+- **Compliance reporting**: Generate automated summaries when new regulations affect existing policies or procedures
 
-Vector similarity alone isn't enough. We combine:
+I'll be diving deeper into n8n integration patterns in an upcoming post, including custom node development for document AI components and enterprise deployment strategies. The combination of robust document intelligence with sophisticated workflow orchestration opens up possibilities that go far beyond simple question-answering systems.
 
-**Semantic similarity** - core vector search  
-**Term overlap** - keyword matching for precision  
-**Authority weighting** - prioritize reliable sources  
-**Recency factors** - newer info when relevant  
-**Context relevance** - how chunks fit together  
+### The Bottom Line
 
-```python
-def score_chunk(chunk, query, other_chunks):
-    # Base similarity
-    vector_score = vector_similarity(chunk.embedding, query_embedding)
-    
-    # Keyword matching
-    term_score = calculate_term_overlap(chunk.text, query)
-    
-    # Source authority
-    authority_score = get_authority_score(chunk.metadata)
-    
-    # How well it fits with other results
-    context_score = calculate_context_fit(chunk, other_chunks)
-    
-    # Weighted combination
-    return (vector_score * 0.4 + term_score * 0.2 + 
-            authority_score * 0.2 + context_score * 0.2)
-```
+Building document AI that works in enterprise environments requires going far beyond basic RAG implementations. The approach I've outlined here - hierarchical chunking, multi-stage retrieval, extractive summarization, and comprehensive fact verification - addresses the core challenges that cause simpler systems to fail when accuracy matters.
 
-### Citation Tracking from Day One
+**Key insights from building this across multiple regulated domains:**
 
-Every piece of information needs a paper trail:
+**Authority trumps similarity**: Your retrieval system needs to understand source reliability and regulatory hierarchy, not just semantic similarity.
 
-**Source document** with full metadata  
-**Specific location** (page, section, paragraph)  
-**Direct quotes** vs paraphrased content  
-**Confidence scores** for each claim  
-**Proper formatting** for domain standards
+**Citations aren't optional**: Every piece of information needs a verifiable source with proper formatting for your domain's standards.
 
----
+**Verification beats generation**: When precision matters, extractive approaches often outperform generative ones for preserving exact meaning.
 
-## The Summarization Layer
+**Modularity enables evolution**: Building each component with clean interfaces allows you to improve individual pieces without rebuilding everything.
 
-### LexRank in Action
+**Context preservation is critical**: The hierarchical chunking approach maintains document structure relationships that flat chunking destroys.
 
-```python
-def lexrank_summarize(chunks, num_sentences=5):
-    # Extract all sentences
-    sentences = []
-    for chunk in chunks:
-        chunk_sentences = split_into_sentences(chunk.text)
-        sentences.extend(chunk_sentences)
-    
-    # Create similarity matrix between sentences
-    embeddings = [embed_text(s) for s in sentences]
-    similarity_matrix = cosine_similarity(embeddings)
-    
-    # Apply threshold to create graph
-    similarity_matrix[similarity_matrix < 0.3] = 0
-    
-    # Calculate centrality scores (like PageRank)
-    scores = calculate_lexrank_scores(similarity_matrix)
-    
-    # Return top sentences with their sources
-    ranked = [(sentences[i], scores[i]) for i in range(len(sentences))]
-    ranked.sort(key=lambda x: x[1], reverse=True)
-    
-    return ranked[:num_sentences]
-```
+This isn't the fanciest AI system you could build, but it's one that actually works when the stakes are high. And in regulated industries like utilities, healthcare, or finance - that's the only kind worth building.
 
-### Combining RAG + LexRank
-
-The magic happens when you combine approaches:
-
-1. **RAG finds relevant chunks** based on query
-2. **LexRank identifies key sentences** within those chunks  
-3. **LLM synthesizes** both into coherent answer
-4. **Citations preserved** throughout process
-
-This gives you the breadth of RAG with the precision of extractive summarization.
-
-### Fact Verification Pipeline
-
-```python
-def verify_response(generated_text, source_chunks):
-    # Extract specific claims from generated response
-    claims = extract_claims(generated_text)
-    
-    # Check each claim against source material
-    verification_results = []
-    for claim in claims:
-        supporting_evidence = find_support(claim, source_chunks)
-        contradicting_evidence = find_contradictions(claim, source_chunks)
-        
-        verification_results.append({
-            "claim": claim,
-            "supported": len(supporting_evidence) > 0,
-            "confidence": calculate_support_strength(supporting_evidence),
-            "sources": [s.metadata for s in supporting_evidence]
-        })
-    
-    return annotate_response(generated_text, verification_results)
-```
-
----
-
-## Making It User-Friendly
-
-### The Agentic Layer
-
-Instead of rigid workflows, we built an agent that:
-
-**Interprets queries** to understand intent  
-**Plans retrieval strategy** based on question type  
-**Adapts approach** based on results  
-**Maintains context** across follow-up questions  
-**Explains reasoning** throughout process
-
-### Query Understanding
-
-Users don't always ask good questions. We help by:
-
-**Classifying question types** (factual, analytical, comparative)  
-**Expanding queries** with relevant terms  
-**Resolving ambiguities** through clarification  
-**Decomposing complex questions** into manageable parts
-
-### Result Presentation
-
-The output format matters as much as the content:
-
-**Structured responses** with clear sections  
-**Inline citations** linked to sources  
-**Confidence indicators** for different claims  
-**Direct quotes** for key points  
-**Source summary** at the end
-
----
-
-## Real-World Results: Legal Research Case Study
-
-### The Challenge
-Law firm with thousands of contracts, case law, and regulatory docs needed to:
-- Find relevant precedents quickly
-- Extract key contract clauses  
-- Track regulatory changes
-- Generate properly cited memos
-
-### What We Built
-
-**Specialized legal parsers** for different document types  
-**Authority-weighted retrieval** prioritizing official sources  
-**Jurisdiction-based filtering** for relevant law  
-**Citation graph analysis** for precedent relationships  
-**Extractive summarization** preserving exact legal language
-
-### The Results
-
-**Research time reduced by 70%** for complex questions  
-**95% accuracy rate** vs expert-generated answers  
-**Zero hallucinated citations** (the big win)  
-**Full audit trail** for every piece of information
-
-### What We Learned
-
-**Domain-specific chunking is crucial** - legal docs have unique structure  
-**Authority trumps recency** - older authoritative sources often win  
-**Citation precision is non-negotiable** - even small errors kill trust  
-**Explanation matters** - lawyers want to understand the reasoning
-
----
-
-## Making It Modular
-
-### Component Architecture
-
-**Document Processor** - handles ingestion and chunking  
-**Embedding Service** - manages vector representations  
-**Retrieval Engine** - finds relevant information  
-**Summarization Service** - applies LexRank and other techniques  
-**Response Generator** - creates final output  
-**Interaction Manager** - handles user queries
-
-Each component has clean interfaces and can be swapped independently.
-
-### Configuration-Driven Customization
-
-```yaml
-domain_config:
-  name: "legal_research"
-  
-  chunking:
-    strategy: "hierarchical"
-    max_chunk_size: 1000
-    
-  retrieval:
-    top_k: 25
-    reranking: true
-    
-  summarization:
-    primary_method: "lexrank"
-    min_sentences: 3
-    
-  response:
-    citation_format: "bluebook"
-    include_confidence: true
-```
-
-This lets you adapt to new domains without code changes.
-
----
-
-## The Bottom Line
-
-Basic AI tools aren't ready for serious document work. But combining multiple approaches - RAG for retrieval, LexRank for summarization, vector databases for search, and careful engineering for accuracy - can create something genuinely useful.
-
-**Key lessons:**
-- **Go beyond basic RAG** - combine multiple techniques
-- **Invest heavily in document processing** - garbage in, garbage out
-- **Make modularity a priority** - design for reuse from day one  
-- **Focus on attribution** - citations build trust and enable verification
-- **Adapt to your domain** - one size doesn't fit all
-
-The future of document AI isn't about replacing human expertise. It's about augmenting it with tools that can actually handle the volume and complexity of modern information.
-
-If you're drowning in documents and need more than basic search, this modular approach provides a foundation you can build on.
-
-Just remember: the goal isn't to build the fanciest AI system. It's to build one that actually works when accuracy matters.
-
----
-
-*After building this across legal, medical, and financial document sets, the pattern is clear: success comes from combining multiple approaches thoughtfully, not from finding one magic solution.*
+The framework provides a solid foundation that you can adapt to your specific domain by adjusting the authority scoring, citation formats, and verification criteria. Whether you're dealing with legal documents, medical literature, or financial regulations, the core principles remain the same: preserve context, track sources, verify claims, and never trust the AI to get it right without checking.
