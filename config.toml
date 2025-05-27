@@ -1,4 +1,4 @@
-baseURL = "http://192.168.100.63/"
+baseURL = "https://www.spanswick.dev/"
 title = "My Blog"
 theme = "stack"
 enableRobotsTXT = true
