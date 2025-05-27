@@ -4,7 +4,7 @@ description: Google DeepMind's evolutionary coding agent discovers breakthrough 
 date: 2025-05-15T08:31:56-04:00
 draft: false
 tags: ["AI", "Machine Learning", "Algorithmic Discovery", "Google DeepMind", "Evolutionary Computing", "Matrix Multiplication", "Code Optimization"]
-Categories: ["AI, "News", "Technology"]
+Categories: ["AI", "News", "Technology"]
 image: "/img/head/alphaevovle.png"
 ---
 
