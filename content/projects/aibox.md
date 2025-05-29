@@ -1,7 +1,7 @@
 ---
 title: "From Ansible Rabbit Hole to One-Click AI Server: Building AI Box"
 description: "How a simple server setup spiraled into creating a complete AI deployment solution that anyone can use"
-date: 2025-01-29T10:15:00-05:00
+date: 2025-05-29T10:15:00-05:00
 draft: false
 tags: ["AI", "DevOps", "Docker", "LocalAI", "Ollama", "Stable Diffusion", "Ansible"]
 categories: ["Projects", "AI", "Self-Hosted"]
