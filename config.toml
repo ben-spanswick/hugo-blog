@@ -13,7 +13,7 @@ enableEmoji = true
   term = ["HTML", "RSS"]
 
 [params]
-  mainSections = ["tech", "analysis", "projects", "notes"]
+  mainSections = ["tech", "analysis", "deep-dives", "dispatches", "projects", "notes"]
   featuredImageField = "image"
   rssFullContent = true
   favicon = "/favicon.ico"
@@ -66,18 +66,20 @@ enableEmoji = true
   [params.widgets]
     sidebar = [
       { type = "search" },
-      { type = "categories", params.limit = 10 },
-      { type = "tag-cloud", params.limit = 10 }
+      { type = "archives", params.limit = 5 },
+      { type = "categories", params.limit = 20 },
+      { type = "tag-cloud", params.limit = 20 }
     ]
 
     homepage = [
       { type = "search" },
-      { type = "categories", params.limit = 10 },
-      { type = "tag-cloud", params.limit = 10 }
+      { type = "archives", params.limit = 5 },
+      { type = "categories", params.limit = 20 },
+      { type = "tag-cloud", params.limit = 20 }
     ]
 
 [pagination]
-  pagerSize = 5
+  pagerSize = 10
 
 [menu]
 
@@ -102,16 +104,48 @@ enableEmoji = true
     weight = 4
 
   [[menu.main]]
-    name = "Notes"
-    url = "/notes/"
+    name = "Dispatches"
+    url = "/dispatches/"
     weight = 5
 
   [[menu.main]]
-    name = "Archive"
-    url = "/archive/"
+    name = "Deep Dives"
+    url = "/deep-dives/"
     weight = 6
+
+  [[menu.main]]
+    name = "Notes"
+    url = "/notes/"
+    weight = 7
+
 
   [[menu.main]]
     name = "About"
     url = "/about/"
-    weight = 7
+    weight = 9
+
+[related]
+  includeNewer = true
+  threshold = 80
+  toLower = true
+
+  [[related.indices]]
+    name = "tags"
+    weight = 100
+
+  [[related.indices]]
+    name = "categories"
+    weight = 80
+
+  [[related.indices]]
+    name = "date"
+    weight = 10
+
+[markup]
+  [markup.highlight]
+    noClasses = false
+    codeFences = true
+    guessSyntax = true
+    lineNos = true
+    lineNumbersInTable = true
+    tabWidth = 4

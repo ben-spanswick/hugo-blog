@@ -1,0 +1,79 @@
+---
+title: "Last Week in AI: 05/19/25-05/23/25: When Everyone Decided to Ship Everything at Once"
+date: 2025-05-23
+description: "Anthropic releases AI so powerful they're scared of it, DeepMind solves math nobody asked for, Google empties their entire lab, and Microsoft sneaks AI into Notepad. Just another week in the acceleration."
+tags: [AI, Claude 4, Anthropic, Google I/O, DeepMind, Microsoft, AI Safety, Machine Learning]
+categories: ["Tech"]
+image: "/img/news/googleio.png"
+draft: false
+---
+
+I woke up Thursday morning to seventeen different AI announcements in my feed. By noon, my Slack was melting down with engineers arguing about benchmarks. By evening, I'd given up trying to process it all and just started drinking.
+
+Here's what actually matters from this week's AI avalanche.
+
+### Anthropic Builds Something That Scares Them
+
+Anthropic [released Claude Opus 4](https://www.anthropic.com/news/claude-4) yesterday. The numbers are genuinely stupid – 72.5% on SWE-bench means this thing writes better code than half the developers I've worked with. It nailed 43.2% on Terminal-bench, which tests whether AI can handle real command-line operations without accidentally deleting your entire filesystem.
+
+But buried in the announcement was this gem: they classified it as ASL-3. In Anthropic's paranoid safety framework, that translates to "powerful enough that we're implementing actual containment protocols." Not theoretical future risks. Current, active measures because they built something that makes them nervous.
+
+The model runs autonomous coding sessions for hours. Not minutes. Hours. Maintaining context, debugging its own mistakes, refactoring when it notices inefficiencies. I watched it rebuild an entire authentication system while I made lunch.
+
+Software engineering teams are pretending not to panic. They're failing.
+
+### DeepMind Solves Math Nobody Asked Them To
+
+Google's DeepMind [dropped AlphaEvolve](https://deepmind.google/discover/blog/alphaevolve-a-gemini-powered-coding-agent-for-designing-advanced-algorithms/) with the casual energy of someone mentioning they climbed Everest last weekend. This Gemini-powered system just advanced human mathematical knowledge by proving the 11-dimensional kissing number is 593, not 592.
+
+The kissing number problem asks how many spheres can touch a central sphere in n-dimensional space. It's the kind of pure mathematics that makes applied scientists roll their eyes and theoreticians write grant proposals.
+
+Except now we have AI solving problems that weren't on anyone's roadmap. `AlphaEvolve` looked at the mathematical landscape and decided to contribute original research. Not because we asked. Because it could.
+
+Mathematics departments worldwide are having very uncomfortable faculty meetings.
+
+### Google Empties the Lab
+
+Google I/O felt like a clearance sale at an AI warehouse. [They announced](https://blog.google/technology/ai/io-2025-keynote/#google-beam):
+
+* **Gemini Live** – Point your phone at anything and get real-time AI assistance. It's the augmented reality assistant we've been promised since Google Glass, except it works and doesn't make you look ridiculous.
+* **Veo 3** – Text to video with synchronized audio. The examples they showed would've required a production team and a $50k budget two years ago. Now it's a prompt.
+* **Imagen 4** – Their image model reached the uncanny valley, drove straight through it, and set up camp on the other side.
+* **Flow** – Combines all their tools for filmmakers. Because apparently making movies needed to be democratized too.
+* **SynthID Detector** – Identifies AI-generated content across formats. Google creating the problem and selling the solution is peak Silicon Valley.
+
+Creative professionals spent the rest of the week updating their LinkedIn profiles and contemplating career changes.
+
+### Microsoft's Suburban Invasion
+
+Microsoft didn't hold a conference. They didn't need to. They just started showing up in everyone's daily workflow.
+
+[Notepad – yes, Notepad – now writes with you.](https://blogs.windows.com/windows-insider/2025/05/22/paint-snipping-tool-and-notepad-updates-with-new-features-begin-rolling-out-to-windows-insiders/) That barebones text editor that hasn't fundamentally changed since Windows 95? It's AI-powered. Paint got generative features. The screenshot tool became sentient.
+
+It's insidious brilliance. No learning curve. No new interfaces. Just your standard Windows tools, suddenly capable of things that would've seemed like magic last year. Your uncle who still uses Internet Explorer is now using cutting-edge AI. He has no idea.
+
+This is how revolutions actually happen. Not with manifestos. With mundane ubiquity.
+
+### Money Finds Its Mark
+
+Alphabet's stock surged 4% post-announcement. Not because investors suddenly understood transformer architectures. Because Google showed them the money printer.
+
+AI Mode in Search. Premium tiers. Subscription models for power users. The path from "expensive research project" to "recurring revenue stream" finally materialized.
+
+Wall Street doesn't care about your breakthrough. It cares about your business model. Google just proved AI can be monetized at scale, and the market responded like sharks smelling blood.
+
+### The New Normal Isn't Normal
+
+We've entered territory where the impossible becomes mundane overnight. Anthropic builds AI that requires safety protocols. DeepMind's systems pursue independent research. Google makes professional content creation a commodity. Microsoft makes AI invisible and omnipresent.
+
+Each announcement this week would've dominated tech news for months just two years ago. Now they're competing for attention in a single news cycle.
+
+I've been in tech long enough to recognize when we're in one of those moments where everything shifts. Not gradually. All at once. This week was a phase transition.
+
+The weird part? This is just Tuesday now. Next week will bring another avalanche of capabilities we haven't imagined yet. The week after that, those will be obsolete.
+
+I'm not even trying to keep up anymore. I'm just taking notes and trying not to blink.
+
+---
+
+*Got questions about the technical details? I've been doom-scrolling through documentation all week and I'm happy to share the misery.*

@@ -3,8 +3,7 @@ title: "First Homelab: Reflections, Diagram, and Stack"
 date: 2025-05-01T15:00:00-04:00
 description: "My first ever homelab diagram, hardware reflections, and current stack of self-hosted services, security tools, and AI experiments."
 tags: ["homelab", "self-hosting", "networking", "AI", "hardware"]
-categories: ["Self-Hosting", "Hardware"]
-weight: 2
+categories: ["Projects"]
 image: "/img/HL.jpg"
 draft: false
 ---

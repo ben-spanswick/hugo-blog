@@ -1,0 +1,811 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Firewall with Ports — Tariff Exemption Flows</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Instrument+Serif&family=Inter:wght@300;400;500;600;700&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --bg: #0b0f15;
+    --bg-card: #111820;
+    --bg-hover: #161e2a;
+    --border: #1e2a38;
+    --text: #b0b8c4;
+    --text-dim: #5a6572;
+    --text-bright: #e8ecf1;
+    --accent: #4a9eff;
+    --red: #ef4444;
+    --red-dim: #7f1d1d;
+    --green: #34d399;
+    --green-dim: #064e3b;
+    --amber: #fbbf24;
+    --bar-full: #2a3a4e;
+    --bar-exempt: #0d3b2e;
+    --bar-taxed: #3b1c1c;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .vis-container {
+    max-width: 1060px;
+    margin: 0 auto;
+    padding: 2.5rem 1.5rem;
+  }
+
+  .vis-header {
+    text-align: center;
+    margin-bottom: 0.4rem;
+  }
+
+  .vis-header h1 {
+    font-family: 'Instrument Serif', Georgia, serif;
+    font-size: clamp(1.5rem, 3.5vw, 2.3rem);
+    color: var(--text-bright);
+    letter-spacing: -0.02em;
+    line-height: 1.2;
+    margin-bottom: 0.3rem;
+  }
+
+  .vis-header h1 span { color: var(--accent); }
+
+  .vis-header .tagline {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+  }
+
+  .vis-intro {
+    max-width: 740px;
+    margin: 1.2rem auto 2rem;
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text);
+    line-height: 1.7;
+  }
+
+  .vis-intro strong { color: var(--text-bright); }
+
+  /* Column headers */
+  .col-headers {
+    display: grid;
+    grid-template-columns: 110px 80px 1fr 80px 70px;
+    gap: 0;
+    padding: 0 0.4rem 0.5rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.25rem;
+    align-items: end;
+  }
+
+  .col-header {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    line-height: 1.3;
+  }
+
+  .col-header.right { text-align: right; }
+  .col-header.center { text-align: center; }
+
+  /* Section labels */
+  .section-label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--text-dim);
+    padding: 1rem 0.4rem 0.4rem;
+    border-bottom: 1px solid var(--border);
+    margin-bottom: 0.2rem;
+  }
+
+  /* Country row */
+  .country-row {
+    display: grid;
+    grid-template-columns: 110px 80px 1fr 80px 70px;
+    gap: 0;
+    align-items: center;
+    padding: 0.5rem 0.4rem;
+    border-radius: 5px;
+    transition: background 0.12s ease;
+    cursor: default;
+    border-bottom: 1px solid #131a24;
+  }
+
+  .country-row:hover {
+    background: var(--bg-hover);
+  }
+
+  .country-name {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-bright);
+  }
+
+  .imports-value {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--text);
+    text-align: right;
+    padding-right: 0.75rem;
+  }
+
+  /* The main flow bar */
+  .flow-bar-container {
+    position: relative;
+    height: 32px;
+    width: 100%;
+  }
+
+  .flow-bar-bg {
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bar-full);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  /* Exempt portion - left side, green */
+  .flow-exempt {
+    position: absolute;
+    top: 0; left: 0;
+    height: 100%;
+    background: var(--bar-exempt);
+    border-right: 2px solid var(--green);
+    transition: width 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Taxed portion - right side, red tint */
+  .flow-taxed {
+    position: absolute;
+    top: 0;
+    height: 100%;
+    background: var(--bar-taxed);
+    border-radius: 0 4px 4px 0;
+    transition: left 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94), width 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Labels inside bar */
+  .flow-label-exempt {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 6px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--green);
+    font-weight: 500;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  .flow-label-taxed {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 6px;
+    font-family: 'DM Mono', monospace;
+    font-size: 0.62rem;
+    color: var(--red);
+    font-weight: 500;
+    opacity: 0.9;
+    white-space: nowrap;
+    pointer-events: none;
+  }
+
+  /* Headline rate column */
+  .headline-rate {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--text-dim);
+    text-align: center;
+    text-decoration: line-through;
+    text-decoration-color: var(--red);
+  }
+
+  /* Effective rate column */
+  .effective-rate {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-align: right;
+  }
+
+  /* Tooltip */
+  .tooltip {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    background: #151d28;
+    border: 1px solid #2a3a4e;
+    border-radius: 8px;
+    padding: 1rem 1.2rem;
+    max-width: 420px;
+    min-width: 300px;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.65);
+    pointer-events: none;
+  }
+
+  .tooltip.active { display: block; }
+
+  .tooltip-title {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: var(--text-bright);
+    margin-bottom: 0.7rem;
+  }
+
+  .tooltip-flow {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .tooltip-step {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .tooltip-step .marker {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.65rem;
+    flex-shrink: 0;
+    width: 14px;
+    text-align: center;
+    color: var(--text-dim);
+  }
+
+  .tooltip-step .desc { color: var(--text); }
+  .tooltip-step .val {
+    font-family: 'DM Mono', monospace;
+    font-weight: 600;
+    margin-left: auto;
+    flex-shrink: 0;
+    padding-left: 0.5rem;
+  }
+
+  .tooltip-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 0.3rem 0;
+  }
+
+  .tooltip-exemptions {
+    font-size: 0.73rem;
+    color: var(--text);
+    line-height: 1.55;
+    padding-top: 0.3rem;
+  }
+
+  .tooltip-exemptions strong { color: var(--text-bright); }
+
+  .tooltip-result {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-top: 0.5rem;
+    margin-top: 0.3rem;
+    border-top: 1px solid var(--border);
+  }
+
+  .tooltip-result .label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    color: var(--text-bright);
+  }
+
+  .tooltip-result .rate {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.1rem;
+    font-weight: 700;
+  }
+
+  /* Summary strip */
+  .summary-strip {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 0.75rem;
+    margin: 2rem 0 1.5rem;
+  }
+
+  .summary-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 7px;
+    padding: 0.85rem 1rem;
+    text-align: center;
+  }
+
+  .summary-card .label {
+    font-family: 'DM Mono', monospace;
+    font-size: 0.58rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-dim);
+    margin-bottom: 0.2rem;
+  }
+
+  .summary-card .value {
+    font-family: 'DM Mono', monospace;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-bright);
+  }
+
+  .summary-card .note {
+    font-size: 0.65rem;
+    color: var(--text-dim);
+    margin-top: 0.1rem;
+  }
+
+  /* Footer */
+  .vis-footer {
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border);
+    font-size: 0.68rem;
+    color: var(--text-dim);
+    line-height: 1.7;
+  }
+
+  .vis-footer strong { color: var(--text); }
+
+  /* Effective rate color scale */
+  .eff-low { color: var(--green); }
+  .eff-mid { color: var(--amber); }
+  .eff-high { color: var(--red); }
+
+  @media (max-width: 700px) {
+    .country-row, .col-headers {
+      grid-template-columns: 85px 60px 1fr 50px 55px;
+    }
+    .country-name { font-size: 0.7rem; }
+    .flow-label-exempt, .flow-label-taxed { font-size: 0.55rem; }
+    .summary-strip { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body>
+
+<div class="vis-container">
+  <div class="vis-header">
+    <h1>The <span>Firewall</span> with Ports</h1>
+    <div class="tagline">How exemptions reduce headline tariffs to effective rates &mdash; Feb 2026</div>
+  </div>
+
+  <div class="vis-intro">
+    Each bar represents a country's total imports to the US. The <strong style="color:var(--green)">green portion</strong> is exempt
+    (FTAs, Annex&nbsp;II, deal carve-outs). The <strong style="color:var(--red)">red portion</strong> is actually taxed.
+    The headline rate is crossed out. The effective rate is what's really paid. Hover for the full math.
+  </div>
+
+  <div class="col-headers">
+    <div class="col-header">Country</div>
+    <div class="col-header right">Imports</div>
+    <div class="col-header" style="padding-left:4px">
+      <span style="color:var(--green)">■</span> Exempt &nbsp;&nbsp;
+      <span style="color:var(--red)">■</span> Taxed
+    </div>
+    <div class="col-header center">Headline</div>
+    <div class="col-header right">Effective</div>
+  </div>
+
+  <div id="chart"></div>
+
+  <div class="summary-strip">
+    <div class="summary-card">
+      <div class="label">Headline Avg</div>
+      <div class="value">13.5%</div>
+      <div class="note">Highest since WWII</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Effective Avg</div>
+      <div class="value" style="color:var(--green)">9.9%</div>
+      <div class="note">Highest since 1946</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">Imports Exempt</div>
+      <div class="value">50%</div>
+      <div class="note">By Dec 2025</div>
+    </div>
+    <div class="summary-card">
+      <div class="label">China's share of revenue</div>
+      <div class="value" style="color:var(--red)">43%</div>
+      <div class="note">$95B of $222B</div>
+    </div>
+  </div>
+
+  <div class="vis-footer">
+    <strong>Sources:</strong> Tax Foundation, USTR, Census Bureau (2024 import data), PIIE, CRS.
+    Effective rates are analytical estimates based on Annex II/III exemptions, FTA qualifying goods
+    (USMCA, CAFTA-DR, Chile FTA, Colombia FTA), deal-specific carve-outs, and Nov 2025 agricultural exemptions.
+    S.232 sector tariffs (steel/aluminum 50%, autos 25%, copper 50%) apply on top of country rates.<br>
+    <strong>Reading the chart:</strong> Each bar = 100% of that country's imports. Green = exempt or reduced. Red = taxed at headline rate.
+    The effective rate = actual estimated revenue ÷ total imports. Hover any row for the step-by-step math.
+  </div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+<script>
+const data = [
+  {
+    section: "Western Hemisphere",
+    countries: [
+      { name: "Mexico", imports: 506, headline: 25, effective: 8.7, exempt: 65, exemptAmt: 330, taxedAmt: 176, revenue: 44,
+        exemptions: "USMCA-compliant goods (65% of imports) enter at 0%. Oil & energy exempt. Only non-compliant goods pay 25%.",
+        math: [
+          { desc: "Total imports", val: "$506B" },
+          { desc: "USMCA-compliant (0%)", val: "−$280B", color: "var(--green)" },
+          { desc: "Energy/oil exempt", val: "−$50B", color: "var(--green)" },
+          { desc: "Taxed at 25%", val: "$176B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$44B", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "Canada", imports: 422, headline: 25, effective: 4.0, exempt: 84, exemptAmt: 355, taxedAmt: 67, revenue: 17,
+        exemptions: "USMCA at 65% = 0%. Energy at 10% not 25% (oil alone ~$100B). Lumber under separate S.232.",
+        math: [
+          { desc: "Total imports", val: "$422B" },
+          { desc: "USMCA-compliant (0%)", val: "−$230B", color: "var(--green)" },
+          { desc: "Energy at 10% (not 25%)", val: "−$100B", color: "var(--green)" },
+          { desc: "Other exempt (Annex II)", val: "−$25B", color: "var(--green)" },
+          { desc: "Taxed at 25%", val: "$67B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$17B", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "Brazil", imports: 35, headline: 10, effective: 3.7, exempt: 63, exemptAmt: 22, taxedAmt: 13, revenue: 1.3,
+        exemptions: "Nov 2025: coffee, tropical fruits, cocoa, bananas, oranges, beef all exempted. Energy/oil exempt. BRICS penalty is the stick.",
+        math: [
+          { desc: "Total imports", val: "$35B" },
+          { desc: "Agri exemptions (Nov 2025)", val: "−$12B", color: "var(--green)" },
+          { desc: "Energy/oil exempt", val: "−$7B", color: "var(--green)" },
+          { desc: "Aircraft/other exempt", val: "−$3B", color: "var(--green)" },
+          { desc: "Taxed at 10%", val: "$13B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$1.3B", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "Colombia", imports: 13.5, headline: 10, effective: 2.6, exempt: 74, exemptAmt: 10, taxedAmt: 3.5, revenue: 0.35,
+        exemptions: "US-Colombia FTA: coffee, flowers, fruit at 0%. Oil/energy exempt (Annex II). Gold/bullion exempt.",
+        math: [
+          { desc: "Total imports", val: "$13.5B" },
+          { desc: "Oil/petroleum (FTA + Annex II)", val: "−$6B", color: "var(--green)" },
+          { desc: "Coffee, flowers, fruit (FTA)", val: "−$3.5B", color: "var(--green)" },
+          { desc: "Gold/bullion (Annex II)", val: "−$0.5B", color: "var(--green)" },
+          { desc: "Taxed at 10%", val: "$3.5B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$350M", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "Chile", imports: 10.5, headline: 10, effective: 2.4, exempt: 76, exemptAmt: 8, taxedAmt: 2.5, revenue: 0.25,
+        exemptions: "Chile FTA: fruit, wine, fish at 0%. Copper exempt from reciprocal tariffs (Annex II). Lithium in critical minerals exemption.",
+        math: [
+          { desc: "Total imports", val: "$10.5B" },
+          { desc: "Copper (Annex II exempt)", val: "−$3.2B", color: "var(--green)" },
+          { desc: "Fruit, wine, fish (FTA)", val: "−$4B", color: "var(--green)" },
+          { desc: "Lithium (critical minerals)", val: "−$0.8B", color: "var(--green)" },
+          { desc: "Taxed at 10%", val: "$2.5B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$250M", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "Costa Rica", imports: 7.5, headline: 10, effective: 2.7, exempt: 73, exemptAmt: 5.5, taxedAmt: 2, revenue: 0.2,
+        exemptions: "CAFTA-DR covers fruit/coffee. Medical devices partially exempt. Semiconductor-adjacent goods in Annex II.",
+        math: [
+          { desc: "Total imports", val: "$7.5B" },
+          { desc: "Medical devices (partial exempt)", val: "−$2.5B", color: "var(--green)" },
+          { desc: "Bananas, fruit, coffee (CAFTA-DR)", val: "−$2B", color: "var(--green)" },
+          { desc: "Electronics (Annex II)", val: "−$1B", color: "var(--green)" },
+          { desc: "Taxed at 10%", val: "$2B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$200M", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "Argentina", imports: 6, headline: 10, effective: 4.2, exempt: 58, exemptAmt: 3.5, taxedAmt: 2.5, revenue: 0.25,
+        exemptions: "Feb 2026 deal: 100K tons beef exempt, 1,675 products cut (resources, pharma). Energy/minerals in Annex II.",
+        math: [
+          { desc: "Total imports", val: "$6B" },
+          { desc: "Beef (deal carve-out)", val: "−$0.9B", color: "var(--green)" },
+          { desc: "Energy/minerals (Annex II)", val: "−$1.2B", color: "var(--green)" },
+          { desc: "Pharma ingredients (deal)", val: "−$0.5B", color: "var(--green)" },
+          { desc: "1,675 other products (deal)", val: "−$0.9B", color: "var(--green)" },
+          { desc: "Taxed at 10%", val: "$2.5B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$250M", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "Guatemala", imports: 5.5, headline: 10, effective: 1.8, exempt: 82, exemptAmt: 4.5, taxedAmt: 1, revenue: 0.1,
+        exemptions: "CAFTA-DR: textiles, fruit, coffee, sugar all qualify for 0%. New deal (Jan 2026) adds further exemptions.",
+        math: [
+          { desc: "Total imports", val: "$5.5B" },
+          { desc: "Textiles/apparel (CAFTA-DR)", val: "−$2.5B", color: "var(--green)" },
+          { desc: "Bananas/fruit (CAFTA-DR)", val: "−$1.4B", color: "var(--green)" },
+          { desc: "Coffee, sugar (CAFTA-DR)", val: "−$0.6B", color: "var(--green)" },
+          { desc: "Taxed at 10%", val: "$1B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$100M", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "El Salvador", imports: 3.2, headline: 10, effective: 1.3, exempt: 87, exemptAmt: 2.8, taxedAmt: 0.4, revenue: 0.04,
+        exemptions: "CAFTA-DR covers 80%+ of exports. Textiles specifically exempt in Jan 2026 deal. Approaching full duty-free.",
+        math: [
+          { desc: "Total imports", val: "$3.2B" },
+          { desc: "Textiles/apparel (CAFTA-DR)", val: "−$2.1B", color: "var(--green)" },
+          { desc: "Coffee, sugar, fruit (CAFTA-DR)", val: "−$0.5B", color: "var(--green)" },
+          { desc: "Other qualifying (deal)", val: "−$0.2B", color: "var(--green)" },
+          { desc: "Taxed at 10%", val: "$0.4B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$40M", color: "var(--text-bright)" },
+        ]
+      },
+    ]
+  },
+  {
+    section: "Europe",
+    countries: [
+      { name: "Germany", imports: 160, headline: 10, effective: 5.0, exempt: 50, exemptAmt: 80, taxedAmt: 80, revenue: 8,
+        exemptions: "EU framework deal: autos at 15% (from 25%). Pharma and semiconductors EXEMPT (Annex II). Pharma alone ~$29B exempt.",
+        math: [
+          { desc: "Total imports", val: "$160B" },
+          { desc: "Pharma (Annex II exempt)", val: "−$29B", color: "var(--green)" },
+          { desc: "Semiconductors (Annex II)", val: "−$8B", color: "var(--green)" },
+          { desc: "Other exempt categories", val: "−$43B", color: "var(--green)" },
+          { desc: "Autos at 15%, rest at 10%", val: "$80B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$8B", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "Ireland", imports: 95, headline: 10, effective: 2.4, exempt: 76, exemptAmt: 72, taxedAmt: 23, revenue: 2.3,
+        exemptions: "Pharma is ~65% of Irish exports to US and EXEMPT (Annex II). The headline rate is applied to a sliver of actual trade.",
+        math: [
+          { desc: "Total imports", val: "$95B" },
+          { desc: "Pharmaceuticals (Annex II)", val: "−$62B", color: "var(--green)" },
+          { desc: "Medical devices (partial)", val: "−$10B", color: "var(--green)" },
+          { desc: "Taxed at 10%", val: "$23B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$2.3B", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "UK", imports: 68, headline: 10, effective: 5.3, exempt: 47, exemptAmt: 32, taxedAmt: 36, revenue: 3.6,
+        exemptions: "First deal (May 2025). Pharma at 0% (Dec 2025 expansion). Steel at 25% vs 50% for others. Oil exempt.",
+        math: [
+          { desc: "Total imports", val: "$68B" },
+          { desc: "Pharma at 0% (deal)", val: "−$14B", color: "var(--green)" },
+          { desc: "Oil/energy (Annex II)", val: "−$7B", color: "var(--green)" },
+          { desc: "Other exempt", val: "−$11B", color: "var(--green)" },
+          { desc: "Taxed (autos, machinery, spirits)", val: "$36B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$3.6B", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "Switzerland", imports: 56, headline: 10, effective: 2.5, exempt: 75, exemptAmt: 42, taxedAmt: 14, revenue: 1.4,
+        exemptions: "Pharma EXEMPT. Gold/bullion EXEMPT (Annex II). Rate reduced from 31% to ~10%. Real taxable base: watches, machinery.",
+        math: [
+          { desc: "Total imports", val: "$56B" },
+          { desc: "Pharma (Annex II)", val: "−$28B", color: "var(--green)" },
+          { desc: "Gold/precious metals (Annex II)", val: "−$11B", color: "var(--green)" },
+          { desc: "Other exempt", val: "−$3B", color: "var(--green)" },
+          { desc: "Taxed (watches, machinery)", val: "$14B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$1.4B", color: "var(--text-bright)" },
+        ]
+      },
+    ]
+  },
+  {
+    section: "Asia-Pacific",
+    countries: [
+      { name: "Japan", imports: 148, headline: 10, effective: 5.3, exempt: 47, exemptAmt: 70, taxedAmt: 78, revenue: 7.8,
+        exemptions: "Auto tariff reduced to ~15% via deal. Pharma and semiconductors exempt (Annex II). Framework deal Sep 2025.",
+        math: [
+          { desc: "Total imports", val: "$148B" },
+          { desc: "Pharma (Annex II)", val: "−$7B", color: "var(--green)" },
+          { desc: "Semiconductors (Annex II)", val: "−$15B", color: "var(--green)" },
+          { desc: "Other exempt categories", val: "−$48B", color: "var(--green)" },
+          { desc: "Autos at ~15%, rest at 10%", val: "$78B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$7.8B", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "Vietnam", imports: 137, headline: 10, effective: 7.4, exempt: 26, exemptAmt: 35, taxedAmt: 102, revenue: 10.2,
+        exemptions: "Electronics partially exempt. Textiles, furniture, footwear fully taxed at 10%. Anti-transshipment provisions are the real constraint.",
+        math: [
+          { desc: "Total imports", val: "$137B" },
+          { desc: "Electronics (Annex II partial)", val: "−$25B", color: "var(--green)" },
+          { desc: "Other exempt", val: "−$10B", color: "var(--green)" },
+          { desc: "Textiles, footwear, furniture", val: "$102B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$10.2B", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "South Korea", imports: 131, headline: 10, effective: 5.6, exempt: 44, exemptAmt: 58, taxedAmt: 73, revenue: 7.3,
+        exemptions: "Auto tariff at ~15% (reduced via deal). Semiconductors EXEMPT (Annex II). Steel at S.232 rates.",
+        math: [
+          { desc: "Total imports", val: "$131B" },
+          { desc: "Semiconductors (Annex II)", val: "−$26B", color: "var(--green)" },
+          { desc: "Other exempt categories", val: "−$32B", color: "var(--green)" },
+          { desc: "Autos at ~15%, rest at 10%", val: "$73B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$7.3B", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "Taiwan", imports: 116, headline: 15, effective: 5.7, exempt: 62, exemptAmt: 72, taxedAmt: 44, revenue: 6.6,
+        exemptions: "Semiconductors are >55% of imports and EXEMPT from reciprocal tariffs. Rate reduced from 32% to 15%.",
+        math: [
+          { desc: "Total imports", val: "$116B" },
+          { desc: "Semiconductors (Annex II)", val: "−$64B", color: "var(--green)" },
+          { desc: "Other electronics (partial)", val: "−$8B", color: "var(--green)" },
+          { desc: "Taxed at 15%", val: "$44B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$6.6B", color: "var(--text-bright)" },
+        ]
+      },
+      { name: "India", imports: 87, headline: 18, effective: 12.2, exempt: 32, exemptAmt: 28, taxedAmt: 59, revenue: 10.6,
+        exemptions: "Pharma exempt (Annex II). Gems/precious stones partial. But textiles, chemicals fully taxed at 18%. Higher rate reflects weaker alignment.",
+        math: [
+          { desc: "Total imports", val: "$87B" },
+          { desc: "Pharma (Annex II)", val: "−$17B", color: "var(--green)" },
+          { desc: "Gems (partial exempt)", val: "−$6B", color: "var(--green)" },
+          { desc: "Other exempt", val: "−$5B", color: "var(--green)" },
+          { desc: "Textiles, chemicals at 18%", val: "$59B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$10.6B", color: "var(--text-bright)" },
+        ]
+      },
+    ]
+  },
+  {
+    section: "China",
+    countries: [
+      { name: "China", imports: 463, headline: 47.5, effective: 20.5, exempt: 21, exemptAmt: 95, taxedAmt: 368, revenue: 95,
+        exemptions: "Semiconductors/electronics partially exempt (Annex II). But S.301, S.232, fentanyl tariffs all stack. De minimis closed at 120%. This is ~43% of all tariff revenue from ~14% of imports.",
+        math: [
+          { desc: "Total imports", val: "$463B" },
+          { desc: "Semiconductors (Annex II)", val: "−$50B", color: "var(--green)" },
+          { desc: "Other electronics (partial)", val: "−$30B", color: "var(--green)" },
+          { desc: "Other exempt", val: "−$15B", color: "var(--green)" },
+          { desc: "Taxed (stacked rates avg ~26%)", val: "$368B", color: "var(--red)" },
+          { desc: "Revenue collected", val: "~$95B", color: "var(--text-bright)" },
+        ]
+      },
+    ]
+  },
+];
+
+function effClass(rate) {
+  if (rate <= 4) return 'eff-low';
+  if (rate <= 8) return 'eff-mid';
+  return 'eff-high';
+}
+
+function renderChart() {
+  const chart = document.getElementById('chart');
+  let html = '';
+
+  data.forEach(group => {
+    html += `<div class="section-label">${group.section}</div>`;
+
+    group.countries.forEach(c => {
+      const exemptPct = c.exempt;
+      const taxedPct = 100 - c.exempt;
+
+      // Determine labels for inside bar
+      const exemptLabel = `${exemptPct}% exempt`;
+      const taxedLabel = `${taxedPct}% taxed`;
+
+      html += `
+        <div class="country-row"
+             data-name="${c.name}"
+             data-imports="${c.imports}"
+             data-headline="${c.headline}"
+             data-effective="${c.effective}"
+             data-exempt="${c.exempt}"
+             data-exempt-amt="${c.exemptAmt}"
+             data-taxed-amt="${c.taxedAmt}"
+             data-revenue="${c.revenue}"
+             data-exemptions="${c.exemptions.replace(/"/g, '&quot;')}"
+             data-math='${JSON.stringify(c.math)}'>
+          <div class="country-name">${c.name}</div>
+          <div class="imports-value">$${c.imports}B</div>
+          <div class="flow-bar-container">
+            <div class="flow-bar-bg">
+              <div class="flow-exempt" style="width: 0%;" data-target="${exemptPct}"></div>
+              <div class="flow-taxed" style="left: 0%; width: 100%;" data-target-left="${exemptPct}" data-target-width="${taxedPct}"></div>
+            </div>
+            ${exemptPct > 20 ? `<div class="flow-label-exempt" style="opacity:0" data-fade="1">${exemptLabel}</div>` : ''}
+            ${taxedPct > 15 ? `<div class="flow-label-taxed" style="opacity:0" data-fade="1">${taxedLabel}</div>` : ''}
+          </div>
+          <div class="headline-rate">${c.headline}%</div>
+          <div class="effective-rate ${effClass(c.effective)}">${c.effective}%</div>
+        </div>`;
+    });
+  });
+
+  chart.innerHTML = html;
+}
+
+function initAnimation() {
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        setTimeout(() => {
+          document.querySelectorAll('.flow-exempt').forEach(el => {
+            el.style.width = el.dataset.target + '%';
+          });
+          document.querySelectorAll('.flow-taxed').forEach(el => {
+            el.style.left = el.dataset.targetLeft + '%';
+            el.style.width = el.dataset.targetWidth + '%';
+          });
+          document.querySelectorAll('[data-fade]').forEach(el => {
+            setTimeout(() => { el.style.opacity = '1'; el.style.transition = 'opacity 0.4s ease'; }, 600);
+          });
+        }, 150);
+        observer.disconnect();
+      }
+    });
+  }, { threshold: 0.05 });
+
+  observer.observe(document.getElementById('chart'));
+}
+
+function initTooltip() {
+  const tooltip = document.getElementById('tooltip');
+  const rows = document.querySelectorAll('.country-row');
+
+  rows.forEach(row => {
+    row.addEventListener('mouseenter', () => {
+      const d = row.dataset;
+      const math = JSON.parse(d.math);
+
+      let mathHtml = '';
+      math.forEach((step, i) => {
+        const marker = i === 0 ? '→' : (step.val.startsWith('−') ? '−' : (step.val.startsWith('~') || step.val.startsWith('$') ? '=' : '→'));
+        const valColor = step.color || 'var(--text)';
+        mathHtml += `
+          <div class="tooltip-step">
+            <span class="marker">${i === 0 ? '▸' : (i === math.length - 1 ? '=' : '−')}</span>
+            <span class="desc">${step.desc}</span>
+            <span class="val" style="color:${valColor}">${step.val}</span>
+          </div>`;
+        if (i === 0) mathHtml += '<hr class="tooltip-divider">';
+        if (i === math.length - 2) mathHtml += '<hr class="tooltip-divider">';
+      });
+
+      tooltip.innerHTML = `
+        <div class="tooltip-title">${d.name}</div>
+        <div class="tooltip-flow">${mathHtml}</div>
+        <div class="tooltip-exemptions"><strong>Exemptions:</strong> ${d.exemptions}</div>
+        <div class="tooltip-result">
+          <span class="label">Headline ${d.headline}% → Effective</span>
+          <span class="rate ${effClass(parseFloat(d.effective))}">${d.effective}%</span>
+        </div>
+      `;
+      tooltip.classList.add('active');
+    });
+
+    row.addEventListener('mousemove', (e) => {
+      const pad = 16;
+      let x = e.clientX + pad;
+      let y = e.clientY + pad;
+      const rect = tooltip.getBoundingClientRect();
+      if (x + 420 > window.innerWidth) x = e.clientX - 420 - pad;
+      if (y + rect.height > window.innerHeight - pad) y = e.clientY - rect.height - pad;
+      tooltip.style.left = x + 'px';
+      tooltip.style.top = y + 'px';
+    });
+
+    row.addEventListener('mouseleave', () => {
+      tooltip.classList.remove('active');
+    });
+  });
+}
+
+renderChart();
+initAnimation();
+initTooltip();
+</script>
+</body>
+</html>
